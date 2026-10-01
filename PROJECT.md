@@ -52,6 +52,7 @@ Adult Bone Marrow Transplantation; Algology; Anesthesiology and Reanimation; App
 - Kullanıcı ekran görüntüsü gönderirse yalnızca bir sonraki adım tarif edilir.
 - Kullanıcı açıkça istemeden yeni görsel üretimi tetiklenmez.
 - Save / Update / Publish kullanıcının onayı olmadan yapılmaz.
+- Her değişiklikten sonra kullanıcıya kontrol edip **onaylama** veya **eski hâline döndürme** seçeneği sunulur (değişiklik öncesi yedek alınır).
 
 ## 6. Yapılanlar (log)
 - 2026-09-30: Yüzen dil seçici kapatıldı; header dil seçici arka planı şeffaf yapıldı.
@@ -61,6 +62,7 @@ Adult Bone Marrow Transplantation; Algology; Anesthesiology and Reanimation; App
   `header.wp-block-template-part .wp-block-site-logo { filter: brightness(0) invert(1) !important; }`
   Logo PNG'si gerçek şeffaflığa sahip (alpha kontrol edildi), beyaz kare oluşmaz.
 - 2026-10-01: Sayfalar yeniden adlandırıldı: Services (27) → Health `/health`, Booking (25) → Travel `/travel`, About (24) → About Us `/about-us`; Home (23) ve Contact (26) aynı. Sıra: Home, Health, Travel, About Us, Contact. Sample Page çöp kutusunda. Sayfa içerikleri henüz eski şablon metinleri.
+- 2026-10-01: Header'daki düz yazı (HOME | HEALTH | …) gerçek Navigation bloğuyla değiştirildi (menü ID 4, class `medlux-main-nav`, mobilde hamburger). Additional CSS'e link rengi, hover altın (#d4a24c) ve `|` ayraçları eklendi. Yedekler: header template part, menü 4, global styles.
 
 ## 7. Kararlar ile canlı site arasındaki farklar (2026-10-01 itibarıyla)
 | Konu | Karar | Canlı site |
