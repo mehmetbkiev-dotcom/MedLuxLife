@@ -8,7 +8,7 @@ Site: https://medluxlife-6j8sz55bpn.live-website.com (IONOS WordPress, tema **Ex
 - **Ana yapı:** HEALTH (ana iş alanı), TRAVEL, ABOUT US, CONTACT
 - **Diller:** DE (varsayılan), EN, TR, UK, RU
 - **Wellness:** Ayrı bir Wellness bölümü olmayacak.
-- **Travel:** Holiday Packages; Flight & Hotel; Airport Transfer; Hajj & Umrah
+- **Travel:** Holiday Packages; Hotel Reservation; Flight Tickets; Airport Transfer; Hajj & Umrah (2026-10-01'de güncellendi)
 - **Tasarım:** Premium, sakin, güvenilir, sofistike ve uluslararası görünüm.
 - **Fiyatlar:** Sitede fiyat gösterilmeyecek.
 - **WhatsApp / Live Chat:** Her sayfada; iletişim bilgileri ve Datenschutz kabulü istenecek.
@@ -66,7 +66,7 @@ Adult Bone Marrow Transplantation; Algology; Anesthesiology and Reanimation; App
 - 2026-10-01: HEALTH ve TRAVEL açılır menü yapıldı (tıklayınca açılır, sayfaya gitmez). 21 alt sayfa oluşturuldu (şimdilik boş):
   - Health › Clinical Treatments (258) › Dental and Oral Health, Hair Transplantation, Restorative Hair Therapies, Plastic Surgery, Medical Aesthetics, Bariatric Surgery, Check-Up Packages, IV Treatments (260–267)
   - Health › Hospital & Specialist Treatments (259) › Medical Oncology, Cardiology, Orthopedics and Traumatology, In-Vitro Fertilization (IVF), Neurosurgery, Ophthalmology, Organ Transplantation Center (268–274) + "View All" → 259
-  - Travel › Holiday Packages, Flight & Hotel, Airport Transfer, Hajj & Umrah (275–278)
+  - Travel › Holiday Packages (275), Hotel Reservation (276, eski adı Flight & Hotel), Flight Tickets (283), Airport Transfer (277), Hajj & Umrah (278)
   Açılır panel stili Additional CSS'te (koyu panel, altın ince çerçeve). Tek tek tedaviler menüde değil, kategori sayfalarında olacak.
 
 ## 7. Kararlar ile canlı site arasındaki farklar (2026-10-01 itibarıyla)
