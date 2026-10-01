@@ -60,6 +60,7 @@ Adult Bone Marrow Transplantation; Algology; Anesthesiology and Reanimation; App
 - 2026-10-01: Logo scroll'da renk değiştirmesin diye Additional CSS'e eklendi:
   `header.wp-block-template-part .wp-block-site-logo { filter: brightness(0) invert(1) !important; }`
   Logo PNG'si gerçek şeffaflığa sahip (alpha kontrol edildi), beyaz kare oluşmaz.
+- 2026-10-01: Sayfalar yeniden adlandırıldı: Services (27) → Health `/health`, Booking (25) → Travel `/travel`, About (24) → About Us `/about-us`; Home (23) ve Contact (26) aynı. Sıra: Home, Health, Travel, About Us, Contact. Sample Page çöp kutusunda. Sayfa içerikleri henüz eski şablon metinleri.
 
 ## 7. Kararlar ile canlı site arasındaki farklar (2026-10-01 itibarıyla)
 | Konu | Karar | Canlı site |
