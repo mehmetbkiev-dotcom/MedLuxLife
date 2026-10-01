@@ -20,6 +20,7 @@ await p.route('**/*', async (route) => {
   } catch (e) { await route.abort(); }
 });
 await p.goto(url, { waitUntil: 'load', timeout: 120000 });
+if (process.env.EXTRA_CSS) { await p.addStyleTag({ content: require('fs').readFileSync(process.env.EXTRA_CSS, 'utf8') }); }
 await p.waitForTimeout(1500);
 if (full === '1') { for (let y = 0; y < 20000; y += 600) { await p.evaluate(v => window.scrollTo(0, v), y); await p.waitForTimeout(150); } await p.evaluate(() => window.scrollTo(0, 0)); await p.waitForTimeout(1500); }
 if (+scroll) { await p.mouse.wheel(0, +scroll); await p.waitForTimeout(1200); }
