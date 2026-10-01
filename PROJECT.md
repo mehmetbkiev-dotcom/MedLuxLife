@@ -68,6 +68,13 @@ Adult Bone Marrow Transplantation; Algology; Anesthesiology and Reanimation; App
   - Health › Hospital & Specialist Treatments (259) › Medical Oncology, Cardiology, Orthopedics and Traumatology, In-Vitro Fertilization (IVF), Neurosurgery, Ophthalmology, Organ Transplantation Center (268–274) + "View All" → 259
   - Travel › Holiday Packages (275), Hotel Reservation (276, eski adı Flight & Hotel), Flight Tickets (283), Airport Transfer (277), Hajj & Umrah (278)
   Açılır panel stili Additional CSS'te (koyu panel, altın ince çerçeve). Tek tek tedaviler menüde değil, kategori sayfalarında olacak.
+- 2026-10-01: Contact sayfası (26): sahte Berlin adresleri kaldırıldı (adres şimdilik gösterilmiyor); giriş cümlesi güncellendi; telefon +49 160 93 44 87 14 (tel: link); WhatsApp satırı eklendi +380 97 909 23 26 → https://wa.me/380979092326; e-posta info@medluxlife.com (mailto).
+
+## İletişim bilgileri
+- Telefon: +49 160 93 44 87 14
+- WhatsApp: +380 97 909 23 26 (wa.me/380979092326)
+- E-posta: info@medluxlife.com
+- Adres: şimdilik gösterilmiyor
 
 ## 7. Kararlar ile canlı site arasındaki farklar (2026-10-01 itibarıyla)
 | Konu | Karar | Canlı site |
