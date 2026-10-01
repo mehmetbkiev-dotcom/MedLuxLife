@@ -84,6 +84,9 @@ Adult Bone Marrow Transplantation; Algology; Anesthesiology and Reanimation; App
 
 - 2026-10-01: Home hero: kalın başlık/dolu buton denemesi beğenilmedi, geri alındı. 3 seçenek (A zarif minimal, B cam panel, C klasik lüks) önizlendi; sadece A'nın buton rengi/zemini uygulandı: buzlu cam zemin rgba(255,255,255,.10) + blur, altın çerçeve 2px, altın yazı #f0c46a (Additional CSS "Home hero buttons"). Başlık ve buton şekli orijinal.
 
+- 2026-10-01: Home hero başlığı: daha güçlü çok katmanlı gölge + başlığın hemen arkasında koyu radyal fon (Additional CSS "Home hero headline"); mobilde iç boşluk küçük. Başlık boyutu/yazı tipi orijinal.
+- Not: Sunucu sayfaları `Cache-Control: max-age=3600` ile gönderiyor; değişiklikler tarayıcıda Ctrl+F5 / gizli pencere ile hemen görülür.
+
 ## İletişim bilgileri
 - Telefon: +49 160 93 44 87 14
 - WhatsApp: +380 97 909 23 26 (wa.me/380979092326)
