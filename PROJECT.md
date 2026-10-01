@@ -75,6 +75,11 @@ Adult Bone Marrow Transplantation; Algology; Anesthesiology and Reanimation; App
 
 - 2026-10-01: Dental sayfasına katalog fotoğrafları eklendi (CMYK→RGB, max 1600px, Media ID 294–300, alt text'li). Giriş: metin + fotoğraf iki sütun; fotoğraflı 6 kart önce, 7 metin kartı sonra. "Treatment planning starts with high-resolution…" paragrafı kaldırıldı.
 
+- 2026-10-01: Kalan 7 Clinical Treatments sayfası yazıldı (261–267): Hair Transplantation, Restorative Hair Therapies, Plastic Surgery, Medical Aesthetics, Bariatric Surgery, Check-Up Packages, IV Treatments. Kaynak: `content/clinical_pages.py`, görseller `content/images.json` (40 katalog fotoğrafı, Media'da alt text'li).
+  - 3 fotoğrafta CelyxMed logosu vardı: bandana (Botox) ve yaka kartı (Bariatric) logoları silindi; mezoterapi tabancası fotoğrafı kullanılmadı.
+  - HWG §11 nedeniyle önce/sonra izlenimi veren 2 fotoğraf (bikini karşılaştırma, çift profil) kullanılmadı.
+  - Kliniğe özel iddialar (JCI, Allurion, cihaz markaları) ve hastalık tedavisi iddiaları (IV: sedef, viral enfeksiyon, diyabetik nöropati) çıkarıldı.
+
 ## İletişim bilgileri
 - Telefon: +49 160 93 44 87 14
 - WhatsApp: +380 97 909 23 26 (wa.me/380979092326)
