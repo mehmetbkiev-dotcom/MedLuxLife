@@ -82,6 +82,8 @@ Adult Bone Marrow Transplantation; Algology; Anesthesiology and Reanimation; App
 
 - 2026-10-01: Restorative Hair Therapies, Hair Transplantation sayfasına (261) ikinci bölüm olarak taşındı (Exosome ve Mesotherapy fotoğraflı, Red Light ve PRP metin). Ayrı sayfa (262) çöp kutusunda, menüden kaldırıldı. Clinical Treatments menüsünde artık 7 öğe var.
 
+- 2026-10-01: Home hero belirginleştirildi (Additional CSS "Home hero"): başlık büyük/kalın + güçlü gölge + arkasında hafif koyu hale; EXPLORE HEALTH dolu altın, EXPLORE TRAVEL koyu zemin + altın çerçeve, ikisi de büyük ve hizalı.
+
 ## İletişim bilgileri
 - Telefon: +49 160 93 44 87 14
 - WhatsApp: +380 97 909 23 26 (wa.me/380979092326)
