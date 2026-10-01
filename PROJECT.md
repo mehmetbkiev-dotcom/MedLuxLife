@@ -20,7 +20,7 @@ Site: https://medluxlife-6j8sz55bpn.live-website.com (IONOS WordPress, tema **Ex
 ### Clinical Treatments
 - **Dental and Oral Health** – Hollywood Smile, Dental Implants, Zirconium Veneers, Periodontology, Prosthetic Dental Treatments, Implant-Supported Prostheses, Restorative Dental Treatments, Root Canal Treatments, Teeth Whitening, Masseter Botox, TMJ Treatment, Orthodontics.
 - **Hair Transplantation** – The HairMetrix™ Hair Analysis, Types of Hair Transplantation Offered Include, Beard/Mustache Transplant, Eyebrow Transplant.
-- **Restorative Hair Therapies** – Exosome Applications, Red Light Therapy, Mesotherapy, PRP.
+- **Restorative Hair Therapies** (Hair Transplantation'ın alt kolu, ayrı sayfa yok) – Exosome Applications, Red Light Therapy, Mesotherapy, PRP.
 - **Plastic Surgery** – Mommy Makeover, Rhinoplasty, Abdominoplasty, Types of Abdominoplasty, Liposuction, Breast Augmentation, Breast Reduction, Breast Lift, Gynecomastia Surgery, Brachioplasty, Brazilian Butt Lift, Thigh Lift, Otoplasty, Blepharoplasty, Facelift, Neck Lift, Buccal Fat Removal.
 - **Medical Aesthetics** – Botox, Dermal Fillers, Mesotherapy, Exosomes.
 - **Bariatric Surgery** – Gastric Sleeve Surgery, Gastric Bypass Surgery, Gastric Balloon.
@@ -79,6 +79,8 @@ Adult Bone Marrow Transplantation; Algology; Anesthesiology and Reanimation; App
   - 3 fotoğrafta CelyxMed logosu vardı: bandana (Botox) ve yaka kartı (Bariatric) logoları silindi; mezoterapi tabancası fotoğrafı kullanılmadı.
   - HWG §11 nedeniyle önce/sonra izlenimi veren 2 fotoğraf (bikini karşılaştırma, çift profil) kullanılmadı.
   - Kliniğe özel iddialar (JCI, Allurion, cihaz markaları) ve hastalık tedavisi iddiaları (IV: sedef, viral enfeksiyon, diyabetik nöropati) çıkarıldı.
+
+- 2026-10-01: Restorative Hair Therapies, Hair Transplantation sayfasına (261) ikinci bölüm olarak taşındı (Exosome ve Mesotherapy fotoğraflı, Red Light ve PRP metin). Ayrı sayfa (262) çöp kutusunda, menüden kaldırıldı. Clinical Treatments menüsünde artık 7 öğe var.
 
 ## İletişim bilgileri
 - Telefon: +49 160 93 44 87 14

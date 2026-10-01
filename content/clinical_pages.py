@@ -4,17 +4,36 @@ from blocks import *
 
 IMG = {k: tuple(v) for k, v in json.load(open(__file__.rsplit('/', 1)[0] + '/images.json')).items()}
 
-def page(lead, intro_img, heading, cards, topic, extra=None, before=None):
+def section(heading, cards, lead=None):
     built = [card_img(t, body, IMG[i]) if i else card(t, body) for t, body, i in cards]
     photo = [c for c in built if "medlux-card--photo" in c]
     text = [c for c in built if "medlux-card--photo" not in c]
-    section = [h(heading)] + ([grid(photo)] if photo else []) + ([grid(text)] if text else [])
-    parts = [intro(lead, IMG[intro_img])] + ([before] if before else []) + [group(section, "medlux-section")]
+    inner = [h(heading)] + ([p(lead)] if lead else []) + ([grid(photo)] if photo else []) + ([grid(text)] if text else [])
+    return group(inner, "medlux-section")
+
+def page(lead, intro_img, heading, cards, topic, extra=None, before=None, more=None):
+    parts = [intro(lead, IMG[intro_img])] + ([before] if before else []) + [section(heading, cards)] + (more or [])
     if extra:
         parts.append(extra)
     return "\n\n".join(parts + [process(), cta(topic)])
 
 PAGES = {}
+
+RESTORATIVE = section("Restorative Hair Therapies", [
+    ("Exosome Therapy", [
+        p("Exosomes are tiny vesicles released by cells that carry proteins, lipids and growth signals. For hair restoration they are usually derived from mesenchymal stem cells and injected into thinning areas of the scalp, where they stimulate the follicles, extend the growth phase and support a healthier scalp. Exosomes are often combined with PRP."),
+    ], "hair-restorative-therapies"),
+    ("Red Light Therapy", [
+        p("A non-invasive, low-level light treatment at wavelengths of around 600 to 650 nanometres. The light is absorbed by the follicle cells, stimulates their energy production, improves local circulation and supports healthy hair growth."),
+    ], None),
+    ("Hair Mesotherapy", [
+        p("A tailored blend of vitamins, amino acids, plant extracts and other active ingredients is injected into the scalp to nourish the hair follicles. Usually performed as a series of sessions; many patients notice thicker, stronger hair over time."),
+        p("A motorised mesotherapy device delivers even micro-injections at a controlled depth, which makes the treatment quicker and more comfortable than manual injections."),
+    ], "hair-mesotherapy"),
+    ("PRP (Platelet-Rich Plasma)", [
+        p("A small amount of your own blood is processed in a centrifuge to obtain plasma rich in platelets. Injected into the scalp, it stimulates the hair follicles and supports cell renewal. PRP is a well-established option to reduce hair loss and improve hair density."),
+    ], None),
+    ], lead="Not every case of thinning hair needs surgery. Restorative hair therapies nourish and stimulate the hair follicles, help to slow hair loss and improve hair density and quality. They can be used on their own or to support the results of a hair transplant.")
 
 PAGES[261] = page(  # Hair Transplantation
     "Hair transplantation moves healthy hair follicles from areas where hair is resistant to thinning, usually the back and sides of the head, to areas with thinning or hair loss. It is one of the most requested aesthetic procedures for men and women with pattern hair loss, and the results grow naturally with your own hair.",
@@ -40,25 +59,7 @@ PAGES[261] = page(  # Hair Transplantation
     ("FUT (Follicular Unit Transplantation)", [
         p("A strip of skin is taken from the donor area and divided into individual follicular units. FUT allows many grafts in one session but leaves a longer linear scar, so it is used today only in selected cases."),
     ], None),
-    ], "hair transplant")
-
-PAGES[262] = page(  # Restorative Hair Therapies
-    "Not every case of thinning hair needs surgery. Restorative hair therapies nourish and stimulate the hair follicles, help to slow hair loss and improve hair density and quality. They can be used on their own or to support the results of a hair transplant.",
-    "hair-mesotherapy", "Restorative hair therapies", [
-    ("Exosome Therapy", [
-        p("Exosomes are tiny vesicles released by cells that carry proteins, lipids and growth signals. For hair restoration they are usually derived from mesenchymal stem cells and injected into thinning areas of the scalp, where they stimulate the follicles, extend the growth phase and support a healthier scalp. Exosomes are often combined with PRP."),
-    ], None),
-    ("Red Light Therapy", [
-        p("A non-invasive, low-level light treatment at wavelengths of around 600 to 650 nanometres. The light is absorbed by the follicle cells, stimulates their energy production, improves local circulation and supports healthy hair growth."),
-    ], None),
-    ("Hair Mesotherapy", [
-        p("A tailored blend of vitamins, amino acids, plant extracts and other active ingredients is injected into the scalp to nourish the hair follicles. Usually performed as a series of sessions; many patients notice thicker, stronger hair over time."),
-        p("A motorised mesotherapy device delivers even micro-injections at a controlled depth, which makes the treatment quicker and more comfortable than manual injections."),
-    ], None),
-    ("PRP (Platelet-Rich Plasma)", [
-        p("A small amount of your own blood is processed in a centrifuge to obtain plasma rich in platelets. Injected into the scalp, it stimulates the hair follicles and supports cell renewal. PRP is a well-established option to reduce hair loss and improve hair density."),
-    ], None),
-    ], "hair therapy")
+    ], "hair treatment", more=[RESTORATIVE])
 
 PAGES[263] = page(  # Plastic Surgery
     "Plastic and aesthetic surgery can restore harmony and proportion to the face and body. MedLuxLife connects you with experienced plastic surgeons and plans every step of your stay, from the first consultation to your recovery, so you can make your decision calmly and with full information.",
