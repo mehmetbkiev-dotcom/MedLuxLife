@@ -70,6 +70,9 @@ Adult Bone Marrow Transplantation; Algology; Anesthesiology and Reanimation; App
   Açılır panel stili Additional CSS'te (koyu panel, altın ince çerçeve). Tek tek tedaviler menüde değil, kategori sayfalarında olacak.
 - 2026-10-01: Contact sayfası (26): sahte Berlin adresleri kaldırıldı (adres şimdilik gösterilmiyor); giriş cümlesi güncellendi; telefon +49 160 93 44 87 14 (tel: link); WhatsApp satırı eklendi +380 97 909 23 26 → https://wa.me/380979092326; e-posta info@medluxlife.com (mailto).
 
+- 2026-10-01: Clinical Treatments içerik kaynağı: partner kliniğin İngilizce broşürü (64 sayfa). Klinik adı/markası, cihaz markaları, adres ve kliniğe özel iddialar çıkarıldı; metinler MedLuxLife diliyle yeniden yazıldı. PDF okunduktan sonra Media'dan silindi.
+- 2026-10-01: Dental and Oral Health (260) sayfası yazıldı: giriş, 13 tedavi kartı, "How MedLuxLife supports you" (4 adım), CTA (Free Consultation + WhatsApp) ve tıbbi uyarı notu. Kaynak: `content/dental.py`. Stil: Additional CSS "Treatment pages (medlux-*)".
+
 ## İletişim bilgileri
 - Telefon: +49 160 93 44 87 14
 - WhatsApp: +380 97 909 23 26 (wa.me/380979092326)
