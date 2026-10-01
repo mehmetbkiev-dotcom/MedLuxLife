@@ -55,3 +55,20 @@ def cta(topic):
         ]),
         p("The information on this page is for general guidance only and does not replace a medical consultation. Suitability for any treatment is assessed individually by a qualified doctor.", "medlux-disclaimer"),
     ], "medlux-cta")
+
+def img(media_id, url, alt, cls="medlux-card-img"):
+    a = json.dumps({"id": media_id, "sizeSlug": "large", "linkDestination": "none", "className": cls}, separators=(',', ':'))
+    return (f'<!-- wp:image {a} -->\n<figure class="wp-block-image size-large {cls}">'
+            f'<img src="{url}" alt="{html.escape(alt)}" class="wp-image-{media_id}"/></figure>\n<!-- /wp:image -->')
+
+def card_img(title, body, image):
+    """Card with a photo on top; image = (media_id, url, alt)."""
+    return group([img(*image)] + [h(title, 3)] + body, "medlux-card medlux-card--photo")
+
+def intro(lead_html, image):
+    col = lambda inner: ('<!-- wp:column {"verticalAlignment":"center"} -->\n<div class="wp-block-column is-vertically-aligned-center">'
+                         + inner + '</div>\n<!-- /wp:column -->')
+    return ('<!-- wp:columns {"verticalAlignment":"center","className":"medlux-intro"} -->\n'
+            '<div class="wp-block-columns are-vertically-aligned-center medlux-intro">'
+            + col(p(lead_html, "medlux-lead")) + "\n\n" + col(img(*image, cls="medlux-intro-img"))
+            + '</div>\n<!-- /wp:columns -->')

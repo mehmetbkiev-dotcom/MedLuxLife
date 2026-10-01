@@ -73,6 +73,8 @@ Adult Bone Marrow Transplantation; Algology; Anesthesiology and Reanimation; App
 - 2026-10-01: Clinical Treatments içerik kaynağı: partner kliniğin İngilizce broşürü (64 sayfa). Klinik adı/markası, cihaz markaları, adres ve kliniğe özel iddialar çıkarıldı; metinler MedLuxLife diliyle yeniden yazıldı. PDF okunduktan sonra Media'dan silindi.
 - 2026-10-01: Dental and Oral Health (260) sayfası yazıldı: giriş, 13 tedavi kartı, "How MedLuxLife supports you" (4 adım), CTA (Free Consultation + WhatsApp) ve tıbbi uyarı notu. Kaynak: `content/dental.py`. Stil: Additional CSS "Treatment pages (medlux-*)".
 
+- 2026-10-01: Dental sayfasına katalog fotoğrafları eklendi (CMYK→RGB, max 1600px, Media ID 294–300, alt text'li). Giriş: metin + fotoğraf iki sütun; fotoğraflı 6 kart önce, 7 metin kartı sonra. "Treatment planning starts with high-resolution…" paragrafı kaldırıldı.
+
 ## İletişim bilgileri
 - Telefon: +49 160 93 44 87 14
 - WhatsApp: +380 97 909 23 26 (wa.me/380979092326)

@@ -21,6 +21,7 @@ await p.route('**/*', async (route) => {
 });
 await p.goto(url, { waitUntil: 'load', timeout: 120000 });
 await p.waitForTimeout(1500);
+if (full === '1') { for (let y = 0; y < 20000; y += 600) { await p.evaluate(v => window.scrollTo(0, v), y); await p.waitForTimeout(150); } await p.evaluate(() => window.scrollTo(0, 0)); await p.waitForTimeout(1500); }
 if (+scroll) { await p.mouse.wheel(0, +scroll); await p.waitForTimeout(1200); }
 await p.screenshot({ path: out, fullPage: full === '1' });
 await b.close();
