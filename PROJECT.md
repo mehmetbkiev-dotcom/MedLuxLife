@@ -63,6 +63,11 @@ Adult Bone Marrow Transplantation; Algology; Anesthesiology and Reanimation; App
   Logo PNG'si gerçek şeffaflığa sahip (alpha kontrol edildi), beyaz kare oluşmaz.
 - 2026-10-01: Sayfalar yeniden adlandırıldı: Services (27) → Health `/health`, Booking (25) → Travel `/travel`, About (24) → About Us `/about-us`; Home (23) ve Contact (26) aynı. Sıra: Home, Health, Travel, About Us, Contact. Sample Page çöp kutusunda. Sayfa içerikleri henüz eski şablon metinleri.
 - 2026-10-01: Header'daki düz yazı (HOME | HEALTH | …) gerçek Navigation bloğuyla değiştirildi (menü ID 4, class `medlux-main-nav`, mobilde hamburger). Additional CSS'e link rengi, hover altın (#d4a24c) ve `|` ayraçları eklendi. Yedekler: header template part, menü 4, global styles.
+- 2026-10-01: HEALTH ve TRAVEL açılır menü yapıldı (tıklayınca açılır, sayfaya gitmez). 21 alt sayfa oluşturuldu (şimdilik boş):
+  - Health › Clinical Treatments (258) › Dental and Oral Health, Hair Transplantation, Restorative Hair Therapies, Plastic Surgery, Medical Aesthetics, Bariatric Surgery, Check-Up Packages, IV Treatments (260–267)
+  - Health › Hospital & Specialist Treatments (259) › Medical Oncology, Cardiology, Orthopedics and Traumatology, In-Vitro Fertilization (IVF), Neurosurgery, Ophthalmology, Organ Transplantation Center (268–274) + "View All" → 259
+  - Travel › Holiday Packages, Flight & Hotel, Airport Transfer, Hajj & Umrah (275–278)
+  Açılır panel stili Additional CSS'te (koyu panel, altın ince çerçeve). Tek tek tedaviler menüde değil, kategori sayfalarında olacak.
 
 ## 7. Kararlar ile canlı site arasındaki farklar (2026-10-01 itibarıyla)
 | Konu | Karar | Canlı site |
