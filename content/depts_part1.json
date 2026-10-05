@@ -618,48 +618,54 @@
  },
  "endocrinology-and-metabolism-diseases": {
   "title": "Endocrinology and Metabolic Diseases",
-  "lead": "Hormones produced by the endocrine glands carry essential messages around the body, and when too much or too little is produced, a range of disorders can develop. The endocrine team at our partner hospital evaluates these conditions and, where surgery is needed, offers surgical treatment focused mainly on the thyroid, parathyroid and adrenal glands. MedLuxLife helps you gather your hormone tests and imaging and coordinates consultation and treatment planning.",
+  "lead": "Endocrinology deals with the hormone-producing glands and the metabolic conditions they influence, such as diabetes, thyroid disorders and diseases of the pituitary and adrenal glands. Most of these conditions are diagnosed with blood tests and imaging and treated with medication and lifestyle measures, with long-term follow-up. MedLuxLife arranges a consultation with an endocrinologist at our partner hospital and coordinates any further tests or treatment.",
   "cards": [
    [
+    "Diabetes",
+    "Diagnosis, treatment and follow-up of type 1 and type 2 diabetes, including insulin therapy, modern oral and injectable medicines and screening for complications."
+   ],
+   [
     "Thyroid disorders",
-    "Evaluation and treatment of thyroid conditions affecting metabolism, energy use and heat production, including surgical removal of all or part of the gland (thyroidectomy) where appropriate."
+    "Treatment of an underactive or overactive thyroid (hypothyroidism, hyperthyroidism), Hashimoto's and Graves' disease, and assessment of thyroid nodules."
    ],
    [
-    "Parathyroid disorders",
-    "Care for conditions of the four parathyroid glands that regulate calcium and phosphorus, including parathyroidectomy and parathyroid transplantation."
+    "Pituitary diseases",
+    "Diagnosis and treatment of pituitary tumours and hormone imbalances, in cooperation with the pituitary clinic and neurosurgery."
    ],
    [
-    "Adrenal disorders",
-    "Assessment and treatment of adrenal gland conditions affecting cortisol, blood pressure-related hormones and development, including adrenalectomy."
+    "Adrenal diseases",
+    "Assessment of adrenal gland disorders such as Cushing's syndrome, Addison's disease, hyperaldosteronism and adrenal masses."
    ],
    [
-    "Pancreatic surgery",
-    "Pancreatectomy, the removal of part or all of the pancreas, for example for neuroendocrine tumours."
+    "Calcium, bone and parathyroid",
+    "Diagnosis and treatment of osteoporosis, vitamin D deficiency and parathyroid hormone disorders."
    ],
    [
-    "Careful surgical technique",
-    "Endocrine operations are performed by surgeons with dedicated experience, with particular care taken to protect the voice and calcium balance and to minimise bleeding."
+    "Obesity and metabolic syndrome",
+    "Medical assessment of weight-related metabolic problems, insulin resistance and metabolic syndrome, with referral to nutrition or obesity surgery where suitable."
+   ],
+   [
+    "Lipid disorders",
+    "Diagnosis and treatment of high cholesterol and triglyceride levels to reduce cardiovascular risk."
+   ],
+   [
+    "Reproductive hormones",
+    "Hormonal causes of irregular periods, hirsutism, PCOS, low testosterone and menopause-related complaints."
    ]
   ],
-  "list_heading": "Conditions treated",
+  "list_heading": "Tests and examinations",
   "list": [
-   "Adrenal tumours",
-   "Cushing's syndrome",
-   "Parathyroid gland disorders",
-   "Parathyroid adenomas",
-   "Parathyroid cancer",
-   "Hyperparathyroidism",
-   "Hyperthyroidism",
-   "Goitre",
-   "Graves' disease",
-   "Toxic (hyperfunctioning) thyroid nodules",
-   "Thyroid nodules",
-   "Thyroid cancer",
-   "Neuroendocrine tumours"
+   "Hormone blood tests",
+   "Dynamic hormone stimulation and suppression tests",
+   "Oral glucose tolerance test and HbA1c",
+   "Thyroid ultrasound",
+   "Fine-needle aspiration biopsy of thyroid nodules",
+   "Bone density measurement (DEXA)",
+   "Imaging of the pituitary and adrenal glands in cooperation with radiology"
   ],
   "docs_extra": [
-   "Recent hormone, calcium and metabolic blood test results",
-   "Thyroid ultrasound or other endocrine imaging reports"
+   "Recent hormone test results (for example thyroid tests, HbA1c)",
+   "Your current insulin or hormone doses"
   ]
  },
  "gastroenterological-surgery": {
