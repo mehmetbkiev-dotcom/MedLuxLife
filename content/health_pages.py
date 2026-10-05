@@ -30,16 +30,28 @@ WHY = [
     ("Aftercare", "We stay in touch after your treatment and help with follow-up questions."),
 ]
 
+def hub_box(img, title, text, links, all_label, all_url):
+    items = [f'<a href="{u}">{l}</a>' for l, u in links]
+    inner = [img_block(IMG[img]), h(title), p(text), ul(items), buttons([(all_label, all_url, "medlux-btn-primary", "")])]
+    return ('<!-- wp:column {"className":"medlux-hub-box"} -->\n<div class="wp-block-column medlux-hub-box">'
+            + "\n\n".join(inner) + '</div>\n<!-- /wp:column -->')
+
+def img_block(image):
+    return img(*image, cls="medlux-hub-img")
+
+HUB = ('<!-- wp:columns {"className":"medlux-hub"} -->\n<div class="wp-block-columns medlux-hub">'
+       + hub_box("aesthetics", "Clinical Treatments",
+                 "Aesthetic, dental and hair treatments, weight-loss surgery, check-ups and IV therapies with experienced partner clinics.",
+                 [(t, C + s + "/") for t, s, _, _ in CLINICAL], "View all clinical treatments", C)
+       + "\n\n"
+       + hub_box("check-up-women", "Hospital &amp; Specialist Treatments",
+                 "Specialist hospital care across more than 70 departments, from oncology and cardiology to transplantation and fertility treatment.",
+                 [(t, H + s + "/") for _, t, s, _ in FEATURED], "View all departments", H)
+       + '</div>\n<!-- /wp:columns -->')
+
 HEALTH = "\n\n".join([
-    intro("MedLuxLife connects you with professional healthcare and carefully plans every step of your journey. Whether you are looking for an aesthetic or dental treatment or for specialist hospital care, we help you find the right specialists, prepare your treatment and organise your stay.", IMG["aesthetics"]),
-    group([h("Clinical Treatments"),
-           p("Aesthetic, dental, hair and wellness-oriented medical treatments with experienced partner clinics."),
-           grid([clinical_card(*c) for c in CLINICAL]),
-           more_button("View all clinical treatments", C)], "medlux-section"),
-    group([h("Hospital &amp; Specialist Treatments"),
-           p("Specialist hospital care across more than 70 departments, from oncology and cardiology to transplantation and fertility treatment."),
-           grid([featured_card(*f) for f in FEATURED]),
-           more_button("View all departments", H)], "medlux-section"),
+    intro("MedLuxLife connects you with professional healthcare and carefully plans every step of your journey. Whether you are looking for an aesthetic or dental treatment or for specialist hospital care, we help you find the right specialists, prepare your treatment and organise your stay.", IMG["dental-hero"]),
+    group([h("Our health services"), HUB], "medlux-section"),
     group([h("Why MedLuxLife"), grid([card(t, [p(d)]) for t, d in WHY], "medlux-steps")], "medlux-section"),
     process(),
     cta("treatment"),
