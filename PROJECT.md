@@ -87,6 +87,9 @@ Adult Bone Marrow Transplantation; Algology; Anesthesiology and Reanimation; App
 - 2026-10-01: Home hero başlığı: daha güçlü çok katmanlı gölge + başlığın hemen arkasında koyu radyal fon (Additional CSS "Home hero headline"); mobilde iç boşluk küçük. Başlık boyutu/yazı tipi orijinal.
 - Not: Sunucu sayfaları `Cache-Control: max-age=3600` ile gönderiyor; değişiklikler tarayıcıda Ctrl+F5 / gizli pencere ile hemen görülür.
 
+- 2026-10-05: Hospital & Specialist Treatments yazıldı. Ana sayfa (259): giriş + "Most requested specialties" (7 kart, Learn more bağlantılı) + "All departments" (11 grup, 72 bölüm; Obesity Surgery → Bariatric, Plastic → Plastic Surgery sayfalarına bağlı). 7 uzmanlık sayfası (268–274): tedavi/hizmet kartları + "Before you travel" belge listesi + süreç + CTA. Kaynak: `content/hospital_pages.py`. Bu bölüm için katalog yok; metinler genel, başarı oranı/garanti iddiası yok.
+  - Listeden çıkarılanlar: "Clone of Kidney Transplant Clinic" (kopya/hatalı kayıt), "Hirsutism Clinic" (PCOS and Hirsutism Clinic ile birleştirildi). "Imaging Unit" ve "Radiology" → "Radiology and Imaging".
+
 ## İletişim bilgileri
 - Telefon: +49 160 93 44 87 14
 - WhatsApp: +380 97 909 23 26 (wa.me/380979092326)
