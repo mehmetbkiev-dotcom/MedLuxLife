@@ -99,6 +99,8 @@ Adult Bone Marrow Transplantation; Algology; Anesthesiology and Reanimation; App
   - Çıkarılanlar: gastroenterolojide sadece hayvan deneyinde olan NOTES yöntemi; perinatolojide feticide / embryo reduction; istatistik, "Türkiye'de ilk", yatak sayısı, telefonlar.
   - Endocrinology sayfası (512) hastanenin sayfası cerrahi içerikli olduğu için genel tıbbi bilgiyle yeniden yazıldı (diyabet, tiroid, hipofiz, adrenal, kemik/paratiroid, obezite, lipid, üreme hormonları + testler); cerrahi için Endocrine Surgery ve Thyroid Clinic sayfalarına bağlantı var.
 
+- 2026-10-05: EXPLORE HEALTH butonu → `/health/`. Health sayfası (27) vitrin olarak yeniden yazıldı: giriş + Clinical Treatments (7 fotoğraflı kart + "View all clinical treatments") + Hospital & Specialist (7 öne çıkan + "View all departments") + Why MedLuxLife (4) + süreç + CTA. Boş Clinical Treatments sayfası (258) 7 kartla dolduruldu. Kaynak: `content/health_pages.py`.
+
 ## İletişim bilgileri
 - Telefon: +49 160 93 44 87 14
 - WhatsApp: +380 97 909 23 26 (wa.me/380979092326)
