@@ -92,6 +92,8 @@ Adult Bone Marrow Transplantation; Algology; Anesthesiology and Reanimation; App
 
 - 2026-10-05: Hospital & Specialist sayfaları partner hastanenin (yeditepehastaneleri.com/en/services) bölüm sayfalarına göre güncellendi. **Kural: sitede hastanenin adı geçmeyecek** ("our partner hospital"). Hastanede olmayan tedaviler çıkarıldı (ör. SMILE/ICL, hidrosefali kartı), olanlar eklendi (robotik protez, kıkırdak nakli, epilepsi cerrahisi, natural IVF, PGD, pankreas/kalp nakli deneyimi vb.). Onkolojiye "Cancer types treated" listesi eklendi. Bölüm listesinden "Medical Biochemistry" çıkarıldı (hastanede yok). Başarı oranı/istatistik/"en iyi" iddiası kullanılmadı.
 
+- 2026-10-05: Hospital sayfalarında eksikler giderildi — hastane listeleri madde madde karşılandı: onkoloji 20 kanser türü ayrı ayrı (2 sütun), kardiyoloji 10 kart (20 işlem), ortopedi 12 kart (omuz, ayak-bilek, biyolojik kıkırdak ayrı), IVF 12 kart (co-culture, mikroçip, assisted hatching, ovaryan PRP eklendi), beyin cerrahisi 10 kart (kifoplasti, ağrı/spastisite pompası, stereotaktik, nörospinal travma), göz 16 kart (tüm birimler ayrı), nakil 8 kart (pankreas/kalp). Bölüm listesine Hirsutism Clinic eklendi, Radiology / Imaging Unit ayrıldı. Hastane bölüm sayfalarındaki 7 ana fotoğraf (Media 406–412) giriş ve "Most requested" kartlarına eklendi; marka/logo yok (göz görselindeki "calibrating" yazısı görselin parçası).
+
 ## İletişim bilgileri
 - Telefon: +49 160 93 44 87 14
 - WhatsApp: +380 97 909 23 26 (wa.me/380979092326)
