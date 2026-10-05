@@ -1,0 +1,910 @@
+{
+ "pediatric-oncology": {
+  "title": "Paediatric Oncology",
+  "lead": "Paediatric oncology focuses on the diagnosis, treatment and long-term follow-up of cancers in children and adolescents up to the age of 18, including solid tumours, lymphomas and leukaemias. Childhood cancers behave differently from adult cancers and call for care designed around young patients and their families. MedLuxLife coordinates assessments and treatment at our partner hospital, helping families with records, appointments, travel and communication throughout the course of care.",
+  "cards": [
+   [
+    "Diagnosis and staging",
+    "Thorough evaluation of suspected childhood tumours, lymphomas and leukaemias to establish the diagnosis and the extent of the disease."
+   ],
+   [
+    "Surgery",
+    "Surgical removal of tumours may form part of the treatment plan, depending on tumour type and spread."
+   ],
+   [
+    "Chemotherapy",
+    "Drug-based cancer treatment planned individually for each child, delivered on an inpatient or outpatient basis."
+   ],
+   [
+    "Radiotherapy",
+    "Radiation treatment may be recommended for certain tumour types as part of a combined plan."
+   ],
+   [
+    "Immunotherapy",
+    "Treatments that engage the immune system can be considered for selected childhood cancers."
+   ],
+   [
+    "Stem cell transplantation",
+    "Stem cell transplantation is among the treatment options for some childhood cancers and blood diseases."
+   ],
+   [
+    "Paediatric haematology-oncology clinic",
+    "Outpatient and inpatient care in a dedicated paediatric haematology-oncology clinic, with single rooms that allow a parent to stay with the child during monitoring and treatment."
+   ],
+   [
+    "Outpatient chemotherapy unit",
+    "A day unit for short treatments and blood transfusions, so that many children can return home the same day."
+   ],
+   [
+    "Dedicated children's outpatient floor",
+    "Outpatient consultations take place on a separate floor reserved for children with cancer, leukaemia and blood diseases."
+   ],
+   [
+    "Long-term follow-up",
+    "Structured follow-up after treatment to monitor recovery and the child's ongoing health."
+   ]
+  ],
+  "list_heading": "Childhood tumours evaluated",
+  "list": [
+   "Brain tumours",
+   "Wilms' tumour and other kidney tumours",
+   "Neuroblastoma and ganglioneuroblastoma (adrenal tumours)",
+   "Soft tissue sarcomas (muscle and connective tissue tumours)",
+   "Bone tumours",
+   "Retinoblastoma (eye tumour)",
+   "Germ cell tumours",
+   "Hepatoblastoma and hepatocellular carcinoma (liver tumours)",
+   "Lymphomas",
+   "Leukaemias",
+   "Other rare childhood tumours"
+  ],
+  "docs_extra": [
+   "Pathology and biopsy reports",
+   "Previous imaging (MRI, CT or PET-CT) on CD/DVD with reports"
+  ]
+ },
+ "pediatric-rheumatology": {
+  "title": "Paediatric Rheumatology",
+  "lead": "Paediatric rheumatology covers the assessment, diagnosis and treatment of inflammatory and rheumatic conditions in childhood, which can affect the joints, muscles, blood vessels and skin as well as other organ systems. Because these conditions often differ from their adult forms, care is planned with a multidisciplinary approach. MedLuxLife arranges consultations and follow-up at our partner hospital and supports families throughout their stay.",
+  "cards": [
+   [
+    "Specialist assessment",
+    "Careful evaluation of joint, muscle, skin and systemic symptoms in children to reach a clear diagnosis."
+   ],
+   [
+    "Recurrent fever evaluation",
+    "Investigation of unexplained or recurring fevers, including possible autoinflammatory causes."
+   ],
+   [
+    "Inflammatory joint disease",
+    "Diagnosis and treatment planning for juvenile arthritis and related joint conditions."
+   ],
+   [
+    "Vasculitis and multisystem disease",
+    "Care for conditions that inflame blood vessels or affect several organs at once."
+   ],
+   [
+    "Multidisciplinary care",
+    "Collaboration with other paediatric specialties when a condition involves more than the musculoskeletal system."
+   ],
+   [
+    "Long-term follow-up",
+    "Ongoing monitoring to help control disease activity and support the child's quality of life."
+   ]
+  ],
+  "list_heading": "Conditions treated",
+  "list": [
+   "Growing pains",
+   "Unexplained and recurring fevers",
+   "Juvenile idiopathic arthritis",
+   "Juvenile scleroderma",
+   "Familial Mediterranean fever",
+   "Acute rheumatic conditions",
+   "Chronic rheumatic diseases",
+   "Behçet's disease",
+   "Kawasaki disease",
+   "Henoch-Schönlein purpura",
+   "Granulomatosis with polyangiitis (Wegener's granulomatosis)",
+   "Other autoinflammatory diseases",
+   "Other rheumatological diseases"
+  ],
+  "docs_extra": [
+   "Previous blood test results, including inflammatory markers"
+  ]
+ },
+ "pediatric-surgery": {
+  "title": "Paediatric Surgery",
+  "lead": "Paediatric surgery deals with conditions requiring surgical care in infants, children and adolescents, from the prenatal period up to the age of 18. Treatment is tailored to the child's age and development, with open, endoscopic and laparoscopic techniques available. MedLuxLife coordinates consultations, surgery dates and aftercare at our partner hospital, so that families can focus on their child.",
+  "cards": [
+   [
+    "Prenatal consultation",
+    "Surgical evaluation can begin before birth when a condition requiring surgery is identified during pregnancy."
+   ],
+   [
+    "Digestive system surgery",
+    "Diagnosis, treatment and follow-up of surgical conditions affecting the digestive tract in children."
+   ],
+   [
+    "Urinary tract surgery",
+    "Surgical care for conditions of the kidneys, bladder and urinary tract in childhood."
+   ],
+   [
+    "Chest surgery (non-cardiac)",
+    "Treatment of surgical conditions within the chest cavity, excluding the heart."
+   ],
+   [
+    "Open, endoscopic and laparoscopic techniques",
+    "Alongside conventional surgery, endoscopic and laparoscopic methods are used where suitable."
+   ],
+   [
+    "Day surgery",
+    "Many procedures allow same-day discharge, including inguinal hernia repair, hydrocele repair, treatment of undescended testicles, circumcision, catheter placement and endoscopic procedures."
+   ],
+   [
+    "Pain management",
+    "Specific pain-relief measures aim to keep children comfortable in hospital and after returning home."
+   ],
+   [
+    "Paediatric urology",
+    "In collaboration with the Urology department, surgical and endoscopic treatment of congenital anomalies and acquired problems such as stones and trauma."
+   ],
+   [
+    "Coordinated care",
+    "Work with other specialties for conditions such as congenital spinal cord defects and nocturnal enuresis (bedwetting)."
+   ]
+  ],
+  "list_heading": "Paediatric urology conditions",
+  "list": [
+   "Cystic kidney diseases",
+   "Urinary tract obstructions and dilatations",
+   "Vesicoureteral reflux (urine flowing back from the bladder to the kidneys)",
+   "Bladder abnormalities",
+   "Penile abnormalities",
+   "Anorectal malformations",
+   "Urinary stones",
+   "Urological trauma"
+  ],
+  "docs_extra": [
+   "Previous ultrasound or imaging reports",
+   "Prenatal scan reports, if the condition was identified before birth"
+  ]
+ },
+ "pediatrics": {
+  "title": "Paediatrics",
+  "lead": "The paediatrics department provides diagnosis and treatment for children from birth to 18 years of age, with outpatient clinics, an inpatient ward and intensive care areas designed for children. It is organised into a newborn section (0-28 days) and a child section (0-18 years), with subspecialties working together as a multidisciplinary team. MedLuxLife helps families access the right paediatric specialist at our partner hospital and coordinates appointments, travel and communication.",
+  "cards": [
+   [
+    "General paediatric care",
+    "Outpatient, inpatient and intensive care services for children aged 0-18 in child-friendly settings."
+   ],
+   [
+    "Newborn care",
+    "The neonatal section serves babies up to 28 days old through a neonatal unit, a neonatal observation unit and a neonatal intensive care unit."
+   ],
+   [
+    "Breastfeeding support",
+    "The hospital follows the UNICEF and WHO Baby-Friendly approach, with specially trained staff helping mothers establish and maintain breastfeeding."
+   ],
+   [
+    "Paediatric allergy",
+    "Testing and treatment for allergic diseases, including skin tests, blood allergy tests, lung function tests, allergen provocation tests, food tests, anaesthetic drug tests and allergy vaccination (immunotherapy)."
+   ],
+   [
+    "Paediatric endocrinology",
+    "Assessment of hormonal and metabolic problems such as growth disorders, diabetes, thyroid and puberty-related conditions."
+   ],
+   [
+    "Paediatric haematology-oncology",
+    "Diagnosis and treatment of blood diseases and childhood cancers, with outpatient and inpatient care in a paediatric bone marrow transplantation clinic."
+   ],
+   [
+    "Paediatric gastroenterology, hepatology and nutrition",
+    "Care for diseases of the oesophagus, stomach, duodenum, small and large intestine, liver and gallbladder, as well as nutritional disorders."
+   ],
+   [
+    "Paediatric surgery",
+    "Treatment of urological, genital, digestive and respiratory conditions and newborn anomalies, including non-cardiac thoracic, oncological, digestive and endocrine surgery, paediatric gynaecology, trauma surgery, diagnostic and interventional endoscopy, and laparoscopic and thoracoscopic procedures."
+   ],
+   [
+    "Paediatric nephrology",
+    "Diagnosis and treatment of congenital and acquired problems of the kidneys, urinary tract, bladder and urethra."
+   ],
+   [
+    "Paediatric rheumatology",
+    "Outpatient care for childhood rheumatic diseases affecting joints, muscles, blood vessels and skin."
+   ]
+  ],
+  "list_heading": "Conditions treated",
+  "list": [
+   "Asthma",
+   "Allergic bronchitis",
+   "Allergic rhinitis (hay fever)",
+   "Atopic dermatitis (eczema)",
+   "Urticaria (hives)",
+   "Food allergy",
+   "Drug allergy, including allergy to anaesthetic agents",
+   "Chronic cough",
+   "Wheezing in infants",
+   "Frequent respiratory tract infections",
+   "Allergic skin rashes",
+   "Growth retardation and short stature",
+   "Type 1 diabetes mellitus",
+   "Hypoglycaemia",
+   "Early or delayed puberty",
+   "Thyroid diseases (hypothyroidism, hyperthyroidism)",
+   "Pituitary gland diseases",
+   "Menstrual irregularities",
+   "Excessive hair growth",
+   "Disorders of sexual development",
+   "Adrenal gland diseases",
+   "Obesity",
+   "Leukaemia",
+   "Blood production disorders",
+   "Thalassaemia (Mediterranean anaemia)",
+   "Sickle cell disease",
+   "Bone marrow failure",
+   "Genetic diseases",
+   "Immune system diseases",
+   "Childhood tumours",
+   "Diseases of the oesophagus, stomach and intestines",
+   "Liver and gallbladder diseases",
+   "Nutritional disorders",
+   "Kidney and urinary tract disorders",
+   "Childhood rheumatic diseases"
+  ],
+  "docs_extra": [
+   "Child's vaccination record",
+   "Growth charts or previous paediatric reports"
+  ]
+ },
+ "pelvic-pain-and-endometriosis-clinic": {
+  "title": "Pelvic Pain and Endometriosis Clinic",
+  "lead": "Chronic pelvic pain can affect every part of daily life, and finding its cause often requires more than one specialist. This multidisciplinary clinic investigates the nature and origin of pelvic pain, including endometriosis, using diagnostic methods chosen according to each patient's symptoms, and then plans treatment based on current medical evidence. MedLuxLife arranges your evaluation at our partner hospital and supports you with preparation, records and travel.",
+  "cards": [
+   [
+    "Detailed pain assessment",
+    "A structured consultation explores when, where and how the pain occurs, its intensity and its effect on work and daily life."
+   ],
+   [
+    "Symptom-based diagnostics",
+    "Diagnostic methods are selected to match each patient's symptoms in order to identify the cause of the pain."
+   ],
+   [
+    "Endometriosis evaluation",
+    "Assessment of endometriosis as a possible cause of pelvic pain, followed by individual treatment planning."
+   ],
+   [
+    "Multidisciplinary team",
+    "Women's health specialists work together with urology, gastroenterology, general surgery, physical therapy and psychiatry."
+   ],
+   [
+    "Individual treatment planning",
+    "Treatment is planned in line with current developments, with the aim of improving quality of life affected by pain."
+   ],
+   [
+    "Psychological wellbeing",
+    "Mood and emotional strain are considered as part of the overall assessment, with psychiatric input available where helpful."
+   ]
+  ],
+  "list_heading": "Questions your consultation may cover",
+  "list": [
+   "When the pain first started and how often it occurs",
+   "Where and when the pain appears, and whether it stays in one place",
+   "How long each episode lasts",
+   "Whether the pain has changed or spread over time",
+   "How intense the pain is on a scale of 1 to 10",
+   "Whether the pain limits your ability to work",
+   "Any link to the menstrual cycle, urination or sexual intercourse",
+   "How you would describe the pain (sharp, dull, aching)",
+   "The circumstances in which the pain begins",
+   "Any connection with eating, sleeping, sex or movement",
+   "Possible triggers such as movement, using the toilet, intercourse or medication",
+   "Anything that eases or worsens the pain",
+   "Any previous pelvic surgery",
+   "Any previous treatment for urinary tract or vaginal infections",
+   "Recent low mood, depression or feelings of hopelessness"
+  ],
+  "docs_extra": [
+   "A pain diary covering at least one menstrual cycle",
+   "Previous gynaecological ultrasound, MRI or surgical reports"
+  ]
+ },
+ "perinatology": {
+  "title": "Perinatology",
+  "lead": "Perinatology, a division of obstetrics and gynaecology, focuses on the health of mother and baby during pregnancy. Alongside routine pregnancy care and delivery, it provides follow-up and management of high-risk pregnancies and the diagnosis and management of maternal and fetal conditions using specialised scans, tests and procedures. MedLuxLife helps expectant parents arrange screening, specialist scans and consultations at our partner hospital and coordinates every step of the visit.",
+  "cards": [
+   [
+    "Routine and high-risk pregnancy care",
+    "Pregnancy follow-up and delivery, with closer monitoring and management for high-risk pregnancies."
+   ],
+   [
+    "First-trimester screening (11-14 weeks)",
+    "An ultrasound nuchal translucency measurement, which can be combined with blood tests and further markers such as the fetal nasal bone, blood flow in the fetal heart and the facial angle, to assess the risk of Down syndrome and other conditions."
+   ],
+   [
+    "Second-trimester screening (15-21 weeks)",
+    "A triple or quadruple blood test that estimates risk; a raised result indicates that diagnostic testing may be advisable, not that the baby is affected."
+   ],
+   [
+    "Early detailed anomaly scan (11-14 weeks)",
+    "A detailed transvaginal ultrasound examination of fetal development early in pregnancy."
+   ],
+   [
+    "Detailed anomaly scan (18-22 weeks)",
+    "A high-resolution second-level ultrasound examining fetal organs and growth, which can include uterine artery Doppler and cervical length assessment in at-risk pregnancies."
+   ],
+   [
+    "Fetal echocardiography",
+    "A detailed examination of the baby's heart structure and function, recommended when there is an increased risk of congenital heart disease or a suspected abnormality; ideally performed around 18-21 weeks."
+   ],
+   [
+    "Doppler ultrasound",
+    "Maternal and fetal Doppler examinations to assess blood flow to the placenta and within the baby's circulation."
+   ],
+   [
+    "Chorionic villus sampling (CVS)",
+    "A placental tissue sample, usually taken at 11-14 weeks under ultrasound guidance, to examine chromosome number and structure."
+   ],
+   [
+    "Amniocentesis",
+    "A small sample of amniotic fluid, usually taken at 16-22 weeks, for chromosomal analysis; rapid FISH testing for selected chromosomes may give preliminary results sooner."
+   ],
+   [
+    "Cordocentesis (fetal blood sampling)",
+    "A small blood sample from the umbilical cord vein, usually after the 19th week, for diagnostic testing."
+   ],
+   [
+    "Counselling and birth planning",
+    "Results are discussed with parents, and findings such as a heart abnormality help plan where and how the birth should take place."
+   ]
+  ],
+  "list_heading": "Tests and procedures",
+  "list": [
+   "11-14 week screening tests",
+   "15-21 week screening tests (triple or quadruple test)",
+   "11-14 week transvaginal detailed fetal anomaly screening",
+   "18-22 week obstetric detailed anomaly screening",
+   "Fetal echocardiography",
+   "Maternal and fetal Doppler ultrasonography",
+   "Uterine artery Doppler",
+   "Cervical length assessment",
+   "Chorionic villus sampling (CVS)",
+   "Amniocentesis, including FISH analysis",
+   "Fetal blood sampling (cordocentesis)"
+  ],
+  "docs_extra": [
+   "Maternity record (e.g. Mutterpass) and previous pregnancy scan reports",
+   "Previous screening or genetic test results"
+  ]
+ },
+ "physical-therapy-and-rehabilitation": {
+  "title": "Physical Therapy and Rehabilitation",
+  "lead": "Physical therapy and rehabilitation aims to restore movement and function, reduce pain and improve mobility after injury, illness or surgery. The department offers assessment, treatment and rehabilitation for a wide range of conditions, from musculoskeletal disorders to neurological diseases, along with several specialised programmes. MedLuxLife can arrange a rehabilitation stay at our partner hospital and coordinate it with your other treatment.",
+  "cards": [
+   [
+    "Musculoskeletal conditions",
+    "Treatment for arthritis, osteoporosis, inflammatory and soft tissue rheumatic diseases, and neck, back and lower back pain."
+   ],
+   [
+    "Orthopaedic rehabilitation",
+    "Rehabilitation after fractures and dislocations, sports injuries, spinal curvatures, foot problems and orthopaedic surgery such as joint replacement."
+   ],
+   [
+    "Neurological rehabilitation",
+    "Programmes for stroke, brain and spinal cord injury, facial paralysis, nerve injuries, muscle diseases and Parkinson's disease."
+   ],
+   [
+    "Paediatric rehabilitation",
+    "Therapy for children with spasticity, aimed at improving movement and daily function."
+   ],
+   [
+    "Cardiac rehabilitation",
+    "Supervised exercise and recovery programmes following heart problems."
+   ],
+   [
+    "Pelvic floor and pregnancy programmes",
+    "A stress incontinence programme for urinary leakage and guided exercise during pregnancy."
+   ],
+   [
+    "Back school and osteoporosis school",
+    "Educational programmes teaching posture, movement and exercise to protect the spine and bones."
+   ],
+   [
+    "Fibromyalgia group programme",
+    "Group-based therapy and education for people living with fibromyalgia."
+   ],
+   [
+    "Specialised rehabilitation",
+    "Rehabilitation after cosmetic surgery, programmes for dialysis patients, and assessment and planning after obesity surgery."
+   ],
+   [
+    "Treatment for localised sweating",
+    "Therapy options for excessive sweating in specific areas of the body."
+   ]
+  ],
+  "list_heading": "Conditions and programmes",
+  "list": [
+   "Osteoarthritis",
+   "Osteoporosis (bone loss)",
+   "Inflammatory joint diseases such as rheumatoid arthritis and ankylosing spondylitis",
+   "Soft tissue rheumatic diseases such as fibromyalgia and myofascial pain syndrome",
+   "Neck, back and lower back pain",
+   "Herniated discs",
+   "Joint stiffness and circulatory problems after fractures or dislocations",
+   "Meniscus and ligament injuries and other sports injuries",
+   "Scoliosis and spinal curvatures",
+   "Flat feet and other foot problems",
+   "Rehabilitation before and after orthopaedic surgery, including joint replacement",
+   "Stroke",
+   "Brain injury",
+   "Spinal cord injury",
+   "Children with spasticity",
+   "Facial paralysis and nerve injuries",
+   "Muscle diseases",
+   "Parkinson's disease",
+   "Cardiac rehabilitation",
+   "Stress incontinence programme",
+   "Exercise during pregnancy",
+   "Back school",
+   "Osteoporosis school",
+   "Fibromyalgia group programme",
+   "Rehabilitation after cosmetic surgery",
+   "Treatment for localised sweating",
+   "Rehabilitation for dialysis patients",
+   "Assessment and planning after obesity surgery"
+  ],
+  "docs_extra": [
+   "Surgical or discharge reports from recent operations",
+   "Recent X-ray or MRI reports"
+  ]
+ },
+ "pituitary-clinic": {
+  "title": "Pituitary Clinic",
+  "lead": "Pituitary disorders can be difficult to recognise because their symptoms often resemble other illnesses, so early and accurate diagnosis matters. This dedicated clinic brings several specialties together to evaluate pituitary diseases and tumours and to plan diagnosis and treatment using modern imaging, laboratory and treatment methods. MedLuxLife coordinates your referral, records and appointments at our partner hospital.",
+  "cards": [
+   [
+    "Early diagnosis",
+    "Focused assessment of symptoms, hormone levels and imaging to identify pituitary conditions as early as possible."
+   ],
+   [
+    "Pituitary tumour care",
+    "Evaluation and treatment planning for pituitary tumours and other diseases of the gland."
+   ],
+   [
+    "Multidisciplinary team",
+    "Care involves endocrinologists specialised in pituitary disease, neurosurgeons, neuroradiologists, neuropathologists, neuro-ophthalmologists, radiation oncologists, anaesthesiologists and supporting health staff."
+   ],
+   [
+    "Weekly case conferences",
+    "Pituitary cases are discussed at regular multidisciplinary meetings, which external physicians can also attend with their own cases."
+   ],
+   [
+    "Education programmes",
+    "The clinic runs educational programmes on pituitary disease for patients and physicians."
+   ],
+   [
+    "International collaboration",
+    "The clinic works together with international organisations in the field of pituitary disease."
+   ]
+  ],
+  "docs_extra": [
+   "Previous pituitary MRI scans on CD/DVD with reports",
+   "Recent hormone test results",
+   "Visual field test results, if available"
+  ]
+ },
+ "psychiatry": {
+  "title": "Psychiatry",
+  "lead": "Psychiatry is concerned with the evaluation, diagnosis and treatment of mental health problems, looking at emotional, cognitive and behavioural symptoms as a whole. The department offers support for difficulties ranging from stress and life challenges to more serious mental health conditions, with treatment plans tailored to each person. MedLuxLife can arrange confidential consultations at our partner hospital, including interpreter support where needed.",
+  "cards": [
+   [
+    "Psychiatric evaluation and diagnosis",
+    "A comprehensive assessment that considers medical history, symptoms and living circumstances to understand underlying causes."
+   ],
+   [
+    "Medication treatment",
+    "Medication may be prescribed where appropriate, with regular follow-up to monitor its effect and safety."
+   ],
+   [
+    "Psychotherapy",
+    "Talking therapies including cognitive behavioural therapy, psychoanalysis, family therapy and group therapy."
+   ],
+   [
+    "Crisis intervention",
+    "Prompt support in psychiatric emergencies such as suicidal thoughts, acute anxiety attacks or psychotic symptoms."
+   ],
+   [
+    "Rehabilitation and support",
+    "Programmes for people with long-term mental health conditions, focusing on daily living skills, work and social integration."
+   ]
+  ],
+  "list_heading": "Areas addressed",
+  "list": [
+   "Stress",
+   "Trauma",
+   "Anxiety",
+   "Depression",
+   "Sleep disorders",
+   "Eating disorders",
+   "Addiction"
+  ],
+  "docs_extra": [
+   "List of current and previous psychiatric medications",
+   "Previous psychiatric or psychological reports"
+  ]
+ },
+ "psychology": {
+  "title": "Psychology",
+  "lead": "Health includes emotional, cognitive and mental wellbeing as well as physical health. The clinical psychology unit offers psychological assessment and support for children, adolescents and adults, including school-related assessments, structured education programmes and therapy for patients undergoing cancer treatment. MedLuxLife can arrange appointments at our partner hospital and help with language and scheduling.",
+  "cards": [
+   [
+    "Support for children",
+    "Help with a wide range of emotional, behavioural and developmental difficulties, using cognitive behavioural therapy and play therapy."
+   ],
+   [
+    "School problems",
+    "Assessment of attention, learning and reading difficulties, followed by individual training plans based on the results."
+   ],
+   [
+    "Psychological testing",
+    "Developmental screening tests, intelligence tests, learning difficulty tests and attention tests."
+   ],
+   [
+    "Education programmes",
+    "Individual attention-enhancing programmes and reading disorder (dyslexia) programmes for children."
+   ],
+   [
+    "Support for adolescents",
+    "Cognitive behavioural approaches for behaviour problems, family conflict, mood difficulties and exam anxiety."
+   ],
+   [
+    "Support for adults",
+    "Cognitive behavioural therapy for depression, anxiety, OCD, panic, trauma, and family, relationship or work-related problems."
+   ],
+   [
+    "Psycho-oncology",
+    "Patients treated in the oncology unit are invited to psychotherapy, including cognitive behavioural therapy and meaning-centred therapy for cancer and grief, to help them adapt and cope."
+   ],
+   [
+    "Seminars for schools",
+    "Seminars for parents and children can be organised at the request of schools."
+   ]
+  ],
+  "list_heading": "Topics addressed",
+  "list": [
+   "Children: eating and drinking problems",
+   "Children: toilet problems (toilet training, stool withholding, soiling)",
+   "Children: sibling jealousy",
+   "Children: aggressive behaviour",
+   "Children: adjustment and behavioural disorders",
+   "Children: stuttering",
+   "Children: lack of self-confidence",
+   "Children: shyness",
+   "Children: impulsivity",
+   "Children: obsessive thoughts and behaviours",
+   "Children: depression",
+   "Children: anxiety",
+   "Children: fears",
+   "Children: family difficulties such as divorce or bereavement (post-traumatic stress)",
+   "Children: difficulties at school",
+   "Children: physical complaints such as abdominal pain or nausea",
+   "School: attention deficit hyperactivity disorder (ADHD)",
+   "School: learning difficulties",
+   "School: reading difficulties (dyslexia)",
+   "School: problems completing homework",
+   "Adolescents: adjustment and behaviour problems",
+   "Adolescents: difficulty accepting rules",
+   "Adolescents: oppositional and rejecting behaviour",
+   "Adolescents: depression",
+   "Adolescents: anxiety",
+   "Adolescents: obsessive thoughts and behaviours",
+   "Adolescents: family conflicts",
+   "Adolescents: exam anxiety",
+   "Adults: depression",
+   "Adults: obsessive-compulsive disorder (OCD)",
+   "Adults: anxiety",
+   "Adults: panic disorder",
+   "Adults: bereavement, accidents or divorce (post-traumatic stress)",
+   "Adults: family problems",
+   "Adults: relationship problems",
+   "Adults: work-related problems"
+  ],
+  "docs_extra": [
+   "School reports or teacher feedback (for children)",
+   "Previous psychological test results"
+  ]
+ },
+ "radiology": {
+  "title": "Radiology",
+  "lead": "The radiology department provides a broad range of diagnostic imaging, from MRI and CT to PET-CT, mammography and ultrasound, together with interventional radiology. Images are acquired digitally and stored with their reports in a central archive, making them available to treating teams across the hospital. MedLuxLife can schedule imaging at our partner hospital as part of a check-up or treatment plan and arrange for your images and reports to be shared with you.",
+  "cards": [
+   [
+    "MRI",
+    "3 Tesla magnetic resonance imaging for detailed views of soft tissues, the brain, spine and joints."
+   ],
+   [
+    "CT",
+    "64-slice multi-slice computed tomography for fast cross-sectional imaging."
+   ],
+   [
+    "PET-CT",
+    "Combined functional and anatomical imaging, often used in cancer assessment."
+   ],
+   [
+    "Digital X-ray and portable X-ray",
+    "Conventional digital radiography, with portable units available for patients who cannot be moved."
+   ],
+   [
+    "Ultrasound",
+    "Ultrasonography including Doppler, 3D and 4D imaging."
+   ],
+   [
+    "Digital mammography",
+    "Breast imaging for screening and diagnosis."
+   ],
+   [
+    "Fluoroscopy and C-arm",
+    "Real-time X-ray imaging used for dynamic studies and to guide procedures."
+   ],
+   [
+    "Digital angiography",
+    "Imaging of blood vessels for diagnosis and to guide treatment."
+   ],
+   [
+    "Bone densitometry",
+    "Measurement of bone density to assess osteoporosis."
+   ],
+   [
+    "Interventional radiology",
+    "Many vascular diseases can be diagnosed and treated with image-guided, minimally invasive techniques, avoiding open surgery in suitable cases."
+   ],
+   [
+    "Digital archive (PACS and RIS)",
+    "Images and reports are stored centrally and shared securely with clinical teams, and can be exchanged with external centres."
+   ],
+   [
+    "Research laboratory",
+    "The department includes a research laboratory supporting work in medical imaging."
+   ]
+  ],
+  "docs_extra": [
+   "Previous imaging on CD/DVD with reports, for comparison"
+  ]
+ },
+ "rheumatology": {
+  "title": "Rheumatology",
+  "lead": "Rheumatology is a subspecialty dedicated to the diagnosis and treatment of rheumatic diseases, which are common, often long-lasting and can lead to pain, loss of function and reduced quality of life if not managed appropriately. Because these conditions can affect many organs, care is coordinated with several other specialties. MedLuxLife arranges consultations and follow-up at our partner hospital and keeps your records organised between visits.",
+  "cards": [
+   [
+    "Diagnosis of rheumatic diseases",
+    "Specialist evaluation of joint pain, stiffness, inflammation and related symptoms to establish an accurate diagnosis."
+   ],
+   [
+    "Treatment and long-term management",
+    "Individual treatment plans aimed at controlling symptoms, preserving function and supporting quality of life."
+   ],
+   [
+    "Interdisciplinary follow-up",
+    "Joint care with dermatology, neurology, orthopaedics and traumatology, physical therapy and rehabilitation, and ophthalmology when several organs are involved."
+   ],
+   [
+    "Fibromyalgia team care",
+    "Treatment for widespread pain and fatigue planned jointly by rheumatologists, physical therapy and rehabilitation specialists, psychiatrists and neurologists."
+   ]
+  ],
+  "docs_extra": [
+   "Previous blood tests, including inflammatory markers and antibody results",
+   "List of current medications, including biologic therapies"
+  ]
+ },
+ "thoracic-surgery": {
+  "title": "Thoracic Surgery",
+  "lead": "Thoracic surgery treats diseases of the organs and tissues within the chest, excluding the heart, including the lungs, airways, chest wall, pleura, diaphragm, mediastinum and oesophagus. The department uses fibreoptic and endoscopic equipment, minimally invasive surgical tools and imaging from virtual bronchoscopy to PET-CT, supported by pathology and laboratory services. MedLuxLife coordinates evaluation and surgery at our partner hospital, from sharing your scans to planning your recovery stay.",
+  "cards": [
+   [
+    "Lung cancer surgery",
+    "Surgical treatment of lung cancer by open surgery or, in suitable cases, fully endoscopic techniques."
+   ],
+   [
+    "Lungs and main airways",
+    "Surgical and endoscopic procedures for diseases of the lungs and the major airways."
+   ],
+   [
+    "Airway stents and endoscopic airway opening",
+    "For patients who cannot undergo surgery, stents and endoscopic procedures may help relieve breathing symptoms."
+   ],
+   [
+    "Thoracic outlet syndrome",
+    "Surgical treatment for compression of nerves and blood vessels that can cause arm pain, coldness, numbness and weakness."
+   ],
+   [
+    "Chest wall diseases",
+    "Treatment of congenital and acquired conditions of the chest wall."
+   ],
+   [
+    "Pleura, diaphragm and chest cavity",
+    "Care for diseases of the lung lining, the diaphragm and the chest cavity."
+   ],
+   [
+    "Mediastinal surgery",
+    "Surgical procedures in the mediastinum, the central compartment of the chest."
+   ],
+   [
+    "Oesophageal surgery",
+    "Treatment of oesophageal motility disorders, benign and malignant tumours, hernias and reflux-related disease."
+   ],
+   [
+    "Advanced diagnostics",
+    "Imaging such as virtual bronchoscopy and PET-CT, together with pathology and laboratory support, to guide treatment decisions."
+   ]
+  ],
+  "docs_extra": [
+   "Recent chest CT or PET-CT on CD/DVD with reports",
+   "Lung function test results"
+  ]
+ },
+ "thyroid-parathyroid-diseases-and-surgery-clinic": {
+  "title": "Thyroid and Parathyroid Diseases and Surgery Clinic",
+  "lead": "This multidisciplinary clinic is dedicated exclusively to diseases of the thyroid and parathyroid glands, offering early diagnosis together with medical and surgical treatment. Specialists from seven fields evaluate each case jointly, following current scientific evidence. MedLuxLife coordinates your assessment, tests and any surgery at our partner hospital, with clear communication at every stage.",
+  "cards": [
+   [
+    "Multidisciplinary team",
+    "Specialists in endocrine surgery, endocrinology, nuclear medicine, radiology, pathology, genetics and bioengineering work together on each case."
+   ],
+   [
+    "Thyroid and parathyroid ultrasound",
+    "Dedicated ultrasound examination of the thyroid and parathyroid glands."
+   ],
+   [
+    "Scintigraphy",
+    "Thyroid (Tc99m), parathyroid (MIBI) and DOTATATE scintigraphy to assess gland function and locate abnormal tissue."
+   ],
+   [
+    "Choline PET",
+    "PET imaging that can help locate parathyroid tissue when other tests are inconclusive."
+   ],
+   [
+    "Function tests",
+    "Laboratory testing of thyroid and parathyroid hormone function."
+   ],
+   [
+    "Biopsy",
+    "Fine needle and Tru-Cut biopsy to examine nodules and suspicious tissue."
+   ],
+   [
+    "Radioactive iodine therapy",
+    "Radioactive iodine treatment for suitable thyroid conditions."
+   ],
+   [
+    "Lithium-supported radioactive iodine therapy",
+    "In selected cases, lithium may be used alongside radioactive iodine to support the treatment."
+   ],
+   [
+    "Radiofrequency ablation",
+    "Non-surgical treatment of thyroid nodules using radiofrequency energy."
+   ],
+   [
+    "Thyroid and parathyroid surgery",
+    "Operations using classical and microsurgical techniques, as well as the scarless transoral approach (TOETVA)."
+   ],
+   [
+    "Parathyroid transplantation",
+    "Reimplantation of parathyroid tissue to help preserve gland function where needed."
+   ]
+  ],
+  "list_heading": "Diagnostic and treatment techniques",
+  "list": [
+   "Specific thyroid and parathyroid ultrasonography",
+   "Thyroid (Tc99m) and parathyroid (MIBI) scintigraphy",
+   "Thyroid and parathyroid function tests",
+   "DOTATATE scintigraphy",
+   "Fine needle and Tru-Cut biopsy",
+   "Choline PET",
+   "Radioactive iodine therapy",
+   "Lithium-supported radioactive iodine therapy",
+   "Parathyroid transplantation",
+   "Radiofrequency ablation of nodules (non-surgical)",
+   "Surgery with classical and microsurgical techniques",
+   "Scarless surgery (TOETVA technique)"
+  ],
+  "docs_extra": [
+   "Previous thyroid ultrasound and scintigraphy reports",
+   "Recent thyroid and parathyroid hormone and calcium results"
+  ]
+ },
+ "transfusion-center": {
+  "title": "Transfusion Centre",
+  "lead": "The transfusion centre supports inpatients and other patients who need blood component therapy, cellular therapy, therapeutic apheresis or specialised laboratory diagnostics. Blood components and cellular therapy products are collected and prepared on site, and the centre also supports clinical research and training in transfusion medicine. MedLuxLife coordinates these services at our partner hospital as part of your wider treatment plan.",
+  "cards": [
+   [
+    "Blood component therapy",
+    "Safe and appropriate administration of blood products for patients who need them during treatment."
+   ],
+   [
+    "Cellular therapy",
+    "Collection and preparation of cellular therapy products used in patient care."
+   ],
+   [
+    "Therapeutic apheresis",
+    "Procedures that separate and remove or replace specific blood components as part of treatment."
+   ],
+   [
+    "Specialised laboratory diagnostics",
+    "Diagnostic and compatibility testing to support safe transfusion."
+   ],
+   [
+    "Blood bank",
+    "Provides packed red blood cells, fresh frozen plasma and platelets."
+   ],
+   [
+    "Research and training",
+    "Support for clinical research and advanced training in transfusion medicine and related technologies."
+   ]
+  ],
+  "list_heading": "Blood bank products",
+  "list": [
+   "Packed red blood cells",
+   "Fresh frozen plasma",
+   "Platelets"
+  ],
+  "docs_extra": [
+   "Blood group card or previous blood group test",
+   "Records of previous transfusions or transfusion reactions"
+  ]
+ },
+ "urology": {
+  "title": "Urology",
+  "lead": "Urology covers the diagnosis and treatment of conditions of the urinary tract in women and men and of the male reproductive organs, from urological cancers and prostate disease to kidney stones, infertility and incontinence. Care is personalised and coordinated with internal medicine, oncology, gynaecology and psychiatry when needed. MedLuxLife arranges consultations and treatment at our partner hospital and supports you before, during and after your stay.",
+  "cards": [
+   [
+    "Urological oncology",
+    "Diagnosis and treatment of prostate, bladder, kidney and testicular cancer."
+   ],
+   [
+    "Benign prostatic hyperplasia",
+    "Treatment options for an enlarged prostate, including laser prostate surgery (GreenLight)."
+   ],
+   [
+    "Focal therapy for prostate cancer",
+    "HIFU focal therapy may be an option for suitable patients with prostate cancer."
+   ],
+   [
+    "Stone disease",
+    "Treatment of kidney stones with flexible endoscopic methods and treatment of urinary tract stones."
+   ],
+   [
+    "Andrology",
+    "Assessment and treatment of male infertility and erectile problems."
+   ],
+   [
+    "Female urology",
+    "Diagnosis and treatment of urinary incontinence, female sexual dysfunction and conditions of the urinary tract and pelvic organs."
+   ],
+   [
+    "Multidisciplinary care",
+    "Collaboration with internal medicine, oncology, obstetrics and gynaecology, and psychiatry where appropriate."
+   ]
+  ],
+  "list_heading": "Conditions and treatments",
+  "list": [
+   "Prostate cancer",
+   "Bladder cancer",
+   "Kidney cancer",
+   "Testicular cancer",
+   "Benign prostatic hyperplasia",
+   "Laser prostate surgery (GreenLight)",
+   "Focal therapy for prostate cancer (HIFU)",
+   "Flexible treatment of kidney stones",
+   "Urinary tract stones",
+   "Male infertility",
+   "Erectile dysfunction",
+   "Urinary incontinence",
+   "Female sexual dysfunction",
+   "Conditions of the female urinary tract and pelvic organs"
+  ],
+  "docs_extra": [
+   "Recent PSA results (for men)",
+   "Previous urinary tract imaging reports"
+  ]
+ }
+}

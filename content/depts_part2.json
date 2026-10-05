@@ -1,0 +1,830 @@
+{
+ "gynecological-oncology": {
+  "title": "Gynaecological Oncology",
+  "lead": "Gynaecological oncology focuses on cancers and pre-cancerous conditions of the female reproductive organs, from screening and early detection through staging, treatment and long-term follow-up. Care is organised by a multidisciplinary team so that each plan reflects the individual patient. MedLuxLife coordinates your consultation at our partner hospital, arranges translation of your records and stays by your side from first contact to aftercare.",
+  "cards": [
+   [
+    "Oncological counselling",
+    "Clear, unhurried discussion of findings, options and next steps with a specialist in gynaecological cancers."
+   ],
+   [
+    "Gynaecological cancer screening",
+    "Screening programmes designed to detect changes in the reproductive organs at an early stage."
+   ],
+   [
+    "Consultation and differential diagnosis",
+    "Assessment of suspicious gynaecological findings, including cases referred from other specialties, to clarify the diagnosis."
+   ],
+   [
+    "Medical and surgical treatment",
+    "Treatment options for gynaecological cancers can include medical therapies and surgery, planned around the stage and type of disease."
+   ],
+   [
+    "Pre-invasive, borderline and invasive tumours",
+    "Tailored management across the full spectrum of reproductive system tumours, from early lesions to invasive disease."
+   ],
+   [
+    "Cervical pre-invasive lesions",
+    "Diagnostic and treatment procedures for early cell changes of the cervix."
+   ],
+   [
+    "HPV and preventive vaccination",
+    "HPV vaccination and other preventive vaccines as part of a prevention-focused approach."
+   ],
+   [
+    "Hereditary cancer risk",
+    "Evaluation and risk management for families with hereditary cancer syndromes affecting the reproductive organs."
+   ],
+   [
+    "Follow-up planning",
+    "A structured follow-up plan after treatment, which MedLuxLife can help you continue at home."
+   ]
+  ],
+  "list_heading": "Conditions assessed and treated",
+  "list": [
+   "Uterine (endometrial) cancer",
+   "Cervical cancer",
+   "Ovarian cancer",
+   "Fallopian tube cancer",
+   "Vaginal cancer",
+   "Vulvar cancer",
+   "Pre-cancerous (pre-invasive) lesions",
+   "Borderline ovarian tumours",
+   "Pelvic masses",
+   "Differential diagnosis of benign gynaecological masses",
+   "Familial (genetic) gynaecological cancer risk"
+  ],
+  "docs_extra": [
+   "Recent smear (Pap) test, HPV and biopsy reports",
+   "Previous pelvic ultrasound, CT or MRI images and reports"
+  ]
+ },
+ "hematology": {
+  "title": "Haematology",
+  "lead": "Haematology covers the diagnosis and treatment of blood disorders, both malignant and non-malignant. At our partner hospital, haematologists work closely with immunology, genetics, haematopathology, infectious diseases, biochemistry and radiology, supported by a strong laboratory. MedLuxLife organises your appointments, prepares your medical files in advance and supports you and your family throughout treatment abroad.",
+  "cards": [
+   [
+    "Laboratory-based diagnosis",
+    "Clinical experience combined with modern laboratory methods helps to reach a reliable diagnosis without unnecessary delay."
+   ],
+   [
+    "Multidisciplinary collaboration",
+    "Cases are discussed with immunology, genetics, haematopathology, infectious diseases, biochemistry and radiology specialists."
+   ],
+   [
+    "Haematological cancer care",
+    "Treatment planning for leukaemias, lymphomas, plasma cell disorders and related conditions."
+   ],
+   [
+    "Non-malignant blood disorders",
+    "Assessment and management of anaemias, haemoglobinopathies and other benign blood conditions."
+   ],
+   [
+    "Chemotherapy by specialist nurses",
+    "Chemotherapy is given by experienced nurses who are attentive to the physical and emotional needs of patients with blood cancers."
+   ],
+   [
+    "Autologous stem cell transplantation",
+    "Transplantation using the patient's own stem cells, alongside conventional treatment where appropriate."
+   ],
+   [
+    "Allogeneic stem cell transplantation",
+    "Transplantation from a suitable sibling donor. Indications can include acute and chronic leukaemias, lymphomas, multiple myeloma, aplastic anaemia, myelodysplastic syndrome, thalassaemia and sickle cell anaemia."
+   ]
+  ],
+  "list_heading": "Conditions treated",
+  "list": [
+   "Acute and chronic leukaemias",
+   "Lymphomas",
+   "Plasma cell disorders",
+   "Multiple myeloma",
+   "Myeloproliferative diseases",
+   "Myelodysplastic syndromes",
+   "Aplastic anaemia",
+   "Haemolytic anaemias",
+   "Iron deficiency anaemia",
+   "Haemoglobinopathies",
+   "Thalassaemia",
+   "Sickle cell anaemia"
+  ],
+  "docs_extra": [
+   "Recent full blood count and other blood test results",
+   "Bone marrow biopsy reports, if available"
+  ]
+ },
+ "hirsutism-clinic": {
+  "title": "Hirsutism Clinic",
+  "lead": "Excessive hair growth in women, known as hirsutism, is usually a sign of an underlying condition rather than a disease in itself, and its causes range from polycystic ovary syndrome to, more rarely, tumours. The clinic at our partner hospital takes a multidisciplinary approach to identifying the cause and planning suitable treatment. MedLuxLife arranges a discreet, well-prepared visit and coordinates every step of your stay.",
+  "cards": [
+   [
+    "Finding the underlying cause",
+    "A structured evaluation to identify why excess hair growth has developed, as the basis for any treatment plan."
+   ],
+   [
+    "Multidisciplinary assessment",
+    "Specialists from related fields work together on diagnosis and treatment planning."
+   ],
+   [
+    "Androgen-related symptoms",
+    "Assessment of associated changes such as hair loss, acne, a deepening voice or increased muscle mass, which may occur alone or together."
+   ],
+   [
+    "Changes after menopause",
+    "Guidance on distinguishing the relative increase in hair growth that can occur normally after menopause from findings that need further investigation."
+   ],
+   [
+    "Individual treatment planning",
+    "Treatment is planned according to the cause identified and the patient's personal situation."
+   ],
+   [
+    "Quality of life and wellbeing",
+    "Recognition that untreated hirsutism can affect self-confidence, social life and mood, with care that takes these concerns seriously."
+   ]
+  ],
+  "docs_extra": [
+   "Previous hormone blood test results",
+   "Pelvic ultrasound reports, if available"
+  ]
+ },
+ "imaging-unit": {
+  "title": "Imaging Unit",
+  "lead": "Medical imaging underpins the diagnosis and treatment planning of many conditions. The imaging unit at our partner hospital brings together radiology and nuclear medicine specialists with a broad range of modern equipment and fully digital reporting. MedLuxLife schedules your examinations, shares preparation instructions in advance and makes sure your images and reports reach you and your doctors at home.",
+  "cards": [
+   [
+    "MRI and functional MRI",
+    "3 Tesla MRI, including functional MRI to map vital brain areas before tumour surgery, and MR proton and phosphorus spectroscopy to characterise tumours."
+   ],
+   [
+    "PET/CT",
+    "Shows the metabolic activity of tumours and helps determine their location, and can be used to monitor response to treatment."
+   ],
+   [
+    "Nuclear medicine and SPECT",
+    "Gamma camera and SPECT imaging, reported by nuclear medicine specialists."
+   ],
+   [
+    "CT, X-ray and fluoroscopy",
+    "Multi-slice CT, digital direct radiography, digital fluoroscopy, portable X-ray and C-arm imaging."
+   ],
+   [
+    "Breast and bone imaging",
+    "Digital mammography and bone densitometry for breast assessment and bone health."
+   ],
+   [
+    "Ultrasound",
+    "4D ultrasonography and Doppler ultrasonography for organ and blood flow assessment."
+   ],
+   [
+    "Molecular imaging",
+    "Techniques that add functional and metabolic information to anatomical images, which may help classify tumours and in some cases reduce the need for biopsy."
+   ],
+   [
+    "Interventional radiology",
+    "Minimally invasive, image-guided treatments carried out in the dedicated interventional radiology unit, using flat panel digital angiography (DSA)."
+   ],
+   [
+    "Digital archiving (PACS and RIS)",
+    "All images and reports are stored digitally, shared across the hospital and can be exchanged with imaging centres abroad."
+   ],
+   [
+    "Research",
+    "A university setting with ongoing research, including the development of a molecular imaging research unit."
+   ],
+   [
+    "Preparation forms",
+    "Before your examination you may be asked to complete a patient information form, an MRI preparation form and a pregnancy information and consent form for radiological examinations."
+   ]
+  ],
+  "list_heading": "Imaging equipment",
+  "list": [
+   "3 Tesla Magnetic Resonance Imaging (MRI)",
+   "Multi-slice Computed Tomography (MD-CT)",
+   "PET/CT",
+   "Gamma camera - SPECT",
+   "Flat panel digital angiography (DSA)",
+   "Digital fluoroscopy",
+   "Digital direct radiography (X-ray)",
+   "Digital mammography",
+   "Bone densitometry",
+   "4D ultrasonography",
+   "Doppler ultrasonography",
+   "Portable X-ray",
+   "C-arm"
+  ],
+  "docs_extra": [
+   "Previous imaging on CD or as DICOM files, with reports",
+   "Details of any implants, pacemaker or metal fragments (important for MRI)"
+  ]
+ },
+ "immunology": {
+  "title": "Immunology",
+  "lead": "Immunology deals with diseases of the immune system, which can be difficult to recognise because symptoms are not always obvious. Specialists at our partner hospital combine careful clinical evaluation with an advanced laboratory to reach a diagnosis and design a personal treatment plan. MedLuxLife coordinates your tests and consultations and helps you take the results and recommendations home with you.",
+  "cards": [
+   [
+    "Diagnosis of immune system diseases",
+    "A thorough evaluation supported by blood tests, immunophenotyping, tissue typing, antibody profiles, allergy tests and other laboratory methods."
+   ],
+   [
+    "Personalised treatment",
+    "Treatment is tailored to each patient and may include medication and immunoglobulin therapy, aiming to ease symptoms and slow disease progression."
+   ],
+   [
+    "Lifestyle counselling",
+    "Advice on nutrition, exercise and sleep for patients with weakened immunity, provided together with other units of the hospital."
+   ],
+   [
+    "Vaccination and prevention",
+    "Vaccines and preventive measures recommended for people who are prone to immune system disorders, to help lower the risk of infection."
+   ]
+  ],
+  "list_heading": "Laboratory tests",
+  "list": [
+   "Blood tests",
+   "Immunophenotypic analyses",
+   "Tissue typing tests",
+   "Antibody profiles",
+   "Allergy tests"
+  ],
+  "docs_extra": [
+   "Previous immunology and allergy test results",
+   "A list of past infections and vaccinations"
+  ]
+ },
+ "infectious-diseases-and-microbiology": {
+  "title": "Infectious Diseases and Clinical Microbiology",
+  "lead": "This department diagnoses, treats and follows up infections caused by bacteria, viruses, fungi and parasites, using up-to-date laboratory and, where needed, molecular methods. It also advises on vaccination, prevention and travel medicine. MedLuxLife arranges outpatient or inpatient care at our partner hospital and handles the practical details so you can focus on recovery.",
+  "cards": [
+   [
+    "Outpatient and inpatient care",
+    "Diagnosis and treatment of infectious diseases in the outpatient clinic or on the ward, depending on the patient's condition."
+   ],
+   [
+    "Laboratory and molecular diagnostics",
+    "Advanced laboratory techniques and molecular methods are used when needed to plan the diagnostic process."
+   ],
+   [
+    "Vaccination advice",
+    "Guidance on vaccines that can help protect against infectious diseases."
+   ],
+   [
+    "Prevention",
+    "Advice on practical methods to reduce the risk of infection."
+   ],
+   [
+    "Travel medicine",
+    "Consultation before or after travel on infections, vaccines and precautions relevant to your destination."
+   ],
+   [
+    "Infection control",
+    "A hospital infection control committee oversees hygiene, with up-to-date air and surface disinfection and dedicated bed-cleaning systems to help reduce hospital-acquired infections."
+   ]
+  ],
+  "list_heading": "Conditions treated",
+  "list": [
+   "Illnesses accompanied by fever",
+   "Common cold",
+   "Flu",
+   "Jaundice (hepatitis A, hepatitis B, hepatitis C and others)",
+   "HIV/AIDS and other viral diseases",
+   "Rash illnesses",
+   "Diarrhoea",
+   "Food poisoning",
+   "Parasitic diseases",
+   "Systemic fungal infections",
+   "Meningitis"
+  ],
+  "docs_extra": [
+   "Recent microbiology, culture or serology results",
+   "Vaccination record and recent travel history"
+  ]
+ },
+ "intensive-care-unit": {
+  "title": "Intensive Care Unit",
+  "lead": "Intensive care provides round-the-clock treatment and monitoring for patients whose organs or organ systems are severely affected. The units at our partner hospital combine advanced monitoring technology with a multidisciplinary team. MedLuxLife keeps families informed, coordinates communication with the care team and assists with travel and accommodation for relatives.",
+  "cards": [
+   [
+    "24-hour care and monitoring",
+    "Diagnosis, treatment and follow-up continue without interruption, with vital signs monitored continuously by advanced devices."
+   ],
+   [
+    "Multidisciplinary team",
+    "Physicians, nurses, physiotherapists, assistant physicians, dietitians and social workers specialised in intensive care work together."
+   ],
+   [
+    "Higher nurse-to-patient ratio",
+    "More nursing staff per patient than on a general ward, allowing closer observation."
+   ],
+   [
+    "Invasive monitoring",
+    "Intensive interventional monitoring of vital functions when a patient's condition requires it."
+   ],
+   [
+    "Mechanical ventilation",
+    "Breathing support for patients who cannot breathe adequately on their own."
+   ],
+   [
+    "Circulatory and kidney support",
+    "Vasopressor medicines to support blood pressure and continuous dialysis to support kidney function."
+   ]
+  ],
+  "docs_extra": [
+   "Discharge summaries and intensive care reports from the referring hospital",
+   "A current medication list including infusions"
+  ]
+ },
+ "internal-medicine": {
+  "title": "Internal Medicine",
+  "lead": "Internal medicine is often the first point of contact for adult health problems and covers a very wide range of conditions, from high blood pressure to diseases of the kidneys, liver and blood. At our partner hospital it brings together several subspecialties under one roof. MedLuxLife helps you find the right specialist, arranges appointments and tests, and coordinates follow-up with your doctor at home.",
+  "cards": [
+   [
+    "Endocrinology and Metabolic Diseases",
+    "Care for hormone and metabolic disorders such as diabetes and thyroid disease."
+   ],
+   [
+    "Gastroenterology",
+    "Assessment and treatment of digestive system and liver conditions."
+   ],
+   [
+    "General Internal Medicine",
+    "Comprehensive evaluation of adult health problems and coordination with other specialists."
+   ],
+   [
+    "Haematology",
+    "Diagnosis and treatment of blood disorders."
+   ],
+   [
+    "Nephrology",
+    "Care for kidney diseases and related conditions such as hypertension."
+   ],
+   [
+    "Oncology",
+    "Medical treatment planning for cancer."
+   ],
+   [
+    "Rheumatology",
+    "Diagnosis and management of rheumatic and inflammatory joint diseases."
+   ]
+  ],
+  "list_heading": "Conditions treated",
+  "list": [
+   "Hypertension",
+   "Hypercholesterolaemia",
+   "Upper and lower respiratory tract diseases",
+   "Gastrointestinal diseases",
+   "Liver diseases",
+   "Kidney diseases",
+   "Thyroid diseases",
+   "Diabetes",
+   "Obesity",
+   "Rheumatic diseases",
+   "Blood diseases"
+  ],
+  "docs_extra": [
+   "Recent blood test results",
+   "A current medication list"
+  ]
+ },
+ "interventional-radiology": {
+  "title": "Interventional Radiology",
+  "lead": "Interventional radiology uses imaging such as ultrasound, CT and angiography to guide minimally invasive diagnostic and therapeutic procedures. Interventional radiologists not only diagnose disease but also take an active part in its treatment, often through a small puncture rather than open surgery. MedLuxLife coordinates your assessment at our partner hospital, including pre-procedure tests, and supports you through recovery and travel home.",
+  "cards": [
+   [
+    "Image-guided biopsies",
+    "Fine-needle aspiration and Tru-cut biopsies guided by ultrasound and/or CT for the neck and thyroid, chest, abdominal organs and bones."
+   ],
+   [
+    "Diagnostic angiography",
+    "Contrast imaging of arteries, usually via the femoral artery, with high-resolution and 3D imaging to show even small vessel branches."
+   ],
+   [
+    "Venography",
+    "Imaging of veins to investigate thrombosis, tumour blockages and adrenal tumours, or to assess the saphenous vein before bypass surgery."
+   ],
+   [
+    "Chest procedures",
+    "Non-vascular interventions such as thoracentesis, abscess drainage and stenting of tracheobronchial narrowing."
+   ],
+   [
+    "Abdominal, biliary and kidney procedures",
+    "Biliary drainage and stenting, nephrostomy, ureteral stenting, cyst and abscess drainage and RF ablation."
+   ],
+   [
+    "Arterial angioplasty and stenting",
+    "Balloon and stent treatment of narrowed or blocked arteries throughout the body, from the carotid and brain vessels to the legs."
+   ],
+   [
+    "Neurointerventional treatment",
+    "Coil embolisation of brain aneurysms, embolisation of AVMs and fistulas, and intra-arterial thrombolysis in acute stroke within a limited time window."
+   ],
+   [
+    "Embolisation for bleeding and tumours",
+    "Embolisation for nosebleeds, coughing up blood and acute gastrointestinal bleeding, and for head and neck tumours."
+   ],
+   [
+    "Aortic and peripheral endografts",
+    "Covered stents for aneurysms of the thoracic and abdominal aorta and for pseudoaneurysms in peripheral arteries."
+   ],
+   [
+    "Oncological interventions",
+    "Transarterial chemoembolisation and RF ablation for liver tumours, portal vein interventions and venous port placement."
+   ],
+   [
+    "Venous and dialysis access",
+    "Venous angioplasty and stenting, dialysis catheters, fistula angioplasty, vena cava filters, TIPS and venous catheters."
+   ],
+   [
+    "Uterine fibroid embolisation and diabetic foot",
+    "Fibroid embolisation as an alternative to surgery, and balloon and laser angioplasty for narrowed foot vessels in diabetes."
+   ]
+  ],
+  "list_heading": "Procedures",
+  "list": [
+   "Fine-needle aspiration and Tru-cut biopsy of neck masses and thyroid nodules",
+   "Biopsy of thoracic (chest) masses",
+   "Intra-abdominal organ biopsy (liver, pancreas, kidney)",
+   "Bone biopsy",
+   "Carotid and cerebral angiography",
+   "3D cerebral angiography",
+   "Aortic arch angiography",
+   "Thoracic angiography (aortic dissection and aneurysm)",
+   "Abdominal aortography",
+   "Renal angiography (including before and after kidney transplantation)",
+   "Coeliac / superior mesenteric artery (SMA) angiography",
+   "Upper and lower extremity arteriography",
+   "Pulmonary angiography",
+   "Superior and inferior venacavography",
+   "Renal venography",
+   "Adrenal venography",
+   "Upper and lower extremity venography",
+   "Saphenous vein venography before bypass surgery",
+   "Thoracentesis",
+   "Abscess and collection drainage",
+   "Stenting for tracheobronchial stenosis",
+   "Percutaneous transhepatic cholangiography (PTC)",
+   "Biliary drainage",
+   "Biliary stenting",
+   "Drainage of renal cysts",
+   "RF ablation",
+   "Percutaneous nephrostomy",
+   "Antegrade ureteral stenting",
+   "Renal interventions",
+   "Balloon angioplasty and stenting of vascular stenoses",
+   "Carotid angioplasty and stenting",
+   "Cranial (intracranial) stenting",
+   "Subclavian and vertebral artery stenting",
+   "Brachiocephalic and aortoiliac angioplasty and stenting",
+   "Renal artery angioplasty and stenting",
+   "Mesenteric artery angioplasty",
+   "Iliac, femoral and popliteal artery angioplasty",
+   "Embolisation of cerebral aneurysms (direct or balloon-assisted coiling)",
+   "Embolisation of cranial and extracranial arteriovenous malformations (AVMs) and fistulas (AVFs)",
+   "Intra-arterial thrombolysis in acute stroke",
+   "Carotico-cavernous fistula embolisation",
+   "Embolisation for epistaxis, haemoptysis and acute gastrointestinal bleeding",
+   "Aortic aneurysm endograft treatment",
+   "Endograft treatment of peripheral aneurysms and pseudoaneurysms",
+   "Head and neck tumour embolisation",
+   "Liver and kidney chemoembolisation",
+   "Transarterial chemoembolisation (TACE) for liver tumours",
+   "Portal vein interventions",
+   "Uterine fibroid embolisation",
+   "Angioplasty and stenting of venous stenoses",
+   "Haemodialysis catheter placement",
+   "Angioplasty for haemodialysis fistula stenosis",
+   "Inferior vena cava filter placement",
+   "TIPS (transjugular intrahepatic portosystemic shunt)",
+   "Venous catheter placement (permanent tunnelled and temporary)",
+   "Venous port placement",
+   "Balloon and laser angioplasty for diabetic foot"
+  ],
+  "docs_extra": [
+   "Previous CT, MRI or angiography images and reports",
+   "Recent blood clotting and kidney function results"
+  ]
+ },
+ "kidney-transplant-clinic": {
+  "title": "Kidney Transplant Clinic",
+  "lead": "Learning that kidney damage is permanent can be a difficult moment, and careful confirmation of the diagnosis comes first. The kidney transplant team at our partner hospital aims to protect kidney function for as long as possible and, where kidney failure reaches its final stage, assesses whether a transplant is a suitable option. MedLuxLife coordinates the evaluation for both recipient and donor, organises documents and travel, and supports you through follow-up.",
+  "cards": [
+   [
+    "Protecting kidney function",
+    "Nephrologists evaluate, treat and follow patients with declining kidney function, aiming to slow damage and, where possible, reverse it."
+   ],
+   [
+    "Confirming the diagnosis",
+    "Examination, tests, imaging and medical history are reviewed carefully to establish whether kidney damage is irreversible."
+   ],
+   [
+    "Transplant suitability assessment",
+    "A systematic review of all organ systems, with particular attention to heart and blood vessel health, to identify any reasons a transplant may not be advisable."
+   ],
+   [
+    "Managing other health conditions",
+    "Coexisting conditions found during the assessment are treated before transplantation is planned."
+   ],
+   [
+    "Living donor transplantation",
+    "For suitable patients, a kidney may be transplanted from a living donor following assessment."
+   ],
+   [
+    "Deceased donor transplantation",
+    "Transplantation from a deceased donor is the alternative option for suitable patients."
+   ]
+  ],
+  "docs_extra": [
+   "Recent kidney function tests and dialysis records",
+   "Blood group and any previous tissue typing results"
+  ]
+ },
+ "liver-transplant-clinic": {
+  "title": "Liver Transplant Clinic",
+  "lead": "Liver transplantation is a treatment option for acute liver failure, end-stage liver disease (cirrhosis) with permanent damage, and certain liver cancers. For many patients it can offer the possibility of returning to a more active life. MedLuxLife arranges the assessment at our partner hospital, coordinates the paperwork and travel for patient and family, and stays in contact throughout recovery.",
+  "cards": [
+   [
+    "Acute liver failure",
+    "Assessment of whether transplantation is appropriate when the liver stops working suddenly."
+   ],
+   [
+    "End-stage liver disease (cirrhosis)",
+    "Evaluation of patients with advanced, irreversible liver damage."
+   ],
+   [
+    "Certain liver cancers",
+    "Transplantation may be considered for selected cancers of the liver."
+   ],
+   [
+    "Transplant assessment and planning",
+    "A multidisciplinary team reviews each case to decide whether transplantation is suitable and to plan the next steps."
+   ],
+   [
+    "Recovery and aftercare",
+    "Guidance on the hospital stay and recovery after transplantation, with follow-up that MedLuxLife helps you continue at home."
+   ]
+  ],
+  "docs_extra": [
+   "Recent liver function tests and imaging reports",
+   "Previous liver biopsy or endoscopy reports, if available"
+  ]
+ },
+ "medical-genetics": {
+  "title": "Medical Genetics",
+  "lead": "Medical genetics diagnoses inherited and non-inherited conditions caused by changes in genes, and helps individuals and families understand their risks, including carrier status and risks for future children. The genetic diagnosis centre at our partner hospital offers genetic consultations and counselling alongside cytogenetic, molecular cytogenetic and molecular genetic testing in ISO 15189 accredited laboratories. MedLuxLife coordinates appointments, sample logistics and translation of reports.",
+  "cards": [
+   [
+    "Genetic consultation",
+    "Outpatient examination by a medical geneticist to assess whether a genetic condition may be present."
+   ],
+   [
+    "Genetic counselling",
+    "Explanation of results, risk assessment for relatives and future generations, and planning of preventive options, also for families referred from other centres."
+   ],
+   [
+    "Prenatal genetic diagnosis",
+    "Testing during pregnancy when screening suggests increased risk, with advanced maternal age, or when a parent carries a known genetic condition."
+   ],
+   [
+    "Postnatal genetic diagnosis",
+    "Testing in children and adults when a genetic cause is suspected, including recurrent miscarriage, infertility and hereditary neurological or muscle diseases."
+   ],
+   [
+    "Cytogenetics",
+    "Karyotype analysis on blood, amniotic fluid, chorionic villus, fetal blood and bone marrow samples."
+   ],
+   [
+    "Molecular cytogenetics",
+    "FISH testing, including rapid detection of common chromosomal changes and microdeletion syndromes, and molecular karyotyping (array CGH)."
+   ],
+   [
+    "Molecular genetic testing",
+    "DNA analyses for single-gene diseases and carrier status."
+   ],
+   [
+    "Oncology and haematology genetics",
+    "FISH and DNA analyses on tumour tissue and bone marrow, used as markers for disease course and possible response to chemotherapy."
+   ],
+   [
+    "Interdisciplinary cooperation",
+    "Close collaboration with paediatrics, obstetrics and gynaecology, internal medicine, neurology, neurosurgery and pathology."
+   ]
+  ],
+  "list_heading": "Situations in which genetic testing may be considered",
+  "list": [
+   "Increased risk of a chromosomal anomaly in pregnancy screening",
+   "Advanced maternal age",
+   "Known carrier status for a chromosomal or single-gene disease",
+   "Down syndrome (trisomy 21) and other common chromosomal anomalies - rapid FISH on amniocentesis samples",
+   "Rapid chromosomal analysis on chorionic villus biopsy samples",
+   "Karyotype and DNA analyses on fetal blood samples",
+   "Congenital anomalies",
+   "Growth, developmental and intellectual disabilities",
+   "Short stature",
+   "Global developmental delay",
+   "Recurrent miscarriage",
+   "Infertility",
+   "Single-gene diseases more common in consanguineous families",
+   "Hereditary neurological and muscle diseases appearing in adulthood",
+   "Suspected inherited predisposition to thrombosis",
+   "Oncology and haematology patients (tumour tissue and bone marrow analyses)"
+  ],
+  "docs_extra": [
+   "Previous genetic test reports",
+   "A family medical history covering at least three generations"
+  ]
+ },
+ "medical-histology-and-embryology": {
+  "title": "Medical Histology and Embryology",
+  "lead": "Medical histology and embryology studies the microscopic structure of the human body and its development before birth, at the level of cells, tissues and organs. As an academic discipline within our partner hospital, it adds scientific depth to the understanding of normal structure and of developmental abnormalities. MedLuxLife can help you understand how this field relates to your care and connect you with the appropriate clinical specialists.",
+  "cards": [
+   [
+    "Histology",
+    "Examination of the microscopic features, structure and organisation of cells and tissues."
+   ],
+   [
+    "Cell and tissue function",
+    "Study of how cells and tissues are built and how they work together."
+   ],
+   [
+    "Organ development",
+    "Study of how organs form and develop from cells and tissues."
+   ],
+   [
+    "Embryology",
+    "Study of development from fertilisation to birth."
+   ],
+   [
+    "Developmental abnormalities",
+    "Research into the causes of abnormal development during pregnancy."
+   ]
+  ]
+ },
+ "medical-microbiology": {
+  "title": "Medical Microbiology",
+  "lead": "Medical microbiology provides the laboratory testing behind the diagnosis and treatment of infections. The laboratories at our partner hospital support inpatient, outpatient and emergency care across bacteriology, virology, parasitology, mycology, molecular microbiology and infection immunology, with a broad and regularly updated test panel. MedLuxLife coordinates sample collection during your visit and ensures your results are translated and shared with your doctors.",
+  "cards": [
+   [
+    "Bacteriology",
+    "Identification of bacteria and antibiotic susceptibility testing, combining classical culture with rapid confirmatory methods and same-day stained microscopy."
+   ],
+   [
+    "Mycobacteriology (tuberculosis)",
+    "Isolation and identification of acid-fast organisms such as Mycobacterium tuberculosis and Mycobacterium avium complex, including molecular methods and the Quantiferon TB Gold test."
+   ],
+   [
+    "Virology",
+    "Antigen and antibody serology, sensitive detection of HIV and hepatitis agents, and confirmatory testing where needed."
+   ],
+   [
+    "Parasitology",
+    "Diagnosis of parasitic infections using classical methods supported by serological tests."
+   ],
+   [
+    "Mycology",
+    "Identification of yeasts, dermatophytes and moulds, plus galactomannan antigen testing for suspected aspergillus infection in immunocompromised patients."
+   ],
+   [
+    "Molecular microbiology",
+    "PCR-based detection, genotyping and viral load testing, including viruses monitored after transplantation."
+   ],
+   [
+    "Syndromic molecular panels",
+    "Rapid multiplex testing of blood cultures, respiratory, gastrointestinal, cerebrospinal and joint fluid samples, with simultaneous detection of resistance genes."
+   ],
+   [
+    "Infection immunology",
+    "Immunological tests that support the diagnosis of infectious diseases."
+   ],
+   [
+    "Round-the-clock service",
+    "The laboratory operates 24 hours a day and works closely with clinicians on diagnosis and treatment."
+   ]
+  ],
+  "list_heading": "Selected tests",
+  "list": [
+   "Bacterial culture and antibiotic susceptibility testing",
+   "Stained microscopy of clinical samples",
+   "Acid-fast bacteria staining",
+   "Quantiferon TB Gold",
+   "Galactomannan antigen test",
+   "Hepatitis B virus DNA",
+   "Hepatitis C virus RNA",
+   "Varicella zoster virus (VZV)",
+   "Epstein-Barr virus (EBV DNA)",
+   "Cytomegalovirus (CMV DNA)",
+   "Polyomavirus (BK/JC virus)",
+   "Human papillomavirus (HPV DNA) and genotyping",
+   "Viral load tests",
+   "MRSA (real-time PCR)",
+   "VRE (real-time PCR)",
+   "Neisseria gonorrhoeae (real-time PCR)",
+   "Chlamydia (real-time PCR)",
+   "Syndromic panels for blood culture, respiratory, gastrointestinal, CSF and joint fluid samples",
+   "Resistance gene detection"
+  ],
+  "docs_extra": [
+   "Previous culture, serology or PCR results",
+   "A list of recent antibiotic treatments"
+  ]
+ },
+ "medical-pathology": {
+  "title": "Medical Pathology",
+  "lead": "Medical pathology examines tissue and cell samples to establish a diagnosis and guide treatment, with an emphasis on fast and accurate reporting. The department at our partner hospital includes immunohistochemistry and cytopathology laboratories and works with the microbiology and genetics laboratories for advanced methods. MedLuxLife coordinates the practical steps, including the transfer of existing samples and the translation of reports.",
+  "cards": [
+   [
+    "Intraoperative frozen section",
+    "Rapid assessment of suspicious tissue during surgery, available at any time of day, to support decisions in the operating theatre."
+   ],
+   [
+    "Biopsy reporting",
+    "Biopsy samples are reported within a few working days, depending on their nature."
+   ],
+   [
+    "Rapid processing for urgent cases",
+    "Accelerated processing when cancer is suspected or urgent treatment is needed, so a preliminary diagnosis can be reached without delay."
+   ],
+   [
+    "Histochemistry and immunohistochemistry",
+    "Staining panels, manual or automated, that help determine tumour origin, classification, proliferation index and prognostic markers."
+   ],
+   [
+    "Immunohistochemistry laboratory",
+    "Diagnostic histochemical and immunohistochemical staining and immunofluorescence studies, with daily automated processing."
+   ],
+   [
+    "Advanced molecular methods",
+    "PCR, flow cytometry and in situ hybridisation carried out jointly with the microbiology and genetics laboratories."
+   ],
+   [
+    "Cytopathology",
+    "Liquid-based and conventional cytology, with immunocytochemistry when needed."
+   ],
+   [
+    "On-site sample adequacy assessment",
+    "Pathologists check sample adequacy on site while interventional teams take diagnostic samples."
+   ]
+  ],
+  "docs_extra": [
+   "Original pathology reports",
+   "Paraffin blocks and slides for review, if a second opinion is requested"
+  ]
+ },
+ "nephrology": {
+  "title": "Nephrology",
+  "lead": "Nephrology is the branch of internal medicine concerned with kidney health and disease, including blood pressure, fluid and electrolyte balance, and the effects of other illnesses and medicines on the kidneys. At our partner hospital, nephrologists provide outpatient, inpatient and intensive care services, all forms of dialysis and assessment for kidney transplantation with lifelong follow-up. MedLuxLife coordinates your appointments and treatment schedule and organises the practical details of your stay.",
+  "cards": [
+   [
+    "Outpatient clinic",
+    "Diagnosis and treatment of kidney diseases, preventive care for people at higher risk such as those with diabetes or hypertension, and supportive care for advanced kidney disease."
+   ],
+   [
+    "Inpatient care and consultations",
+    "Ward-based care and follow-up, plus nephrology consultations for other departments."
+   ],
+   [
+    "Kidney effects of other conditions and medicines",
+    "Evaluation of how diabetes, hypertension, rheumatological disease, acute illness or long-term medicines such as chemotherapy, anti-rheumatic drugs and cortisone may affect the kidneys."
+   ],
+   [
+    "Intensive care kidney support",
+    "Haemodialysis, haemofiltration, haemodiafiltration and continuous venovenous haemofiltration for patients with acute kidney failure."
+   ],
+   [
+    "Haemoperfusion and plasmapheresis",
+    "Blood purification treatments that may be used when clinically indicated."
+   ],
+   [
+    "Haemodialysis",
+    "Acute or chronic haemodialysis, with session frequency and length adjusted to remaining kidney function and diet."
+   ],
+   [
+    "Peritoneal dialysis",
+    "Peritoneal dialysis including continuous ambulatory peritoneal dialysis (CAPD), which patients perform themselves at home."
+   ],
+   [
+    "Kidney transplantation",
+    "Assessment for transplantation in end-stage kidney disease, with transplantation through the organ transplant unit and lifelong post-transplant follow-up."
+   ]
+  ],
+  "list_heading": "Conditions treated",
+  "list": [
+   "Structural and functional disorders of the urinary system",
+   "Hereditary kidney diseases",
+   "Polycystic kidney disease",
+   "Familial Mediterranean fever",
+   "Amyloidosis",
+   "Kidney stone disease",
+   "Fluid, electrolyte and acid-base disorders",
+   "Hypertension and hypertensive kidney disease",
+   "Kidney and urinary tract infections",
+   "Diabetes-related kidney disease",
+   "Kidney involvement in rheumatological diseases",
+   "Kidney problems related to fluid loss, heart failure or sepsis",
+   "Medication-related kidney damage",
+   "Acute kidney failure",
+   "End-stage kidney disease"
+  ],
+  "docs_extra": [
+   "Recent kidney function and urine test results",
+   "Dialysis prescription and session records, if on dialysis"
+  ]
+ }
+}

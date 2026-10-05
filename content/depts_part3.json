@@ -1,0 +1,774 @@
+{
+ "neurology": {
+  "title": "Neurology",
+  "lead": "Neurology focuses on disorders of the brain, spinal cord, nerves and muscles in both adults and children. Through our partner hospital, MedLuxLife arranges access to specialised neurology units, from stroke and epilepsy care to sleep and balance disorders. We coordinate your appointments, translate your records and stay at your side throughout diagnosis and follow-up.",
+  "cards": [
+   [
+    "General Neurology",
+    "Assessment and treatment planning for a broad range of nerve, brain and muscle complaints in adults and children."
+   ],
+   [
+    "Stroke Centre",
+    "Rapid evaluation of cerebrovascular events, followed by neurological intensive care, rehabilitation and measures for secondary prevention after a stroke."
+   ],
+   [
+    "Epilepsy",
+    "Diagnostic work-up may include long-term video-EEG, neuropsychological assessment, MRI, PET-CT and SPECT, as well as pre-surgical evaluation where surgery is considered."
+   ],
+   [
+    "Headache",
+    "Investigation of recurring or persistent headaches and migraine, with an individual treatment plan."
+   ],
+   [
+    "Neuro-oncology",
+    "Neurological care for patients with tumours of the brain and nervous system, in cooperation with other specialties."
+   ],
+   [
+    "Alzheimer's and memory",
+    "Evaluation of memory loss and cognitive decline, supported by the neuropsychology and neurocognitive laboratories."
+   ],
+   [
+    "Multiple Sclerosis",
+    "Diagnosis, treatment planning and long-term follow-up for people living with MS."
+   ],
+   [
+    "Parkinson's and movement disorders",
+    "Assessment and management of Parkinson's disease, tremor and other movement disorders."
+   ],
+   [
+    "Neuromuscular diseases",
+    "Investigation of muscle weakness and nerve disorders, including EMG testing."
+   ],
+   [
+    "Sleep disorders",
+    "Evaluation in a dedicated sleep disorders laboratory for sleep-related complaints."
+   ],
+   [
+    "Dizziness and balance disorders",
+    "Balance laboratory assessment, including posturography, to help find the cause of dizziness."
+   ],
+   [
+    "Neuropsychology and laboratories",
+    "Neuropsychological assessment plus EEG, EMG and transcranial magnetic stimulation, a neurocognitive laboratory and intraoperative imaging and monitoring methods."
+   ]
+  ],
+  "docs_extra": [
+   "Previous brain or spine MRI/CT images on CD or via link",
+   "Earlier EEG or EMG reports, if available"
+  ]
+ },
+ "newborn-intensive-care-unit-nicu": {
+  "title": "Neonatal Intensive Care Unit (NICU)",
+  "lead": "The neonatal intensive care unit looks after premature babies and term newborns who need close monitoring and specialised treatment in their first weeks of life. MedLuxLife helps families coordinate admission to the NICU at our partner hospital, arrange transfers and medical records, and keep in touch with the care team. We support parents with travel, accommodation and translation so they can focus on their baby.",
+  "cards": [
+   [
+    "Care for premature babies",
+    "Close observation and treatment of babies born early, in a setting designed for their specific needs."
+   ],
+   [
+    "Care for unwell term newborns",
+    "Monitoring and treatment for full-term babies born with health problems that require intensive care."
+   ],
+   [
+    "Round-the-clock care",
+    "Treatment and nursing continue 24 hours a day, seven days a week, with changes in the baby's condition monitored continuously and recorded."
+   ],
+   [
+    "Specialised equipment",
+    "Incubators, open care beds, respiratory support devices, monitors, medication pumps, central gas and oxygen supply and uninterruptible power systems."
+   ],
+   [
+    "Dedicated neonatal team",
+    "Physicians and nurses specialised in neonatal intensive care look after each baby."
+   ],
+   [
+    "Multidisciplinary input",
+    "Doctors from other specialties are involved when needed to assess critical situations and adjust treatment."
+   ]
+  ],
+  "docs_extra": [
+   "Birth and discharge summaries for the baby",
+   "Pregnancy and delivery records of the mother"
+  ]
+ },
+ "nutrition-and-dietetics": {
+  "title": "Nutrition and Dietetics",
+  "lead": "Balanced nutrition plays an important part in both preventing illness and supporting medical treatment. The nutrition and dietetics team at our partner hospital assesses your eating habits and body composition and develops a personalised nutrition plan with regular follow-up. MedLuxLife coordinates your consultations and can combine them with other treatments during your stay.",
+  "cards": [
+   [
+    "Initial assessment and body analysis",
+    "Review of eating habits plus body analysis to measure fat, muscle and water percentages and regional fat distribution."
+   ],
+   [
+    "Personalised nutrition therapy",
+    "A plan based on age, height, sex, physical activity and blood test results, with regular follow-up appointments."
+   ],
+   [
+    "Inpatient nutrition",
+    "Menus for hospitalised patients are planned together with doctors, the patient and relatives, and monitored from preparation to delivery."
+   ],
+   [
+    "Home nutrition education",
+    "Guidance during the hospital stay on how to continue the nutrition plan at home."
+   ],
+   [
+    "Support around obesity surgery",
+    "Nutritional preparation before bariatric surgery to help reduce surgical risk, and guidance on sustainable lifestyle changes afterwards."
+   ],
+   [
+    "Home-based monitoring",
+    "On request, follow-up at home for elderly or bedridden patients."
+   ],
+   [
+    "Corporate services",
+    "Nutrition and diet counselling and customised menu planning for private organisations."
+   ],
+   [
+    "Education and awareness",
+    "Seminars, training sessions and media work to raise awareness of healthy eating."
+   ]
+  ],
+  "list_heading": "Areas of medical nutrition",
+  "list": [
+   "Medical nutrition in obesity",
+   "Medical nutrition in diabetes mellitus",
+   "Medical nutrition in liver diseases",
+   "Medical nutrition in kidney diseases",
+   "Medical nutrition in high blood pressure and cardiovascular diseases",
+   "Medical nutrition for rheumatism and gout",
+   "Medical nutrition for oncology patients",
+   "Malnutrition (extreme thinness and inadequate nutrition)",
+   "Nutrition with food allergies and food intolerances",
+   "Healthy nutrition in infancy, childhood and adolescence",
+   "Healthy nutrition during pregnancy and breastfeeding",
+   "Sports nutrition"
+  ],
+  "docs_extra": [
+   "Recent blood test results",
+   "A short food diary of a typical week"
+  ]
+ },
+ "obstetrics-and-gynecology": {
+  "title": "Obstetrics and Gynaecology",
+  "lead": "Obstetrics and gynaecology covers women's health at every stage of life, from fertility and pregnancy to menopause and gynaecological oncology. MedLuxLife arranges consultations, diagnostics and treatment with specialists at our partner hospital, who work together with radiology, psychiatry and other departments when needed. We take care of scheduling, translation and travel so you can concentrate on your health.",
+  "cards": [
+   [
+    "Infertility clinic",
+    "Evaluation of couples who have difficulty conceiving, with treatment planned at the appropriate time."
+   ],
+   [
+    "IVF centre",
+    "Standard IVF plus microinjection, TESA, TESE, co-culture, in vitro maturation, assisted hatching and preimplantation genetic diagnosis, with research activities including stem cell research."
+   ],
+   [
+    "Recurrent losses and IVF failure",
+    "Investigation of recurrent pregnancy loss and repeated unsuccessful IVF attempts."
+   ],
+   [
+    "Menopause clinic",
+    "Support during menopause, including mammography, bone density measurement and psychological counselling in cooperation with radiology and psychiatry."
+   ],
+   [
+    "Perinatology",
+    "Care for pregnancy from preconception through birth and the postpartum period, including higher-risk pregnancies."
+   ],
+   [
+    "Prenatal screening and imaging",
+    "Screening for chromosomal and structural anomalies, 3D ultrasound and invasive perinatal procedures where indicated."
+   ],
+   [
+    "Gynaecological oncology",
+    "Counselling, screening, differential diagnosis and medical and surgical treatment of gynaecological tumours."
+   ],
+   [
+    "Familial cancer and prevention",
+    "Diagnosis of hereditary cancer risk with preventive and therapeutic approaches, including protective and therapeutic vaccination."
+   ]
+  ],
+  "list_heading": "Services in detail",
+  "list": [
+   "Antenatal consultation",
+   "Genetic counselling for families with a history of hereditary disease",
+   "Preparation for pregnancy",
+   "Pregnancy monitoring",
+   "Prenatal education",
+   "Birth",
+   "Postpartum counselling",
+   "Recurrent miscarriages",
+   "Counselling after a difficult obstetric history",
+   "Chromosomal and structural anomaly screening",
+   "3D ultrasound",
+   "Invasive perinatal interventions",
+   "Oncological counselling",
+   "Screening programmes",
+   "Consultation and differential diagnosis of suspected gynaecological cases",
+   "Medical and surgical treatment of gynaecological cancers",
+   "Treatment of pre-invasive, borderline and invasive tumours of the reproductive system",
+   "Protective and therapeutic vaccinations in gynaecological oncology",
+   "Diagnosis of familial cancers with preventive and therapeutic approaches",
+   "Diagnosis and treatment of pre-invasive lesions of the cervix"
+  ],
+  "docs_extra": [
+   "Previous ultrasound, smear or hormone test results",
+   "Pregnancy records or earlier IVF treatment summaries, if applicable"
+  ]
+ },
+ "otolaryngology-ent": {
+  "title": "Otolaryngology (ENT)",
+  "lead": "The ear, nose and throat department treats adults and children with conditions of the ear, nose, sinuses, throat and the wider head and neck region. MedLuxLife coordinates access to ENT specialists at our partner hospital, covering surgery, rhinology, voice and swallowing disorders, and dizziness and balance problems. We organise your diagnostics, treatment dates and aftercare from start to finish.",
+  "cards": [
+   [
+    "Adult ENT surgery",
+    "Procedures including endoscopic sinus surgery, tonsil and adenoid removal, septoplasty, turbinate reduction, ear tubes and tympanoplasty."
+   ],
+   [
+    "Paediatric ENT surgery",
+    "Surgery for children such as tonsillectomy and adenoidectomy, ear tubes, tympanoplasty, frenectomy and correction of protruding ears."
+   ],
+   [
+    "Head and neck surgery",
+    "Diagnosis and surgical treatment of benign and malignant tumours of the thyroid, neck, oral cavity, nasal passages, larynx and salivary glands."
+   ],
+   [
+    "Rhinology",
+    "Comprehensive nose and sinus assessment and treatment of sinusitis, nasal polyps, chronic congestion, allergies and sinonasal tumours, including endoscopic techniques."
+   ],
+   [
+    "Nasal breathing and nosebleeds",
+    "Options include radiofrequency turbinate reduction, septum correction, microdebrider polyp surgery and surgery for recurrent nosebleeds or persistent runny nose."
+   ],
+   [
+    "Snoring and sleep disorders",
+    "Diagnosis and treatment of snoring and sleep-related breathing problems."
+   ],
+   [
+    "Voice, speech and swallowing",
+    "A team of ENT surgeons, speech-language therapists, voice coaches, neurologists and gastroenterologists offers medical, surgical and behavioural care, including vocal aesthetics."
+   ],
+   [
+    "Hearing and tinnitus",
+    "Diagnosis and treatment of hearing loss and ringing in the ears."
+   ],
+   [
+    "Dizziness and balance",
+    "Clinical assessment, ENG/VNG and MRI testing, vestibular rehabilitation and balance training programmes for vertigo and balance disorders."
+   ],
+   [
+    "Facial and ear aesthetics",
+    "Rhinoplasty and other aesthetic nose procedures, plus ear aesthetics."
+   ]
+  ],
+  "list_heading": "Procedures and conditions",
+  "list": [
+   "Endoscopic sinus surgery",
+   "Tonsillectomy and adenoidectomy",
+   "Septoplasty",
+   "Concha (turbinate) reduction",
+   "Ear tubes",
+   "Tympanoplasty for eardrum perforations and chronic middle ear disease",
+   "Closed reduction of nasal fractures",
+   "Vertigo treatment",
+   "Tinnitus (ringing in the ears)",
+   "Hearing loss",
+   "Dysphagia (swallowing difficulties)",
+   "Voice disorders",
+   "Benign and malignant head and neck tumours",
+   "Aesthetic nose surgery and rhinoplasty",
+   "Ear aesthetics",
+   "Frenectomy (tongue-tie release)",
+   "Removal of foreign bodies from the ear and nose under anaesthesia",
+   "Correction of protruding ears",
+   "Allergic rhinitis",
+   "Acute and chronic sinusitis",
+   "Nasal polyps",
+   "Chronic nasal congestion",
+   "Nasal and sinus cavity tumours",
+   "Endoscopic sinonasal tumour surgery",
+   "Recurrent nosebleeds and persistent runny nose",
+   "Snoring and sleep disorders",
+   "Bowed vocal cords",
+   "Chronic hoarseness and sore throat",
+   "Laryngopharyngeal reflux",
+   "Laryngeal cancer",
+   "Spasmodic dysphonia",
+   "Vocal cord cysts",
+   "Vocal cord paralysis",
+   "Vocal abuse and overuse syndromes",
+   "Vocal nodules",
+   "Vocal polyps",
+   "Voice and swallowing disorders linked to Parkinson's disease and other neurological conditions",
+   "Labyrinthitis",
+   "Meniere's disease",
+   "Benign positional vertigo",
+   "ENG/VNG testing",
+   "Vestibular rehabilitation"
+  ],
+  "docs_extra": [
+   "Previous hearing test (audiogram) results",
+   "Sinus CT or head and neck imaging, if available"
+  ]
+ },
+ "parathyroid-transplant-clinic": {
+  "title": "Parathyroid Transplant Clinic",
+  "lead": "This clinic focuses on parathyroid transplantation, a treatment option for patients with permanent hypoparathyroidism, and on the diagnosis and treatment of parathyroid gland diseases more broadly. Endocrine surgeons work alongside endocrinology, immunology and bioengineering specialists. MedLuxLife can arrange an initial evaluation of your case at our partner hospital and coordinate every step if transplantation is considered suitable.",
+  "cards": [
+   [
+    "Parathyroid transplantation",
+    "A licensed transplant procedure, classed as an organ transplant, that may be considered for patients with permanent hypoparathyroidism."
+   ],
+   [
+    "Suitability assessment",
+    "An endocrine surgeon specialised in parathyroid transplantation reviews your history and explains whether the procedure is an option for you."
+   ],
+   [
+    "Parathyroid gland diseases",
+    "Diagnosis and treatment of a range of parathyroid disorders beyond transplantation."
+   ],
+   [
+    "Multidisciplinary team",
+    "Endocrine surgery, endocrinology, immunology and transplantation, and genetic bioengineering specialists work together on each case."
+   ],
+   [
+    "Transplant coordination",
+    "A dedicated transplant coordinator supports the process, alongside MedLuxLife's own case management."
+   ]
+  ],
+  "docs_extra": [
+   "Recent calcium, PTH and vitamin D blood results",
+   "Previous thyroid or parathyroid surgery reports"
+  ]
+ },
+ "pcos-and-hirsutism-clinic": {
+  "title": "PCOS and Hirsutism Clinic",
+  "lead": "Polycystic ovary syndrome affects several body systems, so treating a single symptom in isolation may not address the underlying problem. At this clinic, endocrinologists and gynaecologists see patients jointly, with dermatologists joining when excess hair growth or acne is a concern. MedLuxLife arranges your appointments at our partner hospital and coordinates follow-up visits with the same team.",
+  "cards": [
+   [
+    "Joint first consultation",
+    "The first examination is carried out together by an endocrinologist and a gynaecologist."
+   ],
+   [
+    "Shared treatment decisions",
+    "Treatment is planned on the basis of a joint decision by the specialists involved."
+   ],
+   [
+    "Hirsutism and acne care",
+    "A dermatologist joins the team when excessive hair growth or acne needs to be addressed."
+   ],
+   [
+    "Long-term follow-up",
+    "Check-ups and ongoing follow-up are carried out by the same specialists together."
+   ],
+   [
+    "Weekly PCOS council",
+    "The team meets weekly to review patients and current scientific literature, so care reflects up-to-date evidence."
+   ],
+   [
+    "Clinical research",
+    "The team is also involved in clinical studies on PCOS and hirsutism."
+   ]
+  ],
+  "docs_extra": [
+   "Recent hormone test results",
+   "Previous pelvic ultrasound reports"
+  ]
+ },
+ "pediatric-allergy-and-immunology": {
+  "title": "Paediatric Allergy and Immunology",
+  "lead": "This department diagnoses and treats allergic conditions in children and adolescents from birth to 18 years. A range of skin, blood, breathing and provocation tests helps identify triggers so a suitable treatment plan can be made. MedLuxLife organises testing and consultations at our partner hospital and supports families throughout the visit.",
+  "cards": [
+   [
+    "Allergy skin tests",
+    "Skin testing to identify substances that may trigger allergic reactions."
+   ],
+   [
+    "Blood allergy tests",
+    "Laboratory tests to measure allergic sensitisation."
+   ],
+   [
+    "Lung function tests",
+    "Respiratory function testing for children with asthma, wheezing or chronic cough."
+   ],
+   [
+    "Provocation testing",
+    "Allergen provocation, food tests and anaesthetic drug tests carried out under medical supervision."
+   ],
+   [
+    "Allergy vaccination",
+    "Allergen immunotherapy may be offered where suitable."
+   ]
+  ],
+  "list_heading": "Conditions treated",
+  "list": [
+   "Asthma",
+   "Allergic bronchitis",
+   "Allergic rhinitis (hay fever)",
+   "Atopic dermatitis (eczema)",
+   "Urticaria (hives)",
+   "Food allergy",
+   "Drug allergy, including allergy to anaesthetic agents",
+   "Chronic cough",
+   "Wheezing in babies",
+   "Frequent respiratory tract infections",
+   "Allergic skin rashes"
+  ],
+  "docs_extra": [
+   "Previous allergy test results",
+   "A list of the child's current medicines and known reactions"
+  ]
+ },
+ "pediatric-bone-marrow-transplantation": {
+  "title": "Paediatric Bone Marrow Transplantation",
+  "lead": "Stem cell (bone marrow) transplantation is a treatment option for a range of hereditary and acquired diseases in children when other treatments are not sufficient. It is carried out by a specialised team in dedicated transplant units with strict infection control. MedLuxLife helps families with the assessment, planning and long stay that transplantation involves at our partner hospital.",
+  "cards": [
+   [
+    "Stem cell transplantation",
+    "A specialised treatment for selected children whose condition has not responded adequately to medical therapy."
+   ],
+   [
+    "Pre- and post-transplant treatment",
+    "Intensive therapy before and after the transplant, with close monitoring of the weakened immune system."
+   ],
+   [
+    "Protected transplant unit",
+    "Single isolation rooms, filtered air, controlled access and strict hygiene rules help protect children from infection."
+   ],
+   [
+    "Intensive care setting",
+    "The transplant unit operates with intensive care standards throughout the treatment period."
+   ]
+  ],
+  "list_heading": "Conditions that may be treated with transplantation",
+  "list": [
+   "Leukaemias",
+   "Blood production disorders",
+   "Thalassaemia (Mediterranean anaemia)",
+   "Sickle cell disease",
+   "Bone marrow failure",
+   "Genetic disorders",
+   "Immune system diseases",
+   "Tumours"
+  ],
+  "docs_extra": [
+   "Complete haematology reports and bone marrow biopsy results",
+   "HLA typing results of the patient and siblings, if available"
+  ]
+ },
+ "pediatric-cardiology": {
+  "title": "Paediatric Cardiology",
+  "lead": "Paediatric cardiology looks after the heart and circulation of children from birth through adolescence. Specialists assess congenital and acquired heart conditions and plan treatment together with paediatric heart surgeons and other specialties. MedLuxLife arranges examinations and follow-up at our partner hospital and supports families during every visit.",
+  "cards": [
+   [
+    "Specialist examination",
+    "Every assessment starts with a thorough examination by a paediatric cardiologist."
+   ],
+   [
+    "Echocardiography and ECG",
+    "Heart ultrasound, electrocardiogram and other tests help establish the diagnosis."
+   ],
+   [
+    "Follow-up of prenatal findings",
+    "Heart findings detected before birth by obstetricians are evaluated by paediatric cardiologists after delivery."
+   ],
+   [
+    "Individual treatment plans",
+    "A treatment plan is prepared for each child, with regular monitoring of how treatment is progressing."
+   ],
+   [
+    "Lifelong follow-up",
+    "Some children need regular cardiac check-ups over many years, so close contact with the care team is maintained."
+   ],
+   [
+    "Interdisciplinary care",
+    "Collaboration with paediatric cardiac surgery, paediatric haematology and oncology, genetics and other paediatric specialties."
+   ]
+  ],
+  "list_heading": "Conditions assessed",
+  "list": [
+   "Congenital heart disease",
+   "Acquired heart disease",
+   "Heart rhythm disturbances",
+   "Heart valve abnormalities",
+   "Other circulatory system problems"
+  ],
+  "docs_extra": [
+   "Previous echocardiography and ECG reports",
+   "Prenatal heart scan findings, if any"
+  ]
+ },
+ "pediatric-endocrinology": {
+  "title": "Paediatric Endocrinology",
+  "lead": "Paediatric endocrinology covers hormonal, growth and metabolic disorders in children from the newborn period to 18 years. Treatment is planned with each child's growth and stage of development in mind. MedLuxLife coordinates consultations, tests and follow-up appointments with specialists at our partner hospital.",
+  "cards": [
+   [
+    "Growth and development",
+    "Assessment of growth delay, short stature and developmental concerns."
+   ],
+   [
+    "Puberty disorders",
+    "Evaluation of early or delayed puberty and menstrual irregularities."
+   ],
+   [
+    "Diabetes and obesity",
+    "Diagnosis, treatment and follow-up of childhood diabetes, obesity and low blood sugar."
+   ],
+   [
+    "Thyroid, adrenal and pituitary",
+    "Care for disorders of the thyroid, adrenal and pituitary glands."
+   ],
+   [
+    "Bone and calcium metabolism",
+    "Investigation of calcium and bone metabolism disorders."
+   ],
+   [
+    "Sexual development",
+    "Evaluation of differences of sex development, including undescended testis and micropenis."
+   ]
+  ],
+  "list_heading": "Conditions treated",
+  "list": [
+   "Growth and development delays",
+   "Short stature",
+   "Delayed puberty",
+   "Early puberty",
+   "Diabetes",
+   "Obesity",
+   "Goitre",
+   "Hypothyroidism",
+   "Hyperthyroidism",
+   "Congenital adrenal hyperplasia",
+   "Adrenal insufficiency",
+   "Cushing syndrome",
+   "Excessive hair growth (hirsutism)",
+   "Menstrual irregularity",
+   "Turner syndrome",
+   "Calcium and bone metabolism disorders",
+   "Pituitary gland diseases",
+   "Hypoglycaemia",
+   "Micropenis",
+   "Undescended testis",
+   "Ambiguous genitalia"
+  ],
+  "docs_extra": [
+   "Growth chart with height and weight records",
+   "Previous hormone test results and bone age X-ray"
+  ]
+ },
+ "pediatric-gastroenterology-hepatology-and-nutrition": {
+  "title": "Paediatric Gastroenterology, Hepatology and Nutrition",
+  "lead": "This department diagnoses and treats diseases of the digestive tract, liver and pancreas, as well as nutrition-related conditions, in children from infancy to 18 years. Each child is assessed with a holistic approach. MedLuxLife arranges consultations and investigations at our partner hospital and supports families with travel and translation.",
+  "cards": [
+   [
+    "Upper digestive tract",
+    "Assessment of disorders of the oesophagus, stomach and duodenum."
+   ],
+   [
+    "Intestinal disorders",
+    "Diagnosis and treatment of diseases of the small and large intestine."
+   ],
+   [
+    "Liver, gallbladder and pancreas",
+    "Paediatric hepatology care for liver and gallbladder conditions, and evaluation of pancreatic disorders."
+   ],
+   [
+    "Nutrition",
+    "Assessment and management of nutritional problems and nutrition-related diseases in children."
+   ]
+  ],
+  "list_heading": "Conditions treated",
+  "list": [
+   "Oesophageal diseases",
+   "Stomach diseases",
+   "Duodenal diseases",
+   "Diseases of the small and large intestine",
+   "Liver diseases",
+   "Gallbladder diseases",
+   "Nutritional disorders"
+  ],
+  "docs_extra": [
+   "Previous endoscopy or ultrasound reports",
+   "Recent blood and stool test results"
+  ]
+ },
+ "pediatric-hematology": {
+  "title": "Paediatric Haematology",
+  "lead": "Paediatric haematology covers blood disorders and childhood cancers from the newborn period to 18 years, with diagnosis and treatment adapted to children. The department works closely with the paediatric bone marrow transplantation clinic for both outpatient and inpatient care. MedLuxLife coordinates assessments, treatment schedules and family logistics at our partner hospital.",
+  "cards": [
+   [
+    "Blood disorders",
+    "Diagnosis and treatment of anaemias, blood production disorders and bone marrow failure."
+   ],
+   [
+    "Childhood cancers",
+    "Care for leukaemia and other tumours in children, planned with child-specific approaches."
+   ],
+   [
+    "Hereditary conditions",
+    "Follow-up of inherited blood and immune system disorders such as thalassaemia and sickle cell disease."
+   ],
+   [
+    "Bone marrow transplantation link",
+    "Outpatient and inpatient treatment in cooperation with the paediatric bone marrow transplantation clinic when needed."
+   ]
+  ],
+  "list_heading": "Conditions treated",
+  "list": [
+   "Leukaemia",
+   "Blood production disorders",
+   "Thalassaemia (Mediterranean anaemia)",
+   "Sickle cell disease",
+   "Bone marrow failure",
+   "Genetic diseases",
+   "Immune system diseases",
+   "Tumours"
+  ],
+  "docs_extra": [
+   "Complete blood count history and haematology reports",
+   "Bone marrow or pathology reports, if available"
+  ]
+ },
+ "pediatric-infectious-diseases": {
+  "title": "Paediatric Infectious Diseases",
+  "lead": "Children are more vulnerable to infections than other age groups, and some infections need specialist assessment and follow-up. This department diagnoses and treats infectious diseases in children, plans vaccinations and works with other paediatric specialties for a holistic approach. MedLuxLife arranges consultations at our partner hospital and supports families during their stay.",
+  "cards": [
+   [
+    "Recurrent infections",
+    "Investigation of frequently recurring respiratory, gastrointestinal and urinary tract infections."
+   ],
+   [
+    "Childhood rash illnesses",
+    "Diagnosis and care for illnesses such as measles, rubella, fifth disease and sixth disease."
+   ],
+   [
+    "Immunocompromised children",
+    "Management of infections in children with cancer or after organ transplantation, including their vaccination planning."
+   ],
+   [
+    "Vaccination and prevention",
+    "Planning of required vaccines, management of vaccination programmes and advice on preventing infections."
+   ],
+   [
+    "Rarer infections",
+    "Follow-up of conditions such as tuberculosis and HIV infection in children."
+   ],
+   [
+    "Collaborative care",
+    "Close cooperation with paediatric intensive care, neurology, cardiology and gastroenterology."
+   ]
+  ],
+  "list_heading": "Conditions treated",
+  "list": [
+   "Respiratory tract infections",
+   "Acute gastroenteritis",
+   "Urinary tract infections",
+   "Recurrent infections",
+   "Measles",
+   "Rubella",
+   "Fifth disease",
+   "Sixth disease",
+   "Infections in immunocompromised children",
+   "Tuberculosis",
+   "HIV infection"
+  ],
+  "docs_extra": [
+   "The child's vaccination record",
+   "Previous culture or laboratory results"
+  ]
+ },
+ "pediatric-nephrology": {
+  "title": "Paediatric Nephrology",
+  "lead": "Paediatric nephrology deals with diseases of the kidneys, urinary tract, bladder and urethra in children from birth to 18 years. Signs such as swelling of the hands, feet or eyes, blood in the urine or pain when passing urine should be assessed without delay. MedLuxLife arranges specialist consultations at our partner hospital, where care is multidisciplinary and families are supported at every stage.",
+  "cards": [
+   [
+    "Kidney failure",
+    "Diagnosis and management of acute and chronic kidney failure in children."
+   ],
+   [
+    "Dialysis in children",
+    "Dialysis care for children who need kidney replacement therapy."
+   ],
+   [
+    "Kidney transplantation",
+    "Care for children before and after kidney transplantation."
+   ],
+   [
+    "Urinary tract infections and reflux",
+    "Evaluation and treatment of urinary tract infections and vesicoureteral reflux."
+   ],
+   [
+    "Congenital anomalies",
+    "Follow-up of antenatal hydronephrosis and abnormalities of the urinary system."
+   ],
+   [
+    "Bedwetting and kidney stones",
+    "Assessment and treatment of enuresis and kidney stone disease in children."
+   ]
+  ],
+  "list_heading": "Conditions treated",
+  "list": [
+   "Acute kidney failure",
+   "Antenatal hydronephrosis",
+   "Other kidney diseases in children",
+   "Kidney transplantation",
+   "Dialysis",
+   "Enuresis (urinary incontinence)",
+   "Urinary tract infection",
+   "Chronic kidney failure",
+   "Kidney stone disease",
+   "Urinary system abnormalities",
+   "Vesicoureteral reflux"
+  ],
+  "docs_extra": [
+   "Recent urine and kidney function test results",
+   "Previous kidney ultrasound reports"
+  ]
+ },
+ "pediatric-neurology": {
+  "title": "Paediatric Neurology",
+  "lead": "Paediatric neurology diagnoses and treats disorders of the brain, spinal cord, nerves and muscles in children from birth to 18 years. Early assessment can be important for accurate diagnosis and treatment planning, supported by tests such as MRI and EEG where needed. MedLuxLife coordinates consultations, investigations and follow-up at our partner hospital.",
+  "cards": [
+   [
+    "Clinical evaluation",
+    "A detailed neurological examination by a paediatric neurologist, with MRI and EEG when considered necessary."
+   ],
+   [
+    "Epilepsy and seizures",
+    "Monitoring and treatment of different seizure types and epilepsy in children."
+   ],
+   [
+    "Developmental delay",
+    "Assessment of delays in motor skills such as walking, in speech and in cognitive development."
+   ],
+   [
+    "Neuromuscular diseases",
+    "Care for muscle weakness, movement disorders and spinal muscular atrophy (SMA)."
+   ],
+   [
+    "Genetic and metabolic disorders",
+    "Management of inherited and congenital conditions affecting the nervous system."
+   ],
+   [
+    "Headaches and fainting",
+    "Evaluation of headaches and fainting episodes in children."
+   ]
+  ],
+  "list_heading": "Conditions treated",
+  "list": [
+   "Simple fainting spells",
+   "Seizures",
+   "Epilepsy",
+   "Developmental delay (motor, speech and cognitive)",
+   "Spinal muscular atrophy (SMA)",
+   "Cerebral palsy",
+   "Down syndrome",
+   "Neuromuscular diseases",
+   "Genetic and metabolic diseases",
+   "Genetically inherited neurological diseases",
+   "Congenital diseases of the nervous system",
+   "Headaches in children"
+  ],
+  "docs_extra": [
+   "Previous EEG reports and brain MRI images",
+   "A seizure diary or video recordings of episodes, if available"
+  ]
+ }
+}

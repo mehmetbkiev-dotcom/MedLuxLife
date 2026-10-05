@@ -44,15 +44,16 @@ GROUPS = [
                                                   "Histology and Embryology", "Transfusion Centre", "Emergency Medicine", "Intensive Care", "Anaesthesiology and Reanimation"]),
 ]
 
-MAIN = "\n\n".join([
-    intro("Beyond our clinical treatments, MedLuxLife coordinates access to specialist hospital care across a wide range of medical fields, from cardiology and oncology to transplantation and fertility treatment. We help you obtain a medical opinion, plan your treatment with partner hospitals and organise your travel and stay.", IMG["check-up-women"]),
-    group([h("Most requested specialties"), grid([featured_card(*f) for f in FEATURED])], "medlux-section"),
-    group([h("All departments"),
-           p("Our partner hospitals cover the following departments. If you do not find your condition here, contact us and we will check the options for you."),
-           grid([card(title, [ul(items)]) for title, items in GROUPS], "medlux-treatment-grid medlux-dept-grid")], "medlux-section"),
-    process(),
-    cta("hospital treatment"),
-])
+def main_page(groups=GROUPS):
+    return "\n\n".join([
+        intro("Beyond our clinical treatments, MedLuxLife coordinates access to specialist hospital care across a wide range of medical fields, from cardiology and oncology to transplantation and fertility treatment. We help you obtain a medical opinion, plan your treatment with partner hospitals and organise your travel and stay.", IMG["check-up-women"]),
+        group([h("Most requested specialties"), grid([featured_card(*f) for f in FEATURED])], "medlux-section"),
+        group([h("All departments"),
+               p("Our partner hospitals cover the following departments. If you do not find your condition here, contact us and we will check the options for you."),
+               grid([card(title, [ul(items)]) for title, items in groups], "medlux-treatment-grid medlux-dept-grid")], "medlux-section"),
+        process(),
+        cta("hospital treatment"),
+    ])
 
 def prepare(items):
     return group([h("Before you travel"), p("To get a reliable medical opinion quickly, please prepare:"), ul(items)], "medlux-section")
@@ -66,7 +67,7 @@ def specialty(lead, heading, cards, docs, topic, extra=None, image=None):
         parts.append(extra)
     return "\n\n".join(parts + [prepare(docs), process(), cta(topic)])
 
-PAGES = {259: MAIN}
+PAGES = {259: main_page()}
 
 CANCERS = ["Lung cancer", "Head and neck tumours", "Brain tumours", "Kidney cancer", "Endometrial (uterine) cancer", "Liver cancer", "Lymphomas",
            "Malignant melanoma", "Breast cancer", "Bladder cancer", "Gastrointestinal cancers", "Multiple myeloma", "Osteosarcoma and soft tissue sarcomas",

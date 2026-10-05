@@ -1,0 +1,824 @@
+{
+ "adult-bone-marrow-transplantation": {
+  "title": "Adult Bone Marrow Transplantation",
+  "lead": "Bone marrow (stem cell) transplantation is a complex, multi-stage treatment that calls for close teamwork between laboratories, clinical units and nursing staff. The transplant clinic at our partner hospital brings these stages together under one roof, from diagnostic work-up and treatment planning to follow-up after discharge. MedLuxLife helps adult patients and their families prepare medical records, arrange evaluation and stay well informed throughout a lengthy treatment journey.",
+  "cards": [
+   [
+    "Transplant outpatient clinic",
+    "Coordinates assessment, decision-making, treatment and follow-up for patients who are being considered for, or are undergoing, a transplant, reviewing previous treatment, imaging, pathology and laboratory findings together."
+   ],
+   [
+    "Apheresis unit",
+    "Collects stem cells from the blood as part of the transplant process."
+   ],
+   [
+    "Stem cell freezing and processing",
+    "Processes stem cells and stores them cryogenically in nitrogen tanks, with separate quarantine and main storage, using an automated freezing system."
+   ],
+   [
+    "Flow cytometry laboratory",
+    "Analyses blood and marrow cells to support diagnosis, treatment planning and assessment of the response to treatment."
+   ],
+   [
+    "HLA tissue typing laboratory",
+    "Performs tissue typing used to assess compatibility between patient and donor."
+   ],
+   [
+    "Genetic diagnostic support",
+    "Works alongside a genetic diagnosis centre so that genetic findings can inform diagnosis and treatment decisions."
+   ],
+   [
+    "Protected transplant unit",
+    "Treatment takes place in single rooms within a dedicated unit with HEPA air filtration throughout, controlled disinfection on entry and beds that can be converted for emergency care."
+   ],
+   [
+    "Comfort and wellbeing",
+    "Rooms are designed with views and patient comfort in mind to support psychological wellbeing during a long hospital stay."
+   ],
+   [
+    "Follow-up before and after transplant",
+    "Patients are monitored closely at every stage, and follow-up continues after discharge with the involvement of social support teams."
+   ]
+  ],
+  "docs_extra": [
+   "Haematology and pathology reports, including bone marrow biopsy results",
+   "Details of previous chemotherapy or other treatment received"
+  ]
+ },
+ "algology": {
+  "title": "Algology (Pain Medicine)",
+  "lead": "Algology, or pain medicine, focuses on identifying the source of chronic pain and building a treatment plan around the individual, including pain whose cause is difficult to pin down. At our partner hospital, a pain specialist examines each patient in detail before recommending options, which may combine medical, interventional and lifestyle measures. MedLuxLife arranges the consultation, shares your records in advance and coordinates any follow-up.",
+  "cards": [
+   [
+    "Chronic pain treatment",
+    "Assessment and personalised management of long-standing pain, with the aim of finding its underlying cause."
+   ],
+   [
+    "Interventional pain treatment",
+    "Image-guided and needle-based procedures that target the structures thought to be generating pain."
+   ],
+   [
+    "Cancer pain management",
+    "Pain control tailored to people living with cancer, coordinated with their wider treatment."
+   ],
+   [
+    "Acupuncture (dry needling)",
+    "A needle-based therapy that may be used alongside other approaches to help relieve muscular and chronic pain."
+   ],
+   [
+    "Ozone therapy",
+    "Medical ozone treatment, including autohaemotherapy, offered as part of selected pain treatment plans."
+   ],
+   [
+    "Epiduroscopy",
+    "A minimally invasive endoscopic examination of the epidural space that can be used in the assessment and treatment of certain back and leg pain."
+   ],
+   [
+    "Epidural steroid injection",
+    "Injection of medication into the epidural space, which may help reduce inflammation-related spinal and radiating pain."
+   ],
+   [
+    "Regional and sympathetic nerve blocks",
+    "Targeted injections that interrupt pain signals along specific nerves or the sympathetic nervous system, which may provide longer-term relief in suitable patients."
+   ],
+   [
+    "Radiofrequency thermocoagulation",
+    "Controlled heat delivered by radio waves to selected nerves to reduce the transmission of pain."
+   ]
+  ],
+  "list_heading": "Pain conditions treated",
+  "list": [
+   "Cancer pain",
+   "Headaches",
+   "Facial pain and neuralgia",
+   "Neck pain",
+   "Shoulder and arm pain",
+   "Back pain",
+   "Lower back and leg pain",
+   "Pain due to vascular occlusion",
+   "Pain of unknown origin"
+  ],
+  "docs_extra": [
+   "Recent spinal or joint imaging (MRI, CT) with reports",
+   "A list of pain medication currently taken and previous pain treatments"
+  ]
+ },
+ "anesthesiology-and-reanimation": {
+  "title": "Anaesthesiology and Reanimation",
+  "lead": "Anaesthesiology and reanimation keeps patients comfortable and free from pain while carefully protecting vital functions during surgery and other procedures. The department at our partner hospital provides anaesthesia, intensive care and pain management, supporting safe treatment and a smoother recovery. MedLuxLife ensures your anaesthetic history and current medication are shared with the team before any planned procedure.",
+  "cards": [
+   [
+    "Anaesthesia services",
+    "Anaesthesia for surgery and interventional procedures, delivered with modern equipment and continuous monitoring of vital signs."
+   ],
+   [
+    "Supervised recovery",
+    "Patients wake up in dedicated recovery areas within the operating suite under the close watch of a physician and an anaesthesia technician."
+   ],
+   [
+    "General intensive care unit",
+    "Specialist physicians and nurses care for critically ill adults using mechanical ventilators, cardiac and respiratory monitors, infusion pumps and bedside laboratory testing."
+   ],
+   [
+    "Cardiovascular surgery intensive care",
+    "A dedicated unit for patients recovering after heart and major vascular surgery."
+   ],
+   [
+    "Neonatal intensive care",
+    "Intensive care for newborn babies who need close monitoring and support."
+   ],
+   [
+    "Isolation rooms",
+    "Rooms with adjustable pressure, temperature and humidity for patients with weakened immunity, for example during sepsis or chemotherapy."
+   ],
+   [
+    "Supportive intensive care equipment",
+    "Includes beds that reposition patients automatically and provide percussion massage to help prevent pressure sores, individual heating and cooling devices, nutrition pumps, bedside weighing for fluid balance and patient lifts for safe mobilisation."
+   ],
+   [
+    "Pain treatment",
+    "A pain clinic that treats post-operative and disease-related pain in collaboration with neurology, psychiatry, oncology, orthopaedics and physical therapy and rehabilitation."
+   ]
+  ],
+  "docs_extra": [
+   "Records of any previous anaesthesia and reactions to it",
+   "A list of current medication, including blood thinners"
+  ]
+ },
+ "applications-nuclear-medicine": {
+  "title": "Nuclear Medicine",
+  "lead": "Nuclear medicine uses small amounts of radioactive substances to image and treat disease at a molecular level, giving information about how organs function as well as how they look. The department at our partner hospital works with many specialties, including cardiology, nephrology, orthopaedics, oncology and endocrinology, and has been designed to keep radiation exposure for patients and staff to a minimum. MedLuxLife coordinates referrals, scan appointments and the transfer of results to your treating doctors.",
+  "cards": [
+   [
+    "Neurological applications",
+    "Scans that can support the diagnosis of certain strokes, dementia and hydrocephalus, and help locate the seizure focus before epilepsy surgery."
+   ],
+   [
+    "Lung applications",
+    "Imaging to investigate pulmonary embolism and to estimate remaining lung function before lung surgery."
+   ],
+   [
+    "Orthopaedic applications",
+    "Bone imaging to reveal hidden fractures, bone infection and bone metastases."
+   ],
+   [
+    "Heart applications",
+    "Studies to assess coronary artery disease and to evaluate the heart after bypass surgery or stenting."
+   ],
+   [
+    "Kidney applications",
+    "Imaging to look for urinary tract obstruction, urine reflux towards the kidneys and kidney infection, and to support kidney transplantation."
+   ],
+   [
+    "Oncology applications",
+    "Scans that help distinguish benign from malignant lesions, stage tumours, guide biopsy sites, detect recurrence, assess response to chemotherapy and plan radiotherapy."
+   ],
+   [
+    "Other diagnostic studies",
+    "Investigations of goitre, oesophageal, stomach and gallbladder disease, acute intestinal bleeding, hidden infection, lymphatic drainage, tear ducts and salivary gland function."
+   ],
+   [
+    "Patient-focused design",
+    "Spacious rooms, zoned layout according to radiation levels and daylight-style lighting in treatment rooms are intended to support comfort and safety."
+   ]
+  ],
+  "list_heading": "Clinical applications",
+  "list": [
+   "Diagnosis of certain strokes",
+   "Diagnosis of dementia",
+   "Locating the epileptic focus before epilepsy surgery",
+   "Diagnosis of hydrocephalus",
+   "Diagnosis of pulmonary embolism (lung clot)",
+   "Assessment of lung reserve before lung surgery",
+   "Visualising hidden fractures",
+   "Bone infections",
+   "Imaging of bone metastases",
+   "Diagnosis of coronary artery disease",
+   "Evaluation after bypass surgery or stent placement",
+   "Visualising urinary tract obstruction",
+   "Investigating urine reflux to the kidneys",
+   "Investigating kidney infections",
+   "Kidney transplantation",
+   "Differentiating benign from malignant lesions",
+   "Staging of tumours",
+   "Identifying the biopsy site",
+   "Detecting tumour recurrence",
+   "Evaluating response to chemotherapy",
+   "Radiotherapy planning",
+   "Goitre",
+   "Oesophageal and stomach diseases",
+   "Gallbladder diseases",
+   "Acute intestinal bleeding",
+   "Suspected hidden infection",
+   "Examination of lymphatic pathways",
+   "Examination of the tear ducts",
+   "Assessment of salivary gland function"
+  ],
+  "docs_extra": [
+   "Previous scan images on CD or via download link, with reports",
+   "Recent kidney function and, where relevant, thyroid blood test results"
+  ]
+ },
+ "audiology": {
+  "title": "Audiology",
+  "lead": "Audiology covers the detailed assessment and rehabilitation of hearing and balance problems in babies, children and adults. The department at our partner hospital offers a broad range of hearing and vestibular tests, including objective tests suitable for infants and for people with dizziness. MedLuxLife helps families schedule tests at suitable times, explains preparation requirements in advance and arranges for results to be shared with your doctors at home.",
+  "cards": [
+   [
+    "Newborn hearing screening",
+    "Screening of babies' hearing using BERA so that possible hearing loss can be identified early."
+   ],
+   [
+    "Clinical BERA (ABR)",
+    "An objective electrophysiological test that measures the auditory nerve's response to sound through electrodes placed on the head, used especially for infants who did not pass screening, babies with risk factors and children with speech delay who cannot complete other tests. It is also known as ABR, BAEP or BAER."
+   ],
+   [
+    "Clinical otoacoustic emissions and ASSR",
+    "TEOAE/DPOAE and auditory steady-state response testing, which can support and complement BERA findings."
+   ],
+   [
+    "Child audiometry",
+    "Age-appropriate hearing tests including behavioural observation audiometry, visual reinforcement audiometry and play audiometry, as well as free field testing."
+   ],
+   [
+    "Adult hearing evaluation",
+    "Pure-tone and speech audiometry, plus high-frequency audiometry where indicated."
+   ],
+   [
+    "Middle ear and Eustachian tube tests",
+    "Tympanometry and acoustic reflex testing, high-frequency (1000 Hz) tympanometry for babies up to six months, and Eustachian tube function testing."
+   ],
+   [
+    "Videonystagmography (VNG)",
+    "Records eye movements with video goggles during oculomotor, positional and caloric tests to help determine whether dizziness originates in the inner ear or the brain."
+   ],
+   [
+    "Video head impulse test (vHIT)",
+    "Assesses the vestibulo-ocular reflex of each semicircular canal separately."
+   ],
+   [
+    "VEMP test",
+    "Vestibular evoked myogenic potentials, used in the differential diagnosis of conditions such as semicircular canal dehiscence, early Meniere's disease and otolith organ dysfunction."
+   ],
+   [
+    "Caloric and rotational testing",
+    "Caloric vestibular testing (ENG) and rotational examination to evaluate the function of each balance organ and central compensation."
+   ],
+   [
+    "Repositioning manoeuvres for BPPV",
+    "When benign paroxysmal positional vertigo is identified, corrective manoeuvres such as Epley, Vannucchi, Gufoni and BBQ roll may be performed."
+   ],
+   [
+    "Preparing a child for BERA",
+    "The test is usually done during natural sleep without medication, so babies are brought awake and fasted for feeding and sleep at the clinic; evening appointments, or testing under general anaesthesia with an anaesthetist at the family's request, may be arranged."
+   ]
+  ],
+  "list_heading": "Conditions that tests can help evaluate",
+  "list": [
+   "Hearing loss in babies, children and adults",
+   "Speech and language delay with suspected hearing loss",
+   "Dizziness and balance disorders",
+   "Benign paroxysmal positional vertigo (BPPV)",
+   "Vestibular neuronitis",
+   "Internuclear ophthalmoplegia (INO)",
+   "Balance problems after traumatic brain injury",
+   "Semicircular canal dehiscence",
+   "Meniere's disease",
+   "Otolith organ-related vestibular dysfunction"
+  ],
+  "docs_extra": [
+   "Previous hearing test results and audiograms",
+   "Newborn screening results and birth history for infants"
+  ]
+ },
+ "breast-surgery": {
+  "title": "Breast Surgery",
+  "lead": "Breast surgery deals with the surgical treatment of breast diseases, most notably breast cancer, where early diagnosis can make a meaningful difference to treatment options. At our partner hospital, breast surgeons work alongside medical oncology, plastic surgery, radiology and pathology so that each plan reflects the individual's diagnosis and preferences. MedLuxLife helps you gather your imaging and biopsy results and arranges a multidisciplinary opinion before any decision is made.",
+  "cards": [
+   [
+    "Multidisciplinary breast care",
+    "Diagnosis and treatment planning involve breast surgery, medical oncology, plastic surgery, radiology, pathology and other specialists as needed."
+   ],
+   [
+    "Lumpectomy (breast-conserving surgery)",
+    "Removal of the tumour together with a small margin of surrounding healthy tissue, preserving the rest of the breast."
+   ],
+   [
+    "Total mastectomy",
+    "Removal of the entire breast, which may be considered in early- or later-stage breast cancer depending on the individual situation."
+   ],
+   [
+    "Nipple-sparing mastectomy",
+    "Removal of breast tissue while preserving the skin and nipple, usually combined with an implant to restore breast shape."
+   ],
+   [
+    "Prophylactic mastectomy",
+    "Preventive removal of breast tissue that may be discussed with people at high risk of breast cancer to help reduce that risk."
+   ],
+   [
+    "Individual choice of technique",
+    "The surgical approach is selected according to the stage of disease, the patient's condition and their wishes."
+   ]
+  ],
+  "docs_extra": [
+   "Mammography, breast ultrasound and MRI images with reports",
+   "Biopsy and pathology reports, including receptor status if available"
+  ]
+ },
+ "cardiovascular-surgery": {
+  "title": "Cardiovascular Surgery",
+  "lead": "Cardiovascular surgery treats diseases of the heart and major blood vessels, from coronary artery disease and valve problems to congenital heart defects and aortic disease. The department at our partner hospital offers surgery for both adults and children, with dedicated intensive care and a sterile operating environment. MedLuxLife arranges a review of your cardiac tests by the surgical team before travel, so you understand the proposed approach in advance.",
+  "cards": [
+   [
+    "Coronary bypass surgery",
+    "Conventional bypass surgery and beating-heart bypass surgery for narrowed coronary arteries."
+   ],
+   [
+    "Heart valve surgery",
+    "Repair or prosthetic replacement of the aortic, mitral and tricuspid valves."
+   ],
+   [
+    "Congenital heart defects",
+    "Surgical repair in children and adults, including ASD, VSD, PDA, aortic coarctation, Ebstein's anomaly, tetralogy of Fallot and transposition of the great arteries (TGA)."
+   ],
+   [
+    "Aortic surgery",
+    "Surgery for aortic aneurysms of the ascending aorta, arch and descending aorta, including combined procedures, and for acute and chronic aortic dissection."
+   ],
+   [
+    "Peripheral vascular surgery",
+    "Surgical treatment of diseases affecting the arteries and veins outside the heart."
+   ],
+   [
+    "Heart failure surgery",
+    "Heart transplantation, artificial heart pumps and anti-remodelling surgery for advanced heart failure."
+   ],
+   [
+    "Pericardiectomy",
+    "Removal of the pericardium, the sac around the heart, when it restricts heart function."
+   ],
+   [
+    "Heart tumour surgery",
+    "Surgical removal of tumours of the heart."
+   ],
+   [
+    "Reoperative cardiac surgery",
+    "Second and third operations for patients who have had previous heart or vascular surgery."
+   ]
+  ],
+  "list_heading": "Congenital heart defects repaired",
+  "list": [
+   "Atrial septal defect (ASD)",
+   "Ventricular septal defect (VSD)",
+   "Patent ductus arteriosus (PDA)",
+   "Aortic coarctation",
+   "Ebstein's anomaly",
+   "Tetralogy of Fallot",
+   "Transposition of the great arteries (TGA)"
+  ],
+  "docs_extra": [
+   "Echocardiography, ECG and coronary angiography reports and images",
+   "Operation notes from any previous heart surgery"
+  ]
+ },
+ "chest-diseases": {
+  "title": "Chest Diseases (Pulmonology)",
+  "lead": "Chest diseases, or pulmonology, covers the diagnosis, treatment and long-term follow-up of conditions affecting the lungs and airways. The department at our partner hospital serves adult patients through its outpatient clinic, bronchoscopy unit, pulmonary function laboratory and allergy skin testing. MedLuxLife coordinates appointments and ensures that your previous scans and lung function results reach the specialist before you arrive.",
+  "cards": [
+   [
+    "Outpatient clinic",
+    "Assessment, diagnosis and individual treatment planning for adults with respiratory symptoms or known lung disease."
+   ],
+   [
+    "Bronchoscopy unit",
+    "Examination of the airways with a flexible camera to support diagnosis and, where needed, treatment."
+   ],
+   [
+    "Pulmonary function laboratory",
+    "Breathing tests that measure how well the lungs are working."
+   ],
+   [
+    "Allergy skin testing",
+    "Skin tests that can help identify allergic triggers for respiratory symptoms."
+   ],
+   [
+    "Smoking cessation support",
+    "Counselling and follow-up for people who want to stop smoking."
+   ],
+   [
+    "Respiratory physiotherapy",
+    "Breathing physiotherapy for hospitalised patients."
+   ],
+   [
+    "Medical treatment and follow-up",
+    "Ongoing physician follow-up and adjustment of treatment for chronic lung conditions."
+   ]
+  ],
+  "list_heading": "Conditions treated",
+  "list": [
+   "Asthma",
+   "Chronic bronchitis",
+   "COPD (chronic obstructive pulmonary disease)",
+   "Other smoking-related lung diseases",
+   "Lung cancer",
+   "Pneumonia",
+   "Tuberculosis",
+   "Interstitial lung diseases, including sarcoidosis",
+   "Drug-induced lung problems",
+   "Lung disease caused by occupational exposure"
+  ],
+  "docs_extra": [
+   "Chest X-ray or CT images with reports",
+   "Previous lung function (spirometry) results"
+  ]
+ },
+ "child-and-adolescent-psychiatry": {
+  "title": "Child and Adolescent Psychiatry",
+  "lead": "Childhood and adolescence are times of rapid physical, emotional and psychological change, and mental health concerns in these years need an assessment that takes development and family circumstances into account. The child and adolescent psychiatry department at our partner hospital offers assessment, follow-up and treatment programmes for emotional, behavioural and developmental difficulties. MedLuxLife helps families arrange consultations, share school and medical reports and plan follow-up across borders.",
+  "cards": [
+   [
+    "Comprehensive assessment",
+    "Evaluation of a child's mental, emotional and behavioural health in the context of their developmental stage and environment."
+   ],
+   [
+    "Diagnosis and treatment planning",
+    "Structured diagnosis and an individual treatment plan for disorders arising in childhood and adolescence."
+   ],
+   [
+    "Family and relationship support",
+    "Attention to mother-baby-child relationships, sibling rivalry and parent-teenager conflict."
+   ],
+   [
+    "Long-term follow-up",
+    "Ongoing monitoring of mental development, including for children with chronic illnesses and their families."
+   ]
+  ],
+  "list_heading": "Areas of care",
+  "list": [
+   "Attention deficit hyperactivity disorder (ADHD)",
+   "Learning disabilities",
+   "Autism and related pervasive developmental disorders",
+   "Depression and anxiety disorders in children and adolescents",
+   "Feeding and sleeping problems in infancy and the preschool years",
+   "Mother-baby-child relationship problems",
+   "Toileting (bladder and bowel habit) problems",
+   "Tic disorders",
+   "Language and speech development problems",
+   "Childhood masturbation",
+   "Sibling rivalry",
+   "Adjustment and behavioural problems",
+   "Thumb sucking and nail biting",
+   "Intellectual disability and related behavioural problems",
+   "Adolescent problems and parent-teenager conflicts",
+   "Children and adolescents prone to violence",
+   "Mental health concerns in children and adolescents with chronic illnesses, and their families"
+  ],
+  "docs_extra": [
+   "Previous psychological or developmental assessment reports",
+   "Relevant school reports or teacher observations"
+  ]
+ },
+ "dermatology": {
+  "title": "Dermatology",
+  "lead": "Dermatology covers the diagnosis, treatment and follow-up of conditions affecting the skin, hair and nails. Alongside medical dermatology, the department at our partner hospital offers dermatosurgery, cosmetic dermatology and care for certain genital skin conditions. MedLuxLife arranges consultations and helps combine dermatology appointments with any other treatment you are planning during your stay.",
+  "cards": [
+   [
+    "Medical dermatology",
+    "Diagnosis, treatment and follow-up of a wide range of skin, hair and nail diseases."
+   ],
+   [
+    "Dermatosurgery",
+    "Surgical procedures on the skin, for example for moles or skin lesions that need removal or examination."
+   ],
+   [
+    "Cosmetic dermatology",
+    "Dermatocosmetic procedures including laser applications, botulinum toxin (Botox) and chemical peels."
+   ],
+   [
+    "Genital skin conditions",
+    "Diagnosis and treatment of genital warts, molluscum, genital herpes, external genital fungal infections and syphilis."
+   ],
+   [
+    "Skin cancer and mole assessment",
+    "Examination of moles and suspicious lesions, and treatment planning for skin cancers."
+   ]
+  ],
+  "list_heading": "Conditions treated",
+  "list": [
+   "Acne",
+   "Psoriasis",
+   "Eczema",
+   "Skin allergies",
+   "Nappy rash in babies",
+   "Hives (urticaria)",
+   "Warts",
+   "Fungal diseases",
+   "Moles",
+   "Skin cancers",
+   "Oral ulcers",
+   "Hair loss",
+   "Nail diseases",
+   "Behçet's disease",
+   "Genital warts and molluscum",
+   "Genital herpes",
+   "External genital fungal infections",
+   "Syphilis"
+  ],
+  "docs_extra": [
+   "Photographs showing how the skin condition has changed over time",
+   "Previous skin biopsy or pathology reports"
+  ]
+ },
+ "emergency-medicine": {
+  "title": "Emergency Medicine",
+  "lead": "Emergency medicine provides rapid assessment and treatment of sudden illness, injury and life-threatening conditions in adults and children. The emergency department at our partner hospital is open 24 hours a day and is supervised by emergency medicine specialists, with imaging and laboratory support close at hand. For MedLuxLife patients already in treatment, we can help with communication and coordination if urgent care is needed during your stay.",
+  "cards": [
+   [
+    "24-hour emergency care",
+    "Round-the-clock care for adult and paediatric patients with acute illness or injury, led by emergency medicine specialists."
+   ],
+   [
+    "Resuscitation room",
+    "A dedicated area equipped for cardiopulmonary resuscitation (CPR)."
+   ],
+   [
+    "Trauma room",
+    "A room set up for the assessment and initial treatment of injured patients."
+   ],
+   [
+    "Monitored observation beds",
+    "Beds with continuous monitoring for evaluating and observing emergency patients."
+   ],
+   [
+    "Imaging and laboratory support",
+    "Rapid access to imaging and laboratory testing to support fast diagnosis."
+   ],
+   [
+    "Ambulance service",
+    "Hospital ambulance services are available for emergency transfers."
+   ]
+  ],
+  "list_heading": "What emergency care includes",
+  "list": [
+   "Evaluation",
+   "Diagnosis",
+   "Stabilisation",
+   "Treatment",
+   "Protection against preventable death and permanent disability"
+  ]
+ },
+ "endocrine-surgery": {
+  "title": "Endocrine Surgery",
+  "lead": "Endocrine surgery treats disorders of the hormone-producing glands, mainly the thyroid, parathyroid and adrenal glands, when too much or too little hormone is produced or when a growth needs removal. These delicate operations require careful technique to protect the voice, calcium balance and surrounding structures. MedLuxLife helps you share your hormone results and scans with the surgical team at our partner hospital and plan your stay around surgery and recovery.",
+  "cards": [
+   [
+    "Thyroidectomy",
+    "Removal of the whole thyroid gland or one of its lobes, for example for nodules, goitre, overactivity or cancer."
+   ],
+   [
+    "Parathyroidectomy",
+    "Removal of one or more of the four parathyroid glands, which regulate calcium and phosphorus levels."
+   ],
+   [
+    "Parathyroid transplantation",
+    "Reimplantation of parathyroid tissue, which may be performed to preserve calcium regulation."
+   ],
+   [
+    "Adrenalectomy",
+    "Removal of one or both adrenal glands, which produce cortisol and hormones involved in blood pressure control and development."
+   ],
+   [
+    "Pancreatectomy",
+    "Removal of part or all of the pancreas, for example for neuroendocrine tumours."
+   ],
+   [
+    "Specialised surgical expertise",
+    "Operations are carried out by surgeons with additional experience in endocrine surgery, with a focus on careful, precise technique."
+   ]
+  ],
+  "list_heading": "Conditions treated surgically",
+  "list": [
+   "Adrenal tumours",
+   "Cushing's syndrome",
+   "Parathyroid gland disorders",
+   "Parathyroid adenomas",
+   "Parathyroid cancer",
+   "Hyperparathyroidism",
+   "Hyperthyroidism",
+   "Goitre",
+   "Graves' disease",
+   "Toxic (hyperfunctioning) thyroid nodules",
+   "Thyroid nodules",
+   "Thyroid cancer",
+   "Neuroendocrine tumours"
+  ],
+  "docs_extra": [
+   "Thyroid, parathyroid or adrenal hormone and calcium blood test results",
+   "Neck ultrasound, scintigraphy or CT/MRI reports, and any fine-needle biopsy results"
+  ]
+ },
+ "endocrinology-and-metabolism-diseases": {
+  "title": "Endocrinology and Metabolic Diseases",
+  "lead": "Hormones produced by the endocrine glands carry essential messages around the body, and when too much or too little is produced, a range of disorders can develop. The endocrine team at our partner hospital evaluates these conditions and, where surgery is needed, offers surgical treatment focused mainly on the thyroid, parathyroid and adrenal glands. MedLuxLife helps you gather your hormone tests and imaging and coordinates consultation and treatment planning.",
+  "cards": [
+   [
+    "Thyroid disorders",
+    "Evaluation and treatment of thyroid conditions affecting metabolism, energy use and heat production, including surgical removal of all or part of the gland (thyroidectomy) where appropriate."
+   ],
+   [
+    "Parathyroid disorders",
+    "Care for conditions of the four parathyroid glands that regulate calcium and phosphorus, including parathyroidectomy and parathyroid transplantation."
+   ],
+   [
+    "Adrenal disorders",
+    "Assessment and treatment of adrenal gland conditions affecting cortisol, blood pressure-related hormones and development, including adrenalectomy."
+   ],
+   [
+    "Pancreatic surgery",
+    "Pancreatectomy, the removal of part or all of the pancreas, for example for neuroendocrine tumours."
+   ],
+   [
+    "Careful surgical technique",
+    "Endocrine operations are performed by surgeons with dedicated experience, with particular care taken to protect the voice and calcium balance and to minimise bleeding."
+   ]
+  ],
+  "list_heading": "Conditions treated",
+  "list": [
+   "Adrenal tumours",
+   "Cushing's syndrome",
+   "Parathyroid gland disorders",
+   "Parathyroid adenomas",
+   "Parathyroid cancer",
+   "Hyperparathyroidism",
+   "Hyperthyroidism",
+   "Goitre",
+   "Graves' disease",
+   "Toxic (hyperfunctioning) thyroid nodules",
+   "Thyroid nodules",
+   "Thyroid cancer",
+   "Neuroendocrine tumours"
+  ],
+  "docs_extra": [
+   "Recent hormone, calcium and metabolic blood test results",
+   "Thyroid ultrasound or other endocrine imaging reports"
+  ]
+ },
+ "gastroenterological-surgery": {
+  "title": "Gastroenterological Surgery",
+  "lead": "Gastroenterological surgery is the surgical specialty for diseases of the digestive tract, from the mouth to the anus, when medication or endoscopic treatment is not enough. At our partner hospital, surgeons with subspecialty training in this field work closely with gastroenterologists on diagnosis and treatment planning. MedLuxLife coordinates the review of your endoscopy, imaging and pathology results so that a surgical opinion can be given before you travel.",
+  "cards": [
+   [
+    "Oesophageal, stomach and intestinal cancers",
+    "Surgical treatment of cancers affecting the oesophagus, stomach and intestines."
+   ],
+   [
+    "Liver and biliary tract surgery",
+    "Surgery for conditions of the liver and bile ducts that require an operation."
+   ],
+   [
+    "Pancreas and spleen surgery",
+    "Surgical care for diseases of the pancreas and spleen."
+   ],
+   [
+    "Intra-abdominal conditions",
+    "Surgical treatment of other diseases of the abdominal structures and digestive system that need surgical intervention."
+   ],
+   [
+    "Close work with gastroenterology",
+    "Gastroenterology handles diagnosis and endoscopic procedures, while the surgical team takes over when an operation is needed, supporting a joined-up plan."
+   ]
+  ],
+  "docs_extra": [
+   "Endoscopy and colonoscopy reports with pathology results",
+   "Abdominal CT or MRI images with reports"
+  ]
+ },
+ "gastroenterology": {
+  "title": "Gastroenterology",
+  "lead": "Gastroenterology covers the evaluation, diagnosis and treatment of diseases of the stomach, intestines, liver, bile ducts and pancreas. The department at our partner hospital offers a wide range of diagnostic and therapeutic endoscopy, alongside dedicated care for reflux, liver disease, inflammatory bowel disease and colorectal cancer screening. MedLuxLife helps you arrange procedures, understand preparation instructions and receive your reports in a form your home doctor can use.",
+  "cards": [
+   [
+    "Diagnostic endoscopy",
+    "Upper gastrointestinal endoscopy, colonoscopy and double-balloon endoscopy (enteroscopy), which can examine parts of the small intestine beyond the reach of standard scopes, for example in unexplained bleeding, iron-deficiency anaemia or suspected Crohn's disease."
+   ],
+   [
+    "Endoscopic treatment of bleeding",
+    "Band ligation, sclerotherapy, haemoclips and argon laser treatment for bleeding from the stomach or intestines."
+   ],
+   [
+    "Treatment of narrowing",
+    "Balloon dilatation and stent placement for strictures of the stomach or intestines."
+   ],
+   [
+    "Endoscopic obesity treatment",
+    "Intragastric balloon placement during upper endoscopy, which may support weight loss alongside lifestyle changes; the balloon is removed after a set period."
+   ],
+   [
+    "Reflux diagnosis and treatment",
+    "Upper endoscopy, 24-hour pH monitoring and motility studies, followed by medication, endoscopic options such as the Stretta procedure and endoscopic fundoplication (for example Plicator or Gastrofix), or surgery."
+   ],
+   [
+    "Helicobacter pylori testing",
+    "Urea breath test and stool antigen testing to diagnose H. pylori infection and guide treatment."
+   ],
+   [
+    "Colorectal cancer screening",
+    "Screening colonoscopy with polypectomy, as polyps can be found and removed during the procedure; people at higher risk receive an individual screening plan."
+   ],
+   [
+    "ERCP",
+    "Endoscopic imaging of the bile and pancreatic ducts, which also allows stone removal, stent placement to relieve blockages and biopsy."
+   ],
+   [
+    "Haemorrhoid treatment",
+    "Medication for early stages and band ligation, sclerotherapy, laser or infrared treatment during sedated colonoscopy for intermediate stages, with referral for surgery in advanced cases."
+   ],
+   [
+    "Hepatology unit",
+    "Diagnosis and long-term follow-up of chronic hepatitis B and C using liver function tests, HBV and HCV PCR, abdominal ultrasound and liver biopsy, with antiviral treatment options including interferon."
+   ],
+   [
+    "Inflammatory bowel disease",
+    "Diagnosis of ulcerative colitis and Crohn's disease by colonoscopy and/or double-balloon enteroscopy, and ongoing medical treatment."
+   ]
+  ],
+  "list_heading": "Tests and procedures",
+  "list": [
+   "Upper gastrointestinal endoscopy",
+   "Colonoscopy",
+   "Double-balloon endoscopy (enteroscopy)",
+   "Band ligation",
+   "Sclerotherapy",
+   "Haemoclip application",
+   "Argon laser treatment",
+   "Balloon dilatation",
+   "Stent placement",
+   "Endoscopic intragastric balloon",
+   "Stretta procedure",
+   "Endoscopic fundoplication (Plicator, Gastrofix)",
+   "24-hour pH monitoring",
+   "Motility studies",
+   "Urea breath test",
+   "Stool antigen test",
+   "Polypectomy",
+   "ERCP",
+   "Laser and infrared haemorrhoid treatment",
+   "Liver function tests",
+   "HBV and HCV PCR tests",
+   "Upper abdominal ultrasound",
+   "Liver biopsy"
+  ],
+  "docs_extra": [
+   "Previous endoscopy or colonoscopy reports with pathology results",
+   "Recent liver function and hepatitis test results, if relevant"
+  ]
+ },
+ "general-surgery": {
+  "title": "General Surgery",
+  "lead": "General surgery covers the evaluation and operative treatment of a broad range of conditions affecting the digestive tract, abdominal organs, breast, endocrine glands and soft tissues. The general surgery team at our partner hospital uses modern techniques, including laparoscopic (keyhole) surgery where suitable. MedLuxLife coordinates a surgical review of your records before travel and supports you through admission, recovery and the journey home.",
+  "cards": [
+   [
+    "Upper digestive tract surgery",
+    "Surgery of the oesophagus and stomach."
+   ],
+   [
+    "Intestinal and anal surgery",
+    "Operations for intestinal diseases and conditions of the anal region, including haemorrhoids and pilonidal sinus."
+   ],
+   [
+    "Liver, biliary, pancreas and spleen surgery",
+    "Surgical treatment of conditions affecting the liver, bile ducts, pancreas and spleen."
+   ],
+   [
+    "Hernia surgery",
+    "Repair of abdominal wall and groin hernias, using laparoscopic techniques where suitable."
+   ],
+   [
+    "Morbid obesity surgery",
+    "Surgical treatment options for severe obesity."
+   ],
+   [
+    "Breast surgery",
+    "Surgical treatment of breast diseases."
+   ],
+   [
+    "Endocrine surgery",
+    "Operations on the thyroid and adrenal glands."
+   ],
+   [
+    "Soft tissue tumours",
+    "Surgical removal of tumours in the soft tissues."
+   ],
+   [
+    "Vascular access for dialysis",
+    "Creation of an arteriovenous (A-V) fistula or shunt for patients who need haemodialysis."
+   ],
+   [
+    "Laparoscopic surgery",
+    "Minimally invasive keyhole techniques applied across a wide range of general surgical procedures."
+   ]
+  ],
+  "docs_extra": [
+   "Ultrasound, CT or MRI reports relevant to the planned surgery"
+  ]
+ }
+}

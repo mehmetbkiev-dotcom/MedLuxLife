@@ -94,6 +94,11 @@ Adult Bone Marrow Transplantation; Algology; Anesthesiology and Reanimation; App
 
 - 2026-10-05: Hospital sayfalarında eksikler giderildi — hastane listeleri madde madde karşılandı: onkoloji 20 kanser türü ayrı ayrı (2 sütun), kardiyoloji 10 kart (20 işlem), ortopedi 12 kart (omuz, ayak-bilek, biyolojik kıkırdak ayrı), IVF 12 kart (co-culture, mikroçip, assisted hatching, ovaryan PRP eklendi), beyin cerrahisi 10 kart (kifoplasti, ağrı/spastisite pompası, stereotaktik, nörospinal travma), göz 16 kart (tüm birimler ayrı), nakil 8 kart (pankreas/kalp). Bölüm listesine Hirsutism Clinic eklendi, Radiology / Imaging Unit ayrıldı. Hastane bölüm sayfalarındaki 7 ana fotoğraf (Media 406–412) giriş ve "Most requested" kartlarına eklendi; marka/logo yok (göz görselindeki "calibrating" yazısı görselin parçası).
 
+- 2026-10-05: "All departments" listesindeki her bölüm için sayfa oluşturuldu: 64 yeni sayfa (Hospital & Specialist Treatments altında; Obesity Surgery ve Plastic Surgery mevcut Clinical sayfalarına bağlı kaldı). Kaynak: partner hastanenin her bölüm sayfası; metinler yeniden yazıldı (`content/depts_part1-4.json`, üretici `content/dept_pages.py`, oluşturulan ID'ler `content/dept_created.json`). Her sayfada bölüm fotoğrafı (Media'da, `content/dept_images.json`), tedavi kartları, gerekirse "Conditions treated" listesi, "Before you travel", süreç ve CTA var. Ana sayfadaki 73 bölüm adı artık kendi sayfasına bağlı (hepsi 200 döndü).
+  - Kullanılmayan fotoğraflar: Audiology, Intensive Care, PCOS (hastanenin tanınabilir gerçek çalışanları) → yerine ENT, Anaesthesiology, Hirsutism fotoğrafları.
+  - Çıkarılanlar: gastroenterolojide sadece hayvan deneyinde olan NOTES yöntemi; perinatolojide feticide / embryo reduction; istatistik, "Türkiye'de ilk", yatak sayısı, telefonlar.
+  - Not: hastanenin Endocrinology sayfası endokrin cerrahisi içeriği taşıyor → Endocrinology ve Endocrine Surgery sayfalarımız benzer.
+
 ## İletişim bilgileri
 - Telefon: +49 160 93 44 87 14
 - WhatsApp: +380 97 909 23 26 (wa.me/380979092326)
