@@ -90,6 +90,8 @@ Adult Bone Marrow Transplantation; Algology; Anesthesiology and Reanimation; App
 - 2026-10-05: Hospital & Specialist Treatments yazıldı. Ana sayfa (259): giriş + "Most requested specialties" (7 kart, Learn more bağlantılı) + "All departments" (11 grup, 72 bölüm; Obesity Surgery → Bariatric, Plastic → Plastic Surgery sayfalarına bağlı). 7 uzmanlık sayfası (268–274): tedavi/hizmet kartları + "Before you travel" belge listesi + süreç + CTA. Kaynak: `content/hospital_pages.py`. Bu bölüm için katalog yok; metinler genel, başarı oranı/garanti iddiası yok.
   - Listeden çıkarılanlar: "Clone of Kidney Transplant Clinic" (kopya/hatalı kayıt), "Hirsutism Clinic" (PCOS and Hirsutism Clinic ile birleştirildi). "Imaging Unit" ve "Radiology" → "Radiology and Imaging".
 
+- 2026-10-05: Hospital & Specialist sayfaları partner hastanenin (yeditepehastaneleri.com/en/services) bölüm sayfalarına göre güncellendi. **Kural: sitede hastanenin adı geçmeyecek** ("our partner hospital"). Hastanede olmayan tedaviler çıkarıldı (ör. SMILE/ICL, hidrosefali kartı), olanlar eklendi (robotik protez, kıkırdak nakli, epilepsi cerrahisi, natural IVF, PGD, pankreas/kalp nakli deneyimi vb.). Onkolojiye "Cancer types treated" listesi eklendi. Bölüm listesinden "Medical Biochemistry" çıkarıldı (hastanede yok). Başarı oranı/istatistik/"en iyi" iddiası kullanılmadı.
+
 ## İletişim bilgileri
 - Telefon: +49 160 93 44 87 14
 - WhatsApp: +380 97 909 23 26 (wa.me/380979092326)

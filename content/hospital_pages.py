@@ -38,7 +38,7 @@ GROUPS = [
                            "Paediatric Bone Marrow Transplantation", "Paediatric Neurology", "Paediatric Nephrology", "Paediatric Endocrinology",
                            "Paediatric Gastroenterology, Hepatology and Nutrition", "Paediatric Allergy and Immunology", "Paediatric Infectious Diseases",
                            "Paediatric Rheumatology", "Child and Adolescent Psychiatry", "Newborn Intensive Care (NICU)"]),
-    ("Diagnostics, emergency and intensive care", ["Radiology and Imaging", "Medical Genetics", "Pathology", "Medical Biochemistry", "Medical Microbiology",
+    ("Diagnostics, emergency and intensive care", ["Radiology and Imaging", "Medical Genetics", "Pathology", "Medical Microbiology",
                                                   "Histology and Embryology", "Transfusion Centre", "Emergency Medicine", "Intensive Care", "Anaesthesiology and Reanimation"]),
 ]
 
@@ -58,85 +58,98 @@ def prepare(items):
 DOCS = ["Recent medical reports and discharge summaries", "Imaging (MRI, CT, X-ray) on CD or as DICOM files, with the radiology reports",
         "Recent laboratory results", "A list of your current medications and any allergies"]
 
-def specialty(lead, heading, cards, docs, topic):
-    return "\n\n".join([p(lead, "medlux-lead"), group([h(heading), grid([card(t, [p(d)]) for t, d in cards])], "medlux-section"),
-                        prepare(docs), process(), cta(topic)])
+def specialty(lead, heading, cards, docs, topic, extra=None):
+    parts = [p(lead, "medlux-lead"), group([h(heading), grid([card(t, [p(d)]) for t, d in cards])], "medlux-section")]
+    if extra:
+        parts.append(extra)
+    return "\n\n".join(parts + [prepare(docs), process(), cta(topic)])
 
 PAGES = {259: MAIN}
 
+CANCERS = ["Lung cancer", "Breast cancer", "Gastrointestinal cancers", "Liver, gallbladder and biliary tract cancers", "Pancreatic cancer",
+           "Kidney and bladder cancer", "Prostate and testicular cancer", "Ovarian, uterine (endometrial) and cervical cancer", "Head and neck tumours",
+           "Brain tumours", "Thyroid cancer", "Lymphomas", "Multiple myeloma", "Malignant melanoma", "Osteosarcoma and soft tissue sarcomas"]
+
 PAGES[268] = specialty(
-    "A cancer diagnosis raises many questions. MedLuxLife helps you obtain a specialist opinion and access modern cancer treatment at partner hospitals, where cases are discussed by multidisciplinary teams of oncologists, surgeons, radiation oncologists and other specialists.",
+    "Cancer treatment is planned according to the type, stage and biological features of the disease and your personal situation. Through our partner hospital, your case is assessed by a multidisciplinary team in which medical oncologists work closely with surgeons, radiation oncologists and other specialists.",
     "Treatments and services", [
-    ("Second opinion", "An independent review of your diagnosis and treatment plan by experienced oncologists, based on your existing reports and images."),
-    ("Diagnosis and staging", "Imaging such as PET-CT and MRI, biopsy and pathology to determine the exact type and stage of the disease."),
-    ("Chemotherapy", "Drug treatments to destroy cancer cells or slow their growth, planned according to international treatment guidelines."),
-    ("Targeted therapy and immunotherapy", "Modern treatments that act on specific features of cancer cells or help the immune system recognise them, where suitable."),
-    ("Radiotherapy", "Precise radiation treatment coordinated with radiation oncology teams."),
-    ("Surgical oncology", "Surgical removal of tumours, often in combination with other treatments."),
-    ], DOCS + ["Pathology report and, if available, tissue blocks or slides"], "oncology consultation")
+    ("Personal treatment planning", "A treatment plan tailored to the type and stage of the disease, agreed in cooperation with surgery, radiation oncology and other departments."),
+    ("Chemotherapy", "Drug treatments that stop the growth of cancer cells or destroy them, planned individually."),
+    ("Targeted therapy", "Medicines that act on specific features of cancer cells, used where the tumour biology makes them suitable."),
+    ("Immunotherapy", "Treatments that help the immune system to recognise and fight cancer cells."),
+    ("Hormone therapy", "Used for hormone-sensitive cancers, such as some breast and prostate cancers."),
+    ("Follow-up and supportive care", "Regular follow-up, management of side effects, preserving quality of life and psychosocial support during treatment."),
+    ], DOCS + ["Pathology report and, if available, tissue blocks or slides"], "oncology consultation",
+    extra=group([h("Cancer types treated"), p("Our partner oncology team treats a wide range of cancers, including:"), ul(CANCERS)], "medlux-section"))
 
 PAGES[269] = specialty(
-    "Cardiology covers the diagnosis and treatment of heart and blood vessel conditions. Through our partner hospitals you can access comprehensive cardiac check-ups, advanced diagnostics and, where needed, interventional or surgical treatment.",
+    "Cardiology covers the evaluation, diagnosis, treatment and follow-up of heart conditions. Our partner hospital's cardiology department includes a cardiology outpatient clinic, coronary intensive care, catheterisation and angiography laboratories and an electrophysiology unit, and works closely with cardiovascular surgery.",
     "Treatments and services", [
-    ("Cardiac check-up", "ECG, echocardiography, stress testing and blood tests to assess your heart health."),
-    ("Advanced diagnostics", "Holter monitoring, cardiac CT and MRI, and coronary angiography where indicated."),
-    ("Coronary interventions", "Balloon angioplasty and stent placement to treat narrowed coronary arteries."),
-    ("Heart rhythm treatment", "Diagnosis of arrhythmias, pacemaker implantation and electrophysiology procedures."),
-    ("Heart valve treatment", "Assessment and treatment of valve diseases, including catheter-based options where suitable."),
-    ("Cardiovascular surgery", "Bypass surgery, valve surgery and vascular operations in cooperation with cardiovascular surgeons."),
+    ("Cardiac diagnostics", "Echocardiography (transthoracic and transoesophageal), treadmill stress test, rhythm Holter, event recorder, tilt-table test and 24-hour blood pressure monitoring."),
+    ("Coronary angiography and catheterisation", "Coronary angiography, haemodynamic studies and right and left heart catheterisation."),
+    ("Coronary angioplasty and stents", "Balloon angioplasty (PTCA) and stent placement to open narrowed coronary arteries."),
+    ("Pacemakers and ICDs", "Implantation of permanent pacemakers and implantable cardioverter-defibrillators."),
+    ("Electrophysiology and ablation", "Electrophysiological studies and radiofrequency (RF) ablation to treat heart rhythm disorders."),
+    ("Structural interventions", "Mitral and pulmonary balloon valvuloplasty, catheter closure of ASD and PDA, septal ablation, pericardiocentesis and endomyocardial biopsy."),
     ], DOCS + ["Previous ECGs, echocardiography or angiography reports"], "cardiology consultation")
 
 PAGES[270] = specialty(
-    "Orthopaedics and traumatology treat conditions of the bones, joints, muscles and spine. Our partner hospitals offer modern surgical and non-surgical treatment, followed by physiotherapy and rehabilitation for a safe return to everyday life.",
+    "Orthopaedics and traumatology deal with the diagnosis, treatment and rehabilitation of problems of the bones, joints, muscles and spine in adults and children. Our partner hospital combines experienced orthopaedic surgeons with robotic and navigation technology and works with physical therapy and rehabilitation for a quick return to daily life.",
     "Treatments and services", [
-    ("Knee and hip replacement", "Partial or total joint replacement for advanced arthritis or joint damage."),
-    ("Arthroscopic surgery", "Minimally invasive keyhole surgery of the knee, shoulder and other joints, for example for meniscus or ligament injuries."),
-    ("Spine treatment", "Treatment of disc herniation, spinal stenosis and other spine conditions, conservative or surgical."),
-    ("Sports injuries", "Diagnosis and treatment of ligament, tendon and cartilage injuries."),
-    ("Trauma and fracture care", "Treatment of fractures and their consequences, including corrective surgery."),
-    ("Physiotherapy and rehabilitation", "Personal rehabilitation programmes before and after surgery."),
+    ("Robotic joint replacement", "Knee, hip and shoulder replacement for advanced arthritis, performed with robotic technology, navigation systems and computer assistance."),
+    ("Arthroscopic surgery", "Keyhole surgery of the knee, shoulder, hip, ankle, elbow and wrist. Recovery is quick and in many cases no hospital stay is needed."),
+    ("Cartilage transplantation", "Cartilage transplantation and biological treatments for extensive cartilage damage, to protect the joint and delay or avoid the need for a prosthesis."),
+    ("Sports injuries", "Treatment of ligament, meniscus, tendon and other sports injuries, including foot and ankle injuries."),
+    ("Spine surgery", "Surgical treatment of spinal fractures, infections, tumours and congenital or acquired curvatures."),
+    ("Fracture and trauma care", "Treatment of fractures and injuries and their consequences."),
+    ("Paediatric orthopaedics", "Diagnosis and treatment of orthopaedic problems in children."),
+    ("Orthopaedic oncology", "Diagnosis and treatment of bone and soft tissue tumours."),
     ], DOCS, "orthopaedic consultation")
 
 PAGES[271] = specialty(
-    "The wish to have a child is very personal. MedLuxLife connects you with experienced fertility specialists and supports you discreetly throughout every step, from the first assessment to treatment and follow-up.",
+    "The wish to have a child is very personal. Our partner IVF centre plans every treatment individually, based on current scientific evidence, and its experienced team of physicians and embryologists decides together on each case. The causes of infertility are investigated carefully first, so that you are spared unnecessary treatment.",
     "Treatments and services", [
-    ("Fertility assessment", "Hormone tests, ultrasound and semen analysis to understand the causes and choose the right treatment."),
-    ("In-vitro fertilisation (IVF)", "Eggs are fertilised in the laboratory and the embryo is transferred to the uterus."),
-    ("ICSI", "A single sperm is injected directly into the egg, often used for male-factor infertility."),
+    ("Fertility assessment", "Medical history, ultrasound, hormone tests, semen analysis and, if needed, hysteroscopy for both partners."),
+    ("IVF treatment", "Ovarian stimulation over about 8 to 14 days, egg collection under anaesthesia, fertilisation in the laboratory and a painless embryo transfer."),
+    ("Microinjection (ICSI)", "A single sperm is injected into each egg, used for male-factor infertility, including cases with no sperm in the semen (azoospermia)."),
+    ("Natural (drug-free) IVF", "IVF in your natural cycle without stimulating medication, for example for women who respond poorly to medication or prefer not to use hormones."),
     ("Intrauterine insemination (IUI)", "Prepared sperm are placed directly into the uterus around ovulation."),
-    ("Egg and embryo freezing", "Preserving eggs or embryos for later use."),
-    ("Genetic testing of embryos", "Where medically indicated, embryos can be tested for certain genetic conditions."),
+    ("Egg and embryo freezing", "Fertility preservation, for example before chemotherapy or radiotherapy."),
+    ("Preimplantation genetic diagnosis (PGD)", "Embryos can be tested when a parent carries a hereditary disease."),
+    ("Difficult cases", "Special protocols for advanced age, low ovarian reserve, PCOS, endometriosis and repeated IVF failure."),
     ], DOCS + ["Previous fertility treatments and their results", "Hormone and semen analysis results, if available"], "fertility consultation")
 
 PAGES[272] = specialty(
-    "Neurosurgery treats conditions of the brain, spinal cord and peripheral nerves. Partner hospitals use modern imaging, neuronavigation and minimally invasive techniques to plan and carry out each operation as safely as possible.",
+    "Neurosurgery covers the surgical diagnosis and treatment of diseases of the brain, spine, spinal cord and nerves. At our partner hospital's neurological sciences centre, neurosurgeons work in a multidisciplinary team with neurologists, anaesthesiologists, intensive care specialists, radiologists and rehabilitation specialists.",
     "Treatments and services", [
-    ("Brain tumours", "Diagnosis and surgical treatment of benign and malignant brain tumours, in cooperation with oncology teams."),
-    ("Spine surgery", "Treatment of disc herniation, spinal stenosis, instability and deformities, often with minimally invasive methods."),
-    ("Vascular conditions of the brain", "Treatment of aneurysms and vascular malformations."),
-    ("Functional neurosurgery", "Procedures such as deep brain stimulation for selected movement disorders."),
-    ("Peripheral nerve surgery", "Treatment of nerve compression, for example carpal tunnel syndrome, and nerve injuries."),
-    ("Hydrocephalus", "Shunt and endoscopic procedures to regulate cerebrospinal fluid."),
+    ("Neuro-oncology", "Microsurgical treatment of tumours of the brain, spinal cord and nerve sheaths, pituitary tumours and skull base tumours."),
+    ("Neurovascular surgery", "Treatment of aneurysms, subarachnoid haemorrhage, arteriovenous malformations of the brain and spinal cord and selected strokes, including bypass surgery."),
+    ("Epilepsy surgery", "Surgical treatment of epilepsy by a specialised neurology and neurosurgery team, including epilepsy monitoring."),
+    ("Spine and spinal cord surgery", "Surgery for lumbar and cervical disc herniation, spinal stenosis, spinal tumours and congenital disorders; kyphoplasty and vertebroplasty; pain pumps and injection treatments."),
+    ("Peripheral nerve surgery", "Microsurgical treatment of carpal tunnel syndrome, ulnar and peroneal nerve compression, meralgia paraesthetica and nerve or plexus injuries."),
+    ("Paediatric neurosurgery", "Surgical treatment of brain and spine conditions in children."),
     ], DOCS + ["Brain or spine MRI/CT images"], "neurosurgery consultation")
 
 PAGES[273] = specialty(
-    "Ophthalmology covers the diagnosis and treatment of eye diseases and vision problems. At our partner clinics and hospitals you can access modern diagnostics and surgical treatment, often with a short stay.",
+    "Ophthalmology covers the diagnosis, treatment and follow-up of diseases of the eye and its surrounding structures. Our partner hospital's eye department offers a wide range of specialised units, combining modern technology with experienced specialists.",
     "Treatments and services", [
-    ("Cataract surgery", "The clouded lens is replaced with an artificial intraocular lens; premium lens options are available."),
-    ("Refractive (laser) surgery", "Laser eye surgery such as LASIK, PRK or SMILE to reduce dependence on glasses or contact lenses."),
-    ("Lens implants (ICL)", "An option for higher prescriptions or when laser surgery is not suitable."),
-    ("Retina treatments", "Diagnosis and treatment of retinal diseases such as diabetic retinopathy, macular degeneration or retinal detachment."),
-    ("Glaucoma", "Medication, laser and surgical treatment to protect the optic nerve."),
-    ("Cornea and keratoconus", "Corneal cross-linking and corneal transplantation where needed."),
+    ("Laser vision correction", "Treatment of refractive errors with PRK, LASIK, LASEK, Epi-LASIK and IntraLase (femtosecond) LASIK, as well as contact lenses."),
+    ("Cataract surgery", "Sutureless phacoemulsification under eye-drop anaesthesia with implantation of an intraocular lens."),
+    ("Glaucoma", "Diagnosis and treatment of glaucoma to protect the optic nerve."),
+    ("Retina and macula", "Diagnosis and treatment of retinal and macular diseases, including diabetic retinopathy and macular surgery."),
+    ("Cornea and keratoconus", "Treatment of corneal diseases, and a dedicated contact lens and keratoconus unit."),
+    ("Strabismus and children's eyes", "Treatment of squint and eye problems in children."),
+    ("Oculoplastic and orbital surgery", "Surgery of the eyelids, tear ducts and eye socket, aesthetic surgery around the eyes and Botox for eyelid spasms."),
+    ("Specialised units", "Neuro-ophthalmology, ocular oncology, uveitis and Behçet's disease, eye trauma, eye infections and low-vision rehabilitation."),
     ], DOCS + ["Your current glasses or contact lens prescription"], "eye consultation")
 
 PAGES[274] = specialty(
-    "Organ transplantation can offer a new perspective to patients with end-stage organ failure. Our partner transplant centres carry out kidney and liver transplants, including living-donor transplants, and follow strict medical, ethical and legal procedures.",
+    "Organ transplantation can offer a new perspective to patients with end-stage organ failure. Our partner transplant centre works with a multidisciplinary team of transplant surgeons, nephrologists, hepatologists, infectious disease specialists and other physicians, and has performed kidney, liver, pancreas and heart transplants.",
     "Treatments and services", [
-    ("Kidney transplantation", "For patients with end-stage kidney disease, from a living related donor where possible."),
-    ("Liver transplantation", "For patients with end-stage liver disease or selected liver tumours, including living-donor liver transplantation."),
-    ("Donor and recipient evaluation", "Comprehensive medical and psychological assessment of both recipient and donor before transplantation."),
-    ("Legal and ethical approval", "Living donation is only possible within the legal framework, including proof of the relationship between donor and recipient."),
+    ("Kidney transplantation", "For patients with end-stage kidney disease. A two-stage evaluation checks suitability for transplantation and treats any accompanying problems first."),
+    ("Liver transplantation", "For acute liver failure, end-stage liver disease (cirrhosis) and some liver cancers."),
+    ("Living-donor transplantation", "For international patients, transplantation is generally performed from a living donor, within the legal requirements, including proof of the relationship between donor and recipient."),
+    ("Donor and recipient evaluation", "Comprehensive medical assessment of recipient and donor, with decisions taken by a multidisciplinary council."),
+    ("Minimally invasive techniques", "Laparoscopic and minimally invasive surgical techniques, supported by advanced imaging such as multislice CT, 3 Tesla MRI, PET-CT and angiography."),
     ("Post-transplant care", "Monitoring, immunosuppressive treatment and long-term follow-up after the transplant."),
-    ("Dialysis coordination", "Coordination of dialysis during your stay, where needed."),
     ], DOCS + ["Documents for both recipient and potential donor", "Blood group and tissue typing results, if available"], "transplant consultation")
