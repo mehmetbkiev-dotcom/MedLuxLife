@@ -9,6 +9,7 @@ Site: https://medluxlife-6j8sz55bpn.live-website.com (IONOS WordPress, tema **Ex
 - **Diller:** DE (varsayılan), EN, TR, UK, RU
 - **Wellness:** Ayrı bir Wellness bölümü olmayacak.
 - **Travel:** Holiday Packages; Hotel Reservation; Flight Tickets; Airport Transfer; Hajj & Umrah (2026-10-01'de güncellendi)
+- **Travel ve Health birbirinden bağımsız faaliyetler.** Travel sayfalarında tedavi/klinik/doktor/iyileşme bağlantısı kurulmaz; Flight Tickets genel bir bilet ofisi gibi (yurt içi/dış, tek yön/gidiş-dönüş/çok duraklı, grup, bagaj/koltuk, değişiklik/iptal).
 - **Tasarım:** Premium, sakin, güvenilir, sofistike ve uluslararası görünüm.
 - **Fiyatlar:** Sitede fiyat gösterilmeyecek.
 - **WhatsApp / Live Chat:** Her sayfada; iletişim bilgileri ve Datenschutz kabulü istenecek.
@@ -104,6 +105,8 @@ Adult Bone Marrow Transplantation; Algology; Anesthesiology and Reanimation; App
 - 2026-10-06: Health sayfasındaki "Why MedLuxLife" yeni formatta: koyu lacivert bant, 4 sütun, üstte ince altın çizgi ve altın çizgi-ikonlar (assets/icons/*.svg, sayfaya data-URI olarak gömülü), altın başlık + açık metin; mobilde tek sütun. CSS: "Why MedLuxLife: dark band".
 
 - 2026-10-06: Travel bölümü: EXPLORE TRAVEL → `/travel/`. Travel sayfası (25): giriş + "Our travel services" altında **5 bölüm** (dönüşümlü fotoğraf/metin satırları: Holiday Packages, Hotel Reservation, Flight Tickets, Airport Transfer, Hajj & Umrah; her birinde açıklama, 3 madde, "Discover …" butonu) + "How it works" (seyahat süreci) + "Request an Offer"/WhatsApp kutusu. 5 alt sayfa (275, 276, 283, 277, 278) yazıldı: giriş + "What we offer" (6 kart) + "Good to know" + süreç + teklif kutusu. Fiyat, otel/havayolu adı yok. Görseller: katalog otel odası (x43) ve anahtar teslimi (x38), plaj ve uçak cover'dan, Kâbe eski cover'dan kırpıldı (Kâbe görseli düşük çözünürlüklü). Kaynak: `content/travel_pages.py`.
+
+- 2026-10-06: Travel sayfaları sağlıktan bağımsız olarak yeniden yazıldı (25 ve 5 alt sayfa). Travel sayfaları için yeni şablon `page-with-title-travel`: başlık bandında doktor-hasta yerine seyahat görseli (cover varyasyonu 358'in sağ yarısı, Media "medluxlife-travel-banner"). Health ve diğer sayfalar eski `page-with-title` şablonunda.
 
 ## İletişim bilgileri
 - Telefon: +49 160 93 44 87 14
