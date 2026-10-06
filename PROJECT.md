@@ -135,3 +135,8 @@ Açık soru: Dil listesindeki **UK** Ukraynaca mı (dil kodu `uk`), yoksa İngil
 
 ## Erişim notu
 `claude` WordPress kullanıcısı (Application Password, ortam API credential'ı olarak saklı) şu an **Administrator**. Tema işleri bitince Editor'a düşürülmesi önerilir.
+
+### 2026-10-06 — Contact form → Contact Form 7
+- WPForms block on Contact (26) replaced by CF7 form 589 "MedLuxLife Contact" (recipient info@medluxlife.com).
+- Fields: Name*, Email*, Phone, Subject* (Health / Travel), Message*; privacy-consent checkbox above Send (links /privacy-policy/ and /terms/ — pages still to be written).
+- Form CSS (.medlux-form) added to global styles Additional CSS. Backups: page26_before_cf7.json, gs5_before_cf7.json.
