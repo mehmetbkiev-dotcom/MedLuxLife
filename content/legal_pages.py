@@ -248,11 +248,23 @@ def withdrawal():
           p("Dienstleistung: ______________________________<br>Bestellt / Vertrag geschlossen am: ______________________________<br>Name des/der Verbraucher(s): ______________________________<br>Anschrift des/der Verbraucher(s): ______________________________<br>Datum: ______________________________<br>Unterschrift des/der Verbraucher(s): ______________________________<br>(nur bei Mitteilung auf Papier)")]
     return group(b, "medlux-legal")
 
+def cancellation():
+    # Text supplied by the owner on 2026-10-06.
+    b = [note(), p(f"Stand: {DATE}"),
+         p("Für Reiseleistungen wie Hotels, Flüge, Transfers und sonstige touristische Leistungen gelten die bei der jeweiligen Buchung mitgeteilten Stornierungs- und Rückerstattungsbedingungen."),
+         p("Die Höhe einer möglichen Rückerstattung richtet sich insbesondere nach der gebuchten Leistung, dem Zeitpunkt der Stornierung sowie den Bedingungen des jeweiligen Leistungsträgers (z. B. Hotel, Fluggesellschaft oder Reiseveranstalter)."),
+         p("Bereits entstandene oder nicht erstattungsfähige Kosten können von einer Rückerstattung abgezogen werden."),
+         p(f'Für bestimmte, auf einen festen Termin oder Zeitraum bezogene Reise- und Freizeitdienstleistungen besteht gemäß § 312g Abs. 2 Nr. 9 BGB kein gesetzliches 14-tägiges <a href="{B}/widerrufsbelehrung/">Widerrufsrecht</a>. Gesetzliche Rücktrittsrechte, insbesondere bei Pauschalreisen, bleiben unberührt.'),
+         h("Stornierungen sind zu richten an:", 3),
+         p('MedLuxLife<br>Inh. Anna Sacilanates<br>E-Mail: <a href="mailto:info@medluxlife.com">info@medluxlife.com</a>')]
+    return group(b, "medlux-legal")
+
 if __name__ == "__main__":
     out = sys.argv[1]
     json.dump({"privacy": {"title": "Datenschutzerklärung", "slug": "privacy-policy", "status": "publish", "template": "page-with-title-general", "content": privacy()},
                "terms": {"title": "AGB", "slug": "terms", "status": "publish", "template": "page-with-title-general", "content": terms()},
                "impressum": {"title": "Impressum", "slug": "impressum", "status": "publish", "template": "page-with-title-general", "content": impressum()},
                "consent": {"title": "Einwilligung Gesundheitsdaten", "slug": "einwilligung-gesundheitsdaten", "status": "publish", "template": "page-with-title-general", "content": health_consent()},
-               "withdrawal": {"title": "Widerrufsbelehrung", "slug": "widerrufsbelehrung", "status": "publish", "template": "page-with-title-general", "content": withdrawal()}},
+               "withdrawal": {"title": "Widerrufsbelehrung", "slug": "widerrufsbelehrung", "status": "publish", "template": "page-with-title-general", "content": withdrawal()},
+               "cancellation": {"title": "Stornierungsbedingungen", "slug": "stornierungsbedingungen", "status": "publish", "template": "page-with-title-general", "content": cancellation()}},
               open(out, "w"), ensure_ascii=False)
