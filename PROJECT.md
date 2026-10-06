@@ -160,3 +160,4 @@ Açık soru: Dil listesindeki **UK** Ukraynaca mı (dil kodu `uk`), yoksa İngil
 - 2026-10-06: Contact (26): FAQ rewritten (10 questions, HWG-safe, health/travel separate, no prices; source content/contact_faq.py; broken 'þ' icons → '+'; CSS .medlux-faq). Form card: content top-aligned, smaller padding. Section padding 70 → 50. Backups: page26_before_faq.json, gs5_before_faq.json.
 - 2026-10-06: Contact: second photo (Contact In Person cover) changed from the duplicate clinic photo to media 558 (traveller in hotel room, focal point 55%/10%). Footer: X icon removed; Instagram/Facebook still point to generic URLs – profile links needed. Backups: page26_before_photo.json, footer_before_social.json.
 - 2026-10-06: Footer Facebook link → https://www.facebook.com/profile.php?id=61594715669578 (Instagram link still pending).
+- 2026-10-06: Footer Instagram link → https://www.instagram.com/medluxlife/.
