@@ -108,7 +108,7 @@ Adult Bone Marrow Transplantation; Algology; Anesthesiology and Reanimation; App
 
 - 2026-10-06: Travel sayfaları sağlıktan bağımsız olarak yeniden yazıldı (25 ve 5 alt sayfa). Travel sayfaları için yeni şablon `page-with-title-travel`: başlık bandında doktor-hasta yerine seyahat görseli (cover varyasyonu 358'in sağ yarısı, Media "medluxlife-travel-banner"). Health ve diğer sayfalar eski `page-with-title` şablonunda.
 
-- 2026-10-06: Header'a "Free Consultation" butonu eklendi (dil seçicinin solunda, → /contact/; altın çerçeve + altın yazı, hover'da dolu altın). Menü öğeleri tek satır (nowrap), 600–1200px arası daha küçük yazı ve site başlığı gizli; logo küçülmez (min 72px). Mobilde tema header'daki ekstra alanı gizlediği için buton görünmüyor (hamburger + logo).
+- 2026-10-06: Header'a "Free Consultation" butonu eklendi (dil seçicinin solunda, → /contact/; altın çerçeve + altın yazı, hover'da dolu altın). Menü öğeleri tek satır (nowrap), 600–1200px arası daha küçük yazı ve site başlığı gizli; logo küçülmez (min 72px). Mobilde: hamburger menünün en üstünde "Free Consultation" satırı (menü 4, sınıf `medlux-mobile-only`, masaüstünde gizli).
 
 ## İletişim bilgileri
 - Telefon: +49 160 93 44 87 14
