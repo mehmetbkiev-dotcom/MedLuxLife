@@ -9,8 +9,8 @@ from blocks import p, h, ul, group, B
 
 def PH(t): return f'<mark class="medlux-placeholder">[{t}]</mark>'
 
-COMPANY = PH("Firmenname / Inhaber, Rechtsform")
-ADDRESS = PH("Straße Nr., PLZ Ort, Deutschland")
+COMPANY = "Inh. Anna Sacilanates (Einzelunternehmen)"
+ADDRESS = f"Stolberger Straße {PH('Hausnummer')}, 52068 Aachen, Deutschland"
 CONTACT = f'Telefon: <a href="tel:+4916093448714">+49 160 93 44 87 14</a><br>E-Mail: <a href="mailto:info@medluxlife.com">info@medluxlife.com</a>'
 DATE = "Oktober 2026"
 
@@ -90,7 +90,7 @@ def terms():
           p("(2) <strong>MedLuxLife erbringt selbst keine ärztlichen oder sonstigen Heilbehandlungen</strong> und gibt keine medizinischen Empfehlungen oder Diagnosen. Über die Eignung, Art und Durchführung einer Behandlung entscheiden ausschließlich die behandelnden Ärztinnen und Ärzte nach ärztlicher Aufklärung. Der Behandlungsvertrag kommt unmittelbar zwischen dem Kunden und der jeweiligen Klinik bzw. dem behandelnden Arzt zustande; für diesen gelten deren Bedingungen."),
           p("(3) Ein bestimmter Behandlungserfolg ist nicht Gegenstand unserer Leistungen und kann von uns nicht zugesagt werden. Informationen auf der Website dienen der allgemeinen Orientierung und ersetzen keine ärztliche Beratung."),
           p("(4) <strong>Reiseleistungen (Travel):</strong> MedLuxLife vermittelt Reiseleistungen Dritter, insbesondere Hotelunterkünfte, Flugtickets, Flughafentransfers, Urlaubspakete sowie Hajj- und Umrah-Reisen. Wir handeln dabei als Vermittler; der Vertrag über die jeweilige Reiseleistung kommt zwischen dem Kunden und dem jeweiligen Leistungsträger bzw. Reiseveranstalter zustande, dessen Geschäfts- und Beförderungsbedingungen ergänzend gelten. Unsere Pflichten als Reisevermittler nach §§ 651v ff. BGB bleiben unberührt."),
-          p(f"(5) {PH('Nur falls MedLuxLife Pauschalreisen selbst als Reiseveranstalter anbietet: Hinweis auf gesonderte Reisebedingungen, Formblatt nach Art. 250 EGBGB und Insolvenzabsicherung (Sicherungsschein) – vor Veröffentlichung klären')}"),
+          p("(5) MedLuxLife ist <strong>kein Reiseveranstalter</strong>. Urlaubspakete sowie Hajj- und Umrah-Reisen werden von dem jeweils im Angebot genannten Reiseveranstalter durchgeführt. Dieser ist Vertragspartner des Kunden, für die Erbringung der Reiseleistungen sowie für die gesetzlich vorgeschriebene Insolvenzabsicherung verantwortlich und stellt dem Kunden das gesetzlich vorgeschriebene Formblatt sowie den Sicherungsschein zur Verfügung. MedLuxLife leitet diese Unterlagen vor der Buchung an den Kunden weiter."),
           p("(6) Die Gesundheits- und die Reiseleistungen sind voneinander unabhängig und können getrennt in Anspruch genommen werden.")]
     b += [h("§ 3 Vertragsschluss"),
           p("(1) Die Darstellung der Leistungen auf der Website stellt kein verbindliches Angebot dar, sondern eine Aufforderung zur Anfrage."),
