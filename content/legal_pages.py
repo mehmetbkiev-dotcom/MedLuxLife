@@ -145,7 +145,7 @@ def terms():
           p("(1) Wünscht der Kunde Änderungen oder storniert er eine Leistung, richten sich die Folgen nach dem individuellen Angebot sowie nach den Bedingungen des jeweiligen Leistungsträgers (z. B. Stornobedingungen des Hotels, der Fluggesellschaft oder der Klinik)."),
           p("(2) Medizinisch bedingte Terminänderungen, die die behandelnden Ärzte veranlassen, liegen nicht im Einflussbereich von MedLuxLife. Wir unterstützen den Kunden in diesem Fall bei der Umorganisation.")]
     b += [h("§ 7 Widerrufsrecht"),
-          p("(1) Verbrauchern steht bei Verträgen, die ausschließlich über Fernkommunikationsmittel geschlossen werden, grundsätzlich ein gesetzliches Widerrufsrecht zu. Die Einzelheiten ergeben sich aus der Widerrufsbelehrung, die wir dem Kunden zusammen mit dem Angebot zur Verfügung stellen."),
+          p(f"(1) Verbrauchern steht bei Verträgen, die ausschließlich über Fernkommunikationsmittel geschlossen werden, grundsätzlich ein gesetzliches Widerrufsrecht zu. Die Einzelheiten ergeben sich aus der <a href=\"{B}/widerrufsbelehrung/\">Widerrufsbelehrung</a>, die wir dem Kunden zusammen mit dem Angebot zur Verfügung stellen."),
           p("(2) Das Widerrufsrecht besteht nach § 312g Abs. 2 Nr. 9 BGB nicht bei Verträgen über die Erbringung von Dienstleistungen in den Bereichen Beherbergung (außer zu Wohnzwecken), Beförderung, Lieferung von Speisen und Getränken sowie Freizeitbetätigungen, wenn der Vertrag für die Erbringung einen spezifischen Termin oder Zeitraum vorsieht. Bei Pauschalreiseverträgen besteht das gesetzliche Rücktrittsrecht nach § 651h BGB.")]
     b += [h("§ 8 Haftung"),
           p("(1) MedLuxLife haftet unbeschränkt für Vorsatz und grobe Fahrlässigkeit, für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit, die auf einer Pflichtverletzung von MedLuxLife beruhen, sowie nach dem Produkthaftungsgesetz."),
@@ -213,10 +213,44 @@ def health_consent():
           p(f'Weitere Informationen zur Verarbeitung personenbezogener Daten und zu meinen Datenschutzrechten finde ich in der <a href="{B}/privacy-policy/">Datenschutzerklärung</a> von MedLuxLife.')]
     return group(b, "medlux-legal")
 
+def withdrawal():
+    # Official model text (Anlage 1 und 2 zu Art. 246a § 1 EGBGB) for service contracts.
+    b = [note(), p(f"Stand: {DATE}"),
+         p("Die folgende Widerrufsbelehrung gilt für Verbraucher, die mit MedLuxLife ausschließlich über Fernkommunikationsmittel (z. B. E-Mail, Telefon, WhatsApp) einen Vertrag über Leistungen von MedLuxLife schließen. Sie wird Ihnen zusätzlich mit jedem Angebot in Textform übermittelt.")]
+    b += [h("Widerrufsbelehrung"),
+          h("Widerrufsrecht", 3),
+          p("Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen."),
+          p("Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag des Vertragsabschlusses."),
+          p(f"Um Ihr Widerrufsrecht auszuüben, müssen Sie uns (MedLuxLife, {COMPANY}, {ADDRESS}, Telefon: +49 160 93 44 87 14, E-Mail: <a href=\"mailto:info@medluxlife.com\">info@medluxlife.com</a>) mittels einer eindeutigen Erklärung (z. B. ein mit der Post versandter Brief oder E-Mail) über Ihren Entschluss, diesen Vertrag zu widerrufen, informieren. Sie können dafür das beigefügte Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist."),
+          p("Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden."),
+          h("Folgen des Widerrufs", 3),
+          p("Wenn Sie diesen Vertrag widerrufen, haben wir Ihnen alle Zahlungen, die wir von Ihnen erhalten haben, unverzüglich und spätestens binnen vierzehn Tagen ab dem Tag zurückzuzahlen, an dem die Mitteilung über Ihren Widerruf dieses Vertrags bei uns eingegangen ist. Für diese Rückzahlung verwenden wir dasselbe Zahlungsmittel, das Sie bei der ursprünglichen Transaktion eingesetzt haben, es sei denn, mit Ihnen wurde ausdrücklich etwas anderes vereinbart; in keinem Fall werden Ihnen wegen dieser Rückzahlung Entgelte berechnet."),
+          p("Haben Sie verlangt, dass die Dienstleistungen während der Widerrufsfrist beginnen sollen, so haben Sie uns einen angemessenen Betrag zu zahlen, der dem Anteil der bis zu dem Zeitpunkt, zu dem Sie uns von der Ausübung des Widerrufsrechts hinsichtlich dieses Vertrags unterrichten, bereits erbrachten Dienstleistungen im Vergleich zum Gesamtumfang der im Vertrag vorgesehenen Dienstleistungen entspricht."),
+          p("<em>– Ende der Widerrufsbelehrung –</em>")]
+    b += [h("Besondere Hinweise"),
+          h("Vorzeitiges Erlöschen des Widerrufsrechts", 3),
+          p("Das Widerrufsrecht erlischt bei einem Vertrag zur Erbringung von Dienstleistungen vorzeitig, wenn wir die Dienstleistung vollständig erbracht haben und mit der Ausführung der Dienstleistung erst begonnen haben, nachdem Sie dazu Ihre ausdrückliche Zustimmung gegeben und gleichzeitig Ihre Kenntnis davon bestätigt haben, dass Sie Ihr Widerrufsrecht bei vollständiger Vertragserfüllung durch uns verlieren (§ 356 Abs. 4 BGB)."),
+          h("Ausschluss des Widerrufsrechts", 3),
+          p("Das Widerrufsrecht besteht nicht bei Verträgen zur Erbringung von Dienstleistungen in den Bereichen Beherbergung zu anderen Zwecken als zu Wohnzwecken, Beförderung von Waren, Kraftfahrzeugvermietung, Lieferung von Speisen und Getränken sowie zur Erbringung weiterer Dienstleistungen im Zusammenhang mit Freizeitbetätigungen, wenn der Vertrag für die Erbringung einen spezifischen Termin oder Zeitraum vorsieht (§ 312g Abs. 2 Nr. 9 BGB). Bei Pauschalreiseverträgen besteht kein Widerrufsrecht; es gilt das gesetzliche Rücktrittsrecht nach § 651h BGB."),
+          h("Verträge mit Dritten", 3),
+          p("Diese Widerrufsbelehrung betrifft ausschließlich Verträge mit MedLuxLife. Für Verträge, die Sie über unsere Vermittlung unmittelbar mit Dritten schließen (z. B. Behandlungsverträge mit Kliniken oder Ärzten, Verträge mit Hotels, Fluggesellschaften, Transferunternehmen oder Reiseveranstaltern), gelten die gesetzlichen Bestimmungen und die Bedingungen des jeweiligen Vertragspartners.")]
+    b += [h("Muster-Widerrufsformular"),
+          p("(Wenn Sie den Vertrag widerrufen wollen, dann füllen Sie bitte dieses Formular aus und senden Sie es zurück.)"),
+          p(f"– An MedLuxLife, {COMPANY}, {ADDRESS}, E-Mail: info@medluxlife.com"),
+          p("– Hiermit widerrufe(n) ich/wir (*) den von mir/uns (*) abgeschlossenen Vertrag über den Kauf der folgenden Waren (*)/die Erbringung der folgenden Dienstleistung (*)<br>_______________________________________________"),
+          p("– Bestellt am (*)/erhalten am (*): ____________________"),
+          p("– Name des/der Verbraucher(s): ____________________"),
+          p("– Anschrift des/der Verbraucher(s): ____________________"),
+          p("– Unterschrift des/der Verbraucher(s) (nur bei Mitteilung auf Papier): ____________________"),
+          p("– Datum: ____________________"),
+          p("(*) Unzutreffendes streichen.")]
+    return group(b, "medlux-legal")
+
 if __name__ == "__main__":
     out = sys.argv[1]
     json.dump({"privacy": {"title": "Datenschutzerklärung", "slug": "privacy-policy", "status": "publish", "template": "page-with-title-general", "content": privacy()},
                "terms": {"title": "AGB", "slug": "terms", "status": "publish", "template": "page-with-title-general", "content": terms()},
                "impressum": {"title": "Impressum", "slug": "impressum", "status": "publish", "template": "page-with-title-general", "content": impressum()},
-               "consent": {"title": "Einwilligung Gesundheitsdaten", "slug": "einwilligung-gesundheitsdaten", "status": "publish", "template": "page-with-title-general", "content": health_consent()}},
+               "consent": {"title": "Einwilligung Gesundheitsdaten", "slug": "einwilligung-gesundheitsdaten", "status": "publish", "template": "page-with-title-general", "content": health_consent()},
+               "withdrawal": {"title": "Widerrufsbelehrung", "slug": "widerrufsbelehrung", "status": "publish", "template": "page-with-title-general", "content": withdrawal()}},
               open(out, "w"), ensure_ascii=False)
