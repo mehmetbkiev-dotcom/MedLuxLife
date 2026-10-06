@@ -140,3 +140,9 @@ Açık soru: Dil listesindeki **UK** Ukraynaca mı (dil kodu `uk`), yoksa İngil
 - WPForms block on Contact (26) replaced by CF7 form 589 "MedLuxLife Contact" (recipient info@medluxlife.com).
 - Fields: Name*, Email*, Phone, Subject* (Health / Travel), Message*; privacy-consent checkbox above Send (links /privacy-policy/ and /terms/ — pages still to be written).
 - Form CSS (.medlux-form) added to global styles Additional CSS. Backups: page26_before_cf7.json, gs5_before_cf7.json.
+
+### 2026-10-06 — Legal pages: Datenschutzerklärung + AGB
+- Datenschutzerklärung (page 3, /privacy-policy/) and AGB (page 596, /terms/) published in German (binding version), template `page-with-title-general`. Source: `content/legal_pages.py`.
+- Placeholders (yellow `mark.medlux-placeholder`) must be filled before launch: legal entity/owner, address; AGB §2(5) Pauschalreise/Veranstalter question.
+- CSS `.medlux-legal` added. Backups: page3_before_legal.json, gs5_before_legal.json.
+- Still to do: Impressum, Widerrufsbelehrung, footer links, translations (EN/TR/UK/RU), lawyer review.
