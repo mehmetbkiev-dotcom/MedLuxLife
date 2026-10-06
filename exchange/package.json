@@ -1,0 +1,12 @@
+{
+  "name": "miniex",
+  "version": "1.0.0",
+  "description": "Spot crypto exchange (matching engine, orders, PnL, real-time UI) — zero dependencies",
+  "private": true,
+  "engines": { "node": ">=22.5" },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning src/server.js",
+    "test": "node --disable-warning=ExperimentalWarning --test test/*.test.js",
+    "loadtest": "node --disable-warning=ExperimentalWarning loadtest.js"
+  }
+}
