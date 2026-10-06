@@ -10,7 +10,7 @@ from blocks import p, h, ul, group, B
 def PH(t): return f'<mark class="medlux-placeholder">[{t}]</mark>'
 
 COMPANY = "Inh. Anna Sacilanates (Einzelunternehmen)"
-ADDRESS = f"Stolberger Straße {PH('Hausnummer')}, 52068 Aachen, Deutschland"
+ADDRESS = "Stolberger Straße 21, 52068 Aachen, Deutschland"
 CONTACT = f'Telefon: <a href="tel:+4916093448714">+49 160 93 44 87 14</a><br>E-Mail: <a href="mailto:info@medluxlife.com">info@medluxlife.com</a>'
 DATE = "Oktober 2026"
 
@@ -127,8 +127,30 @@ def terms():
           p("(3) Sollten einzelne Bestimmungen dieser AGB unwirksam sein oder werden, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt. An die Stelle der unwirksamen Bestimmung treten die gesetzlichen Vorschriften.")]
     return group(b, "medlux-legal")
 
+def impressum():
+    b = [h("Angaben gemäß § 5 DDG"),
+         p(f"MedLuxLife<br>{COMPANY}<br>{ADDRESS}"),
+         h("Kontakt"),
+         p(CONTACT),
+         h("Umsatzsteuer"),
+         p(f"Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz: {PH('USt-IdNr., falls vorhanden – sonst Abschnitt entfernen')}"),
+         h("Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV"),
+         p(f"Anna Sacilanates<br>{ADDRESS}"),
+         h("Verbraucherstreitbeilegung"),
+         p("Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen."),
+         h("Hinweis zu medizinischen Inhalten"),
+         p("MedLuxLife erbringt keine ärztlichen Leistungen. Die Informationen auf dieser Website dienen ausschließlich der allgemeinen Information und ersetzen keine ärztliche Beratung, Diagnose oder Behandlung. Über die Eignung einer Behandlung entscheiden allein die behandelnden Ärztinnen und Ärzte."),
+         h("Haftung für Inhalte"),
+         p("Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben unberührt."),
+         h("Haftung für Links"),
+         p("Unsere Website enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen."),
+         h("Urheberrecht"),
+         p("Die auf dieser Website veröffentlichten Inhalte und Werke unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der vorherigen schriftlichen Zustimmung von MedLuxLife.")]
+    return group(b, "medlux-legal")
+
 if __name__ == "__main__":
     out = sys.argv[1]
     json.dump({"privacy": {"title": "Datenschutzerklärung", "slug": "privacy-policy", "status": "publish", "template": "page-with-title-general", "content": privacy()},
-               "terms": {"title": "AGB", "slug": "terms", "status": "publish", "template": "page-with-title-general", "content": terms()}},
+               "terms": {"title": "AGB", "slug": "terms", "status": "publish", "template": "page-with-title-general", "content": terms()},
+               "impressum": {"title": "Impressum", "slug": "impressum", "status": "publish", "template": "page-with-title-general", "content": impressum()}},
               open(out, "w"), ensure_ascii=False)

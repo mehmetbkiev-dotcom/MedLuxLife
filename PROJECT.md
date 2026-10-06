@@ -143,6 +143,7 @@ Açık soru: Dil listesindeki **UK** Ukraynaca mı (dil kodu `uk`), yoksa İngil
 
 ### 2026-10-06 — Legal pages: Datenschutzerklärung + AGB
 - Datenschutzerklärung (page 3, /privacy-policy/) and AGB (page 596, /terms/) published in German (binding version), template `page-with-title-general`. Source: `content/legal_pages.py`.
-- Owner: Anna Sacilanates (Einzelunternehmen), Stolberger Straße [Hausnummer fehlt], 52068 Aachen. MedLuxLife = Vermittler, kein Reiseveranstalter (AGB §2(5)). Only remaining placeholder: house number.
+- Owner: Anna Sacilanates (Einzelunternehmen), Stolberger Straße 21, 52068 Aachen. MedLuxLife = Vermittler, kein Reiseveranstalter (AGB §2(5)). Address complete: Stolberger Straße 21, 52068 Aachen.
 - CSS `.medlux-legal` added. Backups: page3_before_legal.json, gs5_before_legal.json.
 - Still to do: Impressum, Widerrufsbelehrung, footer links, translations (EN/TR/UK/RU), lawyer review.
+- 2026-10-06: Impressum published (page 602, /impressum/, § 5 DDG, § 18 Abs. 2 MStV). Open placeholder: USt-IdNr. (if any). Footer links to Impressum/Datenschutz/AGB still missing.
