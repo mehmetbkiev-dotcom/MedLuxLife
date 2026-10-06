@@ -8,6 +8,8 @@ const { openDb } = require('./db');
 const { Engine, ApiError } = require('./engine');
 const { Auth } = require('./auth');
 const { startBots } = require('./bots');
+const { BinanceBroker } = require('./broker/binance');
+const { Hedger } = require('./broker/hedger');
 const { fmt } = require('./decimal');
 
 const PUBLIC_DIR = path.join(__dirname, '..', 'public');
@@ -21,7 +23,14 @@ function createServer(options = {}) {
 
   const fee = auth.ensureSystemUser('fees', 'system');
   engine.setFeeAccount(fee.id);
-  const stopBots = conf.bots ? startBots(engine, auth) : () => {};
+  let hedger = null;
+  if (conf.broker.name === 'binance') {
+    if (!/testnet/.test(conf.broker.tradeUrl) && !conf.broker.allowLive)
+      throw new Error('BINANCE_TRADE_URL не тестнет: для реальної торгівлі потрібно явно задати BROKER_ALLOW_LIVE=1');
+    hedger = new Hedger(db, engine, new BinanceBroker(conf.broker), conf.broker);
+    hedger.start().catch((e) => console.error('Брокер:', e.message));
+  } else if (conf.broker.name) throw new Error(`Невідомий брокер: ${conf.broker.name}`);
+  const stopBots = conf.bots ? startBots(engine, auth, hedger) : () => {};
 
   // ---------- rate limiting (token bucket) ----------
   const buckets = new Map();
@@ -66,6 +75,7 @@ function createServer(options = {}) {
         if (set) for (const c of set) send(c, 'order', e.order);
       } else if (e.type === 'trade') {
         const t = e.trade;
+        if (hedger) hedger.onTrade(t);
         const pub = { id: t.id, symbol: t.symbol, price: fmt(t.price), qty: fmt(t.qty), side: t.takerSide, ts: t.ts };
         if (!pendingTrades.has(t.symbol)) pendingTrades.set(t.symbol, []);
         pendingTrades.get(t.symbol).push(pub);
@@ -173,6 +183,13 @@ function createServer(options = {}) {
     return ctx.session.uid;
   }
 
+  function requireAdmin(ctx) {
+    const t = ctx.req.headers['x-admin-token'];
+    const okAdmin = conf.adminToken && typeof t === 'string' && t.length === conf.adminToken.length &&
+      require('node:crypto').timingSafeEqual(Buffer.from(t), Buffer.from(conf.adminToken));
+    if (!okAdmin && !isLocal(ctx.ip)) throw new ApiError(403, 'FORBIDDEN', 'Тільки для адміністратора');
+  }
+
   function tradeLimit(ctx) {
     if (!allow(`u:${ctx.session.uid}`, 20, 40)) throw new ApiError(429, 'RATE_LIMIT', 'Забагато запитів, спробуйте пізніше');
   }
@@ -268,9 +285,12 @@ function createServer(options = {}) {
     'GET /api/my-trades': (ctx) => engine.myTrades(requireUser(ctx), clampInt(ctx.q.get('limit'), 1, 500, 100)),
 
     'GET /api/audit': (ctx) => {
-      const okAdmin = conf.adminToken && ctx.req.headers['x-admin-token'] === conf.adminToken;
-      if (!okAdmin && !isLocal(ctx.ip)) throw new ApiError(403, 'FORBIDDEN', 'Тільки для адміністратора');
+      requireAdmin(ctx);
       return { ...engine.audit(), sseClients: clients.size, memMB: Math.round(process.memoryUsage().rss / 1048576) };
+    },
+    'GET /api/admin/broker': (ctx) => {
+      requireAdmin(ctx);
+      return hedger ? hedger.status() : { broker: null, message: 'Брокер не підключено (BROKER не задано)' };
     },
     'GET /api/health': () => ({ ok: true, uptime: Math.round(process.uptime()) }),
   };
@@ -362,12 +382,16 @@ function createServer(options = {}) {
 
   server.shutdown = () => {
     stopBots();
+    if (hedger) hedger.stop();
     for (const t of [flush, tickers, heartbeat, gcBuckets]) clearInterval(t);
     for (const c of clients) c.res.end();
     server.close();
+    server.closeAllConnections();
     db.close();
   };
   server.engine = engine;
+  server.hedger = hedger;
+  server.auth = auth;
   return server;
 }
 

@@ -27,6 +27,19 @@ module.exports = {
   faucetCooldownMs: 60 * 60 * 1000,
 
   bots: env.BOTS !== '0',
+
+  // Брокер ліквідності. BROKER=binance вмикає реальні ціни; з ключами API — ще й
+  // дублювання угод користувачів на демо-рахунок (Binance Spot Testnet).
+  broker: {
+    name: env.BROKER || null,
+    apiKey: env.BINANCE_API_KEY || null,
+    apiSecret: env.BINANCE_API_SECRET || null,
+    tradeUrl: env.BINANCE_TRADE_URL || 'https://testnet.binance.vision',
+    priceUrl: env.BINANCE_PRICE_URL || 'https://data-api.binance.vision',
+    allowLive: env.BROKER_ALLOW_LIVE === '1', // захист від випадкової торгівлі реальними грошима
+    priceIntervalMs: 1000,
+    hedgeIntervalMs: Number(env.HEDGE_INTERVAL_MS) || 1000,
+  },
   trustProxy: env.TRUST_PROXY === '1',
   cookieSecure: env.COOKIE_SECURE === '1',
   adminToken: env.ADMIN_TOKEN || null,

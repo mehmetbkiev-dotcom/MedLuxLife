@@ -6,7 +6,7 @@
 
 const { toUnits, fmt } = require('./decimal');
 
-function startBots(engine, auth) {
+function startBots(engine, auth, hedger = null) {
   const mm = auth.ensureSystemUser('market_maker', 'bot');
   const tk = auth.ensureSystemUser('taker_bot', 'bot');
   if (mm.created) engine.deposit(mm.id, { USDT: '50000000', BTC: '500', ETH: '10000' }, 'bot_seed');
@@ -21,10 +21,17 @@ function startBots(engine, auth) {
   };
 
   function quote(m) {
-    const last = Number(fmt(engine.last.get(m.symbol)));
-    let f = fair.get(m.symbol);
-    f = f + (last - f) * 0.3; // підтягуємось до ринку
-    f *= 1 + (Math.random() - 0.5) * 0.002; // невеликий випадковий дрейф
+    const real = hedger ? hedger.mid(m.symbol) : null;
+    let f;
+    if (real) {
+      // Підключено брокера: котируємо навколо реальної ринкової ціни
+      f = real;
+    } else {
+      const last = Number(fmt(engine.last.get(m.symbol)));
+      f = fair.get(m.symbol);
+      f = f + (last - f) * 0.3; // підтягуємось до ринку
+      f *= 1 + (Math.random() - 0.5) * 0.002; // невеликий випадковий дрейф
+    }
     fair.set(m.symbol, f);
     try {
       engine.cancelAll(mm.id, m.symbol);
@@ -50,7 +57,7 @@ function startBots(engine, auth) {
   function take(m) {
     if (Math.random() > 0.45) return;
     const side = Math.random() < 0.5 ? 'BUY' : 'SELL';
-    const px = Number(fmt(engine.last.get(m.symbol)));
+    const px = fair.get(m.symbol) || Number(fmt(engine.last.get(m.symbol)));
     const qty = roundTo((50 + Math.random() * 900) / px, m.step);
     try {
       engine.placeOrder(tk.id, { symbol: m.symbol, side, type: 'MARKET', qty });

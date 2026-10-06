@@ -1,0 +1,8 @@
+{$DOMAIN} {
+	encode gzip
+	@stream path /api/stream
+	reverse_proxy @stream exchange:8080 {
+		flush_interval -1
+	}
+	reverse_proxy exchange:8080
+}
