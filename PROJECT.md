@@ -148,3 +148,6 @@ Açık soru: Dil listesindeki **UK** Ukraynaca mı (dil kodu `uk`), yoksa İngil
 - Still to do: Impressum, Widerrufsbelehrung, footer links, translations (EN/TR/UK/RU), lawyer review.
 - 2026-10-06: Impressum published (page 602, /impressum/, § 5 DDG, § 18 Abs. 2 MStV). Open placeholder: USt-IdNr. (if any). Footer links to Impressum/Datenschutz/AGB still missing.
 - 2026-10-06: Datenschutzerklärung replaced with the owner's final text (16 sections, incl. LDI NRW, Datensicherheit, 6/8/10-year retention). Backup: page3_before_final.json.
+- 2026-10-06: Einwilligung Gesundheitsdaten page (604, /einwilligung-gesundheitsdaten/), owner's text (Art. 9 + Art. 49 Türkei).
+- 2026-10-06: Contact form 589: two extra consent checkboxes (Art. 9, Art. 49) shown only when Subject = Health; required client-side by inline script on Contact page (`assets/js/health_consent.js`, Custom HTML block after the shortcode). CF7 fields are `optional` so Travel enquiries are not blocked. Mail body records consent status, full consent wording and date/time as proof. (Conditional Fields plugin tried and removed: its conditions can't be saved via REST.)
+- 2026-10-06: Impressum: USt-IdNr. section removed (none). Footer (template part extendable//footer): links Impressum | Datenschutz | AGB.

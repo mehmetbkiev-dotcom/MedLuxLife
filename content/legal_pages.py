@@ -167,8 +167,6 @@ def impressum():
          p(f"MedLuxLife<br>{COMPANY}<br>{ADDRESS}"),
          h("Kontakt"),
          p(CONTACT),
-         h("Umsatzsteuer"),
-         p(f"Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz: {PH('USt-IdNr., falls vorhanden – sonst Abschnitt entfernen')}"),
          h("Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV"),
          p(f"Anna Sacilanates<br>{ADDRESS}"),
          h("Verbraucherstreitbeilegung"),
@@ -183,9 +181,40 @@ def impressum():
          p("Die auf dieser Website veröffentlichten Inhalte und Werke unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der vorherigen schriftlichen Zustimmung von MedLuxLife.")]
     return group(b, "medlux-legal")
 
+def health_consent():
+    # Text supplied by the owner on 2026-10-06.
+    b = [note(), p(f"Stand: {DATE}")]
+    b += [h("Datenschutzrechtliche Einwilligung"),
+          p(f"Im Rahmen meiner Anfrage bei MedLuxLife, {COMPANY}, {ADDRESS}, kann es erforderlich sein, personenbezogene Daten und insbesondere Gesundheitsdaten zu verarbeiten und an die für meine Anfrage ausgewählten medizinischen Leistungserbringer zu übermitteln."),
+          p("Hierzu können insbesondere folgende Daten gehören:"),
+          ul(["Vor- und Nachname sowie Kontaktdaten", "Angaben zur gewünschten Behandlung", "Angaben zum Gesundheitszustand und zu Vorerkrankungen", "medizinische Befunde und Arztberichte", "Röntgenbilder und sonstige medizinische Aufnahmen", "Fotos, soweit diese für die Beurteilung der gewünschten Behandlung erforderlich sind", "sonstige von mir zur medizinischen Beurteilung bereitgestellte Informationen und Unterlagen"])]
+    b += [h("Zweck der Verarbeitung"),
+          p("Die Verarbeitung und Übermittlung erfolgt ausschließlich, soweit dies zur Bearbeitung meiner Anfrage erforderlich ist, insbesondere zur:"),
+          ul(["medizinischen Vorprüfung meiner Anfrage,", "Einholung einer medizinischen Einschätzung,", "Erstellung eines Behandlungs- bzw. Kostenvorschlags,", "Auswahl und Abstimmung mit einer geeigneten Partnerklinik bzw. behandelnden Ärztinnen und Ärzten,", "Organisation und Koordination von Behandlungsterminen,", "Vorbereitung der von mir gewünschten medizinischen Behandlung."])]
+    b += [h("Ausdrückliche Einwilligung in die Verarbeitung von Gesundheitsdaten"),
+          p("Gesundheitsdaten gehören zu den besonderen Kategorien personenbezogener Daten im Sinne von Art. 9 DSGVO."),
+          p("Ich willige ausdrücklich gemäß Art. 9 Abs. 2 lit. a DSGVO ein, dass MedLuxLife die von mir bereitgestellten Gesundheitsdaten für die oben genannten Zwecke verarbeitet.")]
+    b += [h("Übermittlung in die Türkei"),
+          p("Mir ist bekannt, dass die für meine Anfrage ausgewählte Partnerklinik, behandelnde Ärztin bzw. der behandelnde Arzt oder ein anderer medizinischer Leistungserbringer seinen Sitz in der Türkei haben kann."),
+          p("Soweit dies für die Bearbeitung meiner Anfrage und die Vorbereitung der von mir gewünschten Behandlung erforderlich ist, willige ich ausdrücklich ein, dass MedLuxLife die hierfür erforderlichen personenbezogenen Daten einschließlich meiner Gesundheitsdaten an den jeweiligen medizinischen Leistungserbringer in der Türkei übermittelt."),
+          p("Ich willige ausdrücklich gemäß Art. 49 Abs. 1 lit. a DSGVO in diese Drittlandübermittlung ein.")]
+    b += [h("Hinweis auf mögliche Risiken der Drittlandübermittlung"),
+          p("Ich wurde darüber informiert, dass die Türkei ein Drittland außerhalb der Europäischen Union und des Europäischen Wirtschaftsraums ist und für die Türkei derzeit kein Angemessenheitsbeschluss der Europäischen Kommission besteht."),
+          p("Mir ist insbesondere bekannt, dass bei einer Übermittlung in ein Drittland ohne Angemessenheitsbeschluss und ohne geeignete Garantien möglicherweise kein mit dem Datenschutzrecht der Europäischen Union vergleichbares Datenschutzniveau gewährleistet ist. Dies kann insbesondere bedeuten, dass:"),
+          ul(["meine personenbezogenen Daten einem anderen gesetzlichen Datenschutzniveau unterliegen,", "staatliche Stellen unter den dort geltenden gesetzlichen Voraussetzungen Zugriff auf Daten erhalten können,", "meine datenschutzrechtlichen Betroffenenrechte möglicherweise schwieriger durchsetzbar sind,", "mir gegebenenfalls nicht dieselben Rechtsbehelfe und Durchsetzungsmöglichkeiten wie innerhalb der EU bzw. des EWR zur Verfügung stehen."])]
+    b += [h("Freiwilligkeit und Widerruf"),
+          p("Die Erteilung dieser Einwilligung ist freiwillig."),
+          p("Ohne meine Einwilligung kann MedLuxLife meine Gesundheitsdaten nicht auf dieser Grundlage verarbeiten bzw. an einen medizinischen Leistungserbringer in der Türkei übermitteln. Dadurch kann eine medizinische Beurteilung, Angebotserstellung oder Organisation der gewünschten Behandlung gegebenenfalls nicht möglich sein."),
+          p("Ich kann meine Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen. Der Widerruf berührt nicht die Rechtmäßigkeit der Verarbeitung, die aufgrund meiner Einwilligung bis zum Zeitpunkt des Widerrufs erfolgt ist."),
+          p("Der Widerruf kann insbesondere per E-Mail gerichtet werden an:"),
+          p('MedLuxLife<br>Inh. Anna Sacilanates<br>Stolberger Straße 21<br>52068 Aachen, Deutschland<br>E-Mail: <a href="mailto:info@medluxlife.com">info@medluxlife.com</a>'),
+          p(f'Weitere Informationen zur Verarbeitung personenbezogener Daten und zu meinen Datenschutzrechten finde ich in der <a href="{B}/privacy-policy/">Datenschutzerklärung</a> von MedLuxLife.')]
+    return group(b, "medlux-legal")
+
 if __name__ == "__main__":
     out = sys.argv[1]
     json.dump({"privacy": {"title": "Datenschutzerklärung", "slug": "privacy-policy", "status": "publish", "template": "page-with-title-general", "content": privacy()},
                "terms": {"title": "AGB", "slug": "terms", "status": "publish", "template": "page-with-title-general", "content": terms()},
-               "impressum": {"title": "Impressum", "slug": "impressum", "status": "publish", "template": "page-with-title-general", "content": impressum()}},
+               "impressum": {"title": "Impressum", "slug": "impressum", "status": "publish", "template": "page-with-title-general", "content": impressum()},
+               "consent": {"title": "Einwilligung Gesundheitsdaten", "slug": "einwilligung-gesundheitsdaten", "status": "publish", "template": "page-with-title-general", "content": health_consent()}},
               open(out, "w"), ensure_ascii=False)
