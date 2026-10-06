@@ -110,6 +110,8 @@ Adult Bone Marrow Transplantation; Algology; Anesthesiology and Reanimation; App
 
 - 2026-10-06: Header'a "Free Consultation" butonu eklendi (dil seçicinin solunda, → /contact/; altın çerçeve + altın yazı, hover'da dolu altın). Menü öğeleri tek satır (nowrap), 600–1200px arası daha küçük yazı ve site başlığı gizli; logo küçülmez (min 72px). Mobilde: hamburger menünün en üstünde "Free Consultation" satırı (menü 4, sınıf `medlux-mobile-only`, masaüstünde gizli).
 
+- 2026-10-06: Contact sayfasının başlık banner'ı değişti: yeni şablon `page-with-title-general` (cover'daki altın ışıklı dünya haritası kırpması, Media "medluxlife-general-banner"); About Us ve hukuki sayfalar için de kullanılabilir. Şablonlar: `page-with-title` (sağlık, doktor-hasta), `page-with-title-travel` (seyahat), `page-with-title-general` (nötr).
+
 ## İletişim bilgileri
 - Telefon: +49 160 93 44 87 14
 - WhatsApp: +380 97 909 23 26 (wa.me/380979092326)
