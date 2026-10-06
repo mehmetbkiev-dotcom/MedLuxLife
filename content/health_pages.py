@@ -23,6 +23,8 @@ def clinical_card(title, slug, img, summary):
 def more_button(label, url):
     return buttons([(label, url, "medlux-btn-primary", "")])
 
+WHY_ICONS = {'coordinator': 'PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4IiBmaWxsPSJub25lIiBzdHJva2U9IiNkNGEyNGMiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48Y2lyY2xlIGN4PSIyMCIgY3k9IjE4IiByPSI4Ii8+PHBhdGggZD0iTTQgNDJjMC04LjggNy4yLTE1IDE2LTE1czE2IDYuMiAxNiAxNSIvPjxwYXRoIGQ9Ik0zMSA0aDEzYTIgMiAwIDAgMSAyIDJ2N2EyIDIgMCAwIDEtMiAyaC04bC00IDN2LTNoLTFhMiAyIDAgMCAxLTItMlY2YTIgMiAwIDAgMSAyLTJ6Ii8+PC9zdmc+', 'trusted': 'PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4IiBmaWxsPSJub25lIiBzdHJva2U9IiNkNGEyNGMiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBkPSJNMjQgNGwxNiA2djEyYzAgMTAtNi44IDE4LjQtMTYgMjJDMTQuOCA0MC40IDggMzIgOCAyMlYxMHoiLz48cGF0aCBkPSJNMTcgMjRsNSA1IDktMTAiLz48L3N2Zz4=', 'travel': 'PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4IiBmaWxsPSJub25lIiBzdHJva2U9IiNkNGEyNGMiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48Y2lyY2xlIGN4PSIyNCIgY3k9IjI0IiByPSIxOCIvPjxwYXRoIGQ9Ik02IDI0aDM2TTI0IDZjNSA1IDcuNSAxMSA3LjUgMThTMjkgMzcgMjQgNDJNMjQgNmMtNSA1LTcuNSAxMS03LjUgMThTMTkgMzcgMjQgNDIiLz48L3N2Zz4=', 'aftercare': 'PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4IiBmaWxsPSJub25lIiBzdHJva2U9IiNkNGEyNGMiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBkPSJNMjQgNDFTNiAzMC41IDYgMTcuNUE5LjUgOS41IDAgMCAxIDI0IDEyYTkuNSA5LjUgMCAwIDEgMTggNS41QzQyIDMwLjUgMjQgNDEgMjQgNDF6Ii8+PHBhdGggZD0iTTE0IDI0aDZsMi00IDQgOCAyLTRoNiIvPjwvc3ZnPg=='}
+
 WHY = [
     ("Personal coordinator", "One contact person who speaks your language and accompanies you from the first question to your return home."),
     ("Trusted partners", "Carefully selected clinics and hospitals with experienced specialists."),
@@ -39,6 +41,15 @@ def hub_box(img, title, text, links, all_label, all_url):
 def img_block(image):
     return img(*image, cls="medlux-hub-img")
 
+def why_section():
+    keys = ["coordinator", "trusted", "travel", "aftercare"]
+    items = []
+    for (t, d), k in zip(WHY, keys):
+        icon = ('<!-- wp:image {"className":"medlux-why-icon"} -->\n<figure class="wp-block-image medlux-why-icon">'
+                f'<img src="data:image/svg+xml;base64,{WHY_ICONS[k]}" alt=""/></figure>\n<!-- /wp:image -->')
+        items.append(group([icon, h(t, 3), p(d)], "medlux-why-item"))
+    return group([h("Why MedLuxLife"), group(items, "medlux-why-grid", {"type": "default"})], "medlux-why")
+
 HUB = ('<!-- wp:columns {"className":"medlux-hub"} -->\n<div class="wp-block-columns medlux-hub">'
        + hub_box("aesthetics", "Clinical Treatments",
                  "Aesthetic, dental and hair treatments, weight-loss surgery, check-ups and IV therapies with experienced partner clinics.",
@@ -52,7 +63,7 @@ HUB = ('<!-- wp:columns {"className":"medlux-hub"} -->\n<div class="wp-block-col
 HEALTH = "\n\n".join([
     intro("MedLuxLife connects you with professional healthcare and carefully plans every step of your journey. Whether you are looking for an aesthetic or dental treatment or for specialist hospital care, we help you find the right specialists, prepare your treatment and organise your stay.", IMG["dental-hero"]),
     group([h("Our health services"), HUB], "medlux-section"),
-    group([h("Why MedLuxLife"), grid([card(t, [p(d)]) for t, d in WHY], "medlux-steps")], "medlux-section"),
+    why_section(),
     process(),
     cta("treatment"),
 ])

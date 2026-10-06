@@ -101,6 +101,8 @@ Adult Bone Marrow Transplantation; Algology; Anesthesiology and Reanimation; App
 
 - 2026-10-05: EXPLORE HEALTH butonu → `/health/`. Health sayfası (27): giriş + "Our health services" altında **2 büyük kutu** (Clinical Treatments: fotoğraf, açıklama, 7 alt sayfa bağlantısı, "View all clinical treatments"; Hospital & Specialist: fotoğraf, açıklama, 7 öne çıkan bölüm bağlantısı, "View all departments") + Why MedLuxLife + süreç + CTA. (İlk 14 kartlı tasarım beğenilmedi.) Boş Clinical Treatments sayfası (258) 7 kartla dolduruldu. Kaynak: `content/health_pages.py`.
 
+- 2026-10-06: Health sayfasındaki "Why MedLuxLife" yeni formatta: koyu lacivert bant, 4 sütun, üstte ince altın çizgi ve altın çizgi-ikonlar (assets/icons/*.svg, sayfaya data-URI olarak gömülü), altın başlık + açık metin; mobilde tek sütun. CSS: "Why MedLuxLife: dark band".
+
 ## İletişim bilgileri
 - Telefon: +49 160 93 44 87 14
 - WhatsApp: +380 97 909 23 26 (wa.me/380979092326)
