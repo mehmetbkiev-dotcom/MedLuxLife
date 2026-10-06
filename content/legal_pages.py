@@ -163,22 +163,22 @@ def terms():
     return group(b, "medlux-legal")
 
 def impressum():
+    # Final text supplied by the owner on 2026-10-06 (no USt-IdNr. -> section removed).
     b = [h("Angaben gemäß § 5 DDG"),
-         p(f"MedLuxLife<br>{COMPANY}<br>{ADDRESS}"),
+         p("MedLuxLife<br>Inh. Anna Sacilanates<br>Einzelunternehmen<br>Stolberger Straße 21<br>52068 Aachen<br>Deutschland"),
          h("Kontakt"),
          p(CONTACT),
-         h("Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV"),
-         p(f"Anna Sacilanates<br>{ADDRESS}"),
          h("Verbraucherstreitbeilegung"),
-         p("Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen."),
-         h("Hinweis zu medizinischen Inhalten"),
-         p("MedLuxLife erbringt keine ärztlichen Leistungen. Die Informationen auf dieser Website dienen ausschließlich der allgemeinen Information und ersetzen keine ärztliche Beratung, Diagnose oder Behandlung. Über die Eignung einer Behandlung entscheiden allein die behandelnden Ärztinnen und Ärzte."),
+         p("Wir sind weder verpflichtet noch bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen."),
          h("Haftung für Inhalte"),
-         p("Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben unberührt."),
-         h("Haftung für Links"),
-         p("Unsere Website enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen."),
+         p("Als Diensteanbieter sind wir für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Wir sind jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen allgemein zu überwachen oder aktiv nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen."),
+         p("Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt."),
+         h("Haftung für externe Links"),
+         p("Unsere Website kann Links zu externen Websites Dritter enthalten, auf deren Inhalte wir keinen Einfluss haben. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich. Eine permanente inhaltliche Kontrolle verlinkter Seiten ist ohne konkrete Anhaltspunkte für eine Rechtsverletzung nicht zumutbar."),
+         p("Bei Bekanntwerden konkreter Rechtsverletzungen werden wir entsprechende Links entfernen."),
          h("Urheberrecht"),
-         p("Die auf dieser Website veröffentlichten Inhalte und Werke unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der vorherigen schriftlichen Zustimmung von MedLuxLife.")]
+         p("Die durch MedLuxLife erstellten Inhalte und Werke auf dieser Website unterliegen dem deutschen Urheberrecht. Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen, soweit gesetzlich erforderlich, der vorherigen Zustimmung des jeweiligen Rechteinhabers."),
+         p("Soweit Inhalte auf dieser Website nicht von MedLuxLife erstellt wurden, werden die Rechte Dritter beachtet.")]
     return group(b, "medlux-legal")
 
 def health_consent():
