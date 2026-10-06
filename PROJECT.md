@@ -152,3 +152,4 @@ Açık soru: Dil listesindeki **UK** Ukraynaca mı (dil kodu `uk`), yoksa İngil
 - 2026-10-06: Contact form 589: two extra consent checkboxes (Art. 9, Art. 49) shown only when Subject = Health; required client-side by inline script on Contact page (`assets/js/health_consent.js`, Custom HTML block after the shortcode). CF7 fields are `optional` so Travel enquiries are not blocked. Mail body records consent status, full consent wording and date/time as proof. (Conditional Fields plugin tried and removed: its conditions can't be saved via REST.)
 - 2026-10-06: Impressum: USt-IdNr. section removed (none). Footer (template part extendable//footer): links Impressum | Datenschutz | AGB.
 - 2026-10-06: Impressum replaced with the owner's final text (no USt-IdNr., no § 18 MStV / medical note). Backup: page602_before_final.json.
+- 2026-10-06: Impressum: 'Hinweis zu medizinischen Inhalten' re-added (before 'Haftung für Inhalte').

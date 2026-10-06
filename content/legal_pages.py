@@ -170,6 +170,8 @@ def impressum():
          p(CONTACT),
          h("Verbraucherstreitbeilegung"),
          p("Wir sind weder verpflichtet noch bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen."),
+         h("Hinweis zu medizinischen Inhalten"),
+         p("MedLuxLife erbringt keine ärztlichen Leistungen. Die Informationen auf dieser Website dienen ausschließlich der allgemeinen Information und ersetzen keine ärztliche Beratung, Diagnose oder Behandlung. Über die Eignung einer Behandlung entscheiden allein die behandelnden Ärztinnen und Ärzte."),
          h("Haftung für Inhalte"),
          p("Als Diensteanbieter sind wir für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Wir sind jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen allgemein zu überwachen oder aktiv nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen."),
          p("Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt."),
