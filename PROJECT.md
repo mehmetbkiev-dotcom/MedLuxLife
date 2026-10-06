@@ -147,3 +147,4 @@ Açık soru: Dil listesindeki **UK** Ukraynaca mı (dil kodu `uk`), yoksa İngil
 - CSS `.medlux-legal` added. Backups: page3_before_legal.json, gs5_before_legal.json.
 - Still to do: Impressum, Widerrufsbelehrung, footer links, translations (EN/TR/UK/RU), lawyer review.
 - 2026-10-06: Impressum published (page 602, /impressum/, § 5 DDG, § 18 Abs. 2 MStV). Open placeholder: USt-IdNr. (if any). Footer links to Impressum/Datenschutz/AGB still missing.
+- 2026-10-06: Datenschutzerklärung replaced with the owner's final text (16 sections, incl. LDI NRW, Datensicherheit, 6/8/10-year retention). Backup: page3_before_final.json.
