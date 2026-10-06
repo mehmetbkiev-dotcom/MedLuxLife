@@ -128,8 +128,8 @@ Adult Bone Marrow Transplantation; Algology; Anesthesiology and Reanimation; App
 | Butonlar | EXPLORE HEALTH / EXPLORE TRAVEL | ✓ aynı |
 | "Elevate Your Health…" bölümü | — | Şablon metni kalmış ("This section introduces…"); değişmeli |
 | Kartlar | Health ana iş alanı | Dental Treatment / Plastic Surgery / Holiday Package; orta ve sağ görsel değişecek |
-| Hukuki sayfalar | Impressum, Datenschutz, AGB | henüz kontrol edilmedi |
-| WhatsApp / chat, formlar | her sayfada | henüz kontrol edilmedi |
+| Hukuki sayfalar | Impressum, Datenschutz, AGB | ✅ onaylandı 2026-10-06: Impressum, Datenschutzerklärung, AGB, Einwilligung Gesundheitsdaten, Widerrufsbelehrung, Stornierungsbedingungen (footer linkli). Avukat kontrolü önerilir. |
+| WhatsApp / chat, formlar | her sayfada | Contact formu (CF7) ✅ onaylandı; WhatsApp her sayfada henüz yok |
 
 Açık soru: Dil listesindeki **UK** Ukraynaca mı (dil kodu `uk`), yoksa İngiltere İngilizcesi mi? EN ayrıca listede olduğu için Ukraynaca varsayılıyor.
 
@@ -161,3 +161,4 @@ Açık soru: Dil listesindeki **UK** Ukraynaca mı (dil kodu `uk`), yoksa İngil
 - 2026-10-06: Contact: second photo (Contact In Person cover) changed from the duplicate clinic photo to media 558 (traveller in hotel room, focal point 55%/10%). Footer: X icon removed; Instagram/Facebook still point to generic URLs – profile links needed. Backups: page26_before_photo.json, footer_before_social.json.
 - 2026-10-06: Footer Facebook link → https://www.facebook.com/profile.php?id=61594715669578 (Instagram link still pending).
 - 2026-10-06: Footer Instagram link → https://www.instagram.com/medluxlife/.
+- 2026-10-06: User approved all changes so far (contact form + health consents, legal pages, footer legal/social links, Contact FAQ/spacing/photo).
