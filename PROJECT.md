@@ -154,3 +154,4 @@ Açık soru: Dil listesindeki **UK** Ukraynaca mı (dil kodu `uk`), yoksa İngil
 - 2026-10-06: Impressum replaced with the owner's final text (no USt-IdNr., no § 18 MStV / medical note). Backup: page602_before_final.json.
 - 2026-10-06: Impressum: 'Hinweis zu medizinischen Inhalten' re-added (before 'Haftung für Inhalte').
 - 2026-10-06: Widerrufsbelehrung published (page 612, /widerrufsbelehrung/): official model text for services + Muster-Widerrufsformular, notes on § 356 Abs. 4, § 312g Abs. 2 Nr. 9, third-party contracts. Linked from AGB § 7 and footer (Impressum | Datenschutz | AGB | Widerrufsbelehrung).
+- 2026-10-06: Widerrufsbelehrung replaced with the owner's final text (conditional 'Soweit ... zusteht', Reiseleistungen section, simplified Muster-Formular). Backup: page612_before_final.json. TODO: 'Ich verlange ausdrücklich…' checkbox/sentence in Health offers; Travel Stornierungsbedingungen page.

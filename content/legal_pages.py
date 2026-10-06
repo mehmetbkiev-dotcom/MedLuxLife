@@ -214,36 +214,38 @@ def health_consent():
     return group(b, "medlux-legal")
 
 def withdrawal():
-    # Official model text (Anlage 1 und 2 zu Art. 246a § 1 EGBGB) for service contracts.
-    b = [note(), p(f"Stand: {DATE}"),
-         p("Die folgende Widerrufsbelehrung gilt für Verbraucher, die mit MedLuxLife ausschließlich über Fernkommunikationsmittel (z. B. E-Mail, Telefon, WhatsApp) einen Vertrag über Leistungen von MedLuxLife schließen. Sie wird Ihnen zusätzlich mit jedem Angebot in Textform übermittelt.")]
-    b += [h("Widerrufsbelehrung"),
-          h("Widerrufsrecht", 3),
-          p("Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen."),
+    # Final text supplied by the owner on 2026-10-06 (source notes/links left out).
+    ADR = "MedLuxLife<br>Inh. Anna Sacilanates (Einzelunternehmen)<br>Stolberger Straße 21<br>52068 Aachen<br>Deutschland"
+    MAIL = 'E-Mail: <a href="mailto:info@medluxlife.com">info@medluxlife.com</a>'
+    b = [note(), p(f"Stand: {DATE}")]
+    b += [h("Widerrufsrecht"),
+          p("Soweit Ihnen bei dem mit MedLuxLife geschlossenen Vertrag gesetzlich ein Widerrufsrecht zusteht, haben Sie das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen."),
           p("Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag des Vertragsabschlusses."),
-          p(f"Um Ihr Widerrufsrecht auszuüben, müssen Sie uns (MedLuxLife, {COMPANY}, {ADDRESS}, Telefon: +49 160 93 44 87 14, E-Mail: <a href=\"mailto:info@medluxlife.com\">info@medluxlife.com</a>) mittels einer eindeutigen Erklärung (z. B. ein mit der Post versandter Brief oder E-Mail) über Ihren Entschluss, diesen Vertrag zu widerrufen, informieren. Sie können dafür das beigefügte Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist."),
-          p("Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden."),
-          h("Folgen des Widerrufs", 3),
-          p("Wenn Sie diesen Vertrag widerrufen, haben wir Ihnen alle Zahlungen, die wir von Ihnen erhalten haben, unverzüglich und spätestens binnen vierzehn Tagen ab dem Tag zurückzuzahlen, an dem die Mitteilung über Ihren Widerruf dieses Vertrags bei uns eingegangen ist. Für diese Rückzahlung verwenden wir dasselbe Zahlungsmittel, das Sie bei der ursprünglichen Transaktion eingesetzt haben, es sei denn, mit Ihnen wurde ausdrücklich etwas anderes vereinbart; in keinem Fall werden Ihnen wegen dieser Rückzahlung Entgelte berechnet."),
-          p("Haben Sie verlangt, dass die Dienstleistungen während der Widerrufsfrist beginnen sollen, so haben Sie uns einen angemessenen Betrag zu zahlen, der dem Anteil der bis zu dem Zeitpunkt, zu dem Sie uns von der Ausübung des Widerrufsrechts hinsichtlich dieses Vertrags unterrichten, bereits erbrachten Dienstleistungen im Vergleich zum Gesamtumfang der im Vertrag vorgesehenen Dienstleistungen entspricht."),
-          p("<em>– Ende der Widerrufsbelehrung –</em>")]
-    b += [h("Besondere Hinweise"),
-          h("Vorzeitiges Erlöschen des Widerrufsrechts", 3),
-          p("Das Widerrufsrecht erlischt bei einem Vertrag zur Erbringung von Dienstleistungen vorzeitig, wenn wir die Dienstleistung vollständig erbracht haben und mit der Ausführung der Dienstleistung erst begonnen haben, nachdem Sie dazu Ihre ausdrückliche Zustimmung gegeben und gleichzeitig Ihre Kenntnis davon bestätigt haben, dass Sie Ihr Widerrufsrecht bei vollständiger Vertragserfüllung durch uns verlieren (§ 356 Abs. 4 BGB)."),
-          h("Ausschluss des Widerrufsrechts", 3),
-          p("Das Widerrufsrecht besteht nicht bei Verträgen zur Erbringung von Dienstleistungen in den Bereichen Beherbergung zu anderen Zwecken als zu Wohnzwecken, Beförderung von Waren, Kraftfahrzeugvermietung, Lieferung von Speisen und Getränken sowie zur Erbringung weiterer Dienstleistungen im Zusammenhang mit Freizeitbetätigungen, wenn der Vertrag für die Erbringung einen spezifischen Termin oder Zeitraum vorsieht (§ 312g Abs. 2 Nr. 9 BGB). Bei Pauschalreiseverträgen besteht kein Widerrufsrecht; es gilt das gesetzliche Rücktrittsrecht nach § 651h BGB."),
-          h("Verträge mit Dritten", 3),
-          p("Diese Widerrufsbelehrung betrifft ausschließlich Verträge mit MedLuxLife. Für Verträge, die Sie über unsere Vermittlung unmittelbar mit Dritten schließen (z. B. Behandlungsverträge mit Kliniken oder Ärzten, Verträge mit Hotels, Fluggesellschaften, Transferunternehmen oder Reiseveranstaltern), gelten die gesetzlichen Bestimmungen und die Bedingungen des jeweiligen Vertragspartners.")]
+          p("Um Ihr Widerrufsrecht auszuüben, müssen Sie uns"),
+          p(f'{ADR}<br>Telefon: <a href="tel:+4916093448714">+49 160 93 44 87 14</a><br>{MAIL}'),
+          p("mittels einer eindeutigen Erklärung, zum Beispiel durch einen mit der Post versandten Brief oder eine E-Mail, über Ihren Entschluss informieren, diesen Vertrag zu widerrufen."),
+          p("Sie können hierfür das unten aufgeführte Muster-Widerrufsformular verwenden. Die Verwendung dieses Formulars ist jedoch nicht vorgeschrieben."),
+          p("Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung Ihres Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.")]
+    b += [h("Folgen des Widerrufs"),
+          p("Wenn Sie diesen Vertrag wirksam widerrufen, haben wir Ihnen alle Zahlungen, die wir von Ihnen im Zusammenhang mit dem widerrufenen Vertrag erhalten haben, unverzüglich und spätestens binnen vierzehn Tagen ab dem Tag zurückzuzahlen, an dem Ihre Mitteilung über den Widerruf bei uns eingegangen ist."),
+          p("Für die Rückzahlung verwenden wir grundsätzlich dasselbe Zahlungsmittel, das Sie bei der ursprünglichen Transaktion eingesetzt haben, sofern nicht ausdrücklich etwas anderes vereinbart wurde. In keinem Fall werden Ihnen wegen dieser Rückzahlung Entgelte berechnet."),
+          h("Beginn der Dienstleistung vor Ablauf der Widerrufsfrist", 3),
+          p("Wenn Sie ausdrücklich verlangen, dass MedLuxLife bereits vor Ablauf der vierzehntägigen Widerrufsfrist mit der vereinbarten Dienstleistung beginnt, und Sie den Vertrag anschließend widerrufen, können Sie verpflichtet sein, einen angemessenen Betrag für diejenigen Leistungen zu zahlen, die bis zu dem Zeitpunkt Ihres Widerrufs bereits erbracht wurden."),
+          p("Dieser Betrag entspricht dem Anteil der bis zum Widerruf bereits erbrachten Dienstleistungen im Verhältnis zum Gesamtumfang der vertraglich vereinbarten Dienstleistungen."),
+          h("Vorzeitiges Erlöschen des Widerrufsrechts bei Dienstleistungen", 3),
+          p("Bei einem kostenpflichtigen Dienstleistungsvertrag kann das Widerrufsrecht vor Ablauf der vierzehntägigen Widerrufsfrist erlöschen, wenn"),
+          ul(["MedLuxLife die vereinbarte Dienstleistung vollständig erbracht hat,",
+              "Sie ausdrücklich zugestimmt haben, dass MedLuxLife bereits vor Ablauf der Widerrufsfrist mit der Erbringung der Dienstleistung beginnt, und",
+              "Sie gleichzeitig bestätigt haben, dass Ihnen bekannt ist, dass Sie bei vollständiger Vertragserfüllung durch MedLuxLife Ihr Widerrufsrecht verlieren."])]
+    b += [h("Besonderheiten bei Reiseleistungen"),
+          p("Für bestimmte Reise- und Freizeitdienstleistungen kann kein gesetzliches Widerrufsrecht bestehen."),
+          p("Dies betrifft insbesondere Verträge über Dienstleistungen in den Bereichen Beherbergung zu anderen Zwecken als zu Wohnzwecken, Kraftfahrzeugvermietung sowie bestimmte weitere Dienstleistungen im Zusammenhang mit Freizeitbetätigungen, wenn für die Leistung ein spezifischer Termin oder Zeitraum vorgesehen ist. In diesen Fällen gelten die jeweiligen vertraglichen Stornierungs- und Rücktrittsbedingungen."),
+          p("<strong>Wichtig:</strong> Für Pauschalreiseverträge und bestimmte andere Reiseleistungen gelten besondere gesetzliche Bestimmungen. Die vorstehende allgemeine Widerrufsbelehrung findet daher nur Anwendung, soweit für den jeweiligen Vertrag tatsächlich ein gesetzliches Widerrufsrecht besteht.")]
     b += [h("Muster-Widerrufsformular"),
-          p("(Wenn Sie den Vertrag widerrufen wollen, dann füllen Sie bitte dieses Formular aus und senden Sie es zurück.)"),
-          p(f"– An MedLuxLife, {COMPANY}, {ADDRESS}, E-Mail: info@medluxlife.com"),
-          p("– Hiermit widerrufe(n) ich/wir (*) den von mir/uns (*) abgeschlossenen Vertrag über den Kauf der folgenden Waren (*)/die Erbringung der folgenden Dienstleistung (*)<br>_______________________________________________"),
-          p("– Bestellt am (*)/erhalten am (*): ____________________"),
-          p("– Name des/der Verbraucher(s): ____________________"),
-          p("– Anschrift des/der Verbraucher(s): ____________________"),
-          p("– Unterschrift des/der Verbraucher(s) (nur bei Mitteilung auf Papier): ____________________"),
-          p("– Datum: ____________________"),
-          p("(*) Unzutreffendes streichen.")]
+          p("Wenn Sie den Vertrag widerrufen möchten, können Sie dieses Formular verwenden und an uns übermitteln:"),
+          p(f"An:<br>{ADR}<br>E-Mail: info@medluxlife.com"),
+          p("Hiermit widerrufe(n) ich/wir den von mir/uns abgeschlossenen Vertrag über die Erbringung der folgenden Dienstleistung:"),
+          p("Dienstleistung: ______________________________<br>Bestellt / Vertrag geschlossen am: ______________________________<br>Name des/der Verbraucher(s): ______________________________<br>Anschrift des/der Verbraucher(s): ______________________________<br>Datum: ______________________________<br>Unterschrift des/der Verbraucher(s): ______________________________<br>(nur bei Mitteilung auf Papier)")]
     return group(b, "medlux-legal")
 
 if __name__ == "__main__":
