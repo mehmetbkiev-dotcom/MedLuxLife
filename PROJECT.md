@@ -116,7 +116,7 @@ Adult Bone Marrow Transplantation; Algology; Anesthesiology and Reanimation; App
 - Telefon: +49 160 93 44 87 14
 - WhatsApp: +380 97 909 23 26 (wa.me/380979092326)
 - E-posta: info@medluxlife.de (info@medluxlife.com → yönlendirme)
-- Domain: https://medluxlife.de (ana), medluxlife.com → yönlendirme (yapılacak)
+- Domain: https://medluxlife.de (ana), medluxlife.com (+www) → 301 https://medluxlife.de (2026-10-07)
 - Adres: şimdilik gösterilmiyor
 
 ## 7. Kararlar ile canlı site arasındaki farklar (2026-10-01 itibarıyla)
@@ -168,3 +168,4 @@ Açık soru: Dil listesindeki **UK** Ukraynaca mı (dil kodu `uk`), yoksa İngil
 - 2026-10-07: Domain medluxlife.de connected to WordPress (IONOS "Connect existing website"); WordPress home/siteurl = https://medluxlife.de (IONOS replaced URLs in the DB). SSL Starter Wildcard *.medluxlife.de active (valid to 06/04/2027). Old host 301-redirects home to medluxlife.de. Remaining old-domain spots fixed: AGB § 1 text (page 596), CF7 589 sender → wordpress@medluxlife.de. Repo sources (blocks.B etc.) and e-mail templates now use https://medluxlife.de. Backup: backup/domain_switch/.
 - TODO: medluxlife.com → 301 to https://medluxlife.de (IONOS Domain forwarding); allow medluxlife.de/.com in the session network policy to test from here.
 - 2026-10-07: Site tagline 'Just another WordPress site' → 'Health · Tourism · Experience' (browser tab title on home page).
+- 2026-10-07: medluxlife.com (+ www) set to HTTP 301 forwarding → https://medluxlife.de in IONOS. .com has no SSL yet (https://medluxlife.com may show a warning). Email info@medluxlife.com unaffected (forwards to .de).
