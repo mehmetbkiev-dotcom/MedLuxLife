@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MiniEx — спотова біржа</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="logo">Mini<span>Ex</span></div>
+  <nav id="markets" class="markets"></nav>
+  <div id="ticker" class="ticker"></div>
+  <div class="spacer"></div>
+  <div id="account-bar" class="account-bar"></div>
+</header>
+
+<main class="grid">
+  <section class="panel book">
+    <div class="panel-title">Книга ордерів</div>
+    <div class="book-head"><span>Ціна</span><span>Кількість</span><span>Сума</span></div>
+    <div id="asks" class="book-side asks"></div>
+    <div id="mid" class="mid"></div>
+    <div id="bids" class="book-side bids"></div>
+  </section>
+
+  <section class="panel chart">
+    <div class="chart-bar">
+      <div id="intervals" class="intervals"></div>
+      <div id="ohlc" class="ohlc"></div>
+    </div>
+    <div class="canvas-wrap"><canvas id="canvas"></canvas></div>
+  </section>
+
+  <section class="panel trades">
+    <div class="panel-title">Угоди ринку</div>
+    <div class="book-head"><span>Ціна</span><span>Кількість</span><span>Час</span></div>
+    <div id="trades" class="trade-list"></div>
+  </section>
+
+  <section class="panel form">
+    <div class="tabs" id="type-tabs">
+      <button data-type="LIMIT" class="active">Лімітний</button>
+      <button data-type="MARKET">Ринковий</button>
+      <button data-type="LIMIT_MAKER">Post-only</button>
+      <label class="tif" id="tif-wrap">TIF
+        <select id="tif"><option>GTC</option><option>IOC</option><option>FOK</option></select>
+      </label>
+    </div>
+    <div class="forms">
+      <form id="form-buy" class="order-form" data-side="BUY"></form>
+      <form id="form-sell" class="order-form" data-side="SELL"></form>
+    </div>
+  </section>
+
+  <section class="panel account">
+    <div class="tabs" id="acc-tabs">
+      <button data-tab="open" class="active">Відкриті ордери <span id="open-count"></span></button>
+      <button data-tab="history">Історія ордерів</button>
+      <button data-tab="mytrades">Мої угоди</button>
+      <button data-tab="assets">Активи та PnL</button>
+      <div class="spacer"></div>
+      <button id="cancel-all" class="link-btn">Скасувати всі</button>
+    </div>
+    <div id="acc-body" class="acc-body"></div>
+  </section>
+</main>
+
+<div id="modal" class="modal hidden">
+  <div class="modal-card">
+    <div class="tabs" id="auth-tabs">
+      <button data-mode="login" class="active">Вхід</button>
+      <button data-mode="register">Реєстрація</button>
+    </div>
+    <form id="auth-form">
+      <label>Логін<input name="username" autocomplete="username" required minlength="3" maxlength="20"></label>
+      <label>Пароль<input name="password" type="password" autocomplete="current-password" required minlength="6" maxlength="100"></label>
+      <div id="auth-error" class="error"></div>
+      <button type="submit" class="btn primary" id="auth-submit">Увійти</button>
+      <p class="hint" id="auth-hint"></p>
+    </form>
+    <button class="close" id="modal-close" aria-label="Закрити">×</button>
+  </div>
+</div>
+
+<div id="toasts" class="toasts"></div>
+<script src="/app.js"></script>
+</body>
+</html>

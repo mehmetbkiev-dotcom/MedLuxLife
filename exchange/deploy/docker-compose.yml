@@ -1,0 +1,32 @@
+# Біржа + Caddy (автоматичний HTTPS від Let's Encrypt) на окремому піддомені.
+# Запуск на сервері:  cd deploy && cp .env.example .env && nano .env && docker compose up -d --build
+services:
+  exchange:
+    build: ..
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      TRUST_PROXY: "1"
+      COOKIE_SECURE: "1"
+    volumes:
+      - exchange-data:/data
+    expose:
+      - "8080"
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      DOMAIN: ${DOMAIN}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+    depends_on:
+      - exchange
+
+volumes:
+  exchange-data:
+  caddy-data:
