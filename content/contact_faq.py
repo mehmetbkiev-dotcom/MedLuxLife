@@ -23,7 +23,7 @@ FAQ = [
     ("Where is MedLuxLife based?",
      "MedLuxLife is based in Aachen, Germany."),
     ("How can I cancel a booking?",
-     f'Please send your cancellation to info@medluxlife.com. Details can be found in our <a href="{B}/stornierungsbedingungen/">cancellation policy</a> and our <a href="{B}/widerrufsbelehrung/">withdrawal information</a>.'),
+     f'Please send your cancellation to info@medluxlife.de. Details can be found in our <a href="{B}/stornierungsbedingungen/">cancellation policy</a> and our <a href="{B}/widerrufsbelehrung/">withdrawal information</a>.'),
 ]
 
 def item(q, a, open_=False):

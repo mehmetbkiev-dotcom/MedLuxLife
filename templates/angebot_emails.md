@@ -27,7 +27,7 @@ vielen Dank für Ihre Anfrage und Ihr Vertrauen. Gerne unterbreiten wir Ihnen fo
 **Anbieter**
 MedLuxLife, Inh. Anna Sacilanates (Einzelunternehmen)
 Stolberger Straße 21, 52068 Aachen, Deutschland
-Telefon: +49 160 93 44 87 14 · E-Mail: info@medluxlife.com
+Telefon: +49 160 93 44 87 14 · E-Mail: info@medluxlife.de
 
 **Leistungen von MedLuxLife**
 - [z. B. Organisation und Koordination der Termine mit der Partnerklinik]
@@ -74,7 +74,7 @@ Für Rückfragen sind wir jederzeit gerne für Sie da.
 Mit freundlichen Grüßen
 [Name]
 MedLuxLife
-Telefon: +49 160 93 44 87 14 · WhatsApp: +380 97 909 23 26 · info@medluxlife.com
+Telefon: +49 160 93 44 87 14 · WhatsApp: +380 97 909 23 26 · info@medluxlife.de
 
 [Anhang A – Widerrufsbelehrung hier einfügen oder als PDF anhängen]
 
@@ -155,7 +155,7 @@ Bitte antworten Sie auf diese E-Mail mit:
 Mit freundlichen Grüßen
 [Name]
 MedLuxLife
-Telefon: +49 160 93 44 87 14 · WhatsApp: +380 97 909 23 26 · info@medluxlife.com
+Telefon: +49 160 93 44 87 14 · WhatsApp: +380 97 909 23 26 · info@medluxlife.de
 
 ---
 
@@ -174,7 +174,7 @@ vielen Dank für Ihren Auftrag vom [Datum]. Wir haben folgende Leistungen für S
 
 **Gesamtpreis:** [EUR] · **Bereits bezahlt:** [EUR] · **Offen:** [EUR] bis [Datum]
 
-Die Stornierungsbedingungen entsprechen dem Angebot vom [Datum]. Stornierungen richten Sie bitte an info@medluxlife.com.
+Die Stornierungsbedingungen entsprechen dem Angebot vom [Datum]. Stornierungen richten Sie bitte an info@medluxlife.de.
 
 Reiseunterlagen (Tickets, Hotelvoucher) [finden Sie im Anhang / erhalten Sie bis …].
 
@@ -190,7 +190,7 @@ Mit freundlichen Grüßen
 **Widerrufsrecht**
 Soweit Ihnen bei dem mit MedLuxLife geschlossenen Vertrag gesetzlich ein Widerrufsrecht zusteht, haben Sie das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen.
 Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag des Vertragsabschlusses.
-Um Ihr Widerrufsrecht auszuüben, müssen Sie uns (MedLuxLife, Inh. Anna Sacilanates (Einzelunternehmen), Stolberger Straße 21, 52068 Aachen, Deutschland, Telefon: +49 160 93 44 87 14, E-Mail: info@medluxlife.com) mittels einer eindeutigen Erklärung, zum Beispiel durch einen mit der Post versandten Brief oder eine E-Mail, über Ihren Entschluss informieren, diesen Vertrag zu widerrufen.
+Um Ihr Widerrufsrecht auszuüben, müssen Sie uns (MedLuxLife, Inh. Anna Sacilanates (Einzelunternehmen), Stolberger Straße 21, 52068 Aachen, Deutschland, Telefon: +49 160 93 44 87 14, E-Mail: info@medluxlife.de) mittels einer eindeutigen Erklärung, zum Beispiel durch einen mit der Post versandten Brief oder eine E-Mail, über Ihren Entschluss informieren, diesen Vertrag zu widerrufen.
 Sie können hierfür das unten aufgeführte Muster-Widerrufsformular verwenden. Die Verwendung dieses Formulars ist jedoch nicht vorgeschrieben.
 Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung Ihres Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.
 
@@ -209,7 +209,7 @@ Bei einem kostenpflichtigen Dienstleistungsvertrag kann das Widerrufsrecht vor A
 
 **Muster-Widerrufsformular**
 Wenn Sie den Vertrag widerrufen möchten, können Sie dieses Formular verwenden und an uns übermitteln:
-An: MedLuxLife, Inh. Anna Sacilanates (Einzelunternehmen), Stolberger Straße 21, 52068 Aachen, Deutschland, E-Mail: info@medluxlife.com
+An: MedLuxLife, Inh. Anna Sacilanates (Einzelunternehmen), Stolberger Straße 21, 52068 Aachen, Deutschland, E-Mail: info@medluxlife.de
 Hiermit widerrufe(n) ich/wir den von mir/uns abgeschlossenen Vertrag über die Erbringung der folgenden Dienstleistung:
 Dienstleistung: ____________________
 Bestellt / Vertrag geschlossen am: ____________________

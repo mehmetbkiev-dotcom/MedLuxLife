@@ -115,7 +115,7 @@ Adult Bone Marrow Transplantation; Algology; Anesthesiology and Reanimation; App
 ## İletişim bilgileri
 - Telefon: +49 160 93 44 87 14
 - WhatsApp: +380 97 909 23 26 (wa.me/380979092326)
-- E-posta: info@medluxlife.com
+- E-posta: info@medluxlife.de (info@medluxlife.com → yönlendirme)
 - Adres: şimdilik gösterilmiyor
 
 ## 7. Kararlar ile canlı site arasındaki farklar (2026-10-01 itibarıyla)
@@ -162,3 +162,4 @@ Açık soru: Dil listesindeki **UK** Ukraynaca mı (dil kodu `uk`), yoksa İngil
 - 2026-10-06: Footer Facebook link → https://www.facebook.com/profile.php?id=61594715669578 (Instagram link still pending).
 - 2026-10-06: Footer Instagram link → https://www.instagram.com/medluxlife/.
 - 2026-10-06: User approved all changes so far (contact form + health consents, legal pages, footer legal/social links, Contact FAQ/spacing/photo).
+- 2026-10-07: Email switched to info@medluxlife.de (new IONOS Mail Basic mailbox; info@medluxlife.com forwards to it). Replaced on pages 3, 26, 602, 604, 612, 616; CF7 589 recipient → info@medluxlife.de; repo sources + e-mail templates updated. Backup: backup/email_switch/.
