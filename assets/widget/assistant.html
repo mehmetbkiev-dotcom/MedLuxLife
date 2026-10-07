@@ -1,0 +1,120 @@
+<div id="mlx-assistant" class="mlx-a" data-wa="380979092326">
+<style>
+.mlx-a{--gold:#d4a24c;--gold2:#e8b75c;--ink:#0b0620;--navy:#1b1530;font-family:inherit}
+.mlx-a *{box-sizing:border-box}
+.mlx-a-fab{position:fixed;right:20px;bottom:20px;z-index:9998;display:flex;align-items:center;gap:10px;background:var(--navy);color:#fff;border:2px solid var(--gold);border-radius:999px;padding:10px 18px 10px 12px;box-shadow:0 8px 24px rgba(11,6,32,.35);cursor:pointer;font:600 15px/1.2 inherit;letter-spacing:.02em}
+.mlx-a-fab:hover{background:#2a2245}
+.mlx-a-fab svg{width:30px;height:30px;flex:none}
+.mlx-a-fab .mlx-a-dot{width:9px;height:9px;border-radius:50%;background:#3ccf6e;box-shadow:0 0 0 3px rgba(60,207,110,.25)}
+.mlx-a[data-open="1"] .mlx-a-fab{display:none}
+.mlx-a-panel{position:fixed;right:20px;bottom:20px;z-index:9999;width:370px;max-width:calc(100vw - 24px);max-height:min(640px,calc(100vh - 40px));display:none;flex-direction:column;background:#fff;border-radius:18px;box-shadow:0 18px 48px rgba(11,6,32,.35);overflow:hidden}
+.mlx-a[data-open="1"] .mlx-a-panel{display:flex}
+.mlx-a-head{background:var(--navy);color:#fff;padding:16px 18px;display:flex;align-items:center;gap:12px;border-bottom:2px solid var(--gold)}
+.mlx-a-head .mlx-a-av{width:40px;height:40px;border-radius:50%;background:var(--gold);color:var(--ink);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;flex:none}
+.mlx-a-head strong{display:block;font-size:16px}
+.mlx-a-head small{display:block;font-size:12px;opacity:.75;margin-top:2px}
+.mlx-a-x{margin-left:auto;background:none;border:0;color:#fff;font-size:26px;line-height:1;cursor:pointer;opacity:.8;padding:4px}
+.mlx-a-x:hover{opacity:1}
+.mlx-a-body{padding:16px;overflow-y:auto;background:#f7f5fb;flex:1}
+.mlx-a-msg{background:#fff;border-radius:4px 14px 14px 14px;padding:11px 14px;margin:0 0 10px;font-size:14.5px;line-height:1.5;color:var(--ink);box-shadow:0 1px 2px rgba(11,6,32,.08);max-width:92%}
+.mlx-a-you{background:var(--gold);color:var(--ink);border-radius:14px 4px 14px 14px;margin-left:auto;font-weight:600;width:fit-content}
+.mlx-a-step{display:none}
+.mlx-a-step.on{display:block;animation:mlxIn .25s ease}
+@keyframes mlxIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.mlx-a-opts{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 12px}
+.mlx-a-opt{background:#fff;border:1.5px solid var(--gold);color:var(--ink);border-radius:999px;padding:8px 14px;font:600 13.5px/1.2 inherit;cursor:pointer}
+.mlx-a-opt:hover,.mlx-a-opt:focus-visible{background:var(--gold);outline:none}
+.mlx-a-big .mlx-a-opt{flex:1 1 45%;border-radius:12px;padding:14px 10px;font-size:15px;text-align:center}
+.mlx-a-consent{display:flex;gap:10px;align-items:flex-start;background:#fff;border:1px solid rgba(212,162,76,.5);border-radius:12px;padding:12px;font-size:13px;line-height:1.5;color:var(--ink);cursor:pointer}
+.mlx-a-consent input{width:18px;height:18px;margin-top:2px;accent-color:var(--gold);flex:none}
+.mlx-a-consent a,.mlx-a-note a{color:#9a6c1d;font-weight:600}
+.mlx-a-note{font-size:12.5px;color:rgba(11,6,32,.7);line-height:1.5;margin:8px 2px}
+.mlx-a-next{width:100%;margin-top:12px;background:var(--gold);color:var(--ink);border:0;border-radius:999px;padding:12px;font:700 14px/1 inherit;letter-spacing:.03em;cursor:pointer}
+.mlx-a-next:disabled{opacity:.45;cursor:not-allowed}
+.mlx-a-ch{display:flex;align-items:center;gap:12px;width:100%;background:#fff;border:1.5px solid rgba(11,6,32,.12);border-radius:12px;padding:12px 14px;margin-bottom:8px;color:var(--ink);text-decoration:none;font:600 14.5px/1.3 inherit;cursor:pointer;text-align:left}
+.mlx-a-ch:hover{border-color:var(--gold);background:#fffaf0}
+.mlx-a-ch svg{width:24px;height:24px;flex:none}
+.mlx-a-ch small{display:block;font-weight:400;font-size:12px;color:rgba(11,6,32,.6)}
+.mlx-a-back{background:none;border:0;color:rgba(11,6,32,.6);font:600 12.5px/1 inherit;cursor:pointer;padding:6px 0;margin-top:4px}
+.mlx-a-back:hover{color:var(--ink)}
+@media (max-width:600px){.mlx-a-fab{right:14px;bottom:14px;padding:9px 14px 9px 10px;font-size:14px}.mlx-a-panel{right:0;bottom:0;width:100vw;max-width:100vw;max-height:88vh;border-radius:18px 18px 0 0}}
+@media print{.mlx-a{display:none}}
+</style>
+<button type="button" class="mlx-a-fab" aria-haspopup="dialog" aria-controls="mlx-a-panel" aria-expanded="false">
+<svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#d4a24c"/><path d="M9 11.5A2.5 2.5 0 0 1 11.5 9h9a2.5 2.5 0 0 1 2.5 2.5v6a2.5 2.5 0 0 1-2.5 2.5H15l-4 3.2V20h.5A2.5 2.5 0 0 1 9 17.5z" fill="#0b0620"/><circle cx="13" cy="14.5" r="1.1" fill="#d4a24c"/><circle cx="16" cy="14.5" r="1.1" fill="#d4a24c"/><circle cx="19" cy="14.5" r="1.1" fill="#d4a24c"/></svg>
+<span>How can we help?</span><span class="mlx-a-dot" aria-hidden="true"></span>
+</button>
+<div class="mlx-a-panel" id="mlx-a-panel" role="dialog" aria-modal="false" aria-labelledby="mlx-a-title">
+<div class="mlx-a-head"><div class="mlx-a-av" aria-hidden="true">ML</div><div><strong id="mlx-a-title">MedLuxLife Assistant</strong><small>Personal support in DE · EN · TR · UK · RU</small></div><button type="button" class="mlx-a-x" aria-label="Close">×</button></div>
+<div class="mlx-a-body" aria-live="polite">
+<div class="mlx-a-step on" data-step="1">
+<p class="mlx-a-msg">Hello and welcome to MedLuxLife!</p>
+<p class="mlx-a-msg">What can we help you with today?</p>
+<div class="mlx-a-opts mlx-a-big"><button type="button" class="mlx-a-opt" data-area="Health">Health</button><button type="button" class="mlx-a-opt" data-area="Travel">Travel</button></div>
+</div>
+<div class="mlx-a-step" data-step="2h">
+<p class="mlx-a-msg mlx-a-you">Health</p>
+<p class="mlx-a-msg">Which area are you interested in?</p>
+<div class="mlx-a-opts"><button type="button" class="mlx-a-opt" data-topic="Dental treatment">Dental treatment</button><button type="button" class="mlx-a-opt" data-topic="Hair transplantation">Hair transplantation</button><button type="button" class="mlx-a-opt" data-topic="Plastic surgery">Plastic surgery</button><button type="button" class="mlx-a-opt" data-topic="Medical aesthetics">Medical aesthetics</button><button type="button" class="mlx-a-opt" data-topic="Bariatric surgery">Bariatric surgery</button><button type="button" class="mlx-a-opt" data-topic="Check-up">Check-up</button><button type="button" class="mlx-a-opt" data-topic="IV treatments">IV treatments</button><button type="button" class="mlx-a-opt" data-topic="Hospital &amp; specialist treatment">Hospital &amp; specialist treatment</button><button type="button" class="mlx-a-opt" data-topic="Other">Other</button></div>
+<button type="button" class="mlx-a-back" data-go="1">← Back</button>
+</div>
+<div class="mlx-a-step" data-step="2t">
+<p class="mlx-a-msg mlx-a-you">Travel</p>
+<p class="mlx-a-msg">Which travel service are you interested in?</p>
+<div class="mlx-a-opts"><button type="button" class="mlx-a-opt" data-topic="Holiday packages">Holiday packages</button><button type="button" class="mlx-a-opt" data-topic="Hotel reservation">Hotel reservation</button><button type="button" class="mlx-a-opt" data-topic="Flight tickets">Flight tickets</button><button type="button" class="mlx-a-opt" data-topic="Airport transfer">Airport transfer</button><button type="button" class="mlx-a-opt" data-topic="Hajj &amp; Umrah">Hajj &amp; Umrah</button><button type="button" class="mlx-a-opt" data-topic="Other">Other</button></div>
+<button type="button" class="mlx-a-back" data-go="1">← Back</button>
+</div>
+<div class="mlx-a-step" data-step="3">
+<p class="mlx-a-msg mlx-a-you" data-out="choice"></p>
+<p class="mlx-a-msg">Thank you! Before we connect you with our team, please confirm the following:</p>
+<label class="mlx-a-consent"><input type="checkbox" class="mlx-a-ok"><span>I have read the <a href="/privacy-policy/" target="_blank" rel="noopener">Privacy Policy (Datenschutzerklärung)</a> and agree that MedLuxLife processes my contact details and message to answer my enquiry. I can withdraw my consent at any time.</span></label>
+<p class="mlx-a-note mlx-a-hnote">Please do not send detailed medical information or documents at this stage. If they are needed, we will ask you for them separately and only with your explicit consent.</p>
+<button type="button" class="mlx-a-next" disabled>Continue</button>
+<button type="button" class="mlx-a-back" data-go="2">← Back</button>
+</div>
+<div class="mlx-a-step" data-step="4">
+<p class="mlx-a-msg">How would you like to reach us?</p>
+<a class="mlx-a-ch" data-ch="wa" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#25d366" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/><path fill="#fff" d="M17.3 14.3c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1l-.9 1.1c-.2.2-.3.2-.6.1a7 7 0 0 1-3.5-3c-.3-.5.3-.4.8-1.4.1-.2 0-.3 0-.5l-.9-2c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2c.2-.6.2-1 .1-1.2l-.5-.5z"/></svg><span>WhatsApp<small>Chat with our team. WhatsApp (Meta) processes your data according to its own privacy policy.</small></span></a>
+<a class="mlx-a-ch" data-ch="form" href="/contact/"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#0b0620" stroke-width="1.7"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><span>Contact form<small>Your topic is filled in automatically.</small></span></a>
+<a class="mlx-a-ch" data-ch="tel" href="tel:+4916093448714"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#0b0620" stroke-width="1.7"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span>Call us<small>+49 160 93 44 87 14</small></span></a>
+<a class="mlx-a-ch" data-ch="mail" href="mailto:info@medluxlife.de"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#0b0620" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>Email<small>info@medluxlife.de</small></span></a>
+<button type="button" class="mlx-a-back" data-go="1">↺ Start over</button>
+</div>
+</div>
+</div>
+<script>
+(function(){
+  var root=document.getElementById('mlx-assistant'); if(!root||root.dataset.ready) return; root.dataset.ready='1';
+  var fab=root.querySelector('.mlx-a-fab'), x=root.querySelector('.mlx-a-x'), ok=root.querySelector('.mlx-a-ok'), next=root.querySelector('.mlx-a-next');
+  var st={area:'',topic:''};
+  function base(){ var m=location.pathname.match(/^\/(de|tr|uk|ru)(\/|$)/); return m?'/'+m[1]:''; }
+  function show(id){ root.querySelectorAll('.mlx-a-step').forEach(function(s){ s.classList.toggle('on', s.dataset.step===id); }); var b=root.querySelector('.mlx-a-body'); b.scrollTop=0; }
+  function open(v){ root.dataset.open=v?'1':''; fab.setAttribute('aria-expanded', v?'true':'false'); if(v) show(root.querySelector('.mlx-a-step.on').dataset.step); else fab.focus(); }
+  fab.addEventListener('click',function(){ open(true); });
+  x.addEventListener('click',function(){ open(false); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&root.dataset.open) open(false); });
+  root.querySelectorAll('[data-area]').forEach(function(b){ b.addEventListener('click',function(){ st.area=b.dataset.area; show(st.area==='Health'?'2h':'2t'); }); });
+  root.querySelectorAll('[data-topic]').forEach(function(b){ b.addEventListener('click',function(){
+    st.topic=b.dataset.topic; root.querySelector('[data-out="choice"]').textContent=b.textContent.trim();
+    root.querySelector('.mlx-a-hnote').style.display = st.area==='Health'?'':'none'; show('3'); }); });
+  root.querySelectorAll('[data-go]').forEach(function(b){ b.addEventListener('click',function(){ var g=b.dataset.go; if(g==='2') g=st.area==='Health'?'2h':'2t'; if(g==='1'){ ok.checked=false; next.disabled=true; } show(g); }); });
+  ok.addEventListener('change',function(){ next.disabled=!ok.checked; });
+  next.addEventListener('click',function(){
+    if(!ok.checked) return;
+    var label=st.area+' – '+st.topic;
+    var wa='https://wa.me/'+root.dataset.wa+'?text='+encodeURIComponent('Hello MedLuxLife, I am interested in: '+label+'.');
+    root.querySelector('[data-ch="wa"]').href=wa;
+    root.querySelector('[data-ch="form"]').href=base()+'/contact/?enquiry='+encodeURIComponent(st.area)+'&topic='+encodeURIComponent(st.topic)+'#contact';
+    root.querySelector('[data-ch="mail"]').href='mailto:info@medluxlife.de?subject='+encodeURIComponent('Enquiry: '+label);
+    show('4'); });
+  root.querySelectorAll('.mlx-a-consent a').forEach(function(a){ a.setAttribute('href', base()+a.getAttribute('href')); });
+  // Prefill the contact form when arriving from the assistant
+  var q=new URLSearchParams(location.search), area=q.get('enquiry'), topic=q.get('topic');
+  if(area){ var tries=0; (function fill(){ var sel=document.querySelector('form.wpcf7-form select[name="your-subject"]');
+    if(!sel){ if(++tries<20) setTimeout(fill,250); return; }
+    if(area==='Health'||area==='Travel'){ sel.value=area; sel.dispatchEvent(new Event('change',{bubbles:true})); }
+    var msg=document.querySelector('form.wpcf7-form textarea[name="your-message"]');
+    if(msg){ if(!msg.value){ if(topic){ msg.value='I am interested in: '+topic+String.fromCharCode(10,10); } } } })(); }
+})();
+</script>
+</div>
