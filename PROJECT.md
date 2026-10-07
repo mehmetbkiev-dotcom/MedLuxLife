@@ -170,3 +170,4 @@ Açık soru: Dil listesindeki **UK** Ukraynaca mı (dil kodu `uk`), yoksa İngil
 - 2026-10-07: Site tagline 'Just another WordPress site' → 'Health · Tourism · Experience' (browser tab title on home page).
 - 2026-10-07: medluxlife.com (+ www) set to HTTP 301 forwarding → https://medluxlife.de in IONOS. .com has no SSL yet (https://medluxlife.com may show a warning). Email info@medluxlife.com unaffected (forwards to .de).
 - 2026-10-07: Domain holder (Reg-C) contact details verified for medluxlife.de and medluxlife.com (holder: Emrah Suphi Sacilanates; business owner: Anna Sacilanates). Optional later: transfer domain holder to Anna.
+- 2026-10-07: Google Search Console: domain property medluxlife.de verified via DNS TXT (google-site-verification, added manually in IONOS DNS; Domain Connect declined because it would disable Mail). Keep the TXT record. Next: submit wp-sitemap.xml, request indexing.
