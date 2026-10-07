@@ -1,0 +1,24 @@
+<style>
+mark.mlx-hl{background:#f6e2b0;color:inherit;padding:0 .15em;border-radius:3px;box-shadow:inset 0 -2px 0 #d4a24c}
+</style>
+<script>
+(function(){
+  if(!document.body.classList.contains('search')) return;
+  var q=new URLSearchParams(location.search).get('s'); if(!q) return;
+  var words=q.trim().split(/\s+/).filter(function(w){ return w.length>1; });
+  if(!words.length) return;
+  var esc=words.map(function(w){ return w.replace(/[.*+?^${}()|[\]\\]/g,function(c){ return '\\'+c; }); });
+  var re=new RegExp('\\b('+esc.join('|')+')\\b','gi');
+  function mark(el){
+    var tw=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,null), nodes=[], n;
+    while((n=tw.nextNode())) nodes.push(n);
+    nodes.forEach(function(t){
+      var s=t.nodeValue; re.lastIndex=0; if(!re.test(s)) return; re.lastIndex=0;
+      var frag=document.createDocumentFragment(), last=0, m;
+      while((m=re.exec(s))){ frag.appendChild(document.createTextNode(s.slice(last,m.index))); var mk=document.createElement('mark'); mk.className='mlx-hl'; mk.textContent=m[0]; frag.appendChild(mk); last=m.index+m[0].length; }
+      frag.appendChild(document.createTextNode(s.slice(last))); t.parentNode.replaceChild(frag,t);
+    });
+  }
+  document.querySelectorAll('.wp-block-query .wp-block-post-title, .wp-block-query .wp-block-post-excerpt').forEach(mark);
+})();
+</script>
