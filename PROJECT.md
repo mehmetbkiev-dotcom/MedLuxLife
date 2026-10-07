@@ -163,3 +163,4 @@ Açık soru: Dil listesindeki **UK** Ukraynaca mı (dil kodu `uk`), yoksa İngil
 - 2026-10-06: Footer Instagram link → https://www.instagram.com/medluxlife/.
 - 2026-10-06: User approved all changes so far (contact form + health consents, legal pages, footer legal/social links, Contact FAQ/spacing/photo).
 - 2026-10-07: Email switched to info@medluxlife.de (new IONOS Mail Basic mailbox; info@medluxlife.com forwards to it). Replaced on pages 3, 26, 602, 604, 612, 616; CF7 589 recipient → info@medluxlife.de; repo sources + e-mail templates updated. Backup: backup/email_switch/.
+- 2026-10-07: User approved e-mail switch to info@medluxlife.de. Next: connect medluxlife.de to WordPress (IONOS Domains & SSL), medluxlife.com → 301 to www.medluxlife.de; then replace site URLs.
