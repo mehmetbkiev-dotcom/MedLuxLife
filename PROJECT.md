@@ -51,7 +51,7 @@ Adult Bone Marrow Transplantation; Algology; Anesthesiology and Reanimation; App
 - Kullanıcıya her seferinde mümkün olduğunca tek tıklama / tek işlem talimatı verilir.
 - WordPress menü isimleri İngilizce verilir.
 - Kullanıcı ekran görüntüsü gönderirse yalnızca bir sonraki adım tarif edilir.
-- Kullanıcı açıkça istemeden yeni görsel üretimi tetiklenmez.
+- ~~Kullanıcı açıkça istemeden yeni görsel üretimi tetiklenmez.~~ 2026-10-07: Kullanıcı bu kuralı kaldırdı; görsel üretilebilir (bu ortamda görsel üretme aracı yok — gerekirse ChatGPT promptu hazırlanır).
 - Save / Update / Publish kullanıcının onayı olmadan yapılmaz.
 - Her değişiklikten sonra kullanıcıya kontrol edip **onaylama** veya **eski hâline döndürme** seçeneği sunulur (değişiklik öncesi yedek alınır).
 
