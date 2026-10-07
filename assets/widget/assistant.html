@@ -2,15 +2,20 @@
 <style>
 .mlx-a{--gold:#d4a24c;--gold2:#e8b75c;--ink:#0b0620;--navy:#1b1530;font-family:inherit}
 .mlx-a *{box-sizing:border-box}
-.mlx-a-fab{position:fixed;right:20px;bottom:20px;z-index:9998;display:flex;align-items:center;gap:10px;background:var(--navy);color:#fff;border:2px solid var(--gold);border-radius:999px;padding:10px 18px 10px 12px;box-shadow:0 8px 24px rgba(11,6,32,.35);cursor:pointer;font:600 15px/1.2 inherit;letter-spacing:.02em}
+.mlx-a-fab{position:fixed;right:20px;bottom:20px;z-index:9998;display:flex;align-items:center;gap:10px;background:var(--navy);color:#fff;border:2px solid var(--gold);border-radius:999px;padding:7px 18px 7px 8px;box-shadow:0 8px 24px rgba(11,6,32,.35);cursor:pointer;font:600 15px/1.2 inherit;letter-spacing:.02em}
 .mlx-a-fab:hover{background:#2a2245}
-.mlx-a-fab svg{width:30px;height:30px;flex:none}
+.mlx-a-fab svg{width:40px;height:40px;flex:none}
+.mlx-a-lbl{display:flex;flex-direction:column;align-items:flex-start;line-height:1.15}
+.mlx-a-lbl b{font-size:15px}
+.mlx-a-lbl small{font-size:11.5px;font-weight:500;opacity:.8;margin-top:2px}
+.mlx-a[data-live="0"] .mlx-a-dot{background:#9aa0a6;box-shadow:0 0 0 3px rgba(154,160,166,.25)}
+.mlx-a-head .mlx-a-av svg{width:44px;height:44px}
 .mlx-a-fab .mlx-a-dot{width:9px;height:9px;border-radius:50%;background:#3ccf6e;box-shadow:0 0 0 3px rgba(60,207,110,.25)}
 .mlx-a[data-open="1"] .mlx-a-fab{display:none}
 .mlx-a-panel{position:fixed;right:20px;bottom:20px;z-index:9999;width:370px;max-width:calc(100vw - 24px);max-height:min(640px,calc(100vh - 40px));display:none;flex-direction:column;background:#fff;border-radius:18px;box-shadow:0 18px 48px rgba(11,6,32,.35);overflow:hidden}
 .mlx-a[data-open="1"] .mlx-a-panel{display:flex}
 .mlx-a-head{background:var(--navy);color:#fff;padding:16px 18px;display:flex;align-items:center;gap:12px;border-bottom:2px solid var(--gold)}
-.mlx-a-head .mlx-a-av{width:40px;height:40px;border-radius:50%;background:var(--gold);color:var(--ink);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;flex:none}
+.mlx-a-head .mlx-a-av{width:44px;height:44px;border-radius:50%;display:flex;flex:none}
 .mlx-a-head strong{display:block;font-size:16px}
 .mlx-a-head small{display:block;font-size:12px;opacity:.75;margin-top:2px}
 .mlx-a-x{margin-left:auto;background:none;border:0;color:#fff;font-size:26px;line-height:1;cursor:pointer;opacity:.8;padding:4px}
@@ -41,14 +46,15 @@
 @media print{.mlx-a{display:none}}
 </style>
 <button type="button" class="mlx-a-fab" aria-haspopup="dialog" aria-controls="mlx-a-panel" aria-expanded="false">
-<svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#d4a24c"/><path d="M9 11.5A2.5 2.5 0 0 1 11.5 9h9a2.5 2.5 0 0 1 2.5 2.5v6a2.5 2.5 0 0 1-2.5 2.5H15l-4 3.2V20h.5A2.5 2.5 0 0 1 9 17.5z" fill="#0b0620"/><circle cx="13" cy="14.5" r="1.1" fill="#d4a24c"/><circle cx="16" cy="14.5" r="1.1" fill="#d4a24c"/><circle cx="19" cy="14.5" r="1.1" fill="#d4a24c"/></svg>
-<span>How can we help?</span><span class="mlx-a-dot" aria-hidden="true"></span>
+<svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24" fill="#d4a24c"/><path d="M9 45c1.5-8.5 7.5-13 15-13s13.5 4.5 15 13a24 24 0 0 1-30 0z" fill="#1b1530"/><path d="M20.5 32.5 24 37l3.5-4.5" fill="#fff"/><circle cx="24" cy="21" r="8.5" fill="#f3d9b8"/><path d="M15.5 20.5c0-6 3.8-9.5 8.5-9.5s8.5 3.5 8.5 9.5c-1.6-2.9-4.4-4.6-8.5-4.6s-6.9 1.7-8.5 4.6z" fill="#3a2a1e"/><path d="M14.2 22a9.8 9.8 0 0 1 19.6 0" fill="none" stroke="#1b1530" stroke-width="1.8" stroke-linecap="round"/><rect x="12.4" y="20" width="3.4" height="6" rx="1.6" fill="#1b1530"/><rect x="32.2" y="20" width="3.4" height="6" rx="1.6" fill="#1b1530"/><path d="M14.4 26c0 3.2 2.6 5 6.1 5" fill="none" stroke="#1b1530" stroke-width="1.5" stroke-linecap="round"/><circle cx="21" cy="31" r="1.4" fill="#1b1530"/></svg>
+<span class="mlx-a-lbl"><b>Live Chat</b><small>Mo–Fr 9–18</small></span><span class="mlx-a-dot" aria-hidden="true"></span>
 </button>
 <div class="mlx-a-panel" id="mlx-a-panel" role="dialog" aria-modal="false" aria-labelledby="mlx-a-title">
-<div class="mlx-a-head"><div class="mlx-a-av" aria-hidden="true">ML</div><div><strong id="mlx-a-title">MedLuxLife Assistant</strong><small>Personal support in DE · EN · TR · UK · RU</small></div><button type="button" class="mlx-a-x" aria-label="Close">×</button></div>
+<div class="mlx-a-head"><div class="mlx-a-av" aria-hidden="true"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24" fill="#d4a24c"/><path d="M9 45c1.5-8.5 7.5-13 15-13s13.5 4.5 15 13a24 24 0 0 1-30 0z" fill="#1b1530"/><path d="M20.5 32.5 24 37l3.5-4.5" fill="#fff"/><circle cx="24" cy="21" r="8.5" fill="#f3d9b8"/><path d="M15.5 20.5c0-6 3.8-9.5 8.5-9.5s8.5 3.5 8.5 9.5c-1.6-2.9-4.4-4.6-8.5-4.6s-6.9 1.7-8.5 4.6z" fill="#3a2a1e"/><path d="M14.2 22a9.8 9.8 0 0 1 19.6 0" fill="none" stroke="#1b1530" stroke-width="1.8" stroke-linecap="round"/><rect x="12.4" y="20" width="3.4" height="6" rx="1.6" fill="#1b1530"/><rect x="32.2" y="20" width="3.4" height="6" rx="1.6" fill="#1b1530"/><path d="M14.4 26c0 3.2 2.6 5 6.1 5" fill="none" stroke="#1b1530" stroke-width="1.5" stroke-linecap="round"/><circle cx="21" cy="31" r="1.4" fill="#1b1530"/></svg></div><div><strong id="mlx-a-title">MedLuxLife Live Chat</strong><small class="mlx-a-status">Mo–Fr 9:00–18:00 · DE · EN · TR · UK · RU</small></div><button type="button" class="mlx-a-x" aria-label="Close">×</button></div>
 <div class="mlx-a-body" aria-live="polite">
 <div class="mlx-a-step on" data-step="1">
 <p class="mlx-a-msg">Hello and welcome to MedLuxLife!</p>
+<p class="mlx-a-msg mlx-a-off" hidden>Our team is currently offline. Leave us a message and we will get back to you on the next working day.</p>
 <p class="mlx-a-msg">What can we help you with today?</p>
 <div class="mlx-a-opts mlx-a-big"><button type="button" class="mlx-a-opt" data-area="Health">Health</button><button type="button" class="mlx-a-opt" data-area="Travel">Travel</button></div>
 </div>
@@ -87,12 +93,15 @@
   var root=document.getElementById('mlx-assistant'); if(!root||root.dataset.ready) return; root.dataset.ready='1';
   var fab=root.querySelector('.mlx-a-fab'), x=root.querySelector('.mlx-a-x'), ok=root.querySelector('.mlx-a-ok'), next=root.querySelector('.mlx-a-next');
   var st={area:'',topic:''};
+  function isLive(){ try{ var p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Berlin',weekday:'short',hour:'numeric',hourCycle:'h23'}).formatToParts(new Date()); var d='',h=0; p.forEach(function(x){ if(x.type==='weekday') d=x.value; if(x.type==='hour') h=+x.value; }); if(d==='Sat'||d==='Sun') return false; return h>=9 ? h<18 : false; }catch(e){ return true; } }
+  function setLive(){ var l=isLive(); root.dataset.live=l?'1':'0'; root.querySelector('.mlx-a-off').hidden=l; }
+  setLive(); setInterval(setLive,60000);
   function base(){ var m=location.pathname.match(/^\/(de|tr|uk|ru)(\/|$)/); return m?'/'+m[1]:''; }
   function show(id){ root.querySelectorAll('.mlx-a-step').forEach(function(s){ s.classList.toggle('on', s.dataset.step===id); }); var b=root.querySelector('.mlx-a-body'); b.scrollTop=0; }
   function open(v){ root.dataset.open=v?'1':''; fab.setAttribute('aria-expanded', v?'true':'false'); if(v) show(root.querySelector('.mlx-a-step.on').dataset.step); else fab.focus(); }
   fab.addEventListener('click',function(){ open(true); });
   x.addEventListener('click',function(){ open(false); });
-  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&root.dataset.open) open(false); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ if(root.dataset.open) open(false); } });
   root.querySelectorAll('[data-area]').forEach(function(b){ b.addEventListener('click',function(){ st.area=b.dataset.area; show(st.area==='Health'?'2h':'2t'); }); });
   root.querySelectorAll('[data-topic]').forEach(function(b){ b.addEventListener('click',function(){
     st.topic=b.dataset.topic; root.querySelector('[data-out="choice"]').textContent=b.textContent.trim();
@@ -104,7 +113,7 @@
     var label=st.area+' – '+st.topic;
     var wa='https://wa.me/'+root.dataset.wa+'?text='+encodeURIComponent('Hello MedLuxLife, I am interested in: '+label+'.');
     root.querySelector('[data-ch="wa"]').href=wa;
-    root.querySelector('[data-ch="form"]').href=base()+'/contact/?enquiry='+encodeURIComponent(st.area)+'&topic='+encodeURIComponent(st.topic)+'#contact';
+    root.querySelector('[data-ch="form"]').href=base()+'/contact/?enquiry='+encodeURIComponent(st.area)+String.fromCharCode(38)+'topic='+encodeURIComponent(st.topic)+'#contact';
     root.querySelector('[data-ch="mail"]').href='mailto:info@medluxlife.de?subject='+encodeURIComponent('Enquiry: '+label);
     show('4'); });
   root.querySelectorAll('.mlx-a-consent a').forEach(function(a){ a.setAttribute('href', base()+a.getAttribute('href')); });
