@@ -1,6 +1,6 @@
 from blocks import *
 
-U = "https://medluxlife-6j8sz55bpn.live-website.com/wp-content/uploads/2026/10/"
+U = "https://medluxlife.de/wp-content/uploads/2026/10/"
 IMG = {
     "hero": (295, U + "medluxlife-dental-hero-1024x966.jpg", "Smiling patient during a dental check-up"),
     "hollywood": (296, U + "medluxlife-dental-hollywood-smile-1024x348.jpg", "Man with a bright, even smile at the dentist"),

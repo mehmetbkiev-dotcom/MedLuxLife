@@ -48,8 +48,8 @@ Telefon: +49 160 93 44 87 14 · E-Mail: info@medluxlife.de
 - Über die Eignung und Durchführung einer Behandlung entscheiden ausschließlich die behandelnden Ärztinnen und Ärzte nach persönlicher Aufklärung. Ein bestimmter Behandlungserfolg kann nicht zugesagt werden.
 
 **Vertragsgrundlagen**
-Es gelten unsere Allgemeinen Geschäftsbedingungen: https://medluxlife-6j8sz55bpn.live-website.com/terms/
-Informationen zum Datenschutz: https://medluxlife-6j8sz55bpn.live-website.com/privacy-policy/
+Es gelten unsere Allgemeinen Geschäftsbedingungen: https://medluxlife.de/terms/
+Informationen zum Datenschutz: https://medluxlife.de/privacy-policy/
 **Ihr Widerrufsrecht:** Als Verbraucher haben Sie ein gesetzliches Widerrufsrecht. Die vollständige Widerrufsbelehrung und das Muster-Widerrufsformular finden Sie [unten in dieser E-Mail / in der beigefügten PDF-Datei].
 
 **So nehmen Sie das Angebot an**
@@ -61,7 +61,7 @@ Bitte antworten Sie auf diese E-Mail und kopieren Sie den folgenden Text in Ihre
 
 > Ich verlange ausdrücklich, dass MedLuxLife bereits vor Ablauf der 14-tägigen Widerrufsfrist mit der vereinbarten Dienstleistung beginnt. Mir ist bekannt, dass ich bei einem Widerruf für die bis dahin bereits erbrachten Leistungen einen angemessenen Betrag zu zahlen habe. Mir ist außerdem bekannt, dass mein Widerrufsrecht bei vollständiger Erbringung der Dienstleistung erlischt, wenn die gesetzlichen Voraussetzungen hierfür erfüllt sind.
 
-**Nur falls Sie uns medizinische Unterlagen senden und Sie diese Einwilligungen noch nicht über unser Kontaktformular erteilt haben**, ergänzen Sie bitte außerdem (Einwilligungserklärung: https://medluxlife-6j8sz55bpn.live-website.com/einwilligung-gesundheitsdaten/):
+**Nur falls Sie uns medizinische Unterlagen senden und Sie diese Einwilligungen noch nicht über unser Kontaktformular erteilt haben**, ergänzen Sie bitte außerdem (Einwilligungserklärung: https://medluxlife.de/einwilligung-gesundheitsdaten/):
 
 > Ich willige ausdrücklich gemäß Art. 9 Abs. 2 lit. a DSGVO ein, dass MedLuxLife meine von mir bereitgestellten Gesundheitsdaten zum Zweck der medizinischen Vorprüfung, Angebotserstellung und Organisation meiner gewünschten Behandlung verarbeitet. Ich habe die Einwilligungserklärung zu Gesundheitsdaten gelesen.
 >
@@ -94,7 +94,7 @@ vielen Dank für Ihre Annahme vom [Datum]. Hiermit bestätigen wir den Vertrag �
 
 **[Nur falls zutreffend:]** Sie haben am [Datum] ausdrücklich verlangt, dass wir vor Ablauf der Widerrufsfrist mit der Dienstleistung beginnen, und bestätigt, dass Ihnen bekannt ist, dass Sie bei einem Widerruf für bereits erbrachte Leistungen einen angemessenen Betrag zu zahlen haben und Ihr Widerrufsrecht bei vollständiger Erbringung der Dienstleistung erlischt.
 
-Die AGB (https://medluxlife-6j8sz55bpn.live-website.com/terms/) und die Widerrufsbelehrung mit Muster-Widerrufsformular [finden Sie unten / im Anhang].
+Die AGB (https://medluxlife.de/terms/) und die Widerrufsbelehrung mit Muster-Widerrufsformular [finden Sie unten / im Anhang].
 
 Mit freundlichen Grüßen
 [Name] · MedLuxLife
@@ -136,7 +136,7 @@ MedLuxLife ist kein Reiseveranstalter, sondern vermittelt die Leistungen der unt
 - Paket / Hajj / Umrah: [gemäß Reisebedingungen des Veranstalters, siehe Anlage]
 - Vermittlungsentgelt MedLuxLife: [z. B. „wird bei Stornierung nicht erstattet“ / „wird erstattet“]
 
-Allgemeine Stornierungsbedingungen: https://medluxlife-6j8sz55bpn.live-website.com/stornierungsbedingungen/
+Allgemeine Stornierungsbedingungen: https://medluxlife.de/stornierungsbedingungen/
 
 **Hinweis zum Widerrufsrecht:** Für Beherbergungs-, Beförderungs- und Freizeitleistungen mit festem Termin besteht nach § 312g Abs. 2 Nr. 9 BGB kein gesetzliches Widerrufsrecht; es gelten die oben genannten Stornierungsbedingungen. Gesetzliche Rücktrittsrechte, insbesondere bei Pauschalreisen, bleiben unberührt.
 
@@ -144,7 +144,7 @@ Allgemeine Stornierungsbedingungen: https://medluxlife-6j8sz55bpn.live-website.c
 
 **Pass, Visum und Gesundheit:** Für die Reise nach [Land] benötigen Staatsangehörige von [Land] [Reisepass mit Gültigkeit von mind. … Monaten / Visum / Impfungen, z. B. Meningokokken-Impfung für Hajj/Umrah]. Bitte prüfen Sie die aktuellen Bestimmungen; für die Einhaltung sind Sie selbst verantwortlich.
 
-**Vertragsgrundlagen:** AGB: https://medluxlife-6j8sz55bpn.live-website.com/terms/ · Datenschutz: https://medluxlife-6j8sz55bpn.live-website.com/privacy-policy/
+**Vertragsgrundlagen:** AGB: https://medluxlife.de/terms/ · Datenschutz: https://medluxlife.de/privacy-policy/
 Ergänzend gelten die Geschäfts- und Beförderungsbedingungen der jeweiligen Leistungsträger.
 
 **So nehmen Sie das Angebot an**
