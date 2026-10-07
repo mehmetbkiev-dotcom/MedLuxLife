@@ -179,3 +179,4 @@ Açık soru: Dil listesindeki **UK** Ukraynaca mı (dil kodu `uk`), yoksa İngil
 - 2026-10-07: Favicon / site icon set to ML monogram (navy circle, gold ring; Media 641, assets/widget/medluxlife-site-icon.png). Previously none (WordPress default). Revert: settings site_icon=0.
 - 2026-10-07: Favicon changed to high-contrast variant: gold circle + navy ML monogram (strokes thickened; Media 642). Live Chat icon switched to transparent gold monogram (Media 643) for review; light circle version = Media 639. Backups: footer_before_transparent.json; previous site_icon 641.
 - 2026-10-07: Final choices: favicon = navy circle + white ML + gold ring (Media 645); Live Chat icon = transparent gold monogram (Media 643). Unused variants: 637, 639, 641, 642.
+- 2026-10-07: Favicon changed again by user choice: white circle + navy ML + gold ring (Media 646). Previous navy variant Media 645.
