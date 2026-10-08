@@ -192,7 +192,7 @@ Açık soru: Dil listesindeki **UK** Ukraynaca mı (dil kodu `uk`), yoksa İngil
 - 2026-10-08: Illustration trial reverted by user (pages 516, 489, 273, 269, 259 restored; media 726–729 deleted). SVG sources kept in assets/dept_icons for reference.
 
 ## HANDOFF (2026-10-08): Health photo replacement with Unsplash — next session starts here
-Status: user created Unsplash app; `UNSPLASH_ACCESS_KEY` env var + allowed domains api.unsplash.com / images.unsplash.com added (key only visible in a NEW session). Domains already reachable.
+Status: user created Unsplash app; allowed domains api.unsplash.com / images.unsplash.com reachable. 2026-10-08 session 2: env var `UNSPLASH_ACCESS_KEY` was NOT visible → user is adding the key as a **Network secret** instead (allowed website api.unsplash.com, custom header `Authorization` with prefix `Client-ID `). So in the new session call the API WITHOUT any key (proxy injects the header); check the session's "Proxy-injected credentials" list for api.unsplash.com. Test: `curl -sS -o /dev/null -w '%{http_code}' 'https://api.unsplash.com/search/photos?query=dentist'` → 200 expected (401 = secret not applied). Dental media 294–300 alt texts already checked.
 Goal: replace all photos on Health pages that were copied from the partner clinic brochure / partner hospital website with Unsplash photos (free license, commercial OK, no attribution needed; still keep photographer name in Media "caption" field as good practice).
 Scope (media IDs → content files):
 - Clinical (content/images.json, 40 + dental 7): dental 294–300 (content/dental.py), hair 306–312, plastic 313–325, aesthetics 326–328, bariatric 329–332, check-up 333–335, IV 336–345 (content/clinical_pages.py).
