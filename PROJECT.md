@@ -51,7 +51,7 @@ Adult Bone Marrow Transplantation; Algology; Anesthesiology and Reanimation; App
 - Kullanıcıya her seferinde mümkün olduğunca tek tıklama / tek işlem talimatı verilir.
 - WordPress menü isimleri İngilizce verilir.
 - Kullanıcı ekran görüntüsü gönderirse yalnızca bir sonraki adım tarif edilir.
-- Kullanıcı açıkça istemeden yeni görsel üretimi tetiklenmez.
+- ~~Kullanıcı açıkça istemeden yeni görsel üretimi tetiklenmez.~~ 2026-10-07: Kullanıcı bu kuralı kaldırdı; görsel üretilebilir (bu ortamda görsel üretme aracı yok — gerekirse ChatGPT promptu hazırlanır).
 - Save / Update / Publish kullanıcının onayı olmadan yapılmaz.
 - Her değişiklikten sonra kullanıcıya kontrol edip **onaylama** veya **eski hâline döndürme** seçeneği sunulur (değişiklik öncesi yedek alınır).
 
@@ -115,7 +115,8 @@ Adult Bone Marrow Transplantation; Algology; Anesthesiology and Reanimation; App
 ## İletişim bilgileri
 - Telefon: +49 160 93 44 87 14
 - WhatsApp: +380 97 909 23 26 (wa.me/380979092326)
-- E-posta: info@medluxlife.com
+- E-posta: info@medluxlife.de (info@medluxlife.com → yönlendirme)
+- Domain: https://medluxlife.de (ana), medluxlife.com (+www) → 301 https://medluxlife.de (2026-10-07)
 - Adres: şimdilik gösterilmiyor
 
 ## 7. Kararlar ile canlı site arasındaki farklar (2026-10-01 itibarıyla)
@@ -162,3 +163,27 @@ Açık soru: Dil listesindeki **UK** Ukraynaca mı (dil kodu `uk`), yoksa İngil
 - 2026-10-06: Footer Facebook link → https://www.facebook.com/profile.php?id=61594715669578 (Instagram link still pending).
 - 2026-10-06: Footer Instagram link → https://www.instagram.com/medluxlife/.
 - 2026-10-06: User approved all changes so far (contact form + health consents, legal pages, footer legal/social links, Contact FAQ/spacing/photo).
+- 2026-10-07: Email switched to info@medluxlife.de (new IONOS Mail Basic mailbox; info@medluxlife.com forwards to it). Replaced on pages 3, 26, 602, 604, 612, 616; CF7 589 recipient → info@medluxlife.de; repo sources + e-mail templates updated. Backup: backup/email_switch/.
+- 2026-10-07: User approved e-mail switch to info@medluxlife.de. Next: connect medluxlife.de to WordPress (IONOS Domains & SSL), medluxlife.com → 301 to www.medluxlife.de; then replace site URLs.
+- 2026-10-07: Domain medluxlife.de connected to WordPress (IONOS "Connect existing website"); WordPress home/siteurl = https://medluxlife.de (IONOS replaced URLs in the DB). SSL Starter Wildcard *.medluxlife.de active (valid to 06/04/2027). Old host 301-redirects home to medluxlife.de. Remaining old-domain spots fixed: AGB § 1 text (page 596), CF7 589 sender → wordpress@medluxlife.de. Repo sources (blocks.B etc.) and e-mail templates now use https://medluxlife.de. Backup: backup/domain_switch/.
+- TODO: medluxlife.com → 301 to https://medluxlife.de (IONOS Domain forwarding); allow medluxlife.de/.com in the session network policy to test from here.
+- 2026-10-07: Site tagline 'Just another WordPress site' → 'Health · Tourism · Experience' (browser tab title on home page).
+- 2026-10-07: medluxlife.com (+ www) set to HTTP 301 forwarding → https://medluxlife.de in IONOS. .com has no SSL yet (https://medluxlife.com may show a warning). Email info@medluxlife.com unaffected (forwards to .de).
+- 2026-10-07: Domain holder (Reg-C) contact details verified for medluxlife.de and medluxlife.com (holder: Emrah Suphi Sacilanates; business owner: Anna Sacilanates). Optional later: transfer domain holder to Anna.
+- 2026-10-07: Google Search Console: domain property medluxlife.de verified via DNS TXT (google-site-verification, added manually in IONOS DNS; Domain Connect declined because it would disable Mail). Keep the TXT record. Next: submit wp-sitemap.xml, request indexing.
+- 2026-10-07: Default 'Hello world!' post moved to trash (was public and in the sitemap). Restore: WP admin → Posts → Trash.
+- 2026-10-07: Search Console: sitemap submitted, indexing requested for https://medluxlife.de/ (priority crawl queue).
+- 2026-10-07: Site-wide guided assistant (bottom-right 'How can we help?'): Health/Travel → topic → privacy consent (required, link to Datenschutz; Health note: no medical documents) → WhatsApp (prefilled text) / contact form (prefills Subject + message via ?enquiry=&topic=) / phone / email. No third-party service, no data stored. Source assets/widget/assistant.html, embedded as Custom HTML block in footer template part. Avoid '&&' in inline scripts (WordPress escapes it). Strings English – translate via TranslatePress. Backup: footer_before_assistant.json.
+- 2026-10-07: Assistant relabelled 'Live Chat · Mo–Fr 9–18' (panel: 'MedLuxLife Live Chat', Mo–Fr 9:00–18:00). Status dot green only Mon–Fri 09–18 Europe/Berlin; outside hours grey + 'Our team is currently offline…' message. Avatar: illustrated advisor with headset (SVG, no real/fake person). Inline script must not contain '&' (WordPress escapes it). Backup: footer_before_livechat.json.
+- 2026-10-07: Live Chat avatar replaced by ML logo monogram icon (cream circle, gold ring; Media 639 medluxlife-chat-icon-light.png; dark variant Media 637 unused). Sources in assets/widget/. Backup: footer_before_logoicon.json.
+- 2026-10-07: Favicon / site icon set to ML monogram (navy circle, gold ring; Media 641, assets/widget/medluxlife-site-icon.png). Previously none (WordPress default). Revert: settings site_icon=0.
+- 2026-10-07: Favicon changed to high-contrast variant: gold circle + navy ML monogram (strokes thickened; Media 642). Live Chat icon switched to transparent gold monogram (Media 643) for review; light circle version = Media 639. Backups: footer_before_transparent.json; previous site_icon 641.
+- 2026-10-07: Final choices: favicon = navy circle + white ML + gold ring (Media 645); Live Chat icon = transparent gold monogram (Media 643). Unused variants: 637, 639, 641, 642.
+- 2026-10-07: Favicon changed again by user choice: white circle + navy ML + gold ring (Media 646). Previous navy variant Media 645.
+- 2026-10-07: Header search added (core Search block, icon only, field expands to the left; placeholder 'Search treatments, travel…'; class medlux-header-search, before Free Consultation). Fixed pre-existing horizontal overflow of the header between 600–1140px: navigation switches to hamburger below 1100px; language switcher shows flag only below 1500px. Mobile (<600): search icon visible left of hamburger, CTA/lang hidden as before. Search results page: dates hidden, gold search button. Backups: header_before_search.json, gs5_before_search.json.
+- 2026-10-07: Header menu centred on desktop (≥1101px): header inner row is a 3-column grid (logo | menu | search+CTA+language). Below 1700px: language flag only, compact CTA, tighter menu letter-spacing (more at 1101–1300). Measured centre offset: 0px at 1920/1536/1440, ≤23px at 1366/1280/1200. Backup: gs5_before_navcenter.json.
+- 2026-10-07: Header search field now opens to the right (≥600px, overlays CTA/language while open; z-index above TranslatePress switcher). On phones it still opens to the left (no room on the right). Backup: gs5_before_searchright.json.
+- 2026-10-07: Search: installed free Relevanssi 4.28.4 (relevance ranking; title weighted), index built by re-saving 96 pages via REST. 'eye' now ranks Ophthalmology first. Remaining partial-word hits (eyelid, eyebrow…) need Relevanssi setting 'Keyword matching: Whole words' (wp-admin only, not exposed via REST) – user to set. Revert: deactivate plugin.
+- 2026-10-07: Relevanssi set to whole-word matching by user (verified: 'eye' → Ophthalmology, Hospital & Specialist, Plastic Surgery, Paediatric Oncology, Audiology; partial hits like 'eyelid'/'eyebrow'-only pages gone). Approved.
+- 2026-10-07: Search results: searched words highlighted (light gold background + gold underline, <mark class=mlx-hl>) in result titles and excerpts via assets/widget/search_highlight.html (second Custom HTML block in footer, runs only on body.search). Tip for user: Relevanssi → Excerpts and highlights → 'Create custom search result snippets' so excerpts show text around the term. Backup: footer_before_highlight.json.
+- 2026-10-07: Relevanssi custom snippets don't reach the block theme's Post Excerpt block, so search_highlight.html now replaces excerpts that lack the term: it fetches the result page, finds the first paragraph/list item containing the word and shows ~30 words around it, then highlights. Relevanssi Display & UI: snippets on, 30 words, no highlighting (set by user).

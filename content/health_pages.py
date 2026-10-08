@@ -5,7 +5,7 @@ from hospital_pages import FEATURED, featured_card, H, C
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 IMG = {k: tuple(v) for k, v in json.load(open(os.path.join(HERE, 'images.json'))).items()}
-IMG["dental-hero"] = (295, "https://medluxlife-6j8sz55bpn.live-website.com/wp-content/uploads/2026/10/medluxlife-dental-hero-1024x966.jpg", "Smiling patient during a dental check-up")
+IMG["dental-hero"] = (295, "https://medluxlife.de/wp-content/uploads/2026/10/medluxlife-dental-hero-1024x966.jpg", "Smiling patient during a dental check-up")
 
 CLINICAL = [
     ("Dental and Oral Health", "dental-and-oral-health", "dental-hero", "Hollywood Smile, implants, zirconium veneers, orthodontics and complete dental care."),

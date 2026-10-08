@@ -1,7 +1,7 @@
 """Helpers that emit valid Gutenberg block markup for MedLuxLife treatment pages."""
 import html, json
 
-B = "https://medluxlife-6j8sz55bpn.live-website.com"
+B = "https://medluxlife.de"
 WHATSAPP = "https://wa.me/380979092326"
 
 def esc(t): return html.escape(t, quote=False)

@@ -11,7 +11,7 @@ def PH(t): return f'<mark class="medlux-placeholder">[{t}]</mark>'
 
 COMPANY = "Inh. Anna Sacilanates (Einzelunternehmen)"
 ADDRESS = "Stolberger Straße 21, 52068 Aachen, Deutschland"
-CONTACT = f'Telefon: <a href="tel:+4916093448714">+49 160 93 44 87 14</a><br>E-Mail: <a href="mailto:info@medluxlife.com">info@medluxlife.com</a>'
+CONTACT = f'Telefon: <a href="tel:+4916093448714">+49 160 93 44 87 14</a><br>E-Mail: <a href="mailto:info@medluxlife.de">info@medluxlife.de</a>'
 DATE = "Oktober 2026"
 
 def note():
@@ -19,7 +19,7 @@ def note():
 
 def privacy():
     # Final text supplied by the owner on 2026-10-06 (source notes/links left out).
-    MAIL = '<a href="mailto:info@medluxlife.com">info@medluxlife.com</a>'
+    MAIL = '<a href="mailto:info@medluxlife.de">info@medluxlife.de</a>'
     b = [note(), p(f"Stand: {DATE}")]
     b += [h("1. Verantwortlicher"),
           p("Verantwortlich für die Verarbeitung personenbezogener Daten auf dieser Website im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:"),
@@ -209,14 +209,14 @@ def health_consent():
           p("Ohne meine Einwilligung kann MedLuxLife meine Gesundheitsdaten nicht auf dieser Grundlage verarbeiten bzw. an einen medizinischen Leistungserbringer in der Türkei übermitteln. Dadurch kann eine medizinische Beurteilung, Angebotserstellung oder Organisation der gewünschten Behandlung gegebenenfalls nicht möglich sein."),
           p("Ich kann meine Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen. Der Widerruf berührt nicht die Rechtmäßigkeit der Verarbeitung, die aufgrund meiner Einwilligung bis zum Zeitpunkt des Widerrufs erfolgt ist."),
           p("Der Widerruf kann insbesondere per E-Mail gerichtet werden an:"),
-          p('MedLuxLife<br>Inh. Anna Sacilanates<br>Stolberger Straße 21<br>52068 Aachen, Deutschland<br>E-Mail: <a href="mailto:info@medluxlife.com">info@medluxlife.com</a>'),
+          p('MedLuxLife<br>Inh. Anna Sacilanates<br>Stolberger Straße 21<br>52068 Aachen, Deutschland<br>E-Mail: <a href="mailto:info@medluxlife.de">info@medluxlife.de</a>'),
           p(f'Weitere Informationen zur Verarbeitung personenbezogener Daten und zu meinen Datenschutzrechten finde ich in der <a href="{B}/privacy-policy/">Datenschutzerklärung</a> von MedLuxLife.')]
     return group(b, "medlux-legal")
 
 def withdrawal():
     # Final text supplied by the owner on 2026-10-06 (source notes/links left out).
     ADR = "MedLuxLife<br>Inh. Anna Sacilanates (Einzelunternehmen)<br>Stolberger Straße 21<br>52068 Aachen<br>Deutschland"
-    MAIL = 'E-Mail: <a href="mailto:info@medluxlife.com">info@medluxlife.com</a>'
+    MAIL = 'E-Mail: <a href="mailto:info@medluxlife.de">info@medluxlife.de</a>'
     b = [note(), p(f"Stand: {DATE}")]
     b += [h("Widerrufsrecht"),
           p("Soweit Ihnen bei dem mit MedLuxLife geschlossenen Vertrag gesetzlich ein Widerrufsrecht zusteht, haben Sie das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen."),
@@ -243,7 +243,7 @@ def withdrawal():
           p("<strong>Wichtig:</strong> Für Pauschalreiseverträge und bestimmte andere Reiseleistungen gelten besondere gesetzliche Bestimmungen. Die vorstehende allgemeine Widerrufsbelehrung findet daher nur Anwendung, soweit für den jeweiligen Vertrag tatsächlich ein gesetzliches Widerrufsrecht besteht.")]
     b += [h("Muster-Widerrufsformular"),
           p("Wenn Sie den Vertrag widerrufen möchten, können Sie dieses Formular verwenden und an uns übermitteln:"),
-          p(f"An:<br>{ADR}<br>E-Mail: info@medluxlife.com"),
+          p(f"An:<br>{ADR}<br>E-Mail: info@medluxlife.de"),
           p("Hiermit widerrufe(n) ich/wir den von mir/uns abgeschlossenen Vertrag über die Erbringung der folgenden Dienstleistung:"),
           p("Dienstleistung: ______________________________<br>Bestellt / Vertrag geschlossen am: ______________________________<br>Name des/der Verbraucher(s): ______________________________<br>Anschrift des/der Verbraucher(s): ______________________________<br>Datum: ______________________________<br>Unterschrift des/der Verbraucher(s): ______________________________<br>(nur bei Mitteilung auf Papier)")]
     return group(b, "medlux-legal")
@@ -256,7 +256,7 @@ def cancellation():
          p("Bereits entstandene oder nicht erstattungsfähige Kosten können von einer Rückerstattung abgezogen werden."),
          p(f'Für bestimmte, auf einen festen Termin oder Zeitraum bezogene Reise- und Freizeitdienstleistungen besteht gemäß § 312g Abs. 2 Nr. 9 BGB kein gesetzliches 14-tägiges <a href="{B}/widerrufsbelehrung/">Widerrufsrecht</a>. Gesetzliche Rücktrittsrechte, insbesondere bei Pauschalreisen, bleiben unberührt.'),
          h("Stornierungen sind zu richten an:", 3),
-         p('MedLuxLife<br>Inh. Anna Sacilanates<br>E-Mail: <a href="mailto:info@medluxlife.com">info@medluxlife.com</a>')]
+         p('MedLuxLife<br>Inh. Anna Sacilanates<br>E-Mail: <a href="mailto:info@medluxlife.de">info@medluxlife.de</a>')]
     return group(b, "medlux-legal")
 
 if __name__ == "__main__":
