@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="360 105 480 480" class="mlx-dept-icon" aria-hidden="true">
+<defs><linearGradient id="g_cardiology" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f0c46a"/><stop offset="1" stop-color="#c9952f"/></linearGradient></defs>
+<circle cx="600" cy="345" r="215" fill="rgba(11,6,32,0.35)" stroke="url(#g_cardiology)" stroke-width="3"/>
+<circle cx="600" cy="345" r="232" fill="none" stroke="#d4a24c" stroke-width="1.5" opacity="0.45" stroke-dasharray="4 10"/>
+<g fill="none" stroke="url(#g_cardiology)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M600 470 C 520 410 440 350 440 280 C 440 230 478 195 525 195 C 560 195 585 213 600 240 C 615 213 640 195 675 195 C 722 195 760 230 760 280 C 760 350 680 410 600 470 Z"/>
+<path d="M430 330 H 520 L 545 290 L 575 380 L 605 300 L 625 340 H 770" stroke-width="7"/></g>
+</svg>
