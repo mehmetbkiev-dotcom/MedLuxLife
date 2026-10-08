@@ -3,6 +3,19 @@
 Site: https://medluxlife-6j8sz55bpn.live-website.com (IONOS WordPress, tema **Extendable**, çeviri **TranslatePress**)
 Ön sayfa: **Home** (page ID 23). Hero = core Cover block.
 
+
+## KALICI ÇALIŞMA KURALLARI (her oturum önce bunu okur)
+- Konuşma dili Türkçe; WordPress menü/sayfa adları İngilizce. Adım adım ilerlenir.
+- Her değişiklikten önce yedek alınır (backups/wp/ veya oturum scratchpad'i), sonra kullanıcıya ekran görüntüsü + **✅ Onayla / ↩️ Geri al** sunulur.
+- Partner hastanenin adı (Yeditepe) sitede asla geçmez → "our partner hospital". CelyxMed / partner klinik adı, markası, adresi geçmez.
+- Travel ve Health birbirinden bağımsız faaliyetler; Travel sayfalarında sağlık referansı yok.
+- Sitede fiyat yok. HWG: önce/sonra görseli yok, başarı oranı/"en iyi/ilk" iddiası yok, hastalık tedavi vaadi yok.
+- Partner hastanenin tanınabilir gerçek çalışanlarını gösteren foto yok.
+- Kullanıcıdan şifre/anahtar sohbette istenmez; anahtarlar ortam değişkeni olarak eklenir (UNSPLASH_ACCESS_KEY, PIXABAY_API_KEY).
+- Şirket: MedLuxLife, Inh. Anna Sacilanates (Einzelunternehmen), Stolberger Straße 21, 52068 Aachen. Domain sahibi: Emrah Suphi Sacilanates (Anna'nın eşi; sohbetteki kullanıcı). E-posta info@medluxlife.de; site https://medluxlife.de (medluxlife.com → 301).
+- WP erişimi: REST https://medluxlife-6j8sz55bpn.live-website.com/wp-json (proxy uygulama şifresini ekler); medluxlife.de konteynerden erişilemez. Inline script'lerde '&' kullanma (WordPress kaçışlıyor).
+- Eski oturumun tüm yedekleri: backups/wp/ (sayfa, footer, header, global styles, CF7 JSON'ları; geri almak için içerikleri REST ile geri POST et).
+
 ## 1. Genel kararlar
 - **Marka:** MEDLUXLIFE
 - **Ana yapı:** HEALTH (ana iş alanı), TRAVEL, ABOUT US, CONTACT
@@ -203,6 +216,8 @@ Rules: no before/after, no identifiable real hospital staff of the partner, no l
 Method: page by page. For each slot: search API (orientation=landscape, content_filter=high), build numbered contact sheet, pick visually, upload to WP Media (alt text = existing alt), then swap in page content: `"id":OLD`→NEW, `wp-image-OLD`→NEW, src URL containing old file stem → new URL (see pattern used in 2026-10-08 illustration trial). Back up each page first (scratchpad backup/). Screenshot (tools/snap.mjs maps medluxlife.de → old host), show user, ask Onayla / Geri al. Start with Dental (7 images). After approval delete old media? → ask user.
 Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (proxy injects app password). Site URL is https://medluxlife.de (not reachable from the container).
 
-- 2026-10-08: **Unsplash değişimi — Dental (260) uygulandı, kullanıcı onayı bekleniyor.** Eski 294–300 → yeni 740–746 (Unsplash, 1600px; Media caption'da fotoğrafçı adı + Unsplash linki). 295 (dental hero) ayrıca Clinical Treatments (258) ve Health (27) sayfalarında da kullanılıyordu → 741 ile değiştirildi. Alt text'ler yeni fotoğrafa göre güncellendi. Eski medya henüz silinmedi. Yedekler bu oturumun scratchpad'inde (page260/258/27 JSON).
+- 2026-10-08: **Unsplash değişimi — Dental (260) uygulandı, kullanıcı ONAYLADI; eski medya silinmeyecek (kullanıcı kararı).** Eski 294–300 → yeni 740–746 (Unsplash, 1600px; Media caption'da fotoğrafçı adı + Unsplash linki). 295 (dental hero) ayrıca Clinical Treatments (258) ve Health (27) sayfalarında da kullanılıyordu → 741 ile değiştirildi. Alt text'ler yeni fotoğrafa göre güncellendi. Eski medya henüz silinmedi. Yedekler: backups/wp/unsplash/ (page260/258/27 JSON).
   - Araçlar: `tools/sheet.py OUTDIR NAME "q1" "q2"` (numaralı kontakt sayfası + JSON), `tools/upload.py picks.json` (indir + download_location + WP Media'ya yükle → picks.out.json), `tools/swap.py PAGE picks.out.json [--apply]` (backup/pageN.json'dan id/wp-image/src/alt değişimi). Scratchpad'de `us/` ve `backup/` klasörleriyle çalıştırılır.
   - Unsplash anahtarı "Demo" modunda: **saatte 50 API isteği** (arama başına 1). Kalan ~115 görsel için ya saatlik partiler ya da Unsplash'ta "Apply for Production" (5000/saat).
+- 2026-10-08: Optional second photo source: Pixabay API (free, commercial use OK, no attribution required). If env var `PIXABAY_API_KEY` exists and pixabay.com / cdn.pixabay.com are allowed, use it as fallback when Unsplash has no good match (niche departments) or Unsplash's 50 req/h demo limit is reached. API: https://pixabay.com/api/?key=…&q=…&image_type=photo&orientation=horizontal&safesearch=true&per_page=30; download largeImageURL (re-host on WP, never hotlink).
+- 2026-10-08: **Unsplash — Hair Transplantation (261) uygulandı, onay bekleniyor.** 306–312 → 750–756; 306 ayrıca Clinical Treatments (258) kartında → 750. Yedekler backups/wp/unsplash/ (page261, page258_before_hair).
