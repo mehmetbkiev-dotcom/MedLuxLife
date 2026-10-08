@@ -12,6 +12,7 @@ Site: https://medluxlife-6j8sz55bpn.live-website.com (IONOS WordPress, tema **Ex
 - Sitede fiyat yok. HWG: önce/sonra görseli yok, başarı oranı/"en iyi/ilk" iddiası yok, hastalık tedavi vaadi yok.
 - Partner hastanenin tanınabilir gerçek çalışanlarını gösteren foto yok.
 - Kullanıcıdan şifre/anahtar sohbette istenmez; anahtarlar ortam değişkeni olarak eklenir (UNSPLASH_ACCESS_KEY, PIXABAY_API_KEY).
+- **Yeni sohbet açtırma.** Ortama eklenen anahtar/izinler için kullanıcının sayfayı yenilemesi (refresh) yeterli. Anahtar env değişkeni olarak görünmese de proxy bağlantıda ekleyebilir → "yok" demeden önce gerçek bir API isteğiyle test et (ör. Unsplash anahtarı env'de görünmüyor ama aramalar çalışıyor).
 - Şirket: MedLuxLife, Inh. Anna Sacilanates (Einzelunternehmen), Stolberger Straße 21, 52068 Aachen. Domain sahibi: Emrah Suphi Sacilanates (Anna'nın eşi; sohbetteki kullanıcı). E-posta info@medluxlife.de; site https://medluxlife.de (medluxlife.com → 301).
 - WP erişimi: REST https://medluxlife-6j8sz55bpn.live-website.com/wp-json (proxy uygulama şifresini ekler); medluxlife.de konteynerden erişilemez. Inline script'lerde '&' kullanma (WordPress kaçışlıyor).
 - Eski oturumun tüm yedekleri: backups/wp/ (sayfa, footer, header, global styles, CF7 JSON'ları; geri almak için içerikleri REST ile geri POST et).
