@@ -21,7 +21,7 @@
   const S = {
     markets: [], m: null, sym: localStorage.getItem('sym') || 'BTCUSDT', interval: localStorage.getItem('iv') || '1m',
     me: null, balances: {}, pnl: null, open: [], history: [], myTrades: [], tickers: {},
-    depth: { bids: [], asks: [] }, trades: [], klines: [], type: 'LIMIT', tab: 'open', es: null, hover: null,
+    depth: { bids: [], asks: [] }, trades: [], klines: [], type: 'LIMIT', tab: 'open', es: null, hover: null, mode: 'sse', lastTradeId: 0,
     visible: 90,
   };
 
@@ -518,61 +518,110 @@
   }
 
   // ---------------- streaming ----------------
-  function connect() {
+  function onDepth(d) {
+    if (d.symbol !== S.sym) return;
+    S.depth = d;
+    renderBook();
+  }
+  function onTrades(all) {
+    const list = all.filter((t) => t.symbol === S.sym && t.id > S.lastTradeId);
+    if (!list.length) return;
+    for (const t of list) {
+      S.trades.unshift(t);
+      applyTradeToKlines(t);
+    }
+    S.lastTradeId = list[list.length - 1].id;
+    S.trades.length = Math.min(S.trades.length, 100);
+    if (S.tickers[S.sym]) S.tickers[S.sym].last = list[list.length - 1].price;
+    renderTrades();
+    renderTicker();
+  }
+  function onTickers(list) {
+    for (const t of list) S.tickers[t.symbol] = t;
+    renderMarkets();
+    renderTicker();
+    renderBook();
+  }
+  function onAccount(d) {
+    S.balances = d.balances;
+    S.pnl = d.pnl;
+    renderAvail();
+    renderAccountBar();
+    if (S.tab === 'assets') queueAcc();
+  }
+  function onOrder(o) {
+    const i = S.open.findIndex((x) => x.id === o.id);
+    const isOpen = o.status === 'NEW' || o.status === 'PARTIALLY_FILLED';
+    if (i >= 0) {
+      if (isOpen) S.open[i] = o;
+      else S.open.splice(i, 1);
+    } else if (isOpen) S.open.unshift(o);
+    const h = S.history.findIndex((x) => x.id === o.id);
+    if (h >= 0) S.history[h] = o;
+    else S.history.unshift(o);
+    queueAcc();
+  }
+
+  function stopRealtime() {
     if (S.es) S.es.close();
+    S.es = null;
+    clearTimeout(S.pollTimer);
+    clearTimeout(S.sseWatchdog);
+    S.pollGen = (S.pollGen || 0) + 1;
+  }
+
+  function connect() {
+    stopRealtime();
+    // Якщо стрім уже не пройшов у цій мережі — одразу опитування
+    if (S.mode === 'poll') return startPolling();
     const es = new EventSource(`/api/stream?symbol=${S.sym}`);
     S.es = es;
-    es.addEventListener('depth', (e) => {
-      const d = JSON.parse(e.data);
-      if (d.symbol !== S.sym) return;
-      S.depth = d;
-      renderBook();
-    });
-    es.addEventListener('trades', (e) => {
-      const list = JSON.parse(e.data).filter((t) => t.symbol === S.sym);
-      if (!list.length) return;
-      for (const t of list) {
-        S.trades.unshift(t);
-        applyTradeToKlines(t);
-      }
-      S.trades.length = Math.min(S.trades.length, 100);
-      if (S.tickers[S.sym]) S.tickers[S.sym].last = list[list.length - 1].price;
-      renderTrades();
-      renderTicker();
-    });
-    es.addEventListener('tickers', (e) => {
-      for (const t of JSON.parse(e.data)) S.tickers[t.symbol] = t;
-      renderMarkets();
-      renderTicker();
-      renderBook();
-    });
-    es.addEventListener('account', (e) => {
-      const d = JSON.parse(e.data);
-      S.balances = d.balances;
-      S.pnl = d.pnl;
-      renderAvail();
-      renderAccountBar();
-      if (S.tab === 'assets') queueAcc();
-    });
-    es.addEventListener('order', (e) => {
-      const o = JSON.parse(e.data);
-      const i = S.open.findIndex((x) => x.id === o.id);
-      const isOpen = o.status === 'NEW' || o.status === 'PARTIALLY_FILLED';
-      if (i >= 0) {
-        if (isOpen) S.open[i] = o;
-        else S.open.splice(i, 1);
-      } else if (isOpen) S.open.unshift(o);
-      const h = S.history.findIndex((x) => x.id === o.id);
-      if (h >= 0) S.history[h] = o;
-      else S.history.unshift(o);
-      queueAcc();
-    });
+    let alive = false;
+    const on = (name, fn) => es.addEventListener(name, (e) => { alive = true; fn(JSON.parse(e.data)); });
+    on('depth', onDepth);
+    on('trades', onTrades);
+    on('tickers', onTickers);
+    on('account', onAccount);
+    on('order', onOrder);
     let myTradeTimer = null;
-    es.addEventListener('myTrade', () => {
+    on('myTrade', () => {
       // повні дані угоди (комісія, роль) підтягуємо з API, не частіше ніж раз на 0.5 с
       if (S.tab !== 'mytrades' || myTradeTimer) return;
       myTradeTimer = setTimeout(() => { myTradeTimer = null; refreshPrivate(); }, 500);
     });
+    // Сервер шле дані одразу після підключення; якщо за 6 с нічого — мережа (проксі/тунель)
+    // не пропускає стрім, переходимо на опитування раз на секунду.
+    S.sseWatchdog = setTimeout(() => {
+      if (alive) return;
+      S.mode = 'poll';
+      connect();
+    }, 6000);
+  }
+
+  function startPolling() {
+    const gen = S.pollGen;
+    let lastOpen = '';
+    const tick = async () => {
+      if (gen !== S.pollGen) return;
+      try {
+        const d = await api('GET', `/api/poll?symbol=${S.sym}&since=${S.lastTradeId}`);
+        if (gen !== S.pollGen) return;
+        onDepth(d.depth);
+        onTickers(d.tickers);
+        onTrades(d.trades);
+        if (d.account) {
+          onAccount(d.account);
+          const sig = JSON.stringify(d.open);
+          if (sig !== lastOpen) {
+            lastOpen = sig;
+            S.open = d.open;
+            queueAcc();
+          }
+        }
+      } catch {}
+      if (gen === S.pollGen) S.pollTimer = setTimeout(tick, document.hidden ? 5000 : 1000);
+    };
+    tick();
   }
 
   // ---------------- market switching ----------------
@@ -589,6 +638,7 @@
     ]);
     S.depth = depth;
     S.trades = trades;
+    S.lastTradeId = trades[0]?.id || 0;
     S.klines = klines;
     for (const f of ['#form-buy', '#form-sell']) if ($(f).price) $(f).price.value = '';
     renderAll();

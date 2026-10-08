@@ -65,6 +65,7 @@ function createServer(options = {}) {
     for (const c of clients) if (symbol === null || c.symbol === symbol) c.res.write(msg);
   }
   const pendingTrades = new Map(); // symbol -> [trade]
+  const recentTrades = new Map(); // symbol -> останні 200 угод (для режиму опитування)
 
   engine.onEvents = (events) => {
     for (const e of events) {
@@ -79,6 +80,10 @@ function createServer(options = {}) {
         const pub = { id: t.id, symbol: t.symbol, price: fmt(t.price), qty: fmt(t.qty), side: t.takerSide, ts: t.ts };
         if (!pendingTrades.has(t.symbol)) pendingTrades.set(t.symbol, []);
         pendingTrades.get(t.symbol).push(pub);
+        if (!recentTrades.has(t.symbol)) recentTrades.set(t.symbol, []);
+        const rt = recentTrades.get(t.symbol);
+        rt.push(pub);
+        if (rt.length > 250) rt.splice(0, rt.length - 200);
         for (const uid of new Set([t.buyer, t.seller])) {
           const set = byUser.get(uid);
           if (set) for (const c of set) send(c, 'myTrade', { ...pub, mySide: uid === t.buyer ? 'BUY' : 'SELL' });
@@ -121,12 +126,21 @@ function createServer(options = {}) {
   // ---------- helpers ----------
   function clientIp(req) {
     if (conf.trustProxy) {
+      const cf = req.headers['cf-connecting-ip']; // Cloudflare Tunnel
+      if (cf) return String(cf).trim();
       const xff = req.headers['x-forwarded-for'];
       if (xff) return xff.split(',')[0].trim();
     }
     return req.socket.remoteAddress || '';
   }
-  const isLocal = (ip) => ip === '127.0.0.1' || ip === '::1' || ip === '::ffff:127.0.0.1';
+  const LOOPBACK = new Set(['127.0.0.1', '::1', '::ffff:127.0.0.1']);
+  // "Локальний" = справді з цього комп'ютера. Запити через тунель/проксі теж приходять
+  // з 127.0.0.1, але несуть заголовки пересилання — їм привілеї localhost не даються.
+  function isLocalReq(req) {
+    const h = req.headers;
+    if (h['cf-connecting-ip'] || h['x-forwarded-for'] || h['x-real-ip'] || h['forwarded']) return false;
+    return LOOPBACK.has(req.socket.remoteAddress);
+  }
 
   function getToken(req) {
     const h = req.headers.authorization;
@@ -187,7 +201,7 @@ function createServer(options = {}) {
     const t = ctx.req.headers['x-admin-token'];
     const okAdmin = conf.adminToken && typeof t === 'string' && t.length === conf.adminToken.length &&
       require('node:crypto').timingSafeEqual(Buffer.from(t), Buffer.from(conf.adminToken));
-    if (!okAdmin && !isLocal(ctx.ip)) throw new ApiError(403, 'FORBIDDEN', 'Тільки для адміністратора');
+    if (!okAdmin && !ctx.local) throw new ApiError(403, 'FORBIDDEN', 'Тільки для адміністратора');
   }
 
   function tradeLimit(ctx) {
@@ -220,7 +234,7 @@ function createServer(options = {}) {
     },
 
     'POST /api/register': async (ctx) => {
-      if (!isLocal(ctx.ip) && !allow(`reg:${ctx.ip}`, 5 / 60, 5))
+      if (!ctx.local && !allow(`reg:${ctx.ip}`, 5 / 60, 5))
         throw new ApiError(429, 'RATE_LIMIT', 'Забагато реєстрацій з цієї IP');
       const { username, password } = ctx.body;
       const err = auth.validate(username, password);
@@ -233,7 +247,7 @@ function createServer(options = {}) {
       return { id: uid, username, token };
     },
     'POST /api/login': async (ctx) => {
-      if (!isLocal(ctx.ip) && !allow(`login:${ctx.ip}`, 10 / 60, 10))
+      if (!ctx.local && !allow(`login:${ctx.ip}`, 10 / 60, 10))
         throw new ApiError(429, 'RATE_LIMIT', 'Забагато спроб входу');
       const { username, password } = ctx.body;
       if (typeof username !== 'string' || typeof password !== 'string' || password.length > 100)
@@ -291,6 +305,23 @@ function createServer(options = {}) {
     'GET /api/admin/broker': (ctx) => {
       requireAdmin(ctx);
       return hedger ? hedger.status() : { broker: null, message: 'Брокер не підключено (BROKER не задано)' };
+    },
+    // Запасний канал для мереж, де стрім (SSE) не проходить (напр. швидкий тунель Cloudflare):
+    // клієнт раз на секунду забирає все одним запитом.
+    'GET /api/poll': (ctx) => {
+      const symbol = symbolParam(ctx.q.get('symbol'));
+      const since = Number(ctx.q.get('since')) || 0;
+      const out = {
+        depth: engine.depth(symbol, 20),
+        tickers: [...engine.markets.keys()].map((s) => engine.ticker(s)),
+        trades: (recentTrades.get(symbol) || []).filter((t) => t.id > since).slice(-100),
+      };
+      if (ctx.session) {
+        const uid = ctx.session.uid;
+        out.account = { balances: engine.balances(uid), pnl: engine.pnl(uid) };
+        out.open = engine.openOrders(uid);
+      }
+      return out;
     },
     'GET /api/health': () => ({ ok: true, uptime: Math.round(process.uptime()) }),
   };
@@ -353,7 +384,7 @@ function createServer(options = {}) {
     res.setHeader('Content-Security-Policy', "default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:");
     const url = new URL(req.url, 'http://x');
     const ctx = {
-      req, res, q: url.searchParams, ip: clientIp(req), token: getToken(req), session: null, body: {},
+      req, res, q: url.searchParams, ip: clientIp(req), local: isLocalReq(req), token: getToken(req), session: null, body: {},
       setHeader: (k, v) => res.setHeader(k, v),
     };
     try {
@@ -361,7 +392,7 @@ function createServer(options = {}) {
         if (req.method !== 'GET' && req.method !== 'HEAD') throw new ApiError(405, 'METHOD', 'Method not allowed');
         return serveStatic(req, res, url.pathname);
       }
-      if (!isLocal(ctx.ip) && !allow(`ip:${ctx.ip}`, 50, 100)) throw new ApiError(429, 'RATE_LIMIT', 'Забагато запитів');
+      if (!ctx.local && !allow(`ip:${ctx.ip}`, 50, 100)) throw new ApiError(429, 'RATE_LIMIT', 'Забагато запитів');
       ctx.session = auth.resolve(ctx.token);
       if (url.pathname === '/api/stream' && req.method === 'GET') return openStream(ctx);
       const handler = routes[`${req.method} ${url.pathname}`];

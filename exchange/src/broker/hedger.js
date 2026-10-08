@@ -159,7 +159,11 @@ class Hedger {
   }
 
   _err(where, e) {
+    const prev = this.lastError;
     this.lastError = { where, message: e.message, ts: Date.now() };
+    // однакову помилку (напр. брокер недоступний) пишемо в лог не частіше ніж раз на хвилину
+    if (prev && prev.where === where && prev.message === e.message && Date.now() - (this._loggedAt || 0) < 60000) return;
+    this._loggedAt = Date.now();
     console.error(`Брокер [${where}]: ${e.message}`);
   }
 

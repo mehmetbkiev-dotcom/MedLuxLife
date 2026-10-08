@@ -46,6 +46,18 @@ async function openStream(token, symbol, signal) {
   } catch {}
 }
 
+// LT_POLL=1 — як браузер за тунелем без стріму: опитування /api/poll раз на секунду
+const POLL = process.env.LT_POLL === '1';
+async function pollLoop(token, sym, deadline) {
+  let since = 0;
+  while (Date.now() < deadline) {
+    const d = await call(token, 'GET', `/api/poll?symbol=${sym}&since=${since}`).catch(() => null);
+    if (d?.trades?.length) since = d.trades[d.trades.length - 1].id;
+    sseEvents += d ? 1 : 0;
+    await new Promise((r) => setTimeout(r, 1000));
+  }
+}
+
 const rnd = (a, b) => a + Math.random() * (b - a);
 
 async function trader(i, deadline, ac) {
@@ -55,7 +67,8 @@ async function trader(i, deadline, ac) {
   const token = reg.token;
   const sym = i % 2 ? 'BTCUSDT' : 'ETHUSDT';
   const step = sym === 'BTCUSDT' ? 5 : 4;
-  openStream(token, sym, ac.signal);
+  if (POLL) pollLoop(token, sym, deadline);
+  else openStream(token, sym, ac.signal);
   while (Date.now() < deadline) {
     const ticker = (await call(token, 'GET', '/api/ticker'))?.find((t) => t.symbol === sym);
     if (!ticker) continue;
@@ -87,7 +100,7 @@ async function trader(i, deadline, ac) {
 }
 
 (async () => {
-  console.log(`Навантаження: ${USERS} користувачів × ${SECONDS} с → ${BASE}`);
+  console.log(`Навантаження: ${USERS} користувачів × ${SECONDS} с → ${BASE}${POLL ? ' (режим опитування)' : ''}`);
   const ac = new AbortController();
   const deadline = Date.now() + SECONDS * 1000;
   const t0 = Date.now();
