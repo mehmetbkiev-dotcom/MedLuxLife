@@ -3,6 +3,19 @@
 Site: https://medluxlife-6j8sz55bpn.live-website.com (IONOS WordPress, tema **Extendable**, çeviri **TranslatePress**)
 Ön sayfa: **Home** (page ID 23). Hero = core Cover block.
 
+
+## KALICI ÇALIŞMA KURALLARI (her oturum önce bunu okur)
+- Konuşma dili Türkçe; WordPress menü/sayfa adları İngilizce. Adım adım ilerlenir.
+- Her değişiklikten önce yedek alınır (backups/wp/ veya oturum scratchpad'i), sonra kullanıcıya ekran görüntüsü + **✅ Onayla / ↩️ Geri al** sunulur.
+- Partner hastanenin adı (Yeditepe) sitede asla geçmez → "our partner hospital". CelyxMed / partner klinik adı, markası, adresi geçmez.
+- Travel ve Health birbirinden bağımsız faaliyetler; Travel sayfalarında sağlık referansı yok.
+- Sitede fiyat yok. HWG: önce/sonra görseli yok, başarı oranı/"en iyi/ilk" iddiası yok, hastalık tedavi vaadi yok.
+- Partner hastanenin tanınabilir gerçek çalışanlarını gösteren foto yok.
+- Kullanıcıdan şifre/anahtar sohbette istenmez; anahtarlar ortam değişkeni olarak eklenir (UNSPLASH_ACCESS_KEY, PIXABAY_API_KEY).
+- Şirket: MedLuxLife, Inh. Anna Sacilanates (Einzelunternehmen), Stolberger Straße 21, 52068 Aachen. Domain sahibi: Emrah Suphi Sacilanates (Anna'nın eşi; sohbetteki kullanıcı). E-posta info@medluxlife.de; site https://medluxlife.de (medluxlife.com → 301).
+- WP erişimi: REST https://medluxlife-6j8sz55bpn.live-website.com/wp-json (proxy uygulama şifresini ekler); medluxlife.de konteynerden erişilemez. Inline script'lerde '&' kullanma (WordPress kaçışlıyor).
+- Eski oturumun tüm yedekleri: backups/wp/ (sayfa, footer, header, global styles, CF7 JSON'ları; geri almak için içerikleri REST ile geri POST et).
+
 ## 1. Genel kararlar
 - **Marka:** MEDLUXLIFE
 - **Ana yapı:** HEALTH (ana iş alanı), TRAVEL, ABOUT US, CONTACT
