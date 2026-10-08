@@ -1,3 +1,6 @@
 data/
 node_modules/
 deploy/.env
+bin/
+beta.env
+beta-url.txt

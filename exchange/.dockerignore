@@ -2,3 +2,6 @@ data
 node_modules
 test
 deploy/.env
+bin
+beta.env
+beta-url.txt
