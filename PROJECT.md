@@ -241,3 +241,4 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - 2026-10-10: m742 (Hollywood Smile, woman with hand mirror) → placed on Dental (260).
 - 2026-10-10: m744 (Dental Implants, dentist with implant model) → placed on Dental (260).
 - 2026-10-10: m740 (All-on-4/6, dentist with full-arch model) → placed on Dental (260).
+- 2026-10-10: m740 reverted at user request (old All-on-4 photo Media 740 back on 260). AI image Media 1103 stays unused.
