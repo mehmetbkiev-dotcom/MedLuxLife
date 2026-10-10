@@ -240,3 +240,4 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - 2026-10-10: m882 (IV lounge, pasted in chat) → Media 1096 on IV Treatments intro (267) and the IV card on 258.
 - 2026-10-10: m742 (Hollywood Smile, woman with hand mirror) → placed on Dental (260).
 - 2026-10-10: m744 (Dental Implants, dentist with implant model) → placed on Dental (260).
+- 2026-10-10: m740 (All-on-4/6, dentist with full-arch model) → placed on Dental (260).
