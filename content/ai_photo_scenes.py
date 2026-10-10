@@ -147,5 +147,6 @@ SCENES = {
 # Optional new images for pages that currently share a photo
 'new-501': 'Gynaecologist and endocrinologist consulting a young woman together (PCOS clinic)',
 'new-504': 'ENT doctor examining a patient’s ear with an otoscope',
+'new-258': 'Overview of a calm, premium modern clinic reception with a smiling coordinator welcoming an adult international patient',
 'new-545': 'Modern intensive care room with monitors and a nurse checking a patient',
 }

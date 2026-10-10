@@ -1,5 +1,5 @@
 # TASK
-You are producing a complete set of 137 photorealistic stock photos for the website of MedLuxLife, a German medical-travel agency (premium, calm, trustworthy). Every image in the LIST below must be generated, saved with its EXACT file name and delivered to me in ZIP files. Follow every rule below for every single image, without exceptions and without asking me questions.
+You are producing a complete set of 138 photorealistic stock photos for the website of MedLuxLife, a German medical-travel agency (premium, calm, trustworthy). Every image in the LIST below must be generated, saved with its EXACT file name and delivered to me in ZIP files. Follow every rule below for every single image, without exceptions and without asking me questions.
 
 # 1. IMAGE FORMAT (most important)
 - Exactly ONE full-frame photograph per image, landscape 3:2, 1536 x 1024 px (use the landscape/wide image size).
@@ -32,7 +32,7 @@ You are producing a complete set of 137 photorealistic stock photos for the webs
 - Then continue automatically with the next batch. If you hit a limit, stop and tell me the last finished number; when I write "continue" you resume from the next number.
 - At the very end, give me one final ZIP medluxlife-all.zip with all images, plus a short checklist of any numbers that are still missing.
 
-# 5. LIST (137 images: number. file name — what the photo shows)
+# 5. LIST (138 images: number. file name — what the photo shows)
 001. m879.png — A friendly female doctor in a bright consultation room discussing a weight-loss plan with an adult patient, tablet in hand
 002. m878.png — Adult woman in casual clothes holding out the waistband of jeans that have become too big, neutral light background, face not visible
 003. m877.png — Close-up of hands measuring a waist with a soft tape measure over a fitted sports top
@@ -170,5 +170,6 @@ You are producing a complete set of 137 photorealistic stock photos for the webs
 135. n501.png — Gynaecologist and endocrinologist consulting a young woman together (PCOS clinic)
 136. n504.png — ENT doctor examining a patient’s ear with an otoscope
 137. n545.png — Modern intensive care room with monitors and a nurse checking a patient
+138. n258.png — Overview of a calm, premium modern clinic reception with a smiling coordinator welcoming an adult international patient
 
 Start now with batch 1 (001-010).
