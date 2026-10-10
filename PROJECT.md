@@ -239,3 +239,4 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - 2026-10-10: n258 (clinic reception, pasted by user in chat) uploaded as Media 1094 and set as the Clinical Treatments (258) intro. Previous intro m884 stays on the Check-up card.
 - 2026-10-10: m882 (IV lounge, pasted in chat) → Media 1096 on IV Treatments intro (267) and the IV card on 258.
 - 2026-10-10: m742 (Hollywood Smile, woman with hand mirror) → placed on Dental (260).
+- 2026-10-10: m744 (Dental Implants, dentist with implant model) → placed on Dental (260).
