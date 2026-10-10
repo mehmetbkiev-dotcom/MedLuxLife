@@ -1,0 +1,1109 @@
+[
+ {
+  "num": "011",
+  "code": "m872",
+  "page": "Medical Aesthetics",
+  "page_id": 264,
+  "card": "Intro",
+  "card_text": "Medical aesthetics offers non-surgical treatments to smooth lines, restore volume and refresh the skin, with little or no downtime. Treatments are carried out by qualified doctors and planned to keep your natural expression.",
+  "old_scene": "Woman lying relaxed on a treatment bed receiving a gentle facial device treatment, gloved hands of a practitioner"
+ },
+ {
+  "num": "016",
+  "code": "m745",
+  "page": "Dental and Oral Health",
+  "page_id": 260,
+  "card": "Prosthetic Dental Treatments",
+  "card_text": "Aesthetic and functional solutions for missing teeth, including fixed crowns and bridges placed over natural teeth.",
+  "old_scene": "Dental technician hands polishing a ceramic crown in a dental laboratory"
+ },
+ {
+  "num": "017",
+  "code": "m743",
+  "page": "Dental and Oral Health",
+  "page_id": 260,
+  "card": "Implant-Supported Prostheses",
+  "card_text": "Fixed or removable prostheses attached to implants in the jawbone, offering better stability and comfort than conventional dentures.",
+  "old_scene": "Dental model with implant-supported denture next to dental instruments, clean studio light"
+ },
+ {
+  "num": "018",
+  "code": "m746",
+  "page": "Dental and Oral Health",
+  "page_id": 260,
+  "card": "Teeth Whitening",
+  "card_text": "A cosmetic treatment that lightens the colour of the teeth and removes stains and discolouration.",
+  "old_scene": "Woman smiling with a teeth-shade guide held next to her teeth in a dental clinic"
+ },
+ {
+  "num": "019",
+  "code": "m968",
+  "page": "Dental and Oral Health",
+  "page_id": 260,
+  "card": "Zirconium Veneers",
+  "card_text": "Custom-made restorations in zirconia ceramic that improve the shape and colour of your teeth while looking natural. Very strong and resistant to chipping and staining Suitable for patients who grind their teeth Metal-free and hypoallergenic",
+  "old_scene": "Close-up of a smile with natural-looking white veneers, soft studio light"
+ },
+ {
+  "num": "020",
+  "code": "m969",
+  "page": "Dental and Oral Health",
+  "page_id": 260,
+  "card": "Periodontology (Gum Treatment)",
+  "card_text": "Healthy teeth need healthy gums. Gum inflammation (gingivitis) and advanced gum disease (periodontitis) are treated with professional cleaning, scaling and root planing and, where necessary, surgical procedures to protect the gums and bone.",
+  "old_scene": "Dentist gently examining gums with a dental mirror, patient relaxed in the chair"
+ },
+ {
+  "num": "021",
+  "code": "m971",
+  "page": "Dental and Oral Health",
+  "page_id": 260,
+  "card": "Restorative Dental Treatments",
+  "card_text": "Repair of damaged or decayed teeth, for example with fillings, to restore their function, structure and appearance.",
+  "old_scene": "Dentist and assistant treating a smiling male patient in a modern dental chair"
+ },
+ {
+  "num": "022",
+  "code": "m970",
+  "page": "Dental and Oral Health",
+  "page_id": 260,
+  "card": "Root Canal Treatment",
+  "card_text": "Cleaning and sealing the inflamed or damaged nerve tissue inside a tooth, so the natural tooth can be saved instead of extracted.",
+  "old_scene": "Modern dental treatment room with chair, lamp and monitor, no people"
+ },
+ {
+  "num": "023",
+  "code": "m972",
+  "page": "Dental and Oral Health",
+  "page_id": 260,
+  "card": "Masseter Botox (Jaw Botox)",
+  "card_text": "Injections into the masseter muscle can ease teeth grinding (bruxism) and jaw tension and give the lower face a slimmer, more oval contour. A quick treatment whose effect typically lasts 4 to 6 months.",
+  "old_scene": "Woman gently touching her jawline, calm portrait in a clinic, soft light"
+ },
+ {
+  "num": "024",
+  "code": "m975",
+  "page": "Dental and Oral Health",
+  "page_id": 260,
+  "card": "TMJ Treatment",
+  "card_text": "Treatment of pain, clicking or locking of the jaw joint, which is often linked to teeth grinding. Night guards (splints) protect the joint and relax the muscles; surgical options are available where needed.",
+  "old_scene": "Woman holding her cheek and jaw in mild discomfort, neutral background"
+ },
+ {
+  "num": "025",
+  "code": "m974",
+  "page": "Dental and Oral Health",
+  "page_id": 260,
+  "card": "Orthodontics",
+  "card_text": "Braces and clear aligners correct crooked, crowded or gapped teeth. Options for all ages include metal or tooth-coloured brackets and discreet clear aligner systems.",
+  "old_scene": "Close-up of a smiling teenager with clear dental braces"
+ },
+ {
+  "num": "026",
+  "code": "m763",
+  "page": "Hair Transplantation",
+  "page_id": 261,
+  "card": "Hair and Scalp Analysis",
+  "card_text": "Before any treatment, an AI-supported digital analysis evaluates hair density and thickness, the health of individual follicles and whether they are in a growth or resting phase. This helps to choose the most suitable technique and to track your progress objectively over time.",
+  "old_scene": "Doctor analysing a man\u2019s scalp with a digital trichoscope, image shown on a monitor"
+ },
+ {
+  "num": "027",
+  "code": "m752",
+  "page": "Hair Transplantation",
+  "page_id": 261,
+  "card": "FUE (Follicular Unit Extraction)",
+  "card_text": "Individual follicles are taken one by one from the donor area with a fine, circular micro-punch and implanted into the thinning areas. No linear scar, and a comfortable recovery.",
+  "old_scene": "Close-up of a medical team performing an FUE hair transplant on the back of a man\u2019s head, clean sterile setting, no blood"
+ },
+ {
+  "num": "028",
+  "code": "m753",
+  "page": "Hair Transplantation",
+  "page_id": 261,
+  "card": "Beard and Moustache Transplant",
+  "card_text": "For a fuller, more defined beard or moustache. Follicles, usually from the back of the head, are transplanted into sparse areas. An effective option for uneven growth, scarring or hair loss caused by genetics, hormones or injury.",
+  "old_scene": "Well-groomed man with a full, neat beard, studio portrait"
+ },
+ {
+  "num": "029",
+  "code": "m754",
+  "page": "Hair Transplantation",
+  "page_id": 261,
+  "card": "Eyebrow Transplant",
+  "card_text": "Reshapes and strengthens thin, sparse or over-plucked eyebrows with your own hair follicles. A permanent, natural-looking alternative to make-up or microblading.",
+  "old_scene": "Close-up of a woman\u2019s eye area with full, natural eyebrows"
+ },
+ {
+  "num": "030",
+  "code": "m973",
+  "page": "Hair Transplantation",
+  "page_id": 261,
+  "card": "Sapphire FUE",
+  "card_text": "An advanced form of FUE in which the channels are opened with blades made of sapphire crystal instead of steel. The finer, sharper blades allow very precise incisions, with less tissue trauma and swelling.",
+  "old_scene": "Doctor with magnifying loupes working on a patient\u2019s scalp in a modern hair clinic, sterile and clean"
+ },
+ {
+  "num": "031",
+  "code": "m976",
+  "page": "Hair Transplantation",
+  "page_id": 261,
+  "card": "DHI (Direct Hair Implantation)",
+  "card_text": "Follicles are implanted directly with a special implanter pen (Choi pen), without opening channels in advance. This allows precise control of angle, direction and depth.",
+  "old_scene": "Doctor explaining the hair transplant plan to a male patient using a tablet"
+ },
+ {
+  "num": "032",
+  "code": "m977",
+  "page": "Hair Transplantation",
+  "page_id": 261,
+  "card": "FUT (Follicular Unit Transplantation)",
+  "card_text": "A strip of skin is taken from the donor area and divided into individual follicular units. FUT allows many grafts in one session but leaves a longer linear scar, so it is used today only in selected cases.",
+  "old_scene": "Back of a man\u2019s head showing thinning hair, soft studio light"
+ },
+ {
+  "num": "033",
+  "code": "m764",
+  "page": "Hair Transplantation",
+  "page_id": 261,
+  "card": "Exosome Therapy",
+  "card_text": "Exosomes are tiny vesicles released by cells that carry proteins, lipids and growth signals. For hair restoration they are usually derived from mesenchymal stem cells and injected into thinning areas of the scalp, where they stimulate the follicles, extend the growth phase and support a healthier scalp. Exosomes are often combined with PRP.",
+  "old_scene": "Practitioner applying a serum treatment to a woman\u2019s scalp with gloved hands"
+ },
+ {
+  "num": "034",
+  "code": "m755",
+  "page": "Hair Transplantation",
+  "page_id": 261,
+  "card": "Hair Mesotherapy",
+  "card_text": "A tailored blend of vitamins, amino acids, plant extracts and other active ingredients is injected into the scalp to nourish the hair follicles. Usually performed as a series of sessions; many patients notice thicker, stronger hair over time. A motorised mesotherapy device delivers even micro-injections at a controlled depth, which makes the treatment quicker and more comfortable than manual injections.",
+  "old_scene": "Practitioner giving a scalp mesotherapy treatment to a relaxed woman"
+ },
+ {
+  "num": "035",
+  "code": "m979",
+  "page": "Hair Transplantation",
+  "page_id": 261,
+  "card": "Red Light Therapy",
+  "card_text": "A non-invasive, low-level light treatment at wavelengths of around 600 to 650 nanometres. The light is absorbed by the follicle cells, stimulates their energy production, improves local circulation and supports healthy hair growth.",
+  "old_scene": "Woman relaxing under a red LED light therapy device, warm red glow"
+ },
+ {
+  "num": "036",
+  "code": "m978",
+  "page": "Hair Transplantation",
+  "page_id": 261,
+  "card": "PRP (Platelet-Rich Plasma)",
+  "card_text": "A small amount of your own blood is processed in a centrifuge to obtain plasma rich in platelets. Injected into the scalp, it stimulates the hair follicles and supports cell renewal. PRP is a well-established option to reduce hair loss and improve hair density.",
+  "old_scene": "Laboratory centrifuge with blood sample tubes for PRP preparation, clean clinical light"
+ },
+ {
+  "num": "037",
+  "code": "m858",
+  "page": "Plastic Surgery",
+  "page_id": 263,
+  "card": "Mommy Makeover",
+  "card_text": "A combination of procedures that addresses changes after pregnancy and childbirth, tailored to your needs. It may include: Tummy tuck to remove excess skin and tighten the abdominal muscles Breast lift or augmentation to restore shape and volume Liposuction for stubborn fat on the abdomen, hips or thighs Intimate rejuvenation , such as labiaplasty",
+  "old_scene": "Woman holding a tape measure around her waist, wearing jeans and a crop top, face not shown"
+ },
+ {
+  "num": "038",
+  "code": "m859",
+  "page": "Plastic Surgery",
+  "page_id": 263,
+  "card": "Rhinoplasty",
+  "card_text": "Reshapes the nose to improve facial balance and, where needed, breathing. Cosmetic rhinoplasty: changes size, tip shape or nostrils, or corrects asymmetry Functional rhinoplasty (septorhinoplasty): improves breathing, for example with a deviated septum",
+  "old_scene": "Side profile of a woman\u2019s face and nose, soft natural light"
+ },
+ {
+  "num": "039",
+  "code": "m860",
+  "page": "Plastic Surgery",
+  "page_id": 263,
+  "card": "Abdominoplasty (Tummy Tuck)",
+  "card_text": "Removes excess skin and fat from the abdomen and tightens the underlying muscles for a flatter, firmer contour. Full abdominoplasty: an incision from hip to hip, often with repositioning of the navel Mini abdominoplasty: a shorter incision for minor excess below the navel",
+  "old_scene": "Plastic surgeon consulting a woman in a bright clinic, discussing a treatment plan"
+ },
+ {
+  "num": "040",
+  "code": "m861",
+  "page": "Plastic Surgery",
+  "page_id": 263,
+  "card": "Breast Augmentation",
+  "card_text": "Increases breast size and volume or restores volume lost after weight changes or pregnancy, using silicone implants or your own fat. Implant position (under or over the muscle, or dual plane) is chosen according to your anatomy and goals.",
+  "old_scene": "Woman in a white crop top and jeans, torso, tasteful and modest, face not shown"
+ },
+ {
+  "num": "041",
+  "code": "m862",
+  "page": "Plastic Surgery",
+  "page_id": 263,
+  "card": "Breast Reduction",
+  "card_text": "Reduces the size and weight of very large breasts. It can relieve back and neck pain, restricted movement and skin irritation, and creates a more balanced silhouette.",
+  "old_scene": "Woman wrapped in a white towel in a bright bathroom, shoulders and back, modest"
+ },
+ {
+  "num": "042",
+  "code": "m863",
+  "page": "Plastic Surgery",
+  "page_id": 263,
+  "card": "Gynecomastia Surgery",
+  "card_text": "Male breast reduction removes excess glandular tissue and fat, using liposuction, direct excision or both, for a flatter, more masculine chest.",
+  "old_scene": "Man in a grey t-shirt with a hand on his chest, black and white, modest"
+ },
+ {
+  "num": "043",
+  "code": "m864",
+  "page": "Plastic Surgery",
+  "page_id": 263,
+  "card": "Brachioplasty (Arm Lift)",
+  "card_text": "Removes loose skin and fat from the upper arms, often after major weight loss or with age, through an incision on the inner or back of the arm.",
+  "old_scene": "Woman doing an arm exercise with a light dumbbell in a bright gym, seen from behind"
+ },
+ {
+  "num": "044",
+  "code": "m865",
+  "page": "Plastic Surgery",
+  "page_id": 263,
+  "card": "Brazilian Butt Lift (BBL)",
+  "card_text": "Fat is removed by liposuction from areas such as the abdomen or flanks, purified and transferred to the buttocks for more volume and a natural, lifted shape.",
+  "old_scene": "Woman stretching in leggings in a bright, empty studio"
+ },
+ {
+  "num": "045",
+  "code": "m866",
+  "page": "Plastic Surgery",
+  "page_id": 263,
+  "card": "Thigh Lift",
+  "card_text": "Removes excess skin and fat from the thighs and tightens the tissue for a smoother contour, typically after significant weight loss.",
+  "old_scene": "Woman\u2019s legs relaxing by a swimming pool, summer light"
+ },
+ {
+  "num": "046",
+  "code": "m867",
+  "page": "Plastic Surgery",
+  "page_id": 263,
+  "card": "Blepharoplasty (Eyelid Surgery)",
+  "card_text": "Corrects drooping upper eyelids and under-eye bags for a fresher, more youthful look. Upper eyelid surgery is usually done under local anaesthesia; lower eyelid surgery generally under general anaesthesia.",
+  "old_scene": "Close-up of a woman\u2019s eye and upper eyelid, natural skin"
+ },
+ {
+  "num": "047",
+  "code": "m868",
+  "page": "Plastic Surgery",
+  "page_id": 263,
+  "card": "Facelift",
+  "card_text": "Reduces visible signs of ageing such as sagging skin and deep folds. Depending on your needs, the surgeon chooses a full, mini, mid-face or temporal lift.",
+  "old_scene": "Smiling mature woman with natural skin, warm portrait"
+ },
+ {
+  "num": "048",
+  "code": "m869",
+  "page": "Plastic Surgery",
+  "page_id": 263,
+  "card": "Buccal Fat Removal",
+  "card_text": "Reduces the fat pads in the lower cheeks through small incisions inside the mouth, for more sculpted cheeks and a defined jawline. Usually performed under local anaesthesia.",
+  "old_scene": "Side profile of a woman\u2019s cheek and jawline in warm light"
+ },
+ {
+  "num": "049",
+  "code": "m962",
+  "page": "Plastic Surgery",
+  "page_id": 263,
+  "card": "Liposuction",
+  "card_text": "Removes stubborn fat deposits that do not respond to diet and exercise, for example on the abdomen, thighs, arms, back or waist, to sculpt the body contour.",
+  "old_scene": "Body-contouring device being used on a woman\u2019s abdomen by a gloved practitioner"
+ },
+ {
+  "num": "050",
+  "code": "m963",
+  "page": "Plastic Surgery",
+  "page_id": 263,
+  "card": "Breast Lift (Mastopexy)",
+  "card_text": "Lifts and reshapes sagging breasts for a firmer, more youthful position. It can be combined with augmentation to add volume at the same time.",
+  "old_scene": "Woman in a white shirt, elegant studio portrait, modest"
+ },
+ {
+  "num": "051",
+  "code": "m964",
+  "page": "Plastic Surgery",
+  "page_id": 263,
+  "card": "Otoplasty (Ear Correction)",
+  "card_text": "Reshapes or repositions prominent or asymmetric ears. Possible for adults and for children from about five years of age.",
+  "old_scene": "Side view of a woman\u2019s ear and profile, hair tucked back"
+ },
+ {
+  "num": "052",
+  "code": "m967",
+  "page": "Plastic Surgery",
+  "page_id": 263,
+  "card": "Neck Lift",
+  "card_text": "Tightens loose skin and reshapes the neck and jawline. Often combined with a facelift for a harmonious result.",
+  "old_scene": "Woman\u2019s neck and jawline, elegant black and white portrait"
+ },
+ {
+  "num": "053",
+  "code": "m885",
+  "page": "IV Treatments",
+  "page_id": 267,
+  "card": "Myers' Cocktail",
+  "card_text": "A classic infusion with vitamin C, B vitamins, magnesium and calcium to support energy, immunity and general well-being.",
+  "old_scene": "IV infusion bag with a clear vitamin solution on a stand, bright clinic"
+ },
+ {
+  "num": "054",
+  "code": "m886",
+  "page": "IV Treatments",
+  "page_id": 267,
+  "card": "NAD+",
+  "card_text": "Nicotinamide adenine dinucleotide is a coenzyme involved in cellular energy production. The infusion is used to support energy, mental clarity and healthy ageing.",
+  "old_scene": "Close-up of a hand with an IV cannula resting on a white blanket"
+ },
+ {
+  "num": "055",
+  "code": "m887",
+  "page": "IV Treatments",
+  "page_id": 267,
+  "card": "Hair and Nail Cocktail",
+  "card_text": "Supports stronger hair and nails and healthy hair growth, and nourishes the follicles, for example after a hair transplant.",
+  "old_scene": "Woman with long, shiny, healthy hair, soft studio light"
+ },
+ {
+  "num": "056",
+  "code": "m888",
+  "page": "IV Treatments",
+  "page_id": 267,
+  "card": "Beauty Cocktail",
+  "card_text": "Supports skin firmness, smoothness and moisture, promotes collagen production and complements facial mesotherapy.",
+  "old_scene": "Smiling woman with glowing skin in a white robe, bright spa setting"
+ },
+ {
+  "num": "057",
+  "code": "m889",
+  "page": "IV Treatments",
+  "page_id": 267,
+  "card": "Fat Burning Slim Boost",
+  "card_text": "With L-carnitine and other nutrients to support metabolism and fat burning as part of a weight-management programme.",
+  "old_scene": "Woman in sportswear tying her running shoes, active lifestyle"
+ },
+ {
+  "num": "058",
+  "code": "m890",
+  "page": "IV Treatments",
+  "page_id": 267,
+  "card": "Vitamin C Megadose",
+  "card_text": "High-dose vitamin C with antioxidant properties that supports the immune system, tissue regeneration and collagen production.",
+  "old_scene": "Fresh oranges and lemons in a bowl, vitamin C theme, bright kitchen light"
+ },
+ {
+  "num": "059",
+  "code": "m891",
+  "page": "IV Treatments",
+  "page_id": 267,
+  "card": "Alpha Lipoic Acid",
+  "card_text": "A strong antioxidant that helps to regenerate other antioxidants such as vitamins C and E and supports nerve health and metabolism.",
+  "old_scene": "Adult hands resting on a knee, calm and relaxed, soft light"
+ },
+ {
+  "num": "060",
+  "code": "m892",
+  "page": "IV Treatments",
+  "page_id": 267,
+  "card": "Immune Plus",
+  "card_text": "Supports immune function, energy metabolism and antioxidant capacity.",
+  "old_scene": "Woman resting hands on her stomach, wellbeing theme, light clothing"
+ },
+ {
+  "num": "061",
+  "code": "m893",
+  "page": "IV Treatments",
+  "page_id": 267,
+  "card": "Anti-ageing Collagen Booster",
+  "card_text": "Amino acids, vitamins and minerals that support collagen production, skin health and overall vitality.",
+  "old_scene": "Green smoothie with fresh fruit and vegetables on a wooden table"
+ },
+ {
+  "num": "062",
+  "code": "m980",
+  "page": "IV Treatments",
+  "page_id": 267,
+  "card": "Glutathione",
+  "card_text": "A powerful antioxidant that supports the body's natural detoxification and the immune system and helps protect cells from oxidative stress.",
+  "old_scene": "Fresh berries in a bowl, antioxidant theme, natural light"
+ },
+ {
+  "num": "063",
+  "code": "m873",
+  "page": "Medical Aesthetics",
+  "page_id": 264,
+  "card": "Botox (Botulinum Toxin)",
+  "card_text": "Relaxes the muscles that cause expression lines, such as forehead lines, frown lines and crow's feet, and can also be used for a subtle brow lift. Medical uses include reducing excessive sweating (hyperhidrosis) and easing jaw tension related to teeth grinding.",
+  "old_scene": "Practitioner with gloves giving a small forehead injection to a relaxed woman, clean clinic"
+ },
+ {
+  "num": "064",
+  "code": "m874",
+  "page": "Medical Aesthetics",
+  "page_id": 264,
+  "card": "Dermal Fillers",
+  "card_text": "Injectable fillers restore volume and smooth folds. Common areas: Nasolabial folds (smile lines) Cheeks and temples Lips: volume, definition and hydration Chin and jawline contouring",
+  "old_scene": "Aesthetic doctor assessing the lips and chin of a woman in a treatment chair"
+ },
+ {
+  "num": "065",
+  "code": "m966",
+  "page": "Medical Aesthetics",
+  "page_id": 264,
+  "card": "Skin Mesotherapy",
+  "card_text": "Micro-injections deliver vitamins, minerals, amino acids and other nourishing substances directly into the skin, for skin rejuvenation, cellulite or localised fat. Several sessions give the best results; downtime is minimal.",
+  "old_scene": "Microneedling facial treatment on a relaxed woman, gloved hands, clean clinic"
+ },
+ {
+  "num": "066",
+  "code": "m965",
+  "page": "Medical Aesthetics",
+  "page_id": 264,
+  "card": "Exosome Skin Treatments",
+  "card_text": "Exosomes deliver growth factors and proteins to skin cells to support regeneration and collagen production. Applied after microneedling, laser or radiofrequency treatments, they help the skin recover and look brighter, firmer and smoother.",
+  "old_scene": "Skin-care serum bottle with dropper on a white marble surface, soft light"
+ },
+ {
+  "num": "067",
+  "code": "m894",
+  "page": "Medical Oncology",
+  "page_id": 268,
+  "card": "Intro",
+  "card_text": "Cancer treatment is planned according to the type, stage and biological features of the disease and your personal situation. Through our partner hospital, your case is assessed by a multidisciplinary team in which medical oncologists work closely with surgeons, radiation oncologists and other specialists.",
+  "old_scene": "Doctor kindly holding the hand of an adult patient in a hospital room, supportive cancer care"
+ },
+ {
+  "num": "068",
+  "code": "m895",
+  "page": "Cardiology",
+  "page_id": 269,
+  "card": "Intro",
+  "card_text": "Cardiology covers the evaluation, diagnosis, treatment and follow-up of heart conditions. Our partner hospital's cardiology department includes a cardiology outpatient clinic, a coronary intensive care unit, cardiac catheterisation and angiography laboratories, an electrophysiology unit and cardiology laboratories, and works closely with cardiovascular surgery.",
+  "old_scene": "Cardiologist performing an echocardiogram on a patient lying on an examination bed"
+ },
+ {
+  "num": "069",
+  "code": "m896",
+  "page": "Orthopedics and Traumatology",
+  "page_id": 270,
+  "card": "Intro",
+  "card_text": "Orthopaedics and traumatology deal with the diagnosis, treatment and rehabilitation of problems of the bones, joints, muscles and spine in adults and children, including injuries from daily life and sport. Our partner hospital combines experienced orthopaedic surgeons with robotic and navigation technology and works with physical therapy and rehabilitation for a quick return to daily life.",
+  "old_scene": "Orthopaedic doctor examining a patient\u2019s knee in a bright clinic"
+ },
+ {
+  "num": "070",
+  "code": "m897",
+  "page": "In-Vitro Fertilization (IVF)",
+  "page_id": 271,
+  "card": "Intro",
+  "card_text": "The wish to have a child is very personal. Our partner IVF centre plans every treatment individually, based on current scientific evidence, and its experienced team of physicians and embryologists decides together on each case. The causes of infertility are investigated carefully first, so that you are spared unnecessary treatment.",
+  "old_scene": "Embryologist working at a microscope in a modern IVF laboratory"
+ },
+ {
+  "num": "071",
+  "code": "m898",
+  "page": "Neurosurgery",
+  "page_id": 272,
+  "card": "Intro",
+  "card_text": "Neurosurgery covers the surgical diagnosis and treatment of diseases of the brain, spine, spinal cord and nerves. At our partner hospital's neurological sciences centre, neurosurgeons work in a multidisciplinary team with neurologists, anaesthesiologists, intensive care specialists, radiologists, psychiatrists, psychologists and rehabilitation specialists, in specialised wards and intensive care units.",
+  "old_scene": "Neurosurgeon reviewing a brain MRI on a large screen"
+ },
+ {
+  "num": "072",
+  "code": "m899",
+  "page": "Ophthalmology",
+  "page_id": 273,
+  "card": "Intro",
+  "card_text": "Ophthalmology covers the diagnosis, treatment and follow-up of diseases of the eye and its surrounding structures. Our partner hospital's eye department offers a wide range of specialised units, combining modern technology with experienced specialists.",
+  "old_scene": "Patient having an eye examination at a slit lamp with an ophthalmologist"
+ },
+ {
+  "num": "073",
+  "code": "m900",
+  "page": "Organ Transplantation Center",
+  "page_id": 274,
+  "card": "Intro",
+  "card_text": "Organ transplantation can offer a new perspective to patients with end-stage organ failure. Our partner transplant centre works with a multidisciplinary team of transplant surgeons, nephrologists, infectious disease specialists and other physicians, and plans every step from pre-transplant evaluation to long-term follow-up.",
+  "old_scene": "Surgical team in a modern operating room, calm and clean, faces masked"
+ },
+ {
+  "num": "074",
+  "code": "m903",
+  "page": "Adult Bone Marrow Transplantation",
+  "page_id": 485,
+  "card": "Intro",
+  "card_text": "Bone marrow (stem cell) transplantation is a complex, multi-stage treatment that calls for close teamwork between laboratories, clinical units and nursing staff. The transplant clinic at our partner hospital brings these stages together under one roof, from diagnostic work-up and treatment planning to follow-up after discharge. MedLuxLife helps adult patients and their families prepare medical records, arrange evaluation and stay well informed throughout a lengthy treatment journey.",
+  "old_scene": "Haematologist talking with an adult patient in a modern bone-marrow transplant unit"
+ },
+ {
+  "num": "075",
+  "code": "m901",
+  "page": "Algology (Pain Medicine)",
+  "page_id": 490,
+  "card": "Intro",
+  "card_text": "Algology, or pain medicine, focuses on identifying the source of chronic pain and building a treatment plan around the individual, including pain whose cause is difficult to pin down. At our partner hospital, a pain specialist examines each patient in detail before recommending options, which may combine medical, interventional and lifestyle measures. MedLuxLife arranges the consultation, shares your records in advance and coordinates any follow-up.",
+  "old_scene": "Doctor examining the lower back of an adult patient with back pain"
+ },
+ {
+  "num": "076",
+  "code": "m904",
+  "page": "Anaesthesiology and Reanimation",
+  "page_id": 546,
+  "card": "Intro",
+  "card_text": "Anaesthesiology and reanimation keeps patients comfortable and free from pain while carefully protecting vital functions during surgery and other procedures. The department at our partner hospital provides anaesthesia, intensive care and pain management, supporting safe treatment and a smoother recovery. MedLuxLife ensures your anaesthetic history and current medication are shared with the team before any planned procedure.",
+  "old_scene": "Anaesthesiologist checking monitors next to a patient in a modern operating room"
+ },
+ {
+  "num": "077",
+  "code": "m936",
+  "page": "Audiology",
+  "page_id": 505,
+  "card": "Intro",
+  "card_text": "Audiology covers the detailed assessment and rehabilitation of hearing and balance problems in babies, children and adults. The department at our partner hospital offers a broad range of hearing and vestibular tests, including objective tests suitable for infants and for people with dizziness. MedLuxLife helps families schedule tests at suitable times, explains preparation requirements in advance and arranges for results to be shared with your doctors at home.",
+  "old_scene": "Audiologist fitting headphones on a patient for a hearing test in a sound booth"
+ },
+ {
+  "num": "078",
+  "code": "m905",
+  "page": "Breast Surgery",
+  "page_id": 503,
+  "card": "Intro",
+  "card_text": "Breast surgery deals with the surgical treatment of breast diseases, most notably breast cancer, where early diagnosis can make a meaningful difference to treatment options. At our partner hospital, breast surgeons work alongside medical oncology, plastic surgery, radiology and pathology so that each plan reflects the individual's diagnosis and preferences. MedLuxLife helps you gather your imaging and biopsy results and arranges a multidisciplinary opinion before any decision is made.",
+  "old_scene": "Pink ribbon on a white background, breast health awareness"
+ },
+ {
+  "num": "079",
+  "code": "m906",
+  "page": "Cardiovascular Surgery",
+  "page_id": 487,
+  "card": "Intro",
+  "card_text": "Cardiovascular surgery treats diseases of the heart and major blood vessels, from coronary artery disease and valve problems to congenital heart defects and aortic disease. The department at our partner hospital offers surgery for both adults and children, with dedicated intensive care and a sterile operating environment. MedLuxLife arranges a review of your cardiac tests by the surgical team before travel, so you understand the proposed approach in advance.",
+  "old_scene": "Cardiac surgery team in a modern operating room with monitors, masked faces"
+ },
+ {
+  "num": "080",
+  "code": "m907",
+  "page": "Chest Diseases (Pulmonology)",
+  "page_id": 517,
+  "card": "Intro",
+  "card_text": "Chest diseases, or pulmonology, covers the diagnosis, treatment and long-term follow-up of conditions affecting the lungs and airways. The department at our partner hospital serves adult patients through its outpatient clinic, bronchoscopy unit, pulmonary function laboratory and allergy skin testing. MedLuxLife coordinates appointments and ensures that your previous scans and lung function results reach the specialist before you arrive.",
+  "old_scene": "Pulmonologist looking at a chest X-ray on a light board"
+ },
+ {
+  "num": "081",
+  "code": "m908",
+  "page": "Child and Adolescent Psychiatry",
+  "page_id": 535,
+  "card": "Intro",
+  "card_text": "Childhood and adolescence are times of rapid physical, emotional and psychological change, and mental health concerns in these years need an assessment that takes development and family circumstances into account. The child and adolescent psychiatry department at our partner hospital offers assessment, follow-up and treatment programmes for emotional, behavioural and developmental difficulties. MedLuxLife helps families arrange consultations, share school and medical reports and plan follow-up a",
+  "old_scene": "Therapist talking with a teenager in a calm, friendly counselling room"
+ },
+ {
+  "num": "082",
+  "code": "m909",
+  "page": "Dermatology",
+  "page_id": 520,
+  "card": "Intro",
+  "card_text": "Dermatology covers the diagnosis, treatment and follow-up of conditions affecting the skin, hair and nails. Alongside medical dermatology, the department at our partner hospital offers dermatosurgery, cosmetic dermatology and care for certain genital skin conditions. MedLuxLife arranges consultations and helps combine dermatology appointments with any other treatment you are planning during your stay.",
+  "old_scene": "Dermatologist examining a patient\u2019s skin with a dermatoscope"
+ },
+ {
+  "num": "083",
+  "code": "m910",
+  "page": "Emergency Medicine",
+  "page_id": 544,
+  "card": "Intro",
+  "card_text": "Emergency medicine provides rapid assessment and treatment of sudden illness, injury and life-threatening conditions in adults and children. The emergency department at our partner hospital is open 24 hours a day and is supervised by emergency medicine specialists, with imaging and laboratory support close at hand. For MedLuxLife patients already in treatment, we can help with communication and coordination if urgent care is needed during your stay.",
+  "old_scene": "Modern hospital emergency entrance with an ambulance at dusk"
+ },
+ {
+  "num": "084",
+  "code": "m911",
+  "page": "Endocrine Surgery",
+  "page_id": 508,
+  "card": "Intro",
+  "card_text": "Endocrine surgery treats disorders of the hormone-producing glands, mainly the thyroid, parathyroid and adrenal glands, when too much or too little hormone is produced or when a growth needs removal. These delicate operations require careful technique to protect the voice, calcium balance and surrounding structures. MedLuxLife helps you share your hormone results and scans with the surgical team at our partner hospital and plan your stay around surgery and recovery.",
+  "old_scene": "Surgeon examining a patient\u2019s neck before endocrine surgery"
+ },
+ {
+  "num": "085",
+  "code": "m912",
+  "page": "Endocrinology and Metabolic Diseases",
+  "page_id": 512,
+  "card": "Intro",
+  "card_text": "Endocrinology deals with the hormone-producing glands and the metabolic conditions they influence, such as diabetes, thyroid disorders and diseases of the pituitary and adrenal glands. Most of these conditions are diagnosed with blood tests and imaging and treated with medication and lifestyle measures, with long-term follow-up. MedLuxLife arranges a consultation with an endocrinologist at our partner hospital and coordinates any further tests or treatment.",
+  "old_scene": "Patient checking blood sugar with a glucose meter, close-up of hands"
+ },
+ {
+  "num": "086",
+  "code": "m914",
+  "page": "Gastroenterological Surgery",
+  "page_id": 507,
+  "card": "Intro",
+  "card_text": "Gastroenterological surgery is the surgical specialty for diseases of the digestive tract, from the mouth to the anus, when medication or endoscopic treatment is not enough. At our partner hospital, surgeons with subspecialty training in this field work closely with gastroenterologists on diagnosis and treatment planning. MedLuxLife coordinates the review of your endoscopy, imaging and pathology results so that a surgical opinion can be given before you travel.",
+  "old_scene": "Surgical team performing laparoscopic abdominal surgery, monitors visible, no blood"
+ },
+ {
+  "num": "087",
+  "code": "m913",
+  "page": "Gastroenterology",
+  "page_id": 515,
+  "card": "Intro",
+  "card_text": "Gastroenterology covers the evaluation, diagnosis and treatment of diseases of the stomach, intestines, liver, bile ducts and pancreas. The department at our partner hospital offers a wide range of diagnostic and therapeutic endoscopy, alongside dedicated care for reflux, liver disease, inflammatory bowel disease and colorectal cancer screening. MedLuxLife helps you arrange procedures, understand preparation instructions and receive your reports in a form your home doctor can use.",
+  "old_scene": "Gastroenterologist in an endoscopy suite next to an endoscopy tower"
+ },
+ {
+  "num": "088",
+  "code": "m915",
+  "page": "General Surgery",
+  "page_id": 506,
+  "card": "Intro",
+  "card_text": "General surgery covers the evaluation and operative treatment of a broad range of conditions affecting the digestive tract, abdominal organs, breast, endocrine glands and soft tissues. The general surgery team at our partner hospital uses modern techniques, including laparoscopic (keyhole) surgery where suitable. MedLuxLife coordinates a surgical review of your records before travel and supports you through admission, recovery and the journey home.",
+  "old_scene": "Surgeons in blue scrubs operating under bright surgical lights, masked"
+ },
+ {
+  "num": "089",
+  "code": "m916",
+  "page": "Gynaecological Oncology",
+  "page_id": 483,
+  "card": "Intro",
+  "card_text": "Gynaecological oncology focuses on cancers and pre-cancerous conditions of the female reproductive organs, from screening and early detection through staging, treatment and long-term follow-up. Care is organised by a multidisciplinary team so that each plan reflects the individual patient. MedLuxLife coordinates your consultation at our partner hospital, arranges translation of your records and stays by your side from first contact to aftercare.",
+  "old_scene": "Female gynaecologist consulting a woman in a bright clinic"
+ },
+ {
+  "num": "090",
+  "code": "m918",
+  "page": "Haematology",
+  "page_id": 484,
+  "card": "Intro",
+  "card_text": "Haematology covers the diagnosis and treatment of blood disorders, both malignant and non-malignant. At our partner hospital, haematologists work closely with immunology, genetics, haematopathology, infectious diseases, biochemistry and radiology, supported by a strong laboratory. MedLuxLife organises your appointments, prepares your medical files in advance and supports you and your family throughout treatment abroad.",
+  "old_scene": "Laboratory technician holding a rack of blood sample tubes"
+ },
+ {
+  "num": "091",
+  "code": "m917",
+  "page": "Hirsutism Clinic",
+  "page_id": 502,
+  "card": "Intro",
+  "card_text": "Excessive hair growth in women, known as hirsutism, is usually a sign of an underlying condition rather than a disease in itself, and its causes range from polycystic ovary syndrome to, more rarely, tumours. The clinic at our partner hospital takes a multidisciplinary approach to identifying the cause and planning suitable treatment. MedLuxLife arranges a discreet, well-prepared visit and coordinates every step of your stay.",
+  "old_scene": "Woman with clear skin in a dermatology consultation, calm portrait"
+ },
+ {
+  "num": "092",
+  "code": "m919",
+  "page": "Imaging Unit",
+  "page_id": 538,
+  "card": "Intro",
+  "card_text": "Medical imaging underpins the diagnosis and treatment planning of many conditions. The imaging unit at our partner hospital brings together radiology and nuclear medicine specialists with a broad range of modern equipment and fully digital reporting. MedLuxLife schedules your examinations, shares preparation instructions in advance and makes sure your images and reports reach you and your doctors at home.",
+  "old_scene": "Modern MRI scanner room, clean and bright, no people"
+ },
+ {
+  "num": "093",
+  "code": "m920",
+  "page": "Immunology",
+  "page_id": 519,
+  "card": "Intro",
+  "card_text": "Immunology deals with diseases of the immune system, which can be difficult to recognise because symptoms are not always obvious. Specialists at our partner hospital combine careful clinical evaluation with an advanced laboratory to reach a diagnosis and design a personal treatment plan. MedLuxLife coordinates your tests and consultations and helps you take the results and recommendations home with you.",
+  "old_scene": "Gloved hand holding a vaccine vial, clean clinical background"
+ },
+ {
+  "num": "094",
+  "code": "m921",
+  "page": "Infectious Diseases and Clinical Microbiology",
+  "page_id": 518,
+  "card": "Intro",
+  "card_text": "This department diagnoses, treats and follows up infections caused by bacteria, viruses, fungi and parasites, using up-to-date laboratory and, where needed, molecular methods. It also advises on vaccination, prevention and travel medicine. MedLuxLife arranges outpatient or inpatient care at our partner hospital and handles the practical details so you can focus on recovery.",
+  "old_scene": "Microbiologist examining petri dishes in a modern laboratory"
+ },
+ {
+  "num": "095",
+  "code": "m923",
+  "page": "Internal Medicine",
+  "page_id": 511,
+  "card": "Intro",
+  "card_text": "Internal medicine is often the first point of contact for adult health problems and covers a very wide range of conditions, from high blood pressure to diseases of the kidneys, liver and blood. At our partner hospital it brings together several subspecialties under one roof. MedLuxLife helps you find the right specialist, arranges appointments and tests, and coordinates follow-up with your doctor at home.",
+  "old_scene": "Internist listening to a patient\u2019s chest with a stethoscope"
+ },
+ {
+  "num": "096",
+  "code": "m922",
+  "page": "Interventional Radiology",
+  "page_id": 488,
+  "card": "Intro",
+  "card_text": "Interventional radiology uses imaging such as ultrasound, CT and angiography to guide minimally invasive diagnostic and therapeutic procedures. Interventional radiologists not only diagnose disease but also take an active part in its treatment, often through a small puncture rather than open surgery. MedLuxLife coordinates your assessment at our partner hospital, including pre-procedure tests, and supports you through recovery and travel home.",
+  "old_scene": "Interventional radiology suite with an angiography C-arm and monitors"
+ },
+ {
+  "num": "097",
+  "code": "m924",
+  "page": "Kidney Transplant Clinic",
+  "page_id": 495,
+  "card": "Intro",
+  "card_text": "Learning that kidney damage is permanent can be a difficult moment, and careful confirmation of the diagnosis comes first. The kidney transplant team at our partner hospital aims to protect kidney function for as long as possible and, where kidney failure reaches its final stage, assesses whether a transplant is a suitable option. MedLuxLife coordinates the evaluation for both recipient and donor, organises documents and travel, and supports you through follow-up.",
+  "old_scene": "Patient receiving dialysis in a calm, modern kidney unit"
+ },
+ {
+  "num": "098",
+  "code": "m926",
+  "page": "Liver Transplant Clinic",
+  "page_id": 496,
+  "card": "Intro",
+  "card_text": "Liver transplantation is a treatment option for acute liver failure, end-stage liver disease (cirrhosis) with permanent damage, and certain liver cancers. For many patients it can offer the possibility of returning to a more active life. MedLuxLife arranges the assessment at our partner hospital, coordinates the paperwork and travel for patient and family, and stays in contact throughout recovery.",
+  "old_scene": "Doctor performing an abdominal ultrasound on a patient"
+ },
+ {
+  "num": "099",
+  "code": "m925",
+  "page": "Medical Genetics",
+  "page_id": 539,
+  "card": "Intro",
+  "card_text": "Medical genetics diagnoses inherited and non-inherited conditions caused by changes in genes, and helps individuals and families understand their risks, including carrier status and risks for future children. The genetic diagnosis centre at our partner hospital offers genetic consultations and counselling alongside cytogenetic, molecular cytogenetic and molecular genetic testing in ISO 15189 accredited laboratories. MedLuxLife coordinates appointments, sample logistics and translation of reports",
+  "old_scene": "Scientist pipetting DNA samples in a genetics laboratory"
+ },
+ {
+  "num": "100",
+  "code": "m927",
+  "page": "Medical Histology and Embryology",
+  "page_id": 542,
+  "card": "Intro",
+  "card_text": "Medical histology and embryology studies the microscopic structure of the human body and its development before birth, at the level of cells, tissues and organs. As an academic discipline within our partner hospital, it adds scientific depth to the understanding of normal structure and of developmental abnormalities. MedLuxLife can help you understand how this field relates to your care and connect you with the appropriate clinical specialists.",
+  "old_scene": "Microscope with tissue slides in a histology laboratory"
+ },
+ {
+  "num": "101",
+  "code": "m928",
+  "page": "Medical Microbiology",
+  "page_id": 541,
+  "card": "Intro",
+  "card_text": "Medical microbiology provides the laboratory testing behind the diagnosis and treatment of infections. The laboratories at our partner hospital support inpatient, outpatient and emergency care across bacteriology, virology, parasitology, mycology, molecular microbiology and infection immunology, with a broad and regularly updated test panel. MedLuxLife coordinates sample collection during your visit and ensures your results are translated and shared with your doctors.",
+  "old_scene": "Petri dishes with bacterial cultures on a laboratory bench"
+ },
+ {
+  "num": "102",
+  "code": "m929",
+  "page": "Medical Pathology",
+  "page_id": 540,
+  "card": "Intro",
+  "card_text": "Medical pathology examines tissue and cell samples to establish a diagnosis and guide treatment, with an emphasis on fast and accurate reporting. The department at our partner hospital includes immunohistochemistry and cytopathology laboratories and works with the microbiology and genetics laboratories for advanced methods. MedLuxLife coordinates the practical steps, including the transfer of existing samples and the translation of reports.",
+  "old_scene": "Pathologist looking through a microscope in a modern laboratory"
+ },
+ {
+  "num": "103",
+  "code": "m932",
+  "page": "Neonatal Intensive Care Unit (NICU)",
+  "page_id": 536,
+  "card": "Intro",
+  "card_text": "The neonatal intensive care unit looks after premature babies and term newborns who need close monitoring and specialised treatment in their first weeks of life. MedLuxLife helps families coordinate admission to the NICU at our partner hospital, arrange transfers and medical records, and keep in touch with the care team. We support parents with travel, accommodation and translation so they can focus on their baby.",
+  "old_scene": "Nurse caring for a newborn baby in an incubator in a NICU"
+ },
+ {
+  "num": "104",
+  "code": "m930",
+  "page": "Nephrology",
+  "page_id": 516,
+  "card": "Intro",
+  "card_text": "Nephrology is the branch of internal medicine concerned with kidney health and disease, including blood pressure, fluid and electrolyte balance, and the effects of other illnesses and medicines on the kidneys. At our partner hospital, nephrologists provide outpatient, inpatient and intensive care services, all forms of dialysis and assessment for kidney transplantation with lifelong follow-up. MedLuxLife coordinates your appointments and treatment schedule and organises the practical details of ",
+  "old_scene": "Doctor reviewing a kidney ultrasound image on a monitor"
+ },
+ {
+  "num": "105",
+  "code": "m931",
+  "page": "Neurology",
+  "page_id": 489,
+  "card": "Intro",
+  "card_text": "Neurology focuses on disorders of the brain, spinal cord, nerves and muscles in both adults and children. Through our partner hospital, MedLuxLife arranges access to specialised neurology units, from stroke and epilepsy care to sleep and balance disorders. We coordinate your appointments, translate your records and stay at your side throughout diagnosis and follow-up.",
+  "old_scene": "Neurologist reviewing brain MRI scans on a screen"
+ },
+ {
+  "num": "106",
+  "code": "m902",
+  "page": "Nuclear Medicine",
+  "page_id": 486,
+  "card": "Intro",
+  "card_text": "Nuclear medicine uses small amounts of radioactive substances to image and treat disease at a molecular level, giving information about how organs function as well as how they look. The department at our partner hospital works with many specialties, including cardiology, nephrology, orthopaedics, oncology and endocrinology, and has been designed to keep radiation exposure for patients and staff to a minimum. MedLuxLife coordinates referrals, scan appointments and the transfer of results to your ",
+  "old_scene": "Patient lying on a PET-CT scanner table with a technician nearby"
+ },
+ {
+  "num": "107",
+  "code": "m933",
+  "page": "Nutrition and Dietetics",
+  "page_id": 521,
+  "card": "Intro",
+  "card_text": "Balanced nutrition plays an important part in both preventing illness and supporting medical treatment. The nutrition and dietetics team at our partner hospital assesses your eating habits and body composition and develops a personalised nutrition plan with regular follow-up. MedLuxLife coordinates your consultations and can combine them with other treatments during your stay.",
+  "old_scene": "Dietitian explaining a healthy meal plan with fresh vegetables on the desk"
+ },
+ {
+  "num": "108",
+  "code": "m934",
+  "page": "Obstetrics and Gynaecology",
+  "page_id": 498,
+  "card": "Intro",
+  "card_text": "Obstetrics and gynaecology covers women's health at every stage of life, from fertility and pregnancy to menopause and gynaecological oncology. MedLuxLife arranges consultations, diagnostics and treatment with specialists at our partner hospital, who work together with radiology, psychiatry and other departments when needed. We take care of scheduling, translation and travel so you can concentrate on your health.",
+  "old_scene": "Pregnant woman having an ultrasound with a doctor, both smiling"
+ },
+ {
+  "num": "109",
+  "code": "m937",
+  "page": "Paediatric Allergy and Immunology",
+  "page_id": 532,
+  "card": "Intro",
+  "card_text": "This department diagnoses and treats allergic conditions in children and adolescents from birth to 18 years. A range of skin, blood, breathing and provocation tests helps identify triggers so a suitable treatment plan can be made. MedLuxLife organises testing and consultations at our partner hospital and supports families throughout the visit.",
+  "old_scene": "Paediatric allergist doing a gentle skin test on a child\u2019s forearm, child calm"
+ },
+ {
+  "num": "110",
+  "code": "m939",
+  "page": "Paediatric Bone Marrow Transplantation",
+  "page_id": 527,
+  "card": "Intro",
+  "card_text": "Stem cell (bone marrow) transplantation is a treatment option for a range of hereditary and acquired diseases in children when other treatments are not sufficient. It is carried out by a specialised team in dedicated transplant units with strict infection control. MedLuxLife helps families with the assessment, planning and long stay that transplantation involves at our partner hospital.",
+  "old_scene": "Nurse in a protective gown talking with a child in a bright hospital room"
+ },
+ {
+  "num": "111",
+  "code": "m938",
+  "page": "Paediatric Cardiology",
+  "page_id": 524,
+  "card": "Intro",
+  "card_text": "Paediatric cardiology looks after the heart and circulation of children from birth through adolescence. Specialists assess congenital and acquired heart conditions and plan treatment together with paediatric heart surgeons and other specialties. MedLuxLife arranges examinations and follow-up at our partner hospital and supports families during every visit.",
+  "old_scene": "Paediatric cardiologist listening to a toddler\u2019s heart with a stethoscope, parent nearby"
+ },
+ {
+  "num": "112",
+  "code": "m940",
+  "page": "Paediatric Endocrinology",
+  "page_id": 530,
+  "card": "Intro",
+  "card_text": "Paediatric endocrinology covers hormonal, growth and metabolic disorders in children from the newborn period to 18 years. Treatment is planned with each child's growth and stage of development in mind. MedLuxLife coordinates consultations, tests and follow-up appointments with specialists at our partner hospital.",
+  "old_scene": "Doctor measuring a child\u2019s height against a colourful wall chart"
+ },
+ {
+  "num": "113",
+  "code": "m941",
+  "page": "Paediatric Gastroenterology, Hepatology and Nutrition",
+  "page_id": 531,
+  "card": "Intro",
+  "card_text": "This department diagnoses and treats diseases of the digestive tract, liver and pancreas, as well as nutrition-related conditions, in children from infancy to 18 years. Each child is assessed with a holistic approach. MedLuxLife arranges consultations and investigations at our partner hospital and supports families with travel and translation.",
+  "old_scene": "Child eating a healthy snack of fruit at a table, bright kitchen"
+ },
+ {
+  "num": "114",
+  "code": "m943",
+  "page": "Paediatric Haematology",
+  "page_id": 526,
+  "card": "Intro",
+  "card_text": "Paediatric haematology covers blood disorders and childhood cancers from the newborn period to 18 years, with diagnosis and treatment adapted to children. The department works closely with the paediatric bone marrow transplantation clinic for both outpatient and inpatient care. MedLuxLife coordinates assessments, treatment schedules and family logistics at our partner hospital.",
+  "old_scene": "Nurse doing a gentle finger-prick test on a calm child, parent nearby"
+ },
+ {
+  "num": "115",
+  "code": "m942",
+  "page": "Paediatric Infectious Diseases",
+  "page_id": 533,
+  "card": "Intro",
+  "card_text": "Children are more vulnerable to infections than other age groups, and some infections need specialist assessment and follow-up. This department diagnoses and treats infectious diseases in children, plans vaccinations and works with other paediatric specialties for a holistic approach. MedLuxLife arranges consultations at our partner hospital and supports families during their stay.",
+  "old_scene": "Teddy bear with a small plaster and syringe on a hospital bed, child vaccination theme"
+ },
+ {
+  "num": "116",
+  "code": "m944",
+  "page": "Paediatric Nephrology",
+  "page_id": 529,
+  "card": "Intro",
+  "card_text": "Paediatric nephrology deals with diseases of the kidneys, urinary tract, bladder and urethra in children from birth to 18 years. Signs such as swelling of the hands, feet or eyes, blood in the urine or pain when passing urine should be assessed without delay. MedLuxLife arranges specialist consultations at our partner hospital, where care is multidisciplinary and families are supported at every stage.",
+  "old_scene": "Mother holding a happy toddler at a paediatric clinic"
+ },
+ {
+  "num": "117",
+  "code": "m945",
+  "page": "Paediatric Neurology",
+  "page_id": 528,
+  "card": "Intro",
+  "card_text": "Paediatric neurology diagnoses and treats disorders of the brain, spinal cord, nerves and muscles in children from birth to 18 years. Early assessment can be important for accurate diagnosis and treatment planning, supported by tests such as MRI and EEG where needed. MedLuxLife coordinates consultations, investigations and follow-up at our partner hospital.",
+  "old_scene": "Paediatric neurologist examining a child\u2019s reflexes in a friendly clinic"
+ },
+ {
+  "num": "118",
+  "code": "m946",
+  "page": "Paediatric Oncology",
+  "page_id": 525,
+  "card": "Intro",
+  "card_text": "Paediatric oncology focuses on the diagnosis, treatment and long-term follow-up of cancers in children and adolescents up to the age of 18, including solid tumours, lymphomas and leukaemias. Childhood cancers behave differently from adult cancers and call for care designed around young patients and their families. MedLuxLife coordinates assessments and treatment at our partner hospital, helping families with records, appointments, travel and communication throughout the course of care.",
+  "old_scene": "Parent and child holding hands, walking along a sunny beach, hope theme"
+ },
+ {
+  "num": "119",
+  "code": "m947",
+  "page": "Paediatric Rheumatology",
+  "page_id": 534,
+  "card": "Intro",
+  "card_text": "Paediatric rheumatology covers the assessment, diagnosis and treatment of inflammatory and rheumatic conditions in childhood, which can affect the joints, muscles, blood vessels and skin as well as other organ systems. Because these conditions often differ from their adult forms, care is planned with a multidisciplinary approach. MedLuxLife arranges consultations and follow-up at our partner hospital and supports families throughout their stay.",
+  "old_scene": "Doctor examining a child\u2019s knee joint, child sitting on the examination bed"
+ },
+ {
+  "num": "120",
+  "code": "m948",
+  "page": "Paediatric Surgery",
+  "page_id": 523,
+  "card": "Intro",
+  "card_text": "Paediatric surgery deals with conditions requiring surgical care in infants, children and adolescents, from the prenatal period up to the age of 18. Treatment is tailored to the child's age and development, with open, endoscopic and laparoscopic techniques available. MedLuxLife coordinates consultations, surgery dates and aftercare at our partner hospital, so that families can focus on their child.",
+  "old_scene": "Teddy bear on a children\u2019s hospital bed, bright friendly ward"
+ },
+ {
+  "num": "121",
+  "code": "m949",
+  "page": "Paediatrics",
+  "page_id": 522,
+  "card": "Intro",
+  "card_text": "The paediatrics department provides diagnosis and treatment for children from birth to 18 years of age, with outpatient clinics, an inpatient ward and intensive care areas designed for children. It is organised into a newborn section (0-28 days) and a child section (0-18 years), with subspecialties working together as a multidisciplinary team. MedLuxLife helps families access the right paediatric specialist at our partner hospital and coordinates appointments, travel and communication.",
+  "old_scene": "Paediatrician examining a smiling baby with a stethoscope"
+ },
+ {
+  "num": "122",
+  "code": "m935",
+  "page": "Parathyroid Transplant Clinic",
+  "page_id": 497,
+  "card": "Intro",
+  "card_text": "This clinic focuses on parathyroid transplantation, a treatment option for patients with permanent hypoparathyroidism, and on the diagnosis and treatment of parathyroid gland diseases more broadly. Endocrine surgeons work alongside endocrinology, immunology and bioengineering specialists. MedLuxLife can arrange an initial evaluation of your case at our partner hospital and coordinate every step if transplantation is considered suitable.",
+  "old_scene": "Doctor examining a patient\u2019s neck in a calm consultation room"
+ },
+ {
+  "num": "123",
+  "code": "m950",
+  "page": "Pelvic Pain and Endometriosis Clinic",
+  "page_id": 500,
+  "card": "Intro",
+  "card_text": "Chronic pelvic pain can affect every part of daily life, and finding its cause often requires more than one specialist. This multidisciplinary clinic investigates the nature and origin of pelvic pain, including endometriosis, using diagnostic methods chosen according to each patient's symptoms, and then plans treatment based on current medical evidence. MedLuxLife arranges your evaluation at our partner hospital and supports you with preparation, records and travel.",
+  "old_scene": "Woman holding her lower abdomen in mild pain, neutral background"
+ },
+ {
+  "num": "124",
+  "code": "m951",
+  "page": "Perinatology",
+  "page_id": 499,
+  "card": "Intro",
+  "card_text": "Perinatology, a division of obstetrics and gynaecology, focuses on the health of mother and baby during pregnancy. Alongside routine pregnancy care and delivery, it provides follow-up and management of high-risk pregnancies and the diagnosis and management of maternal and fetal conditions using specialised scans, tests and procedures. MedLuxLife helps expectant parents arrange screening, specialist scans and consultations at our partner hospital and coordinates every step of the visit.",
+  "old_scene": "Detailed pregnancy ultrasound scan on a monitor with a pregnant belly in the foreground"
+ },
+ {
+  "num": "125",
+  "code": "m952",
+  "page": "Physical Therapy and Rehabilitation",
+  "page_id": 493,
+  "card": "Intro",
+  "card_text": "Physical therapy and rehabilitation aims to restore movement and function, reduce pain and improve mobility after injury, illness or surgery. The department offers assessment, treatment and rehabilitation for a wide range of conditions, from musculoskeletal disorders to neurological diseases, along with several specialised programmes. MedLuxLife can arrange a rehabilitation stay at our partner hospital and coordinate it with your other treatment.",
+  "old_scene": "Physiotherapist guiding a patient through a knee exercise in a bright rehab gym"
+ },
+ {
+  "num": "126",
+  "code": "m953",
+  "page": "Pituitary Clinic",
+  "page_id": 514,
+  "card": "Intro",
+  "card_text": "Pituitary disorders can be difficult to recognise because their symptoms often resemble other illnesses, so early and accurate diagnosis matters. This dedicated clinic brings several specialties together to evaluate pituitary diseases and tumours and to plan diagnosis and treatment using modern imaging, laboratory and treatment methods. MedLuxLife coordinates your referral, records and appointments at our partner hospital.",
+  "old_scene": "Brain MRI scans displayed on a monitor in a radiology reading room"
+ },
+ {
+  "num": "127",
+  "code": "m954",
+  "page": "Psychiatry",
+  "page_id": 491,
+  "card": "Intro",
+  "card_text": "Psychiatry is concerned with the evaluation, diagnosis and treatment of mental health problems, looking at emotional, cognitive and behavioural symptoms as a whole. The department offers support for difficulties ranging from stress and life challenges to more serious mental health conditions, with treatment plans tailored to each person. MedLuxLife can arrange confidential consultations at our partner hospital, including interpreter support where needed.",
+  "old_scene": "Psychiatrist listening to an adult patient in a calm office"
+ },
+ {
+  "num": "128",
+  "code": "m956",
+  "page": "Psychology",
+  "page_id": 492,
+  "card": "Intro",
+  "card_text": "Health includes emotional, cognitive and mental wellbeing as well as physical health. The clinical psychology unit offers psychological assessment and support for children, adolescents and adults, including school-related assessments, structured education programmes and therapy for patients undergoing cancer treatment. MedLuxLife can arrange appointments at our partner hospital and help with language and scheduling.",
+  "old_scene": "Psychologist and client talking in a cosy, bright therapy room"
+ },
+ {
+  "num": "129",
+  "code": "m955",
+  "page": "Radiology",
+  "page_id": 537,
+  "card": "Intro",
+  "card_text": "The radiology department provides a broad range of diagnostic imaging, from MRI and CT to PET-CT, mammography and ultrasound, together with interventional radiology. Images are acquired digitally and stored with their reports in a central archive, making them available to treating teams across the hospital. MedLuxLife can schedule imaging at our partner hospital as part of a check-up or treatment plan and arrange for your images and reports to be shared with you.",
+  "old_scene": "Radiologist reviewing X-ray images on screens in a reading room"
+ },
+ {
+  "num": "130",
+  "code": "m957",
+  "page": "Rheumatology",
+  "page_id": 494,
+  "card": "Intro",
+  "card_text": "Rheumatology is a subspecialty dedicated to the diagnosis and treatment of rheumatic diseases, which are common, often long-lasting and can lead to pain, loss of function and reduced quality of life if not managed appropriately. Because these conditions can affect many organs, care is coordinated with several other specialties. MedLuxLife arranges consultations and follow-up at our partner hospital and keeps your records organised between visits.",
+  "old_scene": "Rheumatologist examining an older patient\u2019s hand joints"
+ },
+ {
+  "num": "131",
+  "code": "m958",
+  "page": "Thoracic Surgery",
+  "page_id": 509,
+  "card": "Intro",
+  "card_text": "Thoracic surgery treats diseases of the organs and tissues within the chest, excluding the heart, including the lungs, airways, chest wall, pleura, diaphragm, mediastinum and oesophagus. The department uses fibreoptic and endoscopic equipment, minimally invasive surgical tools and imaging from virtual bronchoscopy to PET-CT, supported by pathology and laboratory services. MedLuxLife coordinates evaluation and surgery at our partner hospital, from sharing your scans to planning your recovery stay",
+  "old_scene": "Thoracic surgery team in a modern operating room, masked, monitors visible"
+ },
+ {
+  "num": "132",
+  "code": "m959",
+  "page": "Thyroid and Parathyroid Diseases and Surgery Clinic",
+  "page_id": 513,
+  "card": "Intro",
+  "card_text": "This multidisciplinary clinic is dedicated exclusively to diseases of the thyroid and parathyroid glands, offering early diagnosis together with medical and surgical treatment. Specialists from seven fields evaluate each case jointly, following current scientific evidence. MedLuxLife coordinates your assessment, tests and any surgery at our partner hospital, with clear communication at every stage.",
+  "old_scene": "Doctor performing a thyroid ultrasound on a patient\u2019s neck"
+ },
+ {
+  "num": "133",
+  "code": "m960",
+  "page": "Transfusion Centre",
+  "page_id": 543,
+  "card": "Intro",
+  "card_text": "The transfusion centre supports inpatients and other patients who need blood component therapy, cellular therapy, therapeutic apheresis or specialised laboratory diagnostics. Blood components and cellular therapy products are collected and prepared on site, and the centre also supports clinical research and training in transfusion medicine. MedLuxLife coordinates these services at our partner hospital as part of your wider treatment plan.",
+  "old_scene": "Blood donation bags in a clean transfusion centre"
+ },
+ {
+  "num": "134",
+  "code": "m961",
+  "page": "Urology",
+  "page_id": 510,
+  "card": "Intro",
+  "card_text": "Urology covers the diagnosis and treatment of conditions of the urinary tract in women and men and of the male reproductive organs, from urological cancers and prostate disease to kidney stones, infertility and incontinence. Care is personalised and coordinated with internal medicine, oncology, gynaecology and psychiatry when needed. MedLuxLife arranges consultations and treatment at our partner hospital and supports you before, during and after your stay.",
+  "old_scene": "Urologist consulting a middle-aged man in a modern office"
+ },
+ {
+  "num": "135",
+  "code": "n501",
+  "page": "PCOS and Hirsutism Clinic",
+  "page_id": 501,
+  "card": "Intro",
+  "card_text": "Polycystic ovary syndrome affects several body systems, so treating a single symptom in isolation may not address the underlying problem. At this clinic, endocrinologists and gynaecologists see patients jointly, with dermatologists joining when excess hair growth or acne is a concern. MedLuxLife arranges your appointments at our partner hospital and coordinates follow-up visits with the same team.",
+  "old_scene": "Gynaecologist and endocrinologist consulting a young woman together (PCOS clinic)"
+ },
+ {
+  "num": "136",
+  "code": "n504",
+  "page": "Otolaryngology (ENT)",
+  "page_id": 504,
+  "card": "Intro",
+  "card_text": "The ear, nose and throat department treats adults and children with conditions of the ear, nose, sinuses, throat and the wider head and neck region. MedLuxLife coordinates access to ENT specialists at our partner hospital, covering surgery, rhinology, voice and swallowing disorders, and dizziness and balance problems. We organise your diagnostics, treatment dates and aftercare from start to finish.",
+  "old_scene": "ENT doctor examining a patient\u2019s ear with an otoscope"
+ },
+ {
+  "num": "137",
+  "code": "n545",
+  "page": "Intensive Care Unit",
+  "page_id": 545,
+  "card": "Intro",
+  "card_text": "Intensive care provides round-the-clock treatment and monitoring for patients whose organs or organ systems are severely affected. The units at our partner hospital combine advanced monitoring technology with a multidisciplinary team. MedLuxLife keeps families informed, coordinates communication with the care team and assists with travel and accommodation for relatives.",
+  "old_scene": "Modern intensive care room with monitors and a nurse checking a patient"
+ }
+]
