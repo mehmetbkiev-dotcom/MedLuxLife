@@ -242,3 +242,4 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - 2026-10-10: m744 (Dental Implants, dentist with implant model) → placed on Dental (260).
 - 2026-10-10: m740 (All-on-4/6, dentist with full-arch model) → placed on Dental (260).
 - 2026-10-10: m740 reverted at user request (old All-on-4 photo Media 740 back on 260). AI image Media 1103 stays unused.
+- 2026-10-10: User asked for more varied prompts and 4 different images per card. Workflow 1 wrote single scenes (content/ai_scenes_v1_single.json; critics found recurring 'series'). Workflow 2 (4 variants per card: still life / people / everyday-concept / process-detail, balanced casting) is running; builder tools/build_4x_prompts.py → content/chatgpt_prompts_4x.md.
