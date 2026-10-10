@@ -1,0 +1,174 @@
+# TASK
+You are producing a complete set of 137 photorealistic stock photos for the website of MedLuxLife, a German medical-travel agency (premium, calm, trustworthy). Every image in the LIST below must be generated, saved with its EXACT file name and delivered to me in ZIP files. Follow every rule below for every single image, without exceptions and without asking me questions.
+
+# 1. IMAGE FORMAT (most important)
+- Exactly ONE full-frame photograph per image, landscape 3:2, 1536 x 1024 px (use the landscape/wide image size).
+- The photo must fill the WHOLE canvas edge to edge.
+- FORBIDDEN: borders, frames, letterbox or black/white bands, blurred background fill, a thin panorama strip inside a bigger canvas, collages, split screens, multiple panels, rounded corners, mock-ups (no photo shown on a phone, laptop or wall).
+- Keep the main subject near the centre (the website may crop slightly to 16:9 or 4:3).
+- Save as PNG.
+
+# 2. STYLE (identical for all images so the set looks consistent)
+- Photorealistic, high-end editorial photography; natural soft daylight; shallow depth of field; true-to-life colours.
+- Calm, premium, reassuring mood. Clean, modern clinics in white / light-grey tones; subtle warm-gold accents allowed; never cluttered, never dark or gloomy.
+- Adult models of European, Middle-Eastern and Eastern-European appearance, natural skin, no heavy retouching, natural expressions.
+- No illustration, no 3D render, no cartoon, no CGI look.
+
+# 3. STRICT CONTENT RULES (German health-advertising law HWG + our brand rules)
+- NO text, letters, numbers, logos, watermarks, brand names, signage or screens with readable text anywhere.
+- NO before/after comparisons, NO split images, NO visible weight numbers, NO results claims.
+- NO blood, open wounds, incisions, stitches, needles piercing skin in close-up, or graphic surgery. In operating rooms show the calm team and equipment, not the surgical site.
+- NO nudity: bodies always covered with clothing, a towel or a gown; tasteful and modest; no lingerie or bikini.
+- NO real, recognisable people, celebrities, real hospitals or real brands. Medical staff wear masks or are not the main focus.
+- Children: always fully clothed, calm or happy, with a parent or friendly staff.
+- No flags, no religious symbols, no hospital names on uniforms.
+
+# 4. FILE NAMES AND DELIVERY
+- The file name of every image is given in the LIST (e.g. m879.png). Use it EXACTLY – lower-case, no spaces, no extra words, no numbering prefix.
+- Work in batches of 10 in list order (001-010, 011-020, ...).
+- After each batch: show the 10 images, each with its file name written above it, then put exactly those 10 files into a ZIP named medluxlife-batch-01.zip, medluxlife-batch-02.zip, ... and give me the download link.
+- Before creating each ZIP, check every file: correct name, 1536x1024, full-frame (no bands/borders), no text. Regenerate any image that fails.
+- Never put placeholders, empty files, thumbnails or copies of another image into a ZIP. If you cannot save a generated image as a file or cannot create the ZIP, say so clearly instead of pretending.
+- Then continue automatically with the next batch. If you hit a limit, stop and tell me the last finished number; when I write "continue" you resume from the next number.
+- At the very end, give me one final ZIP medluxlife-all.zip with all images, plus a short checklist of any numbers that are still missing.
+
+# 5. LIST (137 images: number. file name — what the photo shows)
+001. m879.png — A friendly female doctor in a bright consultation room discussing a weight-loss plan with an adult patient, tablet in hand
+002. m878.png — Adult woman in casual clothes holding out the waistband of jeans that have become too big, neutral light background, face not visible
+003. m877.png — Close-up of hands measuring a waist with a soft tape measure over a fitted sports top
+004. m880.png — Adult woman walking outdoors on a sunny path, seen from behind, healthy active lifestyle
+005. m881.png — Doctor measuring an adult patient’s blood pressure with a modern cuff in a calm, bright clinic
+006. m883.png — Middle-aged man having a relaxed check-up conversation with a doctor in a modern clinic
+007. m884.png — Middle-aged woman smiling during a check-up consultation with a female doctor in a modern clinic
+008. m741.png — Smiling adult patient in a modern dental chair talking with a dentist, bright clean dental clinic
+009. m760.png — Doctor examining the scalp of a man with thinning hair using a handheld dermatoscope, planning a hair transplant
+010. m857.png — Woman in a modern aesthetic clinic looking calmly into a hand mirror during a consultation
+011. m872.png — Woman lying relaxed on a treatment bed receiving a gentle facial device treatment, gloved hands of a practitioner
+012. m882.png — Adult woman relaxing in a comfortable armchair in a spa-like clinic while receiving an IV infusion, drip bag visible
+013. m742.png — Close-up of a natural, bright smile of an adult woman, soft daylight
+014. m744.png — Dentist showing a dental implant model to a patient in a modern clinic
+015. m740.png — Dental model of a full-arch implant bridge on a clean white surface, studio light
+016. m745.png — Dental technician hands polishing a ceramic crown in a dental laboratory
+017. m743.png — Dental model with implant-supported denture next to dental instruments, clean studio light
+018. m746.png — Woman smiling with a teeth-shade guide held next to her teeth in a dental clinic
+019. m968.png — Close-up of a smile with natural-looking white veneers, soft studio light
+020. m969.png — Dentist gently examining gums with a dental mirror, patient relaxed in the chair
+021. m971.png — Dentist and assistant treating a smiling male patient in a modern dental chair
+022. m970.png — Modern dental treatment room with chair, lamp and monitor, no people
+023. m972.png — Woman gently touching her jawline, calm portrait in a clinic, soft light
+024. m975.png — Woman holding her cheek and jaw in mild discomfort, neutral background
+025. m974.png — Close-up of a smiling teenager with clear dental braces
+026. m763.png — Doctor analysing a man’s scalp with a digital trichoscope, image shown on a monitor
+027. m752.png — Close-up of a medical team performing an FUE hair transplant on the back of a man’s head, clean sterile setting, no blood
+028. m753.png — Well-groomed man with a full, neat beard, studio portrait
+029. m754.png — Close-up of a woman’s eye area with full, natural eyebrows
+030. m973.png — Doctor with magnifying loupes working on a patient’s scalp in a modern hair clinic, sterile and clean
+031. m976.png — Doctor explaining the hair transplant plan to a male patient using a tablet
+032. m977.png — Back of a man’s head showing thinning hair, soft studio light
+033. m764.png — Practitioner applying a serum treatment to a woman’s scalp with gloved hands
+034. m755.png — Practitioner giving a scalp mesotherapy treatment to a relaxed woman
+035. m979.png — Woman relaxing under a red LED light therapy device, warm red glow
+036. m978.png — Laboratory centrifuge with blood sample tubes for PRP preparation, clean clinical light
+037. m858.png — Woman holding a tape measure around her waist, wearing jeans and a crop top, face not shown
+038. m859.png — Side profile of a woman’s face and nose, soft natural light
+039. m860.png — Plastic surgeon consulting a woman in a bright clinic, discussing a treatment plan
+040. m861.png — Woman in a white crop top and jeans, torso, tasteful and modest, face not shown
+041. m862.png — Woman wrapped in a white towel in a bright bathroom, shoulders and back, modest
+042. m863.png — Man in a grey t-shirt with a hand on his chest, black and white, modest
+043. m864.png — Woman doing an arm exercise with a light dumbbell in a bright gym, seen from behind
+044. m865.png — Woman stretching in leggings in a bright, empty studio
+045. m866.png — Woman’s legs relaxing by a swimming pool, summer light
+046. m867.png — Close-up of a woman’s eye and upper eyelid, natural skin
+047. m868.png — Smiling mature woman with natural skin, warm portrait
+048. m869.png — Side profile of a woman’s cheek and jawline in warm light
+049. m962.png — Body-contouring device being used on a woman’s abdomen by a gloved practitioner
+050. m963.png — Woman in a white shirt, elegant studio portrait, modest
+051. m964.png — Side view of a woman’s ear and profile, hair tucked back
+052. m967.png — Woman’s neck and jawline, elegant black and white portrait
+053. m885.png — IV infusion bag with a clear vitamin solution on a stand, bright clinic
+054. m886.png — Close-up of a hand with an IV cannula resting on a white blanket
+055. m887.png — Woman with long, shiny, healthy hair, soft studio light
+056. m888.png — Smiling woman with glowing skin in a white robe, bright spa setting
+057. m889.png — Woman in sportswear tying her running shoes, active lifestyle
+058. m890.png — Fresh oranges and lemons in a bowl, vitamin C theme, bright kitchen light
+059. m891.png — Adult hands resting on a knee, calm and relaxed, soft light
+060. m892.png — Woman resting hands on her stomach, wellbeing theme, light clothing
+061. m893.png — Green smoothie with fresh fruit and vegetables on a wooden table
+062. m980.png — Fresh berries in a bowl, antioxidant theme, natural light
+063. m873.png — Practitioner with gloves giving a small forehead injection to a relaxed woman, clean clinic
+064. m874.png — Aesthetic doctor assessing the lips and chin of a woman in a treatment chair
+065. m966.png — Microneedling facial treatment on a relaxed woman, gloved hands, clean clinic
+066. m965.png — Skin-care serum bottle with dropper on a white marble surface, soft light
+067. m894.png — Doctor kindly holding the hand of an adult patient in a hospital room, supportive cancer care
+068. m895.png — Cardiologist performing an echocardiogram on a patient lying on an examination bed
+069. m896.png — Orthopaedic doctor examining a patient’s knee in a bright clinic
+070. m897.png — Embryologist working at a microscope in a modern IVF laboratory
+071. m898.png — Neurosurgeon reviewing a brain MRI on a large screen
+072. m899.png — Patient having an eye examination at a slit lamp with an ophthalmologist
+073. m900.png — Surgical team in a modern operating room, calm and clean, faces masked
+074. m903.png — Haematologist talking with an adult patient in a modern bone-marrow transplant unit
+075. m901.png — Doctor examining the lower back of an adult patient with back pain
+076. m904.png — Anaesthesiologist checking monitors next to a patient in a modern operating room
+077. m936.png — Audiologist fitting headphones on a patient for a hearing test in a sound booth
+078. m905.png — Pink ribbon on a white background, breast health awareness
+079. m906.png — Cardiac surgery team in a modern operating room with monitors, masked faces
+080. m907.png — Pulmonologist looking at a chest X-ray on a light board
+081. m908.png — Therapist talking with a teenager in a calm, friendly counselling room
+082. m909.png — Dermatologist examining a patient’s skin with a dermatoscope
+083. m910.png — Modern hospital emergency entrance with an ambulance at dusk
+084. m911.png — Surgeon examining a patient’s neck before endocrine surgery
+085. m912.png — Patient checking blood sugar with a glucose meter, close-up of hands
+086. m914.png — Surgical team performing laparoscopic abdominal surgery, monitors visible, no blood
+087. m913.png — Gastroenterologist in an endoscopy suite next to an endoscopy tower
+088. m915.png — Surgeons in blue scrubs operating under bright surgical lights, masked
+089. m916.png — Female gynaecologist consulting a woman in a bright clinic
+090. m918.png — Laboratory technician holding a rack of blood sample tubes
+091. m917.png — Woman with clear skin in a dermatology consultation, calm portrait
+092. m919.png — Modern MRI scanner room, clean and bright, no people
+093. m920.png — Gloved hand holding a vaccine vial, clean clinical background
+094. m921.png — Microbiologist examining petri dishes in a modern laboratory
+095. m923.png — Internist listening to a patient’s chest with a stethoscope
+096. m922.png — Interventional radiology suite with an angiography C-arm and monitors
+097. m924.png — Patient receiving dialysis in a calm, modern kidney unit
+098. m926.png — Doctor performing an abdominal ultrasound on a patient
+099. m925.png — Scientist pipetting DNA samples in a genetics laboratory
+100. m927.png — Microscope with tissue slides in a histology laboratory
+101. m928.png — Petri dishes with bacterial cultures on a laboratory bench
+102. m929.png — Pathologist looking through a microscope in a modern laboratory
+103. m932.png — Nurse caring for a newborn baby in an incubator in a NICU
+104. m930.png — Doctor reviewing a kidney ultrasound image on a monitor
+105. m931.png — Neurologist reviewing brain MRI scans on a screen
+106. m902.png — Patient lying on a PET-CT scanner table with a technician nearby
+107. m933.png — Dietitian explaining a healthy meal plan with fresh vegetables on the desk
+108. m934.png — Pregnant woman having an ultrasound with a doctor, both smiling
+109. m937.png — Paediatric allergist doing a gentle skin test on a child’s forearm, child calm
+110. m939.png — Nurse in a protective gown talking with a child in a bright hospital room
+111. m938.png — Paediatric cardiologist listening to a toddler’s heart with a stethoscope, parent nearby
+112. m940.png — Doctor measuring a child’s height against a colourful wall chart
+113. m941.png — Child eating a healthy snack of fruit at a table, bright kitchen
+114. m943.png — Nurse doing a gentle finger-prick test on a calm child, parent nearby
+115. m942.png — Teddy bear with a small plaster and syringe on a hospital bed, child vaccination theme
+116. m944.png — Mother holding a happy toddler at a paediatric clinic
+117. m945.png — Paediatric neurologist examining a child’s reflexes in a friendly clinic
+118. m946.png — Parent and child holding hands, walking along a sunny beach, hope theme
+119. m947.png — Doctor examining a child’s knee joint, child sitting on the examination bed
+120. m948.png — Teddy bear on a children’s hospital bed, bright friendly ward
+121. m949.png — Paediatrician examining a smiling baby with a stethoscope
+122. m935.png — Doctor examining a patient’s neck in a calm consultation room
+123. m950.png — Woman holding her lower abdomen in mild pain, neutral background
+124. m951.png — Detailed pregnancy ultrasound scan on a monitor with a pregnant belly in the foreground
+125. m952.png — Physiotherapist guiding a patient through a knee exercise in a bright rehab gym
+126. m953.png — Brain MRI scans displayed on a monitor in a radiology reading room
+127. m954.png — Psychiatrist listening to an adult patient in a calm office
+128. m956.png — Psychologist and client talking in a cosy, bright therapy room
+129. m955.png — Radiologist reviewing X-ray images on screens in a reading room
+130. m957.png — Rheumatologist examining an older patient’s hand joints
+131. m958.png — Thoracic surgery team in a modern operating room, masked, monitors visible
+132. m959.png — Doctor performing a thyroid ultrasound on a patient’s neck
+133. m960.png — Blood donation bags in a clean transfusion centre
+134. m961.png — Urologist consulting a middle-aged man in a modern office
+135. n501.png — Gynaecologist and endocrinologist consulting a young woman together (PCOS clinic)
+136. n504.png — ENT doctor examining a patient’s ear with an otoscope
+137. n545.png — Modern intensive care room with monitors and a nurse checking a patient
+
+Start now with batch 1 (001-010).
