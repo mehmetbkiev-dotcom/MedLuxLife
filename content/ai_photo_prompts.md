@@ -28,7 +28,7 @@ STYLE (same for every image):
 - Photorealistic, high-end editorial photography, natural soft daylight, shallow depth of field.
 - Calm, premium, reassuring mood. Clean modern clinics, white/light-grey tones with subtle warm-gold accents allowed; never cluttered.
 - Diverse adult models of European, Middle-Eastern and Eastern-European appearance. Natural skin, no heavy retouching.
-- Composition: landscape 3:2 (1536 x 1024 px or larger). Keep the main subject in the CENTRE so the image can be cropped to 16:9 or 4:3 without losing it.
+- Format: ONE single full-frame landscape photo, 3:2 (1536 x 1024 px). The photo must fill the whole canvas edge to edge: NO borders, NO letterbox bands, NO blurred background fill, NO panorama strip, NO collage. Keep the main subject near the centre.
 
 STRICT RULES (German health-advertising law and our brand rules):
 - NO text, letters, numbers, logos, watermarks, brand names or signage anywhere in the image.
