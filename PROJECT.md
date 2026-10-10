@@ -236,3 +236,4 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - 2026-10-10: AI photos batch 1 placed (001–010: m741 m760 m857 m877 m878 m879 m880 m881 m883 m884 → Media 1074–1083, converted to JPG ~180 KB, alt kept). User's PNG uploads 1064–1073 stay in the library. Tool: tools/place_ai_photos.py; log: content/ai_photo_map.json; backups: backups/wp/ai_photos/.
 - 2026-10-10: Clinical Treatments (258) intro no longer duplicates the Dental card: intro now Media 1082 (m883, consultation). Added optional slot 138 n258 (clinic reception) to the ChatGPT list for a dedicated intro later.
 - 2026-10-10: User disliked the m883 intro on 258 → now Media 1083 (m884, woman patient with female doctor).
+- 2026-10-10: n258 (clinic reception, pasted by user in chat) uploaded as Media 1094 and set as the Clinical Treatments (258) intro. Previous intro m884 stays on the Check-up card.
