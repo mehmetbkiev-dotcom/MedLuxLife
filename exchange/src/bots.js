@@ -2,7 +2,8 @@
 // Демо-боти, щоб у книзі завжди була ліквідність і графік рухався:
 //  - market maker виставляє сітку лімітних ордерів навколо "справедливої" ціни;
 //  - taker іноді робить невеликі ринкові угоди.
-// Ціна маркетмейкера тягнеться до останньої угоди, тож користувачі реально рухають ринок.
+// Ціна маркетмейкера тягнеться до останньої угоди (або до реальної ціни брокера), а великий
+// набраний обсяг позиції трохи зсуває котирування, щоб бот сам поступово з неї виходив.
 
 const { toUnits, fmt } = require('./decimal');
 
@@ -10,21 +11,14 @@ function startBots(engine, auth, hedger = null) {
   const mm = auth.ensureSystemUser('market_maker', 'bot');
   const tk = auth.ensureSystemUser('taker_bot', 'bot');
   engine.noOrderLimit.add(mm.id); // 20 пар × 24 рівні — більше за ліміт для людей
-  // Стартовий капітал ботів у кожній монеті (докладається і для щойно доданих пар)
-  const seed = (uid, usdt, perCoinUsd) => {
-    const add = {};
-    if (engine._peekBal(uid, 'USDT').free + engine._peekBal(uid, 'USDT').locked === 0n) add.USDT = usdt;
-    for (const m of engine.markets.values()) {
-      const b = engine._peekBal(uid, m.base);
-      if (b.free + b.locked > 0n) continue;
-      const px = Number(fmt(engine.last.get(m.symbol)));
-      const u = toUnits((perCoinUsd / px).toFixed(8));
-      if (u) add[m.base] = fmt(u - (u % m.step));
-    }
-    if (Object.keys(add).length) engine.deposit(uid, add, 'bot_seed');
-  };
-  seed(mm.id, '50000000', 3000000);
-  seed(tk.id, '2000000', 100000);
+  for (const b of [mm, tk]) {
+    engine.noLiquidation.add(b.id); // боти — системні рахунки, їх не ліквідуємо
+    const bal = engine._peekBal(b.id);
+    if (bal.free + bal.locked === 0n) engine.deposit(b.id, { USDT: b === mm ? '100000000' : '5000000' }, 'bot_seed');
+    // плече ботів 20x (задається напряму: позиції ботів можуть бути вже відкриті)
+    for (const m of engine.markets.values()) engine._p(b.id, m.symbol).leverage = 20;
+  }
+  engine._commit();
 
   const fair = new Map();
   for (const m of engine.markets.values()) fair.set(m.symbol, Number(fmt(engine.last.get(m.symbol))));
@@ -48,6 +42,10 @@ function startBots(engine, auth, hedger = null) {
       f *= 1 + (Math.random() - 0.5) * 0.002; // невеликий випадковий дрейф
     }
     fair.set(m.symbol, f);
+    // зсув котирувань проти власної позиції маркетмейкера (до ±0.05% при позиції $2M)
+    const ps = engine._peekPos(mm.id, m.symbol).size;
+    const posUsd = (Number(fmt(ps)) || 0) * f;
+    f *= 1 - Math.max(-1, Math.min(1, posUsd / 2e6)) * 0.0005;
     try {
       engine.cancelAll(mm.id, m.symbol);
       const notionalPerLevel = m.base === 'BTC' ? 15000 : 8000;

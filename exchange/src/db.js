@@ -25,33 +25,40 @@ function openDb(file) {
     );
     CREATE TABLE IF NOT EXISTS balances (
       user_id INTEGER NOT NULL,
-      asset TEXT NOT NULL,
+      asset TEXT NOT NULL,                       -- лише USDT (маржа)
       free TEXT NOT NULL,
-      locked TEXT NOT NULL,
+      locked TEXT NOT NULL,                      -- заблоковано під відкриті ордери
       PRIMARY KEY (user_id, asset)
     );
-    CREATE TABLE IF NOT EXISTS positions (
+    -- Ф'ючерсні позиції (one-way, ізольована маржа): size > 0 лонг, < 0 шорт
+    CREATE TABLE IF NOT EXISTS fpositions (
       user_id INTEGER NOT NULL,
-      asset TEXT NOT NULL,
-      qty TEXT NOT NULL,
-      cost TEXT NOT NULL,
+      symbol TEXT NOT NULL,
+      size TEXT NOT NULL,
+      entry TEXT NOT NULL,
+      margin TEXT NOT NULL,
+      leverage INTEGER NOT NULL,
       realized TEXT NOT NULL,
       fees TEXT NOT NULL,
-      PRIMARY KEY (user_id, asset)
+      PRIMARY KEY (user_id, symbol)
     );
     CREATE TABLE IF NOT EXISTS orders (
       id INTEGER PRIMARY KEY,
       user_id INTEGER NOT NULL,
       symbol TEXT NOT NULL,
       side TEXT NOT NULL,
-      type TEXT NOT NULL,
+      type TEXT NOT NULL,                        -- LIMIT | MARKET | LIMIT_MAKER | LIQUIDATION
       tif TEXT,
       price TEXT,
-      qty TEXT,
-      quote_qty TEXT,
+      qty TEXT NOT NULL,
       filled TEXT NOT NULL,
       quote_filled TEXT NOT NULL,
       fee TEXT NOT NULL,
+      reduce_only INTEGER NOT NULL,
+      leverage INTEGER NOT NULL,
+      lock TEXT NOT NULL,
+      lock_released TEXT NOT NULL,
+      realized TEXT NOT NULL,
       status TEXT NOT NULL,
       created_at INTEGER NOT NULL,
       updated_at INTEGER NOT NULL
@@ -71,6 +78,8 @@ function openDb(file) {
       taker_side TEXT NOT NULL,
       buyer_fee TEXT NOT NULL,
       seller_fee TEXT NOT NULL,
+      buyer_pnl TEXT NOT NULL,
+      seller_pnl TEXT NOT NULL,
       ts INTEGER NOT NULL
     );
     CREATE INDEX IF NOT EXISTS trades_sym_ts ON trades(symbol, ts);
@@ -86,6 +95,10 @@ function openDb(file) {
     );
     CREATE INDEX IF NOT EXISTS ledger_user ON ledger(user_id, reason, ts);
   `);
+  // База від спотової версії має іншу структуру — не змішуємо
+  const cols = db.prepare('PRAGMA table_info(orders)').all().map((c) => c.name);
+  if (!cols.includes('reduce_only'))
+    throw new Error(`${file}: це база спотової версії біржі. Вкажіть інший файл (DB_FILE) — ф'ючерсна версія створить нову базу.`);
   return db;
 }
 

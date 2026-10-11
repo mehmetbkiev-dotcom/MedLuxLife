@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Quite Harbor — спотова біржа</title>
+  <title>Quite Harbor — ф'ючерсна біржа</title>
   <link rel="icon" href="/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/style.css">
 </head>
@@ -54,18 +54,16 @@
         <select id="tif"><option>GTC</option><option>IOC</option><option>FOK</option></select>
       </label>
     </div>
-    <div class="forms">
-      <form id="form-buy" class="order-form" data-side="BUY"></form>
-      <form id="form-sell" class="order-form" data-side="SELL"></form>
-    </div>
+    <form id="order-form" class="order-form fut-form" autocomplete="off"></form>
   </section>
 
   <section class="panel account">
     <div class="tabs" id="acc-tabs">
-      <button data-tab="open" class="active">Відкриті ордери <span id="open-count"></span></button>
+      <button data-tab="positions" class="active">Позиції <span id="pos-count"></span></button>
+      <button data-tab="open">Відкриті ордери <span id="open-count"></span></button>
       <button data-tab="history">Історія ордерів</button>
-      <button data-tab="mytrades">Мої угоди</button>
-      <button data-tab="assets">Позиції та PnL</button>
+      <button data-tab="mytrades">Історія угод</button>
+      <button data-tab="wallet">Гаманець</button>
       <div class="spacer"></div>
       <button id="cancel-all" class="link-btn">Скасувати всі</button>
     </div>
@@ -87,6 +85,18 @@
       <p class="hint" id="auth-hint"></p>
     </form>
     <button class="close" id="modal-close" aria-label="Закрити">×</button>
+  </div>
+</div>
+
+<div id="lev-modal" class="modal hidden">
+  <div class="modal-card lev-card">
+    <h3>Плече <span id="lev-sym" class="muted"></span></h3>
+    <div class="lev-value"><button type="button" class="btn" data-lev-step="-1">−</button><b id="lev-val">10x</b><button type="button" class="btn" data-lev-step="1">+</button></div>
+    <input type="range" id="lev-range" min="1" max="100" value="10">
+    <div class="lev-quick" id="lev-quick"></div>
+    <p class="hint" id="lev-hint"></p>
+    <button type="button" class="btn primary" id="lev-save">Підтвердити</button>
+    <button class="close" id="lev-close" aria-label="Закрити">×</button>
   </div>
 </div>
 

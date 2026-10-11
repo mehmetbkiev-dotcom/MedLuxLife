@@ -55,7 +55,7 @@ button, input, select { font: inherit; color: inherit; }
 .grid {
   display: grid; gap: 4px; padding: 4px;
   grid-template-columns: 290px minmax(0, 1fr) 290px;
-  grid-template-rows: 470px 300px auto;
+  grid-template-rows: 470px 320px auto;
   grid-template-areas: "book chart trades" "book form trades" "account account account";
 }
 .panel { background: var(--panel); border-radius: 4px; min-width: 0; overflow: hidden; }
@@ -172,3 +172,28 @@ td.r, th.r { text-align: right; }
 .pair-row.active { background: var(--panel-2); box-shadow: inset 2px 0 0 var(--accent); }
 .close-btn { padding: 4px 12px; font-size: 12px; background: var(--red); color: #fff; }
 @media (max-width: 720px) { .pair-panel { left: 16px; } }
+
+/* ф'ючерсна форма */
+.fut-form { padding: 12px 16px 16px; max-width: 760px; }
+.fut-top { display: flex; align-items: center; gap: 8px; }
+.chip { background: var(--panel-2); border: 1px solid var(--line); border-radius: 4px; padding: 4px 10px; font-size: 12px; font-weight: 600; }
+.lev-btn { cursor: pointer; color: var(--accent); }
+.lev-btn:hover { border-color: var(--accent); }
+.fut-info { display: flex; justify-content: space-between; align-items: center; color: var(--muted); font-size: 12px; gap: 12px; flex-wrap: wrap; }
+.fut-info b { color: var(--text); font-weight: 500; }
+.chk { display: flex; align-items: center; gap: 6px; cursor: pointer; color: var(--text); }
+.fut-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.badge { display: inline-block; font-size: 11px; font-weight: 700; padding: 1px 6px; border-radius: 3px; margin-left: 6px; }
+.badge.long { background: var(--green-bg); color: var(--green); }
+.badge.short { background: var(--red-bg); color: var(--red); }
+.badge.lev { background: var(--panel-2); color: var(--accent); }
+.liq { color: #f0a020; }
+.lev-card h3 { margin: 6px 0 14px; }
+.lev-value { display: flex; align-items: center; justify-content: space-between; background: var(--panel-2); border-radius: 6px; padding: 4px; }
+.lev-value b { font-size: 20px; }
+.lev-card input[type=range] { width: 100%; margin: 16px 0 8px; accent-color: var(--accent); }
+.lev-quick { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+.lev-quick button { flex: 1; background: var(--panel-2); border: 1px solid var(--line); border-radius: 4px; padding: 4px 0; cursor: pointer; color: var(--muted); }
+.lev-quick button:hover { color: var(--text); }
+.lev-card .btn.primary { width: 100%; margin-top: 8px; }
+.perp { font-size: 11px; font-weight: 400; }

@@ -48,7 +48,7 @@ test('угоди користувачів дублюються у брокера
   srv = await boot(dbFile, mock.url);
   const e = srv.engine;
   const bot = srv.auth.ensureSystemUser('house', 'bot').id;
-  e.deposit(bot, { USDT: '10000000', BTC: '100' }, 'test');
+  e.deposit(bot, { USDT: '10000000' }, 'test');
   const a = await register(srv, 'alice');
   const b = await register(srv, 'bob');
 
@@ -62,7 +62,7 @@ test('угоди користувачів дублюються у брокера
   assert.equal(mock.state.orders[0].executedQty, '0.03000000');
 
   // 2. Дрібна угода нижче мінімуму брокера накопичується, а не губиться
-  e.placeOrder(a, { symbol: 'BTCUSDT', side: 'SELL', type: 'MARKET', qty: '0.00005' });
+  e.placeOrder(a, { symbol: 'BTCUSDT', side: 'SELL', type: 'MARKET', qty: '0.00005', reduceOnly: true });
   await sleep(400);
   assert.equal(mock.state.orders.length, 1);
   assert.equal(srv.hedger.status().markets.BTCUSDT.pendingToHedge, '-0.00005');

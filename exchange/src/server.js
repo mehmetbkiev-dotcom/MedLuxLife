@@ -120,7 +120,7 @@ function createServer(options = {}) {
     for (const uid of dirtyUsers) {
       const set = byUser.get(uid);
       if (set && set.size) {
-        const msg = frame('account', { balances: engine.balances(uid), pnl: engine.pnl(uid) });
+        const msg = frame('account', accountData(uid));
         for (const c of set) c.res.write(msg);
       }
     }
@@ -132,7 +132,7 @@ function createServer(options = {}) {
     broadcast(null, 'tickers', allTickers());
     // PnL залежить від ринкової ціни, тож оновлюємо його всім залогіненим раз на 2 с
     for (const [uid, set] of byUser) {
-      const msg = frame('account', { balances: engine.balances(uid), pnl: engine.pnl(uid) });
+      const msg = frame('account', accountData(uid));
       for (const c of set) c.res.write(msg);
     }
   }, 2000);
@@ -148,6 +148,24 @@ function createServer(options = {}) {
       tickCache = { ts: Date.now(), data: [...engine.markets.keys()].map((s) => engine.ticker(s)) };
     return tickCache.data;
   }
+
+  // Рахунок + позиції (PnL рахується від ціни маркування)
+  const accountData = (uid) => ({ account: engine.account(uid), positions: engine.positions(uid) });
+
+  // Ціна маркування від брокера і перевірка ліквідацій — раз на секунду
+  const liqTimer = setInterval(() => {
+    if (hedger)
+      for (const m of engine.markets.values()) {
+        const mid = hedger.mid(m.symbol);
+        if (mid) engine.setMark(m.symbol, toUnits(mid.toFixed(8)));
+      }
+    try {
+      const n = engine.checkLiquidations();
+      if (n) console.log(`Ліквідовано позицій: ${n}`);
+    } catch (e) {
+      console.error('liquidation error', e);
+    }
+  }, 1000);
 
   // ---------- helpers ----------
   function clientIp(req) {
@@ -254,7 +272,7 @@ function createServer(options = {}) {
   const routes = {
     'GET /api/markets': () =>
       [...engine.markets.values()].map((m) => ({
-        symbol: m.symbol, base: m.base, quote: m.quote, tick: fmt(m.tick), step: fmt(m.step), minNotional: fmt(m.minNotional),
+        symbol: m.symbol, base: m.base, quote: m.quote, tick: fmt(m.tick), step: fmt(m.step), minNotional: fmt(m.minNotional), maxLeverage: m.maxLeverage,
       })),
     'GET /api/config': () => ({
       makerFeePct: Number(conf.makerFeeBps) / 100, takerFeePct: Number(conf.takerFeeBps) / 100,
@@ -322,14 +340,25 @@ function createServer(options = {}) {
     },
     'GET /api/me': (ctx) => {
       const uid = requireUser(ctx);
-      return { id: uid, username: ctx.session.username, balances: engine.balances(uid), pnl: engine.pnl(uid) };
+      return { id: uid, username: ctx.session.username, ...accountData(uid), leverages: engine.leverages(uid) };
     },
-    'GET /api/balances': (ctx) => engine.balances(requireUser(ctx)),
-    'GET /api/pnl': (ctx) => engine.pnl(requireUser(ctx)),
+    'GET /api/account': (ctx) => engine.account(requireUser(ctx)),
+    'GET /api/positions': (ctx) => engine.positions(requireUser(ctx)),
+    'GET /api/leverage': (ctx) => engine.leverages(requireUser(ctx)),
+    'POST /api/leverage': (ctx) => {
+      const uid = requireUser(ctx);
+      tradeLimit(ctx);
+      return engine.setLeverage(uid, ctx.body.symbol, ctx.body.leverage);
+    },
+    'POST /api/position/close': (ctx) => {
+      const uid = requireUser(ctx);
+      tradeLimit(ctx);
+      return engine.closePosition(uid, ctx.body.symbol);
+    },
     'POST /api/faucet': (ctx) => {
       const uid = requireUser(ctx);
       engine.faucet(uid);
-      return engine.balances(uid);
+      return engine.account(uid);
     },
 
     'POST /api/order': (ctx) => {
@@ -375,7 +404,7 @@ function createServer(options = {}) {
       };
       if (ctx.session) {
         const uid = ctx.session.uid;
-        out.account = { balances: engine.balances(uid), pnl: engine.pnl(uid) };
+        Object.assign(out, accountData(uid));
         out.open = engine.openOrders(uid);
       }
       return out;
@@ -406,7 +435,7 @@ function createServer(options = {}) {
     }
     send(c, 'depth', engine.depth(symbol, 20));
     send(c, 'tickers', allTickers());
-    if (uid) send(c, 'account', { balances: engine.balances(uid), pnl: engine.pnl(uid) });
+    if (uid) send(c, 'account', accountData(uid));
     ctx.req.on('close', () => {
       clients.delete(c);
       if (uid) {
@@ -470,6 +499,7 @@ function createServer(options = {}) {
 
   server.shutdown = () => {
     closed = true;
+    clearInterval(liqTimer);
     stopBots();
     if (hedger) hedger.stop();
     for (const t of [flush, tickers, heartbeat, gcBuckets]) clearInterval(t);

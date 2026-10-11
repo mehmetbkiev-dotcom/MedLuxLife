@@ -4,7 +4,7 @@
 //
 //   node beta.js        (або подвійний клік: start-beta.bat / start-beta.command)
 //
-// 1. Запускає біржу на цьому комп'ютері (дані — у data/beta.db).
+// 1. Запускає біржу на цьому комп'ютері (дані — у data/futures-beta.db).
 // 2. Відкриває безкоштовний Cloudflare Tunnel: користувачі заходять за адресою
 //    https://<випадкові-слова>.trycloudflare.com. Роутер і порти налаштовувати не треба.
 // 3. Якщо біржа або тунель впадуть — перезапускає їх.
@@ -37,7 +37,7 @@ ADMIN_TOKEN=${crypto.randomBytes(18).toString('base64url')}
 TUNNEL=
 
 # Брокер ліквідності: реальні ціни Binance. З ключами — ще й дублювання угод
-# на демо-рахунок (ключі: https://testnet.binance.vision -> Log in with GitHub -> Generate HMAC_SHA256 Key)
+# на демо-рахунок Binance Futures Testnet (ключі: https://testnet.binancefuture.com -> зареєструватись -> API Key)
 BROKER=binance
 BINANCE_API_KEY=
 BINANCE_API_SECRET=
@@ -57,7 +57,7 @@ const env = {
   TRUST_PROXY: '1',
   NO_LOCAL_TRUST: '1', // через тунель усі запити приходять з 127.0.0.1 — адмінка лише з паролем
   COOKIE_SECURE: '1',
-  DB_FILE: fileEnv.DB_FILE || path.join(ROOT, 'data', 'beta.db'),
+  DB_FILE: fileEnv.DB_FILE || path.join(ROOT, 'data', 'futures-beta.db'),
 };
 
 let stopping = false;

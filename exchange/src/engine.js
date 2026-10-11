@@ -1,8 +1,12 @@
 'use strict';
-// Матчинг-движок: книги ордерів у пам'яті, пріоритет ціна-час, баланси з блокуванням,
-// облік PnL (середня ціна входу), свічки. Node однопотоковий, тому кожна команда
-// (ордер / скасування) виконується атомарно, а її результат записується в SQLite
-// однією транзакцією перед тим, як клієнт отримає відповідь.
+// Ф'ючерсний матчинг-движок (USDT-M безстрокові контракти, як на Binance Futures):
+//  - книги ордерів у пам'яті, пріоритет ціна-час;
+//  - позиції one-way (лонг або шорт по парі), ізольована маржа, плече 1..maxLeverage;
+//  - маржа під ордери блокується, PnL реалізується при зменшенні позиції;
+//  - ціна маркування (від брокера або остання угода), ліквідація при падінні маржі
+//    до підтримуючої; збитки понад маржу покриває страховий фонд;
+//  - кожна команда виконується атомарно і записується в SQLite однією транзакцією.
+// Усі суми — BigInt з 8 знаками (1 = 100_000_000), жодних float у грошах.
 
 const { SCALE, toUnits, fmt, min } = require('./decimal');
 
@@ -19,6 +23,9 @@ class ApiError extends Error {
   }
 }
 const bad = (code, msg) => new ApiError(400, code, msg);
+const abs = (v) => (v < 0n ? -v : v);
+const sgn = (v) => (v > 0n ? 1n : v < 0n ? -1n : 0n);
+const ceilDiv = (a, b) => (a <= 0n ? 0n : (a + b - 1n) / b);
 
 class BookSide {
   constructor(isBid) {
@@ -77,7 +84,6 @@ class Engine {
     this.db = db;
     this.cfg = cfg;
     this.markets = new Map();
-    this.marketByBase = new Map();
     for (const m of cfg.markets) {
       const mk = {
         ...m,
@@ -85,23 +91,27 @@ class Engine {
         step: toUnits(m.step),
         minNotional: toUnits(m.minNotional),
         refPrice: toUnits(m.refPrice),
+        maxLeverage: m.maxLeverage || 50,
       };
       // Гарантуємо точність: price*qty завжди ділиться на SCALE без залишку.
       if ((mk.tick * mk.step) % SCALE !== 0n) throw new Error(`tick*step of ${m.symbol} is not exact`);
       this.markets.set(m.symbol, mk);
-      this.marketByBase.set(m.base, mk);
     }
-    this.bal = new Map(); // `${uid}:${asset}` -> {uid, asset, free, locked}
-    this.pos = new Map(); // `${uid}:${asset}` -> {uid, asset, qty, cost, realized, fees}
+    this.mmBps = cfg.maintenanceMarginBps ?? 50n;
+    this.defaultLeverage = cfg.defaultLeverage || 10;
+    this.bal = new Map(); // uid -> {uid, asset:'USDT', free, locked}
+    this.pos = new Map(); // `${uid}:${symbol}` -> позиція
     this.open = new Map(); // id -> order (тільки відкриті)
     this.userOpen = new Map(); // uid -> Set(order)
     this.books = new Map();
     this.last = new Map();
+    this.mark = new Map(); // ціна маркування від брокера (якщо є)
     this.traded = new Set(); // пари, де вже були угоди
-    this.noOrderLimit = new Set(); // системні акаунти (маркетмейкер) без ліміту відкритих ордерів
+    this.noOrderLimit = new Set(); // системні акаунти без ліміту відкритих ордерів
+    this.noLiquidation = new Set(); // системні акаунти (боти), яких не ліквідуємо
     this.candles = new Map();
     this.lastFaucet = new Map();
-    this.feeUid = null;
+    this.feeUid = null; // рахунок комісій і страхового фонду
     this.onEvents = () => {};
     this._resetTx();
     this._prepare();
@@ -114,15 +124,17 @@ class Engine {
     this.st = {
       bal: d.prepare(`INSERT INTO balances(user_id, asset, free, locked) VALUES(?,?,?,?)
         ON CONFLICT(user_id, asset) DO UPDATE SET free=excluded.free, locked=excluded.locked`),
-      pos: d.prepare(`INSERT INTO positions(user_id, asset, qty, cost, realized, fees) VALUES(?,?,?,?,?,?)
-        ON CONFLICT(user_id, asset) DO UPDATE SET qty=excluded.qty, cost=excluded.cost,
-        realized=excluded.realized, fees=excluded.fees`),
-      order: d.prepare(`INSERT INTO orders(id, user_id, symbol, side, type, tif, price, qty, quote_qty,
-        filled, quote_filled, fee, status, created_at, updated_at) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
-        ON CONFLICT(id) DO UPDATE SET filled=excluded.filled, quote_filled=excluded.quote_filled,
-        fee=excluded.fee, status=excluded.status, updated_at=excluded.updated_at`),
-      trade: d.prepare(`INSERT INTO trades(id, symbol, price, qty, quote_qty, buy_order_id, sell_order_id,
-        buyer_id, seller_id, taker_side, buyer_fee, seller_fee, ts) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)`),
+      pos: d.prepare(`INSERT INTO fpositions(user_id, symbol, size, entry, margin, leverage, realized, fees)
+        VALUES(?,?,?,?,?,?,?,?) ON CONFLICT(user_id, symbol) DO UPDATE SET size=excluded.size, entry=excluded.entry,
+        margin=excluded.margin, leverage=excluded.leverage, realized=excluded.realized, fees=excluded.fees`),
+      order: d.prepare(`INSERT INTO orders(id, user_id, symbol, side, type, tif, price, qty, filled, quote_filled, fee,
+        reduce_only, leverage, lock, lock_released, realized, status, created_at, updated_at)
+        VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+        ON CONFLICT(id) DO UPDATE SET filled=excluded.filled, quote_filled=excluded.quote_filled, fee=excluded.fee,
+        lock_released=excluded.lock_released, realized=excluded.realized, status=excluded.status,
+        updated_at=excluded.updated_at`),
+      trade: d.prepare(`INSERT INTO trades(id, symbol, price, qty, quote_qty, buy_order_id, sell_order_id, buyer_id,
+        seller_id, taker_side, buyer_fee, seller_fee, buyer_pnl, seller_pnl, ts) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`),
       ledger: d.prepare('INSERT INTO ledger(user_id, asset, amount, reason, ts) VALUES(?,?,?,?,?)'),
     };
   }
@@ -136,16 +148,19 @@ class Engine {
     const st = this.st;
     try {
       this.db.exec('BEGIN');
-      for (const b of tx.bal) st.bal.run(b.uid, b.asset, b.free.toString(), b.locked.toString());
+      for (const b of tx.bal) st.bal.run(b.uid, 'USDT', b.free.toString(), b.locked.toString());
       for (const p of tx.pos)
-        st.pos.run(p.uid, p.asset, p.qty.toString(), p.cost.toString(), p.realized.toString(), p.fees.toString());
+        st.pos.run(p.uid, p.symbol, p.size.toString(), p.entry.toString(), p.margin.toString(), p.leverage,
+          p.realized.toString(), p.fees.toString());
       for (const o of tx.orders)
-        st.order.run(o.id, o.uid, o.symbol, o.side, o.type, o.tif, s(o.price), s(o.qty), s(o.quoteQty),
-          o.filled.toString(), o.quoteFilled.toString(), o.fee.toString(), o.status, o.created, o.updated);
+        st.order.run(o.id, o.uid, o.symbol, o.side, o.type, o.tif, s(o.price), o.qty.toString(), o.filled.toString(),
+          o.quoteFilled.toString(), o.fee.toString(), o.reduceOnly ? 1 : 0, o.leverage, o.lock.toString(),
+          o.lockRel.toString(), o.realized.toString(), o.status, o.created, o.updated);
       for (const t of tx.trades)
         st.trade.run(t.id, t.symbol, t.price.toString(), t.qty.toString(), t.quote.toString(), t.buyOrderId,
-          t.sellOrderId, t.buyer, t.seller, t.takerSide, t.buyerFee.toString(), t.sellerFee.toString(), t.ts);
-      for (const l of tx.ledger) st.ledger.run(l.uid, l.asset, l.amount.toString(), l.reason, l.ts);
+          t.sellOrderId, t.buyer, t.seller, t.takerSide, t.buyerFee.toString(), t.sellerFee.toString(),
+          t.buyerPnl.toString(), t.sellerPnl.toString(), t.ts);
+      for (const l of tx.ledger) st.ledger.run(l.uid, 'USDT', l.amount.toString(), l.reason, l.ts);
       this.db.exec('COMMIT');
     } catch (e) {
       // Стан у пам'яті вже не збігається з диском: зупиняємось, після рестарту стан
@@ -157,6 +172,7 @@ class Engine {
     const events = [];
     const users = new Set();
     for (const b of tx.bal) users.add(b.uid);
+    for (const p of tx.pos) users.add(p.uid);
     for (const uid of users) events.push({ type: 'balances', uid });
     for (const o of tx.orders) events.push({ type: 'order', uid: o.uid, order: this.orderJson(o) });
     for (const t of tx.trades) events.push({ type: 'trade', trade: t });
@@ -167,12 +183,12 @@ class Engine {
 
   _load() {
     const d = this.db;
-    for (const r of d.prepare('SELECT * FROM balances').all())
-      this.bal.set(`${r.user_id}:${r.asset}`, { uid: r.user_id, asset: r.asset, free: BigInt(r.free), locked: BigInt(r.locked) });
-    for (const r of d.prepare('SELECT * FROM positions').all())
-      this.pos.set(`${r.user_id}:${r.asset}`, {
-        uid: r.user_id, asset: r.asset, qty: BigInt(r.qty), cost: BigInt(r.cost),
-        realized: BigInt(r.realized), fees: BigInt(r.fees),
+    for (const r of d.prepare("SELECT * FROM balances WHERE asset='USDT'").all())
+      this.bal.set(r.user_id, { uid: r.user_id, free: BigInt(r.free), locked: BigInt(r.locked) });
+    for (const r of d.prepare('SELECT * FROM fpositions').all())
+      this.pos.set(`${r.user_id}:${r.symbol}`, {
+        uid: r.user_id, symbol: r.symbol, size: BigInt(r.size), entry: BigInt(r.entry), margin: BigInt(r.margin),
+        leverage: r.leverage, realized: BigInt(r.realized), fees: BigInt(r.fees),
       });
     for (const m of this.markets.values()) {
       this.books.set(m.symbol, { bids: new BookSide(true), asks: new BookSide(false) });
@@ -200,28 +216,30 @@ class Engine {
   }
 
   // ---------- допоміжне ----------
-  _b(uid, asset) {
-    const k = `${uid}:${asset}`;
-    let b = this.bal.get(k);
+  _b(uid) {
+    let b = this.bal.get(uid);
     if (!b) {
-      b = { uid, asset, free: 0n, locked: 0n };
-      this.bal.set(k, b);
+      b = { uid, free: 0n, locked: 0n };
+      this.bal.set(uid, b);
     }
     this.tx.bal.add(b);
     return b;
   }
-  _peekBal(uid, asset) {
-    return this.bal.get(`${uid}:${asset}`) || { free: 0n, locked: 0n };
+  _peekBal(uid) {
+    return this.bal.get(uid) || { free: 0n, locked: 0n };
   }
-  _p(uid, asset) {
-    const k = `${uid}:${asset}`;
+  _p(uid, symbol) {
+    const k = `${uid}:${symbol}`;
     let p = this.pos.get(k);
     if (!p) {
-      p = { uid, asset, qty: 0n, cost: 0n, realized: 0n, fees: 0n };
+      p = { uid, symbol, size: 0n, entry: 0n, margin: 0n, leverage: this.defaultLeverage, realized: 0n, fees: 0n };
       this.pos.set(k, p);
     }
     this.tx.pos.add(p);
     return p;
+  }
+  _peekPos(uid, symbol) {
+    return this.pos.get(`${uid}:${symbol}`) || { size: 0n, entry: 0n, margin: 0n, leverage: this.defaultLeverage };
   }
   _track(o) {
     this.open.set(o.id, o);
@@ -239,23 +257,25 @@ class Engine {
     this.tx.orders.add(o);
     this.tx.depth.add(o.symbol);
   }
+  // скільки позиції можна закрити ордером на цю сторону
+  _reducible(uid, symbol, side) {
+    const sz = this._peekPos(uid, symbol).size;
+    return (side === 'BUY' && sz < 0n) || (side === 'SELL' && sz > 0n) ? abs(sz) : 0n;
+  }
+  markPrice(symbol) {
+    return this.mark.get(symbol) ?? this.last.get(symbol);
+  }
+  setMark(symbol, units) {
+    if (units && units > 0n) this.mark.set(symbol, units);
+  }
 
   // ---------- депозити ----------
   deposit(uid, amounts, reason) {
     const ts = Date.now();
-    for (const [asset, v] of Object.entries(amounts)) {
-      const amt = toUnits(v);
-      if (!amt) continue;
-      this._b(uid, asset).free += amt;
-      this.tx.ledger.push({ uid, asset, amount: amt, reason, ts });
-      const m = this.marketByBase.get(asset);
-      if (m) {
-        // Монети, що прийшли депозитом, отримують собівартість за поточною ціною,
-        // щоб PnL рахувався від моменту зарахування.
-        const p = this._p(uid, asset);
-        p.qty += amt;
-        p.cost += (amt * this.last.get(m.symbol)) / SCALE;
-      }
+    const amt = toUnits(amounts.USDT);
+    if (amt) {
+      this._b(uid).free += amt;
+      this.tx.ledger.push({ uid, amount: amt, reason, ts });
     }
     this._commit();
   }
@@ -272,38 +292,57 @@ class Engine {
     this.deposit(uid, this.cfg.faucet, 'faucet');
   }
 
+  // ---------- плече ----------
+  setLeverage(uid, symbol, leverage) {
+    const m = this.markets.get(String(symbol || '').toUpperCase());
+    if (!m) throw bad('BAD_SYMBOL', 'Невідома торгова пара');
+    const lev = Number(leverage);
+    if (!Number.isInteger(lev) || lev < 1 || lev > m.maxLeverage)
+      throw bad('BAD_LEVERAGE', `Плече для ${m.symbol}: від 1 до ${m.maxLeverage}`);
+    if (this._peekPos(uid, m.symbol).size !== 0n) throw bad('HAS_POSITION', 'Закрийте позицію, щоб змінити плече');
+    if ([...(this.userOpen.get(uid) || [])].some((o) => o.symbol === m.symbol))
+      throw bad('HAS_ORDERS', 'Скасуйте відкриті ордери по цій парі, щоб змінити плече');
+    this._p(uid, m.symbol).leverage = lev;
+    this._commit();
+    return { symbol: m.symbol, leverage: lev };
+  }
+
   // ---------- ордери ----------
-  placeOrder(uid, req) {
+  placeOrder(uid, req, opts = {}) {
     const m = this.markets.get(String(req.symbol || '').toUpperCase());
     if (!m) throw bad('BAD_SYMBOL', 'Невідома торгова пара');
     const side = String(req.side || '').toUpperCase();
     if (side !== 'BUY' && side !== 'SELL') throw bad('BAD_SIDE', 'side має бути BUY або SELL');
     const type = String(req.type || 'LIMIT').toUpperCase();
     if (!['LIMIT', 'MARKET', 'LIMIT_MAKER'].includes(type)) throw bad('BAD_TYPE', 'type: LIMIT | MARKET | LIMIT_MAKER');
+    const reduceOnly = req.reduceOnly === true || req.reduceOnly === 'true';
     const buy = side === 'BUY';
     const book = this.books.get(m.symbol);
     const opp = buy ? book.asks : book.bids;
-    const openCount = this.userOpen.get(uid)?.size || 0;
+    const pos = this._peekPos(uid, m.symbol);
+    const lev = BigInt(pos.leverage);
+    const closable = this._reducible(uid, m.symbol, side);
 
-    let price = null, qty = null, quoteQty = null, tif = null;
+    let qty = this._qty(m, req.qty);
+    if (reduceOnly) {
+      if (closable === 0n) throw bad('REDUCE_ONLY', 'Reduce-only: немає позиції, яку цей ордер зменшив би');
+      if (qty > closable) qty = closable;
+    }
+
+    let price = null, tif = null, est;
     if (type === 'MARKET') {
-      if (req.quoteQty !== undefined && req.quoteQty !== null && req.quoteQty !== '') {
-        if (!buy) throw bad('BAD_PARAM', 'quoteQty підтримується лише для ринкової купівлі');
-        quoteQty = toUnits(req.quoteQty);
-        if (!quoteQty) throw bad('BAD_QTY', 'Некоректна сума');
-        if (quoteQty < m.minNotional) throw bad('MIN_NOTIONAL', `Мінімальна сума ордера ${fmt(m.minNotional)} ${m.quote}`);
-      } else {
-        qty = this._qty(m, req.qty);
-      }
-      if (opp.best() === null) throw bad('NO_LIQUIDITY', 'Немає зустрічних ордерів');
+      const b = opp.best();
+      if (b === null) throw bad('NO_LIQUIDITY', 'Немає зустрічних ордерів');
+      const d = (b * this.cfg.marketProtectionBps) / BPS;
+      est = buy ? b + d : b; // для оцінки маржі беремо гіршу можливу ціну
     } else {
       price = toUnits(req.price);
       if (!price) throw bad('BAD_PRICE', 'Некоректна ціна');
       if (price % m.tick !== 0n) throw bad('BAD_PRICE', `Крок ціни ${fmt(m.tick)}`);
-      qty = this._qty(m, req.qty);
-      if ((price * qty) / SCALE < m.minNotional) throw bad('MIN_NOTIONAL', `Мінімальна сума ордера ${fmt(m.minNotional)} ${m.quote}`);
+      est = price;
       tif = type === 'LIMIT_MAKER' ? 'GTC' : String(req.tif || 'GTC').toUpperCase();
       if (!['GTC', 'IOC', 'FOK'].includes(tif)) throw bad('BAD_TIF', 'tif: GTC | IOC | FOK');
+      const openCount = this.userOpen.get(uid)?.size || 0;
       if (tif === 'GTC' && openCount >= this.cfg.maxOpenOrdersPerUser && !this.noOrderLimit.has(uid))
         throw bad('TOO_MANY_ORDERS', `Максимум ${this.cfg.maxOpenOrdersPerUser} відкритих ордерів`);
       if (type === 'LIMIT_MAKER') {
@@ -312,23 +351,26 @@ class Engine {
           throw bad('WOULD_TAKE', 'Post-only ордер виконався б одразу як taker — відхилено');
       }
     }
+    if (!reduceOnly && (est * qty) / SCALE < m.minNotional)
+      throw bad('MIN_NOTIONAL', `Мінімальний обсяг ордера ${fmt(m.minNotional)} USDT`);
 
-    // Перевірка коштів
-    const qb = this._peekBal(uid, m.quote), bb = this._peekBal(uid, m.base);
-    if (buy) {
-      const need = price !== null ? (price * qty) / SCALE : quoteQty;
-      if (need !== null && qb.free < need) throw bad('INSUFFICIENT_BALANCE', `Недостатньо ${m.quote}`);
-      if (qb.free <= 0n) throw bad('INSUFFICIENT_BALANCE', `Недостатньо ${m.quote}`);
-    } else if (bb.free < qty) throw bad('INSUFFICIENT_BALANCE', `Недостатньо ${m.base}`);
+    // Маржа: лише під частину, що відкриває/збільшує позицію (закриття маржі не потребує),
+    // плюс запас на комісію. Для лімітних — блокується, для ринкових — лише перевіряється.
+    const openQty = reduceOnly ? 0n : qty > closable ? qty - closable : 0n;
+    const feeLock = (((est * qty) / SCALE) * this.cfg.takerFeeBps * 2n) / BPS;
+    const need = ceilDiv((est * openQty) / SCALE, lev) + feeLock;
+    const free = this._peekBal(uid).free;
+    if (need > free)
+      throw bad('INSUFFICIENT_MARGIN', `Недостатньо маржі: потрібно ${fmt(need)} USDT, доступно ${fmt(free)} USDT`);
 
     const now = Date.now();
     const o = {
-      id: this.nextOrderId++, uid, symbol: m.symbol, side, type, tif, price, qty, quoteQty,
-      filled: 0n, quoteFilled: 0n, fee: 0n, status: 'NEW', created: now, updated: now,
+      id: this.nextOrderId++, uid, symbol: m.symbol, side, type: opts.liquidation ? 'LIQUIDATION' : type, tif, price, qty,
+      filled: 0n, quoteFilled: 0n, fee: 0n, reduceOnly, leverage: Number(lev), lock: 0n, lockRel: 0n, realized: 0n,
+      status: 'NEW', created: now, updated: now,
     };
     const fills = [];
 
-    // FOK: або повністю, або нічого — перевіряємо до будь-яких змін
     if (tif === 'FOK' && this._fillable(o, opp) < qty) {
       o.status = 'EXPIRED';
       this.tx.orders.add(o);
@@ -336,26 +378,25 @@ class Engine {
       return { order: this.orderJson(o), fills };
     }
 
-    if (price !== null) this._lock(o, m);
-    this._match(o, m, opp, fills);
+    if (price !== null) {
+      const b = this._b(uid);
+      b.free -= need;
+      b.locked += need;
+      o.lock = need;
+    }
+    this._match(o, m, opp, fills, opts);
 
     if (price !== null) {
       if (o.filled === o.qty) o.status = 'FILLED';
-      else if (tif === 'GTC') {
+      else if (tif === 'GTC' && !(reduceOnly && this._reducible(uid, m.symbol, side) === 0n)) {
         o.status = o.filled > 0n ? 'PARTIALLY_FILLED' : 'NEW';
         (buy ? book.bids : book.asks).add(o);
         this._track(o);
-      } else {
-        this._unlockRemaining(o, m);
-        o.status = 'EXPIRED';
-      }
-    } else if (qty !== null) {
-      o.status = o.filled === qty ? 'FILLED' : 'EXPIRED';
-    } else {
-      o.status = o.filled > 0n && o._stop === 'funds' ? 'FILLED' : 'EXPIRED';
-    }
-    delete o._stop;
+      } else o.status = 'EXPIRED';
+    } else o.status = o.filled === qty ? 'FILLED' : 'EXPIRED';
+    if (!OPEN.has(o.status)) this._releaseLock(o);
     this._touch(o);
+    this._afterPositionChange(uid, m.symbol);
     this._commit();
     return { order: this.orderJson(o), fills };
   }
@@ -377,43 +418,33 @@ class Engine {
     return sum;
   }
 
-  _lock(o, m) {
-    if (o.side === 'BUY') {
-      const b = this._b(o.uid, m.quote), amt = (o.price * o.qty) / SCALE;
-      b.free -= amt;
-      b.locked += amt;
-    } else {
-      const b = this._b(o.uid, m.base);
-      b.free -= o.qty;
-      b.locked += o.qty;
-    }
-  }
-
-  _unlockRemaining(o, m) {
-    const rem = o.qty - o.filled;
-    if (rem <= 0n) return;
-    if (o.side === 'BUY') {
-      const b = this._b(o.uid, m.quote), amt = (o.price * rem) / SCALE;
-      b.locked -= amt;
-      b.free += amt;
-    } else {
-      const b = this._b(o.uid, m.base);
-      b.locked -= rem;
-      b.free += rem;
-    }
+  _releaseLock(o) {
+    const rest = o.lock - o.lockRel;
+    if (rest <= 0n) return;
+    const b = this._b(o.uid);
+    b.locked -= rest;
+    b.free += rest;
+    o.lockRel = o.lock;
   }
 
   _closeResting(o, status) {
-    const m = this.markets.get(o.symbol);
     const book = this.books.get(o.symbol);
     (o.side === 'BUY' ? book.bids : book.asks).remove(o);
     this._untrack(o);
-    this._unlockRemaining(o, m);
+    this._releaseLock(o);
     o.status = status;
     this._touch(o);
   }
 
-  _match(o, m, opp, fills) {
+  // Reduce-only ордери, які вже нічого не зменшать (позицію закрито/перевернуто), скасовуються
+  _afterPositionChange(uid, symbol) {
+    const set = this.userOpen.get(uid);
+    if (!set) return;
+    for (const o of [...set])
+      if (o.symbol === symbol && o.reduceOnly && this._reducible(uid, symbol, o.side) === 0n) this._closeResting(o, 'EXPIRED');
+  }
+
+  _match(o, m, opp, fills, opts = {}) {
     const buy = o.side === 'BUY';
     let guard = null;
     if (o.type === 'MARKET') {
@@ -421,100 +452,137 @@ class Engine {
       const d = (b * this.cfg.marketProtectionBps) / BPS;
       guard = buy ? b + d : b - d;
     }
-    o._stop = 'book';
     for (;;) {
       const px = opp.best();
-      if (px === null) { o._stop = 'book'; break; }
-      if (o.price !== null && (buy ? px > o.price : px < o.price)) { o._stop = 'price'; break; }
-      if (guard !== null && (buy ? px > guard : px < guard)) { o._stop = 'protection'; break; }
+      if (px === null) break;
+      if (o.price !== null && (buy ? px > o.price : px < o.price)) break;
+      if (guard !== null && (buy ? px > guard : px < guard)) break;
       const lvl = opp.levels.get(px);
       const mk = lvl.orders[0];
       if (mk.uid === o.uid) {
-        // Self-trade prevention: власний зустрічний ордер скасовується (як EXPIRE_MAKER у Binance)
+        // Self-trade prevention: власний зустрічний ордер скасовується
         this._closeResting(mk, 'EXPIRED_STP');
         continue;
       }
-      let q = mk.qty - mk.filled;
-      if (o.qty !== null) q = min(q, o.qty - o.filled);
-      if (o.type === 'MARKET' && buy) {
-        let budget = this._peekBal(o.uid, m.quote).free;
-        if (o.quoteQty !== null) budget = min(budget, o.quoteQty - o.quoteFilled);
-        const maxQ = (budget * SCALE) / px;
-        q = min(q, maxQ - (maxQ % m.step));
+      let q = min(mk.qty - mk.filled, o.qty - o.filled);
+      if (o.reduceOnly) {
+        const cap = this._reducible(o.uid, o.symbol, o.side);
+        if (cap === 0n) break;
+        q = min(q, cap);
       }
-      if (q <= 0n) { o._stop = 'funds'; break; }
-      fills.push(this._fill(o, mk, px, q, m, lvl, opp));
-      if (o.qty !== null && o.filled === o.qty) { o._stop = 'done'; break; }
+      if (mk.reduceOnly) {
+        const cap = this._reducible(mk.uid, mk.symbol, mk.side);
+        if (cap === 0n) {
+          this._closeResting(mk, 'EXPIRED');
+          continue;
+        }
+        q = min(q, cap);
+      }
+      fills.push(this._fill(o, mk, px, q, m, lvl, opp, opts));
+      if (o.filled === o.qty) break;
     }
   }
 
-  _fill(taker, maker, px, q, m, lvl, opp) {
+  _fill(taker, maker, px, q, m, lvl, opp, opts = {}) {
     const cfg = this.cfg;
+    const takerFee = opts.liquidation ? 0n : cfg.takerFeeBps;
+    const t = this._settle(taker, taker.side, q, px, takerFee, opts);
+    const k = this._settle(maker, maker.side, q, px, cfg.makerFeeBps);
     const quote = (px * q) / SCALE;
-    const takerBuys = taker.side === 'BUY';
-    const buyO = takerBuys ? taker : maker;
-    const sellO = takerBuys ? maker : taker;
-    const buyerFee = (q * (takerBuys ? cfg.takerFeeBps : cfg.makerFeeBps)) / BPS; // в базовій монеті
-    const sellerFee = (quote * (takerBuys ? cfg.makerFeeBps : cfg.takerFeeBps)) / BPS; // в котируваній
-
-    // Покупець платить quote
-    const bq = this._b(buyO.uid, m.quote);
-    if (buyO.type === 'MARKET') bq.free -= quote;
-    else {
-      const lk = (buyO.price * q) / SCALE;
-      bq.locked -= lk;
-      bq.free += lk - quote; // повертаємо різницю, якщо виконалось краще за ліміт
-    }
-    // Продавець віддає base
-    const sb = this._b(sellO.uid, m.base);
-    if (sellO.type === 'MARKET') sb.free -= q;
-    else sb.locked -= q;
-
-    this._b(buyO.uid, m.base).free += q - buyerFee;
-    this._b(sellO.uid, m.quote).free += quote - sellerFee;
-    this._b(this.feeUid, m.base).free += buyerFee;
-    this._b(this.feeUid, m.quote).free += sellerFee;
-
     for (const o of [taker, maker]) {
       o.filled += q;
       o.quoteFilled += quote;
     }
-    buyO.fee += buyerFee;
-    sellO.fee += sellerFee;
     lvl.qty -= q;
     if (maker.filled === maker.qty) {
       maker.status = 'FILLED';
       opp.remove(maker);
       this._untrack(maker);
+      this._releaseLock(maker);
     } else maker.status = 'PARTIALLY_FILLED';
     this._touch(maker);
     this._touch(taker);
+    this._afterPositionChange(maker.uid, maker.symbol);
 
-    // PnL по базовій монеті (метод середньої ціни)
-    const pb = this._p(buyO.uid, m.base);
-    pb.qty += q - buyerFee;
-    pb.cost += quote;
-    pb.fees += (buyerFee * px) / SCALE;
-    const ps = this._p(sellO.uid, m.base);
-    const portion = ps.qty > 0n ? (ps.cost * min(q, ps.qty)) / ps.qty : 0n;
-    ps.cost -= portion;
-    ps.qty -= q;
-    if (ps.qty < 0n) ps.qty = 0n;
-    if (ps.qty === 0n) ps.cost = 0n;
-    ps.realized += quote - sellerFee - portion;
-    ps.fees += sellerFee;
+    const buyO = taker.side === 'BUY' ? taker : maker;
+    const tr = this._recordTrade(m.symbol, px, q, buyO === taker ? taker : maker, buyO === taker ? maker : taker,
+      taker.side, buyO === taker ? t : k, buyO === taker ? k : t);
+    return { tradeId: tr.id, price: fmt(px), qty: fmt(q), fee: fmt(t.fee), realizedPnl: fmt(t.pnl) };
+  }
 
+  // Застосувати виконання q за ціною px до рахунку власника ордера o (або системного uid)
+  _settle(o, side, q, px, feeBps, opts = {}, uidOverride = null) {
+    const uid = o ? o.uid : uidOverride;
+    const b = this._b(uid);
+    const p = this._p(uid, o ? o.symbol : opts.symbol);
+    const ins = this._b(this.feeUid);
+    // 1. частка заблокованої під ордер суми повертається у вільні кошти
+    if (o && o.lock > 0n) {
+      const share = o.filled + q === o.qty ? o.lock - o.lockRel : (o.lock * q) / o.qty;
+      const real = min(share, o.lock - o.lockRel);
+      b.locked -= real;
+      b.free += real;
+      o.lockRel += real;
+    }
+    const d = side === 'BUY' ? 1n : -1n;
+    let rem = q;
+    let pnl = 0n;
+    // 2. закриття (повне або часткове) протилежної позиції — реалізація PnL
+    if (p.size !== 0n && sgn(p.size) !== d) {
+      const a = abs(p.size);
+      const cq = min(rem, a);
+      pnl = (((px - p.entry) * cq) / SCALE) * sgn(p.size);
+      const rel = cq === a ? p.margin : (p.margin * cq) / a;
+      p.margin -= rel;
+      p.size += d * cq;
+      rem -= cq;
+      p.realized += pnl;
+      if (o) o.realized += pnl;
+      let ret = rel + pnl;
+      if (opts.liquidation) {
+        // при ліквідації залишок маржі йде в страховий фонд, а збиток понад маржу — з нього
+        ins.free += ret;
+        ret = 0n;
+      } else if (ret < 0n) {
+        ins.free += ret; // збиток більший за маржу покриває страховий фонд
+        ret = 0n;
+      }
+      b.free += ret;
+      if (p.size === 0n) p.entry = 0n;
+    }
+    // 3. комісія (не більше, ніж є вільних коштів)
+    let fee = (((px * q) / SCALE) * feeBps) / BPS;
+    if (fee > b.free) fee = b.free > 0n ? b.free : 0n;
+    b.free -= fee;
+    ins.free += fee;
+    p.fees += fee;
+    if (o) o.fee += fee;
+    // 4. відкриття/збільшення позиції — маржа = вартість / плече
+    if (rem > 0n) {
+      let im = ceilDiv((px * rem) / SCALE, BigInt(p.leverage));
+      if (im > b.free) im = b.free > 0n ? b.free : 0n;
+      b.free -= im;
+      p.margin += im;
+      const a = abs(p.size);
+      p.entry = (a * p.entry + rem * px) / (a + rem);
+      p.size += d * rem;
+    }
+    return { fee, pnl };
+  }
+
+  _recordTrade(symbol, px, q, buyO, sellO, takerSide, buyRes, sellRes, ids = {}) {
     const ts = Date.now();
     const t = {
-      id: this.nextTradeId++, symbol: m.symbol, price: px, qty: q, quote,
-      buyOrderId: buyO.id, sellOrderId: sellO.id, buyer: buyO.uid, seller: sellO.uid,
-      takerSide: taker.side, buyerFee, sellerFee, ts,
+      id: this.nextTradeId++, symbol, price: px, qty: q, quote: (px * q) / SCALE,
+      buyOrderId: buyO ? buyO.id : 0, sellOrderId: sellO ? sellO.id : 0,
+      buyer: buyO ? buyO.uid : ids.buyer, seller: sellO ? sellO.uid : ids.seller, takerSide,
+      buyerFee: buyRes.fee, sellerFee: sellRes.fee, buyerPnl: buyRes.pnl, sellerPnl: sellRes.pnl, ts,
     };
     this.tx.trades.push(t);
-    this.last.set(m.symbol, px);
-    this.traded.add(m.symbol);
-    this._candle(m.symbol, px, q, quote, ts);
-    return { tradeId: t.id, price: fmt(px), qty: fmt(q), quoteQty: fmt(quote), fee: fmt(takerBuys ? buyerFee : sellerFee) };
+    this.last.set(symbol, px);
+    this.traded.add(symbol);
+    this._candle(symbol, px, q, t.quote, ts);
+    return t;
   }
 
   cancelOrder(uid, id) {
@@ -531,6 +599,76 @@ class Engine {
     for (const o of list) this._closeResting(o, 'CANCELED');
     this._commit();
     return list.length;
+  }
+
+  // Закрити позицію повністю ринковим reduce-only ордером
+  closePosition(uid, symbol) {
+    const m = this.markets.get(String(symbol || '').toUpperCase());
+    if (!m) throw bad('BAD_SYMBOL', 'Невідома торгова пара');
+    const sz = this._peekPos(uid, m.symbol).size;
+    if (sz === 0n) throw bad('NO_POSITION', 'Немає відкритої позиції');
+    return this.placeOrder(uid, { symbol: m.symbol, side: sz > 0n ? 'SELL' : 'BUY', type: 'MARKET', qty: fmt(abs(sz)), reduceOnly: true });
+  }
+
+  // ---------- ліквідація ----------
+  _liqCheck(p) {
+    if (p.size === 0n || this.noLiquidation.has(p.uid) || p.uid === this.feeUid) return false;
+    const mark = this.markPrice(p.symbol);
+    const equity = p.margin + ((mark - p.entry) * p.size) / SCALE;
+    const maint = (((abs(p.size) * mark) / SCALE) * this.mmBps) / BPS;
+    return equity <= maint;
+  }
+
+  // Викликається періодично (раз на секунду) і після оновлення ціни маркування
+  checkLiquidations() {
+    const victims = [...this.pos.values()].filter((p) => this._liqCheck(p));
+    for (const p of victims) this._liquidate(p);
+    return victims.length;
+  }
+
+  _liquidate(p) {
+    const m = this.markets.get(p.symbol);
+    // 1. скасовуємо ордери користувача по цій парі
+    for (const o of [...(this.userOpen.get(p.uid) || [])]) if (o.symbol === p.symbol) this._closeResting(o, 'CANCELED');
+    const side = p.size > 0n ? 'SELL' : 'BUY';
+    const qty = abs(p.size);
+    const now = Date.now();
+    const o = {
+      id: this.nextOrderId++, uid: p.uid, symbol: p.symbol, side, type: 'LIQUIDATION', tif: 'IOC', price: null, qty,
+      filled: 0n, quoteFilled: 0n, fee: 0n, reduceOnly: true, leverage: p.leverage, lock: 0n, lockRel: 0n,
+      realized: 0n, status: 'NEW', created: now, updated: now,
+    };
+    const book = this.books.get(p.symbol);
+    // 2. закриваємо позицію в книгу (до 10% від ціни маркування)
+    const mark = this.markPrice(p.symbol);
+    const band = (mark * 1000n) / BPS;
+    o.price = side === 'SELL' ? mark - band - ((mark - band) % m.tick) : mark + band - ((mark + band) % m.tick);
+    this._match(o, m, side === 'SELL' ? book.bids : book.asks, [], { liquidation: true });
+    o.price = null;
+    // 3. залишок, якого не взяла книга, переходить у страховий фонд за ціною маркування
+    const rest = abs(this._peekPos(p.uid, p.symbol).size);
+    if (rest > 0n) {
+      const px = mark - (mark % m.tick) || m.tick;
+      const ur = this._settle(o, side, rest, px, 0n, { liquidation: true });
+      const ir = this._settle(null, side === 'SELL' ? 'BUY' : 'SELL', rest, px, 0n, { symbol: p.symbol }, this.feeUid);
+      o.filled += rest;
+      o.quoteFilled += (px * rest) / SCALE;
+      if (side === 'SELL') this._recordTrade(p.symbol, px, rest, null, o, side, ir, ur, { buyer: this.feeUid });
+      else this._recordTrade(p.symbol, px, rest, o, null, side, ur, ir, { seller: this.feeUid });
+    }
+    o.status = 'FILLED';
+    this._touch(o);
+    this._commit();
+  }
+
+  liquidationPrice(p) {
+    if (p.size === 0n) return null;
+    const a = Number(fmt(abs(p.size)));
+    const e = Number(fmt(p.entry));
+    const mg = Number(fmt(p.margin));
+    const mmr = Number(this.mmBps) / 10000;
+    const liq = p.size > 0n ? (e * a - mg) / (a * (1 - mmr)) : (e * a + mg) / (a * (1 + mmr));
+    return liq > 0 ? liq : 0;
   }
 
   // ---------- свічки / ринкові дані ----------
@@ -587,8 +725,8 @@ class Engine {
     const book = this.books.get(symbol);
     const change = open ? Number(((last - open) * 1000000n) / open) / 10000 : 0;
     return {
-      symbol, last: fmt(last), open: fmt(open ?? last), high: fmt(high ?? last), low: fmt(low ?? last),
-      volume: fmt(vol), quoteVolume: fmt(qvol), changePct: change,
+      symbol, last: fmt(last), mark: fmt(this.markPrice(symbol)), open: fmt(open ?? last), high: fmt(high ?? last),
+      low: fmt(low ?? last), volume: fmt(vol), quoteVolume: fmt(qvol), changePct: change,
       bid: fmt(book.bids.best()), ask: fmt(book.asks.best()),
     };
   }
@@ -599,40 +737,50 @@ class Engine {
   }
 
   // ---------- дані користувача ----------
-  balances(uid) {
-    const out = {};
-    for (const a of this.cfg.assets) {
-      const b = this._peekBal(uid, a);
-      out[a] = { free: fmt(b.free), locked: fmt(b.locked) };
+  positions(uid) {
+    const out = [];
+    for (const m of this.markets.values()) {
+      const p = this.pos.get(`${uid}:${m.symbol}`);
+      if (!p || p.size === 0n) continue;
+      const mark = this.markPrice(m.symbol);
+      const unreal = ((mark - p.entry) * p.size) / SCALE;
+      const notional = (abs(p.size) * mark) / SCALE;
+      const liq = this.liquidationPrice(p);
+      out.push({
+        symbol: m.symbol, side: p.size > 0n ? 'LONG' : 'SHORT', size: fmt(p.size), entry: fmt(p.entry - (p.entry % m.tick)),
+        mark: fmt(mark), liqPrice: liq === null ? null : liq.toFixed(8), margin: fmt(p.margin), leverage: p.leverage,
+        notional: fmt(notional), unrealized: fmt(unreal), realized: fmt(p.realized),
+        roePct: p.margin > 0n ? Number((unreal * 1000000n) / p.margin) / 10000 : 0,
+        marginRatioPct: p.margin + unreal > 0n
+          ? Number(((((notional * this.mmBps) / BPS) * 1000000n) / (p.margin + unreal))) / 10000 : 100,
+      });
     }
     return out;
   }
 
-  pnl(uid) {
-    const rows = [];
-    let totalUnreal = 0n, totalReal = 0n, equity = 0n;
-    for (const a of this.cfg.assets) {
-      const b = this._peekBal(uid, a);
-      const m = this.marketByBase.get(a);
-      if (!m) {
-        equity += b.free + b.locked;
-        continue;
-      }
-      const px = this.last.get(m.symbol);
-      const p = this.pos.get(`${uid}:${a}`) || { qty: 0n, cost: 0n, realized: 0n, fees: 0n };
-      const value = (p.qty * px) / SCALE;
-      const unreal = value - p.cost;
-      const avg = p.qty > 0n ? (p.cost * SCALE) / p.qty : 0n;
-      totalUnreal += unreal;
-      totalReal += p.realized;
-      equity += ((b.free + b.locked) * px) / SCALE;
-      rows.push({
-        asset: a, symbol: m.symbol, qty: fmt(p.qty), avgPrice: fmt(avg - (avg % 1000n)), lastPrice: fmt(px),
-        value: fmt(value), cost: fmt(p.cost), unrealized: fmt(unreal), realized: fmt(p.realized), fees: fmt(p.fees),
-        unrealizedPct: p.cost > 0n ? Number((unreal * 1000000n) / p.cost) / 10000 : 0,
-      });
+  leverages(uid) {
+    const out = {};
+    for (const m of this.markets.values()) out[m.symbol] = this._peekPos(uid, m.symbol).leverage;
+    return out;
+  }
+
+  account(uid) {
+    const b = this._peekBal(uid);
+    let margin = 0n, unreal = 0n, realized = 0n, fees = 0n;
+    for (const m of this.markets.values()) {
+      const p = this.pos.get(`${uid}:${m.symbol}`);
+      if (!p) continue;
+      margin += p.margin;
+      realized += p.realized;
+      fees += p.fees;
+      if (p.size !== 0n) unreal += ((this.markPrice(m.symbol) - p.entry) * p.size) / SCALE;
     }
-    return { quote: 'USDT', equity: fmt(equity), unrealized: fmt(totalUnreal), realized: fmt(totalReal), positions: rows };
+    const wallet = b.free + b.locked + margin;
+    return {
+      asset: 'USDT', walletBalance: fmt(wallet), available: fmt(b.free), orderMargin: fmt(b.locked),
+      positionMargin: fmt(margin), unrealized: fmt(unreal), equity: fmt(wallet + unreal),
+      realized: fmt(realized), fees: fmt(fees),
+    };
   }
 
   openOrders(uid, symbol) {
@@ -658,8 +806,8 @@ class Engine {
       const isBuyer = r.buyer_id === uid;
       return {
         id: r.id, symbol: r.symbol, side: isBuyer ? 'BUY' : 'SELL', price: fmt(BigInt(r.price)), qty: fmt(BigInt(r.qty)),
-        quoteQty: fmt(BigInt(r.quote_qty)), fee: fmt(BigInt(isBuyer ? r.buyer_fee : r.seller_fee)),
-        feeAsset: isBuyer ? this.markets.get(r.symbol).base : this.markets.get(r.symbol).quote,
+        quoteQty: fmt(BigInt(r.quote_qty)), fee: fmt(BigInt(isBuyer ? r.buyer_fee : r.seller_fee)), feeAsset: 'USDT',
+        realizedPnl: fmt(BigInt(isBuyer ? r.buyer_pnl : r.seller_pnl)),
         maker: (r.taker_side === 'BUY') !== isBuyer, orderId: isBuyer ? r.buy_order_id : r.sell_order_id, ts: r.ts,
       };
     });
@@ -675,8 +823,9 @@ class Engine {
   orderJson(o) {
     return {
       id: o.id, symbol: o.symbol, side: o.side, type: o.type, tif: o.tif, price: fmt(o.price), qty: fmt(o.qty),
-      quoteQty: fmt(o.quoteQty), filled: fmt(o.filled), quoteFilled: fmt(o.quoteFilled),
-      avgPrice: o.filled > 0n ? fmt((o.quoteFilled * SCALE) / o.filled) : null, fee: fmt(o.fee), status: o.status,
+      filled: fmt(o.filled), quoteFilled: fmt(o.quoteFilled),
+      avgPrice: o.filled > 0n ? fmt((o.quoteFilled * SCALE) / o.filled) : null, fee: fmt(o.fee),
+      reduceOnly: o.reduceOnly, leverage: o.leverage, realizedPnl: fmt(o.realized), status: o.status,
       created: o.created, updated: o.updated,
     };
   }
@@ -684,45 +833,44 @@ class Engine {
   // ---------- аудит інваріантів ----------
   audit() {
     const issues = [];
-    const totals = {};
+    // Гроші: вільні + заблоковані + маржа позицій = депозити + реалізований PnL усіх рахунків
+    let cash = 0n, margins = 0n, realized = 0n;
     for (const b of this.bal.values()) {
-      totals[b.asset] ??= 0n;
-      totals[b.asset] += b.free + b.locked;
-      if (b.free < 0n || b.locked < 0n) issues.push(`negative balance uid=${b.uid} ${b.asset}`);
+      cash += b.free + b.locked;
+      if ((b.free < 0n || b.locked < 0n) && b.uid !== this.feeUid) issues.push(`negative balance uid=${b.uid}`);
     }
-    const deposits = {};
-    for (const r of this.db.prepare('SELECT asset, amount FROM ledger').iterate()) {
-      deposits[r.asset] ??= 0n;
-      deposits[r.asset] += BigInt(r.amount);
+    const sizes = new Map();
+    for (const p of this.pos.values()) {
+      margins += p.margin;
+      realized += p.realized;
+      sizes.set(p.symbol, (sizes.get(p.symbol) || 0n) + p.size);
+      if (p.margin < 0n) issues.push(`negative margin uid=${p.uid} ${p.symbol}`);
+      if (p.size === 0n && p.margin !== 0n) issues.push(`margin without position uid=${p.uid} ${p.symbol}`);
     }
-    for (const a of new Set([...Object.keys(totals), ...Object.keys(deposits)]))
-      if ((totals[a] || 0n) !== (deposits[a] || 0n))
-        issues.push(`supply mismatch ${a}: balances=${fmt(totals[a] || 0n)} deposits=${fmt(deposits[a] || 0n)}`);
-    // Заблоковане = сума потреб відкритих ордерів
+    let deposits = 0n;
+    for (const r of this.db.prepare("SELECT amount FROM ledger WHERE asset='USDT'").iterate()) deposits += BigInt(r.amount);
+    if (cash + margins !== deposits + realized)
+      issues.push(`USDT mismatch: cash+margins=${fmt(cash + margins)} deposits+realized=${fmt(deposits + realized)}`);
+    // Ф'ючерси — гра з нульовою сумою: сума всіх позицій по парі = 0
+    for (const [sym, total] of sizes) if (total !== 0n) issues.push(`open interest imbalance ${sym}: ${fmt(total)}`);
+    // Заблоковане = незвільнений залишок блокувань відкритих ордерів
     const needLock = new Map();
-    for (const o of this.open.values()) {
-      const m = this.markets.get(o.symbol);
-      const asset = o.side === 'BUY' ? m.quote : m.base;
-      const rem = o.qty - o.filled;
-      const k = `${o.uid}:${asset}`;
-      needLock.set(k, (needLock.get(k) || 0n) + (o.side === 'BUY' ? (o.price * rem) / SCALE : rem));
-    }
+    for (const o of this.open.values()) needLock.set(o.uid, (needLock.get(o.uid) || 0n) + o.lock - o.lockRel);
     for (const b of this.bal.values())
-      if (b.locked !== (needLock.get(`${b.uid}:${b.asset}`) || 0n))
-        issues.push(`lock mismatch uid=${b.uid} ${b.asset}: locked=${fmt(b.locked)} need=${fmt(needLock.get(`${b.uid}:${b.asset}`) || 0n)}`);
-    // Книга не перехрещена, рівні узгоджені
+      if (b.locked !== (needLock.get(b.uid) || 0n))
+        issues.push(`lock mismatch uid=${b.uid}: locked=${fmt(b.locked)} need=${fmt(needLock.get(b.uid) || 0n)}`);
     for (const [sym, b] of this.books) {
       const bid = b.bids.best(), ask = b.asks.best();
       if (bid !== null && ask !== null && bid >= ask) issues.push(`crossed book ${sym}`);
       for (const side of [b.bids, b.asks])
         for (const lvl of side.levels.values()) {
-          const s = lvl.orders.reduce((acc, o) => acc + o.qty - o.filled, 0n);
-          if (s !== lvl.qty) issues.push(`level qty mismatch ${sym} ${fmt(lvl.price)}`);
+          const sum = lvl.orders.reduce((acc, o) => acc + o.qty - o.filled, 0n);
+          if (sum !== lvl.qty) issues.push(`level qty mismatch ${sym} ${fmt(lvl.price)}`);
         }
     }
     return {
       ok: issues.length === 0, issues: issues.slice(0, 50), openOrders: this.open.size,
-      supply: Object.fromEntries(Object.entries(totals).map(([k, v]) => [k, fmt(v)])),
+      supply: { USDT: fmt(cash + margins) }, insuranceFund: fmt(this._peekBal(this.feeUid).free),
     };
   }
 }
@@ -732,11 +880,12 @@ function s(v) {
 }
 
 function rowToOrder(r) {
-  const n = (v) => (v === null ? null : BigInt(v));
   return {
-    id: r.id, uid: r.user_id, symbol: r.symbol, side: r.side, type: r.type, tif: r.tif, price: n(r.price),
-    qty: n(r.qty), quoteQty: n(r.quote_qty), filled: BigInt(r.filled), quoteFilled: BigInt(r.quote_filled),
-    fee: BigInt(r.fee), status: r.status, created: r.created_at, updated: r.updated_at,
+    id: r.id, uid: r.user_id, symbol: r.symbol, side: r.side, type: r.type, tif: r.tif,
+    price: r.price === null ? null : BigInt(r.price), qty: BigInt(r.qty), filled: BigInt(r.filled),
+    quoteFilled: BigInt(r.quote_filled), fee: BigInt(r.fee), reduceOnly: !!r.reduce_only, leverage: r.leverage,
+    lock: BigInt(r.lock), lockRel: BigInt(r.lock_released), realized: BigInt(r.realized), status: r.status,
+    created: r.created_at, updated: r.updated_at,
   };
 }
 
