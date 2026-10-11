@@ -7,7 +7,8 @@ const [url, out, width = '1366', height = '900', scroll = '0', full = '0'] = pro
 const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' });
 const p = await b.newPage({ viewport: { width: +width, height: +height } });
 await p.route('**/*', async (route) => {
-  const u = route.request().url();
+  let u = route.request().url();
+  if (u.startsWith('https://medluxlife.de')) u = 'https://medluxlife-6j8sz55bpn.live-website.com' + u.slice('https://medluxlife.de'.length);
   if (!u.startsWith('https://medluxlife-6j8sz55bpn.live-website.com') && !u.includes('fonts.')) return route.abort();
   try {
     const raw = execFileSync('curl', ['-sS', '-L', '-i', '--max-time', '30', u], { maxBuffer: 64 << 20 });

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="400 170 400 350" class="mlx-dept-icon" aria-hidden="true">
+<defs><linearGradient id="g_neurology" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f0c46a"/><stop offset="1" stop-color="#c9952f"/></linearGradient></defs>
+<g fill="none" stroke="url(#g_neurology)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M600 225 C 570 205 520 205 498 238 C 455 238 432 275 442 310 C 412 330 412 380 445 400 C 440 440 478 470 520 460 C 540 485 580 488 600 470 Z"/>
+<path d="M600 225 C 630 205 680 205 702 238 C 745 238 768 275 758 310 C 788 330 788 380 755 400 C 760 440 722 470 680 460 C 660 485 620 488 600 470 Z"/>
+<path d="M600 225 V 470" stroke-width="6"/>
+<path d="M500 290 C 530 290 545 310 545 335 M 470 360 C 505 355 530 375 532 405 M 700 290 C 670 290 655 310 655 335 M 730 360 C 695 355 670 375 668 405" stroke-width="6"/></g>
+</svg>

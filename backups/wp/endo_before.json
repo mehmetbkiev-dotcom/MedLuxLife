@@ -1,0 +1,46 @@
+{
+ "title": "Endocrinology and Metabolic Diseases",
+ "lead": "Hormones produced by the endocrine glands carry essential messages around the body, and when too much or too little is produced, a range of disorders can develop. The endocrine team at our partner hospital evaluates these conditions and, where surgery is needed, offers surgical treatment focused mainly on the thyroid, parathyroid and adrenal glands. MedLuxLife helps you gather your hormone tests and imaging and coordinates consultation and treatment planning.",
+ "cards": [
+  [
+   "Thyroid disorders",
+   "Evaluation and treatment of thyroid conditions affecting metabolism, energy use and heat production, including surgical removal of all or part of the gland (thyroidectomy) where appropriate."
+  ],
+  [
+   "Parathyroid disorders",
+   "Care for conditions of the four parathyroid glands that regulate calcium and phosphorus, including parathyroidectomy and parathyroid transplantation."
+  ],
+  [
+   "Adrenal disorders",
+   "Assessment and treatment of adrenal gland conditions affecting cortisol, blood pressure-related hormones and development, including adrenalectomy."
+  ],
+  [
+   "Pancreatic surgery",
+   "Pancreatectomy, the removal of part or all of the pancreas, for example for neuroendocrine tumours."
+  ],
+  [
+   "Careful surgical technique",
+   "Endocrine operations are performed by surgeons with dedicated experience, with particular care taken to protect the voice and calcium balance and to minimise bleeding."
+  ]
+ ],
+ "list_heading": "Conditions treated",
+ "list": [
+  "Adrenal tumours",
+  "Cushing's syndrome",
+  "Parathyroid gland disorders",
+  "Parathyroid adenomas",
+  "Parathyroid cancer",
+  "Hyperparathyroidism",
+  "Hyperthyroidism",
+  "Goitre",
+  "Graves' disease",
+  "Toxic (hyperfunctioning) thyroid nodules",
+  "Thyroid nodules",
+  "Thyroid cancer",
+  "Neuroendocrine tumours"
+ ],
+ "docs_extra": [
+  "Recent hormone, calcium and metabolic blood test results",
+  "Thyroid ultrasound or other endocrine imaging reports"
+ ]
+}
