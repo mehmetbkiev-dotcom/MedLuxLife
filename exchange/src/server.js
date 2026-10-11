@@ -10,7 +10,7 @@ const { Auth } = require('./auth');
 const { startBots } = require('./bots');
 const { BinanceBroker } = require('./broker/binance');
 const { Hedger } = require('./broker/hedger');
-const { fmt } = require('./decimal');
+const { fmt, toUnits } = require('./decimal');
 
 const PUBLIC_DIR = path.join(__dirname, '..', 'public');
 const INTERVALS = { '1m': 60e3, '5m': 300e3, '15m': 900e3, '1h': 3600e3, '4h': 14400e3, '1d': 86400e3 };
@@ -30,7 +30,25 @@ function createServer(options = {}) {
     hedger = new Hedger(db, engine, new BinanceBroker(conf.broker), conf.broker);
     hedger.start().catch((e) => console.error('Брокер:', e.message));
   } else if (conf.broker.name) throw new Error(`Невідомий брокер: ${conf.broker.name}`);
-  const stopBots = conf.bots ? startBots(engine, auth, hedger) : () => {};
+  let stopBots = () => {};
+  let closed = false;
+  if (conf.bots) {
+    if (!hedger) stopBots = startBots(engine, auth, null);
+    else {
+      // Чекаємо реальні ціни брокера (до 8 с), щоб біржа не стартувала з умовної ціни
+      Promise.race([hedger.firstPrices, new Promise((r) => setTimeout(r, 8000))]).then(() => {
+        if (closed) return;
+        if (engine.nextTradeId === 1) {
+          for (const m of engine.markets.values()) {
+            const mid = hedger.mid(m.symbol);
+            const u = mid ? toUnits(mid.toFixed(8)) : null;
+            if (u) engine.last.set(m.symbol, u - (u % m.tick));
+          }
+        }
+        stopBots = startBots(engine, auth, hedger);
+      });
+    }
+  }
 
   // ---------- rate limiting (token bucket) ----------
   const buckets = new Map();
@@ -134,6 +152,15 @@ function createServer(options = {}) {
     return req.socket.remoteAddress || '';
   }
   const LOOPBACK = new Set(['127.0.0.1', '::1', '::ffff:127.0.0.1']);
+  // Справжня IP клієнта або null, якщо запит прийшов через локальний тунель, що її не
+  // передає (напр. ssh -R): тоді всі відвідувачі мають одну адресу 127.0.0.1, і
+  // обмежувати "по IP" не можна — інакше перші кілька людей заблокують решту.
+  function realClientIp(req) {
+    const h = req.headers;
+    if (conf.trustProxy && (h['cf-connecting-ip'] || h['x-forwarded-for'])) return clientIp(req);
+    const a = req.socket.remoteAddress;
+    return a && !LOOPBACK.has(a) ? a : null;
+  }
   // "Локальний" = справді з цього комп'ютера. Запити через тунель/проксі теж приходять
   // з 127.0.0.1, але несуть заголовки пересилання — їм привілеї localhost не даються.
   function isLocalReq(req) {
@@ -235,7 +262,7 @@ function createServer(options = {}) {
     },
 
     'POST /api/register': async (ctx) => {
-      if (!ctx.local && !allow(`reg:${ctx.ip}`, 5 / 60, 5))
+      if (!ctx.local && !(ctx.realIp ? allow(`reg:${ctx.realIp}`, 5 / 60, 5) : allow('reg:shared', 2, 60)))
         throw new ApiError(429, 'RATE_LIMIT', 'Забагато реєстрацій з цієї IP');
       const { username, password } = ctx.body;
       const err = auth.validate(username, password);
@@ -248,9 +275,11 @@ function createServer(options = {}) {
       return { id: uid, username, token };
     },
     'POST /api/login': async (ctx) => {
-      if (!ctx.local && !allow(`login:${ctx.ip}`, 10 / 60, 10))
-        throw new ApiError(429, 'RATE_LIMIT', 'Забагато спроб входу');
       const { username, password } = ctx.body;
+      // захист від підбору пароля: по акаунту завжди, по IP — коли вона відома
+      const uKey = `login:u:${String(username || '').toLowerCase().slice(0, 40)}`;
+      if (!ctx.local && (!allow(uKey, 10 / 60, 10) || (ctx.realIp && !allow(`login:${ctx.realIp}`, 30 / 60, 30))))
+        throw new ApiError(429, 'RATE_LIMIT', 'Забагато спроб входу, спробуйте за хвилину');
       if (typeof username !== 'string' || typeof password !== 'string' || password.length > 100)
         throw new ApiError(400, 'BAD_CREDENTIALS', 'Вкажіть логін і пароль');
       const u = await auth.login(username, password);
@@ -385,7 +414,7 @@ function createServer(options = {}) {
     res.setHeader('Content-Security-Policy', "default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:");
     const url = new URL(req.url, 'http://x');
     const ctx = {
-      req, res, q: url.searchParams, ip: clientIp(req), local: isLocalReq(req), token: getToken(req), session: null, body: {},
+      req, res, q: url.searchParams, ip: clientIp(req), local: isLocalReq(req), realIp: realClientIp(req), token: getToken(req), session: null, body: {},
       setHeader: (k, v) => res.setHeader(k, v),
     };
     try {
@@ -393,7 +422,7 @@ function createServer(options = {}) {
         if (req.method !== 'GET' && req.method !== 'HEAD') throw new ApiError(405, 'METHOD', 'Method not allowed');
         return serveStatic(req, res, url.pathname);
       }
-      if (!ctx.local && !allow(`ip:${ctx.ip}`, 50, 100)) throw new ApiError(429, 'RATE_LIMIT', 'Забагато запитів');
+      if (!ctx.local && ctx.realIp && !allow(`ip:${ctx.realIp}`, 50, 100)) throw new ApiError(429, 'RATE_LIMIT', 'Забагато запитів');
       ctx.session = auth.resolve(ctx.token);
       if (url.pathname === '/api/stream' && req.method === 'GET') return openStream(ctx);
       const handler = routes[`${req.method} ${url.pathname}`];
@@ -413,6 +442,7 @@ function createServer(options = {}) {
   server.headersTimeout = 66000;
 
   server.shutdown = () => {
+    closed = true;
     stopBots();
     if (hedger) hedger.stop();
     for (const t of [flush, tickers, heartbeat, gcBuckets]) clearInterval(t);

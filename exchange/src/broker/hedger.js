@@ -32,6 +32,7 @@ class Hedger {
     this.brokerBalances = null;
     this.ready = false;
     this.timers = [];
+    this.firstPrices = new Promise((r) => (this._gotPrices = r)); // вирішується з першими цінами
 
     db.exec(`
       CREATE TABLE IF NOT EXISTS kv (k TEXT PRIMARY KEY, v TEXT NOT NULL);
@@ -120,6 +121,7 @@ class Hedger {
           const p = map.get(s.brokerSymbol);
           if (p) this.prices.set(s.symbol, { bid: p.bid, ask: p.ask, mid: (Number(p.bid) + Number(p.ask)) / 2, ts: Date.now() });
         }
+        if (this.symbols.every((s) => this.prices.has(s.symbol))) this._gotPrices();
       } catch (e) {
         this._err('prices', e);
       }
