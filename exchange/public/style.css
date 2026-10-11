@@ -153,3 +153,20 @@ td.r, th.r { text-align: right; }
   .ticker .hide-sm { display: none; }
   .ohlc { display: none; }
 }
+
+/* вибір торгової пари */
+.pair-btn { background: var(--panel-2); border: 1px solid var(--line); border-radius: 6px; padding: 8px 12px; cursor: pointer; font-size: 15px; white-space: nowrap; }
+.pair-btn:hover { border-color: var(--accent); }
+.pair-btn .caret { color: var(--muted); font-size: 11px; margin-left: 4px; }
+.pair-panel { position: fixed; top: 56px; left: 110px; z-index: 15; width: 340px; max-width: calc(100vw - 32px); background: var(--panel); border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 12px 30px rgba(0,0,0,.5); display: flex; flex-direction: column; max-height: min(560px, calc(100vh - 80px)); }
+.pair-panel input { margin: 10px; background: var(--panel-2); border: 1px solid var(--line); border-radius: 6px; padding: 9px 10px; outline: none; }
+.pair-panel input:focus { border-color: var(--accent); }
+.pair-head, .pair-row { display: grid; grid-template-columns: 1.1fr 1fr 0.8fr; gap: 6px; padding: 6px 14px; }
+.pair-head { color: var(--muted); font-size: 11px; }
+.pair-head .r, .pair-row .r { text-align: right; }
+.pair-list { overflow-y: auto; }
+.pair-row { cursor: pointer; line-height: 20px; }
+.pair-row:hover { background: var(--panel-2); }
+.pair-row.active { background: var(--panel-2); box-shadow: inset 2px 0 0 var(--accent); }
+.close-btn { padding: 4px 12px; font-size: 12px; background: var(--red); color: #fff; }
+@media (max-width: 720px) { .pair-panel { left: 16px; } }

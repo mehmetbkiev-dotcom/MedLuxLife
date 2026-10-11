@@ -1,5 +1,5 @@
 {
-  "name": "miniex",
+  "name": "quite-harbor",
   "version": "1.0.0",
   "description": "Spot crypto exchange (matching engine, orders, PnL, real-time UI) — zero dependencies",
   "private": true,

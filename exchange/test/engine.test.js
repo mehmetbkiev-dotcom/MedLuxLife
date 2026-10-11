@@ -100,15 +100,15 @@ test('validation and insufficient funds', () => {
 
 test('PnL: average cost, realized and unrealized', () => {
   const { e } = setup();
-  // Користувач 1 вже має 2 BTC з собівартістю 60000 (ціна при депозиті)
-  e.placeOrder(2, { symbol: 'BTCUSDT', side: 'BUY', type: 'LIMIT', price: '66000', qty: '1' });
+  // Користувач 1 має 2 BTC із собівартістю 85000 (стартова ціна в конфігу на момент депозиту)
+  e.placeOrder(2, { symbol: 'BTCUSDT', side: 'BUY', type: 'LIMIT', price: '90000', qty: '1' });
   e.placeOrder(1, { symbol: 'BTCUSDT', side: 'SELL', type: 'MARKET', qty: '1' });
   const p = e.pnl(1).positions.find((x) => x.asset === 'BTC');
-  // продали 1 BTC за 66000 - 66 комісія, собівартість 60000 => +5934
-  assert.equal(p.realized, '5934');
+  // продали 1 BTC за 90000 - 90 комісія, собівартість 85000 => +4910
+  assert.equal(p.realized, '4910');
   assert.equal(p.qty, '1');
-  assert.equal(p.avgPrice, '60000');
-  assert.equal(p.unrealized, '6000'); // остання ціна 66000
+  assert.equal(p.avgPrice, '85000');
+  assert.equal(p.unrealized, '5000'); // остання ціна 90000
 });
 
 test('state survives restart', () => {

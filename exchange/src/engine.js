@@ -97,6 +97,8 @@ class Engine {
     this.userOpen = new Map(); // uid -> Set(order)
     this.books = new Map();
     this.last = new Map();
+    this.traded = new Set(); // пари, де вже були угоди
+    this.noOrderLimit = new Set(); // системні акаунти (маркетмейкер) без ліміту відкритих ордерів
     this.candles = new Map();
     this.lastFaucet = new Map();
     this.feeUid = null;
@@ -176,6 +178,7 @@ class Engine {
       this.books.set(m.symbol, { bids: new BookSide(true), asks: new BookSide(false) });
       const t = d.prepare('SELECT price FROM trades WHERE symbol=? ORDER BY id DESC LIMIT 1').get(m.symbol);
       this.last.set(m.symbol, t ? BigInt(t.price) : m.refPrice);
+      if (t) this.traded.add(m.symbol);
       this.candles.set(m.symbol, []);
     }
     for (const r of d.prepare("SELECT * FROM orders WHERE status IN ('NEW','PARTIALLY_FILLED') ORDER BY id").all()) {
@@ -301,7 +304,7 @@ class Engine {
       if ((price * qty) / SCALE < m.minNotional) throw bad('MIN_NOTIONAL', `Мінімальна сума ордера ${fmt(m.minNotional)} ${m.quote}`);
       tif = type === 'LIMIT_MAKER' ? 'GTC' : String(req.tif || 'GTC').toUpperCase();
       if (!['GTC', 'IOC', 'FOK'].includes(tif)) throw bad('BAD_TIF', 'tif: GTC | IOC | FOK');
-      if (tif === 'GTC' && openCount >= this.cfg.maxOpenOrdersPerUser)
+      if (tif === 'GTC' && openCount >= this.cfg.maxOpenOrdersPerUser && !this.noOrderLimit.has(uid))
         throw bad('TOO_MANY_ORDERS', `Максимум ${this.cfg.maxOpenOrdersPerUser} відкритих ордерів`);
       if (type === 'LIMIT_MAKER') {
         const b = opp.best();
@@ -509,6 +512,7 @@ class Engine {
     };
     this.tx.trades.push(t);
     this.last.set(m.symbol, px);
+    this.traded.add(m.symbol);
     this._candle(m.symbol, px, q, quote, ts);
     return { tradeId: t.id, price: fmt(px), qty: fmt(q), quoteQty: fmt(quote), fee: fmt(takerBuys ? buyerFee : sellerFee) };
   }

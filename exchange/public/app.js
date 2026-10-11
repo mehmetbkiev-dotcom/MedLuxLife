@@ -51,14 +51,35 @@
 
   // ---------------- header ----------------
   function renderMarkets() {
-    $('#markets').innerHTML = S.markets
-      .map((m) => {
-        const t = S.tickers[m.symbol];
-        const ch = t ? t.changePct : 0;
-        return `<button data-sym="${m.symbol}" class="${m.symbol === S.sym ? 'active' : ''}">${m.base}/${m.quote}
-          <small class="${ch >= 0 ? 'green' : 'red'}">${t ? fmtN(t.last, decimals(m.tick)) : ''} ${ch >= 0 ? '+' : ''}${ch.toFixed(2)}%</small></button>`;
-      })
-      .join('');
+    const m = S.markets.find((x) => x.symbol === S.sym);
+    if (!m) return;
+    $('#markets').innerHTML = `<button id="pair-btn" class="pair-btn" type="button" aria-haspopup="listbox">
+      <b>${m.base}</b><span class="muted">/${m.quote}</span> <span class="caret">▾</span></button>`;
+    renderPairList();
+  }
+
+  // Випадаючий список пар з пошуком (як на Binance)
+  function renderPairList() {
+    if ($('#pair-panel').classList.contains('hidden')) return;
+    const q = $('#pair-search').value.trim().toUpperCase().replace('/', '');
+    const rows = S.markets.filter((m) => !q || m.base.includes(q) || m.symbol.includes(q));
+    $('#pair-list').innerHTML = rows.length ? rows.map((m) => {
+      const t = S.tickers[m.symbol];
+      const ch = t ? t.changePct : 0;
+      return `<div class="pair-row${m.symbol === S.sym ? ' active' : ''}" data-sym="${m.symbol}" role="option">
+        <span><b>${m.base}</b><span class="muted">/${m.quote}</span></span>
+        <span class="num r">${t ? fmtN(t.last, decimals(m.tick)) : '—'}</span>
+        <span class="num r ${ch >= 0 ? 'green' : 'red'}">${ch >= 0 ? '+' : ''}${ch.toFixed(2)}%</span></div>`;
+    }).join('') : '<div class="empty">Нічого не знайдено</div>';
+  }
+  function togglePairs(open) {
+    const p = $('#pair-panel');
+    p.classList.toggle('hidden', !open);
+    if (open) {
+      $('#pair-search').value = '';
+      renderPairList();
+      $('#pair-search').focus();
+    }
   }
 
   function renderTicker() {
@@ -73,7 +94,7 @@
       <div class="hide-sm"><small>Мін 24г</small><span class="num">${fmtN(t.low, pd)}</span></div>
       <div class="hide-sm"><small>Обсяг 24г (${S.m.base})</small><span class="num">${fmtN(t.volume, 2)}</span></div>
       <div class="hide-sm"><small>Обсяг 24г (${S.m.quote})</small><span class="num">${fmtN(t.quoteVolume, 0)}</span></div>`;
-    document.title = `${fmtN(t.last, pd)} | ${S.m.base}/${S.m.quote} — MiniEx`;
+    document.title = `${fmtN(t.last, pd)} | ${S.m.base}/${S.m.quote} — Quite Harbor`;
   }
 
   function renderAccountBar() {
@@ -164,7 +185,12 @@
       ctx.fillText('Немає даних', 20, 30);
       return;
     }
-    const slot = plotW / k.length;
+    // Фіксована кількість "місць" під свічки (як на Binance): мало даних — свічки
+    // стоять праворуч нормальної ширини, а не розтягуються на весь графік.
+    const slots = Math.max(k.length, Math.min(S.visible, 400));
+    const off = slots - k.length;
+    const slot = plotW / slots;
+    const xAt = (i) => (off + i) * slot + slot / 2;
     const bodyW = Math.max(1, Math.min(14, slot * 0.7));
     let hi = -Infinity, lo = Infinity, vmax = 0;
     for (const c of k) {
@@ -190,14 +216,14 @@
     }
     const every = Math.max(1, Math.ceil(90 / slot));
     for (let i = 0; i < k.length; i += every) {
-      const x = i * slot + slot / 2;
+      const x = xAt(i);
       const d = new Date(k[i][0]);
       const label = IV_MS[S.interval] >= 86400e3 ? `${d.getDate()}.${d.getMonth() + 1}` : d.toLocaleTimeString('uk-UA', { hour: '2-digit', minute: '2-digit' });
       ctx.fillText(label, x - 14, H - 6);
     }
     k.forEach((c, i) => {
       const [, o, h, l, cl, v] = c.map(Number);
-      const x = i * slot + slot / 2;
+      const x = xAt(i);
       const up = cl >= o;
       ctx.strokeStyle = ctx.fillStyle = up ? C.green : C.red;
       ctx.beginPath(); ctx.moveTo(Math.round(x) + 0.5, y(h)); ctx.lineTo(Math.round(x) + 0.5, y(l)); ctx.stroke();
@@ -224,11 +250,11 @@
     if (S.hover) {
       const { mx, my } = S.hover;
       if (mx < plotW && my < plotH) {
-        const i = Math.min(k.length - 1, Math.max(0, Math.floor(mx / slot)));
+        const i = Math.min(k.length - 1, Math.max(0, Math.floor(mx / slot) - off));
         const c = k[i];
         ctx.strokeStyle = C.muted;
         ctx.setLineDash([2, 4]);
-        ctx.beginPath(); ctx.moveTo(i * slot + slot / 2, 0); ctx.lineTo(i * slot + slot / 2, plotH); ctx.moveTo(0, my); ctx.lineTo(plotW, my); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(xAt(i), 0); ctx.lineTo(xAt(i), plotH); ctx.moveTo(0, my); ctx.lineTo(plotW, my); ctx.stroke();
         ctx.setLineDash([]);
         if (my < priceH) {
           const p = hi - ((my - 6) / (priceH - 6)) * (hi - lo);
@@ -368,7 +394,7 @@
       const r = await api('POST', '/api/order', body);
       const o = r.order;
       const label = `${side === 'BUY' ? 'Купівля' : 'Продаж'} ${S.m.base}`;
-      if (o.status === 'FILLED') toast(`${label}: виконано ${o.filled} за ${fmtN(o.avgPrice, decimals(S.m.tick))}`, 'ok');
+      if (o.status === 'FILLED') toast(`${label}: виконано ${o.filled} за ${fmtN(o.avgPrice, decimals(S.m.tick))}. Позиція — у вкладці «Позиції та PnL»`, 'ok');
       else if (o.status === 'EXPIRED') toast(`${label}: ${+o.filled ? `частково виконано ${o.filled}, решту скасовано` : 'не виконано (немає зустрічних ордерів)'}`, +o.filled ? 'ok' : 'err');
       else toast(`${label}: ордер #${o.id} розміщено${+o.filled ? `, виконано ${o.filled}` : ''}`, 'ok');
       if (f.qty) f.qty.value = '';
@@ -399,7 +425,12 @@
 
     if (S.tab === 'open' || S.tab === 'history') {
       const list = S.tab === 'open' ? S.open : S.history;
-      if (!list.length) { body.innerHTML = `<div class="empty">Немає ордерів</div>`; return; }
+      if (!list.length) {
+        body.innerHTML = S.tab === 'open'
+          ? `<div class="empty">Немає відкритих ордерів.<br><span class="muted">Ринкові ордери виконуються одразу — куплені монети дивіться у «Позиції та PnL», там їх можна закрити.</span></div>`
+          : `<div class="empty">Немає ордерів</div>`;
+        return;
+      }
       body.innerHTML = `<table><thead><tr><th>Час</th><th>Пара</th><th>Тип</th><th>Сторона</th><th class="r">Ціна</th><th class="r">Сер. ціна</th>
         <th class="r">Кількість</th><th class="r">Виконано</th><th class="r">Сума</th><th>Статус</th><th></th></tr></thead><tbody>
         ${list.map((o) => `<tr><td class="muted">${dt(o.created)}</td><td>${pair(o.symbol)}</td><td>${TYPE[o.type] || o.type}${o.tif && o.tif !== 'GTC' ? ' ' + o.tif : ''}</td>
@@ -430,16 +461,24 @@
           <div class="spacer"></div><button class="btn" id="faucet">+ Поповнити демо-USDT</button>
         </div>
         <table><thead><tr><th>Актив</th><th class="r">Доступно</th><th class="r">В ордерах</th><th class="r">Позиція</th><th class="r">Сер. ціна входу</th>
-          <th class="r">Поточна ціна</th><th class="r">Вартість</th><th class="r">Нереаліз. PnL</th><th class="r">Реаліз. PnL</th><th class="r">Комісії</th></tr></thead><tbody>
-        ${Object.entries(S.balances).map(([a, b]) => {
+          <th class="r">Поточна ціна</th><th class="r">Вартість</th><th class="r">Нереаліз. PnL</th><th class="r">Реаліз. PnL</th><th class="r">Комісії</th><th></th></tr></thead><tbody>
+        ${Object.entries(S.balances).filter(([a, b]) => {
           const ps = p.positions.find((x) => x.asset === a);
-          const d = a === 'USDT' ? 2 : 6;
+          return a === 'USDT' || +b.free + +b.locked > 0 || (ps && (+ps.qty > 0 || +ps.realized !== 0));
+        }).map(([a, b]) => {
+          const ps = p.positions.find((x) => x.asset === a);
+          const mk = S.markets.find((x) => x.base === a);
+          const d = mk ? decimals(mk.step) : 2;
+          const pd = mk ? decimals(mk.tick) : 2;
+          const canClose = mk && +b.free >= +mk.step;
           return `<tr><td><b>${a}</b></td><td class="r">${fmtN(b.free, d)}</td><td class="r">${fmtN(b.locked, d)}</td>
-            ${ps ? `<td class="r">${fmtN(ps.qty, d)}</td><td class="r">${fmtN(ps.avgPrice, 2)}</td><td class="r">${fmtN(ps.lastPrice, 2)}</td>
+            ${ps ? `<td class="r">${fmtN(ps.qty, d)}</td><td class="r">${+ps.qty > 0 ? fmtN(ps.avgPrice, pd) : '—'}</td><td class="r">${fmtN(ps.lastPrice, pd)}</td>
               <td class="r">${fmtN(ps.value, 2)}</td><td class="r ${cls(ps.unrealized)}">${sign(ps.unrealized)}${fmtN(ps.unrealized, 2)} (${sign(ps.unrealizedPct)}${ps.unrealizedPct.toFixed(2)}%)</td>
-              <td class="r ${cls(ps.realized)}">${sign(ps.realized)}${fmtN(ps.realized, 2)}</td><td class="r muted">${fmtN(ps.fees, 2)}</td>`
-              : `<td class="r">—</td><td class="r">—</td><td class="r">—</td><td class="r">${fmtN(+b.free + +b.locked, 2)}</td><td class="r">—</td><td class="r">—</td><td class="r">—</td>`}</tr>`;
-        }).join('')}</tbody></table>`;
+              <td class="r ${cls(ps.realized)}">${sign(ps.realized)}${fmtN(ps.realized, 2)}</td><td class="r muted">${fmtN(ps.fees, 2)}</td>
+              <td>${canClose ? `<button class="btn close-btn" data-close="${mk.symbol}">Закрити</button>` : ''}</td>`
+              : `<td class="r">—</td><td class="r">—</td><td class="r">—</td><td class="r">${fmtN(+b.free + +b.locked, 2)}</td><td class="r">—</td><td class="r">—</td><td class="r">—</td><td></td>`}</tr>`;
+        }).join('')}</tbody></table>
+        <p class="hint" style="padding:8px 16px">«Закрити» продає весь доступний залишок монети за ринковою ціною; прибуток/збиток стає реалізованим.</p>`;
       $('#faucet').onclick = async () => {
         try {
           S.balances = await api('POST', '/api/faucet');
@@ -471,6 +510,28 @@
       renderAcc();
     } catch (e) {
       if (e.status === 401) { S.me = null; renderAll(); }
+    }
+  }
+
+  // Закрити позицію = продати весь доступний залишок монети ринковим ордером
+  async function closePosition(symbol, btn) {
+    const mk = S.markets.find((x) => x.symbol === symbol);
+    const free = +(S.balances[mk.base]?.free || 0);
+    const qty = floorTo(free, decimals(mk.step));
+    if (!(+qty > 0)) return;
+    if (!confirm(`Закрити позицію: продати ${qty} ${mk.base} за ринковою ціною?`)) return;
+    btn.disabled = true;
+    try {
+      const r = await api('POST', '/api/order', { symbol, side: 'SELL', type: 'MARKET', qty });
+      const o = r.order;
+      if (+o.filled > 0)
+        toast(`Позицію ${mk.base} закрито: продано ${o.filled} за ${fmtN(o.avgPrice, decimals(mk.tick))}, отримано ${fmtN(+o.quoteFilled - +o.fee, 2)} USDT`, 'ok');
+      else toast('Не вдалося продати: немає покупців поблизу ринкової ціни', 'err');
+      refreshPrivate();
+    } catch (err) {
+      toast(err.message, 'err');
+    } finally {
+      btn.disabled = false;
     }
   }
 
@@ -665,8 +726,23 @@
 
   // ---------------- events ----------------
   $('#markets').addEventListener('click', (e) => {
-    const b = e.target.closest('[data-sym]');
-    if (b && b.dataset.sym !== S.sym) selectMarket(b.dataset.sym);
+    if (e.target.closest('#pair-btn')) togglePairs($('#pair-panel').classList.contains('hidden'));
+  });
+  $('#pair-search').addEventListener('input', renderPairList);
+  $('#pair-search').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      const first = $('#pair-list [data-sym]');
+      if (first) first.click();
+    }
+  });
+  $('#pair-list').addEventListener('click', (e) => {
+    const r = e.target.closest('[data-sym]');
+    if (!r) return;
+    togglePairs(false);
+    if (r.dataset.sym !== S.sym) selectMarket(r.dataset.sym);
+  });
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('#pair-panel') && !e.target.closest('#pair-btn')) togglePairs(false);
   });
   $('#intervals').addEventListener('click', (e) => {
     const b = e.target.closest('[data-iv]');
@@ -698,6 +774,8 @@
     } catch (e) { toast(e.message, 'err'); }
   });
   $('#acc-body').addEventListener('click', async (e) => {
+    const cl = e.target.closest('[data-close]');
+    if (cl) return closePosition(cl.dataset.close, cl);
     const b = e.target.closest('[data-cancel]');
     if (!b) return;
     try {
@@ -731,7 +809,12 @@
   $('#auth-form').addEventListener('submit', submitAuth);
   $('#modal-close').onclick = () => $('#modal').classList.add('hidden');
   $('#modal').addEventListener('click', (e) => { if (e.target.id === 'modal') $('#modal').classList.add('hidden'); });
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') $('#modal').classList.add('hidden'); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      $('#modal').classList.add('hidden');
+      togglePairs(false);
+    }
+  });
 
   canvas.addEventListener('mousemove', (e) => {
     const r = canvas.getBoundingClientRect();
@@ -746,6 +829,7 @@
   }, { passive: false });
   new ResizeObserver(queueDraw).observe(canvas.parentElement);
   setInterval(() => { if (S.me && S.tab === 'mytrades') refreshPrivate(); }, 5000);
+  setInterval(() => { if (!document.hidden && S.m) loadKlines().catch(() => {}); }, 30000);
 
   // ---------------- boot ----------------
   (async () => {

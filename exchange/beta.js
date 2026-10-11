@@ -199,7 +199,7 @@ function startTunnel(list, idx = 0) {
 function banner(url) {
   const line = '═'.repeat(64);
   console.log(`\n${line}
-  БЕТА ЗАПУЩЕНА — надішліть користувачам цю адресу:
+  QUITE HARBOR — БЕТА ЗАПУЩЕНА, надішліть користувачам цю адресу:
 
      ${url}
 

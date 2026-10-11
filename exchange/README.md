@@ -1,4 +1,4 @@
-# MiniEx — спотова криптобіржа (в стилі Binance)
+# Quite Harbor — спотова криптобіржа (в стилі Binance)
 
 Повноцінна біржа: реєстрація, баланси, книга ордерів, матчинг, лімітні/ринкові/post-only ордери,
 історія, угоди, PnL, свічковий графік — і все оновлюється в реальному часі.
@@ -18,7 +18,7 @@ npm run loadtest -- http://localhost:8080 100 30   # 100 користувачі�
 Docker:
 
 ```bash
-docker build -t miniex . && docker run -p 8080:8080 -v miniex-data:/data miniex
+docker build -t quite-harbor . && docker run -p 8080:8080 -v quite-harbor-data:/data quite-harbor
 ```
 
 Новий користувач отримує демо-баланс **10 000 USDT + 0.1 BTC + 2 ETH**, кнопка «Поповнити» дає

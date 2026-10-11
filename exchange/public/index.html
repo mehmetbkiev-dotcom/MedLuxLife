@@ -3,18 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MiniEx — спотова біржа</title>
+  <title>Quite Harbor — спотова біржа</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 <header class="top">
-  <div class="logo">Mini<span>Ex</span></div>
+  <div class="logo">Quite <span>Harbor</span></div>
   <nav id="markets" class="markets"></nav>
   <div id="ticker" class="ticker"></div>
   <div class="spacer"></div>
   <div id="account-bar" class="account-bar"></div>
 </header>
+
+<div id="pair-panel" class="pair-panel hidden" role="listbox">
+  <input id="pair-search" placeholder="Пошук монети: BTC, SOL…" autocomplete="off">
+  <div class="pair-head"><span>Пара</span><span class="r">Ціна</span><span class="r">Зміна 24г</span></div>
+  <div id="pair-list" class="pair-list"></div>
+</div>
 
 <main class="grid">
   <section class="panel book">
@@ -59,7 +65,7 @@
       <button data-tab="open" class="active">Відкриті ордери <span id="open-count"></span></button>
       <button data-tab="history">Історія ордерів</button>
       <button data-tab="mytrades">Мої угоди</button>
-      <button data-tab="assets">Активи та PnL</button>
+      <button data-tab="assets">Позиції та PnL</button>
       <div class="spacer"></div>
       <button id="cancel-all" class="link-btn">Скасувати всі</button>
     </div>

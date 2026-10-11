@@ -56,8 +56,11 @@ class BinanceBroker {
   async init(symbols) {
     const t = await this._req(this.tradeUrl, 'GET', '/api/v3/time');
     this.timeOffset = t.serverTime - Date.now();
-    const info = await this._req(this.tradeUrl, 'GET', '/api/v3/exchangeInfo', { symbols: JSON.stringify(symbols) });
+    // Повний список: якщо якоїсь монети немає у брокера, запит з фільтром упав би цілком
+    const info = await this._req(this.tradeUrl, 'GET', '/api/v3/exchangeInfo');
+    const want = new Set(symbols);
     for (const s of info.symbols) {
+      if (!want.has(s.symbol) || (s.status && s.status !== 'TRADING')) continue;
       const f = Object.fromEntries(s.filters.map((x) => [x.filterType, x]));
       this.filters.set(s.symbol, {
         step: f.LOT_SIZE?.stepSize || '0.00001',
@@ -73,6 +76,12 @@ class BinanceBroker {
     const out = new Map();
     for (const r of rows) out.set(r.symbol, { bid: r.bidPrice, ask: r.askPrice });
     return out;
+  }
+
+  // Історія свічок з реального ринку: [[openTime, o, h, l, c, v], ...]
+  async klines(symbol, interval, limit) {
+    const rows = await this._req(this.priceUrl, 'GET', '/api/v3/klines', { symbol, interval, limit });
+    return rows.map((r) => [r[0], strip(r[1]), strip(r[2]), strip(r[3]), strip(r[4]), strip(r[5])]);
   }
 
   async marketOrder(symbol, side, qty, clientId) {
@@ -103,6 +112,8 @@ class BinanceBroker {
     return a.balances.map((b) => ({ asset: b.asset, free: b.free, locked: b.locked }));
   }
 }
+
+const strip = (v) => String(v).replace(/(\.\d*?)0+$/, '$1').replace(/\.$/, '');
 
 function norm(o) {
   return {

@@ -38,12 +38,12 @@ function createServer(options = {}) {
       // Чекаємо реальні ціни брокера (до 8 с), щоб біржа не стартувала з умовної ціни
       Promise.race([hedger.firstPrices, new Promise((r) => setTimeout(r, 8000))]).then(() => {
         if (closed) return;
-        if (engine.nextTradeId === 1) {
-          for (const m of engine.markets.values()) {
-            const mid = hedger.mid(m.symbol);
-            const u = mid ? toUnits(mid.toFixed(8)) : null;
-            if (u) engine.last.set(m.symbol, u - (u % m.tick));
-          }
+        // Пари без жодної угоди (нова біржа або щойно додана монета) стартують з реальної ціни
+        for (const m of engine.markets.values()) {
+          if (engine.traded.has(m.symbol)) continue;
+          const mid = hedger.mid(m.symbol);
+          const u = mid ? toUnits(mid.toFixed(8)) : null;
+          if (u && u >= m.tick) engine.last.set(m.symbol, u - (u % m.tick));
         }
         stopBots = startBots(engine, auth, hedger);
       });
@@ -129,7 +129,7 @@ function createServer(options = {}) {
 
   const tickers = setInterval(() => {
     if (!clients.size) return;
-    broadcast(null, 'tickers', [...engine.markets.keys()].map((s) => engine.ticker(s)));
+    broadcast(null, 'tickers', allTickers());
     // PnL залежить від ринкової ціни, тож оновлюємо його всім залогіненим раз на 2 с
     for (const [uid, set] of byUser) {
       const msg = frame('account', { balances: engine.balances(uid), pnl: engine.pnl(uid) });
@@ -140,6 +140,14 @@ function createServer(options = {}) {
   const heartbeat = setInterval(() => {
     for (const c of clients) c.res.write(': ping\n\n');
   }, 15000);
+
+  // Тікери 20 пар рахуються по свічках за 24 год — кешуємо на 1 с, а не на кожен запит
+  let tickCache = null;
+  function allTickers() {
+    if (!tickCache || Date.now() - tickCache.ts > 1000)
+      tickCache = { ts: Date.now(), data: [...engine.markets.keys()].map((s) => engine.ticker(s)) };
+    return tickCache.data;
+  }
 
   // ---------- helpers ----------
   function clientIp(req) {
@@ -252,13 +260,32 @@ function createServer(options = {}) {
       makerFeePct: Number(conf.makerFeeBps) / 100, takerFeePct: Number(conf.takerFeeBps) / 100,
       faucet: conf.faucet, signupBonus: conf.signupBonus,
     }),
-    'GET /api/ticker': () => [...engine.markets.keys()].map((s) => engine.ticker(s)),
+    'GET /api/ticker': () => allTickers(),
     'GET /api/depth': (ctx) => engine.depth(symbolParam(ctx.q.get('symbol')), clampInt(ctx.q.get('limit'), 1, 200, 20)),
     'GET /api/trades': (ctx) => engine.recentTrades(symbolParam(ctx.q.get('symbol')), clampInt(ctx.q.get('limit'), 1, 500, 50)),
-    'GET /api/klines': (ctx) => {
-      const iv = INTERVALS[ctx.q.get('interval') || '1m'];
+    'GET /api/klines': async (ctx) => {
+      const name = ctx.q.get('interval') || '1m';
+      const iv = INTERVALS[name];
       if (!iv) throw new ApiError(400, 'BAD_INTERVAL', 'interval: ' + Object.keys(INTERVALS).join(', '));
-      return engine.klines(symbolParam(ctx.q.get('symbol')), iv, clampInt(ctx.q.get('limit'), 1, 1000, 300));
+      const symbol = symbolParam(ctx.q.get('symbol'));
+      const limit = clampInt(ctx.q.get('limit'), 1, 1000, 300);
+      const own = engine.klines(symbol, iv, limit);
+      if (!hedger) return own;
+      // З брокером: історія — реальні свічки ринку; поточна свічка доповнюється нашими угодами
+      try {
+        const hist = (await hedger.klines(symbol, name, limit)).slice(); // кеш не змінюємо
+        if (!hist.length) return own;
+        const lastOwn = own[own.length - 1];
+        const lastH = (hist[hist.length - 1] = [...hist[hist.length - 1]]);
+        if (lastOwn && lastOwn[0] === lastH[0]) {
+          lastH[2] = String(Math.max(+lastH[2], +lastOwn[2]));
+          lastH[3] = String(Math.min(+lastH[3], +lastOwn[3]));
+          lastH[4] = lastOwn[4];
+        }
+        return hist;
+      } catch {
+        return own;
+      }
     },
 
     'POST /api/register': async (ctx) => {
@@ -343,7 +370,7 @@ function createServer(options = {}) {
       const since = Number(ctx.q.get('since')) || 0;
       const out = {
         depth: engine.depth(symbol, 20),
-        tickers: [...engine.markets.keys()].map((s) => engine.ticker(s)),
+        tickers: allTickers(),
         trades: (recentTrades.get(symbol) || []).filter((t) => t.id > since).slice(-100),
       };
       if (ctx.session) {
@@ -378,7 +405,7 @@ function createServer(options = {}) {
       set.add(c);
     }
     send(c, 'depth', engine.depth(symbol, 20));
-    send(c, 'tickers', [...engine.markets.keys()].map((s) => engine.ticker(s)));
+    send(c, 'tickers', allTickers());
     if (uid) send(c, 'account', { balances: engine.balances(uid), pnl: engine.pnl(uid) });
     ctx.req.on('close', () => {
       clients.delete(c);
@@ -466,7 +493,7 @@ function clampInt(v, lo, hi, def) {
 if (require.main === module) {
   const server = createServer();
   server.listen(cfg.port, cfg.host, () => {
-    console.log(`Біржа запущена: http://localhost:${cfg.port}  (БД: ${cfg.dbFile}, боти: ${cfg.bots ? 'увімк' : 'вимк'})`);
+    console.log(`Quite Harbor запущено: http://localhost:${cfg.port}  (БД: ${cfg.dbFile}, боти: ${cfg.bots ? 'увімк' : 'вимк'})`);
   });
   const stop = () => {
     console.log('Зупинка...');

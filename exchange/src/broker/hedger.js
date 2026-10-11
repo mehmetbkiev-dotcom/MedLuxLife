@@ -244,6 +244,19 @@ class Hedger {
     }
   }
 
+  // Історія свічок брокера з кешем на 10 с (графік показує реальну історію ринку)
+  async klines(symbol, interval, limit) {
+    const s = this.symbols.find((x) => x.symbol === symbol);
+    const key = `${symbol}:${interval}:${limit}`;
+    this.klineCache ??= new Map();
+    const c = this.klineCache.get(key);
+    if (c && Date.now() - c.ts < 10000) return c.data;
+    const data = await this.broker.klines(s.brokerSymbol, interval, limit);
+    if (this.klineCache.size > 50) this.klineCache.clear();
+    this.klineCache.set(key, { ts: Date.now(), data });
+    return data;
+  }
+
   // Ціна з реального ринку для маркетмейкера (null, якщо дані застарілі)
   mid(symbol) {
     const p = this.prices.get(symbol);
@@ -263,6 +276,7 @@ class Hedger {
         hedgedAtBroker: fmt(this.hedged.get(s.symbol)),
         reconciled: this.userNet.get(s.symbol) === this.hedged.get(s.symbol) + this.pending.get(s.symbol),
         filters: this.broker.filters.get(s.brokerSymbol) || null,
+        mirrorable: !this.broker.canTrade || this.broker.filters.has(s.brokerSymbol), // false — пари немає у брокера
       };
     }
     return {

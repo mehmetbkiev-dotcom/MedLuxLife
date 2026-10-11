@@ -18,11 +18,25 @@ function startMockBinance({ key = 'k', secret = 's' } = {}) {
     }
     if (u.pathname === '/api/v3/time') return json(res, 200, { serverTime: Date.now() });
     if (u.pathname === '/api/v3/exchangeInfo')
-      return json(res, 200, { symbols: JSON.parse(p.symbols).map((s) => ({ symbol: s, filters: [
+      return json(res, 200, { symbols: (p.symbols ? JSON.parse(p.symbols) : Object.keys(state.prices)).map((s) => ({ symbol: s, status: 'TRADING', filters: [
         { filterType: 'LOT_SIZE', minQty: s === 'BTCUSDT' ? '0.00001000' : '0.00010000', stepSize: s === 'BTCUSDT' ? '0.00001000' : '0.00010000' },
         { filterType: 'NOTIONAL', minNotional: '5.00000000' }] })) });
     if (u.pathname === '/api/v3/ticker/bookTicker')
-      return json(res, 200, JSON.parse(p.symbols).map((s) => ({ symbol: s, bidPrice: state.prices[s][0], askPrice: state.prices[s][1] })));
+      return json(res, 200, JSON.parse(p.symbols).map((s) => ({ symbol: s, bidPrice: (state.prices[s] || ['1.0000'])[0], askPrice: (state.prices[s] || [, '1.0001'])[1] })));
+    if (u.pathname === '/api/v3/klines') {
+      const ms = { '1m': 60e3, '5m': 300e3, '15m': 900e3, '1h': 3600e3, '4h': 14400e3, '1d': 86400e3 }[p.interval];
+      const n = Number(p.limit) || 300;
+      let px = Number((state.prices[p.symbol] || ['1'])[0]);
+      const now = Date.now() - (Date.now() % ms);
+      const out = [];
+      for (let i = 0; i < n; i++) {
+        const o = px;
+        const c = o * (1 + (Math.random() - 0.5) * 0.004);
+        out.unshift([now - i * ms, c.toFixed(2), (Math.max(o, c) * 1.001).toFixed(2), (Math.min(o, c) * 0.999).toFixed(2), o.toFixed(2), (Math.random() * 50).toFixed(5)]);
+        px = c;
+      }
+      return json(res, 200, out.map((r) => [r[0], r[4], r[2], r[3], r[1], r[5], r[0] + ms - 1]));
+    }
     if (u.pathname === '/api/v3/account') return json(res, 200, { balances: [{ asset: 'USDT', free: '10000.00', locked: '0.00' }] });
     if (u.pathname === '/api/v3/order' && req.method === 'GET') {
       const o = state.orders.find((x) => x.clientOrderId === p.origClientOrderId);

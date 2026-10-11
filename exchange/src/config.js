@@ -2,8 +2,9 @@
 const path = require('node:path');
 
 const env = process.env;
+const m = (base, tick, step, refPrice) => ({ symbol: `${base}USDT`, base, quote: 'USDT', tick, step, minNotional: '5', refPrice });
 
-module.exports = {
+const config = {
   port: Number(env.PORT) || 8080,
   host: env.HOST || '0.0.0.0',
   dbFile: env.DB_FILE || path.join(__dirname, '..', 'data', 'exchange.db'),
@@ -15,10 +16,29 @@ module.exports = {
   marketProtectionBps: BigInt(env.MARKET_PROTECTION_BPS || 500),
   maxOpenOrdersPerUser: 200,
 
-  assets: ['USDT', 'BTC', 'ETH'],
+  // 20 найпопулярніших монет до USDT. Крок ціни (tick) і кількості (step) — як на Binance.
+  // refPrice — лише стартова ціна без брокера; з брокером береться реальна.
   markets: [
-    { symbol: 'BTCUSDT', base: 'BTC', quote: 'USDT', tick: '0.01', step: '0.00001', minNotional: '5', refPrice: '60000' },
-    { symbol: 'ETHUSDT', base: 'ETH', quote: 'USDT', tick: '0.01', step: '0.0001', minNotional: '5', refPrice: '3000' },
+    m('BTC', '0.01', '0.00001', '85000'),
+    m('ETH', '0.01', '0.0001', '2500'),
+    m('BNB', '0.01', '0.001', '600'),
+    m('SOL', '0.01', '0.001', '150'),
+    m('XRP', '0.0001', '0.1', '2'),
+    m('DOGE', '0.00001', '1', '0.15'),
+    m('ADA', '0.0001', '0.1', '0.6'),
+    m('TRX', '0.0001', '0.1', '0.25'),
+    m('TON', '0.001', '0.01', '3'),
+    m('AVAX', '0.01', '0.01', '20'),
+    m('LINK', '0.01', '0.01', '15'),
+    m('DOT', '0.001', '0.01', '4'),
+    m('LTC', '0.01', '0.001', '80'),
+    m('BCH', '0.1', '0.001', '400'),
+    m('SHIB', '0.00000001', '1', '0.000012'),
+    m('NEAR', '0.001', '0.1', '2.5'),
+    m('UNI', '0.001', '0.01', '7'),
+    m('APT', '0.001', '0.01', '5'),
+    m('SUI', '0.0001', '0.1', '3'),
+    m('PEPE', '0.00000001', '1', '0.00001'),
   ],
 
   // Демо-баланс при реєстрації і "кран" для поповнення
@@ -48,3 +68,6 @@ module.exports = {
   adminToken: env.ADMIN_TOKEN || null,
   sessionTtlMs: 30 * 24 * 3600 * 1000,
 };
+config.assets = ['USDT', ...config.markets.map((x) => x.base)];
+
+module.exports = config;
