@@ -5,6 +5,7 @@ Site: https://medluxlife-6j8sz55bpn.live-website.com (IONOS WordPress, tema **Ex
 
 
 ## KALICI ÇALIŞMA KURALLARI (her oturum önce bunu okur)
+- İkonlarda ve görsellerde haç/artı (+) işareti kullanma (2026-10-11).
 - Hafif çalış: kullanıcı kotası için çok sayıda yardımcı ajan/workflow çalıştırma; işleri doğrudan yap (2026-10-11).
 - Konuşma dili Türkçe; WordPress menü/sayfa adları İngilizce. Adım adım ilerlenir.
 - Her değişiklikten önce yedek alınır (backups/wp/ veya oturum scratchpad'i), sonra kullanıcıya ekran görüntüsü + **✅ Onayla / ↩️ Geri al** sunulur.
@@ -254,3 +255,4 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - 2026-10-10: Banner icons in progress for Travel(25), 275–278, 283, About(24), Contact(26) and hubs Health(27), Clinical(258), Hospital(259) via workflows (scripts in content/workflows/, drafts in assets/banner_icons/wip/, preview tool tools/icon_preview.mjs). 4-variant photo prompt workflow also running (content/workflows/photo_prompts_4x.js, slots content/ai_photo_slots.json). If the container was reset: re-run those scripts.
 - 2026-10-11: 4-variant photo prompts done for 122 cards (content/ai_scenes_4x.json, ready prompts content/chatgpt_prompts_4x.md; 113 revised in round 1, round-2 check skipped because of a usage limit). Travel/About/Contact icon workflow hit the usage limit; resumed (first 5 pages' drafts exist).
 - 2026-10-11: User asked to work lighter (fewer helper agents) → stopped the icon workflow; rule added. Picked drafts: travel a (globe+plane), holiday b (palm+sun+waves), hotel a (bed), airport b (car+plane), hajj a (mosque); drew flight-tickets, contact, about-us myself (assets/banner_icons/gen_flight_contact_about.py). 11 final icons in assets/banner_icons/final/, preview _banners.png; not yet on site (awaiting approval).
+- 2026-10-11: User: no cross/plus in ANY icon. Fixed: Health (heart + leaf), Clinical (bag + sparkle), Hospital (building + heart), Emergency (siren beacon + pulse), Immunology & Paediatric Allergy (shield + check), Internal Medicine (stethoscope + small heart), Transfusion (two drops), Rheumatology x2 (removed ‡ marks), IV (drop on bag), Aesthetics (sparkles instead of +). Generator + SVGs updated, PNGs re-rendered; live icons not yet re-uploaded. Hotel icon disliked: options tower+stars / key / bell in assets/banner_icons/hotel/. Rule: no crosses in icons.
