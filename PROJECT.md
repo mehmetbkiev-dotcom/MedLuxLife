@@ -5,6 +5,7 @@ Site: https://medluxlife-6j8sz55bpn.live-website.com (IONOS WordPress, tema **Ex
 
 
 ## KALICI ÇALIŞMA KURALLARI (her oturum önce bunu okur)
+- Hafif çalış: kullanıcı kotası için çok sayıda yardımcı ajan/workflow çalıştırma; işleri doğrudan yap (2026-10-11).
 - Konuşma dili Türkçe; WordPress menü/sayfa adları İngilizce. Adım adım ilerlenir.
 - Her değişiklikten önce yedek alınır (backups/wp/ veya oturum scratchpad'i), sonra kullanıcıya ekran görüntüsü + **✅ Onayla / ↩️ Geri al** sunulur.
 - Partner hastanenin adı (Yeditepe) sitede asla geçmez → "our partner hospital". CelyxMed / partner klinik adı, markası, adresi geçmez.
@@ -252,3 +253,4 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - 2026-10-10: Title banner extended to Travel (25) + 5 Travel subpages (275–278, 283), About Us (24), Contact (26); all page ids in content/banner_page_ids.json. Gold title gradient also applied to Travel/Contact (their templates page-with-title-travel/-general were white before). Legal pages left unchanged. Backups: backups/wp/gs5_before_banner_travel_about_contact.json, gs5_before_gold_titles_other.json.
 - 2026-10-10: Banner icons in progress for Travel(25), 275–278, 283, About(24), Contact(26) and hubs Health(27), Clinical(258), Hospital(259) via workflows (scripts in content/workflows/, drafts in assets/banner_icons/wip/, preview tool tools/icon_preview.mjs). 4-variant photo prompt workflow also running (content/workflows/photo_prompts_4x.js, slots content/ai_photo_slots.json). If the container was reset: re-run those scripts.
 - 2026-10-11: 4-variant photo prompts done for 122 cards (content/ai_scenes_4x.json, ready prompts content/chatgpt_prompts_4x.md; 113 revised in round 1, round-2 check skipped because of a usage limit). Travel/About/Contact icon workflow hit the usage limit; resumed (first 5 pages' drafts exist).
+- 2026-10-11: User asked to work lighter (fewer helper agents) → stopped the icon workflow; rule added. Picked drafts: travel a (globe+plane), holiday b (palm+sun+waves), hotel a (bed), airport b (car+plane), hajj a (mosque); drew flight-tickets, contact, about-us myself (assets/banner_icons/gen_flight_contact_about.py). 11 final icons in assets/banner_icons/final/, preview _banners.png; not yet on site (awaiting approval).
