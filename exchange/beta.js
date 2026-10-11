@@ -33,6 +33,9 @@ PORT=8080
 # Пароль для сторінки /admin.html
 ADMIN_TOKEN=${crypto.randomBytes(18).toString('base64url')}
 
+# Тунель: за замовчуванням Cloudflare, запасний localhost.run. TUNNEL=localhostrun — одразу localhost.run
+TUNNEL=
+
 # Брокер ліквідності: реальні ціни Binance. З ключами — ще й дублювання угод
 # на демо-рахунок (ключі: https://testnet.binance.vision -> Log in with GitHub -> Generate HMAC_SHA256 Key)
 BROKER=binance
@@ -52,6 +55,7 @@ const env = {
   PORT: String(PORT),
   HOST: '127.0.0.1', // назовні — тільки через тунель
   TRUST_PROXY: '1',
+  NO_LOCAL_TRUST: '1', // через тунель усі запити приходять з 127.0.0.1 — адмінка лише з паролем
   COOKIE_SECURE: '1',
   DB_FILE: fileEnv.DB_FILE || path.join(ROOT, 'data', 'beta.db'),
 };
@@ -130,39 +134,65 @@ async function findCloudflared() {
   return local;
 }
 
-let tunnelFails = 0;
-function startTunnel(bin) {
-  const c = run(bin, ['tunnel', '--no-autoupdate', '--url', `http://127.0.0.1:${PORT}`], {
-    cwd: ROOT, stdio: ['ignore', 'pipe', 'pipe'],
+// Два безкоштовні тунелі: Cloudflare (основний) і localhost.run через вбудований ssh
+// (запасний — якщо Cloudflare недоступний з вашої мережі). Перемикаємось після 3 невдач.
+function providers(cloudflaredBin) {
+  const list = [];
+  if (cloudflaredBin) list.push({
+    name: 'Cloudflare', cmd: cloudflaredBin,
+    args: ['tunnel', '--no-autoupdate', '--url', `http://127.0.0.1:${PORT}`],
+    // Адреса тунелю — випадкові слова через дефіс; api.trycloudflare.com (зі збою) — не вона
+    re: /https:\/\/(?!api\.)[a-z0-9]+(?:-[a-z0-9]+)+\.trycloudflare\.com/,
   });
+  list.push({
+    name: 'localhost.run', cmd: 'ssh',
+    args: ['-T', '-o', 'StrictHostKeyChecking=accept-new', '-o', 'ServerAliveInterval=30', '-o', 'ExitOnForwardFailure=yes',
+      '-o', 'BatchMode=yes', '-R', `80:127.0.0.1:${PORT}`, 'nokey@localhost.run'],
+    re: /https:\/\/[a-z0-9]+\.lhr\.life/,
+  });
+  if (fileEnv.TUNNEL === 'localhostrun') list.reverse();
+  return list;
+}
+
+let tunnelFails = 0;
+function startTunnel(list, idx = 0) {
+  const p = list[idx % list.length];
+  console.log(`Відкриваю тунель ${p.name}...`);
+  const c = run(p.cmd, p.args, { cwd: ROOT, stdio: ['ignore', 'pipe', 'pipe'] });
   let shown = false;
   let lastErr = '';
   const onData = (d) => {
     const text = String(d);
-    for (const l of text.split('\n')) if (/\bERR\b|failed|error/i.test(l)) lastErr = l.trim();
-    // Адреса тунелю — випадкові слова через дефіс; api.trycloudflare.com (зі збою) — не вона
-    const m = text.match(/https:\/\/(?!api\.)[a-z0-9]+(?:-[a-z0-9]+)+\.trycloudflare\.com/);
+    for (const l of text.split('\n')) if (/\bERR\b|failed|error|denied|refused|timed out/i.test(l)) lastErr = l.trim();
+    const m = text.match(p.re);
     if (m && !shown) {
       shown = true;
+      tunnelFails = 0;
       fs.writeFileSync(path.join(ROOT, 'beta-url.txt'), m[0] + '\n');
       banner(m[0]);
     }
   };
   c.stdout.on('data', onData);
   c.stderr.on('data', onData);
+  c.on('error', (e) => { lastErr = e.message; });
   c.on('exit', (code) => {
     if (stopping) return;
+    let next = idx;
     if (!shown) {
       tunnelFails++;
-      console.error(`Не вдалося відкрити тунель: ${lastErr || `cloudflared завершився з кодом ${code}`}`);
-      if (tunnelFails >= 5) {
-        console.error('Тунель не відкривається. Перевірте інтернет / фаєрвол (потрібен доступ до *.trycloudflare.com і *.argotunnel.com).\n' +
+      console.error(`Тунель ${p.name} не відкрився: ${lastErr || `код ${code}`}`);
+      if (tunnelFails % 3 === 0 && list.length > 1) {
+        next = idx + 1;
+        console.error(`Пробую інший тунель: ${list[next % list.length].name}`);
+      }
+      if (tunnelFails >= 12) {
+        console.error('Жоден тунель не відкривається. Перевірте інтернет, VPN або фаєрвол.\n' +
           `Біржа далі працює локально: http://localhost:${PORT}`);
         return;
       }
-    } else tunnelFails = 0;
+    }
     console.error(`Тунель закрився — перезапуск через 5 с${shown ? ' (адреса зміниться!)' : ''}`);
-    setTimeout(() => startTunnel(bin), 5000);
+    setTimeout(() => startTunnel(list, next), 5000);
   });
 }
 
@@ -186,9 +216,13 @@ ${line}\n`);
   console.log('Запуск біржі...');
   startExchange();
   await waitHealthy();
-  const bin = await findCloudflared();
-  console.log('Відкриваю тунель Cloudflare...');
-  startTunnel(bin);
+  let bin = null;
+  try {
+    bin = await findCloudflared();
+  } catch (e) {
+    console.error(`Cloudflare Tunnel недоступний (${e.message}) — використаю localhost.run`);
+  }
+  startTunnel(providers(bin));
 })().catch((e) => {
   console.error('Помилка:', e.message);
   shutdown();

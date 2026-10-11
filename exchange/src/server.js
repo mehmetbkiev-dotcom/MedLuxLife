@@ -137,6 +137,7 @@ function createServer(options = {}) {
   // "Локальний" = справді з цього комп'ютера. Запити через тунель/проксі теж приходять
   // з 127.0.0.1, але несуть заголовки пересилання — їм привілеї localhost не даються.
   function isLocalReq(req) {
+    if (conf.noLocalTrust) return false;
     const h = req.headers;
     if (h['cf-connecting-ip'] || h['x-forwarded-for'] || h['x-real-ip'] || h['forwarded']) return false;
     return LOOPBACK.has(req.socket.remoteAddress);

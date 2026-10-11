@@ -41,6 +41,9 @@ module.exports = {
     hedgeIntervalMs: Number(env.HEDGE_INTERVAL_MS) || 1000,
   },
   trustProxy: env.TRUST_PROXY === '1',
+  // Ніколи не давати запитам з 127.0.0.1 привілеїв (адмінка без пароля, без лімітів).
+  // Вмикається в беті: тунелі на кшталт ssh -R не завжди додають заголовки пересилання.
+  noLocalTrust: env.NO_LOCAL_TRUST === '1',
   cookieSecure: env.COOKIE_SECURE === '1',
   adminToken: env.ADMIN_TOKEN || null,
   sessionTtlMs: 30 * 24 * 3600 * 1000,
