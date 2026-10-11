@@ -130,13 +130,18 @@ async function findCloudflared() {
   return local;
 }
 
+let tunnelFails = 0;
 function startTunnel(bin) {
   const c = run(bin, ['tunnel', '--no-autoupdate', '--url', `http://127.0.0.1:${PORT}`], {
     cwd: ROOT, stdio: ['ignore', 'pipe', 'pipe'],
   });
   let shown = false;
+  let lastErr = '';
   const onData = (d) => {
-    const m = String(d).match(/https:\/\/[a-z0-9-]+\.trycloudflare\.com/);
+    const text = String(d);
+    for (const l of text.split('\n')) if (/\bERR\b|failed|error/i.test(l)) lastErr = l.trim();
+    // Адреса тунелю — випадкові слова через дефіс; api.trycloudflare.com (зі збою) — не вона
+    const m = text.match(/https:\/\/(?!api\.)[a-z0-9]+(?:-[a-z0-9]+)+\.trycloudflare\.com/);
     if (m && !shown) {
       shown = true;
       fs.writeFileSync(path.join(ROOT, 'beta-url.txt'), m[0] + '\n');
@@ -147,7 +152,16 @@ function startTunnel(bin) {
   c.stderr.on('data', onData);
   c.on('exit', (code) => {
     if (stopping) return;
-    console.error(`Тунель закрився (код ${code}) — перезапуск через 5 с (адреса зміниться!)`);
+    if (!shown) {
+      tunnelFails++;
+      console.error(`Не вдалося відкрити тунель: ${lastErr || `cloudflared завершився з кодом ${code}`}`);
+      if (tunnelFails >= 5) {
+        console.error('Тунель не відкривається. Перевірте інтернет / фаєрвол (потрібен доступ до *.trycloudflare.com і *.argotunnel.com).\n' +
+          `Біржа далі працює локально: http://localhost:${PORT}`);
+        return;
+      }
+    } else tunnelFails = 0;
+    console.error(`Тунель закрився — перезапуск через 5 с${shown ? ' (адреса зміниться!)' : ''}`);
     setTimeout(() => startTunnel(bin), 5000);
   });
 }
