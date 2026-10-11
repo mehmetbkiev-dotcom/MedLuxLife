@@ -263,3 +263,4 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - 2026-10-11: User confirmed Clinical icon = option 2 (stethoscope heart), already live (Media 1166).
 - 2026-10-11: APPROVED by user: all banner icons (11 new + 9 cross-free replacements) and the slim midnight banner on Health/Travel/About/Contact.
 - 2026-10-11: User replaced all Dental (260) card photos with their own ChatGPT/Gemini images (Periodontology still the Unsplash one). I added the 12 missing alt texts. Backup of the user's version: backups/wp/page260_after_user_photos.json.
+- 2026-10-11: TMJ card photo zoomed in (crop of the user's Gemini image, Media 1139 → 1178). Backup: backups/wp/page260_before_tmj_crop.json.
