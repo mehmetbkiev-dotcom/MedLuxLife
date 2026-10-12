@@ -149,7 +149,7 @@ A smiling girl (about 5) while a female doctor listens to her chest with a steth
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### 🔴 Paediatric Endocrinology — Zayıf: gökyüzünde zıplayan çocuklar
+### ✅ Paediatric Endocrinology — YAPILDI 2026-10-12 (ChatGPT, Media 1544)
 
 ```
 Image for the hospital department page "Paediatric Endocrinology" of a premium medical-travel website.
@@ -157,7 +157,7 @@ A group of smiling children lie on their tummies on the floor with their heads c
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### 🔴 Paediatric Rheumatology — ALAKASIZ: yetişkin dizi
+### ✅ Paediatric Rheumatology — YAPILDI 2026-10-12 (ChatGPT, Media 1548)
 
 ```
 Image for the hospital department page "Paediatric Rheumatology" of a premium medical-travel website.
@@ -165,7 +165,7 @@ A boy (about 6) throws a ball to his father in a sunny park at golden hour.
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### 🔴 Child and Adolescent Psychiatry — ALAKASIZ: yetişkin hasta + tabelada yazı ve isim
+### ✅ Child and Adolescent Psychiatry — YAPILDI 2026-10-12 (ChatGPT, Media 1552)
 
 ```
 Image for the hospital department page "Child and Adolescent Psychiatry" of a premium medical-travel website.
@@ -509,7 +509,7 @@ A cheerful little girl hangs upside down from a play bar in a soft, colourful in
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Paediatric Neurology
+### ✅ Paediatric Neurology — YAPILDI 2026-10-12 (ChatGPT, Media 1550)
 
 ```
 Image for the hospital department page "Paediatric Neurology" of a premium medical-travel website.
@@ -517,7 +517,7 @@ A curious baby (about 1 year old) plays with a colourful wooden abacus on a soft
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Paediatric Gastroenterology, Hepatology and Nutrition
+### ✅ Paediatric Gastroenterology, Hepatology and Nutrition — YAPILDI 2026-10-12 (ChatGPT, Media 1546)
 
 ```
 Image for the hospital department page "Paediatric Gastroenterology, Hepatology and Nutrition" of a premium medical-travel website.
