@@ -271,3 +271,4 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - 2026-10-12: Clinical (258) Bariatric card: user's new photo had a before/after body graphic on the background screen → removed by inpainting, converted to JPG, alt added. Tool: tools/check_card.py (check/optimise one card photo).
 - 2026-10-12: Step 2 Mommy Makeover (263): new user photo OK (abdominal markings, no before/after) → JPG + alt.
 - 2026-10-12: Step 3 Rhinoplasty (263): new user photo OK (nose marking; wall poster shows anatomy side/front views, not before/after) → JPG + alt.
+- 2026-10-12: Step 4 Abdominoplasty (263): new user photo OK (pre-op markings) → JPG + alt.
