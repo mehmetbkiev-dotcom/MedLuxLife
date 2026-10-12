@@ -133,7 +133,7 @@ A group of happy children (ages 4 to 8) hold colourful balloons in a sunny green
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### 🔴 Paediatric Haematology — ALAKASIZ: okulda toplu muayene, üniformalarda semboller
+### ✅ Paediatric Haematology — YAPILDI 2026-10-12 (ChatGPT, Media 1528)
 
 ```
 Image for the hospital department page "Paediatric Haematology" of a premium medical-travel website.
@@ -141,7 +141,7 @@ A top-down view of several children's hands stacked together in the middle, on a
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### 🔴 Paediatric Nephrology — ALAKASIZ: sahilde bebeğini kaldıran anne
+### ✅ Paediatric Nephrology — YAPILDI 2026-10-12 (ChatGPT, Media 1533)
 
 ```
 Image for the hospital department page "Paediatric Nephrology" of a premium medical-travel website.
@@ -261,7 +261,7 @@ A smiling mother gently holds her sleeping newborn, wrapped in a soft white blan
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Neurosurgery
+### ✅ Neurosurgery — YAPILDI 2026-10-12 (ChatGPT, Media 1530)
 
 ```
 Image for the hospital department page "Neurosurgery" of a premium medical-travel website.
@@ -269,7 +269,7 @@ A neurosurgeon in a calm, modern operating room looks through a large surgical m
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Ophthalmology
+### ✅ Ophthalmology — YAPILDI 2026-10-12 (ChatGPT, Media 1535)
 
 ```
 Image for the hospital department page "Ophthalmology" of a premium medical-travel website.
@@ -333,7 +333,7 @@ Close-up of a hand placing a smooth pebble on top of a balanced stack of stones 
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Physical Therapy and Rehabilitation
+### ✅ Physical Therapy and Rehabilitation — YAPILDI 2026-10-12 (ChatGPT, Media 1526)
 
 ```
 Image for the hospital department page "Physical Therapy and Rehabilitation" of a premium medical-travel website.
