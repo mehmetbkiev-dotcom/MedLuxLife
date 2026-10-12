@@ -181,7 +181,7 @@ A doctor in a white coat, seen from behind, welcomes a smiling family (mother, f
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### 🔴 Intensive Care Unit — Tekrar: Anesthesiology ile aynı foto (parmakta nabız ölçer)
+### ✅ Intensive Care Unit — YAPILDI 2026-10-12 (ChatGPT, Media 1561)
 
 ```
 Image for the hospital department page "Intensive Care Unit" of a premium medical-travel website.
@@ -189,7 +189,7 @@ An ICU doctor in scrubs checks patient monitors beside a modern intensive-care b
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### 🔴 Anaesthesiology and Reanimation — Tekrar: Intensive Care ile aynı foto
+### ✅ Anaesthesiology and Reanimation — YAPILDI 2026-10-12 (ChatGPT, Media 1563)
 
 ```
 Image for the hospital department page "Anaesthesiology and Reanimation" of a premium medical-travel website.
@@ -201,7 +201,7 @@ Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic p
 
 ## 🟡 Küçük sorun
 
-### 🟡 Nuclear Medicine — Küçük sorun: tarayıcıda marka yazısı
+### ✅ Nuclear Medicine — YAPILDI 2026-10-12 (ChatGPT, Media 1565)
 
 ```
 Image for the hospital department page "Nuclear Medicine" of a premium medical-travel website.
@@ -209,7 +209,7 @@ A radiology technologist helps a calm patient lie down on the bed of a modern PE
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### 🟡 Immunology — Küçük sorun: aşı şişesinde yazı
+### ✅ Immunology — YAPILDI 2026-10-12 (ChatGPT, Media 1567)
 
 ```
 Image for the hospital department page "Immunology" of a premium medical-travel website.
@@ -217,7 +217,7 @@ A lab scientist pipettes a sample into test tubes in a rack in a bright laborato
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### 🟡 Imaging Unit — Küçük sorun: cihazda marka yazısı
+### ✅ Imaging Unit — YAPILDI 2026-10-12 (ChatGPT, Media 1569)
 
 ```
 Image for the hospital department page "Imaging Unit" of a premium medical-travel website.
@@ -225,7 +225,7 @@ A patient lies on a CT scanner table entering the gantry while a technologist ad
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### 🟡 Transfusion Centre — Küçük sorun: kan torbasında yazı
+### ✅ Transfusion Centre — YAPILDI 2026-10-12 (ChatGPT, Media 1571)
 
 ```
 Image for the hospital department page "Transfusion Centre" of a premium medical-travel website.
