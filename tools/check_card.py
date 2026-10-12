@@ -33,7 +33,7 @@ print('preview:', f'{OUT}/{pid}_{re.sub("[^a-z0-9]+", "-", card.lower())}.jpg')
 if fix is None: sys.exit()
 new_id, new_url = mid, src
 if md['mime_type'] != 'image/jpeg' or (d.get('filesize') or 0) > 400_000 or (d.get('width') or 0) > 1800:
-    im.thumbnail((1600, 1600), Image.LANCZOS); out = f'{OUT}/{mid}_opt.jpg'; im.save(out, quality=82, optimize=True, progressive=True)
+    im.thumbnail((1600, 1600), Image.LANCZOS); out = f'{OUT}/{mid}_opt.jpg'; im.save(out, quality=88, optimize=True, progressive=True)
     stem = re.sub(r'[^a-z0-9]+', '-', os.path.splitext(src.rsplit('/', 1)[1])[0].lower()).strip('-')[:60]
     up = json.loads(run('curl', '-sS', '-X', 'POST', W + '/wp/v2/media', '-H', f'Content-Disposition: attachment; filename={stem}-opt.jpg', '-H', 'Content-Type: image/jpeg', '--data-binary', '@' + out))
     new_id, new_url = up['id'], up['source_url']
