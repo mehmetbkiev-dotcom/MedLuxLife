@@ -280,3 +280,4 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - 2026-10-12: BBL (263): user explained it's a fat-transfer process graphic (donor → transfer → area), not a same-body before/after; kept by user decision (compress + alt in final pass).
 - 2026-10-12: Step 9 Thigh Lift (263): new photo 1385 OK (legs on a beach lounger, no before/after). Stale save 13:31 reverted fixes again → kept in pending list for the final pass.
 - 2026-10-12: Step 10 Liposuction (263): user says OK — checked: screen shows treatment areas (Abdomen/Waist/Back/Thighs/Arms/Hips) with markings, no before/after. Kept; compress in final pass.
+- 2026-10-12: Breast Reduction (263) changed again by user → 1388 (woman in sports top) OK. Breast Lift (1269) still flagged: 3D simulation with nude breasts + lifted result side by side.
