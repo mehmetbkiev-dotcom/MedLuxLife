@@ -46,6 +46,12 @@
    "alt": "Legs relaxing on a beach lounger",
    "why": "OK; compress"
   },
-  "_note": "Stale editor at 13:31 reverted 13:21 fixes again; re-apply all in final pass."
+  "_note": "Stale editor at 13:31 reverted 13:21 fixes again; re-apply all in final pass.",
+  "Liposuction": {
+   "from": 1267,
+   "to": null,
+   "alt": "Doctor marking treatment areas before liposuction",
+   "why": "OK (treatment-area chart, no comparison); compress"
+  }
  }
 }
