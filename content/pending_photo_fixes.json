@@ -1,11 +1,51 @@
 {
  "note": "Apply in ONE pass after the user finishes the step-by-step photo replacement (to avoid stale-editor overwrites). Prepared replacements already uploaded.",
  "263": {
-  "Mommy Makeover": {"from": 1354, "to": 1356, "alt": "Abdomen marked before a mommy makeover consultation"},
-  "Rhinoplasty": {"from": 1358, "to": 1361, "alt": "Surgeon marking the nose during a rhinoplasty consultation"},
-  "Abdominoplasty (Tummy Tuck)": {"from": 1360, "to": 1365, "alt": "Surgeon marking the abdomen before a tummy tuck"},
-  "Breast Augmentation": {"from": 1367, "to": 1369, "alt": "Surgeon showing breast implant options during a consultation", "why": "nude pictures in brochure removed"},
-  "Breast Reduction": {"from": 1375, "to": 1378, "alt": "Surgeon explaining a breast reduction plan on a screen", "why": "fake clinic logo + German licence certificates removed"},
-  "Gynecomastia Surgery": {"from": 1380, "to": null, "alt": "Surgeon marking the chest before gynecomastia surgery", "why": "OK, only compress"}
+  "Mommy Makeover": {
+   "from": 1354,
+   "to": 1356,
+   "alt": "Abdomen marked before a mommy makeover consultation"
+  },
+  "Rhinoplasty": {
+   "from": 1358,
+   "to": 1361,
+   "alt": "Surgeon marking the nose during a rhinoplasty consultation"
+  },
+  "Abdominoplasty (Tummy Tuck)": {
+   "from": 1360,
+   "to": 1365,
+   "alt": "Surgeon marking the abdomen before a tummy tuck"
+  },
+  "Breast Augmentation": {
+   "from": 1367,
+   "to": 1369,
+   "alt": "Surgeon showing breast implant options during a consultation",
+   "why": "nude pictures in brochure removed"
+  },
+  "Breast Reduction": {
+   "from": 1375,
+   "to": 1378,
+   "alt": "Surgeon explaining a breast reduction plan on a screen",
+   "why": "fake clinic logo + German licence certificates removed"
+  },
+  "Gynecomastia Surgery": {
+   "from": 1380,
+   "to": null,
+   "alt": "Surgeon marking the chest before gynecomastia surgery",
+   "why": "OK, only compress"
+  },
+  "Brazilian Butt Lift (BBL)": {
+   "from": 1254,
+   "to": null,
+   "alt": "Illustration of fat transfer areas for a Brazilian butt lift",
+   "why": "kept by user; compress"
+  },
+  "Thigh Lift": {
+   "from": 1385,
+   "to": null,
+   "alt": "Legs relaxing on a beach lounger",
+   "why": "OK; compress"
+  },
+  "_note": "Stale editor at 13:31 reverted 13:21 fixes again; re-apply all in final pass."
  }
 }
