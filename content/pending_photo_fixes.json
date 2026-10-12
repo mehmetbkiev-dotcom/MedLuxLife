@@ -52,6 +52,12 @@
    "to": null,
    "alt": "Doctor marking treatment areas before liposuction",
    "why": "OK (treatment-area chart, no comparison); compress"
+  },
+  "Breast Lift (Mastopexy)": {
+   "from": 1390,
+   "to": null,
+   "alt": "Surgeon explaining a breast lift plan with a 3D model",
+   "why": "user-edited: no nudity now; 3D model shown in two views (plan arrows + side view) - acceptable, low residual risk; compress"
   }
  }
 }
