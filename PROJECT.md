@@ -287,3 +287,4 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 ### 2026-10-12 – Hair Transplantation foto (Adım 12)
 - Kullanıcının gönderdiği foto JPG q88'e çevrildi (187 KB), Media 1392 `hair-transplantation-patient.jpg`, alt: "Smiling man with full, natural hair in a bright clinic".
 - Sayfa 261 giriş fotoğrafı (1210 → 1392) ve sayfa 258 Hair Transplantation kartı (1212 → 1392) değiştirildi. Yedek: backups/wp/card_checks/page261_before_hair_1210.html, page258_before_hair_1212.html.
+- 2026-10-12: Header menüsü (navigation 4): Health → Clinical Treatments alt menüsünün en altına "View All" (→ sayfa 258) eklendi; Hospital & Specialist'te zaten vardı. Yedek: backups/wp/nav4_before_clinical_viewall.json.
