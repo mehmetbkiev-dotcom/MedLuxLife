@@ -53,7 +53,7 @@ A doctor's hands hold a softly glowing, translucent 3D model of two kidneys in f
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### 🔴 Liver Transplant Clinic — Zayıf: monitörde ameliyat görüntüsü
+### ✅ Liver Transplant Clinic — YAPILDI 2026-10-12 (ChatGPT, Media 1504)
 
 ```
 Image for the hospital department page "Liver Transplant Clinic" of a premium medical-travel website.
@@ -61,7 +61,7 @@ Open hands hold a softly glowing, translucent golden 3D model of a liver; a doct
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### 🔴 Parathyroid Transplant Clinic — Zayıf: sadece stetoskoplu göğüs
+### ✅ Parathyroid Transplant Clinic — YAPILDI 2026-10-12 (ChatGPT, Media 1506)
 
 ```
 Image for the hospital department page "Parathyroid Transplant Clinic" of a premium medical-travel website.
@@ -245,7 +245,7 @@ A woman in her 40s wearing a soft knitted headscarf smiles gently while smelling
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Orthopedics and Traumatology
+### ✅ Orthopedics and Traumatology — YAPILDI 2026-10-12 (ChatGPT, Media 1508)
 
 ```
 Image for the hospital department page "Orthopedics and Traumatology" of a premium medical-travel website.
@@ -301,7 +301,7 @@ A cardiac surgery team works in a modern hybrid operating room, focused and calm
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Neurology
+### ✅ Neurology — YAPILDI 2026-10-12 (ChatGPT, Media 1511)
 
 ```
 Image for the hospital department page "Neurology" of a premium medical-travel website.
@@ -549,7 +549,7 @@ A newborn baby wearing a little knitted cap yawns in a modern incubator, soft pi
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Radiology
+### ✅ Radiology — YAPILDI 2026-10-12 (ChatGPT, Media 1513)
 
 ```
 Image for the hospital department page "Radiology" of a premium medical-travel website.
