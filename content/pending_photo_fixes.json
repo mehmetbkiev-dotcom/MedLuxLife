@@ -59,5 +59,13 @@
    "alt": "Surgeon explaining a breast lift plan with a 3D model",
    "why": "user-edited: no nudity now; 3D model shown in two views (plan arrows + side view) - acceptable, low residual risk; compress"
   }
+ },
+ "261": {
+  "Beard and Moustache Transplant": {
+   "from": 1396,
+   "to": null,
+   "alt": "Close-up of a full, well-groomed beard and moustache",
+   "why": "user upload 2026-10-12 (PNG 2.2 MB): compress"
+  }
  }
 }
