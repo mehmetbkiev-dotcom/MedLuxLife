@@ -283,3 +283,7 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - 2026-10-12: Breast Reduction (263) changed again by user → 1388 (woman in sports top) OK. Breast Lift (1269) still flagged: 3D simulation with nude breasts + lifted result side by side.
 - 2026-10-12: Step 11 Breast Lift (263): user edited the photo (1390) — 3D model now in a bra, two views (front with plan arrows, side view). Acceptable; residual low risk mentioned. Compress in final pass.
 - 2026-10-12: User asked not to lose quality → photo conversion raised to JPG quality 88, max 1600 px (≈200 KB, visually identical at 100%). Comparison: backups/wp/health_photo_opt/quality_compare.png.
+
+### 2026-10-12 – Hair Transplantation foto (Adım 12)
+- Kullanıcının gönderdiği foto JPG q88'e çevrildi (187 KB), Media 1392 `hair-transplantation-patient.jpg`, alt: "Smiling man with full, natural hair in a bright clinic".
+- Sayfa 261 giriş fotoğrafı (1210 → 1392) ve sayfa 258 Hair Transplantation kartı (1212 → 1392) değiştirildi. Yedek: backups/wp/card_checks/page261_before_hair_1210.html, page258_before_hair_1212.html.
