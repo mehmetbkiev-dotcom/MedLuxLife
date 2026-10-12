@@ -1,0 +1,242 @@
+{
+ "1298": {
+  "new": 1300,
+  "kb": 157,
+  "old_kb": 1740,
+  "alt": "Health check-up overview on a clipboard",
+  "idx": 0,
+  "card": "Intro"
+ },
+ "1288": {
+  "new": 1301,
+  "kb": 150,
+  "old_kb": 1869,
+  "alt": "Surgeon explaining a stomach model to a patient",
+  "idx": 2,
+  "card": "Gastric Bypass"
+ },
+ "1276": {
+  "new": 1302,
+  "kb": 140,
+  "old_kb": 2000,
+  "alt": "Botox treatment on the forehead in a clinic",
+  "idx": 4,
+  "card": "Botox (Botulinum Toxin)"
+ },
+ "1283": {
+  "new": 1303,
+  "kb": 104,
+  "old_kb": 2203,
+  "alt": "Dermal filler treatment of the lips",
+  "idx": 5,
+  "card": "Dermal Fillers"
+ },
+ "1280": {
+  "new": 1304,
+  "kb": 146,
+  "old_kb": 2382,
+  "alt": "Skin mesotherapy treatment on the face",
+  "idx": 6,
+  "card": "Skin Mesotherapy"
+ },
+ "1236": {
+  "new": 1305,
+  "kb": 213,
+  "old_kb": 477,
+  "alt": "Plastic surgeon consulting a couple",
+  "idx": 8,
+  "card": "Intro"
+ },
+ "1252": {
+  "new": 1306,
+  "kb": 105,
+  "old_kb": 2169,
+  "alt": "Upper arm marked before an arm lift",
+  "idx": 15,
+  "card": "Brachioplasty (Arm Lift)"
+ },
+ "1257": {
+  "new": 1307,
+  "kb": 180,
+  "old_kb": 2249,
+  "alt": "Eyelid marked for blepharoplasty",
+  "idx": 18,
+  "card": "Blepharoplasty (Eyelid Surgery)"
+ },
+ "1264": {
+  "new": 1308,
+  "kb": 147,
+  "old_kb": 2079,
+  "alt": "Cheek contour marked for buccal fat removal",
+  "idx": 20,
+  "card": "Buccal Fat Removal"
+ },
+ "1274": {
+  "new": 1309,
+  "kb": 168,
+  "old_kb": 2107,
+  "alt": "Neck and jawline marked for a neck lift",
+  "idx": 24,
+  "card": "Neck Lift"
+ },
+ "1201": {
+  "new": 1310,
+  "kb": 178,
+  "old_kb": 2099,
+  "alt": "Digital scalp analysis in a hair clinic",
+  "idx": 26,
+  "card": "Hair and Scalp Analysis"
+ },
+ "1204": {
+  "new": 1311,
+  "kb": 194,
+  "old_kb": 2130,
+  "alt": "FUE hair transplant procedure in a clinic",
+  "idx": 27,
+  "card": "FUE (Follicular Unit Extraction)"
+ },
+ "1225": {
+  "new": 1312,
+  "kb": 183,
+  "old_kb": 2249,
+  "alt": "DHI hair implantation at the hairline",
+  "idx": 30,
+  "card": "DHI (Direct Hair Implantation)"
+ },
+ "1227": {
+  "new": 1313,
+  "kb": 198,
+  "old_kb": 2357,
+  "alt": "Hair transplant procedure in a sterile setting",
+  "idx": 31,
+  "card": "FUT (Follicular Unit Transplantation)"
+ },
+ "1230": {
+  "new": 1314,
+  "kb": 174,
+  "old_kb": 2099,
+  "alt": "Scalp mesotherapy treatment",
+  "idx": 32,
+  "card": "Hair Mesotherapy"
+ },
+ "1232": {
+  "new": 1315,
+  "kb": 135,
+  "old_kb": 1860,
+  "alt": "Blood plasma tubes prepared for PRP treatment",
+  "idx": 33,
+  "card": "PRP (Platelet-Rich Plasma)"
+ },
+ "1117": {
+  "new": 1316,
+  "kb": 182,
+  "old_kb": 2308,
+  "alt": "Smiling woman with a bright, natural smile",
+  "idx": 34,
+  "card": "Hollywood Smile"
+ },
+ "1108": {
+  "new": 1317,
+  "kb": 178,
+  "old_kb": 2049,
+  "alt": "Dentist explaining a dental implant model to a patient",
+  "idx": 35,
+  "card": "Dental Implants"
+ },
+ "1130": {
+  "new": 1318,
+  "kb": 192,
+  "old_kb": 1966,
+  "alt": "Full-arch implant bridge model on a clinic counter",
+  "idx": 36,
+  "card": "All-on-4 and All-on-6"
+ },
+ "1123": {
+  "new": 1319,
+  "kb": 165,
+  "old_kb": 1973,
+  "alt": "Ceramic dental crowns and bridge on dark stone",
+  "idx": 37,
+  "card": "Prosthetic Dental Treatments"
+ },
+ "1128": {
+  "new": 1320,
+  "kb": 186,
+  "old_kb": 1994,
+  "alt": "Implant-supported full-arch prosthesis models",
+  "idx": 38,
+  "card": "Implant-Supported Prostheses"
+ },
+ "1120": {
+  "new": 1321,
+  "kb": 130,
+  "old_kb": 1855,
+  "alt": "Professional teeth whitening with a blue light",
+  "idx": 39,
+  "card": "Teeth Whitening"
+ },
+ "1125": {
+  "new": 1322,
+  "kb": 176,
+  "old_kb": 2036,
+  "alt": "Row of zirconium veneers on dark marble",
+  "idx": 40,
+  "card": "Zirconium Veneers"
+ },
+ "1134": {
+  "new": 1323,
+  "kb": 127,
+  "old_kb": 2382,
+  "alt": "Dentist treating a patient in the dental chair",
+  "idx": 41,
+  "card": "Restorative Dental Treatments"
+ },
+ "1135": {
+  "new": 1324,
+  "kb": 151,
+  "old_kb": 1873,
+  "alt": "Dentist explaining a root canal treatment on a tooth model",
+  "idx": 42,
+  "card": "Root Canal Treatment"
+ },
+ "1142": {
+  "new": 1325,
+  "kb": 142,
+  "old_kb": 2037,
+  "alt": "Smile with dental braces",
+  "idx": 45,
+  "card": "Orthodontics"
+ },
+ "1215": {
+  "new": 1326,
+  "kb": 123,
+  "old_kb": 1881,
+  "alt": "",
+  "idx": 47,
+  "card": "Plastic Surgery"
+ },
+ "1180": {
+  "new": 1327,
+  "kb": 188,
+  "old_kb": 1971,
+  "alt": "Doctor welcoming an international patient couple",
+  "idx": 50,
+  "card": "Intro"
+ },
+ "1186": {
+  "new": 1328,
+  "kb": 257,
+  "old_kb": 2488,
+  "alt": "Modern private clinic treatment room",
+  "idx": 51,
+  "card": "Intro"
+ },
+ "1188": {
+  "new": 1329,
+  "kb": 196,
+  "old_kb": 2047,
+  "alt": "Friendly medical team in a modern operating room",
+  "idx": 52,
+  "card": "Intro"
+ }
+}

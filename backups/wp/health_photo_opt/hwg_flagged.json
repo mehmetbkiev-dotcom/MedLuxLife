@@ -1,0 +1,128 @@
+[
+ {
+  "n": 1,
+  "page": 265,
+  "slug": "bariatric-surgery",
+  "card": "Intro",
+  "mid": 1287
+ },
+ {
+  "n": 2,
+  "page": 263,
+  "slug": "plastic-surgery",
+  "card": "Mommy Makeover",
+  "mid": 1238
+ },
+ {
+  "n": 3,
+  "page": 263,
+  "slug": "plastic-surgery",
+  "card": "Rhinoplasty",
+  "mid": 1240
+ },
+ {
+  "n": 4,
+  "page": 263,
+  "slug": "plastic-surgery",
+  "card": "Abdominoplasty (Tummy Tuck)",
+  "mid": 1242
+ },
+ {
+  "n": 5,
+  "page": 263,
+  "slug": "plastic-surgery",
+  "card": "Breast Augmentation",
+  "mid": 1245
+ },
+ {
+  "n": 6,
+  "page": 263,
+  "slug": "plastic-surgery",
+  "card": "Breast Reduction",
+  "mid": 1249
+ },
+ {
+  "n": 7,
+  "page": 263,
+  "slug": "plastic-surgery",
+  "card": "Gynecomastia Surgery",
+  "mid": 1250
+ },
+ {
+  "n": 8,
+  "page": 263,
+  "slug": "plastic-surgery",
+  "card": "Brazilian Butt Lift (BBL)",
+  "mid": 1254
+ },
+ {
+  "n": 9,
+  "page": 263,
+  "slug": "plastic-surgery",
+  "card": "Thigh Lift",
+  "mid": 1256
+ },
+ {
+  "n": 10,
+  "page": 263,
+  "slug": "plastic-surgery",
+  "card": "Liposuction",
+  "mid": 1267
+ },
+ {
+  "n": 11,
+  "page": 263,
+  "slug": "plastic-surgery",
+  "card": "Breast Lift (Mastopexy)",
+  "mid": 1269
+ },
+ {
+  "n": 12,
+  "page": 261,
+  "slug": "hair-transplantation",
+  "card": "Intro",
+  "mid": 1210
+ },
+ {
+  "n": 13,
+  "page": 261,
+  "slug": "hair-transplantation",
+  "card": "Beard and Moustache Transplant",
+  "mid": 1222
+ },
+ {
+  "n": 14,
+  "page": 261,
+  "slug": "hair-transplantation",
+  "card": "Eyebrow Transplant",
+  "mid": 1223
+ },
+ {
+  "n": 15,
+  "page": 260,
+  "slug": "dental-and-oral-health",
+  "card": "Masseter Botox (Jaw Botox)",
+  "mid": 1136
+ },
+ {
+  "n": 16,
+  "page": 258,
+  "slug": "clinical-treatments",
+  "card": "Hair Transplantation",
+  "mid": 1212
+ },
+ {
+  "n": 17,
+  "page": 258,
+  "slug": "clinical-treatments",
+  "card": "Medical Aesthetics",
+  "mid": 1217
+ },
+ {
+  "n": 18,
+  "page": 258,
+  "slug": "clinical-treatments",
+  "card": "Bariatric Surgery",
+  "mid": 1191
+ }
+]
