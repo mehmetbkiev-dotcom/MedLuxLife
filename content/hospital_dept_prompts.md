@@ -117,7 +117,7 @@ A gastroenterologist shows a model of the digestive system to a patient and expl
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### 🔴 Nephrology — ALAKASIZ: kalp ekografisi ekranı
+### ✅ Nephrology — YAPILDI 2026-10-12 (Media 1517)
 
 ```
 Image for the hospital department page "Nephrology" of a premium medical-travel website.
@@ -125,7 +125,7 @@ Hands hold a red kidney-shaped model together with a stethoscope on a soft linen
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### 🔴 Paediatric Oncology — Zayıf: sahilde siluetler
+### ✅ Paediatric Oncology — YAPILDI 2026-10-12 (Media 1519)
 
 ```
 Image for the hospital department page "Paediatric Oncology" of a premium medical-travel website.
