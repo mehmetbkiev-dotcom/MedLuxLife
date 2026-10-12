@@ -13,7 +13,7 @@ Sahneler hastanenin kendi birim sayfalarındaki fotoğraflardan esinlenildi; bir
 
 ## 🔴 Öncelikli
 
-### 🔴 Cardiology — ALAKASIZ: diş hekimi / diş röntgeni sahnesi
+### ✅ Cardiology — YAPILDI 2026-10-12 (ChatGPT, Media 1486)
 
 ```
 Image for the hospital department page "Cardiology" of a premium medical-travel website.
@@ -21,7 +21,7 @@ A friendly female cardiologist measures the blood pressure of a senior man with 
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### 🔴 Organ Transplantation Center — Zayıf: alttan çekilmiş kafa lambalı cerrah
+### ✅ Organ Transplantation Center — YAPILDI 2026-10-12 (ChatGPT, Media 1489)
 
 ```
 Image for the hospital department page "Organ Transplantation Center" of a premium medical-travel website.
@@ -29,7 +29,7 @@ A transplant team (surgeon, nurse and patient coordinator) stands together in a 
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### 🔴 Adult Bone Marrow Transplantation — Zayıf: mikroskop başında laborant, cihazda marka yazısı
+### ✅ Adult Bone Marrow Transplantation — YAPILDI 2026-10-12 (ChatGPT, Media 1492)
 
 ```
 Image for the hospital department page "Adult Bone Marrow Transplantation" of a premium medical-travel website.
@@ -37,7 +37,7 @@ A doctor in a white coat stands at the bedside of a calm senior man resting in a
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### 🔴 Interventional Radiology — ALAKASIZ: infüzyon pompası
+### ✅ Interventional Radiology — YAPILDI 2026-10-12 (ChatGPT, Media 1494)
 
 ```
 Image for the hospital department page "Interventional Radiology" of a premium medical-travel website.
@@ -45,7 +45,7 @@ An interventional radiologist sits at a control-room workstation with several mo
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### 🔴 Kidney Transplant Clinic — ALAKASIZ: eski, bakımsız hastane koğuşu
+### ✅ Kidney Transplant Clinic — YAPILDI 2026-10-12 (ChatGPT, Media 1496)
 
 ```
 Image for the hospital department page "Kidney Transplant Clinic" of a premium medical-travel website.
