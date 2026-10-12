@@ -273,3 +273,4 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - 2026-10-12: Step 3 Rhinoplasty (263): new user photo OK (nose marking; wall poster shows anatomy side/front views, not before/after) → JPG + alt.
 - 2026-10-12: Step 4 Abdominoplasty (263): new user photo OK (pre-op markings) → JPG + alt.
 - 2026-10-12: Step 5 Breast Augmentation (263): user photo had nude breast pictures in the brochure on the table → removed (skin-mask inpaint), JPG + alt.
+- 2026-10-12: User's editor save at 10:17 (stale editor) overwrote steps 2–5 fixes on 263 → re-applied (Media 1356/1361/1365/1369). Breast Reduction: user's new photo 1371 had nude breast illustrations on the monitor (before/after-like) + brochure; cleaning attempt failed → card reverted to approved Unsplash photo (Media 862). Lesson: tell user to reload the editor before saving.
