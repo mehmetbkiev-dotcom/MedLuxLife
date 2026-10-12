@@ -272,3 +272,4 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - 2026-10-12: Step 2 Mommy Makeover (263): new user photo OK (abdominal markings, no before/after) → JPG + alt.
 - 2026-10-12: Step 3 Rhinoplasty (263): new user photo OK (nose marking; wall poster shows anatomy side/front views, not before/after) → JPG + alt.
 - 2026-10-12: Step 4 Abdominoplasty (263): new user photo OK (pre-op markings) → JPG + alt.
+- 2026-10-12: Step 5 Breast Augmentation (263): user photo had nude breast pictures in the brochure on the table → removed (skin-mask inpaint), JPG + alt.
