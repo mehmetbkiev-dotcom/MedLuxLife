@@ -10,7 +10,7 @@ const { Auth } = require('./auth');
 const { startBots } = require('./bots');
 const { BinanceBroker } = require('./broker/binance');
 const { Hedger } = require('./broker/hedger');
-const { fmt } = require('./decimal');
+const { fmt, toUnits } = require('./decimal');
 
 const PUBLIC_DIR = path.join(__dirname, '..', 'public');
 const INTERVALS = { '1m': 60e3, '5m': 300e3, '15m': 900e3, '1h': 3600e3, '4h': 14400e3, '1d': 86400e3 };
@@ -30,7 +30,25 @@ function createServer(options = {}) {
     hedger = new Hedger(db, engine, new BinanceBroker(conf.broker), conf.broker);
     hedger.start().catch((e) => console.error('Брокер:', e.message));
   } else if (conf.broker.name) throw new Error(`Невідомий брокер: ${conf.broker.name}`);
-  const stopBots = conf.bots ? startBots(engine, auth, hedger) : () => {};
+  let stopBots = () => {};
+  let closed = false;
+  if (conf.bots) {
+    if (!hedger) stopBots = startBots(engine, auth, null);
+    else {
+      // Чекаємо реальні ціни брокера (до 8 с), щоб біржа не стартувала з умовної ціни
+      Promise.race([hedger.firstPrices, new Promise((r) => setTimeout(r, 8000))]).then(() => {
+        if (closed) return;
+        // Пари без жодної угоди (нова біржа або щойно додана монета) стартують з реальної ціни
+        for (const m of engine.markets.values()) {
+          if (engine.traded.has(m.symbol)) continue;
+          const mid = hedger.mid(m.symbol);
+          const u = mid ? toUnits(mid.toFixed(8)) : null;
+          if (u && u >= m.tick) engine.last.set(m.symbol, u - (u % m.tick));
+        }
+        stopBots = startBots(engine, auth, hedger);
+      });
+    }
+  }
 
   // ---------- rate limiting (token bucket) ----------
   const buckets = new Map();
@@ -102,7 +120,7 @@ function createServer(options = {}) {
     for (const uid of dirtyUsers) {
       const set = byUser.get(uid);
       if (set && set.size) {
-        const msg = frame('account', { balances: engine.balances(uid), pnl: engine.pnl(uid) });
+        const msg = frame('account', accountData(uid));
         for (const c of set) c.res.write(msg);
       }
     }
@@ -111,10 +129,10 @@ function createServer(options = {}) {
 
   const tickers = setInterval(() => {
     if (!clients.size) return;
-    broadcast(null, 'tickers', [...engine.markets.keys()].map((s) => engine.ticker(s)));
+    broadcast(null, 'tickers', allTickers());
     // PnL залежить від ринкової ціни, тож оновлюємо його всім залогіненим раз на 2 с
     for (const [uid, set] of byUser) {
-      const msg = frame('account', { balances: engine.balances(uid), pnl: engine.pnl(uid) });
+      const msg = frame('account', accountData(uid));
       for (const c of set) c.res.write(msg);
     }
   }, 2000);
@@ -122,6 +140,32 @@ function createServer(options = {}) {
   const heartbeat = setInterval(() => {
     for (const c of clients) c.res.write(': ping\n\n');
   }, 15000);
+
+  // Тікери 20 пар рахуються по свічках за 24 год — кешуємо на 1 с, а не на кожен запит
+  let tickCache = null;
+  function allTickers() {
+    if (!tickCache || Date.now() - tickCache.ts > 1000)
+      tickCache = { ts: Date.now(), data: [...engine.markets.keys()].map((s) => engine.ticker(s)) };
+    return tickCache.data;
+  }
+
+  // Рахунок + позиції (PnL рахується від ціни маркування)
+  const accountData = (uid) => ({ account: engine.account(uid), positions: engine.positions(uid) });
+
+  // Ціна маркування від брокера і перевірка ліквідацій — раз на секунду
+  const liqTimer = setInterval(() => {
+    if (hedger)
+      for (const m of engine.markets.values()) {
+        const mid = hedger.mid(m.symbol);
+        if (mid) engine.setMark(m.symbol, toUnits(mid.toFixed(8)));
+      }
+    try {
+      const n = engine.checkLiquidations();
+      if (n) console.log(`Ліквідовано позицій: ${n}`);
+    } catch (e) {
+      console.error('liquidation error', e);
+    }
+  }, 1000);
 
   // ---------- helpers ----------
   function clientIp(req) {
@@ -134,9 +178,19 @@ function createServer(options = {}) {
     return req.socket.remoteAddress || '';
   }
   const LOOPBACK = new Set(['127.0.0.1', '::1', '::ffff:127.0.0.1']);
+  // Справжня IP клієнта або null, якщо запит прийшов через локальний тунель, що її не
+  // передає (напр. ssh -R): тоді всі відвідувачі мають одну адресу 127.0.0.1, і
+  // обмежувати "по IP" не можна — інакше перші кілька людей заблокують решту.
+  function realClientIp(req) {
+    const h = req.headers;
+    if (conf.trustProxy && (h['cf-connecting-ip'] || h['x-forwarded-for'])) return clientIp(req);
+    const a = req.socket.remoteAddress;
+    return a && !LOOPBACK.has(a) ? a : null;
+  }
   // "Локальний" = справді з цього комп'ютера. Запити через тунель/проксі теж приходять
   // з 127.0.0.1, але несуть заголовки пересилання — їм привілеї localhost не даються.
   function isLocalReq(req) {
+    if (conf.noLocalTrust) return false;
     const h = req.headers;
     if (h['cf-connecting-ip'] || h['x-forwarded-for'] || h['x-real-ip'] || h['forwarded']) return false;
     return LOOPBACK.has(req.socket.remoteAddress);
@@ -218,23 +272,42 @@ function createServer(options = {}) {
   const routes = {
     'GET /api/markets': () =>
       [...engine.markets.values()].map((m) => ({
-        symbol: m.symbol, base: m.base, quote: m.quote, tick: fmt(m.tick), step: fmt(m.step), minNotional: fmt(m.minNotional),
+        symbol: m.symbol, base: m.base, quote: m.quote, tick: fmt(m.tick), step: fmt(m.step), minNotional: fmt(m.minNotional), maxLeverage: m.maxLeverage,
       })),
     'GET /api/config': () => ({
       makerFeePct: Number(conf.makerFeeBps) / 100, takerFeePct: Number(conf.takerFeeBps) / 100,
       faucet: conf.faucet, signupBonus: conf.signupBonus,
     }),
-    'GET /api/ticker': () => [...engine.markets.keys()].map((s) => engine.ticker(s)),
+    'GET /api/ticker': () => allTickers(),
     'GET /api/depth': (ctx) => engine.depth(symbolParam(ctx.q.get('symbol')), clampInt(ctx.q.get('limit'), 1, 200, 20)),
     'GET /api/trades': (ctx) => engine.recentTrades(symbolParam(ctx.q.get('symbol')), clampInt(ctx.q.get('limit'), 1, 500, 50)),
-    'GET /api/klines': (ctx) => {
-      const iv = INTERVALS[ctx.q.get('interval') || '1m'];
+    'GET /api/klines': async (ctx) => {
+      const name = ctx.q.get('interval') || '1m';
+      const iv = INTERVALS[name];
       if (!iv) throw new ApiError(400, 'BAD_INTERVAL', 'interval: ' + Object.keys(INTERVALS).join(', '));
-      return engine.klines(symbolParam(ctx.q.get('symbol')), iv, clampInt(ctx.q.get('limit'), 1, 1000, 300));
+      const symbol = symbolParam(ctx.q.get('symbol'));
+      const limit = clampInt(ctx.q.get('limit'), 1, 1000, 300);
+      const own = engine.klines(symbol, iv, limit);
+      if (!hedger) return own;
+      // З брокером: історія — реальні свічки ринку; поточна свічка доповнюється нашими угодами
+      try {
+        const hist = (await hedger.klines(symbol, name, limit)).slice(); // кеш не змінюємо
+        if (!hist.length) return own;
+        const lastOwn = own[own.length - 1];
+        const lastH = (hist[hist.length - 1] = [...hist[hist.length - 1]]);
+        if (lastOwn && lastOwn[0] === lastH[0]) {
+          lastH[2] = String(Math.max(+lastH[2], +lastOwn[2]));
+          lastH[3] = String(Math.min(+lastH[3], +lastOwn[3]));
+          lastH[4] = lastOwn[4];
+        }
+        return hist;
+      } catch {
+        return own;
+      }
     },
 
     'POST /api/register': async (ctx) => {
-      if (!ctx.local && !allow(`reg:${ctx.ip}`, 5 / 60, 5))
+      if (!ctx.local && !(ctx.realIp ? allow(`reg:${ctx.realIp}`, 5 / 60, 5) : allow('reg:shared', 2, 60)))
         throw new ApiError(429, 'RATE_LIMIT', 'Забагато реєстрацій з цієї IP');
       const { username, password } = ctx.body;
       const err = auth.validate(username, password);
@@ -247,9 +320,11 @@ function createServer(options = {}) {
       return { id: uid, username, token };
     },
     'POST /api/login': async (ctx) => {
-      if (!ctx.local && !allow(`login:${ctx.ip}`, 10 / 60, 10))
-        throw new ApiError(429, 'RATE_LIMIT', 'Забагато спроб входу');
       const { username, password } = ctx.body;
+      // захист від підбору пароля: по акаунту завжди, по IP — коли вона відома
+      const uKey = `login:u:${String(username || '').toLowerCase().slice(0, 40)}`;
+      if (!ctx.local && (!allow(uKey, 10 / 60, 10) || (ctx.realIp && !allow(`login:${ctx.realIp}`, 30 / 60, 30))))
+        throw new ApiError(429, 'RATE_LIMIT', 'Забагато спроб входу, спробуйте за хвилину');
       if (typeof username !== 'string' || typeof password !== 'string' || password.length > 100)
         throw new ApiError(400, 'BAD_CREDENTIALS', 'Вкажіть логін і пароль');
       const u = await auth.login(username, password);
@@ -265,14 +340,25 @@ function createServer(options = {}) {
     },
     'GET /api/me': (ctx) => {
       const uid = requireUser(ctx);
-      return { id: uid, username: ctx.session.username, balances: engine.balances(uid), pnl: engine.pnl(uid) };
+      return { id: uid, username: ctx.session.username, ...accountData(uid), leverages: engine.leverages(uid) };
     },
-    'GET /api/balances': (ctx) => engine.balances(requireUser(ctx)),
-    'GET /api/pnl': (ctx) => engine.pnl(requireUser(ctx)),
+    'GET /api/account': (ctx) => engine.account(requireUser(ctx)),
+    'GET /api/positions': (ctx) => engine.positions(requireUser(ctx)),
+    'GET /api/leverage': (ctx) => engine.leverages(requireUser(ctx)),
+    'POST /api/leverage': (ctx) => {
+      const uid = requireUser(ctx);
+      tradeLimit(ctx);
+      return engine.setLeverage(uid, ctx.body.symbol, ctx.body.leverage);
+    },
+    'POST /api/position/close': (ctx) => {
+      const uid = requireUser(ctx);
+      tradeLimit(ctx);
+      return engine.closePosition(uid, ctx.body.symbol);
+    },
     'POST /api/faucet': (ctx) => {
       const uid = requireUser(ctx);
       engine.faucet(uid);
-      return engine.balances(uid);
+      return engine.account(uid);
     },
 
     'POST /api/order': (ctx) => {
@@ -313,12 +399,12 @@ function createServer(options = {}) {
       const since = Number(ctx.q.get('since')) || 0;
       const out = {
         depth: engine.depth(symbol, 20),
-        tickers: [...engine.markets.keys()].map((s) => engine.ticker(s)),
+        tickers: allTickers(),
         trades: (recentTrades.get(symbol) || []).filter((t) => t.id > since).slice(-100),
       };
       if (ctx.session) {
         const uid = ctx.session.uid;
-        out.account = { balances: engine.balances(uid), pnl: engine.pnl(uid) };
+        Object.assign(out, accountData(uid));
         out.open = engine.openOrders(uid);
       }
       return out;
@@ -348,8 +434,8 @@ function createServer(options = {}) {
       set.add(c);
     }
     send(c, 'depth', engine.depth(symbol, 20));
-    send(c, 'tickers', [...engine.markets.keys()].map((s) => engine.ticker(s)));
-    if (uid) send(c, 'account', { balances: engine.balances(uid), pnl: engine.pnl(uid) });
+    send(c, 'tickers', allTickers());
+    if (uid) send(c, 'account', accountData(uid));
     ctx.req.on('close', () => {
       clients.delete(c);
       if (uid) {
@@ -384,7 +470,7 @@ function createServer(options = {}) {
     res.setHeader('Content-Security-Policy', "default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:");
     const url = new URL(req.url, 'http://x');
     const ctx = {
-      req, res, q: url.searchParams, ip: clientIp(req), local: isLocalReq(req), token: getToken(req), session: null, body: {},
+      req, res, q: url.searchParams, ip: clientIp(req), local: isLocalReq(req), realIp: realClientIp(req), token: getToken(req), session: null, body: {},
       setHeader: (k, v) => res.setHeader(k, v),
     };
     try {
@@ -392,7 +478,7 @@ function createServer(options = {}) {
         if (req.method !== 'GET' && req.method !== 'HEAD') throw new ApiError(405, 'METHOD', 'Method not allowed');
         return serveStatic(req, res, url.pathname);
       }
-      if (!ctx.local && !allow(`ip:${ctx.ip}`, 50, 100)) throw new ApiError(429, 'RATE_LIMIT', 'Забагато запитів');
+      if (!ctx.local && ctx.realIp && !allow(`ip:${ctx.realIp}`, 50, 100)) throw new ApiError(429, 'RATE_LIMIT', 'Забагато запитів');
       ctx.session = auth.resolve(ctx.token);
       if (url.pathname === '/api/stream' && req.method === 'GET') return openStream(ctx);
       const handler = routes[`${req.method} ${url.pathname}`];
@@ -412,6 +498,8 @@ function createServer(options = {}) {
   server.headersTimeout = 66000;
 
   server.shutdown = () => {
+    closed = true;
+    clearInterval(liqTimer);
     stopBots();
     if (hedger) hedger.stop();
     for (const t of [flush, tickers, heartbeat, gcBuckets]) clearInterval(t);
@@ -435,7 +523,7 @@ function clampInt(v, lo, hi, def) {
 if (require.main === module) {
   const server = createServer();
   server.listen(cfg.port, cfg.host, () => {
-    console.log(`Біржа запущена: http://localhost:${cfg.port}  (БД: ${cfg.dbFile}, боти: ${cfg.bots ? 'увімк' : 'вимк'})`);
+    console.log(`Quite Harbor запущено: http://localhost:${cfg.port}  (БД: ${cfg.dbFile}, боти: ${cfg.bots ? 'увімк' : 'вимк'})`);
   });
   const stop = () => {
     console.log('Зупинка...');

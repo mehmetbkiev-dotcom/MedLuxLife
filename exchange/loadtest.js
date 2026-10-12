@@ -81,9 +81,7 @@ async function trader(i, deadline, ac) {
       const px = (last * (1 + (side === 'BUY' ? -1 : 1) * rnd(-0.001, 0.004))).toFixed(2);
       res = await call(token, 'POST', '/api/order', { symbol: sym, side, type: 'LIMIT', price: px, qty });
     } else if (x < 0.8) {
-      res = await call(token, 'POST', '/api/order', side === 'BUY'
-        ? { symbol: sym, side, type: 'MARKET', quoteQty: rnd(10, 200).toFixed(2) }
-        : { symbol: sym, side, type: 'MARKET', qty });
+      res = await call(token, 'POST', '/api/order', { symbol: sym, side, type: 'MARKET', qty, reduceOnly: Math.random() < 0.3 });
     } else if (x < 0.93) {
       const open = await call(token, 'GET', '/api/orders/open');
       if (open?.length) await call(token, 'DELETE', `/api/order?id=${open[Math.floor(Math.random() * open.length)].id}`);

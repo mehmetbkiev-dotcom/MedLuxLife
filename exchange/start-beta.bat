@@ -1,6 +1,6 @@
 @echo off
 chcp 65001 >nul
-title MiniEx beta
+title Quite Harbor beta
 cd /d "%~dp0"
 where node >nul 2>nul
 if errorlevel 1 (

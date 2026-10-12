@@ -32,6 +32,7 @@ class Hedger {
     this.brokerBalances = null;
     this.ready = false;
     this.timers = [];
+    this.firstPrices = new Promise((r) => (this._gotPrices = r)); // вирішується з першими цінами
 
     db.exec(`
       CREATE TABLE IF NOT EXISTS kv (k TEXT PRIMARY KEY, v TEXT NOT NULL);
@@ -120,6 +121,7 @@ class Hedger {
           const p = map.get(s.brokerSymbol);
           if (p) this.prices.set(s.symbol, { bid: p.bid, ask: p.ask, mid: (Number(p.bid) + Number(p.ask)) / 2, ts: Date.now() });
         }
+        if (this.symbols.every((s) => this.prices.has(s.symbol))) this._gotPrices();
       } catch (e) {
         this._err('prices', e);
       }
@@ -242,6 +244,19 @@ class Hedger {
     }
   }
 
+  // Історія свічок брокера з кешем на 10 с (графік показує реальну історію ринку)
+  async klines(symbol, interval, limit) {
+    const s = this.symbols.find((x) => x.symbol === symbol);
+    const key = `${symbol}:${interval}:${limit}`;
+    this.klineCache ??= new Map();
+    const c = this.klineCache.get(key);
+    if (c && Date.now() - c.ts < 10000) return c.data;
+    const data = await this.broker.klines(s.brokerSymbol, interval, limit);
+    if (this.klineCache.size > 50) this.klineCache.clear();
+    this.klineCache.set(key, { ts: Date.now(), data });
+    return data;
+  }
+
   // Ціна з реального ринку для маркетмейкера (null, якщо дані застарілі)
   mid(symbol) {
     const p = this.prices.get(symbol);
@@ -261,6 +276,7 @@ class Hedger {
         hedgedAtBroker: fmt(this.hedged.get(s.symbol)),
         reconciled: this.userNet.get(s.symbol) === this.hedged.get(s.symbol) + this.pending.get(s.symbol),
         filters: this.broker.filters.get(s.brokerSymbol) || null,
+        mirrorable: !this.broker.canTrade || this.broker.filters.has(s.brokerSymbol), // false — пари немає у брокера
       };
     }
     return {

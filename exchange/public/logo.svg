@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="130 70 690 890" role="img" aria-label="Quite Harbor">
+  <g fill="#fff">
+    <rect x="468" y="82" width="12" height="520" rx="6"/>
+    <path d="M360 190 Q474 184 586 192 L573 303 Q474 296 382 305 Z"/>
+    <path d="M276 354 Q474 338 670 354 L628 524 Q474 508 326 527 Z"/>
+    <path d="M245 588 Q372 592 474 548 Q576 592 702 588 L674 690 L474 743 L272 690 Z"/>
+  </g>
+  <path d="M482 98 L554 122 L482 146 Z" fill="#3DD9F0"/>
+  <g stroke="#fff" stroke-linecap="round">
+    <polyline points="178,828 301,883 424,841 546,815 658,834 770,752" fill="none" stroke-width="9" stroke-linejoin="round"/>
+    <path d="M178 625 V940 M301 742 V940 M424 774 V940 M546 774 V940 M658 742 V940 M770 625 V940" stroke-width="10"/>
+  </g>
+  <g fill="#3DD9F0">
+    <rect x="152" y="790" width="53" height="76"/>
+    <rect x="398" y="816" width="52" height="50"/>
+    <rect x="520" y="798" width="52" height="35"/>
+    <rect x="744" y="705" width="52" height="94"/>
+  </g>
+  <g fill="#E838EE">
+    <rect x="276" y="842" width="52" height="82"/>
+    <rect x="632" y="803" width="52" height="63"/>
+  </g>
+</svg>

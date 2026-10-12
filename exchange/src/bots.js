@@ -2,22 +2,31 @@
 // Демо-боти, щоб у книзі завжди була ліквідність і графік рухався:
 //  - market maker виставляє сітку лімітних ордерів навколо "справедливої" ціни;
 //  - taker іноді робить невеликі ринкові угоди.
-// Ціна маркетмейкера тягнеться до останньої угоди, тож користувачі реально рухають ринок.
+// Ціна маркетмейкера тягнеться до останньої угоди (або до реальної ціни брокера), а великий
+// набраний обсяг позиції трохи зсуває котирування, щоб бот сам поступово з неї виходив.
 
 const { toUnits, fmt } = require('./decimal');
 
 function startBots(engine, auth, hedger = null) {
   const mm = auth.ensureSystemUser('market_maker', 'bot');
   const tk = auth.ensureSystemUser('taker_bot', 'bot');
-  if (mm.created) engine.deposit(mm.id, { USDT: '50000000', BTC: '500', ETH: '10000' }, 'bot_seed');
-  if (tk.created) engine.deposit(tk.id, { USDT: '2000000', BTC: '20', ETH: '400' }, 'bot_seed');
+  engine.noOrderLimit.add(mm.id); // 20 пар × 24 рівні — більше за ліміт для людей
+  for (const b of [mm, tk]) {
+    engine.noLiquidation.add(b.id); // боти — системні рахунки, їх не ліквідуємо
+    const bal = engine._peekBal(b.id);
+    if (bal.free + bal.locked === 0n) engine.deposit(b.id, { USDT: b === mm ? '100000000' : '5000000' }, 'bot_seed');
+    // плече ботів 20x (задається напряму: позиції ботів можуть бути вже відкриті)
+    for (const m of engine.markets.values()) engine._p(b.id, m.symbol).leverage = 20;
+  }
+  engine._commit();
 
   const fair = new Map();
   for (const m of engine.markets.values()) fair.set(m.symbol, Number(fmt(engine.last.get(m.symbol))));
 
-  const roundTo = (x, stepUnits) => {
+  const roundTo = (x, stepUnits, up = false) => {
     const u = toUnits(x.toFixed(8));
-    return fmt(u - (u % stepUnits));
+    const r = u % stepUnits;
+    return fmt(up && r ? u - r + stepUnits : u - r);
   };
 
   function quote(m) {
@@ -33,15 +42,21 @@ function startBots(engine, auth, hedger = null) {
       f *= 1 + (Math.random() - 0.5) * 0.002; // невеликий випадковий дрейф
     }
     fair.set(m.symbol, f);
+    // зсув котирувань проти власної позиції маркетмейкера (до ±0.05% при позиції $2M)
+    const ps = engine._peekPos(mm.id, m.symbol).size;
+    const posUsd = (Number(fmt(ps)) || 0) * f;
+    f *= 1 - Math.max(-1, Math.min(1, posUsd / 2e6)) * 0.0005;
     try {
       engine.cancelAll(mm.id, m.symbol);
       const notionalPerLevel = m.base === 'BTC' ? 15000 : 8000;
       for (let i = 1; i <= 12; i++) {
-        const spread = 0.0004 * i + Math.random() * 0.0002;
+        // Перший рівень ~0.005% від ціни (як вузький спред на великій біржі), далі ширше
+        const spread = 0.00004 + 0.00012 * (i - 1) + Math.random() * 0.00003;
         const size = (notionalPerLevel * (0.4 + Math.random())) / f;
         const qty = roundTo(size, m.step);
         for (const side of ['BUY', 'SELL']) {
-          const px = roundTo(side === 'BUY' ? f * (1 - spread) : f * (1 + spread), m.tick);
+          // купівлю округлюємо вниз, продаж — вгору, щоб на грубому кроці ціни вони не зійшлись
+          const px = side === 'BUY' ? roundTo(f * (1 - spread), m.tick) : roundTo(f * (1 + spread), m.tick, true);
           try {
             engine.placeOrder(mm.id, { symbol: m.symbol, side, type: 'LIMIT_MAKER', price: px, qty });
           } catch {
