@@ -277,7 +277,7 @@ An ophthalmologist examines a patient's eyes with a slit lamp in a modern eye cl
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Gynaecological Oncology
+### ✅ Gynaecological Oncology — YAPILDI 2026-10-13 (ChatGPT, Media 1600)
 
 ```
 Image for the hospital department page "Gynaecological Oncology" of a premium medical-travel website.
@@ -293,7 +293,7 @@ Close-up of a lab technician's gloved hands holding a rack of blood sample tubes
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Cardiovascular Surgery
+### ✅ Cardiovascular Surgery — YAPILDI 2026-10-13 (ChatGPT, Media 1598)
 
 ```
 Image for the hospital department page "Cardiovascular Surgery" of a premium medical-travel website.
@@ -309,7 +309,7 @@ A neurologist shows brain MRI images on a large monitor to a middle-aged woman p
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Algology (Pain Medicine)
+### ✅ Algology (Pain Medicine) — YAPILDI 2026-10-13 (ChatGPT, Media 1602)
 
 ```
 Image for the hospital department page "Algology (Pain Medicine)" of a premium medical-travel website.
@@ -317,7 +317,7 @@ A female pain specialist kneels beside a laughing senior man in an armchair and 
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Psychiatry
+### ✅ Psychiatry — YAPILDI 2026-10-13 (ChatGPT, Media 1604)
 
 ```
 Image for the hospital department page "Psychiatry" of a premium medical-travel website.
