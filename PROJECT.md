@@ -350,3 +350,4 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - 2026-10-13 15:46 – Rheumatology 494: 1612 (diz muayenesi = Orthopedics ile aynıydı) → 1607'den yeni (romatolog, eklem röntgenleri ve diz modeli; kitap sırtlarında 'Rheumatology', 'Autoimmune Diseases', 'Musculoskeletal Medicine'). 1606 (el eklemi muayenesi, yazısız) ve 1607 09:10'da yüklenmiş, o zaman gözden kaçmıştı. 1606 alternatif olarak önerildi.
 - 2026-10-13 16:00 – Endocrine Surgery 508: 1758 → kullanıcının gönderdiği foto (tiroid modeli + ultrason, boynuna dokunan hasta).
 - 2026-10-13 16:05 – Thoracic Surgery 509: 1760 (tablette akciğer hologramı) → kullanıcının gönderdiği foto (doktor monitörde akciğer görüntüsünü anlatıyor).
+- 2026-10-13 16:10 – Chest Diseases (Pulmonology) 517: 1637 (Thoracic Surgery ile aynı görüntüydü) → kullanıcının gönderdiği foto (stetoskopla dinleme, akciğer röntgeni; duvarda 'PULMONOLOGY' posteri). Tekrar giderildi.
