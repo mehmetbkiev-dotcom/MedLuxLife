@@ -346,3 +346,4 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - 2026-10-13 15:00 – Emergency Medicine 544: 1746 (giriş holünde aile) → kullanıcının gönderdiği foto (acil ekibi hasta başında). Kullanıcı Hospital fotoğraflarını tek tek kontrol ediyor.
 - 2026-10-13 15:35 – Orthopedics 270 (+259 hub kartı): 1508 → 1580'den yeni (diz muayenesi; kullanıcı isteği). Not: Rheumatology 494 de aynı görseli kullanıyor (1612) → kullanıcıya soruldu.
 - 2026-10-13 15:40 – Ophthalmology 273 (+259 hub kartı): 1535 → 1593'ten yeni (yarık lamba muayenesi; kullanıcı isteği).
+- 2026-10-13 15:42 – Haematology 484: 1581 → 1591'den yeni (kan hücresi görüntüleri, başörtülü hasta; kullanıcı isteği; kitap sırtında 'Hematology' yazısı).
