@@ -453,7 +453,7 @@ A doctor's cupped hands hold a softly glowing, translucent 3D model of the lungs
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Infectious Diseases and Clinical Microbiology
+### ✅ Infectious Diseases and Clinical Microbiology — YAPILDI 2026-10-13 (ChatGPT, Media 1696)
 
 ```
 Image for the hospital department page "Infectious Diseases and Clinical Microbiology" of a premium medical-travel website.
@@ -461,7 +461,7 @@ A gloved hand holds a test tube with blue liquid in a modern laboratory; a scien
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Dermatology
+### ✅ Dermatology — YAPILDI 2026-10-13 (ChatGPT, Media 1668)
 
 ```
 Image for the hospital department page "Dermatology" of a premium medical-travel website.
@@ -469,7 +469,7 @@ A dermatologist examines the skin on a patient's shoulder with a dermatoscope; t
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Nutrition and Dietetics
+### ✅ Nutrition and Dietetics — YAPILDI 2026-10-13 (ChatGPT, Media 1671)
 
 ```
 Image for the hospital department page "Nutrition and Dietetics" of a premium medical-travel website.
@@ -477,7 +477,7 @@ A smiling dietitian in a white coat holds half an orange beside a bowl of colour
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Paediatrics
+### ✅ Paediatrics — YAPILDI 2026-10-13 (ChatGPT, Media 1673)
 
 ```
 Image for the hospital department page "Paediatrics" of a premium medical-travel website.
@@ -485,7 +485,7 @@ A friendly paediatrician gives a high-five to a smiling girl (about 6) sitting o
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Paediatric Surgery
+### ✅ Paediatric Surgery — YAPILDI 2026-10-13 (ChatGPT, Media 1675)
 
 ```
 Image for the hospital department page "Paediatric Surgery" of a premium medical-travel website.
@@ -501,7 +501,7 @@ A little girl listens to a teddy bear's chest with a stethoscope while a doctor 
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Paediatric Bone Marrow Transplantation
+### ✅ Paediatric Bone Marrow Transplantation — YAPILDI 2026-10-13 (ChatGPT, Media 1678)
 
 ```
 Image for the hospital department page "Paediatric Bone Marrow Transplantation" of a premium medical-travel website.
@@ -525,7 +525,7 @@ A girl at a table gives a thumbs-up while eating a plate of pasta with broccoli.
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Paediatric Allergy and Immunology
+### ✅ Paediatric Allergy and Immunology — YAPILDI 2026-10-13 (ChatGPT, Media 1680)
 
 ```
 Image for the hospital department page "Paediatric Allergy and Immunology" of a premium medical-travel website.
@@ -533,7 +533,7 @@ A toddler with curly hair blows a dandelion in a sunny garden.
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Paediatric Infectious Diseases
+### ✅ Paediatric Infectious Diseases — YAPILDI 2026-10-13 (ChatGPT, Media 1682)
 
 ```
 Image for the hospital department page "Paediatric Infectious Diseases" of a premium medical-travel website.
@@ -541,7 +541,7 @@ A male doctor listens to the chest of a smiling boy (about 5) in a striped T-shi
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Neonatal Intensive Care Unit (NICU)
+### ✅ Neonatal Intensive Care Unit (NICU) — YAPILDI 2026-10-13 (ChatGPT, Media 1685)
 
 ```
 Image for the hospital department page "Neonatal Intensive Care Unit (NICU)" of a premium medical-travel website.
@@ -557,7 +557,7 @@ A modern, empty radiology room with a C-arm X-ray system and large monitors, cle
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Medical Genetics
+### ✅ Medical Genetics — YAPILDI 2026-10-13 (ChatGPT, Media 1687)
 
 ```
 Image for the hospital department page "Medical Genetics" of a premium medical-travel website.
@@ -565,7 +565,7 @@ Two female scientists in lab coats and safety goggles work together with a pipet
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Medical Pathology
+### ✅ Medical Pathology — YAPILDI 2026-10-13 (ChatGPT, Media 1689)
 
 ```
 Image for the hospital department page "Medical Pathology" of a premium medical-travel website.
@@ -573,7 +573,7 @@ A gloved hand holds a glass tissue slide beside a microscope; a pink-stained tis
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Medical Microbiology
+### ✅ Medical Microbiology — YAPILDI 2026-10-13 (ChatGPT, Media 1694)
 
 ```
 Image for the hospital department page "Medical Microbiology" of a premium medical-travel website.
@@ -581,7 +581,7 @@ A scientist in a hairnet and goggles examines a sample under a microscope in a b
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Medical Histology and Embryology
+### ✅ Medical Histology and Embryology — YAPILDI 2026-10-13 (ChatGPT, Media 1698)
 
 ```
 Image for the hospital department page "Medical Histology and Embryology" of a premium medical-travel website.
