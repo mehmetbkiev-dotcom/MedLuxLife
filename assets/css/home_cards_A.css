@@ -1,0 +1,8 @@
+.home .ext-grid { counter-reset: mlxstep; }
+.home .ext-grid > .ext-card:not(.ext-card-stacked) { counter-increment: mlxstep; }
+.home .ext-grid > .ext-card:not(.ext-card-stacked) figure { background: none !important; padding: 0 !important; box-shadow: none !important; border: 0 !important; aspect-ratio: auto !important; height: auto !important; width: auto !important; margin: 0 0 18px !important; }
+.home .ext-grid > .ext-card:not(.ext-card-stacked) figure img { display: none !important; }
+html body.home .wp-site-blocks .ext-grid > .ext-card:not(.ext-card-stacked) figure[class*="is-style-ext-preset--image--"]::before { content: "0" counter(mlxstep); display: block; background: none !important; width: auto !important; height: auto !important; position: static !important; border: 0 !important; box-shadow: none !important; padding: 0 !important; mask: none !important; -webkit-mask: none !important; font-family: Fraunces, serif; font-weight: 500; font-size: 3rem; line-height: 1; color: #d4a24c; }
+.home .ext-grid > .ext-card { background: #ffffff !important; border: 1px solid rgba(212, 162, 76, 0.35); border-radius: 14px; box-shadow: 0 6px 24px -14px rgba(11, 6, 32, 0.25); overflow: hidden; }
+.home .ext-grid > .ext-card:not(.ext-card-stacked) { border-top: 3px solid #d4a24c; }
+.home .ext-grid > .ext-card.ext-card-stacked p, .home .ext-grid > .ext-card.ext-card-stacked p a { color: #b8862e !important; font-weight: 600; }
