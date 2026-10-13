@@ -97,6 +97,8 @@
 <script>
 (function(){
   var root=document.getElementById('mlx-assistant'); if(!root||root.dataset.ready) return; root.dataset.ready='1';
+  // Keep the button fixed to the screen even when a wrapper (e.g. the admin/AI toolbar) gives the page its own containing block
+  if(root.parentNode!==document.body){ document.body.appendChild(root); }
   var fab=root.querySelector('.mlx-a-fab'), x=root.querySelector('.mlx-a-x'), ok=root.querySelector('.mlx-a-ok'), next=root.querySelector('.mlx-a-next');
   var st={area:'',topic:'',topicLabel:'',lang:'English'};
   var MSG={'English':['Hello MedLuxLife, I am interested in: ','Preferred language: English'],'Deutsch':['Hallo MedLuxLife, ich interessiere mich für: ','Bevorzugte Sprache: Deutsch'],'Türkçe':['Merhaba MedLuxLife, şununla ilgileniyorum: ','Tercih ettiğim dil: Türkçe'],'Українська':['Вітаю, MedLuxLife! Мене цікавить: ','Бажана мова: українська'],'Русский':['Здравствуйте, MedLuxLife! Меня интересует: ','Предпочитаемый язык: русский']};
