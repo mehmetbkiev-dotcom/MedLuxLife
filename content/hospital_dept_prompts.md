@@ -69,7 +69,7 @@ A doctor gently examines the front of the neck of a woman patient sitting uprigh
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### 🔴 PCOS and Hirsutism Clinic — ALAKASIZ: çilli yüz (Hirsutism ile aynı foto)
+### ✅ PCOS and Hirsutism Clinic — YAPILDI 2026-10-13 (Gemini/ChatGPT, Media 1732)
 
 ```
 Image for the hospital department page "PCOS and Hirsutism Clinic" of a premium medical-travel website.
@@ -77,7 +77,7 @@ A female doctor talks with a young woman in a bright consultation room and shows
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### 🔴 Hirsutism Clinic — ALAKASIZ: çilli yüz (PCOS ile aynı foto)
+### ✅ Hirsutism Clinic — YAPILDI 2026-10-13 (Gemini/ChatGPT, Media 1734)
 
 ```
 Image for the hospital department page "Hirsutism Clinic" of a premium medical-travel website.
@@ -85,7 +85,7 @@ A dermatologist wearing gloves uses a round magnifying lamp to examine the chin 
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### 🔴 Otolaryngology (ENT) — Zayıf: duvardaki muayene seti (Audiology ile aynı foto)
+### ✅ Otolaryngology (ENT) — YAPILDI 2026-10-13 (Gemini/ChatGPT, Media 1736)
 
 ```
 Image for the hospital department page "Otolaryngology (ENT)" of a premium medical-travel website.
@@ -93,7 +93,7 @@ An ENT doctor examines the ear of a smiling woman with an otoscope; an anatomy p
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### 🔴 Audiology — ALAKASIZ: duvardaki muayene seti (ENT ile aynı foto)
+### ✅ Audiology — YAPILDI 2026-10-13 (Gemini/ChatGPT, Media 1740)
 
 ```
 Image for the hospital department page "Audiology" of a premium medical-travel website.
@@ -101,7 +101,7 @@ An audiologist adjusts headphones on a patient sitting in a quiet hearing-test b
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### 🔴 Thyroid and Parathyroid Diseases and Surgery Clinic — Zayıf: sarı zeminde kan tüpleri
+### ✅ Thyroid and Parathyroid Diseases and Surgery Clinic — YAPILDI 2026-10-13 (Gemini/ChatGPT, Media 1742)
 
 ```
 Image for the hospital department page "Thyroid and Parathyroid Diseases and Surgery Clinic" of a premium medical-travel website.
@@ -173,7 +173,7 @@ A laughing red-haired girl (about 7) with a butterfly landing on her nose in a s
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### 🔴 Emergency Medicine — ALAKASIZ: Amerikan itfaiye ambulansı, üzerinde yazı
+### ✅ Emergency Medicine — YAPILDI 2026-10-13 (Gemini/ChatGPT, Media 1746)
 
 ```
 Image for the hospital department page "Emergency Medicine" of a premium medical-travel website.
@@ -325,7 +325,7 @@ A calm psychiatrist talks with an adult patient in a cosy consultation room with
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Psychology
+### ✅ Psychology — YAPILDI 2026-10-13 (Gemini/ChatGPT, Media 1748)
 
 ```
 Image for the hospital department page "Psychology" of a premium medical-travel website.
@@ -349,7 +349,7 @@ A rheumatologist examines the hand joints of an older woman at a desk; an X-ray 
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Obstetrics and Gynaecology
+### ✅ Obstetrics and Gynaecology — YAPILDI 2026-10-13 (Gemini/ChatGPT, Media 1750)
 
 ```
 Image for the hospital department page "Obstetrics and Gynaecology" of a premium medical-travel website.
@@ -357,7 +357,7 @@ A smiling female gynaecologist shows an anatomical model of the uterus to a woma
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Perinatology
+### ✅ Perinatology — YAPILDI 2026-10-13 (Gemini/ChatGPT, Media 1752)
 
 ```
 Image for the hospital department page "Perinatology" of a premium medical-travel website.
@@ -381,7 +381,7 @@ A smiling female breast surgeon with a small pink ribbon pin on her white coat t
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ General Surgery
+### ✅ General Surgery — YAPILDI 2026-10-13 (Gemini/ChatGPT, Media 1754)
 
 ```
 Image for the hospital department page "General Surgery" of a premium medical-travel website.
@@ -389,7 +389,7 @@ A low-angle view of a surgical team in caps and masks working under bright opera
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Gastroenterological Surgery
+### ✅ Gastroenterological Surgery — YAPILDI 2026-10-13 (Gemini/ChatGPT, Media 1756)
 
 ```
 Image for the hospital department page "Gastroenterological Surgery" of a premium medical-travel website.
@@ -397,7 +397,7 @@ A woman in a plain dress holds her abdomen with both hands; a soft, translucent 
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Endocrine Surgery
+### ✅ Endocrine Surgery — YAPILDI 2026-10-13 (Gemini/ChatGPT, Media 1758)
 
 ```
 Image for the hospital department page "Endocrine Surgery" of a premium medical-travel website.
@@ -405,7 +405,7 @@ Close-up: a doctor in a white coat holds a small anatomical thyroid model and po
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Thoracic Surgery
+### ✅ Thoracic Surgery — YAPILDI 2026-10-13 (Gemini/ChatGPT, Media 1760)
 
 ```
 Image for the hospital department page "Thoracic Surgery" of a premium medical-travel website.
@@ -493,7 +493,7 @@ A paediatric surgeon gives a high-five to a little girl sitting on her mother's 
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Paediatric Cardiology
+### ✅ Paediatric Cardiology — YAPILDI 2026-10-13 (Gemini/ChatGPT, Media 1762)
 
 ```
 Image for the hospital department page "Paediatric Cardiology" of a premium medical-travel website.
