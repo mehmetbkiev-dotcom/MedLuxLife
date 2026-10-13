@@ -109,7 +109,7 @@ A woman gently touches the front of her neck with both hands; a soft red glowing
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### 🔴 Gastroenterology — ALAKASIZ: ameliyathane (gastroenteroloji endoskopi/poliklinik)
+### ✅ Gastroenterology — YAPILDI 2026-10-13 (ChatGPT, Media 1634)
 
 ```
 Image for the hospital department page "Gastroenterology" of a premium medical-travel website.
@@ -413,7 +413,7 @@ A doctor's gloved hands hold a tablet projecting a glowing 3D hologram of the lu
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Urology
+### ✅ Urology — YAPILDI 2026-10-13 (ChatGPT, Media 1640)
 
 ```
 Image for the hospital department page "Urology" of a premium medical-travel website.
@@ -421,7 +421,7 @@ A middle-aged man with clasped hands sits in a calm consultation room while a do
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Internal Medicine
+### ✅ Internal Medicine — YAPILDI 2026-10-13 (ChatGPT, Media 1642)
 
 ```
 Image for the hospital department page "Internal Medicine" of a premium medical-travel website.
@@ -429,7 +429,7 @@ An internist listens to a seated patient's chest with a stethoscope in a bright 
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Endocrinology and Metabolic Diseases
+### ✅ Endocrinology and Metabolic Diseases — YAPILDI 2026-10-13 (ChatGPT, Media 1644)
 
 ```
 Image for the hospital department page "Endocrinology and Metabolic Diseases" of a premium medical-travel website.
@@ -445,7 +445,7 @@ A side profile of a human head with a translucent, glowing brain and the small p
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Chest Diseases (Pulmonology)
+### ✅ Chest Diseases (Pulmonology) — YAPILDI 2026-10-13 (ChatGPT, Media 1637)
 
 ```
 Image for the hospital department page "Chest Diseases (Pulmonology)" of a premium medical-travel website.
