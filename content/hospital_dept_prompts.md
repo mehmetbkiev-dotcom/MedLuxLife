@@ -365,7 +365,7 @@ A pregnant woman rests her hands on her belly while a doctor at the desk writes 
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Pelvic Pain and Endometriosis Clinic
+### ✅ Pelvic Pain and Endometriosis Clinic — YAPILDI 2026-10-13 (ChatGPT, Media 1619)
 
 ```
 Image for the hospital department page "Pelvic Pain and Endometriosis Clinic" of a premium medical-travel website.
@@ -373,7 +373,7 @@ A female doctor in blue scrubs holds a tablet that projects a soft, glowing 3D h
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Breast Surgery
+### ✅ Breast Surgery — YAPILDI 2026-10-13 (ChatGPT, Media 1616)
 
 ```
 Image for the hospital department page "Breast Surgery" of a premium medical-travel website.
