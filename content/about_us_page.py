@@ -19,6 +19,10 @@ TRAVEL_H = t('Travel', 'Reisen', 'Seyahat')
 TRAVEL = t('We put together journeys tailored to your personal preferences and budget. Whether you are looking for a restful holiday, a city break or a pilgrimage, we take care of the organisation — from flights and private transfers to hand-picked hotels — so you can simply enjoy your trip.',
            'Wir stellen Reisen ganz nach Ihren persönlichen Wünschen und Ihrem Budget zusammen. Ob erholsamer Urlaub, Städtereise oder Pilgerreise – wir übernehmen die Organisation, von Flügen und privaten Transfers bis zu ausgewählten Hotels, damit Sie Ihre Reise einfach genießen können.',
            'Kişisel tercihlerinize ve bütçenize göre size özel seyahatler hazırlıyoruz. İster dinlendirici bir tatil, ister bir şehir gezisi, ister bir hac/umre yolculuğu olsun; uçuşlardan özel transferlere ve özenle seçilmiş otellere kadar tüm organizasyonu üstleniyoruz, siz de yolculuğunuzun tadını çıkarın.')
+LANG_H = t('We speak your language', 'Wir sprechen Ihre Sprache', 'Sizin dilinizi konuşuyoruz')
+LANG = t('We speak Turkish, Ukrainian, Russian and English fluently, and we also speak German. At our partner clinics and hospital, native-speaking interpreters for English, German, French, Italian, Spanish, Arabic, Turkish, Russian and Ukrainian are available whenever you need them.',
+         'Wir sprechen fließend Türkisch, Ukrainisch, Russisch und Englisch und sprechen auch Deutsch. In unseren Partnerkliniken und unserem Partnerkrankenhaus stehen Ihnen bei Bedarf muttersprachliche Dolmetscherinnen und Dolmetscher für Englisch, Deutsch, Französisch, Italienisch, Spanisch, Arabisch, Türkisch, Russisch und Ukrainisch zur Verfügung.',
+         'Türkçe, Ukraynaca, Rusça ve İngilizceyi akıcı konuşuyoruz; ayrıca Almanca da konuşuyoruz. Partner klinik ve hastanemizde İngilizce, Almanca, Fransızca, İtalyanca, İspanyolca, Arapça, Türkçe, Rusça ve Ukraynaca için anadili düzeyinde tercümanlar ihtiyaç duyduğunuz her an hazırdır.')
 CTA_H = t('We are here for you', 'Wir sind für Sie da', 'Sizin için buradayız')
 CTA = t("You don't need to think about the organisation. You reach out to us, and from that moment on we take care of it for you.",
         'Sie müssen sich um die Organisation nicht kümmern. Sie nehmen Kontakt mit uns auf – und ab diesem Moment übernehmen wir das für Sie.',
@@ -61,7 +65,9 @@ def build():
 <div class="wp-block-group medlux-treatment-grid">{card(HEALTH_H, HEALTH)}
 
 {card(TRAVEL_H, TRAVEL)}</div>
-<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+{card(LANG_H, LANG).replace('"className":"medlux-card"', '"className":"medlux-card medlux-card-wide"', 1).replace('class="wp-block-group medlux-card"', 'class="wp-block-group medlux-card medlux-card-wide"', 1)}</div>
 <!-- /wp:group -->
 
 <!-- wp:group {{"className":"medlux-cta","layout":{{"type":"constrained"}}}} -->
