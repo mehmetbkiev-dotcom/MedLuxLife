@@ -353,3 +353,4 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - 2026-10-13 16:10 – Chest Diseases (Pulmonology) 517: 1637 (Thoracic Surgery ile aynı görüntüydü) → kullanıcının gönderdiği foto (stetoskopla dinleme, akciğer röntgeni; duvarda 'PULMONOLOGY' posteri). Tekrar giderildi.
 - 2026-10-13 16:10 – Hospital & Specialist (259) 'All departments': 11 grubun her birindeki bölüm listesi alfabetik sıralandı (İngilizce, kelime kelime; grup sırası aynı). Aynı öğeler, sadece sıra değişti (doğrulandı). Not: Health (27) kutularındaki 7'şer öğelik listeler alfabetik değil (seçili/öne çıkan liste) → kullanıcıya soruldu. Yedek: backups/wp/page259_before_alpha.json.
 - 2026-10-13 16:15 – Paediatric Neurology 528: 1550 (denge egzersizi) → 1654'ten yeni (çocukla parmak testi, beyin MR; kullanıcı isteği).
+- 2026-10-13 16:20 – Paediatric Gastroenterology 531: 1546 (ultrason) → kullanıcının gönderdiği foto (sindirim sistemi modeli, anne ve çocuk).
