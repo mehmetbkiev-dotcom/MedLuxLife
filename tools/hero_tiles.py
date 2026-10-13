@@ -1,12 +1,15 @@
 # Replace the two small tiles baked into the Home hero image with sharp photos.
+# usage: hero_tiles.py SRC DENTAL HAIR OUT [WIDTH]
+# SRC is the original 1669x942 hero or an upscaled copy of it (e.g. Real-ESRGAN x4); output is WIDTH px wide.
 import sys
 from PIL import Image, ImageDraw
 src, dental, hair, out = sys.argv[1:5]
-K = 1.5                      # output scale vs original 1669x942
+WIDTH = int(sys.argv[5]) if len(sys.argv) > 5 else 2504
+K = WIDTH / 1669             # output scale vs original 1669x942 (tile boxes below are in original px)
 SS = 4                       # supersampling for smooth corners
 GOLD = (212, 162, 76)        # site gold #d4a24c
 base = Image.open(src).convert('RGB')
-base = base.resize((round(base.width * K), round(base.height * K)), Image.LANCZOS)
+base = base.resize((WIDTH, round(942 * K)), Image.LANCZOS)
 tiles = [  # (outer box in original px, photo, crop box in photo px)
     ((24, 637, 268, 852), dental, (330, 190, 1250, 1000)),
     ((281, 637, 529, 852), hair, (450, 0, 1536, 955)),
