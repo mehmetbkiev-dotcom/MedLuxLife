@@ -347,3 +347,4 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - 2026-10-13 15:35 – Orthopedics 270 (+259 hub kartı): 1508 → 1580'den yeni (diz muayenesi; kullanıcı isteği). Not: Rheumatology 494 de aynı görseli kullanıyor (1612) → kullanıcıya soruldu.
 - 2026-10-13 15:40 – Ophthalmology 273 (+259 hub kartı): 1535 → 1593'ten yeni (yarık lamba muayenesi; kullanıcı isteği).
 - 2026-10-13 15:42 – Haematology 484: 1581 → 1591'den yeni (kan hücresi görüntüleri, başörtülü hasta; kullanıcı isteği; kitap sırtında 'Hematology' yazısı).
+- 2026-10-13 15:46 – Rheumatology 494: 1612 (diz muayenesi = Orthopedics ile aynıydı) → 1607'den yeni (romatolog, eklem röntgenleri ve diz modeli; kitap sırtlarında 'Rheumatology', 'Autoimmune Diseases', 'Musculoskeletal Medicine'). 1606 (el eklemi muayenesi, yazısız) ve 1607 09:10'da yüklenmiş, o zaman gözden kaçmıştı. 1606 alternatif olarak önerildi.
