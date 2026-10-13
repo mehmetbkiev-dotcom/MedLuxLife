@@ -237,7 +237,7 @@ Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic p
 
 ## ⚪ İsteğe bağlı
 
-### ⚪ Medical Oncology — Şu anki foto zayıf: mavi yatakta el, konu belli değil
+### ✅ Medical Oncology — YAPILDI 2026-10-13 (ChatGPT, Media 1583)
 
 ```
 Image for the hospital department page "Medical Oncology" of a premium medical-travel website.
@@ -253,7 +253,7 @@ An orthopaedic doctor explains a knee-joint model to a middle-aged man in sports
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ In-Vitro Fertilization (IVF)
+### ✅ In-Vitro Fertilization (IVF) — YAPILDI 2026-10-13 (ChatGPT, Media 1586)
 
 ```
 Image for the hospital department page "In-Vitro Fertilization (IVF)" of a premium medical-travel website.
@@ -285,7 +285,7 @@ A female gynaecologist shows an ultrasound image on a computer monitor to a smil
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Haematology
+### ✅ Haematology — YAPILDI 2026-10-13 (ChatGPT, Media 1581)
 
 ```
 Image for the hospital department page "Haematology" of a premium medical-travel website.
