@@ -341,7 +341,7 @@ A physiotherapist in blue scrubs guides a man through a shoulder exercise in a b
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Rheumatology
+### ✅ Rheumatology — YAPILDI 2026-10-13 (ChatGPT, Media 1612)
 
 ```
 Image for the hospital department page "Rheumatology" of a premium medical-travel website.
@@ -437,7 +437,7 @@ An endocrinologist explains a blood glucose meter to a middle-aged patient at a 
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### ⚪ Pituitary Clinic
+### ✅ Pituitary Clinic — YAPILDI 2026-10-13 (ChatGPT, Media 1609)
 
 ```
 Image for the hospital department page "Pituitary Clinic" of a premium medical-travel website.
