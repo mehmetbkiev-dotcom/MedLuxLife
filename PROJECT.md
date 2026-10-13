@@ -344,3 +344,4 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - 2026-10-13 14:50 – Home kartları son karar (kullanıcı): üstteki fotoğraflı kartlar A (beyaz, altın), alttaki adım kartları B (lacivert, altın). gs5 'HOME CARDS' bloğu = assets/css/home_cards_AB.css.
 - 2026-10-13 14:52 – Kullanıcı Hospital fotoğraflarını tek tek kontrol ediyor. Nuclear Medicine 486: 1565 → 1663 (kullanıcının istediği 'Futuristischer Linearbeschleuniger im Therapieraum'; not: aslında radyoterapi cihazı; 1662 'nuklearmedizinische Bildgebungseinheit' alternatif).
 - 2026-10-13 15:00 – Emergency Medicine 544: 1746 (giriş holünde aile) → kullanıcının gönderdiği foto (acil ekibi hasta başında). Kullanıcı Hospital fotoğraflarını tek tek kontrol ediyor.
+- 2026-10-13 15:35 – Orthopedics 270 (+259 hub kartı): 1508 → 1580'den yeni (diz muayenesi; kullanıcı isteği). Not: Rheumatology 494 de aynı görseli kullanıyor (1612) → kullanıcıya soruldu.
