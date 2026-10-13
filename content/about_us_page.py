@@ -20,9 +20,16 @@ TRAVEL = t('We put together journeys tailored to your personal preferences and b
            'Wir stellen Reisen ganz nach Ihren persönlichen Wünschen und Ihrem Budget zusammen. Ob erholsamer Urlaub, Städtereise oder Pilgerreise – wir übernehmen die Organisation, von Flügen und privaten Transfers bis zu ausgewählten Hotels, damit Sie Ihre Reise einfach genießen können.',
            'Kişisel tercihlerinize ve bütçenize göre size özel seyahatler hazırlıyoruz. İster dinlendirici bir tatil, ister bir şehir gezisi, ister bir hac/umre yolculuğu olsun; uçuşlardan özel transferlere ve özenle seçilmiş otellere kadar tüm organizasyonu üstleniyoruz, siz de yolculuğunuzun tadını çıkarın.')
 PARTNERS_H = t('Our partners in Istanbul', 'Unsere Partner in Istanbul', "İstanbul'daki partnerlerimiz")
-PARTNERS = t('For hospital and specialist treatments, we work with a large university hospital group in Istanbul with several hospitals and specialised centres, academic specialists in almost every field, modern diagnostics such as 3-Tesla MRI and PET-CT, and international JCI accreditation. For aesthetic, hair and dental treatments, we work with a specialised clinic in Istanbul that focuses on caring for international patients. We plan to add further renowned hospitals to our network, always selected by the same criteria: medical quality, transparency and genuine care for international patients.',
-             'Für Krankenhaus- und Facharztbehandlungen arbeiten wir mit einer großen Universitätsklinik-Gruppe in Istanbul zusammen – mit mehreren Krankenhäusern und spezialisierten Zentren, akademischen Fachärztinnen und Fachärzten aus nahezu allen Fachgebieten, moderner Diagnostik wie 3-Tesla-MRT und PET-CT sowie internationaler JCI-Akkreditierung. Für ästhetische Behandlungen, Haar- und Zahnbehandlungen arbeiten wir mit einer spezialisierten Klinik in Istanbul zusammen, die sich auf die Betreuung internationaler Patientinnen und Patienten konzentriert. Wir möchten unser Netzwerk künftig um weitere renommierte Krankenhäuser erweitern – stets nach denselben Kriterien ausgewählt: medizinische Qualität, Transparenz und echte Fürsorge für internationale Patientinnen und Patienten.',
-             "Hastane ve uzman tedavileri için İstanbul'da büyük bir üniversite hastaneleri grubuyla çalışıyoruz: birden fazla hastane ve uzmanlaşmış merkez, neredeyse her alanda akademik uzman hekimler, 3 Tesla MR ve PET-BT gibi modern tanı imkânları ve uluslararası JCI akreditasyonu. Estetik, saç ve diş tedavileri için ise İstanbul'da uluslararası hastaların bakımına odaklanan uzman bir klinikle çalışıyoruz. Ağımıza ileride başka tanınmış hastaneleri de eklemeyi planlıyoruz; her zaman aynı kriterlere göre seçerek: tıbbi kalite, şeffaflık ve uluslararası hastalara gerçek ilgi.")
+PARTNERS = [
+    t('For hospital and specialist treatments, we work with a large university hospital group in Istanbul with several hospitals and specialised centres, academic specialists in almost every field, modern diagnostics such as 3-Tesla MRI and PET-CT, and international JCI accreditation.',
+      'Für Krankenhaus- und Facharztbehandlungen arbeiten wir mit einer großen Universitätsklinik-Gruppe in Istanbul zusammen – mit mehreren Krankenhäusern und spezialisierten Zentren, akademischen Fachärztinnen und Fachärzten aus nahezu allen Fachgebieten, moderner Diagnostik wie 3-Tesla-MRT und PET-CT sowie internationaler JCI-Akkreditierung.',
+      "Hastane ve uzman tedavileri için İstanbul'da büyük bir üniversite hastaneleri grubuyla çalışıyoruz: birden fazla hastane ve uzmanlaşmış merkez, neredeyse her alanda akademik uzman hekimler, 3 Tesla MR ve PET-BT gibi modern tanı imkânları ve uluslararası JCI akreditasyonu."),
+    t('For aesthetic, hair, dental and weight-loss treatments, we work with a specialised clinic in Istanbul that focuses on international patients. Its surgical team has more than 25 years of experience; treatments take place in partner hospitals approved by the Turkish Ministry of Health and accredited by JCI, or at the clinic itself, which also offers quiet rest areas for patients, for example after a hair transplant.',
+      'Für ästhetische Behandlungen, Haar- und Zahnbehandlungen sowie Adipositas-Chirurgie arbeiten wir mit einer spezialisierten Klinik in Istanbul zusammen, die sich auf internationale Patientinnen und Patienten konzentriert. Ihr chirurgisches Team verfügt über mehr als 25 Jahre Erfahrung; die Behandlungen finden in vom türkischen Gesundheitsministerium zugelassenen, JCI-akkreditierten Partnerkrankenhäusern oder in der Klinik selbst statt, die außerdem ruhige Erholungsbereiche bietet, zum Beispiel nach einer Haartransplantation.',
+      "Estetik, saç, diş ve obezite tedavileri için İstanbul'da uluslararası hastalara odaklanan uzman bir klinikle çalışıyoruz. Kliniğin cerrahi ekibi 25 yılı aşkın deneyime sahip; tedaviler T.C. Sağlık Bakanlığı onaylı ve JCI akreditasyonlu partner hastanelerde ya da kliniğin kendisinde yapılıyor. Klinik ayrıca hastalar için, örneğin saç ekimi sonrasında, sakin dinlenme alanları sunuyor."),
+    t('We plan to add further renowned hospitals to our network, always selected by the same criteria: medical quality, transparency and genuine care for international patients.',
+      'Wir möchten unser Netzwerk künftig um weitere renommierte Krankenhäuser erweitern – stets nach denselben Kriterien ausgewählt: medizinische Qualität, Transparenz und echte Fürsorge für internationale Patientinnen und Patienten.',
+      'Ağımıza ileride başka tanınmış hastaneleri de eklemeyi planlıyoruz; her zaman aynı kriterlere göre seçerek: tıbbi kalite, şeffaflık ve uluslararası hastalara gerçek ilgi.')]
 LANG_H = t('We speak your language', 'Wir sprechen Ihre Sprache', 'Sizin dilinizi konuşuyoruz')
 LANG = t('Our team speaks Turkish, Ukrainian, Russian, English and German, so you can talk to us in the language you feel most comfortable with. At our partner clinics and hospital, native-speaking interpreters for English, German, French, Italian, Spanish, Arabic, Turkish, Russian and Ukrainian are available whenever you need them.',
          'Unser Team spricht Türkisch, Ukrainisch, Russisch, Englisch und Deutsch – so können Sie mit uns in der Sprache sprechen, in der Sie sich am wohlsten fühlen. In unseren Partnerkliniken und unserem Partnerkrankenhaus stehen Ihnen bei Bedarf muttersprachliche Dolmetscherinnen und Dolmetscher für Englisch, Deutsch, Französisch, Italienisch, Spanisch, Arabisch, Türkisch, Russisch und Ukrainisch zur Verfügung.',
@@ -43,6 +50,12 @@ B = 'https://medluxlife.de'
 def card(h, p):
     return (f'<!-- wp:group {{"className":"medlux-card","layout":{{"type":"constrained"}}}} -->\n<div class="wp-block-group medlux-card"><!-- wp:heading {{"level":3}} -->\n'
             f'<h3 class="wp-block-heading">{h}</h3>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>{p}</p>\n<!-- /wp:paragraph --></div>\n<!-- /wp:group -->')
+
+def card_multi(h, paras, extra_class=''):
+    cls = 'medlux-card' + (' ' + extra_class if extra_class else '')
+    body = '\n\n'.join(f'<!-- wp:paragraph -->\n<p>{x}</p>\n<!-- /wp:paragraph -->' for x in paras)
+    return (f'<!-- wp:group {{"className":"{cls}","layout":{{"type":"constrained"}}}} -->\n<div class="wp-block-group {cls}"><!-- wp:heading {{"level":3}} -->\n'
+            f'<h3 class="wp-block-heading">{h}</h3>\n<!-- /wp:heading -->\n\n{body}</div>\n<!-- /wp:group -->')
 
 def build():
     src, mid, alt = IMG
@@ -71,7 +84,7 @@ def build():
 {card(TRAVEL_H, TRAVEL)}</div>
 <!-- /wp:group -->
 
-{card(PARTNERS_H, PARTNERS).replace('"className":"medlux-card"', '"className":"medlux-card medlux-card-wide"', 1).replace('class="wp-block-group medlux-card"', 'class="wp-block-group medlux-card medlux-card-wide"', 1)}
+{card_multi(PARTNERS_H, PARTNERS, 'medlux-card-wide')}
 
 {card(LANG_H, LANG).replace('"className":"medlux-card"', '"className":"medlux-card medlux-card-wide"', 1).replace('class="wp-block-group medlux-card"', 'class="wp-block-group medlux-card medlux-card-wide"', 1)}</div>
 <!-- /wp:group -->
