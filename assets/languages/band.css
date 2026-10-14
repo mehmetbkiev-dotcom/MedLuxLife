@@ -1,0 +1,17 @@
+
+.mlx-lang{width:100vw;max-width:100vw;margin-left:calc(50% - 50vw)!important;margin-right:calc(50% - 50vw)!important;margin-top:0!important;box-sizing:border-box;background:linear-gradient(180deg,#fbf7ef 0%,#f6efe2 100%);border-top:1px solid rgba(212,162,76,.35);border-bottom:1px solid rgba(212,162,76,.35);padding:44px 20px}
+.mlx-lang-in{max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:56px;flex-wrap:wrap}
+.mlx-lang-bubble{position:relative;background:#fff;border:2px solid #d4a24c;border-radius:28px;padding:22px 28px;display:flex;flex-direction:column;align-items:center;gap:14px;box-shadow:0 14px 34px -18px rgba(22,20,31,.35)}
+.mlx-lang-bubble:after{content:"";position:absolute;left:38px;bottom:-14px;width:22px;height:22px;background:#fff;border-right:2px solid #d4a24c;border-bottom:2px solid #d4a24c;transform:rotate(45deg);border-bottom-right-radius:4px}
+.mlx-flag{display:flex;flex-direction:column;align-items:center;gap:8px}
+.mlx-flag svg{width:50px;height:50px;border-radius:50%;box-shadow:0 0 0 1px rgba(0,0,0,.12),0 4px 10px -4px rgba(0,0,0,.3)}
+.mlx-flag span{font:600 12px/1 Inter,sans-serif;color:#4a4658;letter-spacing:.02em}
+.mlx-lang-txt{max-width:440px}
+.mlx-lang-k{font:600 12px/1 Inter,sans-serif;letter-spacing:.28em;color:#b8862e;text-transform:uppercase;margin:0 0 12px}
+.mlx-lang-h{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(28px,3vw,38px);line-height:1.1;color:#16141f;margin:0 0 10px}
+.mlx-lang-h em{font-style:normal;color:#b8862e}
+.mlx-lang-p{font:400 16px/1.6 Inter,sans-serif;color:#4a4658;margin:0}
+@media(max-width:700px){.mlx-lang{padding:32px 16px}.mlx-lang-in{gap:28px;flex-direction:column}.mlx-lang-bubble{gap:10px;padding:16px 16px}.mlx-flag svg{width:44px;height:44px}.mlx-flag span{font-size:10.5px}.mlx-lang-txt{text-align:center}}
+.mlx-lang.no-labels .mlx-flag span{display:none}
+.mlx-lang-row{display:flex;gap:18px;justify-content:center}.mlx-lang-row2 .mlx-flag svg{width:42px;height:42px}
+@media(max-width:700px){.mlx-lang-row{gap:10px}.mlx-lang-row2 .mlx-flag svg{width:38px;height:38px}}
