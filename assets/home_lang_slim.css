@@ -1,0 +1,14 @@
+/* >>> LANG-SLIM START: language card on the 2nd screen above the journeys, slim (Anna, variant 2): one-line heading, smaller text and flags, no shadow, same cream colour and border as the journey boxes (desktop) */
+@media (min-width: 1100px) {
+  html body.home .mlx-journeys .mlx-lang2 .mlx-lang2-card { box-shadow: none !important; border: 1.5px solid rgba(212, 162, 76, .7) !important; background: #fbf8f2 !important;
+    padding-top: clamp(10px, calc(1.6 * var(--mlx-u)), 18px) !important; padding-bottom: clamp(10px, calc(1.6 * var(--mlx-u)), 18px) !important; padding-left: 44px !important; padding-right: 36px !important; gap: 24px; }
+  html body.home .mlx-journeys .mlx-lang2 .mlx-lang2-k { font-size: 10.5px; letter-spacing: .26em; margin: 0 0 5px; }
+  html body.home .mlx-journeys .mlx-lang2 .mlx-lang2-h { font-size: clamp(20px, calc(0.8 * var(--mlx-u) + 15px), 26px) !important; margin: 0 0 3px !important; line-height: 1.15; }
+  html body.home .mlx-journeys .mlx-lang2 .mlx-lang2-h span { display: inline !important; }
+  html body.home .mlx-journeys .mlx-lang2 .mlx-lang2-p { font-size: 13.5px !important; line-height: 1.4; }
+  html body.home .mlx-journeys .mlx-lang2 .mlx-flag { width: 50px; gap: 4px; }
+  html body.home .mlx-journeys .mlx-lang2 .mlx-flag svg { width: 32px; height: 32px; box-shadow: 0 0 0 1px rgba(0,0,0,.1); }
+  html body.home .mlx-journeys .mlx-lang2 .mlx-flag span { font-size: 9.5px; }
+  html body.home .mlx-journeys .mlx-lang2 .mlx-lang2-flags { gap: 0 2px; }
+}
+/* <<< LANG-SLIM END */

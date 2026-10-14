@@ -7,14 +7,14 @@ A block looks like  /* >>> NAME START ... */ ... /* <<< NAME END */  and its sou
 Backups go to backups/wp/gs5_before_<name>_<on|off>_<time>.json.
 
 Usage: css_block_toggle.py NAME on|off [assets/file.css]
-Known blocks: HERO-LANG (assets/home_hero_lang.css), HOME-JOURNEYS (assets/home_journeys.css),
+Known blocks: LANG-SLIM (assets/home_lang_slim.css), HERO-LANG (assets/home_hero_lang.css), HOME-JOURNEYS (assets/home_journeys.css),
               ELEVATE-FIT (assets/home_elevate_fit.css)
 """
 import json, re, subprocess, sys, time, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 API = 'https://medluxlife-6j8sz55bpn.live-website.com/wp-json/wp/v2/global-styles/5'
-FILES = {'HERO-LANG': 'assets/home_hero_lang.css', 'HOME-JOURNEYS': 'assets/home_journeys.css', 'ELEVATE-FIT': 'assets/home_elevate_fit.css'}
+FILES = {'LANG-SLIM': 'assets/home_lang_slim.css', 'HERO-LANG': 'assets/home_hero_lang.css', 'HOME-JOURNEYS': 'assets/home_journeys.css', 'ELEVATE-FIT': 'assets/home_elevate_fit.css'}
 
 
 def main():
