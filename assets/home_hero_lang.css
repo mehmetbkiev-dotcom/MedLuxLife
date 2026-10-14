@@ -1,0 +1,22 @@
+/* >>> HERO-LANG START: language card as a small glass card on the right side of the home banner (desktop >= 1200 px; below that it stays a normal card under the banner). Light glass (variant A); dark-glass variant B: card background rgba(11,6,32,.42), kicker #f0c46a, heading #fff, texts rgba(255,255,255,.88) */
+@media (min-width: 1200px) {
+  html body.home main .wp-block-post-content { position: relative; }
+  html body.home .wp-site-blocks .mlx-journeys > .mlx-lang2 { position: absolute !important; z-index: 5; top: min(calc((750px - 72px) / 2 - 10px), calc((100svh - 72px - var(--wp-admin--admin-bar--height, 0px)) / 2 - 30px)); right: max(28px, calc((100% - 1840px) / 2)); transform: translateY(-50%);
+    width: clamp(300px, 24vw, 430px); padding: 0 !important; margin: 0 !important; background: transparent; }
+  html body.home .mlx-journeys .mlx-lang2 .mlx-lang2-card { display: block; max-width: none; border-radius: 28px; border: 1.5px solid rgba(212,162,76,.9);
+    padding: clamp(18px, 1.5vw, 28px) clamp(18px, 1.6vw, 30px) !important; text-align: left;
+    background: rgba(255, 251, 244, .60); -webkit-backdrop-filter: blur(12px) saturate(1.15); backdrop-filter: blur(12px) saturate(1.15);
+    box-shadow: 0 26px 50px -22px rgba(0,0,0,.6), 0 2px 10px -4px rgba(0,0,0,.25); }
+  html body.home .mlx-journeys .mlx-lang2 .mlx-lang2-k { font-size: 10.5px; letter-spacing: .26em; margin: 0 0 8px; color: #9a6b1c; }
+  html body.home .mlx-journeys .mlx-lang2 .mlx-lang2-h { font-size: clamp(22px, 1.7vw, 32px); line-height: 1.12; margin: 0 0 8px; color: #16141f; }
+  html body.home .mlx-journeys .mlx-lang2 .mlx-lang2-p { font-size: clamp(13px, .95vw, 15.5px); line-height: 1.45; color: #2c2838; margin: 0; }
+  html body.home .mlx-journeys .mlx-lang2 .mlx-lang2-flags { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 0; margin-top: clamp(14px, 1.2vw, 20px); max-width: none; }
+  html body.home .mlx-journeys .mlx-lang2 .mlx-flag { width: 20%; gap: 5px; }
+  html body.home .mlx-journeys .mlx-lang2 .mlx-flag svg { width: clamp(32px, 2.5vw, 44px); height: clamp(32px, 2.5vw, 44px); }
+  html body.home .mlx-journeys .mlx-lang2 .mlx-flag span { font-size: clamp(9.5px, .72vw, 11px); color: #2c2838; }
+  /* slogan on two lines ("Your Health, Upgraded." / "Your Journey, Elevated.") so the card has room on the right; the banner content area starts 72 px below the top (header); on short screens the card rises so it stays in view and clear of the Live Chat badge */
+  html body.home .wp-block-cover h1.wp-block-heading { max-width: calc(8.6em + 112px) !important; text-wrap: balance; }
+  /* 2nd screen: only the two journeys now, so they may be a bit larger */
+  html body.home { --mlx-u: calc((100svh - var(--wp-admin--admin-bar--height, 0px) + 250px) / 100); }
+}
+/* <<< HERO-LANG END */

@@ -8,7 +8,7 @@
   body.home main .wp-block-post-content > section:has(.ext-card-stacked) > .ext-section-intro { margin-bottom: 0 !important; }
   body.home main .wp-block-post-content > section:has(.ext-card-stacked) .ext-section-intro h2::after { margin-top: 10px !important; }
   body.home main .wp-block-post-content > section:has(.ext-card-stacked) .ext-section-intro p { margin-top: 10px !important; font-size: 1rem !important; line-height: 1.5 !important; max-width: 1000px !important; }
-  body.home main .wp-block-post-content > section:has(.ext-card-stacked) > .ext-grid { margin-top: clamp(14px, 2.4svh, 32px) !important; width: 100%; }
+  body.home main .wp-block-post-content > section:has(.ext-card-stacked) > .ext-grid { margin-top: clamp(14px, 2.4svh, 32px) !important; width: 100%; grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }   /* 3 cards side by side also at 1100-1199 px */
   body.home .ext-card-stacked.ext-card-stacked { gap: 0 !important; container-type: inline-size; }
   body.home .ext-card-stacked .ext-card-image { height: clamp(160px, min(calc(100svh - 72px - var(--wp-admin--admin-bar--height, 0px) - var(--mlx-elev-rest, 230px)), 95cqw), 600px); overflow: hidden; margin: 0 !important; }
   body.home .ext-card-stacked .ext-card-image img { width: 100% !important; height: 100% !important; aspect-ratio: auto !important; object-fit: cover !important; }
