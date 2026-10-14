@@ -1,0 +1,2 @@
+html body.home .wp-site-blocks .ext-grid > .ext-card:not(.ext-card-stacked):has(figure[class*="is-style-ext-preset--image--"]) { text-align: center; align-items: center !important; }
+html body.home .wp-site-blocks .ext-grid > .ext-card:not(.ext-card-stacked):has(figure[class*="is-style-ext-preset--image--"]) * { text-align: center !important; }
