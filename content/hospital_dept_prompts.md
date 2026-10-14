@@ -69,7 +69,7 @@ A doctor gently examines the front of the neck of a woman patient sitting uprigh
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### 🔴 PCOS and Hirsutism Clinic — ALAKASIZ: çilli yüz (Hirsutism ile aynı foto)
+### ✅ PCOS and Hirsutism Clinic — YAPILDI 2026-10-13 (Media 1732)
 
 ```
 Image for the hospital department page "PCOS and Hirsutism Clinic" of a premium medical-travel website.
@@ -77,7 +77,7 @@ A female doctor talks with a young woman in a bright consultation room and shows
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### 🔴 Hirsutism Clinic — ALAKASIZ: çilli yüz (PCOS ile aynı foto)
+### ✅ Hirsutism Clinic — YAPILDI 2026-10-13 (Media 1734)
 
 ```
 Image for the hospital department page "Hirsutism Clinic" of a premium medical-travel website.
@@ -85,7 +85,7 @@ A dermatologist wearing gloves uses a round magnifying lamp to examine the chin 
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### 🔴 Otolaryngology (ENT) — Zayıf: duvardaki muayene seti (Audiology ile aynı foto)
+### ✅ Otolaryngology (ENT) — YAPILDI 2026-10-13 (Media 1736)
 
 ```
 Image for the hospital department page "Otolaryngology (ENT)" of a premium medical-travel website.
@@ -93,7 +93,7 @@ An ENT doctor examines the ear of a smiling woman with an otoscope; an anatomy p
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### 🔴 Audiology — ALAKASIZ: duvardaki muayene seti (ENT ile aynı foto)
+### ✅ Audiology — YAPILDI 2026-10-13 (Media 1740)
 
 ```
 Image for the hospital department page "Audiology" of a premium medical-travel website.
@@ -101,7 +101,7 @@ An audiologist adjusts headphones on a patient sitting in a quiet hearing-test b
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### 🔴 Thyroid and Parathyroid Diseases and Surgery Clinic — Zayıf: sarı zeminde kan tüpleri
+### ✅ Thyroid and Parathyroid Diseases and Surgery Clinic — YAPILDI 2026-10-13 (Media 1742)
 
 ```
 Image for the hospital department page "Thyroid and Parathyroid Diseases and Surgery Clinic" of a premium medical-travel website.
@@ -109,7 +109,7 @@ A woman gently touches the front of her neck with both hands; a soft red glowing
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### 🔴 Gastroenterology — ALAKASIZ: ameliyathane (gastroenteroloji endoskopi/poliklinik)
+### ✅ Gastroenterology — YAPILDI 2026-10-13 (Media 1634)
 
 ```
 Image for the hospital department page "Gastroenterology" of a premium medical-travel website.
@@ -173,7 +173,7 @@ A laughing red-haired girl (about 7) with a butterfly landing on her nose in a s
 Rules: landscape 16:10, at least 1600 x 1000 px, one full-frame photorealistic photo; no text, letters, logos or brand names; no before/after; no blood or surgical site; no nudity; children fully clothed; no crosses or plus signs. Make 4 variations with different people, angles and room details.
 ```
 
-### 🔴 Emergency Medicine — ALAKASIZ: Amerikan itfaiye ambulansı, üzerinde yazı
+### ✅ Emergency Medicine — YAPILDI 2026-10-13 (Media 1789)
 
 ```
 Image for the hospital department page "Emergency Medicine" of a premium medical-travel website.
