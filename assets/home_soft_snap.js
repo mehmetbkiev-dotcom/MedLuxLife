@@ -15,7 +15,7 @@
   } }
   var mq = window.matchMedia('(pointer: fine) and (min-width: 1100px)');
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
-  var lastY = scrollY, dir = 0, timer = null, gliding = false;
+  var lastY = scrollY, dir = 0, timer = null, gliding = false, startY = scrollY;
   function bandVar() {   /* first screen = banner + language card: the banner height uses this */
     var b = document.querySelector('.mlx-lang2');
     if (b) document.documentElement.style.setProperty('--mlx-band-h', b.offsetHeight + 'px');
@@ -26,7 +26,7 @@
     var h = document.querySelector('header'), hh = h ? h.getBoundingClientRect().height : 0;
     var max = document.documentElement.scrollHeight - innerHeight, list = [0];
     Array.prototype.forEach.call(c.children, function (el, i) {
-      if (window.MLX_SNAP_SKIP) { if (el.matches(window.MLX_SNAP_SKIP)) return; }   /* optional: sections that share a screen with the one before */
+      if (el.matches(window.MLX_SNAP_SKIP || '.mlx-journeys')) return;   /* sections that share a screen with the one before (the journeys sit under the language card) */
       if (i) list.push(Math.round(el.getBoundingClientRect().top + scrollY - hh));
     });
     list.push(max);
@@ -37,8 +37,10 @@
     if (gliding) { gliding = false; return; }
     if (!mq.matches) return;
     if (reduce.matches) return;
-    var y = scrollY, range = innerHeight * 0.62, near = 40, best = null, bestD = 0;
-    points().forEach(function (p) {
+    var pts = points(), fromPoint = false;
+    pts.forEach(function (p) { if (3 - Math.abs(p - startY) >= 0) fromPoint = true; });   /* the scroll began on a section start: move one whole section */
+    var y = scrollY, range = fromPoint ? innerHeight + 4 : innerHeight * 0.62, near = fromPoint ? 0 : 40, best = null, bestD = 0;
+    pts.forEach(function (p) {
       var ahead = dir - 0 > 0 ? p - y : y - p;      /* distance ahead in the scroll direction */
       var dist = Math.abs(p - y), ok = false;
       if (ahead - 2 > 0) { if (range - ahead > 0) ok = true; }   /* section start coming up */
@@ -51,6 +53,7 @@
   }
   window.addEventListener('scroll', function () {
     var y = scrollY;
+    if (timer === null) { if (!gliding) startY = lastY; }   /* where this scroll gesture began */
     if (y - lastY !== 0) { if (!gliding) dir = y - lastY > 0 ? 1 : -1; }
     lastY = y;
     clearTimeout(timer);

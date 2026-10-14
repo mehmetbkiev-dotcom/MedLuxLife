@@ -1,0 +1,29 @@
+/* >>> HOME-JOURNEYS START: language card + both journeys share the 2nd screen (desktop); markup: div.mlx-journeys wraps the two journey sections */
+html body.home .wp-site-blocks .mlx-journeys, html body.home .wp-site-blocks .mlx-journeys > section { margin-top: 0 !important; margin-bottom: 0 !important; }
+@media (min-width: 1100px) {
+  html body.home .mlx-lang2 { padding: clamp(10px, 2.2svh, 30px) 20px 0 !important; position: relative; z-index: 2; }
+  html body.home .mlx-lang2-card { padding-top: clamp(14px, 2.6svh, 30px); padding-bottom: clamp(14px, 2.6svh, 30px); }
+  html body.home .mlx-lang2-k { margin-bottom: 6px; }
+  html body.home .mlx-lang2-h { font-size: clamp(26px, 1.4svh + 18px, 34px); margin-bottom: 6px; }
+  html body.home .mlx-lang2-p { font-size: 15px; }
+  html body.home .wp-site-blocks .mlx-journeys { display: grid !important; grid-template-columns: repeat(2, minmax(0, 632px)); justify-content: center; gap: 24px; align-items: stretch; align-content: center; background: transparent;
+    margin-top: 0 !important; margin-bottom: 0 !important; padding: clamp(12px, 2.4svh, 34px) 40px clamp(14px, 2.8svh, 40px) !important; box-sizing: border-box;
+    min-height: calc(100svh - 72px - var(--wp-admin--admin-bar--height, 0px) - var(--mlx-band-h, 180px)); }
+  html body.home .wp-site-blocks .mlx-journeys > section { margin: 0 !important; padding: clamp(12px, 5.2svh - 19px, 34px) 20px !important; border-radius: 28px;
+    border: 1.5px solid rgba(212,162,76,.55); box-shadow: 0 18px 36px -24px rgba(22,20,31,.45); background: #fbf8f2 !important; }
+  html body.home .wp-site-blocks .mlx-journeys .ext-section-intro { margin: 0 !important; padding: 0 !important; gap: 0 !important; }
+  html body.home .wp-site-blocks .mlx-journeys .ext-section-intro > * { margin-top: 0 !important; margin-bottom: 0 !important; }
+  html body.home .wp-site-blocks .mlx-journeys .ext-section-intro h2 { font-size: clamp(24px, 2.26svh + 10.5px, 34px) !important; line-height: 1.1 !important; }
+  html body.home .wp-site-blocks .mlx-journeys .ext-section-intro hr, html body.home .wp-site-blocks .mlx-journeys .ext-section-intro .wp-block-separator { display: none !important; }
+  html body.home .wp-site-blocks .mlx-journeys .ext-section-intro p { font-size: clamp(14px, 0.48svh + 10.9px, 16px) !important; margin-top: 4px !important; line-height: 1.4 !important; }
+  html body.home .wp-site-blocks .mlx-journeys .ext-section-intro p br { display: none; }
+  html body.home .wp-site-blocks .mlx-journeys .ext-grid { display: flex !important; flex-direction: column; gap: clamp(6px, 2.25svh - 7.5px, 16px) !important; margin-top: clamp(8px, 3.2svh - 10px, 24px) !important; }
+  html body.home .wp-site-blocks .mlx-journeys .ext-grid > .ext-card.ext-card { min-height: 0 !important; padding: clamp(7px, 2.7svh - 9.5px, 18px) 16px !important; border-radius: 16px !important; align-items: stretch !important; }
+  html body.home .wp-site-blocks .mlx-journeys .ext-grid > .ext-card.ext-card:not(.x):has(figure) * { text-align: left !important; }
+  html body.home .wp-site-blocks .mlx-journeys .ext-card-body.ext-card-body { padding: 0 0 0 46px !important; display: block !important; position: relative; }
+  html body.home .wp-site-blocks .mlx-journeys .ext-card-body > figure.wp-block-image.wp-block-image:not(.x):not(.y) { position: absolute !important; left: 0; top: 50%; transform: translateY(-50%); margin: 0 !important; width: 30px !important; height: auto !important; min-height: 0 !important; padding: 0 !important; }
+  html body.home .wp-site-blocks .mlx-journeys .ext-card-body > figure.wp-block-image.wp-block-image:not(.x):not(.y)::before { font-size: clamp(33px, 2.06svh + 20.4px, 42px) !important; line-height: 1 !important; text-align: center !important; display: block; margin: 0 !important; }
+  html body.home .wp-site-blocks .mlx-journeys .ext-card-body > h3 { font-size: clamp(18px, 0.97svh + 11.8px, 22px) !important; margin: 0 !important; line-height: 1.2 !important; }
+  html body.home .wp-site-blocks .mlx-journeys .ext-card-body > p { font-size: clamp(13.5px, 0.32svh + 11.45px, 15px) !important; line-height: 1.4 !important; margin: 2px 0 0 !important; }
+}
+/* <<< HOME-JOURNEYS END */
