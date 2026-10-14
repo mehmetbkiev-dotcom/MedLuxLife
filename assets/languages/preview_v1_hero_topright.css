@@ -1,0 +1,18 @@
+/* Variant 1: glass card in the top-right corner of the banner (over the Eiffel tower / pyramids), beach and palms stay visible */
+@media (min-width: 1200px) {
+  html body.home .wp-site-blocks .mlx-journeys > .mlx-lang2 { top: 18px !important; transform: none !important; right: max(20px, calc((100% - 1880px) / 2)) !important; width: clamp(290px, 22vw, 390px) !important; }
+  html body.home .mlx-journeys .mlx-lang2 .mlx-lang2-card { padding: clamp(14px, 1.2vw, 22px) clamp(16px, 1.4vw, 26px) !important; border-radius: 24px; }
+  html body.home .mlx-journeys .mlx-lang2 .mlx-lang2-h { font-size: clamp(20px, 1.55vw, 29px); }
+  html body.home .mlx-journeys .mlx-lang2 .mlx-lang2-p { font-size: clamp(12.5px, .9vw, 15px); }
+  html body.home .mlx-journeys .mlx-lang2 .mlx-lang2-flags { margin-top: clamp(10px, 1vw, 16px); gap: 8px 0; }
+  html body.home .mlx-journeys .mlx-lang2 .mlx-flag svg { width: clamp(30px, 2.3vw, 40px); height: clamp(30px, 2.3vw, 40px); }
+  /* colours */
+  html.c-b body.home .mlx-journeys .mlx-lang2 .mlx-lang2-card { background: rgba(11, 6, 32, .42); }
+  html.c-c body.home .mlx-journeys .mlx-lang2 .mlx-lang2-card { background: rgba(20, 15, 42, .80); }
+  html.c-d body.home .mlx-journeys .mlx-lang2 .mlx-lang2-card { background: linear-gradient(135deg, rgba(255, 238, 205, .62), rgba(212, 162, 76, .42)); }
+  html.c-b body.home .mlx-journeys .mlx-lang2 .mlx-lang2-k, html.c-c body.home .mlx-journeys .mlx-lang2 .mlx-lang2-k { color: #f0c46a; }
+  html.c-b body.home .mlx-journeys .mlx-lang2 .mlx-lang2-h, html.c-c body.home .mlx-journeys .mlx-lang2 .mlx-lang2-h { color: #fff; }
+  html.c-b body.home .mlx-journeys .mlx-lang2 :is(.mlx-lang2-p, .mlx-flag span), html.c-c body.home .mlx-journeys .mlx-lang2 :is(.mlx-lang2-p, .mlx-flag span) { color: rgba(255, 255, 255, .88); }
+  html.c-d body.home .mlx-journeys .mlx-lang2 .mlx-lang2-k { color: #6e4a0e; }
+  html.c-d body.home .mlx-journeys .mlx-lang2 :is(.mlx-lang2-p, .mlx-flag span) { color: #2a2214; }
+}
