@@ -26,7 +26,7 @@
     var h = document.querySelector('header'), hh = h ? h.getBoundingClientRect().height : 0;
     var max = document.documentElement.scrollHeight - innerHeight, list = [0];
     Array.prototype.forEach.call(c.children, function (el, i) {
-      if (el.classList.contains('mlx-lang2')) return;   /* language card belongs to the first screen with the banner */
+      if (window.MLX_SNAP_SKIP) { if (el.matches(window.MLX_SNAP_SKIP)) return; }   /* optional: sections that share a screen with the one before */
       if (i) list.push(Math.round(el.getBoundingClientRect().top + scrollY - hh));
     });
     list.push(max);

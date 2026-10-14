@@ -1,0 +1,12 @@
+/* Home: language card + "Elevate" section share one screen (desktop) */
+@media (min-width: 1100px) {
+  body.home .mlx-lang2 { padding-top: clamp(10px, 2svh, 28px) !important; padding-bottom: 0 !important; }
+  body.home .mlx-lang2-card { padding-top: clamp(12px, 2svh, 24px); padding-bottom: clamp(12px, 2svh, 24px); }
+  body.home main .wp-block-post-content > section:has(.ext-card-stacked) {
+    min-height: calc(100svh - 72px - var(--wp-admin--admin-bar--height, 0px) - var(--mlx-band-h, 200px)) !important;
+    padding-top: clamp(14px, 2.6svh, 44px) !important; padding-bottom: clamp(14px, 2.6svh, 44px) !important;
+  }
+  body.home main .wp-block-post-content > section:has(.ext-card-stacked) .ext-section-intro p { margin-top: 8px !important; }
+  body.home .ext-card-stacked .ext-card-image { height: clamp(110px, calc(100svh - 72px - var(--wp-admin--admin-bar--height, 0px) - var(--mlx-band-h, 200px) - 300px), 340px) !important; }
+  body.home .ext-card-stacked .ext-card-content { padding-top: 12px !important; padding-bottom: 14px !important; }
+}
