@@ -11,3 +11,10 @@
 .mlx-sugg-all:hover { background: #f7f1e6; }
 main .mlx-sugg { left: 0; right: auto; width: 100%; }
 @media (max-width: 600px) { header .mlx-sugg { position: fixed; top: 64px; left: 12px; right: 12px; width: auto; } }
+
+/* Live search: keep colours readable inside the dark/transparent header */
+header .mlx-sugg .mlx-sugg-all { color: #b8862e !important; opacity: 1 !important; background: #fff; }
+header .mlx-sugg .mlx-sugg-all:hover { background: #f7f1e6; }
+header .mlx-sugg .mlx-sugg-t { color: #16141f !important; }
+header .mlx-sugg .mlx-sugg-v { color: #b8862e !important; }
+header .mlx-sugg .mlx-sugg-b, header .mlx-sugg .mlx-sugg-empty { color: #6b6878 !important; }
