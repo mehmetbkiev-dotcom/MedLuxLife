@@ -1,5 +1,5 @@
 
-.mlx-lang2{background:#fff;padding:44px 20px 40px;margin:0!important;width:100vw;max-width:100vw;margin-left:calc(50% - 50vw)!important;box-sizing:border-box}
+.mlx-lang2{background:#fff;padding:44px 20px 40px;margin-top:0!important;margin-bottom:0!important;box-sizing:border-box}
 .mlx-lang2-card{max-width:1140px;margin:0 auto;background:#fff;border:2px solid #d4a24c;border-radius:999px;box-shadow:0 26px 54px -20px rgba(22,20,31,.45),0 6px 16px -6px rgba(22,20,31,.18);padding:30px 72px;display:flex;align-items:center;justify-content:space-between;gap:36px}
 .mlx-lang2-txt{flex:1 1 360px;min-width:0}
 .mlx-lang2-k{font:600 12px/1 Inter,sans-serif;letter-spacing:.28em;color:#b8862e;text-transform:uppercase;margin:0 0 10px}
