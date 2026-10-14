@@ -3,6 +3,16 @@
    Keep this file free of less-than and ampersand characters: WordPress escapes them in inline scripts. */
 (function () {
   if (!document.body.classList.contains('home')) return;
+  /* reload (F5) on the home page starts at the top instead of the old scroll position; Back button keeps its position */
+  var nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+  if (nav) { if (nav.type === 'reload') {
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    window.scrollTo(0, 0);
+    window.addEventListener('load', function () {
+      window.scrollTo(0, 0);
+      setTimeout(function () { if ('scrollRestoration' in history) history.scrollRestoration = 'auto'; }, 400);   /* Back button works normally again */
+    });
+  } }
   var mq = window.matchMedia('(pointer: fine) and (min-width: 1100px)');
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
   var lastY = scrollY, dir = 0, timer = null, gliding = false;
@@ -27,7 +37,7 @@
     if (gliding) { gliding = false; return; }
     if (!mq.matches) return;
     if (reduce.matches) return;
-    var y = scrollY, range = innerHeight * 0.4, near = 40, best = null, bestD = 0;
+    var y = scrollY, range = innerHeight * 0.62, near = 40, best = null, bestD = 0;
     points().forEach(function (p) {
       var ahead = dir - 0 > 0 ? p - y : y - p;      /* distance ahead in the scroll direction */
       var dist = Math.abs(p - y), ok = false;
