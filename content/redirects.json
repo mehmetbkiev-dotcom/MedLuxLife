@@ -1,0 +1,26 @@
+[
+ [
+  "^/(de/|tr/)?services/?$",
+  "/$1health/"
+ ],
+ [
+  "^/(de/|tr/)?booking/?$",
+  "/$1travel/"
+ ],
+ [
+  "^/(de/|tr/)?about/?$",
+  "/$1about-us/"
+ ],
+ [
+  "^/(de/|tr/)?(health/(clinical-treatments/)?)?restorative-hair-therapies/?$",
+  "/$1health/clinical-treatments/hair-transplantation/"
+ ],
+ [
+  "^/(de/|tr/)?sample-page/?$",
+  "/$1"
+ ],
+ [
+  "^/(de/|tr/)?(\\d{4}/\\d{2}/(\\d{2}/)?)?hello-world/?$",
+  "/$1"
+ ]
+]
