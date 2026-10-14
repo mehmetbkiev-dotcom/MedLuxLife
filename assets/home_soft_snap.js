@@ -23,10 +23,10 @@
   bandVar(); window.addEventListener('resize', bandVar); window.addEventListener('load', bandVar);
   function points() {
     var c = document.querySelector('main .wp-block-post-content') || document.querySelector('main');
-    var h = document.querySelector('header'), hh = h ? h.getBoundingClientRect().height : 0;
+    var h = document.querySelector('header'), hh = h ? Math.max(0, h.getBoundingClientRect().bottom) : 0;   /* header bottom edge: also counts the WordPress admin bar when logged in */
     var max = document.documentElement.scrollHeight - innerHeight, list = [0];
     Array.prototype.forEach.call(c.children, function (el, i) {
-      if (el.matches(window.MLX_SNAP_SKIP || '.mlx-journeys')) return;   /* sections that share a screen with the one before (the journeys sit under the language card) */
+      if (window.MLX_SNAP_SKIP) { if (el.matches(window.MLX_SNAP_SKIP)) return; }   /* optional: sections that share a screen with the one before */
       if (i) list.push(Math.round(el.getBoundingClientRect().top + scrollY - hh));
     });
     list.push(max);

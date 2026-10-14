@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """Home page 2nd screen: language card + both journeys (on) or the old order (off).
 
-on  : wraps "Your Medical Journey" + "Travel Journey" in a group (div.mlx-journeys) right after the
-      language card and adds the HOME-JOURNEYS CSS block (assets/home_journeys.css) to global styles.
-off : moves both journeys back to the end of the page (after the FAQ) and removes the CSS block.
-      The snap script just skips .mlx-journeys when it exists, so the footer needs no change.
+on  : puts the language card + "Your Medical Journey" + "Travel Journey" in one group (div.mlx-journeys)
+      where the language card was, and adds the HOME-JOURNEYS CSS block (assets/home_journeys.css) to
+      global styles. On desktop that group is one screen: card on top, journeys side by side, centred.
+off : language card back on its own after the banner, both journeys back to the end of the page (after
+      the FAQ), CSS block removed. The snap script needs no change either way. The "Elevate" block
+      (ELEVATE-FIT) is separate and stays.
 
 Usage: home_journeys_toggle.py on|off [--dry]
 """
@@ -69,17 +71,19 @@ def main():
     if mode == 'off':
         if wrapped:
             w = wrapped[0]
-            inner = w[len(WRAP_OPEN):-len(WRAP_CLOSE)]
-            rest = [b for b in blocks if b is not w]
-            raw = '\n\n'.join(rest + top_blocks(inner))
+            inner = top_blocks(w[len(WRAP_OPEN):-len(WRAP_CLOSE)])
+            band = [b for b in inner if 'mlx-lang2' in b[:200]]
+            jour = [b for b in inner if b not in band]
+            i = blocks.index(w)
+            raw = '\n\n'.join(blocks[:i] + band + blocks[i + 1:] + jour)
         css = re.sub(r'\n*' + re.escape(CSS_START) + r'.*?' + re.escape(CSS_END) + r'\n?', '\n', css, flags=re.S).rstrip() + '\n'
     else:
         if not wrapped:
             jour = [b for b in blocks if is_journey(b)]
             assert len(jour) == 2, 'journey sections not found'
             rest = [b for b in blocks if b not in jour]
-            band = next(i for i, b in enumerate(rest) if 'mlx-lang2' in b)
-            rest.insert(band + 1, WRAP_OPEN + '\n\n'.join(jour) + WRAP_CLOSE)
+            bi = next(i for i, b in enumerate(rest) if 'mlx-lang2' in b[:200])
+            rest[bi] = WRAP_OPEN + '\n\n'.join([rest[bi]] + jour) + WRAP_CLOSE
             raw = '\n\n'.join(rest)
         if CSS_START not in css:
             css = css.rstrip() + '\n\n' + (ROOT / 'assets' / 'home_journeys.css').read_text()
