@@ -6,11 +6,17 @@
   var mq = window.matchMedia('(pointer: fine) and (min-width: 1100px)');
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
   var lastY = scrollY, dir = 0, timer = null, gliding = false;
+  function bandVar() {   /* first screen = banner + language card: the banner height uses this */
+    var b = document.querySelector('.mlx-lang2');
+    if (b) document.documentElement.style.setProperty('--mlx-band-h', b.offsetHeight + 'px');
+  }
+  bandVar(); window.addEventListener('resize', bandVar); window.addEventListener('load', bandVar);
   function points() {
     var c = document.querySelector('main .wp-block-post-content') || document.querySelector('main');
     var h = document.querySelector('header'), hh = h ? h.getBoundingClientRect().height : 0;
     var max = document.documentElement.scrollHeight - innerHeight, list = [0];
     Array.prototype.forEach.call(c.children, function (el, i) {
+      if (el.classList.contains('mlx-lang2')) return;   /* language card belongs to the first screen with the banner */
       if (i) list.push(Math.round(el.getBoundingClientRect().top + scrollY - hh));
     });
     list.push(max);

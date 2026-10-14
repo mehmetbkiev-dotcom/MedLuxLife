@@ -1,0 +1,14 @@
+/* Home first screen = banner + language card together (desktop, 2026-10-14) */
+@media (min-width: 1100px) {
+  body.home main .ext-hero-section .wp-block-cover {
+    min-height: max(400px, calc(100svh - var(--mlx-band-h, 240px) - var(--wp-admin--admin-bar--height, 0px))) !important;
+    padding-top: calc(72px + 1svh) !important; padding-bottom: 1.5svh !important;
+  }
+  body.home main .ext-hero-section .wp-block-cover__inner-container img.wp-image-164 { max-height: clamp(80px, 15svh, 150px); width: auto; }
+  body.home .mlx-lang2 { padding-top: clamp(12px, 2.6svh, 40px) !important; padding-bottom: clamp(14px, 2.8svh, 40px) !important; }
+  body.home .mlx-lang2-card { padding-top: clamp(14px, 2.4svh, 30px); padding-bottom: clamp(14px, 2.4svh, 30px); }
+}
+@media (min-width: 1100px) and (max-height: 700px) {
+  body.home main .ext-hero-section .wp-block-cover__inner-container .wp-block-buttons { margin-top: 10px !important; }
+  body.home main .ext-hero-section .wp-block-cover__inner-container h1 { margin-top: 6px !important; margin-bottom: 6px !important; }
+}
