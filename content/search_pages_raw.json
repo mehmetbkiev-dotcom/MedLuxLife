@@ -1,0 +1,5346 @@
+{
+ "pages": {
+  "616": {
+   "title": "Stornierungsbedingungen",
+   "parent": 0
+  },
+  "612": {
+   "title": "Widerrufsbelehrung",
+   "parent": 0
+  },
+  "604": {
+   "title": "Einwilligung Gesundheitsdaten",
+   "parent": 0
+  },
+  "602": {
+   "title": "Impressum",
+   "parent": 0
+  },
+  "596": {
+   "title": "AGB",
+   "parent": 0
+  },
+  "546": {
+   "title": "Anaesthesiology and Reanimation",
+   "parent": 259
+  },
+  "545": {
+   "title": "Intensive Care Unit",
+   "parent": 259
+  },
+  "544": {
+   "title": "Emergency Medicine",
+   "parent": 259
+  },
+  "543": {
+   "title": "Transfusion Centre",
+   "parent": 259
+  },
+  "542": {
+   "title": "Medical Histology and Embryology",
+   "parent": 259
+  },
+  "541": {
+   "title": "Medical Microbiology",
+   "parent": 259
+  },
+  "540": {
+   "title": "Medical Pathology",
+   "parent": 259
+  },
+  "539": {
+   "title": "Medical Genetics",
+   "parent": 259
+  },
+  "538": {
+   "title": "Imaging Unit",
+   "parent": 259
+  },
+  "537": {
+   "title": "Radiology",
+   "parent": 259
+  },
+  "536": {
+   "title": "Neonatal Intensive Care Unit (NICU)",
+   "parent": 259
+  },
+  "535": {
+   "title": "Child and Adolescent Psychiatry",
+   "parent": 259
+  },
+  "534": {
+   "title": "Paediatric Rheumatology",
+   "parent": 259
+  },
+  "533": {
+   "title": "Paediatric Infectious Diseases",
+   "parent": 259
+  },
+  "532": {
+   "title": "Paediatric Allergy and Immunology",
+   "parent": 259
+  },
+  "531": {
+   "title": "Paediatric Gastroenterology, Hepatology and Nutrition",
+   "parent": 259
+  },
+  "530": {
+   "title": "Paediatric Endocrinology",
+   "parent": 259
+  },
+  "529": {
+   "title": "Paediatric Nephrology",
+   "parent": 259
+  },
+  "528": {
+   "title": "Paediatric Neurology",
+   "parent": 259
+  },
+  "527": {
+   "title": "Paediatric Bone Marrow Transplantation",
+   "parent": 259
+  },
+  "526": {
+   "title": "Paediatric Haematology",
+   "parent": 259
+  },
+  "525": {
+   "title": "Paediatric Oncology",
+   "parent": 259
+  },
+  "524": {
+   "title": "Paediatric Cardiology",
+   "parent": 259
+  },
+  "523": {
+   "title": "Paediatric Surgery",
+   "parent": 259
+  },
+  "522": {
+   "title": "Paediatrics",
+   "parent": 259
+  },
+  "521": {
+   "title": "Nutrition and Dietetics",
+   "parent": 259
+  },
+  "520": {
+   "title": "Dermatology",
+   "parent": 259
+  },
+  "519": {
+   "title": "Immunology",
+   "parent": 259
+  },
+  "518": {
+   "title": "Infectious Diseases and Clinical Microbiology",
+   "parent": 259
+  },
+  "517": {
+   "title": "Chest Diseases (Pulmonology)",
+   "parent": 259
+  },
+  "516": {
+   "title": "Nephrology",
+   "parent": 259
+  },
+  "515": {
+   "title": "Gastroenterology",
+   "parent": 259
+  },
+  "514": {
+   "title": "Pituitary Clinic",
+   "parent": 259
+  },
+  "513": {
+   "title": "Thyroid and Parathyroid Diseases and Surgery Clinic",
+   "parent": 259
+  },
+  "512": {
+   "title": "Endocrinology and Metabolic Diseases",
+   "parent": 259
+  },
+  "511": {
+   "title": "Internal Medicine",
+   "parent": 259
+  },
+  "510": {
+   "title": "Urology",
+   "parent": 259
+  },
+  "509": {
+   "title": "Thoracic Surgery",
+   "parent": 259
+  },
+  "508": {
+   "title": "Endocrine Surgery",
+   "parent": 259
+  },
+  "507": {
+   "title": "Gastroenterological Surgery",
+   "parent": 259
+  },
+  "506": {
+   "title": "General Surgery",
+   "parent": 259
+  },
+  "505": {
+   "title": "Audiology",
+   "parent": 259
+  },
+  "504": {
+   "title": "Otolaryngology (ENT)",
+   "parent": 259
+  },
+  "503": {
+   "title": "Breast Surgery",
+   "parent": 259
+  },
+  "502": {
+   "title": "Hirsutism Clinic",
+   "parent": 259
+  },
+  "501": {
+   "title": "PCOS and Hirsutism Clinic",
+   "parent": 259
+  },
+  "500": {
+   "title": "Pelvic Pain and Endometriosis Clinic",
+   "parent": 259
+  },
+  "499": {
+   "title": "Perinatology",
+   "parent": 259
+  },
+  "498": {
+   "title": "Obstetrics and Gynaecology",
+   "parent": 259
+  },
+  "497": {
+   "title": "Parathyroid Transplant Clinic",
+   "parent": 259
+  },
+  "496": {
+   "title": "Liver Transplant Clinic",
+   "parent": 259
+  },
+  "495": {
+   "title": "Kidney Transplant Clinic",
+   "parent": 259
+  },
+  "494": {
+   "title": "Rheumatology",
+   "parent": 259
+  },
+  "493": {
+   "title": "Physical Therapy and Rehabilitation",
+   "parent": 259
+  },
+  "492": {
+   "title": "Psychology",
+   "parent": 259
+  },
+  "491": {
+   "title": "Psychiatry",
+   "parent": 259
+  },
+  "490": {
+   "title": "Algology (Pain Medicine)",
+   "parent": 259
+  },
+  "489": {
+   "title": "Neurology",
+   "parent": 259
+  },
+  "488": {
+   "title": "Interventional Radiology",
+   "parent": 259
+  },
+  "487": {
+   "title": "Cardiovascular Surgery",
+   "parent": 259
+  },
+  "486": {
+   "title": "Nuclear Medicine",
+   "parent": 259
+  },
+  "485": {
+   "title": "Adult Bone Marrow Transplantation",
+   "parent": 259
+  },
+  "484": {
+   "title": "Haematology",
+   "parent": 259
+  },
+  "483": {
+   "title": "Gynaecological Oncology",
+   "parent": 259
+  },
+  "283": {
+   "title": "Flight Tickets",
+   "parent": 25
+  },
+  "278": {
+   "title": "Hajj & Umrah",
+   "parent": 25
+  },
+  "277": {
+   "title": "Airport Transfer",
+   "parent": 25
+  },
+  "276": {
+   "title": "Hotel Reservation",
+   "parent": 25
+  },
+  "275": {
+   "title": "Holiday Packages",
+   "parent": 25
+  },
+  "274": {
+   "title": "Organ Transplantation Center",
+   "parent": 259
+  },
+  "273": {
+   "title": "Ophthalmology",
+   "parent": 259
+  },
+  "272": {
+   "title": "Neurosurgery",
+   "parent": 259
+  },
+  "271": {
+   "title": "In-Vitro Fertilization (IVF)",
+   "parent": 259
+  },
+  "270": {
+   "title": "Orthopedics and Traumatology",
+   "parent": 259
+  },
+  "269": {
+   "title": "Cardiology",
+   "parent": 259
+  },
+  "268": {
+   "title": "Medical Oncology",
+   "parent": 259
+  },
+  "267": {
+   "title": "IV Treatments",
+   "parent": 258
+  },
+  "266": {
+   "title": "Check-Up Packages",
+   "parent": 258
+  },
+  "265": {
+   "title": "Bariatric Surgery",
+   "parent": 258
+  },
+  "264": {
+   "title": "Medical Aesthetics",
+   "parent": 258
+  },
+  "263": {
+   "title": "Plastic Surgery",
+   "parent": 258
+  },
+  "261": {
+   "title": "Hair Transplantation",
+   "parent": 258
+  },
+  "260": {
+   "title": "Dental and Oral Health",
+   "parent": 258
+  },
+  "259": {
+   "title": "Hospital & Specialist Treatments",
+   "parent": 27
+  },
+  "258": {
+   "title": "Clinical Treatments",
+   "parent": 27
+  },
+  "3": {
+   "title": "Datenschutzerklärung",
+   "parent": 0
+  },
+  "27": {
+   "title": "Health",
+   "parent": 0
+  },
+  "26": {
+   "title": "Contact",
+   "parent": 0
+  },
+  "25": {
+   "title": "Travel",
+   "parent": 0
+  },
+  "24": {
+   "title": "About Us",
+   "parent": 0
+  },
+  "23": {
+   "title": "Home",
+   "parent": 0
+  }
+ },
+ "items": [
+  {
+   "id": 24,
+   "path": "/about-us/",
+   "parent": 0,
+   "en_title": "About Us",
+   "en": {
+    "h1": "About Us",
+    "cards": [
+     "Health",
+     "Travel",
+     "Our partners in Istanbul",
+     "We speak your language"
+    ]
+   },
+   "de": {
+    "h1": "About Us",
+    "cards": [
+     "Gesundheit",
+     "Reisen",
+     "Unsere Partner in Istanbul",
+     "Wir sprechen Ihre Sprache"
+    ]
+   },
+   "tr": {
+    "h1": "About Us",
+    "cards": [
+     "Sağlık",
+     "Seyahat",
+     "İstanbul’daki partnerlerimiz",
+     "Sizin dilinizi konuşuyoruz"
+    ]
+   }
+  },
+  {
+   "id": 25,
+   "path": "/travel/",
+   "parent": 0,
+   "en_title": "Travel",
+   "en": {
+    "h1": "Travel",
+    "cards": [
+     "1. Tell us your plans",
+     "2. Personal offer",
+     "3. Booking and documents",
+     "4. Support during your trip"
+    ]
+   },
+   "de": {
+    "h1": "Travel",
+    "cards": [
+     "1. Tell us your plans",
+     "2. Personal offer",
+     "3. Booking and documents",
+     "4. Support during your trip"
+    ]
+   },
+   "tr": {
+    "h1": "Travel",
+    "cards": [
+     "1. Tell us your plans",
+     "2. Personal offer",
+     "3. Booking and documents",
+     "4. Support during your trip"
+    ]
+   }
+  },
+  {
+   "id": 26,
+   "path": "/contact/",
+   "parent": 0,
+   "en_title": "Contact",
+   "en": {
+    "h1": "Contact",
+    "cards": [
+     "How does the free consultation work?+",
+     "Does MedLuxLife carry out medical treatments itself?+",
+     "Where do the treatments take place?+",
+     "Should I send medical documents with my first enquiry?+",
+     "How much does a treatment cost?+",
+     "Can I book travel services without a treatment?+",
+     "Do you arrange Hajj and Umrah trips?+",
+     "Which languages do you speak?+",
+     "Where is MedLuxLife based?+",
+     "How can I cancel a booking?+"
+    ]
+   },
+   "de": {
+    "h1": "Contact",
+    "cards": [
+     "How does the free consultation work?+",
+     "Does MedLuxLife carry out medical treatments itself?+",
+     "Where do the treatments take place?+",
+     "Should I send medical documents with my first enquiry?+",
+     "How much does a treatment cost?+",
+     "Can I book travel services without a treatment?+",
+     "Do you arrange Hajj and Umrah trips?+",
+     "Which languages do you speak?+",
+     "Where is MedLuxLife based?+",
+     "How can I cancel a booking?+"
+    ]
+   },
+   "tr": {
+    "h1": "Contact",
+    "cards": [
+     "How does the free consultation work?+",
+     "Does MedLuxLife carry out medical treatments itself?+",
+     "Where do the treatments take place?+",
+     "Should I send medical documents with my first enquiry?+",
+     "How much does a treatment cost?+",
+     "Can I book travel services without a treatment?+",
+     "Do you arrange Hajj and Umrah trips?+",
+     "Which languages do you speak?+",
+     "Where is MedLuxLife based?+",
+     "How can I cancel a booking?+"
+    ]
+   }
+  },
+  {
+   "id": 27,
+   "path": "/health/",
+   "parent": 0,
+   "en_title": "Health",
+   "en": {
+    "h1": "Health",
+    "cards": [
+     "Personal coordinator",
+     "Trusted partners",
+     "Treatment and travel in one plan",
+     "Aftercare",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Health",
+    "cards": [
+     "Personal coordinator",
+     "Trusted partners",
+     "Treatment and travel in one plan",
+     "Aftercare",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Health",
+    "cards": [
+     "Personal coordinator",
+     "Trusted partners",
+     "Treatment and travel in one plan",
+     "Aftercare",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 258,
+   "path": "/health/clinical-treatments/",
+   "parent": 27,
+   "en_title": "Clinical Treatments",
+   "en": {
+    "h1": "Clinical Treatments",
+    "cards": [
+     "Dental and Oral Health",
+     "Hair Transplantation",
+     "Plastic Surgery",
+     "Medical Aesthetics",
+     "Bariatric Surgery",
+     "Check-Up Packages",
+     "IV Treatments",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Clinical Treatments",
+    "cards": [
+     "Dental and Oral Health",
+     "Hair Transplantation",
+     "Plastische Chirurgie",
+     "Medical Aesthetics",
+     "Bariatric Surgery",
+     "Check-Up Packages",
+     "IV Treatments",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Clinical Treatments",
+    "cards": [
+     "Dental and Oral Health",
+     "Hair Transplantation",
+     "Plastik Cerrahi",
+     "Medical Aesthetics",
+     "Bariatric Surgery",
+     "Check-Up Packages",
+     "IV Treatments",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 259,
+   "path": "/health/hospital-specialist-treatments/",
+   "parent": 27,
+   "en_title": "Hospital & Specialist Treatments",
+   "en": {
+    "h1": "Hospital & Specialist Treatments",
+    "cards": [
+     "Ophthalmology",
+     "Orthopedics and Traumatology",
+     "Cardiology",
+     "Medical Oncology",
+     "In-Vitro Fertilization (IVF)",
+     "Organ Transplantation Center",
+     "Neurosurgery",
+     "Cancer care",
+     "Heart and vascular",
+     "Brain, nerves and mental health",
+     "Bones, joints and rehabilitation",
+     "Transplantation",
+     "Women’s health and fertility",
+     "Eye, ear, nose and throat",
+     "Surgery",
+     "Internal medicine",
+     "Children’s health",
+     "Diagnostics, emergency and intensive care",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Hospital & Specialist Treatments",
+    "cards": [
+     "Ophthalmology",
+     "Orthopedics and Traumatology",
+     "Cardiology",
+     "Medical Oncology",
+     "In-Vitro Fertilization (IVF)",
+     "Organ Transplantation Center",
+     "Neurosurgery",
+     "Cancer care",
+     "Heart and vascular",
+     "Brain, nerves and mental health",
+     "Bones, joints and rehabilitation",
+     "Transplantation",
+     "Women’s health and fertility",
+     "Eye, ear, nose and throat",
+     "Surgery",
+     "Internal medicine",
+     "Children’s health",
+     "Diagnostics, emergency and intensive care",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Hospital & Specialist Treatments",
+    "cards": [
+     "Ophthalmology",
+     "Orthopedics and Traumatology",
+     "Cardiology",
+     "Medical Oncology",
+     "In-Vitro Fertilization (IVF)",
+     "Organ Transplantation Center",
+     "Neurosurgery",
+     "Cancer care",
+     "Heart and vascular",
+     "Brain, nerves and mental health",
+     "Bones, joints and rehabilitation",
+     "Transplantation",
+     "Women’s health and fertility",
+     "Eye, ear, nose and throat",
+     "Surgery",
+     "Internal medicine",
+     "Children’s health",
+     "Diagnostics, emergency and intensive care",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 260,
+   "path": "/health/clinical-treatments/dental-and-oral-health/",
+   "parent": 258,
+   "en_title": "Dental and Oral Health",
+   "en": {
+    "h1": "Dental and Oral Health",
+    "cards": [
+     "Hollywood Smile",
+     "Dental Implants",
+     "All-on-4 and All-on-6",
+     "Prosthetic Dental Treatments",
+     "Implant-Supported Prostheses",
+     "Teeth Whitening",
+     "Zirconium Veneers",
+     "Periodontology (Gum Treatment)",
+     "Restorative Dental Treatments",
+     "Root Canal Treatment",
+     "Masseter Botox (Jaw Botox)",
+     "TMJ Treatment",
+     "Orthodontics",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Dental and Oral Health",
+    "cards": [
+     "Hollywood Smile",
+     "Dental Implants",
+     "All-on-4 and All-on-6",
+     "Prosthetic Dental Treatments",
+     "Implant-Supported Prostheses",
+     "Teeth Whitening",
+     "Zirconium Veneers",
+     "Periodontology (Gum Treatment)",
+     "Restorative Dental Treatments",
+     "Root Canal Treatment",
+     "Masseter Botox (Jaw Botox)",
+     "TMJ Treatment",
+     "Orthodontics",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Dental and Oral Health",
+    "cards": [
+     "Hollywood Smile",
+     "Dental Implants",
+     "All-on-4 and All-on-6",
+     "Prosthetic Dental Treatments",
+     "Implant-Supported Prostheses",
+     "Teeth Whitening",
+     "Zirconium Veneers",
+     "Periodontology (Gum Treatment)",
+     "Restorative Dental Treatments",
+     "Root Canal Treatment",
+     "Masseter Botox (Jaw Botox)",
+     "TMJ Treatment",
+     "Orthodontics",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 261,
+   "path": "/health/clinical-treatments/hair-transplantation/",
+   "parent": 258,
+   "en_title": "Hair Transplantation",
+   "en": {
+    "h1": "Hair Transplantation",
+    "cards": [
+     "Hair and Scalp Analysis",
+     "FUE (Follicular Unit Extraction)",
+     "Beard and Moustache Transplant",
+     "Eyebrow Transplant",
+     "Sapphire FUE",
+     "DHI (Direct Hair Implantation)",
+     "FUT (Follicular Unit Transplantation)",
+     "Exosome Therapy",
+     "Hair Mesotherapy",
+     "Red Light Therapy",
+     "PRP (Platelet-Rich Plasma)",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Hair Transplantation",
+    "cards": [
+     "Hair and Scalp Analysis",
+     "FUE (Follicular Unit Extraction)",
+     "Beard and Moustache Transplant",
+     "Eyebrow Transplant",
+     "Sapphire FUE",
+     "DHI (Direct Hair Implantation)",
+     "FUT (Follicular Unit Transplantation)",
+     "Exosome Therapy",
+     "Hair Mesotherapy",
+     "Red Light Therapy",
+     "PRP (Platelet-Rich Plasma)",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Hair Transplantation",
+    "cards": [
+     "Hair and Scalp Analysis",
+     "FUE (Follicular Unit Extraction)",
+     "Beard and Moustache Transplant",
+     "Eyebrow Transplant",
+     "Sapphire FUE",
+     "DHI (Direct Hair Implantation)",
+     "FUT (Follicular Unit Transplantation)",
+     "Exosome Therapy",
+     "Hair Mesotherapy",
+     "Red Light Therapy",
+     "PRP (Platelet-Rich Plasma)",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 263,
+   "path": "/health/clinical-treatments/plastic-surgery/",
+   "parent": 258,
+   "en_title": "Plastic Surgery",
+   "en": {
+    "h1": "Plastic Surgery",
+    "cards": [
+     "Mommy Makeover",
+     "Rhinoplasty",
+     "Abdominoplasty (Tummy Tuck)",
+     "Breast Augmentation",
+     "Breast Reduction",
+     "Gynecomastia Surgery",
+     "Brachioplasty (Arm Lift)",
+     "Brazilian Butt Lift (BBL)",
+     "Thigh Lift",
+     "Blepharoplasty (Eyelid Surgery)",
+     "Facelift",
+     "Buccal Fat Removal",
+     "Liposuction",
+     "Breast Lift (Mastopexy)",
+     "Otoplasty (Ear Correction)",
+     "Neck Lift",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Plastische Chirurgie",
+    "cards": [
+     "Mommy Makeover",
+     "Rhinoplasty",
+     "Abdominoplasty (Tummy Tuck)",
+     "Breast Augmentation",
+     "Breast Reduction",
+     "Gynecomastia Surgery",
+     "Brachioplasty (Arm Lift)",
+     "Brazilian Butt Lift (BBL)",
+     "Thigh Lift",
+     "Blepharoplasty (Eyelid Surgery)",
+     "Facelift",
+     "Buccal Fat Removal",
+     "Liposuction",
+     "Breast Lift (Mastopexy)",
+     "Otoplasty (Ear Correction)",
+     "Neck Lift",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Plastik Cerrahi",
+    "cards": [
+     "Mommy Makeover",
+     "Rhinoplasty",
+     "Abdominoplasty (Tummy Tuck)",
+     "Breast Augmentation",
+     "Breast Reduction",
+     "Gynecomastia Surgery",
+     "Brachioplasty (Arm Lift)",
+     "Brazilian Butt Lift (BBL)",
+     "Thigh Lift",
+     "Blepharoplasty (Eyelid Surgery)",
+     "Facelift",
+     "Buccal Fat Removal",
+     "Liposuction",
+     "Breast Lift (Mastopexy)",
+     "Otoplasty (Ear Correction)",
+     "Neck Lift",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 264,
+   "path": "/health/clinical-treatments/medical-aesthetics/",
+   "parent": 258,
+   "en_title": "Medical Aesthetics",
+   "en": {
+    "h1": "Medical Aesthetics",
+    "cards": [
+     "Botox (Botulinum Toxin)",
+     "Dermal Fillers",
+     "Skin Mesotherapy",
+     "Exosome Skin Treatments",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Medical Aesthetics",
+    "cards": [
+     "Botox (Botulinum Toxin)",
+     "Dermal Fillers",
+     "Skin Mesotherapy",
+     "Exosome Skin Treatments",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Medical Aesthetics",
+    "cards": [
+     "Botox (Botulinum Toxin)",
+     "Dermal Fillers",
+     "Skin Mesotherapy",
+     "Exosome Skin Treatments",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 265,
+   "path": "/health/clinical-treatments/bariatric-surgery/",
+   "parent": 258,
+   "en_title": "Bariatric Surgery",
+   "en": {
+    "h1": "Bariatric Surgery",
+    "cards": [
+     "Gastric Sleeve",
+     "Gastric Bypass",
+     "Gastric Balloon",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Bariatric Surgery",
+    "cards": [
+     "Gastric Sleeve",
+     "Gastric Bypass",
+     "Gastric Balloon",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Bariatric Surgery",
+    "cards": [
+     "Gastric Sleeve",
+     "Gastric Bypass",
+     "Gastric Balloon",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 266,
+   "path": "/health/clinical-treatments/check-up-packages/",
+   "parent": 258,
+   "en_title": "Check-Up Packages",
+   "en": {
+    "h1": "Check-Up Packages",
+    "cards": [
+     "Check-ups for Men",
+     "Check-ups for Women",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Check-Up Packages",
+    "cards": [
+     "Check-ups for Men",
+     "Check-ups for Women",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Check-Up Packages",
+    "cards": [
+     "Check-ups for Men",
+     "Check-ups for Women",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 267,
+   "path": "/health/clinical-treatments/iv-treatments/",
+   "parent": 258,
+   "en_title": "IV Treatments",
+   "en": {
+    "h1": "IV Treatments",
+    "cards": [
+     "Myers’ Cocktail",
+     "NAD+",
+     "Hair and Nail Cocktail",
+     "Beauty Cocktail",
+     "Fat Burning Slim Boost",
+     "Vitamin C Megadose",
+     "Alpha Lipoic Acid",
+     "Immune Plus",
+     "Anti-ageing Collagen Booster",
+     "Glutathione",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "IV Treatments",
+    "cards": [
+     "Myers’ Cocktail",
+     "NAD+",
+     "Hair and Nail Cocktail",
+     "Beauty Cocktail",
+     "Fat Burning Slim Boost",
+     "Vitamin C Megadose",
+     "Alpha Lipoic Acid",
+     "Immune Plus",
+     "Anti-ageing Collagen Booster",
+     "Glutathione",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "IV Treatments",
+    "cards": [
+     "Myers’ Cocktail",
+     "NAD+",
+     "Hair and Nail Cocktail",
+     "Beauty Cocktail",
+     "Fat Burning Slim Boost",
+     "Vitamin C Megadose",
+     "Alpha Lipoic Acid",
+     "Immune Plus",
+     "Anti-ageing Collagen Booster",
+     "Glutathione",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 268,
+   "path": "/health/hospital-specialist-treatments/medical-oncology/",
+   "parent": 259,
+   "en_title": "Medical Oncology",
+   "en": {
+    "h1": "Medical Oncology",
+    "cards": [
+     "Personal treatment planning",
+     "Chemotherapy",
+     "Targeted therapy",
+     "Immunotherapy",
+     "Hormone therapy",
+     "Follow-up and supportive care",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Medical Oncology",
+    "cards": [
+     "Personal treatment planning",
+     "Chemotherapy",
+     "Targeted therapy",
+     "Immunotherapy",
+     "Hormone therapy",
+     "Follow-up and supportive care",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Medical Oncology",
+    "cards": [
+     "Personal treatment planning",
+     "Chemotherapy",
+     "Targeted therapy",
+     "Immunotherapy",
+     "Hormone therapy",
+     "Follow-up and supportive care",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 269,
+   "path": "/health/hospital-specialist-treatments/cardiology/",
+   "parent": 259,
+   "en_title": "Cardiology",
+   "en": {
+    "h1": "Cardiology",
+    "cards": [
+     "Echocardiography",
+     "Stress and rhythm tests",
+     "Blood pressure monitoring",
+     "Coronary angiography and catheterisation",
+     "Coronary angioplasty and stents",
+     "Pacemakers and ICDs",
+     "Electrophysiology and RF ablation",
+     "Balloon valvuloplasty",
+     "Catheter closure of heart defects",
+     "Other interventional procedures",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Cardiology",
+    "cards": [
+     "Echocardiography",
+     "Stress and rhythm tests",
+     "Blood pressure monitoring",
+     "Coronary angiography and catheterisation",
+     "Coronary angioplasty and stents",
+     "Pacemakers and ICDs",
+     "Electrophysiology and RF ablation",
+     "Balloon valvuloplasty",
+     "Catheter closure of heart defects",
+     "Other interventional procedures",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Cardiology",
+    "cards": [
+     "Echocardiography",
+     "Stress and rhythm tests",
+     "Blood pressure monitoring",
+     "Coronary angiography and catheterisation",
+     "Coronary angioplasty and stents",
+     "Pacemakers and ICDs",
+     "Electrophysiology and RF ablation",
+     "Balloon valvuloplasty",
+     "Catheter closure of heart defects",
+     "Other interventional procedures",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 270,
+   "path": "/health/hospital-specialist-treatments/orthopedics-and-traumatology/",
+   "parent": 259,
+   "en_title": "Orthopedics and Traumatology",
+   "en": {
+    "h1": "Orthopedics and Traumatology",
+    "cards": [
+     "Arthroscopic surgery",
+     "Robotic joint replacement",
+     "Knee, hip and shoulder replacement",
+     "Sports injuries",
+     "Foot and ankle",
+     "Shoulder surgery",
+     "Cartilage transplantation",
+     "Biological cartilage treatments",
+     "Spine surgery",
+     "Fracture and trauma care",
+     "Paediatric orthopaedics",
+     "Orthopaedic oncology",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Orthopedics and Traumatology",
+    "cards": [
+     "Arthroscopic surgery",
+     "Robotic joint replacement",
+     "Knee, hip and shoulder replacement",
+     "Sports injuries",
+     "Foot and ankle",
+     "Shoulder surgery",
+     "Cartilage transplantation",
+     "Biological cartilage treatments",
+     "Spine surgery",
+     "Fracture and trauma care",
+     "Paediatric orthopaedics",
+     "Orthopaedic oncology",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Orthopedics and Traumatology",
+    "cards": [
+     "Arthroscopic surgery",
+     "Robotic joint replacement",
+     "Knee, hip and shoulder replacement",
+     "Sports injuries",
+     "Foot and ankle",
+     "Shoulder surgery",
+     "Cartilage transplantation",
+     "Biological cartilage treatments",
+     "Spine surgery",
+     "Fracture and trauma care",
+     "Paediatric orthopaedics",
+     "Orthopaedic oncology",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 271,
+   "path": "/health/hospital-specialist-treatments/in-vitro-fertilization-ivf/",
+   "parent": 259,
+   "en_title": "In-Vitro Fertilization (IVF)",
+   "en": {
+    "h1": "In-Vitro Fertilization (IVF)",
+    "cards": [
+     "Fertility assessment",
+     "IVF treatment",
+     "Natural (drug-free) IVF",
+     "Intrauterine insemination (IUI)",
+     "Microinjection (ICSI)",
+     "Microchip sperm selection",
+     "Egg freezing (cryopreservation)",
+     "Co-culture",
+     "Assisted hatching",
+     "Preimplantation genetic diagnosis (PGD)",
+     "Ovarian rejuvenation (PRP)",
+     "Difficult cases",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "In-Vitro Fertilization (IVF)",
+    "cards": [
+     "Fertility assessment",
+     "IVF treatment",
+     "Natural (drug-free) IVF",
+     "Intrauterine insemination (IUI)",
+     "Microinjection (ICSI)",
+     "Microchip sperm selection",
+     "Egg freezing (cryopreservation)",
+     "Co-culture",
+     "Assisted hatching",
+     "Preimplantation genetic diagnosis (PGD)",
+     "Ovarian rejuvenation (PRP)",
+     "Difficult cases",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "In-Vitro Fertilization (IVF)",
+    "cards": [
+     "Fertility assessment",
+     "IVF treatment",
+     "Natural (drug-free) IVF",
+     "Intrauterine insemination (IUI)",
+     "Microinjection (ICSI)",
+     "Microchip sperm selection",
+     "Egg freezing (cryopreservation)",
+     "Co-culture",
+     "Assisted hatching",
+     "Preimplantation genetic diagnosis (PGD)",
+     "Ovarian rejuvenation (PRP)",
+     "Difficult cases",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 272,
+   "path": "/health/hospital-specialist-treatments/neurosurgery/",
+   "parent": 259,
+   "en_title": "Neurosurgery",
+   "en": {
+    "h1": "Neurosurgery",
+    "cards": [
+     "Neuro-oncology",
+     "Neurovascular surgery",
+     "Epilepsy surgery",
+     "Spine and spinal cord surgery",
+     "Kyphoplasty and vertebroplasty",
+     "Pain and spasticity treatment",
+     "Peripheral nerve surgery",
+     "Stereotactic and functional neurosurgery",
+     "Neurospinal trauma",
+     "Paediatric neurosurgery",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Neurosurgery",
+    "cards": [
+     "Neuro-oncology",
+     "Neurovascular surgery",
+     "Epilepsy surgery",
+     "Spine and spinal cord surgery",
+     "Kyphoplasty and vertebroplasty",
+     "Pain and spasticity treatment",
+     "Peripheral nerve surgery",
+     "Stereotactic and functional neurosurgery",
+     "Neurospinal trauma",
+     "Paediatric neurosurgery",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Neurosurgery",
+    "cards": [
+     "Neuro-oncology",
+     "Neurovascular surgery",
+     "Epilepsy surgery",
+     "Spine and spinal cord surgery",
+     "Kyphoplasty and vertebroplasty",
+     "Pain and spasticity treatment",
+     "Peripheral nerve surgery",
+     "Stereotactic and functional neurosurgery",
+     "Neurospinal trauma",
+     "Paediatric neurosurgery",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 273,
+   "path": "/health/hospital-specialist-treatments/ophthalmology/",
+   "parent": 259,
+   "en_title": "Ophthalmology",
+   "en": {
+    "h1": "Ophthalmology",
+    "cards": [
+     "Laser vision correction",
+     "Cataract surgery",
+     "Glaucoma",
+     "Retinal diseases",
+     "Macular diseases and surgery",
+     "Diabetic retinopathy",
+     "Corneal diseases",
+     "Contact lens and keratoconus unit",
+     "Strabismus and children’s eyes",
+     "Oculoplastic and orbital surgery",
+     "Neuro-ophthalmology",
+     "Ocular oncology",
+     "Uveitis and Behçet unit",
+     "Eye trauma unit",
+     "Eye infection unit",
+     "Low vision rehabilitation",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Ophthalmology",
+    "cards": [
+     "Laser vision correction",
+     "Cataract surgery",
+     "Glaucoma",
+     "Retinal diseases",
+     "Macular diseases and surgery",
+     "Diabetic retinopathy",
+     "Corneal diseases",
+     "Contact lens and keratoconus unit",
+     "Strabismus and children’s eyes",
+     "Oculoplastic and orbital surgery",
+     "Neuro-ophthalmology",
+     "Ocular oncology",
+     "Uveitis and Behçet unit",
+     "Eye trauma unit",
+     "Eye infection unit",
+     "Low vision rehabilitation",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Ophthalmology",
+    "cards": [
+     "Laser vision correction",
+     "Cataract surgery",
+     "Glaucoma",
+     "Retinal diseases",
+     "Macular diseases and surgery",
+     "Diabetic retinopathy",
+     "Corneal diseases",
+     "Contact lens and keratoconus unit",
+     "Strabismus and children’s eyes",
+     "Oculoplastic and orbital surgery",
+     "Neuro-ophthalmology",
+     "Ocular oncology",
+     "Uveitis and Behçet unit",
+     "Eye trauma unit",
+     "Eye infection unit",
+     "Low vision rehabilitation",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 274,
+   "path": "/health/hospital-specialist-treatments/organ-transplantation-center/",
+   "parent": 259,
+   "en_title": "Organ Transplantation Center",
+   "en": {
+    "h1": "Organ Transplantation Center",
+    "cards": [
+     "Kidney transplantation",
+     "Liver transplantation",
+     "Pancreas and heart transplantation",
+     "Living-donor transplantation",
+     "Donor and recipient evaluation",
+     "Minimally invasive techniques",
+     "Post-transplant care",
+     "Infection prevention",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Organ Transplantation Center",
+    "cards": [
+     "Kidney transplantation",
+     "Liver transplantation",
+     "Pancreas and heart transplantation",
+     "Living-donor transplantation",
+     "Donor and recipient evaluation",
+     "Minimally invasive techniques",
+     "Post-transplant care",
+     "Infection prevention",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Organ Transplantation Center",
+    "cards": [
+     "Kidney transplantation",
+     "Liver transplantation",
+     "Pancreas and heart transplantation",
+     "Living-donor transplantation",
+     "Donor and recipient evaluation",
+     "Minimally invasive techniques",
+     "Post-transplant care",
+     "Infection prevention",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 275,
+   "path": "/travel/holiday-packages/",
+   "parent": 25,
+   "en_title": "Holiday Packages",
+   "en": {
+    "h1": "Holiday Packages",
+    "cards": [
+     "Seaside holidays",
+     "City breaks",
+     "Wellness and spa holidays",
+     "Family holidays",
+     "Group and special-occasion travel",
+     "Excursions and tours",
+     "1. Tell us your plans",
+     "2. Personal offer",
+     "3. Booking and documents",
+     "4. Support during your trip"
+    ]
+   },
+   "de": {
+    "h1": "Holiday Packages",
+    "cards": [
+     "Seaside holidays",
+     "City breaks",
+     "Wellness and spa holidays",
+     "Family holidays",
+     "Group and special-occasion travel",
+     "Excursions and tours",
+     "1. Tell us your plans",
+     "2. Personal offer",
+     "3. Booking and documents",
+     "4. Support during your trip"
+    ]
+   },
+   "tr": {
+    "h1": "Holiday Packages",
+    "cards": [
+     "Seaside holidays",
+     "City breaks",
+     "Wellness and spa holidays",
+     "Family holidays",
+     "Group and special-occasion travel",
+     "Excursions and tours",
+     "1. Tell us your plans",
+     "2. Personal offer",
+     "3. Booking and documents",
+     "4. Support during your trip"
+    ]
+   }
+  },
+  {
+   "id": 276,
+   "path": "/travel/hotel-reservation/",
+   "parent": 25,
+   "en_title": "Hotel Reservation",
+   "en": {
+    "h1": "Hotel Reservation",
+    "cards": [
+     "City hotels",
+     "Resorts and five-star hotels",
+     "Boutique hotels",
+     "Families and groups",
+     "Short and long stays",
+     "Special requests",
+     "1. Tell us your plans",
+     "2. Personal offer",
+     "3. Booking and documents",
+     "4. Support during your trip"
+    ]
+   },
+   "de": {
+    "h1": "Hotel Reservation",
+    "cards": [
+     "City hotels",
+     "Resorts and five-star hotels",
+     "Boutique hotels",
+     "Families and groups",
+     "Short and long stays",
+     "Special requests",
+     "1. Tell us your plans",
+     "2. Personal offer",
+     "3. Booking and documents",
+     "4. Support during your trip"
+    ]
+   },
+   "tr": {
+    "h1": "Hotel Reservation",
+    "cards": [
+     "City hotels",
+     "Resorts and five-star hotels",
+     "Boutique hotels",
+     "Families and groups",
+     "Short and long stays",
+     "Special requests",
+     "1. Tell us your plans",
+     "2. Personal offer",
+     "3. Booking and documents",
+     "4. Support during your trip"
+    ]
+   }
+  },
+  {
+   "id": 277,
+   "path": "/travel/airport-transfer/",
+   "parent": 25,
+   "en_title": "Airport Transfer",
+   "en": {
+    "h1": "Airport Transfer",
+    "cards": [
+     "Meet and greet",
+     "Airport to hotel",
+     "City and excursion transfers",
+     "Return to the airport",
+     "Vehicles for every group",
+     "Help on the way",
+     "1. Tell us your plans",
+     "2. Personal offer",
+     "3. Booking and documents",
+     "4. Support during your trip"
+    ]
+   },
+   "de": {
+    "h1": "Airport Transfer",
+    "cards": [
+     "Meet and greet",
+     "Airport to hotel",
+     "City and excursion transfers",
+     "Return to the airport",
+     "Vehicles for every group",
+     "Help on the way",
+     "1. Tell us your plans",
+     "2. Personal offer",
+     "3. Booking and documents",
+     "4. Support during your trip"
+    ]
+   },
+   "tr": {
+    "h1": "Airport Transfer",
+    "cards": [
+     "Meet and greet",
+     "Airport to hotel",
+     "City and excursion transfers",
+     "Return to the airport",
+     "Vehicles for every group",
+     "Help on the way",
+     "1. Tell us your plans",
+     "2. Personal offer",
+     "3. Booking and documents",
+     "4. Support during your trip"
+    ]
+   }
+  },
+  {
+   "id": 278,
+   "path": "/travel/hajj-umrah/",
+   "parent": 25,
+   "en_title": "Hajj & Umrah",
+   "en": {
+    "h1": "Hajj & Umrah",
+    "cards": [
+     "Umrah",
+     "Hajj",
+     "Visa guidance",
+     "Flights",
+     "Hotels near the holy mosques",
+     "Transfers and guidance",
+     "1. Tell us your plans",
+     "2. Personal offer",
+     "3. Booking and documents",
+     "4. Support during your trip"
+    ]
+   },
+   "de": {
+    "h1": "Hajj & Umrah",
+    "cards": [
+     "Umrah",
+     "Hajj",
+     "Visa guidance",
+     "Flights",
+     "Hotels near the holy mosques",
+     "Transfers and guidance",
+     "1. Tell us your plans",
+     "2. Personal offer",
+     "3. Booking and documents",
+     "4. Support during your trip"
+    ]
+   },
+   "tr": {
+    "h1": "Hajj & Umrah",
+    "cards": [
+     "Umrah",
+     "Hajj",
+     "Visa guidance",
+     "Flights",
+     "Hotels near the holy mosques",
+     "Transfers and guidance",
+     "1. Tell us your plans",
+     "2. Personal offer",
+     "3. Booking and documents",
+     "4. Support during your trip"
+    ]
+   }
+  },
+  {
+   "id": 283,
+   "path": "/travel/flight-tickets/",
+   "parent": 25,
+   "en_title": "Flight Tickets",
+   "en": {
+    "h1": "Flight Tickets",
+    "cards": [
+     "International flights",
+     "Domestic flights",
+     "One-way, return and multi-city",
+     "Economy, business and first class",
+     "Group and family bookings",
+     "Baggage and seat selection",
+     "Changes and cancellations",
+     "Personal advice",
+     "1. Tell us your plans",
+     "2. Personal offer",
+     "3. Booking and documents",
+     "4. Support during your trip"
+    ]
+   },
+   "de": {
+    "h1": "Flight Tickets",
+    "cards": [
+     "International flights",
+     "Domestic flights",
+     "One-way, return and multi-city",
+     "Economy, business and first class",
+     "Group and family bookings",
+     "Baggage and seat selection",
+     "Changes and cancellations",
+     "Personal advice",
+     "1. Tell us your plans",
+     "2. Personal offer",
+     "3. Booking and documents",
+     "4. Support during your trip"
+    ]
+   },
+   "tr": {
+    "h1": "Flight Tickets",
+    "cards": [
+     "International flights",
+     "Domestic flights",
+     "One-way, return and multi-city",
+     "Economy, business and first class",
+     "Group and family bookings",
+     "Baggage and seat selection",
+     "Changes and cancellations",
+     "Personal advice",
+     "1. Tell us your plans",
+     "2. Personal offer",
+     "3. Booking and documents",
+     "4. Support during your trip"
+    ]
+   }
+  },
+  {
+   "id": 483,
+   "path": "/health/hospital-specialist-treatments/gynaecological-oncology/",
+   "parent": 259,
+   "en_title": "Gynaecological Oncology",
+   "en": {
+    "h1": "Gynaecological Oncology",
+    "cards": [
+     "Oncological counselling",
+     "Gynaecological cancer screening",
+     "Consultation and differential diagnosis",
+     "Medical and surgical treatment",
+     "Pre-invasive, borderline and invasive tumours",
+     "Cervical pre-invasive lesions",
+     "HPV and preventive vaccination",
+     "Hereditary cancer risk",
+     "Follow-up planning",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Gynaecological Oncology",
+    "cards": [
+     "Oncological counselling",
+     "Gynaecological cancer screening",
+     "Consultation and differential diagnosis",
+     "Medical and surgical treatment",
+     "Pre-invasive, borderline and invasive tumours",
+     "Cervical pre-invasive lesions",
+     "HPV and preventive vaccination",
+     "Hereditary cancer risk",
+     "Follow-up planning",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Gynaecological Oncology",
+    "cards": [
+     "Oncological counselling",
+     "Gynaecological cancer screening",
+     "Consultation and differential diagnosis",
+     "Medical and surgical treatment",
+     "Pre-invasive, borderline and invasive tumours",
+     "Cervical pre-invasive lesions",
+     "HPV and preventive vaccination",
+     "Hereditary cancer risk",
+     "Follow-up planning",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 484,
+   "path": "/health/hospital-specialist-treatments/haematology/",
+   "parent": 259,
+   "en_title": "Haematology",
+   "en": {
+    "h1": "Haematology",
+    "cards": [
+     "Laboratory-based diagnosis",
+     "Multidisciplinary collaboration",
+     "Haematological cancer care",
+     "Non-malignant blood disorders",
+     "Chemotherapy by specialist nurses",
+     "Autologous stem cell transplantation",
+     "Allogeneic stem cell transplantation",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Haematology",
+    "cards": [
+     "Laboratory-based diagnosis",
+     "Multidisciplinary collaboration",
+     "Haematological cancer care",
+     "Non-malignant blood disorders",
+     "Chemotherapy by specialist nurses",
+     "Autologous stem cell transplantation",
+     "Allogeneic stem cell transplantation",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Haematology",
+    "cards": [
+     "Laboratory-based diagnosis",
+     "Multidisciplinary collaboration",
+     "Haematological cancer care",
+     "Non-malignant blood disorders",
+     "Chemotherapy by specialist nurses",
+     "Autologous stem cell transplantation",
+     "Allogeneic stem cell transplantation",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 485,
+   "path": "/health/hospital-specialist-treatments/adult-bone-marrow-transplantation/",
+   "parent": 259,
+   "en_title": "Adult Bone Marrow Transplantation",
+   "en": {
+    "h1": "Adult Bone Marrow Transplantation",
+    "cards": [
+     "Transplant outpatient clinic",
+     "Apheresis unit",
+     "Stem cell freezing and processing",
+     "Flow cytometry laboratory",
+     "HLA tissue typing laboratory",
+     "Genetic diagnostic support",
+     "Protected transplant unit",
+     "Comfort and wellbeing",
+     "Follow-up before and after transplant",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Adult Bone Marrow Transplantation",
+    "cards": [
+     "Transplant outpatient clinic",
+     "Apheresis unit",
+     "Stem cell freezing and processing",
+     "Flow cytometry laboratory",
+     "HLA tissue typing laboratory",
+     "Genetic diagnostic support",
+     "Protected transplant unit",
+     "Comfort and wellbeing",
+     "Follow-up before and after transplant",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Adult Bone Marrow Transplantation",
+    "cards": [
+     "Transplant outpatient clinic",
+     "Apheresis unit",
+     "Stem cell freezing and processing",
+     "Flow cytometry laboratory",
+     "HLA tissue typing laboratory",
+     "Genetic diagnostic support",
+     "Protected transplant unit",
+     "Comfort and wellbeing",
+     "Follow-up before and after transplant",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 486,
+   "path": "/health/hospital-specialist-treatments/nuclear-medicine/",
+   "parent": 259,
+   "en_title": "Nuclear Medicine",
+   "en": {
+    "h1": "Nuclear Medicine",
+    "cards": [
+     "Neurological applications",
+     "Lung applications",
+     "Orthopaedic applications",
+     "Heart applications",
+     "Kidney applications",
+     "Oncology applications",
+     "Other diagnostic studies",
+     "Patient-focused design",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Nuclear Medicine",
+    "cards": [
+     "Neurological applications",
+     "Lung applications",
+     "Orthopaedic applications",
+     "Heart applications",
+     "Kidney applications",
+     "Oncology applications",
+     "Other diagnostic studies",
+     "Patient-focused design",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Nuclear Medicine",
+    "cards": [
+     "Neurological applications",
+     "Lung applications",
+     "Orthopaedic applications",
+     "Heart applications",
+     "Kidney applications",
+     "Oncology applications",
+     "Other diagnostic studies",
+     "Patient-focused design",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 487,
+   "path": "/health/hospital-specialist-treatments/cardiovascular-surgery/",
+   "parent": 259,
+   "en_title": "Cardiovascular Surgery",
+   "en": {
+    "h1": "Cardiovascular Surgery",
+    "cards": [
+     "Coronary bypass surgery",
+     "Heart valve surgery",
+     "Congenital heart defects",
+     "Aortic surgery",
+     "Peripheral vascular surgery",
+     "Heart failure surgery",
+     "Pericardiectomy",
+     "Heart tumour surgery",
+     "Reoperative cardiac surgery",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Cardiovascular Surgery",
+    "cards": [
+     "Coronary bypass surgery",
+     "Heart valve surgery",
+     "Congenital heart defects",
+     "Aortic surgery",
+     "Peripheral vascular surgery",
+     "Heart failure surgery",
+     "Pericardiectomy",
+     "Heart tumour surgery",
+     "Reoperative cardiac surgery",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Cardiovascular Surgery",
+    "cards": [
+     "Coronary bypass surgery",
+     "Heart valve surgery",
+     "Congenital heart defects",
+     "Aortic surgery",
+     "Peripheral vascular surgery",
+     "Heart failure surgery",
+     "Pericardiectomy",
+     "Heart tumour surgery",
+     "Reoperative cardiac surgery",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 488,
+   "path": "/health/hospital-specialist-treatments/interventional-radiology/",
+   "parent": 259,
+   "en_title": "Interventional Radiology",
+   "en": {
+    "h1": "Interventional Radiology",
+    "cards": [
+     "Image-guided biopsies",
+     "Diagnostic angiography",
+     "Venography",
+     "Chest procedures",
+     "Abdominal, biliary and kidney procedures",
+     "Arterial angioplasty and stenting",
+     "Neurointerventional treatment",
+     "Embolisation for bleeding and tumours",
+     "Aortic and peripheral endografts",
+     "Oncological interventions",
+     "Venous and dialysis access",
+     "Uterine fibroid embolisation and diabetic foot",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Interventional Radiology",
+    "cards": [
+     "Image-guided biopsies",
+     "Diagnostic angiography",
+     "Venography",
+     "Chest procedures",
+     "Abdominal, biliary and kidney procedures",
+     "Arterial angioplasty and stenting",
+     "Neurointerventional treatment",
+     "Embolisation for bleeding and tumours",
+     "Aortic and peripheral endografts",
+     "Oncological interventions",
+     "Venous and dialysis access",
+     "Uterine fibroid embolisation and diabetic foot",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Interventional Radiology",
+    "cards": [
+     "Image-guided biopsies",
+     "Diagnostic angiography",
+     "Venography",
+     "Chest procedures",
+     "Abdominal, biliary and kidney procedures",
+     "Arterial angioplasty and stenting",
+     "Neurointerventional treatment",
+     "Embolisation for bleeding and tumours",
+     "Aortic and peripheral endografts",
+     "Oncological interventions",
+     "Venous and dialysis access",
+     "Uterine fibroid embolisation and diabetic foot",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 489,
+   "path": "/health/hospital-specialist-treatments/neurology/",
+   "parent": 259,
+   "en_title": "Neurology",
+   "en": {
+    "h1": "Neurology",
+    "cards": [
+     "General Neurology",
+     "Stroke Centre",
+     "Epilepsy",
+     "Headache",
+     "Neuro-oncology",
+     "Alzheimer’s and memory",
+     "Multiple Sclerosis",
+     "Parkinson’s and movement disorders",
+     "Neuromuscular diseases",
+     "Sleep disorders",
+     "Dizziness and balance disorders",
+     "Neuropsychology and laboratories",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Neurology",
+    "cards": [
+     "General Neurology",
+     "Stroke Centre",
+     "Epilepsy",
+     "Headache",
+     "Neuro-oncology",
+     "Alzheimer’s and memory",
+     "Multiple Sclerosis",
+     "Parkinson’s and movement disorders",
+     "Neuromuscular diseases",
+     "Sleep disorders",
+     "Dizziness and balance disorders",
+     "Neuropsychology and laboratories",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Neurology",
+    "cards": [
+     "General Neurology",
+     "Stroke Centre",
+     "Epilepsy",
+     "Headache",
+     "Neuro-oncology",
+     "Alzheimer’s and memory",
+     "Multiple Sclerosis",
+     "Parkinson’s and movement disorders",
+     "Neuromuscular diseases",
+     "Sleep disorders",
+     "Dizziness and balance disorders",
+     "Neuropsychology and laboratories",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 490,
+   "path": "/health/hospital-specialist-treatments/algology-pain-medicine/",
+   "parent": 259,
+   "en_title": "Algology (Pain Medicine)",
+   "en": {
+    "h1": "Algology (Pain Medicine)",
+    "cards": [
+     "Chronic pain treatment",
+     "Interventional pain treatment",
+     "Cancer pain management",
+     "Acupuncture (dry needling)",
+     "Ozone therapy",
+     "Epiduroscopy",
+     "Epidural steroid injection",
+     "Regional and sympathetic nerve blocks",
+     "Radiofrequency thermocoagulation",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Algology (Pain Medicine)",
+    "cards": [
+     "Chronic pain treatment",
+     "Interventional pain treatment",
+     "Cancer pain management",
+     "Acupuncture (dry needling)",
+     "Ozone therapy",
+     "Epiduroscopy",
+     "Epidural steroid injection",
+     "Regional and sympathetic nerve blocks",
+     "Radiofrequency thermocoagulation",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Algology (Pain Medicine)",
+    "cards": [
+     "Chronic pain treatment",
+     "Interventional pain treatment",
+     "Cancer pain management",
+     "Acupuncture (dry needling)",
+     "Ozone therapy",
+     "Epiduroscopy",
+     "Epidural steroid injection",
+     "Regional and sympathetic nerve blocks",
+     "Radiofrequency thermocoagulation",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 491,
+   "path": "/health/hospital-specialist-treatments/psychiatry/",
+   "parent": 259,
+   "en_title": "Psychiatry",
+   "en": {
+    "h1": "Psychiatry",
+    "cards": [
+     "Psychiatric evaluation and diagnosis",
+     "Medication treatment",
+     "Psychotherapy",
+     "Crisis intervention",
+     "Rehabilitation and support",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Psychiatry",
+    "cards": [
+     "Psychiatric evaluation and diagnosis",
+     "Medication treatment",
+     "Psychotherapy",
+     "Crisis intervention",
+     "Rehabilitation and support",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Psychiatry",
+    "cards": [
+     "Psychiatric evaluation and diagnosis",
+     "Medication treatment",
+     "Psychotherapy",
+     "Crisis intervention",
+     "Rehabilitation and support",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 492,
+   "path": "/health/hospital-specialist-treatments/psychology/",
+   "parent": 259,
+   "en_title": "Psychology",
+   "en": {
+    "h1": "Psychology",
+    "cards": [
+     "Support for children",
+     "School problems",
+     "Psychological testing",
+     "Education programmes",
+     "Support for adolescents",
+     "Support for adults",
+     "Psycho-oncology",
+     "Seminars for schools",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Psychology",
+    "cards": [
+     "Support for children",
+     "School problems",
+     "Psychological testing",
+     "Education programmes",
+     "Support for adolescents",
+     "Support for adults",
+     "Psycho-oncology",
+     "Seminars for schools",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Psychology",
+    "cards": [
+     "Support for children",
+     "School problems",
+     "Psychological testing",
+     "Education programmes",
+     "Support for adolescents",
+     "Support for adults",
+     "Psycho-oncology",
+     "Seminars for schools",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 493,
+   "path": "/health/hospital-specialist-treatments/physical-therapy-and-rehabilitation/",
+   "parent": 259,
+   "en_title": "Physical Therapy and Rehabilitation",
+   "en": {
+    "h1": "Physical Therapy and Rehabilitation",
+    "cards": [
+     "Musculoskeletal conditions",
+     "Orthopaedic rehabilitation",
+     "Neurological rehabilitation",
+     "Paediatric rehabilitation",
+     "Cardiac rehabilitation",
+     "Pelvic floor and pregnancy programmes",
+     "Back school and osteoporosis school",
+     "Fibromyalgia group programme",
+     "Specialised rehabilitation",
+     "Treatment for localised sweating",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Physical Therapy and Rehabilitation",
+    "cards": [
+     "Musculoskeletal conditions",
+     "Orthopaedic rehabilitation",
+     "Neurological rehabilitation",
+     "Paediatric rehabilitation",
+     "Cardiac rehabilitation",
+     "Pelvic floor and pregnancy programmes",
+     "Back school and osteoporosis school",
+     "Fibromyalgia group programme",
+     "Specialised rehabilitation",
+     "Treatment for localised sweating",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Physical Therapy and Rehabilitation",
+    "cards": [
+     "Musculoskeletal conditions",
+     "Orthopaedic rehabilitation",
+     "Neurological rehabilitation",
+     "Paediatric rehabilitation",
+     "Cardiac rehabilitation",
+     "Pelvic floor and pregnancy programmes",
+     "Back school and osteoporosis school",
+     "Fibromyalgia group programme",
+     "Specialised rehabilitation",
+     "Treatment for localised sweating",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 494,
+   "path": "/health/hospital-specialist-treatments/rheumatology/",
+   "parent": 259,
+   "en_title": "Rheumatology",
+   "en": {
+    "h1": "Rheumatology",
+    "cards": [
+     "Diagnosis of rheumatic diseases",
+     "Treatment and long-term management",
+     "Interdisciplinary follow-up",
+     "Fibromyalgia team care",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Rheumatology",
+    "cards": [
+     "Diagnosis of rheumatic diseases",
+     "Treatment and long-term management",
+     "Interdisciplinary follow-up",
+     "Fibromyalgia team care",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Rheumatology",
+    "cards": [
+     "Diagnosis of rheumatic diseases",
+     "Treatment and long-term management",
+     "Interdisciplinary follow-up",
+     "Fibromyalgia team care",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 495,
+   "path": "/health/hospital-specialist-treatments/kidney-transplant-clinic/",
+   "parent": 259,
+   "en_title": "Kidney Transplant Clinic",
+   "en": {
+    "h1": "Kidney Transplant Clinic",
+    "cards": [
+     "Protecting kidney function",
+     "Confirming the diagnosis",
+     "Transplant suitability assessment",
+     "Managing other health conditions",
+     "Living donor transplantation",
+     "Deceased donor transplantation",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Kidney Transplant Clinic",
+    "cards": [
+     "Protecting kidney function",
+     "Confirming the diagnosis",
+     "Transplant suitability assessment",
+     "Managing other health conditions",
+     "Living donor transplantation",
+     "Deceased donor transplantation",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Kidney Transplant Clinic",
+    "cards": [
+     "Protecting kidney function",
+     "Confirming the diagnosis",
+     "Transplant suitability assessment",
+     "Managing other health conditions",
+     "Living donor transplantation",
+     "Deceased donor transplantation",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 496,
+   "path": "/health/hospital-specialist-treatments/liver-transplant-clinic/",
+   "parent": 259,
+   "en_title": "Liver Transplant Clinic",
+   "en": {
+    "h1": "Liver Transplant Clinic",
+    "cards": [
+     "Acute liver failure",
+     "End-stage liver disease (cirrhosis)",
+     "Certain liver cancers",
+     "Transplant assessment and planning",
+     "Recovery and aftercare",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Liver Transplant Clinic",
+    "cards": [
+     "Acute liver failure",
+     "End-stage liver disease (cirrhosis)",
+     "Certain liver cancers",
+     "Transplant assessment and planning",
+     "Recovery and aftercare",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Liver Transplant Clinic",
+    "cards": [
+     "Acute liver failure",
+     "End-stage liver disease (cirrhosis)",
+     "Certain liver cancers",
+     "Transplant assessment and planning",
+     "Recovery and aftercare",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 497,
+   "path": "/health/hospital-specialist-treatments/parathyroid-transplant-clinic/",
+   "parent": 259,
+   "en_title": "Parathyroid Transplant Clinic",
+   "en": {
+    "h1": "Parathyroid Transplant Clinic",
+    "cards": [
+     "Parathyroid transplantation",
+     "Suitability assessment",
+     "Parathyroid gland diseases",
+     "Multidisciplinary team",
+     "Transplant coordination",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Parathyroid Transplant Clinic",
+    "cards": [
+     "Parathyroid transplantation",
+     "Suitability assessment",
+     "Parathyroid gland diseases",
+     "Multidisciplinary team",
+     "Transplant coordination",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Parathyroid Transplant Clinic",
+    "cards": [
+     "Parathyroid transplantation",
+     "Suitability assessment",
+     "Parathyroid gland diseases",
+     "Multidisciplinary team",
+     "Transplant coordination",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 498,
+   "path": "/health/hospital-specialist-treatments/obstetrics-and-gynaecology/",
+   "parent": 259,
+   "en_title": "Obstetrics and Gynaecology",
+   "en": {
+    "h1": "Obstetrics and Gynaecology",
+    "cards": [
+     "Infertility clinic",
+     "IVF centre",
+     "Recurrent losses and IVF failure",
+     "Menopause clinic",
+     "Perinatology",
+     "Prenatal screening and imaging",
+     "Gynaecological oncology",
+     "Familial cancer and prevention",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Obstetrics and Gynaecology",
+    "cards": [
+     "Infertility clinic",
+     "IVF centre",
+     "Recurrent losses and IVF failure",
+     "Menopause clinic",
+     "Perinatology",
+     "Prenatal screening and imaging",
+     "Gynaecological oncology",
+     "Familial cancer and prevention",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Obstetrics and Gynaecology",
+    "cards": [
+     "Infertility clinic",
+     "IVF centre",
+     "Recurrent losses and IVF failure",
+     "Menopause clinic",
+     "Perinatology",
+     "Prenatal screening and imaging",
+     "Gynaecological oncology",
+     "Familial cancer and prevention",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 499,
+   "path": "/health/hospital-specialist-treatments/perinatology/",
+   "parent": 259,
+   "en_title": "Perinatology",
+   "en": {
+    "h1": "Perinatology",
+    "cards": [
+     "Routine and high-risk pregnancy care",
+     "First-trimester screening (11-14 weeks)",
+     "Second-trimester screening (15-21 weeks)",
+     "Early detailed anomaly scan (11-14 weeks)",
+     "Detailed anomaly scan (18-22 weeks)",
+     "Fetal echocardiography",
+     "Doppler ultrasound",
+     "Chorionic villus sampling (CVS)",
+     "Amniocentesis",
+     "Cordocentesis (fetal blood sampling)",
+     "Counselling and birth planning",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Perinatology",
+    "cards": [
+     "Routine and high-risk pregnancy care",
+     "First-trimester screening (11-14 weeks)",
+     "Second-trimester screening (15-21 weeks)",
+     "Early detailed anomaly scan (11-14 weeks)",
+     "Detailed anomaly scan (18-22 weeks)",
+     "Fetal echocardiography",
+     "Doppler ultrasound",
+     "Chorionic villus sampling (CVS)",
+     "Amniocentesis",
+     "Cordocentesis (fetal blood sampling)",
+     "Counselling and birth planning",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Perinatology",
+    "cards": [
+     "Routine and high-risk pregnancy care",
+     "First-trimester screening (11-14 weeks)",
+     "Second-trimester screening (15-21 weeks)",
+     "Early detailed anomaly scan (11-14 weeks)",
+     "Detailed anomaly scan (18-22 weeks)",
+     "Fetal echocardiography",
+     "Doppler ultrasound",
+     "Chorionic villus sampling (CVS)",
+     "Amniocentesis",
+     "Cordocentesis (fetal blood sampling)",
+     "Counselling and birth planning",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 500,
+   "path": "/health/hospital-specialist-treatments/pelvic-pain-and-endometriosis-clinic/",
+   "parent": 259,
+   "en_title": "Pelvic Pain and Endometriosis Clinic",
+   "en": {
+    "h1": "Pelvic Pain and Endometriosis Clinic",
+    "cards": [
+     "Detailed pain assessment",
+     "Symptom-based diagnostics",
+     "Endometriosis evaluation",
+     "Multidisciplinary team",
+     "Individual treatment planning",
+     "Psychological wellbeing",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Pelvic Pain and Endometriosis Clinic",
+    "cards": [
+     "Detailed pain assessment",
+     "Symptom-based diagnostics",
+     "Endometriosis evaluation",
+     "Multidisciplinary team",
+     "Individual treatment planning",
+     "Psychological wellbeing",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Pelvic Pain and Endometriosis Clinic",
+    "cards": [
+     "Detailed pain assessment",
+     "Symptom-based diagnostics",
+     "Endometriosis evaluation",
+     "Multidisciplinary team",
+     "Individual treatment planning",
+     "Psychological wellbeing",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 501,
+   "path": "/health/hospital-specialist-treatments/pcos-and-hirsutism-clinic/",
+   "parent": 259,
+   "en_title": "PCOS and Hirsutism Clinic",
+   "en": {
+    "h1": "PCOS and Hirsutism Clinic",
+    "cards": [
+     "Joint first consultation",
+     "Shared treatment decisions",
+     "Hirsutism and acne care",
+     "Long-term follow-up",
+     "Weekly PCOS council",
+     "Clinical research",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "PCOS and Hirsutism Clinic",
+    "cards": [
+     "Joint first consultation",
+     "Shared treatment decisions",
+     "Hirsutism and acne care",
+     "Long-term follow-up",
+     "Weekly PCOS council",
+     "Clinical research",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "PCOS and Hirsutism Clinic",
+    "cards": [
+     "Joint first consultation",
+     "Shared treatment decisions",
+     "Hirsutism and acne care",
+     "Long-term follow-up",
+     "Weekly PCOS council",
+     "Clinical research",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 502,
+   "path": "/health/hospital-specialist-treatments/hirsutism-clinic/",
+   "parent": 259,
+   "en_title": "Hirsutism Clinic",
+   "en": {
+    "h1": "Hirsutism Clinic",
+    "cards": [
+     "Finding the underlying cause",
+     "Multidisciplinary assessment",
+     "Androgen-related symptoms",
+     "Changes after menopause",
+     "Individual treatment planning",
+     "Quality of life and wellbeing",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Hirsutism Clinic",
+    "cards": [
+     "Finding the underlying cause",
+     "Multidisciplinary assessment",
+     "Androgen-related symptoms",
+     "Changes after menopause",
+     "Individual treatment planning",
+     "Quality of life and wellbeing",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Hirsutism Clinic",
+    "cards": [
+     "Finding the underlying cause",
+     "Multidisciplinary assessment",
+     "Androgen-related symptoms",
+     "Changes after menopause",
+     "Individual treatment planning",
+     "Quality of life and wellbeing",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 503,
+   "path": "/health/hospital-specialist-treatments/breast-surgery/",
+   "parent": 259,
+   "en_title": "Breast Surgery",
+   "en": {
+    "h1": "Breast Surgery",
+    "cards": [
+     "Multidisciplinary breast care",
+     "Lumpectomy (breast-conserving surgery)",
+     "Total mastectomy",
+     "Nipple-sparing mastectomy",
+     "Prophylactic mastectomy",
+     "Individual choice of technique",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Breast Surgery",
+    "cards": [
+     "Multidisciplinary breast care",
+     "Lumpectomy (breast-conserving surgery)",
+     "Total mastectomy",
+     "Nipple-sparing mastectomy",
+     "Prophylactic mastectomy",
+     "Individual choice of technique",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Breast Surgery",
+    "cards": [
+     "Multidisciplinary breast care",
+     "Lumpectomy (breast-conserving surgery)",
+     "Total mastectomy",
+     "Nipple-sparing mastectomy",
+     "Prophylactic mastectomy",
+     "Individual choice of technique",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 504,
+   "path": "/health/hospital-specialist-treatments/otolaryngology-ent/",
+   "parent": 259,
+   "en_title": "Otolaryngology (ENT)",
+   "en": {
+    "h1": "Otolaryngology (ENT)",
+    "cards": [
+     "Adult ENT surgery",
+     "Paediatric ENT surgery",
+     "Head and neck surgery",
+     "Rhinology",
+     "Nasal breathing and nosebleeds",
+     "Snoring and sleep disorders",
+     "Voice, speech and swallowing",
+     "Hearing and tinnitus",
+     "Dizziness and balance",
+     "Facial and ear aesthetics",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Otolaryngology (ENT)",
+    "cards": [
+     "Adult ENT surgery",
+     "Paediatric ENT surgery",
+     "Head and neck surgery",
+     "Rhinology",
+     "Nasal breathing and nosebleeds",
+     "Snoring and sleep disorders",
+     "Voice, speech and swallowing",
+     "Hearing and tinnitus",
+     "Dizziness and balance",
+     "Facial and ear aesthetics",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Otolaryngology (ENT)",
+    "cards": [
+     "Adult ENT surgery",
+     "Paediatric ENT surgery",
+     "Head and neck surgery",
+     "Rhinology",
+     "Nasal breathing and nosebleeds",
+     "Snoring and sleep disorders",
+     "Voice, speech and swallowing",
+     "Hearing and tinnitus",
+     "Dizziness and balance",
+     "Facial and ear aesthetics",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 505,
+   "path": "/health/hospital-specialist-treatments/audiology/",
+   "parent": 259,
+   "en_title": "Audiology",
+   "en": {
+    "h1": "Audiology",
+    "cards": [
+     "Newborn hearing screening",
+     "Clinical BERA (ABR)",
+     "Clinical otoacoustic emissions and ASSR",
+     "Child audiometry",
+     "Adult hearing evaluation",
+     "Middle ear and Eustachian tube tests",
+     "Videonystagmography (VNG)",
+     "Video head impulse test (vHIT)",
+     "VEMP test",
+     "Caloric and rotational testing",
+     "Repositioning manoeuvres for BPPV",
+     "Preparing a child for BERA",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Audiology",
+    "cards": [
+     "Newborn hearing screening",
+     "Clinical BERA (ABR)",
+     "Clinical otoacoustic emissions and ASSR",
+     "Child audiometry",
+     "Adult hearing evaluation",
+     "Middle ear and Eustachian tube tests",
+     "Videonystagmography (VNG)",
+     "Video head impulse test (vHIT)",
+     "VEMP test",
+     "Caloric and rotational testing",
+     "Repositioning manoeuvres for BPPV",
+     "Preparing a child for BERA",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Audiology",
+    "cards": [
+     "Newborn hearing screening",
+     "Clinical BERA (ABR)",
+     "Clinical otoacoustic emissions and ASSR",
+     "Child audiometry",
+     "Adult hearing evaluation",
+     "Middle ear and Eustachian tube tests",
+     "Videonystagmography (VNG)",
+     "Video head impulse test (vHIT)",
+     "VEMP test",
+     "Caloric and rotational testing",
+     "Repositioning manoeuvres for BPPV",
+     "Preparing a child for BERA",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 506,
+   "path": "/health/hospital-specialist-treatments/general-surgery/",
+   "parent": 259,
+   "en_title": "General Surgery",
+   "en": {
+    "h1": "General Surgery",
+    "cards": [
+     "Upper digestive tract surgery",
+     "Intestinal and anal surgery",
+     "Liver, biliary, pancreas and spleen surgery",
+     "Hernia surgery",
+     "Morbid obesity surgery",
+     "Breast surgery",
+     "Endocrine surgery",
+     "Soft tissue tumours",
+     "Vascular access for dialysis",
+     "Laparoscopic surgery",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "General Surgery",
+    "cards": [
+     "Upper digestive tract surgery",
+     "Intestinal and anal surgery",
+     "Liver, biliary, pancreas and spleen surgery",
+     "Hernia surgery",
+     "Morbid obesity surgery",
+     "Breast surgery",
+     "Endocrine surgery",
+     "Soft tissue tumours",
+     "Vascular access for dialysis",
+     "Laparoscopic surgery",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "General Surgery",
+    "cards": [
+     "Upper digestive tract surgery",
+     "Intestinal and anal surgery",
+     "Liver, biliary, pancreas and spleen surgery",
+     "Hernia surgery",
+     "Morbid obesity surgery",
+     "Breast surgery",
+     "Endocrine surgery",
+     "Soft tissue tumours",
+     "Vascular access for dialysis",
+     "Laparoscopic surgery",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 507,
+   "path": "/health/hospital-specialist-treatments/gastroenterological-surgery/",
+   "parent": 259,
+   "en_title": "Gastroenterological Surgery",
+   "en": {
+    "h1": "Gastroenterological Surgery",
+    "cards": [
+     "Oesophageal, stomach and intestinal cancers",
+     "Liver and biliary tract surgery",
+     "Pancreas and spleen surgery",
+     "Intra-abdominal conditions",
+     "Close work with gastroenterology",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Gastroenterological Surgery",
+    "cards": [
+     "Oesophageal, stomach and intestinal cancers",
+     "Liver and biliary tract surgery",
+     "Pancreas and spleen surgery",
+     "Intra-abdominal conditions",
+     "Close work with gastroenterology",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Gastroenterological Surgery",
+    "cards": [
+     "Oesophageal, stomach and intestinal cancers",
+     "Liver and biliary tract surgery",
+     "Pancreas and spleen surgery",
+     "Intra-abdominal conditions",
+     "Close work with gastroenterology",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 508,
+   "path": "/health/hospital-specialist-treatments/endocrine-surgery/",
+   "parent": 259,
+   "en_title": "Endocrine Surgery",
+   "en": {
+    "h1": "Endocrine Surgery",
+    "cards": [
+     "Thyroidectomy",
+     "Parathyroidectomy",
+     "Parathyroid transplantation",
+     "Adrenalectomy",
+     "Pancreatectomy",
+     "Specialised surgical expertise",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Endocrine Surgery",
+    "cards": [
+     "Thyroidectomy",
+     "Parathyroidectomy",
+     "Parathyroid transplantation",
+     "Adrenalectomy",
+     "Pancreatectomy",
+     "Specialised surgical expertise",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Endocrine Surgery",
+    "cards": [
+     "Thyroidectomy",
+     "Parathyroidectomy",
+     "Parathyroid transplantation",
+     "Adrenalectomy",
+     "Pancreatectomy",
+     "Specialised surgical expertise",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 509,
+   "path": "/health/hospital-specialist-treatments/thoracic-surgery/",
+   "parent": 259,
+   "en_title": "Thoracic Surgery",
+   "en": {
+    "h1": "Thoracic Surgery",
+    "cards": [
+     "Lung cancer surgery",
+     "Lungs and main airways",
+     "Airway stents and endoscopic airway opening",
+     "Thoracic outlet syndrome",
+     "Chest wall diseases",
+     "Pleura, diaphragm and chest cavity",
+     "Mediastinal surgery",
+     "Oesophageal surgery",
+     "Advanced diagnostics",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Thoracic Surgery",
+    "cards": [
+     "Lung cancer surgery",
+     "Lungs and main airways",
+     "Airway stents and endoscopic airway opening",
+     "Thoracic outlet syndrome",
+     "Chest wall diseases",
+     "Pleura, diaphragm and chest cavity",
+     "Mediastinal surgery",
+     "Oesophageal surgery",
+     "Advanced diagnostics",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Thoracic Surgery",
+    "cards": [
+     "Lung cancer surgery",
+     "Lungs and main airways",
+     "Airway stents and endoscopic airway opening",
+     "Thoracic outlet syndrome",
+     "Chest wall diseases",
+     "Pleura, diaphragm and chest cavity",
+     "Mediastinal surgery",
+     "Oesophageal surgery",
+     "Advanced diagnostics",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 510,
+   "path": "/health/hospital-specialist-treatments/urology/",
+   "parent": 259,
+   "en_title": "Urology",
+   "en": {
+    "h1": "Urology",
+    "cards": [
+     "Urological oncology",
+     "Benign prostatic hyperplasia",
+     "Focal therapy for prostate cancer",
+     "Stone disease",
+     "Andrology",
+     "Female urology",
+     "Multidisciplinary care",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Urology",
+    "cards": [
+     "Urological oncology",
+     "Benign prostatic hyperplasia",
+     "Focal therapy for prostate cancer",
+     "Stone disease",
+     "Andrology",
+     "Female urology",
+     "Multidisciplinary care",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Urology",
+    "cards": [
+     "Urological oncology",
+     "Benign prostatic hyperplasia",
+     "Focal therapy for prostate cancer",
+     "Stone disease",
+     "Andrology",
+     "Female urology",
+     "Multidisciplinary care",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 511,
+   "path": "/health/hospital-specialist-treatments/internal-medicine/",
+   "parent": 259,
+   "en_title": "Internal Medicine",
+   "en": {
+    "h1": "Internal Medicine",
+    "cards": [
+     "Endocrinology and Metabolic Diseases",
+     "Gastroenterology",
+     "General Internal Medicine",
+     "Haematology",
+     "Nephrology",
+     "Oncology",
+     "Rheumatology",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Internal Medicine",
+    "cards": [
+     "Endocrinology and Metabolic Diseases",
+     "Gastroenterology",
+     "General Internal Medicine",
+     "Haematology",
+     "Nephrology",
+     "Oncology",
+     "Rheumatology",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Internal Medicine",
+    "cards": [
+     "Endocrinology and Metabolic Diseases",
+     "Gastroenterology",
+     "General Internal Medicine",
+     "Haematology",
+     "Nephrology",
+     "Oncology",
+     "Rheumatology",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 512,
+   "path": "/health/hospital-specialist-treatments/endocrinology-and-metabolic-diseases/",
+   "parent": 259,
+   "en_title": "Endocrinology and Metabolic Diseases",
+   "en": {
+    "h1": "Endocrinology and Metabolic Diseases",
+    "cards": [
+     "Diabetes",
+     "Thyroid disorders",
+     "Pituitary diseases",
+     "Adrenal diseases",
+     "Calcium, bone and parathyroid",
+     "Obesity and metabolic syndrome",
+     "Lipid disorders",
+     "Reproductive hormones",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Endocrinology and Metabolic Diseases",
+    "cards": [
+     "Diabetes",
+     "Thyroid disorders",
+     "Pituitary diseases",
+     "Adrenal diseases",
+     "Calcium, bone and parathyroid",
+     "Obesity and metabolic syndrome",
+     "Lipid disorders",
+     "Reproductive hormones",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Endocrinology and Metabolic Diseases",
+    "cards": [
+     "Diabetes",
+     "Thyroid disorders",
+     "Pituitary diseases",
+     "Adrenal diseases",
+     "Calcium, bone and parathyroid",
+     "Obesity and metabolic syndrome",
+     "Lipid disorders",
+     "Reproductive hormones",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 513,
+   "path": "/health/hospital-specialist-treatments/thyroid-and-parathyroid-diseases-and-surgery-clinic/",
+   "parent": 259,
+   "en_title": "Thyroid and Parathyroid Diseases and Surgery Clinic",
+   "en": {
+    "h1": "Thyroid and Parathyroid Diseases and Surgery Clinic",
+    "cards": [
+     "Multidisciplinary team",
+     "Thyroid and parathyroid ultrasound",
+     "Scintigraphy",
+     "Choline PET",
+     "Function tests",
+     "Biopsy",
+     "Radioactive iodine therapy",
+     "Lithium-supported radioactive iodine therapy",
+     "Radiofrequency ablation",
+     "Thyroid and parathyroid surgery",
+     "Parathyroid transplantation",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Thyroid and Parathyroid Diseases and Surgery Clinic",
+    "cards": [
+     "Multidisciplinary team",
+     "Thyroid and parathyroid ultrasound",
+     "Scintigraphy",
+     "Choline PET",
+     "Function tests",
+     "Biopsy",
+     "Radioactive iodine therapy",
+     "Lithium-supported radioactive iodine therapy",
+     "Radiofrequency ablation",
+     "Thyroid and parathyroid surgery",
+     "Parathyroid transplantation",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Thyroid and Parathyroid Diseases and Surgery Clinic",
+    "cards": [
+     "Multidisciplinary team",
+     "Thyroid and parathyroid ultrasound",
+     "Scintigraphy",
+     "Choline PET",
+     "Function tests",
+     "Biopsy",
+     "Radioactive iodine therapy",
+     "Lithium-supported radioactive iodine therapy",
+     "Radiofrequency ablation",
+     "Thyroid and parathyroid surgery",
+     "Parathyroid transplantation",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 514,
+   "path": "/health/hospital-specialist-treatments/pituitary-clinic/",
+   "parent": 259,
+   "en_title": "Pituitary Clinic",
+   "en": {
+    "h1": "Pituitary Clinic",
+    "cards": [
+     "Early diagnosis",
+     "Pituitary tumour care",
+     "Multidisciplinary team",
+     "Weekly case conferences",
+     "Education programmes",
+     "International collaboration",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Pituitary Clinic",
+    "cards": [
+     "Early diagnosis",
+     "Pituitary tumour care",
+     "Multidisciplinary team",
+     "Weekly case conferences",
+     "Education programmes",
+     "International collaboration",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Pituitary Clinic",
+    "cards": [
+     "Early diagnosis",
+     "Pituitary tumour care",
+     "Multidisciplinary team",
+     "Weekly case conferences",
+     "Education programmes",
+     "International collaboration",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 515,
+   "path": "/health/hospital-specialist-treatments/gastroenterology/",
+   "parent": 259,
+   "en_title": "Gastroenterology",
+   "en": {
+    "h1": "Gastroenterology",
+    "cards": [
+     "Diagnostic endoscopy",
+     "Endoscopic treatment of bleeding",
+     "Treatment of narrowing",
+     "Endoscopic obesity treatment",
+     "Reflux diagnosis and treatment",
+     "Helicobacter pylori testing",
+     "Colorectal cancer screening",
+     "ERCP",
+     "Haemorrhoid treatment",
+     "Hepatology unit",
+     "Inflammatory bowel disease",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Gastroenterology",
+    "cards": [
+     "Diagnostic endoscopy",
+     "Endoscopic treatment of bleeding",
+     "Treatment of narrowing",
+     "Endoscopic obesity treatment",
+     "Reflux diagnosis and treatment",
+     "Helicobacter pylori testing",
+     "Colorectal cancer screening",
+     "ERCP",
+     "Haemorrhoid treatment",
+     "Hepatology unit",
+     "Inflammatory bowel disease",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Gastroenterology",
+    "cards": [
+     "Diagnostic endoscopy",
+     "Endoscopic treatment of bleeding",
+     "Treatment of narrowing",
+     "Endoscopic obesity treatment",
+     "Reflux diagnosis and treatment",
+     "Helicobacter pylori testing",
+     "Colorectal cancer screening",
+     "ERCP",
+     "Haemorrhoid treatment",
+     "Hepatology unit",
+     "Inflammatory bowel disease",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 516,
+   "path": "/health/hospital-specialist-treatments/nephrology/",
+   "parent": 259,
+   "en_title": "Nephrology",
+   "en": {
+    "h1": "Nephrology",
+    "cards": [
+     "Outpatient clinic",
+     "Inpatient care and consultations",
+     "Kidney effects of other conditions and medicines",
+     "Intensive care kidney support",
+     "Haemoperfusion and plasmapheresis",
+     "Haemodialysis",
+     "Peritoneal dialysis",
+     "Kidney transplantation",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Nephrology",
+    "cards": [
+     "Outpatient clinic",
+     "Inpatient care and consultations",
+     "Kidney effects of other conditions and medicines",
+     "Intensive care kidney support",
+     "Haemoperfusion and plasmapheresis",
+     "Haemodialysis",
+     "Peritoneal dialysis",
+     "Kidney transplantation",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Nephrology",
+    "cards": [
+     "Outpatient clinic",
+     "Inpatient care and consultations",
+     "Kidney effects of other conditions and medicines",
+     "Intensive care kidney support",
+     "Haemoperfusion and plasmapheresis",
+     "Haemodialysis",
+     "Peritoneal dialysis",
+     "Kidney transplantation",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 517,
+   "path": "/health/hospital-specialist-treatments/chest-diseases-pulmonology/",
+   "parent": 259,
+   "en_title": "Chest Diseases (Pulmonology)",
+   "en": {
+    "h1": "Chest Diseases (Pulmonology)",
+    "cards": [
+     "Outpatient clinic",
+     "Bronchoscopy unit",
+     "Pulmonary function laboratory",
+     "Allergy skin testing",
+     "Smoking cessation support",
+     "Respiratory physiotherapy",
+     "Medical treatment and follow-up",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Chest Diseases (Pulmonology)",
+    "cards": [
+     "Outpatient clinic",
+     "Bronchoscopy unit",
+     "Pulmonary function laboratory",
+     "Allergy skin testing",
+     "Smoking cessation support",
+     "Respiratory physiotherapy",
+     "Medical treatment and follow-up",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Chest Diseases (Pulmonology)",
+    "cards": [
+     "Outpatient clinic",
+     "Bronchoscopy unit",
+     "Pulmonary function laboratory",
+     "Allergy skin testing",
+     "Smoking cessation support",
+     "Respiratory physiotherapy",
+     "Medical treatment and follow-up",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 518,
+   "path": "/health/hospital-specialist-treatments/infectious-diseases-and-clinical-microbiology/",
+   "parent": 259,
+   "en_title": "Infectious Diseases and Clinical Microbiology",
+   "en": {
+    "h1": "Infectious Diseases and Clinical Microbiology",
+    "cards": [
+     "Outpatient and inpatient care",
+     "Laboratory and molecular diagnostics",
+     "Vaccination advice",
+     "Prevention",
+     "Travel medicine",
+     "Infection control",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Infectious Diseases and Clinical Microbiology",
+    "cards": [
+     "Outpatient and inpatient care",
+     "Laboratory and molecular diagnostics",
+     "Vaccination advice",
+     "Prevention",
+     "Travel medicine",
+     "Infection control",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Infectious Diseases and Clinical Microbiology",
+    "cards": [
+     "Outpatient and inpatient care",
+     "Laboratory and molecular diagnostics",
+     "Vaccination advice",
+     "Prevention",
+     "Travel medicine",
+     "Infection control",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 519,
+   "path": "/health/hospital-specialist-treatments/immunology/",
+   "parent": 259,
+   "en_title": "Immunology",
+   "en": {
+    "h1": "Immunology",
+    "cards": [
+     "Diagnosis of immune system diseases",
+     "Personalised treatment",
+     "Lifestyle counselling",
+     "Vaccination and prevention",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Immunology",
+    "cards": [
+     "Diagnosis of immune system diseases",
+     "Personalised treatment",
+     "Lifestyle counselling",
+     "Vaccination and prevention",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Immunology",
+    "cards": [
+     "Diagnosis of immune system diseases",
+     "Personalised treatment",
+     "Lifestyle counselling",
+     "Vaccination and prevention",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 520,
+   "path": "/health/hospital-specialist-treatments/dermatology/",
+   "parent": 259,
+   "en_title": "Dermatology",
+   "en": {
+    "h1": "Dermatology",
+    "cards": [
+     "Medical dermatology",
+     "Dermatosurgery",
+     "Cosmetic dermatology",
+     "Genital skin conditions",
+     "Skin cancer and mole assessment",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Dermatology",
+    "cards": [
+     "Medical dermatology",
+     "Dermatosurgery",
+     "Cosmetic dermatology",
+     "Genital skin conditions",
+     "Skin cancer and mole assessment",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Dermatology",
+    "cards": [
+     "Medical dermatology",
+     "Dermatosurgery",
+     "Cosmetic dermatology",
+     "Genital skin conditions",
+     "Skin cancer and mole assessment",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 521,
+   "path": "/health/hospital-specialist-treatments/nutrition-and-dietetics/",
+   "parent": 259,
+   "en_title": "Nutrition and Dietetics",
+   "en": {
+    "h1": "Nutrition and Dietetics",
+    "cards": [
+     "Initial assessment and body analysis",
+     "Personalised nutrition therapy",
+     "Inpatient nutrition",
+     "Home nutrition education",
+     "Support around obesity surgery",
+     "Home-based monitoring",
+     "Corporate services",
+     "Education and awareness",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Nutrition and Dietetics",
+    "cards": [
+     "Initial assessment and body analysis",
+     "Personalised nutrition therapy",
+     "Inpatient nutrition",
+     "Home nutrition education",
+     "Support around obesity surgery",
+     "Home-based monitoring",
+     "Corporate services",
+     "Education and awareness",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Nutrition and Dietetics",
+    "cards": [
+     "Initial assessment and body analysis",
+     "Personalised nutrition therapy",
+     "Inpatient nutrition",
+     "Home nutrition education",
+     "Support around obesity surgery",
+     "Home-based monitoring",
+     "Corporate services",
+     "Education and awareness",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 522,
+   "path": "/health/hospital-specialist-treatments/paediatrics/",
+   "parent": 259,
+   "en_title": "Paediatrics",
+   "en": {
+    "h1": "Paediatrics",
+    "cards": [
+     "General paediatric care",
+     "Newborn care",
+     "Breastfeeding support",
+     "Paediatric allergy",
+     "Paediatric endocrinology",
+     "Paediatric haematology-oncology",
+     "Paediatric gastroenterology, hepatology and nutrition",
+     "Paediatric surgery",
+     "Paediatric nephrology",
+     "Paediatric rheumatology",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Paediatrics",
+    "cards": [
+     "General paediatric care",
+     "Newborn care",
+     "Breastfeeding support",
+     "Paediatric allergy",
+     "Paediatric endocrinology",
+     "Paediatric haematology-oncology",
+     "Paediatric gastroenterology, hepatology and nutrition",
+     "Paediatric surgery",
+     "Paediatric nephrology",
+     "Paediatric rheumatology",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Paediatrics",
+    "cards": [
+     "General paediatric care",
+     "Newborn care",
+     "Breastfeeding support",
+     "Paediatric allergy",
+     "Paediatric endocrinology",
+     "Paediatric haematology-oncology",
+     "Paediatric gastroenterology, hepatology and nutrition",
+     "Paediatric surgery",
+     "Paediatric nephrology",
+     "Paediatric rheumatology",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 523,
+   "path": "/health/hospital-specialist-treatments/paediatric-surgery/",
+   "parent": 259,
+   "en_title": "Paediatric Surgery",
+   "en": {
+    "h1": "Paediatric Surgery",
+    "cards": [
+     "Prenatal consultation",
+     "Digestive system surgery",
+     "Urinary tract surgery",
+     "Chest surgery (non-cardiac)",
+     "Open, endoscopic and laparoscopic techniques",
+     "Day surgery",
+     "Pain management",
+     "Paediatric urology",
+     "Coordinated care",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Paediatric Surgery",
+    "cards": [
+     "Prenatal consultation",
+     "Digestive system surgery",
+     "Urinary tract surgery",
+     "Chest surgery (non-cardiac)",
+     "Open, endoscopic and laparoscopic techniques",
+     "Day surgery",
+     "Pain management",
+     "Paediatric urology",
+     "Coordinated care",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Paediatric Surgery",
+    "cards": [
+     "Prenatal consultation",
+     "Digestive system surgery",
+     "Urinary tract surgery",
+     "Chest surgery (non-cardiac)",
+     "Open, endoscopic and laparoscopic techniques",
+     "Day surgery",
+     "Pain management",
+     "Paediatric urology",
+     "Coordinated care",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 524,
+   "path": "/health/hospital-specialist-treatments/paediatric-cardiology/",
+   "parent": 259,
+   "en_title": "Paediatric Cardiology",
+   "en": {
+    "h1": "Paediatric Cardiology",
+    "cards": [
+     "Specialist examination",
+     "Echocardiography and ECG",
+     "Follow-up of prenatal findings",
+     "Individual treatment plans",
+     "Lifelong follow-up",
+     "Interdisciplinary care",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Paediatric Cardiology",
+    "cards": [
+     "Specialist examination",
+     "Echocardiography and ECG",
+     "Follow-up of prenatal findings",
+     "Individual treatment plans",
+     "Lifelong follow-up",
+     "Interdisciplinary care",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Paediatric Cardiology",
+    "cards": [
+     "Specialist examination",
+     "Echocardiography and ECG",
+     "Follow-up of prenatal findings",
+     "Individual treatment plans",
+     "Lifelong follow-up",
+     "Interdisciplinary care",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 525,
+   "path": "/health/hospital-specialist-treatments/paediatric-oncology/",
+   "parent": 259,
+   "en_title": "Paediatric Oncology",
+   "en": {
+    "h1": "Paediatric Oncology",
+    "cards": [
+     "Diagnosis and staging",
+     "Surgery",
+     "Chemotherapy",
+     "Radiotherapy",
+     "Immunotherapy",
+     "Stem cell transplantation",
+     "Paediatric haematology-oncology clinic",
+     "Outpatient chemotherapy unit",
+     "Dedicated children’s outpatient floor",
+     "Long-term follow-up",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Paediatric Oncology",
+    "cards": [
+     "Diagnosis and staging",
+     "Surgery",
+     "Chemotherapy",
+     "Radiotherapy",
+     "Immunotherapy",
+     "Stem cell transplantation",
+     "Paediatric haematology-oncology clinic",
+     "Outpatient chemotherapy unit",
+     "Dedicated children’s outpatient floor",
+     "Long-term follow-up",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Paediatric Oncology",
+    "cards": [
+     "Diagnosis and staging",
+     "Surgery",
+     "Chemotherapy",
+     "Radiotherapy",
+     "Immunotherapy",
+     "Stem cell transplantation",
+     "Paediatric haematology-oncology clinic",
+     "Outpatient chemotherapy unit",
+     "Dedicated children’s outpatient floor",
+     "Long-term follow-up",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 526,
+   "path": "/health/hospital-specialist-treatments/paediatric-haematology/",
+   "parent": 259,
+   "en_title": "Paediatric Haematology",
+   "en": {
+    "h1": "Paediatric Haematology",
+    "cards": [
+     "Blood disorders",
+     "Childhood cancers",
+     "Hereditary conditions",
+     "Bone marrow transplantation link",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Paediatric Haematology",
+    "cards": [
+     "Blood disorders",
+     "Childhood cancers",
+     "Hereditary conditions",
+     "Bone marrow transplantation link",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Paediatric Haematology",
+    "cards": [
+     "Blood disorders",
+     "Childhood cancers",
+     "Hereditary conditions",
+     "Bone marrow transplantation link",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 527,
+   "path": "/health/hospital-specialist-treatments/paediatric-bone-marrow-transplantation/",
+   "parent": 259,
+   "en_title": "Paediatric Bone Marrow Transplantation",
+   "en": {
+    "h1": "Paediatric Bone Marrow Transplantation",
+    "cards": [
+     "Stem cell transplantation",
+     "Pre- and post-transplant treatment",
+     "Protected transplant unit",
+     "Intensive care setting",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Paediatric Bone Marrow Transplantation",
+    "cards": [
+     "Stem cell transplantation",
+     "Pre- and post-transplant treatment",
+     "Protected transplant unit",
+     "Intensive care setting",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Paediatric Bone Marrow Transplantation",
+    "cards": [
+     "Stem cell transplantation",
+     "Pre- and post-transplant treatment",
+     "Protected transplant unit",
+     "Intensive care setting",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 528,
+   "path": "/health/hospital-specialist-treatments/paediatric-neurology/",
+   "parent": 259,
+   "en_title": "Paediatric Neurology",
+   "en": {
+    "h1": "Paediatric Neurology",
+    "cards": [
+     "Clinical evaluation",
+     "Epilepsy and seizures",
+     "Developmental delay",
+     "Neuromuscular diseases",
+     "Genetic and metabolic disorders",
+     "Headaches and fainting",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Paediatric Neurology",
+    "cards": [
+     "Clinical evaluation",
+     "Epilepsy and seizures",
+     "Developmental delay",
+     "Neuromuscular diseases",
+     "Genetic and metabolic disorders",
+     "Headaches and fainting",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Paediatric Neurology",
+    "cards": [
+     "Clinical evaluation",
+     "Epilepsy and seizures",
+     "Developmental delay",
+     "Neuromuscular diseases",
+     "Genetic and metabolic disorders",
+     "Headaches and fainting",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 529,
+   "path": "/health/hospital-specialist-treatments/paediatric-nephrology/",
+   "parent": 259,
+   "en_title": "Paediatric Nephrology",
+   "en": {
+    "h1": "Paediatric Nephrology",
+    "cards": [
+     "Kidney failure",
+     "Dialysis in children",
+     "Kidney transplantation",
+     "Urinary tract infections and reflux",
+     "Congenital anomalies",
+     "Bedwetting and kidney stones",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Paediatric Nephrology",
+    "cards": [
+     "Kidney failure",
+     "Dialysis in children",
+     "Kidney transplantation",
+     "Urinary tract infections and reflux",
+     "Congenital anomalies",
+     "Bedwetting and kidney stones",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Paediatric Nephrology",
+    "cards": [
+     "Kidney failure",
+     "Dialysis in children",
+     "Kidney transplantation",
+     "Urinary tract infections and reflux",
+     "Congenital anomalies",
+     "Bedwetting and kidney stones",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 530,
+   "path": "/health/hospital-specialist-treatments/paediatric-endocrinology/",
+   "parent": 259,
+   "en_title": "Paediatric Endocrinology",
+   "en": {
+    "h1": "Paediatric Endocrinology",
+    "cards": [
+     "Growth and development",
+     "Puberty disorders",
+     "Diabetes and obesity",
+     "Thyroid, adrenal and pituitary",
+     "Bone and calcium metabolism",
+     "Sexual development",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Paediatric Endocrinology",
+    "cards": [
+     "Growth and development",
+     "Puberty disorders",
+     "Diabetes and obesity",
+     "Thyroid, adrenal and pituitary",
+     "Bone and calcium metabolism",
+     "Sexual development",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Paediatric Endocrinology",
+    "cards": [
+     "Growth and development",
+     "Puberty disorders",
+     "Diabetes and obesity",
+     "Thyroid, adrenal and pituitary",
+     "Bone and calcium metabolism",
+     "Sexual development",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 531,
+   "path": "/health/hospital-specialist-treatments/paediatric-gastroenterology-hepatology-and-nutrition/",
+   "parent": 259,
+   "en_title": "Paediatric Gastroenterology, Hepatology and Nutrition",
+   "en": {
+    "h1": "Paediatric Gastroenterology, Hepatology and Nutrition",
+    "cards": [
+     "Upper digestive tract",
+     "Intestinal disorders",
+     "Liver, gallbladder and pancreas",
+     "Nutrition",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Paediatric Gastroenterology, Hepatology and Nutrition",
+    "cards": [
+     "Upper digestive tract",
+     "Intestinal disorders",
+     "Liver, gallbladder and pancreas",
+     "Nutrition",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Paediatric Gastroenterology, Hepatology and Nutrition",
+    "cards": [
+     "Upper digestive tract",
+     "Intestinal disorders",
+     "Liver, gallbladder and pancreas",
+     "Nutrition",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 532,
+   "path": "/health/hospital-specialist-treatments/paediatric-allergy-and-immunology/",
+   "parent": 259,
+   "en_title": "Paediatric Allergy and Immunology",
+   "en": {
+    "h1": "Paediatric Allergy and Immunology",
+    "cards": [
+     "Allergy skin tests",
+     "Blood allergy tests",
+     "Lung function tests",
+     "Provocation testing",
+     "Allergy vaccination",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Paediatric Allergy and Immunology",
+    "cards": [
+     "Allergy skin tests",
+     "Blood allergy tests",
+     "Lung function tests",
+     "Provocation testing",
+     "Allergy vaccination",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Paediatric Allergy and Immunology",
+    "cards": [
+     "Allergy skin tests",
+     "Blood allergy tests",
+     "Lung function tests",
+     "Provocation testing",
+     "Allergy vaccination",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 533,
+   "path": "/health/hospital-specialist-treatments/paediatric-infectious-diseases/",
+   "parent": 259,
+   "en_title": "Paediatric Infectious Diseases",
+   "en": {
+    "h1": "Paediatric Infectious Diseases",
+    "cards": [
+     "Recurrent infections",
+     "Childhood rash illnesses",
+     "Immunocompromised children",
+     "Vaccination and prevention",
+     "Rarer infections",
+     "Collaborative care",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Paediatric Infectious Diseases",
+    "cards": [
+     "Recurrent infections",
+     "Childhood rash illnesses",
+     "Immunocompromised children",
+     "Vaccination and prevention",
+     "Rarer infections",
+     "Collaborative care",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Paediatric Infectious Diseases",
+    "cards": [
+     "Recurrent infections",
+     "Childhood rash illnesses",
+     "Immunocompromised children",
+     "Vaccination and prevention",
+     "Rarer infections",
+     "Collaborative care",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 534,
+   "path": "/health/hospital-specialist-treatments/paediatric-rheumatology/",
+   "parent": 259,
+   "en_title": "Paediatric Rheumatology",
+   "en": {
+    "h1": "Paediatric Rheumatology",
+    "cards": [
+     "Specialist assessment",
+     "Recurrent fever evaluation",
+     "Inflammatory joint disease",
+     "Vasculitis and multisystem disease",
+     "Multidisciplinary care",
+     "Long-term follow-up",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Paediatric Rheumatology",
+    "cards": [
+     "Specialist assessment",
+     "Recurrent fever evaluation",
+     "Inflammatory joint disease",
+     "Vasculitis and multisystem disease",
+     "Multidisciplinary care",
+     "Long-term follow-up",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Paediatric Rheumatology",
+    "cards": [
+     "Specialist assessment",
+     "Recurrent fever evaluation",
+     "Inflammatory joint disease",
+     "Vasculitis and multisystem disease",
+     "Multidisciplinary care",
+     "Long-term follow-up",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 535,
+   "path": "/health/hospital-specialist-treatments/child-and-adolescent-psychiatry/",
+   "parent": 259,
+   "en_title": "Child and Adolescent Psychiatry",
+   "en": {
+    "h1": "Child and Adolescent Psychiatry",
+    "cards": [
+     "Comprehensive assessment",
+     "Diagnosis and treatment planning",
+     "Family and relationship support",
+     "Long-term follow-up",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Child and Adolescent Psychiatry",
+    "cards": [
+     "Comprehensive assessment",
+     "Diagnosis and treatment planning",
+     "Family and relationship support",
+     "Long-term follow-up",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Child and Adolescent Psychiatry",
+    "cards": [
+     "Comprehensive assessment",
+     "Diagnosis and treatment planning",
+     "Family and relationship support",
+     "Long-term follow-up",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 536,
+   "path": "/health/hospital-specialist-treatments/neonatal-intensive-care-unit-nicu/",
+   "parent": 259,
+   "en_title": "Neonatal Intensive Care Unit (NICU)",
+   "en": {
+    "h1": "Neonatal Intensive Care Unit (NICU)",
+    "cards": [
+     "Care for premature babies",
+     "Care for unwell term newborns",
+     "Round-the-clock care",
+     "Specialised equipment",
+     "Dedicated neonatal team",
+     "Multidisciplinary input",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Neonatal Intensive Care Unit (NICU)",
+    "cards": [
+     "Care for premature babies",
+     "Care for unwell term newborns",
+     "Round-the-clock care",
+     "Specialised equipment",
+     "Dedicated neonatal team",
+     "Multidisciplinary input",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Neonatal Intensive Care Unit (NICU)",
+    "cards": [
+     "Care for premature babies",
+     "Care for unwell term newborns",
+     "Round-the-clock care",
+     "Specialised equipment",
+     "Dedicated neonatal team",
+     "Multidisciplinary input",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 537,
+   "path": "/health/hospital-specialist-treatments/radiology/",
+   "parent": 259,
+   "en_title": "Radiology",
+   "en": {
+    "h1": "Radiology",
+    "cards": [
+     "MRI",
+     "CT",
+     "PET-CT",
+     "Digital X-ray and portable X-ray",
+     "Ultrasound",
+     "Digital mammography",
+     "Fluoroscopy and C-arm",
+     "Digital angiography",
+     "Bone densitometry",
+     "Interventional radiology",
+     "Digital archive (PACS and RIS)",
+     "Research laboratory",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Radiology",
+    "cards": [
+     "MRI",
+     "CT",
+     "PET-CT",
+     "Digital X-ray and portable X-ray",
+     "Ultrasound",
+     "Digital mammography",
+     "Fluoroscopy and C-arm",
+     "Digital angiography",
+     "Bone densitometry",
+     "Interventional radiology",
+     "Digital archive (PACS and RIS)",
+     "Research laboratory",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Radiology",
+    "cards": [
+     "MRI",
+     "CT",
+     "PET-CT",
+     "Digital X-ray and portable X-ray",
+     "Ultrasound",
+     "Digital mammography",
+     "Fluoroscopy and C-arm",
+     "Digital angiography",
+     "Bone densitometry",
+     "Interventional radiology",
+     "Digital archive (PACS and RIS)",
+     "Research laboratory",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 538,
+   "path": "/health/hospital-specialist-treatments/imaging-unit/",
+   "parent": 259,
+   "en_title": "Imaging Unit",
+   "en": {
+    "h1": "Imaging Unit",
+    "cards": [
+     "MRI and functional MRI",
+     "PET/CT",
+     "Nuclear medicine and SPECT",
+     "CT, X-ray and fluoroscopy",
+     "Breast and bone imaging",
+     "Ultrasound",
+     "Molecular imaging",
+     "Interventional radiology",
+     "Digital archiving (PACS and RIS)",
+     "Research",
+     "Preparation forms",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Imaging Unit",
+    "cards": [
+     "MRI and functional MRI",
+     "PET/CT",
+     "Nuclear medicine and SPECT",
+     "CT, X-ray and fluoroscopy",
+     "Breast and bone imaging",
+     "Ultrasound",
+     "Molecular imaging",
+     "Interventional radiology",
+     "Digital archiving (PACS and RIS)",
+     "Research",
+     "Preparation forms",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Imaging Unit",
+    "cards": [
+     "MRI and functional MRI",
+     "PET/CT",
+     "Nuclear medicine and SPECT",
+     "CT, X-ray and fluoroscopy",
+     "Breast and bone imaging",
+     "Ultrasound",
+     "Molecular imaging",
+     "Interventional radiology",
+     "Digital archiving (PACS and RIS)",
+     "Research",
+     "Preparation forms",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 539,
+   "path": "/health/hospital-specialist-treatments/medical-genetics/",
+   "parent": 259,
+   "en_title": "Medical Genetics",
+   "en": {
+    "h1": "Medical Genetics",
+    "cards": [
+     "Genetic consultation",
+     "Genetic counselling",
+     "Prenatal genetic diagnosis",
+     "Postnatal genetic diagnosis",
+     "Cytogenetics",
+     "Molecular cytogenetics",
+     "Molecular genetic testing",
+     "Oncology and haematology genetics",
+     "Interdisciplinary cooperation",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Medical Genetics",
+    "cards": [
+     "Genetic consultation",
+     "Genetic counselling",
+     "Prenatal genetic diagnosis",
+     "Postnatal genetic diagnosis",
+     "Cytogenetics",
+     "Molecular cytogenetics",
+     "Molecular genetic testing",
+     "Oncology and haematology genetics",
+     "Interdisciplinary cooperation",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Medical Genetics",
+    "cards": [
+     "Genetic consultation",
+     "Genetic counselling",
+     "Prenatal genetic diagnosis",
+     "Postnatal genetic diagnosis",
+     "Cytogenetics",
+     "Molecular cytogenetics",
+     "Molecular genetic testing",
+     "Oncology and haematology genetics",
+     "Interdisciplinary cooperation",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 540,
+   "path": "/health/hospital-specialist-treatments/medical-pathology/",
+   "parent": 259,
+   "en_title": "Medical Pathology",
+   "en": {
+    "h1": "Medical Pathology",
+    "cards": [
+     "Intraoperative frozen section",
+     "Biopsy reporting",
+     "Rapid processing for urgent cases",
+     "Histochemistry and immunohistochemistry",
+     "Immunohistochemistry laboratory",
+     "Advanced molecular methods",
+     "Cytopathology",
+     "On-site sample adequacy assessment",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Medical Pathology",
+    "cards": [
+     "Intraoperative frozen section",
+     "Biopsy reporting",
+     "Rapid processing for urgent cases",
+     "Histochemistry and immunohistochemistry",
+     "Immunohistochemistry laboratory",
+     "Advanced molecular methods",
+     "Cytopathology",
+     "On-site sample adequacy assessment",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Medical Pathology",
+    "cards": [
+     "Intraoperative frozen section",
+     "Biopsy reporting",
+     "Rapid processing for urgent cases",
+     "Histochemistry and immunohistochemistry",
+     "Immunohistochemistry laboratory",
+     "Advanced molecular methods",
+     "Cytopathology",
+     "On-site sample adequacy assessment",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 541,
+   "path": "/health/hospital-specialist-treatments/medical-microbiology/",
+   "parent": 259,
+   "en_title": "Medical Microbiology",
+   "en": {
+    "h1": "Medical Microbiology",
+    "cards": [
+     "Bacteriology",
+     "Mycobacteriology (tuberculosis)",
+     "Virology",
+     "Parasitology",
+     "Mycology",
+     "Molecular microbiology",
+     "Syndromic molecular panels",
+     "Infection immunology",
+     "Round-the-clock service",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Medical Microbiology",
+    "cards": [
+     "Bacteriology",
+     "Mycobacteriology (tuberculosis)",
+     "Virology",
+     "Parasitology",
+     "Mycology",
+     "Molecular microbiology",
+     "Syndromic molecular panels",
+     "Infection immunology",
+     "Round-the-clock service",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Medical Microbiology",
+    "cards": [
+     "Bacteriology",
+     "Mycobacteriology (tuberculosis)",
+     "Virology",
+     "Parasitology",
+     "Mycology",
+     "Molecular microbiology",
+     "Syndromic molecular panels",
+     "Infection immunology",
+     "Round-the-clock service",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 542,
+   "path": "/health/hospital-specialist-treatments/medical-histology-and-embryology/",
+   "parent": 259,
+   "en_title": "Medical Histology and Embryology",
+   "en": {
+    "h1": "Medical Histology and Embryology",
+    "cards": [
+     "Histology",
+     "Cell and tissue function",
+     "Organ development",
+     "Embryology",
+     "Developmental abnormalities",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Medical Histology and Embryology",
+    "cards": [
+     "Histology",
+     "Cell and tissue function",
+     "Organ development",
+     "Embryology",
+     "Developmental abnormalities",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Medical Histology and Embryology",
+    "cards": [
+     "Histology",
+     "Cell and tissue function",
+     "Organ development",
+     "Embryology",
+     "Developmental abnormalities",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 543,
+   "path": "/health/hospital-specialist-treatments/transfusion-centre/",
+   "parent": 259,
+   "en_title": "Transfusion Centre",
+   "en": {
+    "h1": "Transfusion Centre",
+    "cards": [
+     "Blood component therapy",
+     "Cellular therapy",
+     "Therapeutic apheresis",
+     "Specialised laboratory diagnostics",
+     "Blood bank",
+     "Research and training",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Transfusion Centre",
+    "cards": [
+     "Blood component therapy",
+     "Cellular therapy",
+     "Therapeutic apheresis",
+     "Specialised laboratory diagnostics",
+     "Blood bank",
+     "Research and training",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Transfusion Centre",
+    "cards": [
+     "Blood component therapy",
+     "Cellular therapy",
+     "Therapeutic apheresis",
+     "Specialised laboratory diagnostics",
+     "Blood bank",
+     "Research and training",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 544,
+   "path": "/health/hospital-specialist-treatments/emergency-medicine/",
+   "parent": 259,
+   "en_title": "Emergency Medicine",
+   "en": {
+    "h1": "Emergency Medicine",
+    "cards": [
+     "24-hour emergency care",
+     "Resuscitation room",
+     "Trauma room",
+     "Monitored observation beds",
+     "Imaging and laboratory support",
+     "Ambulance service",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Emergency Medicine",
+    "cards": [
+     "24-hour emergency care",
+     "Resuscitation room",
+     "Trauma room",
+     "Monitored observation beds",
+     "Imaging and laboratory support",
+     "Ambulance service",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Emergency Medicine",
+    "cards": [
+     "24-hour emergency care",
+     "Resuscitation room",
+     "Trauma room",
+     "Monitored observation beds",
+     "Imaging and laboratory support",
+     "Ambulance service",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 545,
+   "path": "/health/hospital-specialist-treatments/intensive-care-unit/",
+   "parent": 259,
+   "en_title": "Intensive Care Unit",
+   "en": {
+    "h1": "Intensive Care Unit",
+    "cards": [
+     "24-hour care and monitoring",
+     "Multidisciplinary team",
+     "Higher nurse-to-patient ratio",
+     "Invasive monitoring",
+     "Mechanical ventilation",
+     "Circulatory and kidney support",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Intensive Care Unit",
+    "cards": [
+     "24-hour care and monitoring",
+     "Multidisciplinary team",
+     "Higher nurse-to-patient ratio",
+     "Invasive monitoring",
+     "Mechanical ventilation",
+     "Circulatory and kidney support",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Intensive Care Unit",
+    "cards": [
+     "24-hour care and monitoring",
+     "Multidisciplinary team",
+     "Higher nurse-to-patient ratio",
+     "Invasive monitoring",
+     "Mechanical ventilation",
+     "Circulatory and kidney support",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  },
+  {
+   "id": 546,
+   "path": "/health/hospital-specialist-treatments/anaesthesiology-and-reanimation/",
+   "parent": 259,
+   "en_title": "Anaesthesiology and Reanimation",
+   "en": {
+    "h1": "Anaesthesiology and Reanimation",
+    "cards": [
+     "Anaesthesia services",
+     "Supervised recovery",
+     "General intensive care unit",
+     "Cardiovascular surgery intensive care",
+     "Neonatal intensive care",
+     "Isolation rooms",
+     "Supportive intensive care equipment",
+     "Pain treatment",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "de": {
+    "h1": "Anaesthesiology and Reanimation",
+    "cards": [
+     "Anaesthesia services",
+     "Supervised recovery",
+     "General intensive care unit",
+     "Cardiovascular surgery intensive care",
+     "Neonatal intensive care",
+     "Isolation rooms",
+     "Supportive intensive care equipment",
+     "Pain treatment",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   },
+   "tr": {
+    "h1": "Anaesthesiology and Reanimation",
+    "cards": [
+     "Anaesthesia services",
+     "Supervised recovery",
+     "General intensive care unit",
+     "Cardiovascular surgery intensive care",
+     "Neonatal intensive care",
+     "Isolation rooms",
+     "Supportive intensive care equipment",
+     "Pain treatment",
+     "1. Free consultation",
+     "2. Personal treatment plan",
+     "3. Travel & treatment",
+     "4. Aftercare"
+    ]
+   }
+  }
+ ]
+}
