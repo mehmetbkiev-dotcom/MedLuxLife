@@ -321,3 +321,4 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - 2026-10-14 08:40 – Ana sayfa adım numaraları (Anna): "01/02/03" → "1/2/3"; Cormorant'ın eski stil rakamları (1 = "I" gibi) yerine klasik rakamlar (lining-nums). Hem "Your Medical Journey" hem "Your Travel Journey" kartlarında. Yedek: gs5_before_step_numbers.json.
 - 2026-10-14 08:50 – Ana sayfa adım kartları: numara kart ortasında (figure tam genişlik + text-align center). Anna "hepsi ortada" seçti → numara + başlık + metin ortada (assets/home_steps_center.css, global styles). Yedek: gs5_before_step_allcenter.json. Yedek: gs5_before_step_center.json.
 - 2026-10-14 – Anna onayladı: Travel fotoğrafları, adım numaraları 1/2/3 (klasik rakam) ve tamamen ortalanmış adım kartları.
+- 2026-10-14 – Kullanıcı teyit etti: telefonda header altındaki çizgi de düzeldi (dar ekran taşma düzeltmesiyle birlikte).
