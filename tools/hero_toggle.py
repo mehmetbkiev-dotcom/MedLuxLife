@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Home banner: switch between the new banner (2026-10-15, media 1954 + phone 1955 + hero logo 1950; earlier tries 1929, 1935, 1937, 1948). NOTE: 'old' does not switch the hero logo back (1950 -> 164) and the old one (media 1624).
+"""Home banner: switch between the new banner (2026-10-15, media 1958 = photo with logo + slogan baked in, phone 1955 + hero logo 1950; earlier tries 1929, 1935, 1937, 1948, 1954). NOTE: 'old' does not switch the hero logo back (1950 -> 164) and the old one (media 1624).
 
 new : page 23 cover uses medluxlife-home-hero-2026.jpg (focal 50%/45%, alt text) + CSS block HERO-2026
       (assets/home_hero_2026.css: readable slogan/buttons/logo, full first screen on desktop, phone crop 86%).
@@ -13,10 +13,10 @@ import json, re, subprocess, sys, time, pathlib
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 API = 'https://medluxlife-6j8sz55bpn.live-website.com/wp-json'
 UP = 'https://medluxlife.de/wp-content/uploads/2026/10/'
-ALT = ('A patient and a doctor talk in a bright clinic lounge with a view of Istanbul; a golden world map with flight paths, a'
-       ' plane over a turquoise Mediterranean bay with sailing boats and a beach with sun loungers, and small photos of a smile check-up and a hair consultation')
+ALT = ('MedLuxLife – Your Health, Upgraded. Your Journey, Elevated. A patient and a doctor in a bright clinic lounge with a view'
+       ' of Istanbul, a golden world map with flight paths, a plane over a turquoise Mediterranean bay and a beach with sun loungers')
 OLD = {'file': 'medluxlife-home-hero-hd.jpg', 'id': 1624, 'fy': '0.75', 'pos': '50% 75%', 'alt': ''}
-NEW = {'file': 'medluxlife-home-hero-2026e.jpg', 'id': 1954, 'fy': '0.66', 'pos': '50% 66%', 'alt': ALT}
+NEW = {'file': 'medluxlife-home-hero-2026f.jpg', 'id': 1958, 'fy': '0.66', 'pos': '50% 66%', 'alt': ALT}
 START, END = '/* >>> HERO-2026 START', '/* <<< HERO-2026 END */'
 
 

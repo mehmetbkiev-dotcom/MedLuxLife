@@ -1,4 +1,4 @@
-/* >>> HERO-2026 START: home banner (media 1954 + phone 1955, logo 1950; 2026-10-15) – light photo: medium soft shade behind logo and slogan; banner fills the first screen on desktop; own crop on phones (map, sea, boats) */
+/* >>> HERO-2026 START: home banner (media 1958 = photo with logo + slogan on desktop/tablet, phone 1955 + HTML logo 1950; 2026-10-15) – light photo: medium soft shade behind logo and slogan; banner fills the first screen on desktop; own crop on phones (map, sea, boats) */
 .home main .wp-block-post-content > .ext-hero-section .wp-block-cover > .wp-block-cover__background { opacity: 1 !important; background: radial-gradient(ellipse 36% 42% at 50% 47%, rgba(8, 6, 28, 0.30) 0%, rgba(8, 6, 28, 0.16) 55%, rgba(8, 6, 28, 0) 100%) !important; }
 .home main .wp-block-post-content > .ext-hero-section .wp-block-cover figure.aligncenter img { filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.40)) drop-shadow(0 0 14px rgba(8, 6, 28, 0.25)) !important; }
 .home main .wp-block-post-content > .ext-hero-section .wp-block-cover h1.wp-block-heading { padding: 20px 110px !important;
@@ -22,4 +22,15 @@
   .home main .wp-block-post-content > .ext-hero-section .wp-block-cover h1.wp-block-heading { background: radial-gradient(ellipse 50% 50% at 50% 50%, rgba(5, 3, 20, 0.40) 0%, rgba(5, 3, 20, 0.26) 70%, rgba(5, 3, 20, 0) 100%) !important; }
 }
 @media (max-width: 600px) { .home main .wp-block-post-content > .ext-hero-section .wp-block-cover h1.wp-block-heading { padding: 14px 18px !important; } }
+/* banner photo already contains logo + slogan (>= 782 px): hide the HTML logo and slogan (slogan stays for SEO / screen readers), no shade, buttons placed under the slogan of the photo */
+@media (min-width: 782px) {
+  .home main .wp-block-post-content > .ext-hero-section .wp-block-cover > .wp-block-cover__background { opacity: 0 !important; }
+  .home main .wp-block-post-content > .ext-hero-section .wp-block-cover .wp-block-cover__inner-container,
+  .home main .wp-block-post-content > .ext-hero-section .wp-block-cover .wp-block-cover__inner-container > .wp-block-group { position: static !important; }
+  .home main .wp-block-post-content > .ext-hero-section .wp-block-cover figure.aligncenter { display: none !important; }
+  .home main .wp-block-post-content > .ext-hero-section .wp-block-cover h1.wp-block-heading { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0 0 0 0) !important; white-space: nowrap !important; border: 0 !important; }
+  .home main .wp-block-post-content > .ext-hero-section .wp-block-cover .wp-block-cover__inner-container > .wp-block-group > .wp-block-buttons { position: absolute !important; left: 0 !important; right: 0 !important; width: auto !important; max-width: none !important; margin: 0 auto !important; z-index: 2;
+    /* photo 1678x937, object-fit cover at 50% 66%: shown height = max(cover height, 55.84vw); buttons centred at ~71.5% of the photo, just under its slogan */
+    top: calc(66% + max(100%, 55.84vw) * 0.055 - 30px) !important; }
+}
 /* <<< HERO-2026 END */
