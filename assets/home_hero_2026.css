@@ -1,4 +1,4 @@
-/* >>> HERO-2026 START: home banner (media 1948 + phone 1949, logo 1950; 2026-10-15) – light photo: medium soft shade behind logo and slogan; banner fills the first screen on desktop; own crop on phones (map, sea, boats) */
+/* >>> HERO-2026 START: home banner (media 1954 + phone 1955, logo 1950; 2026-10-15) – light photo: medium soft shade behind logo and slogan; banner fills the first screen on desktop; own crop on phones (map, sea, boats) */
 .home main .wp-block-post-content > .ext-hero-section .wp-block-cover > .wp-block-cover__background { opacity: 1 !important; background: radial-gradient(ellipse 36% 42% at 50% 47%, rgba(8, 6, 28, 0.30) 0%, rgba(8, 6, 28, 0.16) 55%, rgba(8, 6, 28, 0) 100%) !important; }
 .home main .wp-block-post-content > .ext-hero-section .wp-block-cover figure.aligncenter img { filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.40)) drop-shadow(0 0 14px rgba(8, 6, 28, 0.25)) !important; }
 .home main .wp-block-post-content > .ext-hero-section .wp-block-cover h1.wp-block-heading { padding: 20px 110px !important;
@@ -16,7 +16,7 @@
 }
 @media (max-width: 781px) {
   /* phones: own portrait crop (world map, sea, boats) instead of the wide photo */
-  .home main .wp-block-post-content > .ext-hero-section .wp-block-cover { background: url(https://medluxlife.de/wp-content/uploads/2026/10/medluxlife-home-hero-2026d-phone.jpg) 50% 50% / cover no-repeat !important; }
+  .home main .wp-block-post-content > .ext-hero-section .wp-block-cover { background: url(https://medluxlife.de/wp-content/uploads/2026/10/medluxlife-home-hero-2026e-phone.jpg) 50% 50% / cover no-repeat !important; }
   .home main .wp-block-post-content > .ext-hero-section .wp-block-cover img.wp-block-cover__image-background { display: none !important; }
   .home main .wp-block-post-content > .ext-hero-section .wp-block-cover > .wp-block-cover__background { background: radial-gradient(ellipse 90% 40% at 50% 32%, rgba(8, 6, 28, 0.34) 0%, rgba(8, 6, 28, 0.18) 60%, rgba(8, 6, 28, 0) 100%) !important; }
   .home main .wp-block-post-content > .ext-hero-section .wp-block-cover h1.wp-block-heading { background: radial-gradient(ellipse 50% 50% at 50% 50%, rgba(5, 3, 20, 0.40) 0%, rgba(5, 3, 20, 0.26) 70%, rgba(5, 3, 20, 0) 100%) !important; }
