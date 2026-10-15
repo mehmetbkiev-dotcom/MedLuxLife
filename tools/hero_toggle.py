@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Home banner: switch between the new banner (2026-10-15, media 1935; first try 1929) and the old one (media 1624).
+"""Home banner: switch between the new banner (2026-10-15, media 1937 + phone 1938; earlier tries 1929, 1935) and the old one (media 1624).
 
 new : page 23 cover uses medluxlife-home-hero-2026.jpg (focal 50%/45%, alt text) + CSS block HERO-2026
       (assets/home_hero_2026.css: readable slogan/buttons/logo, full first screen on desktop, phone crop 86%).
@@ -16,7 +16,7 @@ UP = 'https://medluxlife.de/wp-content/uploads/2026/10/'
 ALT = ('A patient talks with a doctor in a bright clinic lounge; on the right a sunset view of the Bosphorus bridge and a pool terrace '
        'in Istanbul, with a golden world map and small photos of a smile check-up and a hair consultation')
 OLD = {'file': 'medluxlife-home-hero-hd.jpg', 'id': 1624, 'fy': '0.75', 'pos': '50% 75%', 'alt': ''}
-NEW = {'file': 'medluxlife-home-hero-2026b.jpg', 'id': 1935, 'fy': '0.45', 'pos': '50% 45%', 'alt': ALT}
+NEW = {'file': 'medluxlife-home-hero-2026c.jpg', 'id': 1937, 'fy': '0.84', 'pos': '50% 84%', 'alt': ALT}
 START, END = '/* >>> HERO-2026 START', '/* <<< HERO-2026 END */'
 
 
