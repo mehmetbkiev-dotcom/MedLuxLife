@@ -1,21 +1,25 @@
-/* >>> HERO-2026 START: home banner (media 1937 + phone 1938, 2026-10-15) – slogan, buttons and logo readable on the lighter photo; banner fills the first screen on desktop; own crop on phones (bridge + pool) */
+/* >>> HERO-2026 START: home banner (media 1948 + phone 1949, logo 1950; 2026-10-15) – light photo: medium soft shade behind logo and slogan; banner fills the first screen on desktop; own crop on phones (map, sea, boats) */
+.home main .wp-block-post-content > .ext-hero-section .wp-block-cover > .wp-block-cover__background { opacity: 1 !important; background: radial-gradient(ellipse 36% 42% at 50% 47%, rgba(8, 6, 28, 0.30) 0%, rgba(8, 6, 28, 0.16) 55%, rgba(8, 6, 28, 0) 100%) !important; }
+.home main .wp-block-post-content > .ext-hero-section .wp-block-cover figure.aligncenter img { filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.40)) drop-shadow(0 0 14px rgba(8, 6, 28, 0.25)) !important; }
 .home main .wp-block-post-content > .ext-hero-section .wp-block-cover h1.wp-block-heading { padding: 20px 110px !important;
-  background: radial-gradient(ellipse 50% 50% at 50% 50%, rgba(5, 3, 20, 0.56) 0%, rgba(5, 3, 20, 0.40) 70%, rgba(5, 3, 20, 0) 100%) !important; }
+  background: radial-gradient(ellipse 50% 50% at 50% 50%, rgba(5, 3, 20, 0.40) 0%, rgba(5, 3, 20, 0.26) 70%, rgba(5, 3, 20, 0) 100%) !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.80), 0 2px 10px rgba(0, 0, 0, 0.45) !important; }
 .home main .wp-block-post-content > .ext-hero-section .wp-block-cover h1.wp-block-heading mark { color: #f3c96b !important; }
-.home main .wp-block-post-content > .ext-hero-section .wp-block-cover .wp-block-button__link { background-color: rgba(11, 6, 32, 0.50) !important; color: #f3c96b !important; }
-.home main .wp-block-post-content > .ext-hero-section .wp-block-cover figure.aligncenter img { filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.55)); }
+.home main .wp-block-post-content > .ext-hero-section .wp-block-cover .wp-block-button__link { background-color: rgba(11, 6, 32, 0.50) !important; color: #f3c96b !important; box-shadow: 0 6px 16px -8px rgba(0, 0, 0, 0.35) !important; }
 @media (min-width: 1100px) {
   /* exactly one screen high (minus the admin bar when logged in), never taller than the photo's own shape allows */
   .home main .wp-block-post-content > .ext-hero-section .wp-block-cover { min-height: min(calc(100svh - var(--wp-admin--admin-bar--height, 0px)), 62vw) !important; padding-top: calc(var(--wp--preset--spacing--60) + clamp(0px, (100svh - 640px) * 0.2, 90px)) !important; }   /* content a bit lower on tall screens, no extra space on short ones */
+  .home main .wp-block-post-content > .ext-hero-section .wp-block-cover img.wp-block-cover__image-background { object-position: 50% 66% !important; }   /* plane below the header and the two circles visible on short laptops */
 }
 @media (min-width: 782px) and (max-width: 1099px) and (orientation: landscape) {
   .home main .wp-block-post-content > .ext-hero-section .wp-block-cover { min-height: calc(100svh - var(--wp-admin--admin-bar--height, 0px)) !important; }
 }
 @media (max-width: 781px) {
-  /* phones: own sharper portrait crop (plane top right, bridge, pool) instead of the wide photo */
-  .home main .wp-block-post-content > .ext-hero-section .wp-block-cover { background: url(https://medluxlife.de/wp-content/uploads/2026/10/medluxlife-home-hero-2026c-phone.jpg) 50% 50% / cover no-repeat !important; }
+  /* phones: own portrait crop (world map, sea, boats) instead of the wide photo */
+  .home main .wp-block-post-content > .ext-hero-section .wp-block-cover { background: url(https://medluxlife.de/wp-content/uploads/2026/10/medluxlife-home-hero-2026d-phone.jpg) 50% 50% / cover no-repeat !important; }
   .home main .wp-block-post-content > .ext-hero-section .wp-block-cover img.wp-block-cover__image-background { display: none !important; }
-  .home main .wp-block-post-content > .ext-hero-section .wp-block-cover > .wp-block-cover__background { opacity: 1 !important; background: radial-gradient(ellipse 85% 34% at 50% 30%, rgba(5, 3, 20, 0.62) 0%, rgba(5, 3, 20, 0.35) 60%, rgba(5, 3, 20, 0) 100%) !important; }
+  .home main .wp-block-post-content > .ext-hero-section .wp-block-cover > .wp-block-cover__background { background: radial-gradient(ellipse 90% 40% at 50% 32%, rgba(8, 6, 28, 0.34) 0%, rgba(8, 6, 28, 0.18) 60%, rgba(8, 6, 28, 0) 100%) !important; }
+  .home main .wp-block-post-content > .ext-hero-section .wp-block-cover h1.wp-block-heading { background: radial-gradient(ellipse 50% 50% at 50% 50%, rgba(5, 3, 20, 0.40) 0%, rgba(5, 3, 20, 0.26) 70%, rgba(5, 3, 20, 0) 100%) !important; }
 }
-@media (max-width: 600px) { .home main .wp-block-post-content > .ext-hero-section .wp-block-cover h1.wp-block-heading { padding: 14px 18px !important; background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(5, 3, 20, 0.56) 0%, rgba(5, 3, 20, 0.40) 70%, rgba(5, 3, 20, 0) 100%) !important; } }
+@media (max-width: 600px) { .home main .wp-block-post-content > .ext-hero-section .wp-block-cover h1.wp-block-heading { padding: 14px 18px !important; } }
 /* <<< HERO-2026 END */
