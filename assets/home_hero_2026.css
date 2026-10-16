@@ -1,4 +1,4 @@
-/* >>> HERO-2026 START: home banner (media 1996 + phone 1997, logo 1950; 2026-10-16) – clean photo on Anna's wish: no overlay, no shade band behind the slogan, no logo glow; a tight shadow around the letters and a very soft dark oval under the slogan line so the gold words read on the bright sunset (Anna asked for it); banner fills the first screen on desktop; own crop on phones */
+/* >>> HERO-2026 START: home banner (media 2001 + phone 2002, light logo 2003 = old logo 164; 2026-10-16) – clean photo on Anna's wish: no overlay, no shade band behind the slogan, no logo glow; a tight shadow around the letters and a very soft dark oval under the slogan line so the gold words read on the bright sunset (Anna asked for it); banner fills the first screen on desktop; own crop on phones */
 .home main .wp-block-post-content > .ext-hero-section .wp-block-cover > .wp-block-cover__background { opacity: 0 !important; background: none !important; }
 .home main .wp-block-post-content > .ext-hero-section .wp-block-cover figure.aligncenter img { filter: none !important; }
 .home main .wp-block-post-content > .ext-hero-section .wp-block-cover h1.wp-block-heading { padding: 20px 110px !important; background: none !important;
@@ -14,26 +14,28 @@
   /* one screen high (minus the admin bar when logged in), never taller than the photo's own shape allows; on short wide laptops
      (e.g. 1366x613) the photo would have to lose either the plane (under the header) or the two circles, so instead the banner
      grows just enough to keep the whole photo: --mlx-hero-up moves the photo up only until the plane top sits 10px under the
-     72px header (plane top = 94/1678 of the width, circle bottom = 886/1678, photo height = 937/1678); the logo, slogan and
+     72px header (plane top = 95/1672 of the width, circle bottom = 860/1672, photo height = 941/1672); the logo, slogan and
      buttons stay centred in the first screen (extra bottom padding), the circles come into view on scrolling */
   .home main .wp-block-post-content > .ext-hero-section .wp-block-cover {
-    --mlx-hero-up: max(0px, 5.60vw - 82px);
-    --mlx-hero-h: max(min(calc(100svh - var(--wp-admin--admin-bar--height, 0px)), 62vw), calc(52.80vw - var(--mlx-hero-up) + 10px));
+    --mlx-hero-up: max(0px, 5.68vw - 82px);
+    --mlx-hero-h: max(min(calc(100svh - var(--wp-admin--admin-bar--height, 0px)), 62vw), calc(51.44vw - var(--mlx-hero-up) + 10px));
     min-height: var(--mlx-hero-h) !important;
     padding-top: calc(var(--wp--preset--spacing--60) + clamp(0px, (100svh - 640px) * 0.2, 90px)) !important;   /* content a bit lower on tall screens, no extra space on short ones */
     padding-bottom: calc(var(--wp--preset--spacing--60) + max(0px, var(--mlx-hero-h) - (100svh - var(--wp-admin--admin-bar--height, 0px)))) !important; }
   /* never move the photo up by more than it overflows (minus 20px for a classic scrollbar, which vw includes), so no gap can open at the bottom */
-  .home main .wp-block-post-content > .ext-hero-section .wp-block-cover img.wp-block-cover__image-background { object-position: 50% calc(-1 * min(var(--mlx-hero-up), max(0px, 55.84vw - 20px - var(--mlx-hero-h)))) !important; }
-  /* logo, slogan and buttons a bit lower on short screens so the slogan runs below the doctor's neck: slogan centre at least 500/1678 of the
-     width into the photo (its centre sits at about 0.6 x screen height - 13px; 0 on tall screens, 48px on 1366x613) */
-  .home main .wp-block-post-content > .ext-hero-section .wp-block-cover > .wp-block-cover__inner-container { position: relative; top: min(70px, max(0px, 29.8vw - var(--mlx-hero-up) - (0.6 * (100svh - var(--wp-admin--admin-bar--height, 0px)) - 13px))); }
+  .home main .wp-block-post-content > .ext-hero-section .wp-block-cover img.wp-block-cover__image-background { object-position: 50% calc(-1 * min(var(--mlx-hero-up), max(0px, 56.28vw - 20px - var(--mlx-hero-h)))) !important; }
+  /* logo, slogan and buttons a bit lower on short screens so the slogan runs below the doctor's neck: slogan centre at least 495/1672 of the
+     width into the photo (its centre sits at about 0.6 x screen height - 13px; 0 on tall screens, ~30px on 1366x643) */
+  .home main .wp-block-post-content > .ext-hero-section .wp-block-cover > .wp-block-cover__inner-container { position: relative; top: min(70px, max(0px, 29.6vw - var(--mlx-hero-up) - (0.6 * (100svh - var(--wp-admin--admin-bar--height, 0px)) - 13px))); }
+  /* the logo sits 30px higher than the slogan would put it, so the word mark lands on the darker sky above the Hagia Sophia (Anna darkened it there) */
+  .home main .wp-block-post-content > .ext-hero-section .wp-block-cover figure.aligncenter { position: relative; top: -30px; }
 }
 @media (min-width: 782px) and (max-width: 1099px) and (orientation: landscape) {
   .home main .wp-block-post-content > .ext-hero-section .wp-block-cover { min-height: calc(100svh - var(--wp-admin--admin-bar--height, 0px)) !important; }
 }
 @media (max-width: 781px) {
   /* phones: own portrait crop (world map, mosque, bridge, sea, pool; no plane behind the logo, no chair edge) instead of the wide photo */
-  .home main .wp-block-post-content > .ext-hero-section .wp-block-cover { background: url(https://medluxlife.de/wp-content/uploads/2026/10/medluxlife-home-hero-2026k-phone.jpg) 50% 50% / cover no-repeat !important; }
+  .home main .wp-block-post-content > .ext-hero-section .wp-block-cover { background: url(https://medluxlife.de/wp-content/uploads/2026/10/medluxlife-home-hero-2026m-phone.jpg) 50% 50% / cover no-repeat !important; }
   .home main .wp-block-post-content > .ext-hero-section .wp-block-cover img.wp-block-cover__image-background { display: none !important; }
 }
 @media (max-width: 600px) { .home main .wp-block-post-content > .ext-hero-section .wp-block-cover h1.wp-block-heading { padding: 14px 18px !important; } }
