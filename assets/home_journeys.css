@@ -1,4 +1,4 @@
-/* >>> HOME-JOURNEYS START: 2nd screen = language card + both journeys, centred under the header (desktop); markup: div.mlx-journeys holds the language card and the two journey sections. 2026-10-16 (Emrah): journey texts larger so the screen is filled and the language card sits higher; the vw caps keep narrow screens (1100-1280 px) on one screen */
+/* >>> HOME-JOURNEYS START: 2nd screen = language card + both journeys, centred under the header (desktop); markup: div.mlx-journeys holds the language card and the two journey sections. 2026-10-16 (Emrah): headings and intros as before, the texts of the 3 step cards larger (fills the screen, language card sits higher); the vw caps keep narrow screens (1100-1280 px) on one screen */
 html body.home .wp-site-blocks .mlx-journeys, html body.home .wp-site-blocks .mlx-journeys > section:not(.mlx-lang2), html body.home .wp-site-blocks .mlx-journeys > .mlx-lang2 { margin-top: 0 !important; margin-bottom: 0 !important; }
 @media (min-width: 1100px) {
   html body.home { --mlx-u: calc((100svh - var(--wp-admin--admin-bar--height, 0px)) / 100); }
@@ -14,10 +14,9 @@ html body.home .wp-site-blocks .mlx-journeys, html body.home .wp-site-blocks .ml
     border: 1.5px solid rgba(212,162,76,.55); box-shadow: 0 18px 36px -24px rgba(22,20,31,.45); background: #fbf8f2 !important; }
   html body.home .wp-site-blocks .mlx-journeys .ext-section-intro { margin: 0 !important; padding: 0 !important; gap: 0 !important; }
   html body.home .wp-site-blocks .mlx-journeys .ext-section-intro > * { margin-top: 0 !important; margin-bottom: 0 !important; }
-  html body.home .wp-site-blocks .mlx-journeys .ext-section-intro h2 { font-size: min(clamp(28px, calc(3 * var(--mlx-u) + 10px), 44px), 2.27vw) !important; line-height: 1.1 !important; }
+  html body.home .wp-site-blocks .mlx-journeys .ext-section-intro h2 { font-size: clamp(24px, calc(2.26 * var(--mlx-u) + 10.5px), 34px) !important; line-height: 1.1 !important; }
   html body.home .wp-site-blocks .mlx-journeys .ext-section-intro h2::after { margin-top: clamp(8px, calc(2 * var(--mlx-u) - 4px), 18px) !important; }
-  html body.home .wp-site-blocks .mlx-journeys .ext-section-intro p { font-size: min(clamp(15.5px, calc(0.7 * var(--mlx-u) + 11.3px), 20px), 1.27vw) !important; margin-top: 4px !important; line-height: 1.4 !important;
-    max-width: 24em !important; min-height: 2.8em; margin-left: auto !important; margin-right: auto !important; text-wrap: balance; }   /* both intros on two balanced lines, so the two columns' cards start at the same height */
+  html body.home .wp-site-blocks .mlx-journeys .ext-section-intro p { font-size: clamp(14px, calc(0.48 * var(--mlx-u) + 10.9px), 16px) !important; margin-top: 4px !important; line-height: 1.4 !important; }
   html body.home .wp-site-blocks .mlx-journeys .ext-section-intro p br { display: none; }
   html body.home .wp-site-blocks .mlx-journeys .ext-grid { display: flex !important; flex-direction: column; gap: clamp(6px, calc(2.25 * var(--mlx-u) - 7.5px), 16px) !important; margin-top: clamp(8px, calc(3.2 * var(--mlx-u) - 10px), 24px) !important; }
   html body.home .wp-site-blocks .mlx-journeys .ext-grid > .ext-card.ext-card { min-height: 0 !important; padding: clamp(8px, calc(3.6 * var(--mlx-u) - 13px), 26px) 18px !important; border-radius: 16px !important; align-items: stretch !important; }
@@ -27,5 +26,9 @@ html body.home .wp-site-blocks .mlx-journeys, html body.home .wp-site-blocks .ml
   html body.home .wp-site-blocks .mlx-journeys .ext-card-body > figure.wp-block-image.wp-block-image:not(.x):not(.y)::before { font-size: min(clamp(36px, calc(2.8 * var(--mlx-u) + 19px), 50px), 3vw) !important; line-height: 1 !important; text-align: center !important; display: block; margin: 0 !important; }
   html body.home .wp-site-blocks .mlx-journeys .ext-card-body > h3 { font-size: min(clamp(20px, calc(1.3 * var(--mlx-u) + 12px), 28px), 1.64vw) !important; margin: 0 !important; line-height: 1.2 !important; }
   html body.home .wp-site-blocks .mlx-journeys .ext-card-body > p { font-size: min(clamp(15px, calc(0.6 * var(--mlx-u) + 11.4px), 19px), 1.23vw) !important; line-height: 1.4 !important; margin: 2px 0 0 !important; }
+}
+/* where the medical intro needs two lines (narrow 1100-1233 px screens, tall screens from about 1000 px), both intros get a two-line slot so the cards of both columns start at the same height */
+@media (min-width: 1100px) and (max-width: 1233px), (min-width: 1100px) and (min-height: 1000px) {
+  html body.home .wp-site-blocks .mlx-journeys .ext-section-intro p { min-height: 2.8em; }
 }
 /* <<< HOME-JOURNEYS END */
