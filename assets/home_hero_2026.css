@@ -1,4 +1,4 @@
-/* >>> HERO-2026 START: home banner (media 2019 + phone 2020, light logo 2003 = old logo 164; 2026-10-16) – clean photo on Anna's wish: no overlay, no shade band behind the slogan, no logo glow; a tight shadow around the letters and a very soft dark oval under the slogan line so the gold words read on the bright sunset (Anna asked for it); banner fills the first screen on desktop; own crop on phones */
+/* >>> HERO-2026 START: home banner (media 2023 + phone 2024, light logo 2003 = old logo 164; 2026-10-16) – clean photo on Anna's wish: no overlay, no shade band behind the slogan, no logo glow; a tight shadow around the letters and a very soft dark oval under the slogan line so the gold words read on the bright sunset (Anna asked for it); banner fills the first screen on desktop; own crop on phones */
 .home main .wp-block-post-content > .ext-hero-section .wp-block-cover > .wp-block-cover__background { opacity: 0 !important; background: none !important; }
 .home main .wp-block-post-content > .ext-hero-section .wp-block-cover figure.aligncenter img { filter: none !important; }
 .home main .wp-block-post-content > .ext-hero-section .wp-block-cover h1.wp-block-heading { padding: 20px 110px !important; background: none !important;
@@ -35,7 +35,7 @@
 }
 @media (max-width: 781px) {
   /* phones: own portrait crop (world map, mosque, bridge, sea, pool; no plane behind the logo, no chair edge) instead of the wide photo */
-  .home main .wp-block-post-content > .ext-hero-section .wp-block-cover { background: url(https://medluxlife.de/wp-content/uploads/2026/10/medluxlife-home-hero-2026q-phone.jpg) 50% 50% / cover no-repeat !important; }
+  .home main .wp-block-post-content > .ext-hero-section .wp-block-cover { background: url(https://medluxlife.de/wp-content/uploads/2026/10/medluxlife-home-hero-2026r-phone.jpg) 50% 50% / cover no-repeat !important; }
   .home main .wp-block-post-content > .ext-hero-section .wp-block-cover img.wp-block-cover__image-background { display: none !important; }
 }
 @media (max-width: 600px) { .home main .wp-block-post-content > .ext-hero-section .wp-block-cover h1.wp-block-heading { padding: 14px 18px !important; } }

@@ -16,7 +16,7 @@ UP = 'https://medluxlife.de/wp-content/uploads/2026/10/'
 ALT = ('A patient and a doctor talk in a bright clinic lounge with a view of Istanbul; a golden world map, a plane in the sunset sky, '
        'the Bosphorus bridge, a pool terrace with palms, and small round photos of a smile check-up, a hair examination and a facial consultation')
 OLD = {'file': 'medluxlife-home-hero-hd.jpg', 'id': 1624, 'fy': '0.75', 'pos': '50% 75%', 'alt': ''}
-NEW = {'file': 'medluxlife-home-hero-2026q.jpg', 'id': 2019, 'fy': '0.1', 'pos': '50% 10%', 'alt': ALT}   # 2014 with the sky behind the world map warmed like Emrah's upload 2018; before: 2014
+NEW = {'file': 'medluxlife-home-hero-2026r.jpg', 'id': 2023, 'fy': '0.1', 'pos': '50% 10%', 'alt': ALT}   # warm map sky (from 2018) with long soft fades to the clouds and the far shore; before: 2019
 START, END = '/* >>> HERO-2026 START', '/* <<< HERO-2026 END */'
 
 
