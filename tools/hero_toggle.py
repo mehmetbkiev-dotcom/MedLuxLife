@@ -16,7 +16,7 @@ UP = 'https://medluxlife.de/wp-content/uploads/2026/10/'
 ALT = ('A patient talks with a doctor in a bright clinic lounge; on the right a sunset view of the Bosphorus bridge and a pool ter'
        'race in Istanbul, with a golden world map and small photos of a smile check-up and a hair consultation')
 OLD = {'file': 'medluxlife-home-hero-hd.jpg', 'id': 1624, 'fy': '0.75', 'pos': '50% 75%', 'alt': ''}
-NEW = {'file': 'medluxlife-home-hero-2026c.jpg', 'id': 1937, 'fy': '0.84', 'pos': '50% 84%', 'alt': ALT}
+NEW = {'file': 'medluxlife-home-hero-2026h.jpg', 'id': 1973, 'fy': '0.84', 'pos': '50% 84%', 'alt': ALT}
 START, END = '/* >>> HERO-2026 START', '/* <<< HERO-2026 END */'
 
 
