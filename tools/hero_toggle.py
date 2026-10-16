@@ -16,7 +16,7 @@ UP = 'https://medluxlife.de/wp-content/uploads/2026/10/'
 ALT = ('A patient and a doctor talk in a bright clinic lounge with a view of Istanbul; a golden world map, a plane in the sunset sky, '
        'the Bosphorus bridge, a pool terrace with palms, and small round photos of a smile check-up, a hair examination and a facial consultation')
 OLD = {'file': 'medluxlife-home-hero-hd.jpg', 'id': 1624, 'fy': '0.75', 'pos': '50% 75%', 'alt': ''}
-NEW = {'file': 'medluxlife-home-hero-2026m.jpg', 'id': 2001, 'fy': '0.1', 'pos': '50% 10%', 'alt': ALT}   # Anna's ChatGPT edit 2000 (circles higher, Hagia Sophia area darker), warmed + seam softened; before: 1996 (2026k)
+NEW = {'file': 'medluxlife-home-hero-2026n.jpg', 'id': 2008, 'fy': '0.1', 'pos': '50% 10%', 'alt': ALT}   # 2001 (2026m) with the fine detail restored from the 2x original 1995 (2560 px); before: 2001
 START, END = '/* >>> HERO-2026 START', '/* <<< HERO-2026 END */'
 
 
