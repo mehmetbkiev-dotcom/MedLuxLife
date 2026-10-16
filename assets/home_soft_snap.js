@@ -1,5 +1,6 @@
 /* MedLuxLife home: soft section snapping in BOTH directions (desktop only).
    After you stop scrolling, if a section start is close in the direction you were scrolling, the page glides to it.
+   Going down, a section taller than the screen (the banner on short laptops) first stops where its bottom edge meets the screen bottom.
    Keep this file free of less-than and ampersand characters: WordPress escapes them in inline scripts. */
 (function () {
   if (!document.body.classList.contains('home')) return;
@@ -27,7 +28,9 @@
     var max = document.documentElement.scrollHeight - innerHeight, list = [0];
     Array.prototype.forEach.call(c.children, function (el, i) {
       if (window.MLX_SNAP_SKIP) { if (el.matches(window.MLX_SNAP_SKIP)) return; }   /* optional: sections that share a screen with the one before */
-      if (i) list.push(Math.round(el.getBoundingClientRect().top + scrollY - hh));
+      var r = el.getBoundingClientRect(), start = i ? Math.round(r.top + scrollY - hh) : 0, end = Math.round(r.bottom + scrollY - innerHeight);
+      if (i) list.push(start);
+      if (dir - 0 > 0) { if (end - start > 12) list.push(end); }   /* going down, a section taller than the screen (the banner on short laptops) stops first where its bottom edge meets the screen bottom */
     });
     list.push(max);
     return list.map(function (v) { return Math.max(0, Math.min(max, v)); });
@@ -42,12 +45,18 @@
     var y = scrollY, range = fromPoint ? innerHeight + 4 : innerHeight * 0.62, near = fromPoint ? 0 : 40, best = null, bestD = 0;
     pts.forEach(function (p) {
       var ahead = dir - 0 > 0 ? p - y : y - p;      /* distance ahead in the scroll direction */
-      var dist = Math.abs(p - y), ok = false;
-      if (ahead - 2 > 0) { if (range - ahead > 0) ok = true; }   /* section start coming up */
-      if (near - dist > 0) { if (dist - 2 > 0) ok = true; }      /* just passed it by a little */
-      if (ok) { if (best === null) { best = p; bestD = dist; } else if (bestD - dist > 0) { best = p; bestD = dist; } }
+      var dist = Math.abs(p - y), ok = false, rank = dist;
+      if (fromPoint) {
+        var ahead0 = dir - 0 > 0 ? p - startY : startY - p;   /* distance from where the gesture began */
+        if (ahead0 - 3 > 0) { if (ahead + 170 > 0) { if (range - ahead > 0) { ok = true; rank = ahead0; } } }   /* the next stop in this direction, even if one wheel notch ran a little past a close one */
+      } else {
+        if (ahead - 2 > 0) { if (range - ahead > 0) ok = true; }   /* section start coming up */
+        if (near - dist > 0) { if (dist - 2 > 0) ok = true; }      /* just passed it by a little */
+      }
+      if (ok) { if (best === null) { best = p; bestD = rank; } else if (bestD - rank > 0) { best = p; bestD = rank; } }
     });
     if (best === null) return;
+    if (2 - Math.abs(best - y) >= 0) return;
     gliding = true;
     window.scrollTo({ top: best, behavior: 'smooth' });
   }
