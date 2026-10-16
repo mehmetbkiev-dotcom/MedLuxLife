@@ -13,10 +13,10 @@ import json, re, subprocess, sys, time, pathlib
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 API = 'https://medluxlife-6j8sz55bpn.live-website.com/wp-json'
 UP = 'https://medluxlife.de/wp-content/uploads/2026/10/'
-ALT = ('A patient talks with a doctor in a bright clinic lounge; on the right a sunset view of the Bosphorus bridge and a pool ter'
-       'race in Istanbul, with a golden world map and small photos of a smile check-up and a hair consultation')
+ALT = ('A patient and a doctor talk in a bright clinic lounge with a view of Istanbul; a golden world map, a plane in the sunset sky, '
+       'the Bosphorus bridge, a pool terrace with palms, and small photos of a smile check-up and a hair consultation')
 OLD = {'file': 'medluxlife-home-hero-hd.jpg', 'id': 1624, 'fy': '0.75', 'pos': '50% 75%', 'alt': ''}
-NEW = {'file': 'medluxlife-home-hero-2026h.jpg', 'id': 1973, 'fy': '0.84', 'pos': '50% 84%', 'alt': ALT}
+NEW = {'file': 'medluxlife-home-hero-2026j.jpg', 'id': 1989, 'fy': '0.1', 'pos': '50% 10%', 'alt': ALT}   # 1985 (2026i) had the plane moved down; Anna wanted it back in place, a bit smaller
 START, END = '/* >>> HERO-2026 START', '/* <<< HERO-2026 END */'
 
 
