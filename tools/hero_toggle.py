@@ -14,9 +14,9 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 API = 'https://medluxlife-6j8sz55bpn.live-website.com/wp-json'
 UP = 'https://medluxlife.de/wp-content/uploads/2026/10/'
 ALT = ('A patient and a doctor talk in a bright clinic lounge with a view of Istanbul; a golden world map, a plane in the sunset sky, '
-       'the Bosphorus bridge, a pool terrace with palms, and small photos of a smile check-up and a hair consultation')
+       'the Bosphorus bridge, a pool terrace with palms, and small round photos of a smile check-up, a hair examination and a facial consultation')
 OLD = {'file': 'medluxlife-home-hero-hd.jpg', 'id': 1624, 'fy': '0.75', 'pos': '50% 75%', 'alt': ''}
-NEW = {'file': 'medluxlife-home-hero-2026j.jpg', 'id': 1989, 'fy': '0.1', 'pos': '50% 10%', 'alt': ALT}   # 1985 (2026i) had the plane moved down; Anna wanted it back in place, a bit smaller
+NEW = {'file': 'medluxlife-home-hero-2026k.jpg', 'id': 1996, 'fy': '0.1', 'pos': '50% 10%', 'alt': ALT}   # Anna's sunset banner (WebP 3356 upload 1995, seam softened); before: 1989 (2026j, plane in place)
 START, END = '/* >>> HERO-2026 START', '/* <<< HERO-2026 END */'
 
 
