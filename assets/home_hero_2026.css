@@ -1,6 +1,10 @@
-/* >>> HERO-2026 START: home banner (media 2030 + phone 2031, light logo 2003 = old logo 164; 2026-10-16) – clean photo on Anna's wish: no overlay, no shade band behind the slogan, no logo glow; a tight shadow around the letters and a very soft dark oval under the slogan line so the gold words read on the bright sunset (Anna asked for it); banner fills the first screen on desktop; own crop on phones */
+/* >>> HERO-2026 START: home banner (media 2030 + phone 2031, light logo 2003 = old logo 164; 2026-10-16) – clean photo on Anna's wish: no overlay, no shade band behind the slogan; logo (Emrah's choice B): tight dark shadow around the letters + a very soft dark halo behind it; a tight shadow around the letters and a very soft dark oval under the slogan line so the gold words read on the bright sunset (Anna asked for it); banner fills the first screen on desktop; own crop on phones */
 .home main .wp-block-post-content > .ext-hero-section .wp-block-cover > .wp-block-cover__background { opacity: 0 !important; background: none !important; }
-.home main .wp-block-post-content > .ext-hero-section .wp-block-cover figure.aligncenter img { filter: none !important; }
+.home main .wp-block-post-content > .ext-hero-section .wp-block-cover figure.aligncenter img { filter: drop-shadow(0 0 1px rgba(20, 8, 0, 0.95)) drop-shadow(0 0 3px rgba(20, 8, 0, 0.80)) drop-shadow(0 2px 10px rgba(0, 0, 0, 0.55)) !important; }
+/* very soft dark halo behind the logo (fades out well before its edges), drawn under the logo */
+.home main .wp-block-post-content > .ext-hero-section .wp-block-cover figure.aligncenter { position: relative; isolation: isolate; }
+.home main .wp-block-post-content > .ext-hero-section .wp-block-cover figure.aligncenter::before { content: ""; position: absolute; z-index: -1; left: 50%; top: 50%; width: 175%; height: 150%; transform: translate(-50%, -50%); border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(12, 8, 30, 0.55) 0%, rgba(12, 8, 30, 0.34) 40%, rgba(12, 8, 30, 0) 70%); pointer-events: none; }
 .home main .wp-block-post-content > .ext-hero-section .wp-block-cover h1.wp-block-heading { padding: 20px 110px !important; background: none !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.95), 0 0 6px rgba(0, 0, 0, 0.60), 0 2px 16px rgba(0, 0, 0, 0.50) !important; position: relative; isolation: isolate; }
 /* very soft dark oval behind the slogan only (fades out before the ends of the line), drawn under the letters */
