@@ -59,8 +59,8 @@ intro = (
     + p('MedLuxLife was founded by Anna and Emrah in Aachen, Germany. We bring two things together: medical treatment '
         'with qualified specialists at our partner clinics and hospitals in Türkiye – and travel to any destination you '
         'choose, whether a holiday, a city break, a business trip or a pilgrimage.', 'medlux-lead') + '\n\n'
-    + p('We adapt to you – to your wishes, your budget and your schedule. No wish is too big or too small: we always look for '
-        'the comfortable solution that suits you, and one personal contact plans every step with you.', 'medlux-lead')
+    + p('We adapt to you – to your wishes, your budget and your schedule. Whatever you have in mind, we look for the '
+        'comfortable solution that suits you, and one personal contact plans every step with you.', 'medlux-lead')
     + '</div>\n<!-- /wp:column -->\n\n<!-- wp:column {"verticalAlignment":"center"} -->\n<div class="wp-block-column is-vertically-aligned-center">'
     '<!-- wp:image {"id":2048,"sizeSlug":"full","linkDestination":"none","className":"medlux-intro-img medlux-about-founders"} -->\n'
     '<figure class="wp-block-image size-full medlux-intro-img medlux-about-founders"><img src="%s" alt="Anna and Emrah, the founders of MedLuxLife, at their office desk" class="wp-image-2048"/>'

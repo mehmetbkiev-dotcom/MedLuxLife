@@ -481,3 +481,4 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
   - Backup: `backups/wp/page25_before_travel_intro.json`. Screenshots: `deliverables/travel_hub_top.jpg`, `travel_hub_laptop.jpg`.
 - Open question to Anna: short 2-line card texts look gappy when justified → A (keep justified) or B (centred) — `deliverables/travel_cards_A_B.jpg`.
 - 2026-10-17 – Anna chose B: short texts in the centred Travel cards are centred (not justified). Rule updated with this exception.
+- 2026-10-17 – Anna didn't like "No wish is too big or too small" → replaced with "Whatever you have in mind…" on About Us (intro) and Holiday Packages (intro). Screenshot: `deliverables/intros_whatever.jpg`.
