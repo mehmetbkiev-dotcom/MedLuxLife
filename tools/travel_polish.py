@@ -24,8 +24,19 @@ ICONS = {
 def icon_block(uri):
     return ('<!-- wp:image {"className":"medlux-card-icon"} -->\n<figure class="wp-block-image medlux-card-icon"><img src="%s" alt=""/></figure>\n<!-- /wp:image -->\n\n' % uri)
 
+# new intro texts in the spirit of About Us (Anna, 2026-10-17): we adapt to you, anywhere in the world, one personal contact
+INTROS = {
+    275: ('Your holiday should feel like yours. Tell us where you would like to go – to the coast, to a historic city or '
+          'to a quiet resort, anywhere in the world – and we put together a package that fits your wishes, your budget '
+          'and your schedule: flights, hotel, transfers and excursions in one plan. No wish is too big or too small, '
+          'and one personal contact takes care of everything.'),
+}
+
 def polish(pid):
     c = json.loads((ROOT / f'backups/wp/page{pid}_before_travel_polish.json').read_text())['content']['raw']
+    if pid in INTROS:
+        c, n_intro = re.subn(r'(<p class="medlux-lead">)[^<]*(</p>)', lambda m: m.group(1) + INTROS[pid] + m.group(2), c, count=1)
+        assert n_intro == 1, 'intro not found'
     # 1. icons on the "What we offer" cards
     n_icons = 0
     def add_icon(m):
