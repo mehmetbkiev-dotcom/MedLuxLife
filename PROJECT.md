@@ -414,7 +414,7 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - Backups: `backups/wp/gs5_before_lang-mobile_*.json`. Screenshots: `deliverables/header_phone.png`, `deliverables/header_tablet_laptop.png`. Waiting for Anna's approval.
 
 ### 2026-10-17 – Header follow-ups + card hover (Anna)
-- Laptop/desktop (Anna's wish): the language panel opens to the RIGHT again; the switcher slot keeps exactly the room it needs (min-width 127px), so the open panel ends 32px from the edge, the same as the logo on the left. Search moved closer to Free Consultation (~12px).
+- Laptop/desktop (Anna's wish): the language panel opens to the RIGHT again; it is narrower (105px) and the switcher slot keeps exactly that room (min-width 97px), so the whole group sits further right and the open panel ends 12px from the screen edge (≥1701px, where "English (UK)" is shown: 32px edge). Search moved closer to Free Consultation (~12px).
 - An opened search field now covers the flag: switcher z-index 100000 (search is 100001), raised to 100002 only while the language panel is open.
 - Tablet/phone unchanged (the panel opens to the left there).
 - Note: the server sends `Cache-Control: max-age=3600` for pages, so a browser may show the old header for up to 1 hour → hard refresh (Ctrl+F5 / Cmd+Shift+R).
