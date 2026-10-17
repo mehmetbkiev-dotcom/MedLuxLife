@@ -451,3 +451,4 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - Left out until Anna and Emrah decide: prices and the written-offer process, certificates and photos of the partner clinics, any further blocks. The rewritten parts are English only for now (the old DE/TR shortcode versions were dropped; translations come in the translation phase).
 - Screenshots: `deliverables/about_us_laptop.jpg`, `deliverables/about_us_phone.jpg`.
 - 2026-10-17 – About Us intro (Anna): both intro paragraphs now the same size (medlux-lead, 1.15rem) and justified with hyphenation on every screen; on laptops the text column is wider (56/44) so the justified lines have fewer gaps. Screenshot: `deliverables/about_us_intro.jpg`.
+- 2026-10-17 – About Us (Anna): the "What we do" and "Our partners" headings are centred (like the quote and chips under them); "your pace" → "your schedule" (more common word). Screenshot: `deliverables/about_us_partners.jpg`.
