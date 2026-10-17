@@ -483,3 +483,4 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - 2026-10-17 – Anna chose B: short texts in the centred Travel cards are centred (not justified). Rule updated with this exception.
 - 2026-10-17 – Anna didn't like "No wish is too big or too small" → replaced with "Whatever you have in mind…" on About Us (intro) and Holiday Packages (intro). Screenshot: `deliverables/intros_whatever.jpg`.
 - 2026-10-17 – Anna: step numbers in "How it works" are now black like the headings (color: inherit; TRAVEL-SUB). Holiday intro: "Your holiday should feel like yours." → "Your dream holiday starts here." Screenshot: `deliverables/holiday_intro_steps.jpg`.
+- 2026-10-17 – Anna confirmed the About Us page again, including the later changes (justified texts, centred headings, "schedule", "Whatever you have in mind…"). Travel hub + subpages: waiting for her approval.
