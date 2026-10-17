@@ -438,3 +438,15 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - Screenshots: `deliverables/link_preview_phone.png` (mock of a messenger card), `deliverables/chat_badge_phone.png`. Waiting for Anna's approval.
 - 2026-10-17 – Anna APPROVED: Health/Travel preview texts (snippet 6) and the Live Chat glass over dark blocks (CHAT-DARK + footer script).
 - 2026-10-17 – About Us: draft structure and text sent to Anna (who we are / coordinator not clinic / how we choose partners / how we take care of you / values / CTA; HWG-safe, no "safe/guaranteed/best"). Waiting for her answers: founders' story, names/photo on the page, partner clinics visited in person?, written offer before the decision and own fees ("no hidden costs"?), what happens after the client returns home.
+
+### 2026-10-17 – About Us rewritten (Anna) – LIVE, waiting for approval
+- Page 24 content is built by `tools/build_about_us.py` → `content/about_us_2026.html`; CSS block ABOUT-2026 (`assets/about_2026.css`). Backup: `backups/wp/page24_before_about_rewrite.json`.
+- Structure, made easy to scan:
+  1. Two-line headline "Treatment in Türkiye. / Travel wherever you wish."; intro text (founded by Anna and Emrah in Aachen; treatment in Türkiye, travel to any destination); "We adapt to you – your wishes, budget and pace; no wish too big or too small" (Anna's wording, replacing "organised personally, in your language"); founders' photo (media 2048) with the caption "Anna & Emrah, founders of MedLuxLife".
+  2. What we do: Health and Travel cards with gold icons.
+  3. Our partners: quote "We have personally visited… what we would not recommend to our own family…", "What we look at" chips (licences, accreditation, specialists, international patients), two short cards (university hospital group / specialised clinic; facts kept from the old text, no names), and a note on more hospitals later.
+  4. "How we take care of you" navy box with six items: one contact, your language, clear steps (no prices/offer yet), confidential (documents only in the consultation with the doctor, GDPR), reply within 24 h, WhatsApp after the return home.
+  5. Values: Honesty · Care · Discretion · Reliability (2×2 on phones).
+  6. CTA with the old legal note (DE/TR translations kept).
+- Left out until Anna and Emrah decide: prices and the written-offer process, certificates and photos of the partner clinics, any further blocks. The rewritten parts are English only for now (the old DE/TR shortcode versions were dropped; translations come in the translation phase).
+- Screenshots: `deliverables/about_us_laptop.jpg`, `deliverables/about_us_phone.jpg`.
