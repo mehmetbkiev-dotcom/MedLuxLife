@@ -486,3 +486,9 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - 2026-10-17 – Anna confirmed the About Us page again, including the later changes (justified texts, centred headings, "schedule", "Whatever you have in mind…"). Travel hub + subpages: waiting for her approval.
 - 2026-10-17 – Anna: "How it works" looks too centred. Two layouts shown as PREVIEW only, not live: A = timeline in a row (numbers in gold circles joined by a thin line, text left-aligned; vertical line on phones), B = list (number in a circle on the left, text on the right, thin dividers). CSS drafts in `assets/previews/steps_option_A.css` / `steps_option_B.css` (scoped to page 275 for the preview). Screenshots: `deliverables/steps_option_A.jpg`, `steps_option_B.jpg`. Waiting for her choice; then apply to all Travel pages (25, 275–278, 283).
 - 2026-10-17 – Anna chose B for "How it works", with arrows between the steps. LIVE on the Travel hub and all 5 subpages (TRAVEL-SUB): a vertical list (max 760px), the number in a gold circle on the left (black numeral), title and text left-aligned on the right, and a thin gold line with an arrow pointing down to the next step. The beige step boxes, the hover lift and the centred text are gone. Screenshot: `deliverables/steps_B_arrows.jpg`.
+- 2026-10-17 – Anna APPROVED the Travel pages:
+  - hub 25 and subpages 275–278, 283 (TRAVEL-SUB);
+  - new intros and icons;
+  - "Good to know" note and centred cards with centred short texts;
+  - "How it works" as a list with gold circles and arrows.
+  - Next in the plan: legal pages (Impressum, Datenschutz, AGB, Widerrufsbelehrung, Stornierungsbedingungen), then translations (DE/TR/RU/UK).
