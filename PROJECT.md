@@ -23,6 +23,37 @@ Site: https://medluxlife-6j8sz55bpn.live-website.com (IONOS WordPress, tema **Ex
 - **Logo: her yeni görselde sitedeki açık banner logosu kullanılır** (medya 2003 `medluxlife-logo-hero-light.png`, kaynak `assets/og/logo-hero-light-2003.png`) – daha altın olan eski logo değil (Anna, 2026-10-17).
 - Eski oturumun tüm yedekleri: backups/wp/ (sayfa, footer, header, global styles, CF7 JSON'ları; geri almak için içerikleri REST ile geri POST et).
 
+## SON OTURUM ÖZETİ – Emrah için (2026-10-17, Anna ile yapılanlar; hepsi YAYINDA ve Anna onayladı)
+Emrah gelince bu özet anlatılır, sonra plana devam edilir.
+1. **Header (tüm ekranlar):**
+   - Telefonda dil seçici (bayrak) eklendi. Logo sola yaklaştı; arama, bayrak ve menü sağda eşit aralıklı.
+   - Hamburger menü açıkken arama/bayrak gizleniyor. Menüdeki "MEDLUXLIFE" yazısı header'daki gibi ince.
+   - Tablette logo solda; arama, Free Consultation, bayrak ve menü sağda eşit aralıklı.
+   - Laptopta dil paneli sağa açılıyor ve kenara kadar sığıyor; arama Free Consultation'a yakın.
+   - Açılan arama kutusu bayrağın üstünü örtüyor.
+   - Blok: LANG-MOBILE.
+2. **Kart hover:** Health/Travel kartları mouse ile üzerine gelince hafif kalkıyor, gölge + altın çerçeve (CARD-HOVER).
+3. **WhatsApp/Viber link önizlemesi:** "Just another WordPress site" ve beyaz kutu yerine lacivert zemin + açık logo (medya 2069). Ana sayfada kısa tanıtım cümlesi, Health/Travel'da ana sayfadaki tek cümleler (Code Snippet 6).
+4. **Live Chat balonu:** koyu lacivert blokların üstündeyken otomatik şeffaf, beyaz zeminde lacivert (CHAT-DARK + footer script).
+5. **About Us yeniden yazıldı:**
+   - Anna & Emrah kurucu fotoğrafı.
+   - "Treatment in Türkiye. Travel wherever you wish."
+   - Partnerler kısa maddeler halinde ("bizzat ziyaret ettik").
+   - "How we take care of you" 6 madde, değerler ve CTA.
+   - Metinler iki yana yaslı.
+   - Fiyat/teklif süreci ve klinik sertifika/fotoğrafları sonra eklenecek (Anna + Emrah karar verecek).
+6. **SSS:** ana sayfa ve Contact'ta hiçbir soru açık başlamıyor, tıklayınca açılıyor.
+7. **Travel ana sayfa + 5 alt sayfa:**
+   - Yeni giriş metinleri. Hac/Umre ana sayfada ayrı cümle.
+   - Kartlarda altın ikonlar, ortalanmış kartlar.
+   - "Good to know" çerçeveli not.
+   - "How it works" liste: altın daire içinde siyah numara + oklar.
+   - "Turkey" → "Türkiye".
+   - Blok: TRAVEL-SUB.
+8. **Yeni kalıcı kurallar (yukarıda):** metinler iki yana yaslı (ortalanmış kartlardaki kısa metinler ortalı), SSS kapalı başlar, medyadan hiçbir şey silinmez, her yeni görselde açık banner logosu.
+**Sıradaki plan:** hukuki sayfalar (Impressum, Datenschutz, AGB, Widerrufsbelehrung, Stornierungsbedingungen) → çeviriler (DE/TR/RU/UK).
+**Açık kalanlar:** form spam koruması (Cloudflare Turnstile, hesap gerekiyor); laptopta Live Chat'in 3. Travel kartının yazısına binmesi (önceki öneri).
+
 ## 1. Genel kararlar
 - **Marka:** MEDLUXLIFE
 - **Ana yapı:** HEALTH (ana iş alanı), TRAVEL, ABOUT US, CONTACT
