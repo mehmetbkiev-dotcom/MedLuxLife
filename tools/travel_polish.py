@@ -65,7 +65,7 @@ def icon_block(uri):
 
 # new intro texts in the spirit of About Us (Anna, 2026-10-17): we adapt to you, anywhere in the world, one personal contact
 INTROS = {
-    275: ('Your holiday should feel like yours. Tell us where you would like to go – to the coast, to a historic city or '
+    275: ('Your dream holiday starts here. Tell us where you would like to go – to the coast, to a historic city or '
           'to a quiet resort, anywhere in the world – and we put together a package that fits your wishes, your budget '
           'and your schedule: flights, hotel, transfers and excursions in one plan. Whatever you have in mind, we find '
           'a way – and one personal contact takes care of everything.'),
