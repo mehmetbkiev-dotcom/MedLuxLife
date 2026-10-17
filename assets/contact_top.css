@@ -1,0 +1,13 @@
+/* >>> CONTACT-TOP START: Contact page (26), first block = team photo + contact details (left) and the enquiry form (right); stacked on phones (photo, details, form). 2026-10-17 (Anna) */
+.medlux-contact-top { gap: 0 !important; }
+.medlux-contact-top.has-background { padding: 0 !important; }   /* WordPress adds 1.25em 2.375em padding to coloured columns; the two columns bring their own */
+.medlux-contact-top > .medlux-contact-side { padding: 48px 0 40px clamp(24px, 3.5vw, 56px); }
+.medlux-contact-side > * { margin-top: 0 !important; margin-bottom: 0 !important; }
+.medlux-contact-side > * + * { margin-top: 18px !important; }
+.medlux-contact-side > .medlux-team-photo + * { margin-top: 26px !important; }
+.medlux-contact-side .medlux-team-photo img { display: block; width: 100%; height: auto; border-radius: 18px; box-shadow: 0 18px 36px -24px rgba(22, 20, 31, 0.45); }
+.medlux-contact-side > p.has-medium-font-size { font-size: clamp(17px, 1.3vw, 20px) !important; line-height: 1.55; }
+@media (max-width: 781px) {
+  .medlux-contact-top > .medlux-contact-side { padding: 24px 20px 4px; }
+}
+/* <<< CONTACT-TOP END */
