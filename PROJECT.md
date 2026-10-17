@@ -420,3 +420,13 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - Note: the server sends `Cache-Control: max-age=3600` for pages, so a browser may show the old header for up to 1 hour → hard refresh (Ctrl+F5 / Cmd+Shift+R).
 - New CSS block CARD-HOVER (`assets/card_hover.css`): with a mouse (not on touch) the cards lift (Health service boxes and Travel service rows by 10px, step/treatment/department cards by 6px), get a deeper shadow and a gold edge, and photos zoom in 4%. The step cards change on all ~90 subpages.
 - Backups: `backups/wp/gs5_before_lang-mobile_*`, `gs5_before_card-hover_on_*`. Screenshots: `deliverables/header_laptop.png`, `deliverables/cards_hover.jpg`. Waiting for Anna's approval.
+
+### 2026-10-17 – Link preview for WhatsApp/Viber (Anna)
+- Problem: a shared link showed a white box with the name and the old tagline "Just another WordPress site" (the messengers had cached an old preview; the site had no description and no preview image, only the white favicon).
+- New Code Snippet #6 "MedLuxLife – link preview (WhatsApp/Viber)" (source: `snippets/link_preview.php`, front-end). It outputs a meta description plus Open Graph/Twitter tags:
+  - title: "MedLuxLife – Health · Tourism · Experience" on the home page, "<Page> – MedLuxLife" on other pages;
+  - text: on the home page a short sentence about us; on other pages their first real paragraph (≥80 characters);
+  - image: media 2069 `medluxlife-share-light.jpg` (1200×630, the light banner logo 2003 on navy; source `assets/og/`).
+- Anna asked for the lighter banner logo instead of the more golden one: the first version (media 2068, gold logo) is no longer used. Ask before deleting it.
+- The email auto-reply header (2052) already uses the same light logo (checked by letter colour), so nothing changed there.
+- Undo: deactivate snippet 6. The messengers cache old previews, so already-sent links keep the old look; new shares pick up the new one (a fresh URL such as medluxlife.de/?v=2 shows it at once).
