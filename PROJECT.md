@@ -18,6 +18,7 @@ Site: https://medluxlife-6j8sz55bpn.live-website.com (IONOS WordPress, tema **Ex
 - Şirket: MedLuxLife, Inh. Anna Sacilanates (Einzelunternehmen), Stolberger Straße 21, 52068 Aachen. Domain sahibi: Emrah Suphi Sacilanates (Anna'nın eşi; sohbetteki kullanıcı). E-posta info@medluxlife.de; site https://medluxlife.de (medluxlife.com → 301).
 - WP erişimi: REST https://medluxlife-6j8sz55bpn.live-website.com/wp-json (proxy uygulama şifresini ekler); medluxlife.de konteynerden erişilemez. Inline script'lerde '&' kullanma (WordPress kaçışlıyor).
 - **Metinler iki yana yaslı (justify) – Anna, 2026-10-17:** sayfalardaki tüm gövde metinleri (paragraflar, kart metinleri, liste maddeleri) her ekranda iki yana yaslı + hyphens:auto olacak. Ortalanmış bloklar (alıntı, CTA metni, kısa notlar) da justify, son satır ortada (text-align-last: center). Tek satırlık başlık/etiket/çip/buton hariç. Yeni eklenen her metin bloğunda bu kural uygulanır.
+- **SSS/accordion soruları kapalı başlar – Anna, 2026-10-17:** hiçbir soru varsayılan olarak açık olmaz (openByDefault kullanılmaz); kullanıcı tıklayınca açılır.
 - Eski oturumun tüm yedekleri: backups/wp/ (sayfa, footer, header, global styles, CF7 JSON'ları; geri almak için içerikleri REST ile geri POST et).
 
 ## 1. Genel kararlar
@@ -461,3 +462,8 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - CSS block TRAVEL-SUB (`assets/travel_sub.css`), scoped to page IDs 275/276/277/278/283: centred section headings (like About Us), all texts justified (CTA text with the last line centred), the note box, step numerals with lining figures.
 - Live only on Holiday Packages so far (the CSS also centres headings and justifies text on the other four). Screenshots: `deliverables/travel_holiday_before_after.jpg`, `deliverables/travel_holiday_phone.jpg`.
 - Proposed next, after Anna's OK: the same for Hotel Reservation, Flight Tickets, Airport Transfer and Hajj & Umrah (new icons per card); "Turkey" → "Türkiye" on Flight Tickets; step 2 "Personal offer" text written per page (it says "flights, hotel and transfers" everywhere).
+
+### 2026-10-17 – FAQ: all questions closed until clicked (Anna)
+- Home (23) had 1 and Contact (26) had 2 accordion blocks; in each, the first item was "openByDefault" (open on page load). Removed `openByDefault` and the `is-open` class → every question starts closed and opens only when clicked. No other page, template, template part or pattern has an open-by-default accordion. Backups: `backups/wp/page23_before_faq_closed.json`, `page26_before_faq_closed.json`.
+- Rule for the future: new FAQ/accordion blocks are never open by default.
+- FAQ answers are justified (new CSS block JUSTIFY-TEXT, `assets/justify_text.css`). Screenshot: `deliverables/faq_closed.jpg`.

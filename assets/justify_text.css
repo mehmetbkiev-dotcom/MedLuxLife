@@ -1,0 +1,3 @@
+/* >>> JUSTIFY-TEXT START: Anna's standing rule (2026-10-17) – body texts justified with hyphenation. Started with the FAQ answers (Home, Contact); more pages get their own scoped rules (ABOUT-2026, TRAVEL-SUB) */
+.wp-block-accordion-panel p, .wp-block-accordion-panel li { text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
+/* <<< JUSTIFY-TEXT END */
