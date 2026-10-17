@@ -1,0 +1,8 @@
+/* >>> LANG-SWITCHER START: header language dropdown (TranslatePress) on a solid dark panel – it was transparent and the language names floated over the page (unreadable on white). 2026-10-17 (Anna) */
+header .trp-shortcode-overlay.is-open { background: #0b0620 !important; border: 1px solid rgba(212, 162, 76, 0.55) !important; border-radius: 12px !important; box-shadow: 0 16px 34px -14px rgba(0, 0, 0, 0.6) !important; }
+header .trp-shortcode-overlay .trp-switcher-dropdown-list { background: transparent !important; padding-bottom: 4px !important; }
+header .trp-shortcode-overlay .trp-switcher-dropdown-list .trp-language-item { color: #f6f8fd !important; border-radius: 8px; margin: 0 4px; }
+header .trp-shortcode-overlay .trp-switcher-dropdown-list .trp-language-item .trp-language-item-name { color: inherit !important; }
+header .trp-shortcode-overlay .trp-switcher-dropdown-list .trp-language-item:hover,
+header .trp-shortcode-overlay .trp-switcher-dropdown-list .trp-language-item:focus-visible { background: rgba(212, 162, 76, 0.16) !important; color: #f2ac30 !important; }
+/* <<< LANG-SWITCHER END */
