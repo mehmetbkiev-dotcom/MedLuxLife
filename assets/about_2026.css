@@ -41,4 +41,7 @@
   .medlux-values .medlux-values-words span + span::before { content: none; }
 }
 .medlux-values > p:last-child { max-width: 640px; margin-left: auto !important; margin-right: auto !important; }
+/* every text block on this page justified the same way (Anna): body text justified, centred blocks justified with the last line centred; single-line headings, labels, chips and buttons stay as they are */
+body.page-id-24 .entry-content :is(.medlux-lead, .medlux-card p, .medlux-card li, .medlux-why-item p) { text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
+body.page-id-24 .entry-content :is(.medlux-partners-quote, .medlux-partners-note, .medlux-values > p:last-child, .medlux-cta p) { text-align: justify; text-align-last: center; -webkit-hyphens: auto; hyphens: auto; }
 /* <<< ABOUT-2026 END */
