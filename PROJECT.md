@@ -403,3 +403,12 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - 2026-10-17 – Anna: info@medluxlife.de Google hesabına "ML" avatarını ekledi (Gmail alıcılarında gönderen ikonu olarak birkaç gün içinde görünmesi beklenir).
 - 2026-10-17 – YAYINDA (Anna: "sağdaki dil menüsü açılınca bayraklar şeffaf"): TranslatePress başlık açılır dil listesinin arka planı yoktu, dil adları sayfanın üstünde yüzüyordu (beyaz zeminde okunmuyordu, Contact'ta koyu metin). CSS bloğu LANG-SWITCHER (assets/lang_switcher.css): açıkken (.trp-shortcode-overlay.is-open) lacivert #0b0620 panel, altın çerçeve, yuvarlak köşe, gölge; dil adları açık renk, üzerine gelince altın. Ana sayfa (banner üstü ve kaydırılmış), Contact, Health, 1920 kontrol edildi. Not: telefonda başlıkta/menüde dil seçici görünmüyor (0×0) – çeviri aşamasında ele alınacak. Yedek: gs5_before_lang_switcher.json.
 - 2026-10-17 – ONAYLANDI (Anna): başlıktaki dil açılır listesi koyu panel + altın çerçeve (LANG-SWITCHER).
+
+### 2026-10-17 – Header: language switcher on phone/tablet + even spacing everywhere (Anna)
+- New CSS block LANG-MOBILE in global styles (`assets/lang_switcher_mobile.css`, toggle with `tools/css_block_toggle.py LANG-MOBILE on|off`).
+- Phone (≤599px): flag + arrow now visible next to search; logo/title moved to the left edge (10px), search · flag · menu evenly spaced on the right; title shrinks a little at 350–359px and hides below 350px.
+- Tablet (600–1100px): 600–781px had lost search, Free Consultation and the flag (theme hid `.ext-nav-extras` ≤781px), so they're back; all four (search · Free Consultation · flag · menu) are right-aligned with equal ~26px gaps.
+- Laptop/desktop (≥1101px): the right group now ends on the same 32px edge as the logo on the left (there was ~88px of empty space); the gaps are equal and the nav stays centred.
+- The language dropdown opens to the LEFT at every width, so it never runs off-screen; the flag sits on the same middle line as the other icons.
+- While the hamburger menu is open, search and the flag are hidden (they used to float over the menu). "MEDLUXLIFE" in the open menu now uses the header's thin, spaced letters instead of the theme's bold.
+- Backups: `backups/wp/gs5_before_lang-mobile_*.json`. Screenshots: `deliverables/header_phone.png`, `deliverables/header_tablet_laptop.png`. Waiting for Anna's approval.
