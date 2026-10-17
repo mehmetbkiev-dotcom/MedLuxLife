@@ -430,3 +430,4 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - Anna asked for the lighter banner logo instead of the more golden one: the first version (media 2068, gold logo) is no longer used. Ask before deleting it.
 - The email auto-reply header (2052) already uses the same light logo (checked by letter colour), so nothing changed there.
 - Undo: deactivate snippet 6. The messengers cache old previews, so already-sent links keep the old look; new shares pick up the new one (a fresh URL such as medluxlife.de/?v=2 shows it at once).
+- 2026-10-17 – Anna APPROVED all three: header language switcher/spacing on phone, tablet and laptop (LANG-MOBILE), card hover lift (CARD-HOVER), link preview with the light-logo share image (snippet 6, media 2069). Media 2068 (gold share image) is still unused; delete it only after asking.
