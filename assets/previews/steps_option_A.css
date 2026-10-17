@@ -1,0 +1,13 @@
+body.page-id-275 .entry-content .medlux-steps { display: grid !important; grid-template-columns: repeat(4, 1fr) !important; gap: 28px !important; }
+body.page-id-275 .entry-content .medlux-steps .medlux-card { background: transparent !important; border: 0 !important; box-shadow: none !important; padding: 0 !important; text-align: left !important; position: relative; transform: none !important; }
+body.page-id-275 .entry-content .medlux-steps .medlux-card p { text-align: left !important; text-align-last: auto !important; margin-top: 8px !important; }
+body.page-id-275 .entry-content .medlux-steps .medlux-card h3 { margin: 0 !important; }
+body.page-id-275 .entry-content .medlux-steps .medlux-step-no { display: flex !important; align-items: center; justify-content: center; width: 52px; height: 52px; border: 1.5px solid #d4a24c; border-radius: 50%; font-size: 1.6rem !important; background: #fff; position: relative; z-index: 1; margin-bottom: 16px !important; }
+body.page-id-275 .entry-content .medlux-steps .medlux-card:not(:last-child)::after { content: ""; position: absolute; top: 26px; left: 64px; right: -16px; height: 1px; background: rgba(212, 162, 76, 0.6); }
+@media (max-width: 781px) {
+  body.page-id-275 .entry-content .medlux-steps { grid-template-columns: 1fr !important; gap: 26px !important; }
+  body.page-id-275 .entry-content .medlux-steps .medlux-card { padding-left: 72px !important; min-height: 52px; }
+  body.page-id-275 .entry-content .medlux-steps .medlux-step-no { position: absolute; left: 0; top: -4px; margin: 0 !important; }
+  body.page-id-275 .entry-content .medlux-steps .medlux-card h3 { padding-top: 10px; }
+  body.page-id-275 .entry-content .medlux-steps .medlux-card:not(:last-child)::after { top: 52px; left: 26px; right: auto; bottom: -30px; width: 1px; height: auto; }
+}
