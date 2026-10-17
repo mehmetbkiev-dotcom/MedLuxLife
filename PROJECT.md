@@ -468,3 +468,15 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - Rule for the future: new FAQ/accordion blocks are never open by default.
 - FAQ answers are justified (new CSS block JUSTIFY-TEXT, `assets/justify_text.css`). Screenshot: `deliverables/faq_closed.jpg`.
 - 2026-10-17 – Holiday Packages sample v2 (Anna): new intro in the spirit of About Us ("Your holiday should feel like yours… anywhere in the world… your wishes, your budget and your schedule… No wish is too big or too small, and one personal contact takes care of everything."; INTROS in `tools/travel_polish.py`). The "What we offer" and "How it works" cards are centred: icon or number, title, then text justified with the last line centred (TRAVEL-SUB). Screenshots: `deliverables/travel_holiday_laptop.jpg`, `deliverables/travel_holiday_phone.jpg`.
+- 2026-10-17 – Anna APPROVED the Holiday sample and asked to roll it out to all Travel subpages. Done for Hotel Reservation (276), Airport Transfer (277), Hajj & Umrah (278) and Flight Tickets (283):
+  - 26 new gold line icons, cross-free (checked on an icon sheet);
+  - a new intro per page in the About Us tone (wishes, budget, schedule; one personal contact);
+  - step 2 "Personal offer" written per page;
+  - "Turkey" → "Türkiye";
+  - "Good to know" note, big numerals and centred cards everywhere.
+  - Screenshots: `deliverables/travel_<slug>.jpg`.
+- 2026-10-17 – Travel hub (25), Anna:
+  - new intro. Travel is "plans everything for you – holiday packages, hotels, flight tickets and airport transfers… your wishes, your budget and your schedule". Then a separate sentence: "We also organise pilgrimage journeys to Mecca and Medina – Hajj and Umrah – prepared calmly and with care, in cooperation with licensed partners."
+  - The intro and the row texts are justified, "Our travel services" and "How it works" are centred, and the steps use the gold numerals (TRAVEL-SUB now includes page 25).
+  - Backup: `backups/wp/page25_before_travel_intro.json`. Screenshots: `deliverables/travel_hub_top.jpg`, `travel_hub_laptop.jpg`.
+- Open question to Anna: short 2-line card texts look gappy when justified → A (keep justified) or B (centred) — `deliverables/travel_cards_A_B.jpg`.

@@ -1,7 +1,7 @@
-/* >>> TRAVEL-SUB START: Travel subpages (Holiday Packages 275, Hotel Reservation 276, Airport Transfer 277, Hajj & Umrah 278, Flight Tickets 283) – centred section headings like About Us, all texts justified (Anna's rule), "Good to know" as a framed note with an info icon, big gold step numbers. 2026-10-17 (Anna) */
-:is(body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content .medlux-section > h2 { text-align: center; }
-:is(body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content :is(.medlux-lead, .medlux-card p, .medlux-good-to-know li) { text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
-:is(body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content .medlux-cta p { text-align: justify; text-align-last: center; -webkit-hyphens: auto; hyphens: auto; }
+/* >>> TRAVEL-SUB START: Travel hub (25) and Travel subpages (Holiday Packages 275, Hotel Reservation 276, Airport Transfer 277, Hajj & Umrah 278, Flight Tickets 283) – centred section headings like About Us, all texts justified (Anna's rule), "Good to know" as a framed note with an info icon, big gold step numbers. 2026-10-17 (Anna) */
+:is(body.page-id-25, body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content .medlux-section > h2 { text-align: center; }
+:is(body.page-id-25, body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content :is(.medlux-lead, .medlux-card p, .medlux-good-to-know li) { text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
+:is(body.page-id-25, body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content .medlux-cta p { text-align: justify; text-align-last: center; -webkit-hyphens: auto; hyphens: auto; }
 .medlux-good-to-know ul { list-style: none; position: relative; background: #faf7f1; border: 1px solid rgba(212, 162, 76, 0.45); border-left: 4px solid #d4a24c; border-radius: 14px; padding: 22px 26px 22px 74px !important; margin: 20px auto 0 !important; max-width: 820px; }
 .medlux-good-to-know ul::before { content: ""; position: absolute; left: 24px; top: 20px; width: 32px; height: 32px; background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4IiBmaWxsPSJub25lIiBzdHJva2U9IiNkNGEyNGMiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48Y2lyY2xlIGN4PSIyNCIgY3k9IjI0IiByPSIxOCIvPjxwYXRoIGQ9Ik0yNCAyMnYxMiIvPjxjaXJjbGUgY3g9IjI0IiBjeT0iMTUiIHI9IjEuNSIvPjwvc3ZnPg==") center / contain no-repeat; }
 .medlux-good-to-know li { margin: 0 !important; line-height: 1.6; }
@@ -12,8 +12,10 @@
 }
 .medlux-steps .medlux-step-no { display: block; font-family: "Cormorant Garamond", serif; font-size: 2.6rem; font-weight: 600; line-height: 1; color: #d4a24c; margin-bottom: 8px; font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
 /* cards centred (Anna): icon, title and text in the middle; text justified with the last line centred */
-:is(body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content :is(.medlux-treatment-grid, .medlux-steps) .medlux-card { text-align: center; }
-:is(body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content :is(.medlux-treatment-grid, .medlux-steps) .medlux-card p { text-align: justify; text-align-last: center; }
-:is(body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content .medlux-card .medlux-card-icon { margin-left: auto !important; margin-right: auto !important; }
-:is(body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content .medlux-card .medlux-card-icon img { margin: 0 auto; display: block; }
+:is(body.page-id-25, body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content :is(.medlux-treatment-grid, .medlux-steps) .medlux-card { text-align: center; }
+:is(body.page-id-25, body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content :is(.medlux-treatment-grid, .medlux-steps) .medlux-card p { text-align: justify; text-align-last: center; }
+:is(body.page-id-25, body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content .medlux-card .medlux-card-icon { margin-left: auto !important; margin-right: auto !important; }
+:is(body.page-id-25, body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content .medlux-card .medlux-card-icon img { margin: 0 auto; display: block; }
+/* Travel hub: the service rows justified too */
+body.page-id-25 .entry-content .medlux-row-text :is(p, li) { text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
 /* <<< TRAVEL-SUB END */
