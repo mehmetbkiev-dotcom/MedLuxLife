@@ -18,4 +18,19 @@
 :is(body.page-id-25, body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content .medlux-card .medlux-card-icon img { margin: 0 auto; display: block; }
 /* Travel hub: the service rows justified too */
 body.page-id-25 .entry-content .medlux-row-text :is(p, li) { text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
+/* "How it works" as a list (Anna chose B): number in a gold circle on the left, text on the right, a thin gold line with an arrow down to the next step */
+:is(body.page-id-25, body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content .medlux-steps { display: block !important; max-width: 760px; margin-left: auto !important; margin-right: auto !important; }
+:is(body.page-id-25, body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content .medlux-steps .medlux-card { background: transparent !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; padding: 22px 0 22px 84px !important; margin: 0 !important; text-align: left !important; position: relative; transform: none !important; }
+:is(body.page-id-25, body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content .medlux-steps .medlux-card:hover { transform: none !important; box-shadow: none !important; }
+:is(body.page-id-25, body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content .medlux-steps .medlux-card h3 { margin: 0 !important; text-align: left !important; }
+:is(body.page-id-25, body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content .medlux-steps .medlux-card p { text-align: left !important; text-align-last: auto !important; margin-top: 6px !important; }
+:is(body.page-id-25, body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content .medlux-steps .medlux-step-no { position: absolute; left: 0; top: 18px; display: flex !important; align-items: center; justify-content: center; width: 56px; height: 56px; border: 1.5px solid #d4a24c; border-radius: 50%; background: #fff; font-size: 1.7rem !important; margin: 0 !important; }
+:is(body.page-id-25, body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content .medlux-steps .medlux-card:not(:last-child)::after { content: ""; position: absolute; left: 27.5px; top: 80px; bottom: -14px; width: 1px; background: rgba(212, 162, 76, 0.7); }
+:is(body.page-id-25, body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content .medlux-steps .medlux-card:not(:last-child) p::after { content: ""; position: absolute; left: 24px; bottom: -13px; width: 7px; height: 7px; border-right: 1.5px solid #d4a24c; border-bottom: 1.5px solid #d4a24c; transform: rotate(45deg); }
+@media (max-width: 560px) {
+  :is(body.page-id-25, body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content .medlux-steps .medlux-card { padding-left: 68px !important; }
+  :is(body.page-id-25, body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content .medlux-steps .medlux-step-no { width: 48px; height: 48px; font-size: 1.5rem !important; }
+  :is(body.page-id-25, body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content .medlux-steps .medlux-card:not(:last-child)::after { left: 23.5px; top: 72px; }
+  :is(body.page-id-25, body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content .medlux-steps .medlux-card:not(:last-child) p::after { left: 20px; }
+}
 /* <<< TRAVEL-SUB END */
