@@ -1,0 +1,13 @@
+/* >>> CARD-HOVER START: cards lift with a deeper shadow and a gold edge when the mouse is over them (Health service boxes, Travel service rows, the numbered step cards and treatment/department cards); photos zoom in slightly. Mouse only, not on touch screens. 2026-10-17 (Anna) */
+.medlux-hub-box, .medlux-rows .medlux-row, .medlux-steps .medlux-card, .medlux-treatment-grid .medlux-card, .medlux-dept-grid .medlux-card { transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
+.medlux-hub-box .medlux-hub-img, .medlux-row-media { overflow: hidden; }
+.medlux-hub-box .medlux-hub-img img, .medlux-row-img img { transition: transform 0.6s ease; }
+@media (hover: hover) and (pointer: fine) {
+  .medlux-hub-box:hover, .medlux-rows .medlux-row:hover { transform: translateY(-10px); box-shadow: 0 34px 56px -22px rgba(11, 6, 32, 0.5), 0 10px 20px -10px rgba(11, 6, 32, 0.2) !important; border-color: #d4a24c !important; }
+  .medlux-hub-box:hover .medlux-hub-img img, .medlux-rows .medlux-row:hover .medlux-row-img img { transform: scale(1.04); }
+  .medlux-steps .medlux-card:hover, .medlux-treatment-grid .medlux-card:hover, .medlux-dept-grid .medlux-card:hover { transform: translateY(-6px); box-shadow: 0 24px 40px -20px rgba(11, 6, 32, 0.42) !important; border-color: #d4a24c !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .medlux-hub-box, .medlux-rows .medlux-row, .medlux-steps .medlux-card, .medlux-treatment-grid .medlux-card, .medlux-dept-grid .medlux-card, .medlux-hub-box .medlux-hub-img img, .medlux-row-img img { transition: none; }
+}
+/* <<< CARD-HOVER END */

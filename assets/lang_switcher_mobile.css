@@ -1,4 +1,12 @@
-/* >>> LANG-MOBILE START: header layout on all screens (name kept for history). Phone: logo/title close to the left edge, search + language flag + menu evenly spaced on the right, title shrinks/hides on very narrow screens, search/flag hidden while the hamburger menu is open, menu title in the same thin letters as the header. Tablet: logo left, search - Free Consultation - flag - menu right-aligned with equal gaps (600-781px had lost them). Laptop/desktop: right group ends on the same 32px edge as the logo. Language dropdown opens to the left everywhere. 2026-10-17 (Anna) */
+/* >>> LANG-MOBILE START: header layout on all screens (name kept for history). Phone: logo/title close to the left edge, search + language flag + menu evenly spaced on the right, title shrinks/hides on very narrow screens, search/flag hidden while the hamburger menu is open, menu title in the same thin letters as the header. Tablet: logo left, search - Free Consultation - flag - menu right-aligned with equal gaps (600-781px had lost them); language panel opens to the left. Laptop/desktop: search close to Free Consultation, language panel opens to the right and ends on the same 32px edge as the logo. An opened search field covers the flag. 2026-10-17 (Anna) */
+/* all widths: flag sits on the same middle line as the other icons; the dropdown opens to the LEFT, so the switcher can sit right at the edge */
+header .ext-nav-extras .trp-block-container { display: block !important; position: relative; top: 3px; z-index: 100000; }
+/* below the search field (z 100001) so an opened search covers the flag; above it only while the language panel is open */
+header .ext-nav-extras .trp-block-container:has(.trp-shortcode-overlay.is-open) { z-index: 100002; }
+header .trp-block-container .trp-current-language-item__wrapper { padding-right: 0 !important; gap: 3px !important; justify-content: flex-end !important; }
+header .trp-block-container .trp-shortcode-arrow { width: 16px !important; height: 16px !important; }
+header .trp-block-container .trp-shortcode-overlay { left: auto !important; right: 0 !important; width: 100% !important; }
+header .trp-block-container .trp-shortcode-overlay.is-open { width: max-content !important; padding-left: 6px !important; padding-right: 8px !important; }
 @media (max-width: 599px) {
   header .wp-block-group.alignwide.is-content-justification-space-between { gap: 10px !important; }
   header > .wp-block-group.alignfull { padding-left: 10px !important; padding-right: 6px !important; }
@@ -18,22 +26,20 @@
 @media (max-width: 781px) {
   header .ext-nav-extras { display: flex !important; }
 }
-/* laptop/desktop: search · Free Consultation · flag right-aligned to the same 32px edge as the logo on the left, equal gaps */
+@media (max-width: 349px) {
+  header .wp-block-site-title { display: none !important; }
+}
+/* laptop/desktop: search sits close to Free Consultation; the language panel opens to the RIGHT and ends on the same 32px edge as the logo on the left (the switcher slot keeps exactly that room) */
 @media (min-width: 1101px) {
   header .wp-block-group.alignwide > .wp-block-group.ext-nav-extras { padding-left: 0 !important; padding-right: 0 !important; margin-right: 0 !important; gap: 24px !important; }
   header .ext-nav-extras .medlux-header-cta { margin: 0 !important; }
-  header .ext-nav-extras .medlux-header-search { margin-right: -8px; }
+  header .ext-nav-extras .medlux-header-search { margin-right: -20px; }
+  header .ext-nav-extras .trp-block-container { min-width: 127px; }
+  header .trp-block-container .trp-shortcode-switcher__wrapper { width: fit-content; }
   header .trp-block-container .trp-language-item__current { padding-left: 0 !important; }
-}
-/* all widths: flag sits on the same middle line as the other icons; the dropdown opens to the LEFT, so the switcher can sit right at the edge */
-header .ext-nav-extras .trp-block-container { display: block !important; position: relative; top: 3px; z-index: 100002; }
-header .trp-block-container .trp-current-language-item__wrapper { padding-right: 0 !important; gap: 3px !important; justify-content: flex-end !important; }
-header .trp-block-container .trp-shortcode-arrow { width: 16px !important; height: 16px !important; }
-header .trp-block-container .trp-shortcode-overlay { left: auto !important; right: 0 !important; width: 100% !important; }
-header .trp-block-container .trp-shortcode-overlay.is-open { width: max-content !important; padding-left: 6px !important; padding-right: 8px !important; }
-
-@media (max-width: 349px) {
-  header .wp-block-site-title { display: none !important; }
+  header .trp-block-container .trp-current-language-item__wrapper { justify-content: flex-start !important; }
+  header .trp-block-container .trp-shortcode-overlay { left: 0 !important; right: auto !important; }
+  header .trp-block-container .trp-shortcode-overlay.is-open { left: -8px !important; padding-left: 8px !important; padding-right: 8px !important; }
 }
 /* open hamburger menu: search + switcher must not float over it */
 html.has-modal-open header .ext-nav-extras, header:has(.wp-block-navigation__responsive-container.is-menu-open) .ext-nav-extras { visibility: hidden !important; }
