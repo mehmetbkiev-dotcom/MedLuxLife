@@ -19,6 +19,8 @@ Site: https://medluxlife-6j8sz55bpn.live-website.com (IONOS WordPress, tema **Ex
 - WP erişimi: REST https://medluxlife-6j8sz55bpn.live-website.com/wp-json (proxy uygulama şifresini ekler); medluxlife.de konteynerden erişilemez. Inline script'lerde '&' kullanma (WordPress kaçışlıyor).
 - **Metinler iki yana yaslı (justify) – Anna, 2026-10-17:** sayfalardaki tüm gövde metinleri (paragraflar, kart metinleri, liste maddeleri) her ekranda iki yana yaslı + hyphens:auto olacak. Ortalanmış bloklar (alıntı, CTA metni, kısa notlar) da justify, son satır ortada (text-align-last: center). Tek satırlık başlık/etiket/çip/buton hariç. Yeni eklenen her metin bloğunda bu kural uygulanır. İSTİSNA (Anna, B seçti): ortalanmış kartlardaki kısa (1–3 satır) metinler ortalanır, justify değil (justify kısa satırlarda büyük boşluk yapıyor).
 - **SSS/accordion soruları kapalı başlar – Anna, 2026-10-17:** hiçbir soru varsayılan olarak açık olmaz (openByDefault kullanılmaz); kullanıcı tıklayınca açılır.
+- **Medya kütüphanesinden şimdilik HİÇBİR ŞEY silinmez – Anna, 2026-10-17.** Kullanılmayan dosyalar (ör. altın paylaşım görseli 2068) yerinde kalır.
+- **Logo: her yeni görselde sitedeki açık banner logosu kullanılır** (medya 2003 `medluxlife-logo-hero-light.png`, kaynak `assets/og/logo-hero-light-2003.png`) – daha altın olan eski logo değil (Anna, 2026-10-17).
 - Eski oturumun tüm yedekleri: backups/wp/ (sayfa, footer, header, global styles, CF7 JSON'ları; geri almak için içerikleri REST ile geri POST et).
 
 ## 1. Genel kararlar
@@ -492,3 +494,4 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
   - "Good to know" note and centred cards with centred short texts;
   - "How it works" as a list with gold circles and arrows.
   - Next in the plan: legal pages (Impressum, Datenschutz, AGB, Widerrufsbelehrung, Stornierungsbedingungen), then translations (DE/TR/RU/UK).
+- 2026-10-17 – Anna: nothing is deleted from the media library for now; every new branded image uses the light banner logo (media 2003). Both added to the standing rules.
