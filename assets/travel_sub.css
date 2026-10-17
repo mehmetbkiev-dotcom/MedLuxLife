@@ -11,9 +11,9 @@
   .medlux-good-to-know ul::before { left: 20px; top: 20px; }
 }
 .medlux-steps .medlux-step-no { display: block; font-family: "Cormorant Garamond", serif; font-size: 2.6rem; font-weight: 600; line-height: 1; color: #d4a24c; margin-bottom: 8px; font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
-/* cards centred (Anna): icon, title and text in the middle; text justified with the last line centred */
+/* cards centred (Anna): icon, title and text in the middle; the short card texts are centred too (Anna chose B: justified 2-line texts had big gaps) */
 :is(body.page-id-25, body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content :is(.medlux-treatment-grid, .medlux-steps) .medlux-card { text-align: center; }
-:is(body.page-id-25, body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content :is(.medlux-treatment-grid, .medlux-steps) .medlux-card p { text-align: justify; text-align-last: center; }
+:is(body.page-id-25, body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content :is(.medlux-treatment-grid, .medlux-steps) .medlux-card p { text-align: center !important; text-align-last: center; }
 :is(body.page-id-25, body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content .medlux-card .medlux-card-icon { margin-left: auto !important; margin-right: auto !important; }
 :is(body.page-id-25, body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content .medlux-card .medlux-card-icon img { margin: 0 auto; display: block; }
 /* Travel hub: the service rows justified too */
