@@ -27,6 +27,14 @@ add_action( 'wp_head', function () {
 		if ( '' !== $text ) {
 			$desc = wp_trim_words( $text, 30, '…' );
 		}
+		// Health and Travel: the one-sentence intros from the home page (Anna, 2026-10-17)
+		$fixed = array(
+			27 => 'We organize every detail of your treatment so you can focus entirely on your recovery.',
+			25 => 'All your travel logistics sorted, so you can simply relax and enjoy.',
+		);
+		if ( isset( $fixed[ $post->ID ] ) ) {
+			$desc = $fixed[ $post->ID ];
+		}
 		$url = get_permalink( $post );
 	}
 	$img = wp_get_attachment_image_src( 2069, 'full' );
