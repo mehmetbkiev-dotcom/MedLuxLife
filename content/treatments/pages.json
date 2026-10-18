@@ -14,5 +14,14 @@
  "facelift": 2335,
  "neck-lift": 2336,
  "buccal-fat-removal": 2337,
- "otoplasty": 2338
+ "otoplasty": 2338,
+ "fue-hair-transplant": 2405,
+ "dhi-hair-transplant": 2406,
+ "beard-and-moustache-transplant": 2407,
+ "eyebrow-transplant": 2408,
+ "hollywood-smile": 2409,
+ "dental-implants": 2410,
+ "all-on-4-and-all-on-6": 2411,
+ "teeth-whitening": 2412,
+ "zirconium-veneers": 2413
 }

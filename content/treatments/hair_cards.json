@@ -1,0 +1,153 @@
+{
+ "Hair and Scalp Analysis": {
+  "img": "https://medluxlife.de/wp-content/uploads/2026/10/moderne-kopfhautanalyse-in-der-haarsprechstunde-opt.jpg",
+  "alt": "Digital scalp analysis in a hair clinic",
+  "img_id": 1310,
+  "p": [
+   "Before any treatment, an AI-supported digital analysis evaluates hair density and thickness, the health of individual follicles and whether they are in a growth or resting phase. This helps to choose the most suitable technique and to track your progress objectively over time."
+  ],
+  "li": [],
+  "more": false
+ },
+ "FUE (Follicular Unit Extraction)": {
+  "img": "https://medluxlife.de/wp-content/uploads/2026/10/moderne-haartransplantation-in-der-klinik-opt.jpg",
+  "alt": "FUE hair transplant procedure in a clinic",
+  "img_id": 1311,
+  "p": [
+   "Individual follicles are taken one by one from the donor area with a fine, circular micro-punch and implanted into the thinning areas. No linear scar, and a comfortable recovery."
+  ],
+  "li": [],
+  "more": false
+ },
+ "Beard and Moustache Transplant": {
+  "img": "https://medluxlife.de/wp-content/uploads/2026/10/portrat-eines-gepflegten-vollbarts-opt.jpg",
+  "alt": "Close-up of a full, well-groomed beard and moustache",
+  "img_id": 1410,
+  "p": [
+   "For a fuller, more defined beard or moustache. Follicles, usually from the back of the head, are transplanted into sparse areas. An effective option for uneven growth, scarring or hair loss caused by genetics, hormones or injury."
+  ],
+  "li": [],
+  "more": false
+ },
+ "Eyebrow Transplant": {
+  "img": "https://medluxlife.de/wp-content/uploads/2026/10/gemini-generated-image-g6hugng6hugng6hu-opt.jpg",
+  "alt": "Close-up of full, natural eyebrows during an eyebrow transplant",
+  "img_id": 1411,
+  "p": [
+   "Reshapes and strengthens thin, sparse or over-plucked eyebrows with your own hair follicles. A permanent, natural-looking alternative to make-up or microblading."
+  ],
+  "li": [],
+  "more": false
+ },
+ "Sapphire FUE": {
+  "img": "https://medluxlife.de/wp-content/uploads/2026/10/medluxlife-photo-c261a.jpg",
+  "alt": "Hair transplant procedure in a clinic",
+  "img_id": 973,
+  "p": [
+   "An advanced form of FUE in which the channels are opened with blades made of sapphire crystal instead of steel. The finer, sharper blades allow very precise incisions, with less tissue trauma and swelling."
+  ],
+  "li": [],
+  "more": false
+ },
+ "DHI (Direct Hair Implantation)": {
+  "img": "https://medluxlife.de/wp-content/uploads/2026/10/dhi-haartransplantation-an-der-haarlinie-opt.jpg",
+  "alt": "DHI hair implantation at the hairline",
+  "img_id": 1312,
+  "p": [
+   "Follicles are implanted directly with a special implanter pen (Choi pen), without opening channels in advance. This allows precise control of angle, direction and depth."
+  ],
+  "li": [],
+  "more": false
+ },
+ "FUT (Follicular Unit Transplantation)": {
+  "img": "https://medluxlife.de/wp-content/uploads/2026/10/prazise-haartransplantation-im-sterilen-op-licht-opt.jpg",
+  "alt": "Hair transplant procedure in a sterile setting",
+  "img_id": 1313,
+  "p": [
+   "A strip of skin is taken from the donor area and divided into individual follicular units. FUT allows many grafts in one session but leaves a longer linear scar, so it is used today only in selected cases."
+  ],
+  "li": [],
+  "more": false
+ },
+ "Exosome Therapy": {
+  "img": "https://medluxlife.de/wp-content/uploads/2026/10/medluxlife-hair-scalp-therapy.jpg",
+  "alt": "Scalp treatment for hair revitalisation in a clinic",
+  "img_id": 764,
+  "p": [
+   "Exosomes are tiny vesicles released by cells that carry proteins, lipids and growth signals. For hair restoration they are usually derived from mesenchymal stem cells and injected into thinning areas of the scalp, where they stimulate the follicles, extend the growth phase and support a healthier scalp. Exosomes are often combined with PRP."
+  ],
+  "li": [],
+  "more": false
+ },
+ "Hair Mesotherapy": {
+  "img": "https://medluxlife.de/wp-content/uploads/2026/10/haarskalptherapie-in-moderner-klinik-opt.jpg",
+  "alt": "Scalp mesotherapy treatment",
+  "img_id": 1314,
+  "p": [
+   "A tailored blend of vitamins, amino acids, plant extracts and other active ingredients is injected into the scalp to nourish the hair follicles. Usually performed as a series of sessions; many patients notice thicker, stronger hair over time.",
+   "A motorised mesotherapy device delivers even micro-injections at a controlled depth, which makes the treatment quicker and more comfortable than manual injections."
+  ],
+  "li": [],
+  "more": false
+ },
+ "Red Light Therapy": {
+  "img": "https://medluxlife.de/wp-content/uploads/2026/10/medluxlife-photo-c261d.jpg",
+  "alt": "Red light device used during a skin treatment",
+  "img_id": 979,
+  "p": [
+   "A non-invasive, low-level light treatment at wavelengths of around 600 to 650 nanometres. The light is absorbed by the follicle cells, stimulates their energy production, improves local circulation and supports healthy hair growth."
+  ],
+  "li": [],
+  "more": false
+ },
+ "PRP (Platelet-Rich Plasma)": {
+  "img": "https://medluxlife.de/wp-content/uploads/2026/10/blutplasma-rohrchen-im-labor-opt.jpg",
+  "alt": "Blood plasma tubes prepared for PRP treatment",
+  "img_id": 1315,
+  "p": [
+   "A small amount of your own blood is processed in a centrifuge to obtain plasma rich in platelets. Injected into the scalp, it stimulates the hair follicles and supports cell renewal. PRP is a well-established option to reduce hair loss and improve hair density."
+  ],
+  "li": [],
+  "more": false
+ },
+ "1. Free consultation": {
+  "img": null,
+  "alt": "",
+  "img_id": null,
+  "p": [
+   "Contact us and tell us what you are interested in. We advise you and refer you to the right specialist in Türkiye for an online consultation. Medical documents go directly to the doctor, only on request."
+  ],
+  "li": [],
+  "more": false
+ },
+ "2. Personal treatment plan": {
+  "img": null,
+  "alt": "",
+  "img_id": null,
+  "p": [
+   "Our partner specialists prepare a treatment plan and an estimated timeline tailored to you."
+  ],
+  "li": [],
+  "more": false
+ },
+ "3. Travel &amp; treatment": {
+  "img": null,
+  "alt": "",
+  "img_id": null,
+  "p": [
+   "We coordinate your appointments, hotel and airport transfers, so you can focus on your treatment."
+  ],
+  "li": [],
+  "more": false
+ },
+ "4. Aftercare": {
+  "img": null,
+  "alt": "",
+  "img_id": null,
+  "p": [
+   "We stay in touch after you return home and help with follow-up questions."
+  ],
+  "li": [],
+  "more": false
+ }
+}

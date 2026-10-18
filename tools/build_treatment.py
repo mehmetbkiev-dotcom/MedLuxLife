@@ -4,11 +4,12 @@
 Usage: build_treatment.py plastic            -> writes content/treatments/<slug>.html for every spec in content/treatments/plastic.py
        build_treatment.py plastic --deploy   -> also creates/updates the pages (child pages of the spec's PARENT, template page-with-title);
                                                 page IDs are kept in content/treatments/pages.json, backups in backups/wp/
+       build_treatment.py plastic --links    -> adds "Learn more →" (medlux-more) to the parent page's cards that have a detail page (backup first)
        build_treatment.py --icons            -> rewrites the banner icon rules (one gold icon per treatment page, Anna 2026-10-18) in
                                                 assets/treatment_detail.css from pages.json + icons.json (icons: tools/make_treatment_icons.py);
                                                 then switch TREATMENT-DETAIL off/on with tools/css_block_toggle.py
 Texts are general information in our own words; no clinic/doctor names, no before/after, no prices, no promises (HWG)."""
-import base64, importlib.util, json, pathlib, subprocess, sys, time
+import base64, importlib.util, json, pathlib, re, subprocess, sys, time
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 API = 'https://medluxlife-6j8sz55bpn.live-website.com/wp-json/wp/v2/pages'
 
@@ -82,7 +83,23 @@ def cards(cls, items):
     return group(('medlux-treatment-grid medlux-centered-cards ' + cls).strip(), items, '{"type":"grid","minimumColumnWidth":"14rem"}')
 
 
-def build(t, card, stages):
+# wording per treatment group; a spec module may override any of these in VOCAB (e.g. dentist instead of surgeon)
+VOCAB = {
+    'doctor': 'surgeon',
+    'proc_title': 'How the operation is performed',
+    'suitable_note': 'Whether the procedure is suitable for you is decided by the {doctor} after a personal assessment.',
+    'step3_title': 'Arrival and surgery',
+    'step3_lead': 'After a pre-operative examination, the operation takes place as planned. ',
+    'step4_title': 'Recovery in Istanbul',
+    'step4': 'You rest in your hotel and attend the check-ups at the clinic. The {doctor} decides when you are ready to fly home.',
+    'docs': 'No. If the {doctor} needs photos or documents, you share them directly with the doctor in your online consultation.',
+    'recovery_title': 'Recovery step by step',
+}
+
+
+def build(t, card, stages, vocab=None):
+    v = dict(VOCAB, **(vocab or {}))
+    v = {k: val.format(doctor=v['doctor']) for k, val in v.items()}
     intro = ('<!-- wp:columns {"verticalAlignment":"center","className":"medlux-intro"} -->\n<div class="wp-block-columns are-vertically-aligned-center medlux-intro">'
              '<!-- wp:column {"verticalAlignment":"center"} -->\n<div class="wp-block-column is-vertically-aligned-center">'
              + p(t['intro'], 'medlux-lead')
@@ -94,13 +111,13 @@ def build(t, card, stages):
     facts = group('medlux-section medlux-facts-sec', [
         h('Quick facts'),
         group('medlux-facts', [fact(*f) for f in t['facts']], '{"type":"default"}'),
-        p('General information; your surgeon plans the details for you personally.', 'medlux-facts-note'),
+        p('General information; your %s plans the details for you personally.' % v['doctor'], 'medlux-facts-note'),
     ])
 
     suitable = group('medlux-section medlux-suitable', [
         h('Who it may be suitable for'),
         ul(t['suitable'], 'medlux-checklist'),
-        p(t.get('note', 'Whether the procedure is suitable for you is decided by the surgeon after a personal assessment.'), 'medlux-suitable-note'),
+        p(t.get('note', v['suitable_note']), 'medlux-suitable-note'),
     ])
 
     sections = [intro, facts, suitable]
@@ -112,31 +129,31 @@ def build(t, card, stages):
         ]))
 
     sections.append(group('medlux-section', [
-        h('How the operation is performed'),
+        h(v['proc_title']),
         cards('medlux-stages', [group('medlux-card', [icon(ic), h(title, 3), p(text)]) for ic, title, text in stages]),
     ]))
 
     sections.append(group('medlux-section', [
         h('How it works with MedLuxLife'),
         group('medlux-steps medlux-steps--list', [
-            step(1, 'Contact and online consultation', 'Contact us and tell us what you are interested in. We refer you to the right surgeon for an online consultation. Photos or medical documents go directly to the doctor, only on request.'),
-            step(2, 'Your personal plan', 'The surgeon recommends the right approach for you. We plan your dates, flights, hotel and transfers around it.'),
-            step(3, 'Arrival and surgery', 'After a pre-operative examination, the operation takes place as planned. ' + t['hospital']),
-            step(4, 'Recovery in Istanbul', 'You rest in your hotel and attend the check-ups at the clinic. The surgeon decides when you are ready to fly home.'),
+            step(1, 'Contact and online consultation', 'Contact us and tell us what you are interested in. We refer you to the right %s for an online consultation. Photos or medical documents go directly to the doctor, only on request.' % v['doctor']),
+            step(2, 'Your personal plan', 'The %s recommends the right approach for you. We plan your dates, flights, hotel and transfers around it.' % v['doctor']),
+            step(3, v['step3_title'], v['step3_lead'] + t['hospital']),
+            step(4, v['step4_title'], v['step4']),
             step(5, 'Back home', 'Stay in touch with us on WhatsApp – we help with follow-up questions.'),
         ], '{"type":"default"}'),
     ]))
 
     sections.append(group('medlux-section', [
-        h('Recovery step by step'),
+        h(t.get('recovery_title', v['recovery_title'])),
         cards('medlux-timeline', [group('medlux-card', [p(label, 'medlux-time-label'), p(text)]) for label, text in t['recovery']]),
     ]))
 
     sections.append(group('medlux-section', [
         h('Frequently asked questions'),
-        faq(t['faq'] + [
-            ('How long should I stay in Türkiye?', 'This is planned individually with the clinic. We organise your flights and hotel accordingly.'),
-            ('Should I send photos or medical documents to MedLuxLife?', 'No. If the surgeon needs photos or documents, you share them directly with the doctor in your online consultation.'),
+        faq(t['faq'] + ([] if t.get('no_stay_faq') else [
+            ('How long should I stay in Türkiye?', 'This is planned individually with the clinic. We organise your flights and hotel accordingly.')]) + [
+            ('Should I send photos or medical documents to MedLuxLife?', v['docs']),
         ]),
     ]))
 
@@ -175,6 +192,29 @@ def icon_css():
     print(len(rules), 'icon rules')
 
 
+def add_links(mod):
+    url = API + '/%d' % mod.PARENT
+    page = curl(url + '?context=edit')
+    (ROOT / 'backups/wp' / ('page%d_before_links_%s.json' % (mod.PARENT, time.strftime('%Y%m%d_%H%M%S')))).write_text(json.dumps(page))
+    base = page['link'].replace('https://medluxlife-6j8sz55bpn.live-website.com', 'https://medluxlife.de')
+    link = {t['card']: base + t['slug'] + '/' for t in mod.TREATMENTS}
+    start = '<!-- wp:group {"className":"medlux-card'
+    end = '</div>\n<!-- /wp:group -->'
+    parts = page['content']['raw'].split(start)
+    out, done = [parts[0]], []
+    for chunk in parts[1:]:
+        title = re.search(r'<h3 class="wp-block-heading">(.*?)</h3>', chunk.split(end)[0])
+        title = title.group(1) if title else None
+        if title in link and 'medlux-more' not in chunk.split(end)[0]:
+            k = chunk.index(end)
+            chunk = (chunk[:k] + '\n\n<!-- wp:paragraph {"className":"medlux-more"} -->\n<p class="medlux-more"><a href="%s">Learn more →</a></p>\n'
+                     '<!-- /wp:paragraph -->' % link[title] + chunk[k:])
+            done.append(title)
+        out.append(chunk)
+    res = curl('-X', 'POST', url, '-H', 'Content-Type: application/json', '--data-binary', '@-', data=json.dumps({'content': start.join(out)}).encode())
+    print('links added:', done, '| missing:', [k for k in link if k not in done], '| page', res.get('id'))
+
+
 def main():
     if len(sys.argv) < 2:
         sys.exit(__doc__)
@@ -183,11 +223,13 @@ def main():
     group_name, deploy = sys.argv[1], '--deploy' in sys.argv
     spec = importlib.util.spec_from_file_location(group_name, ROOT / 'content/treatments' / (group_name + '.py'))
     mod = importlib.util.module_from_spec(spec); spec.loader.exec_module(mod)
+    if '--links' in sys.argv:
+        return add_links(mod)
     cards_data = json.loads((ROOT / 'content/treatments' / (group_name + '_cards.json')).read_text())
     ids_file = ROOT / 'content/treatments/pages.json'
     ids = json.loads(ids_file.read_text()) if ids_file.exists() else {}
     for t in mod.TREATMENTS:
-        html = build(t, cards_data[t['card']], mod.STAGES[t['slug']])
+        html = build(t, cards_data[t['card']], mod.STAGES[t['slug']], getattr(mod, 'VOCAB', None))
         (ROOT / 'content/treatments' / (t['slug'] + '.html')).write_text(html)
         if not deploy:
             print('written', t['slug'], len(html)); continue
