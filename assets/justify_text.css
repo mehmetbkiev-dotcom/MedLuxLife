@@ -1,3 +1,9 @@
-/* >>> JUSTIFY-TEXT START: Anna's standing rule (2026-10-17) – body texts justified with hyphenation. Started with the FAQ answers (Home, Contact); more pages get their own scoped rules (ABOUT-2026, TRAVEL-SUB) */
-.wp-block-accordion-panel p, .wp-block-accordion-panel li { text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
+/* >>> JUSTIFY-TEXT START: Anna's standing rule (2026-10-17/18) – body texts on every page justified with hyphenation, on all screens. Centred blocks (CTA text, notes) justified with the last line centred. Left as they are: headings, buttons, form labels/consent, chips, the About headline/values line, and the short texts in the centred Travel cards (Anna chose centred, TRAVEL-SUB) */
+.entry-content :is(.medlux-card, .medlux-section, .medlux-legal, .medlux-why-item, .medlux-hub-box, .medlux-intro, .medlux-contact-side, .wp-block-accordion-panel) :is(p, li):not(.medlux-values-words, .medlux-about-headline, .medlux-partners-label, .medlux-partner-type, .medlux-partners-quote, .medlux-partners-note, .has-text-align-center),
+.entry-content p.medlux-lead,
+.entry-content p.medlux-form-hint,
+body.home .entry-content .ext-section-intro p:not(.has-text-align-center) { text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
+.entry-content :is(.medlux-cta p, p.medlux-why-note) { text-align: justify; text-align-last: center; -webkit-hyphens: auto; hyphens: auto; }
+/* Home journey cards on laptops (their own left !important rule from HOME-JOURNEYS) – on phones/tablets they stay centred like other centred cards */
+@media (min-width: 1100px) { html body.home .wp-site-blocks .mlx-journeys .ext-grid > .ext-card.ext-card.ext-card:not(.x):has(figure) .ext-card-body p { text-align: justify !important; -webkit-hyphens: auto; hyphens: auto; } }
 /* <<< JUSTIFY-TEXT END */

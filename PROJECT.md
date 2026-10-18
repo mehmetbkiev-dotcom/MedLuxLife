@@ -52,7 +52,8 @@ Emrah gelince bu özet anlatılır, sonra plana devam edilir.
    - Blok: TRAVEL-SUB.
 8. **Yeni kalıcı kurallar (yukarıda):** metinler iki yana yaslı (ortalanmış kartlardaki kısa metinler ortalı), SSS kapalı başlar, medyadan hiçbir şey silinmez, her yeni görselde açık banner logosu.
 **Sıradaki plan:** hukuki sayfalar (Impressum, Datenschutz, AGB, Widerrufsbelehrung, Stornierungsbedingungen) → çeviriler (DE/TR/RU/UK).
-**Açık kalanlar:** form spam koruması (Cloudflare Turnstile, hesap gerekiyor); laptopta Live Chat'in 3. Travel kartının yazısına binmesi (önceki öneri).
+**Açık kalanlar:** form spam koruması (Cloudflare Turnstile, hesap gerekiyor). (Live Chat'in laptopta Travel kartına binmesi 2026-10-18'de kontrol edildi – artık yazının üstüne gelmiyor.)
+**2026-10-18 (Anna):** tüm sitede gövde metinleri iki yana yaslandı (JUSTIFY-TEXT); telefonda logonun yanındaki "MEDLUXLIFE" yazısı kaldırıldı (seçenek A).
 
 ## 1. Genel kararlar
 - **Marka:** MEDLUXLIFE
@@ -526,3 +527,22 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
   - "How it works" as a list with gold circles and arrows.
   - Next in the plan: legal pages (Impressum, Datenschutz, AGB, Widerrufsbelehrung, Stornierungsbedingungen), then translations (DE/TR/RU/UK).
 - 2026-10-17 – Anna: nothing is deleted from the media library for now; every new branded image uses the light banner logo (media 2003). Both added to the standing rules.
+
+### 2026-10-18 – Justified text on the whole site + phone header A (Anna)
+- Anna: justify the text on every page. Audit tool `tools/text_align_audit.mjs` (Playwright; reads `pages.json` from the REST page list and lists every paragraph or list item of 2+ lines that is not justified). Before: ~1,370 such texts on 96 pages:
+  - treatment and department cards: 604;
+  - "How it works" steps on the Health pages: 324;
+  - legal pages: 122;
+  - CTA texts and disclaimers: 162;
+  - lists, Health "Why" items and hub boxes;
+  - Home journey cards;
+  - Contact intro;
+  - FAQ intro.
+- New sitewide CSS block JUSTIFY-TEXT (`assets/justify_text.css`), on all screens:
+  - body text is justified with hyphenation;
+  - centred blocks (CTA text, disclaimer, Health "Why" note) are justified with the last line centred;
+  - Home journey cards are justified on laptops (≥1100px) and stay centred on phones;
+  - deliberate exceptions: headings, buttons, form labels/consent, chips, the About headline/values line, and the short centred Travel card texts (Anna chose centred).
+- After: only those exceptions remain. Screenshot: `deliverables/justify_sitewide.jpg`.
+- Live Chat vs. the 3rd Travel card on laptops: checked at 1280/1366/1536 by scrolling like a user. The badge no longer covers any text (it sits in the empty space under the cards) → removed from the open items.
+- Phone header: Anna chose A. The "MEDLUXLIFE" text next to the logo is hidden on phones (≤599px; the logo already says MedLuxLife). Free Consultation stays as the big first item in the hamburger menu. The option with a small "Consultation" button in the header was not taken for now. LANG-MOBILE updated. Screenshots: `deliverables/phone_header_options.jpg`, `deliverables/phone_header_A.jpg`.

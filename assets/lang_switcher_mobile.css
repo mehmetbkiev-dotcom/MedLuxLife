@@ -1,4 +1,4 @@
-/* >>> LANG-MOBILE START: header layout on all screens (name kept for history). Phone: logo/title close to the left edge, search + language flag + menu evenly spaced on the right, title shrinks/hides on very narrow screens, search/flag hidden while the hamburger menu is open, menu title in the same thin letters as the header. Tablet: logo left, search - Free Consultation - flag - menu right-aligned with equal gaps (600-781px had lost them); language panel opens to the left. Laptop/desktop: search close to Free Consultation, a narrower language panel opens to the right and ends 12px from the screen edge. An opened search field covers the flag. 2026-10-17 (Anna) */
+/* >>> LANG-MOBILE START: header layout on all screens (name kept for history). Phone: logo close to the left edge without the "MEDLUXLIFE" text (Anna chose A, 2026-10-18; the logo already says MedLuxLife), search + language flag + menu evenly spaced on the right, search/flag hidden while the hamburger menu is open, menu title in the same thin letters as the header. Tablet: logo left, search - Free Consultation - flag - menu right-aligned with equal gaps (600-781px had lost them); language panel opens to the left. Laptop/desktop: search close to Free Consultation, a narrower language panel opens to the right and ends 12px from the screen edge. An opened search field covers the flag. 2026-10-17 (Anna) */
 /* all widths: flag sits on the same middle line as the other icons; the dropdown opens to the LEFT, so the switcher can sit right at the edge */
 header .ext-nav-extras .trp-block-container { display: block !important; position: relative; top: 3px; z-index: 100000; }
 /* below the search field (z 100001) so an opened search covers the flag; above it only while the language panel is open */
@@ -10,7 +10,7 @@ header .trp-block-container .trp-shortcode-overlay.is-open { width: max-content 
 @media (max-width: 599px) {
   header .wp-block-group.alignwide.is-content-justification-space-between { gap: 10px !important; }
   header > .wp-block-group.alignfull { padding-left: 10px !important; padding-right: 6px !important; }
-  header .wp-block-site-title { font-size: clamp(11px, calc(10vw - 21px), 14px) !important; letter-spacing: 0.2em !important; }
+  header .wp-block-site-title { display: none !important; }
   header .wp-block-group.alignwide > .wp-block-group.ext-nav-extras { gap: 4px !important; margin-right: 0 !important; }
   header .ext-nav-extras .medlux-header-search .wp-block-search__button { padding: 6px !important; }
   header .trp-block-container .trp-language-item__current { padding-left: 7px !important; }
@@ -25,9 +25,6 @@ header .trp-block-container .trp-shortcode-overlay.is-open { width: max-content 
 }
 @media (max-width: 781px) {
   header .ext-nav-extras { display: flex !important; }
-}
-@media (max-width: 349px) {
-  header .wp-block-site-title { display: none !important; }
 }
 /* laptop/desktop: search sits close to Free Consultation; the language panel opens to the RIGHT and ends 12px from the screen edge (the switcher slot keeps exactly that room) */
 @media (min-width: 1101px) {
