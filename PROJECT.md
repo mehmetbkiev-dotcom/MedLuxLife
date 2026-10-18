@@ -55,6 +55,11 @@ Emrah gelince bu özet anlatılır, sonra plana devam edilir.
 **Sıradaki plan:** hukuki sayfalar (Impressum, Datenschutz, AGB, Widerrufsbelehrung, Stornierungsbedingungen) → çeviriler (DE/TR/RU/UK).
 **Açık kalanlar:** form spam koruması (Cloudflare Turnstile, hesap gerekiyor). (Live Chat'in laptopta Travel kartına binmesi 2026-10-18'de kontrol edildi – artık yazının üstüne gelmiyor.)
 **2026-10-18 (Anna):** tüm sitede gövde metinleri iki yana yaslandı (JUSTIFY-TEXT); telefonda logonun yanındaki "MEDLUXLIFE" yazısı kaldırıldı (seçenek A).
+**2026-10-18 devam (Anna onayladı):**
+- Health adım 1 her yerde "bize ulaşın, ne ile ilgilendiğinizi söyleyin → sizi doğru uzmana online konsültasyona yönlendiririz; belgeler sadece doktora" oldu (ana sayfa + 81 sayfa).
+- 12 bölüm sayfasında "belgeleri biz iletiriz" izlenimi veren cümleler düzeltildi.
+- Contact SSS ve form ipucu güncellendi.
+- Dil panelinde İngiliz bayrağının yanına "English" yazıldı.
 
 ## 1. Genel kararlar
 - **Marka:** MEDLUXLIFE
@@ -562,3 +567,8 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - 2026-10-18 – Contact: FAQ answer "If documents are needed, the doctor will ask for them in your online consultation and you share them directly with the doctor." CF7 form hint: "Please do not send medical information or documents here. If documents are needed, the doctor will ask for them in your online consultation."
 - Backups: `backups/wp/before_specialist_wording/page<ID>.json` (83 pages), `backups/wp/cf7_589_before_form_hint.json`.
 - 2026-10-18 – Language panel (Anna): the current language now has its name in the open panel like German/Turkish; "English (UK)" is shown as "English" (LANG-SWITCHER). The laptop slot is 99px so the panel still ends 12px from the edge. Screenshot: `deliverables/lang_english_label.jpg`.
+- 2026-10-18 – Anna APPROVED:
+  - the step 1 wording "Contact us… refer you to the right specialist… documents only to the doctor" (Home + 81 pages);
+  - the 12 rewritten department intros;
+  - the Contact FAQ and form hint;
+  - the "English" label in the language panel.
