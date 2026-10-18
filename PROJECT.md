@@ -604,3 +604,10 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
   - Quick facts: a navy band with gold icons (moon, bed, calendar, hourglass, map pin), gold labels and white values.
   - Who it may be suitable for: a light checklist with gold check circles, two columns on laptops, no box; the "surgeon decides" note in italics under it.
   - CSS in TREATMENT-DETAIL. Screenshot: `deliverables/mommy_quickfacts_suitable.jpg`.
+- 2026-10-18 – Free Consultation with the topic filled in (Anna):
+  - CF7 589: `default:get` on `your-subject` and `your-message`.
+  - New footer script `assets/contact_topic_prefill.js` (new wp:html block after the chat script; no `<`/`&`).
+  - On every /health/… and /travel/… page (also with a language prefix), the button links to /contact/ get `?your-subject=Health|Travel`. These are the header Free Consultation, the menu item and the CTA buttons ("Request a Free Consultation" / "Request an Offer").
+  - On detail pages (not the hubs) the links also get `&your-message=I am interested in: <page title>.` → the form opens with the subject selected and that line in the message. Tested on Mommy Makeover, Dental and Oral Health and Holiday Packages.
+  - Backups: `backups/wp/cf7_589_before_topic_prefill.json`, `footer_tp_before_topic_prefill.json`. Screenshot: `deliverables/contact_prefilled.jpg`.
+- 2026-10-18 – Quick facts too dark (Anna) → light band: cream gradient, gold border, icons in gold circles on white, gold labels, navy values. Screenshot: `deliverables/mommy_quickfacts_light.jpg`.

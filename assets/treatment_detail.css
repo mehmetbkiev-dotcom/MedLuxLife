@@ -8,15 +8,15 @@ body.page-id-2293 main > .ext-hero-section .wp-block-cover::before { width: clam
 @media (max-width: 600px) { body.page-id-2293 main > .ext-hero-section .wp-block-cover { padding-top: 14px !important; padding-bottom: 14px !important; } }
 @media (max-width: 600px) { body.page-id-2293 main > .ext-hero-section .wp-block-cover .wp-block-post-title { padding-left: 44px; padding-right: 44px !important; } }
 @media (max-width: 600px) { body.page-id-2293 main > .ext-hero-section .wp-block-cover::before { width: 40px !important; height: 35px !important; top: 50% !important; transform: translateY(-50%) !important; } }
-/* Quick facts: navy band with gold icons (different from the light boxes on the page) */
+/* Quick facts: light band (Anna: the navy version was too dark) – icons in gold circles, gold labels, navy values, thin gold dividers */
 .medlux-facts-sec > h2, .medlux-facts-sec ~ .medlux-section > h2 { text-align: center; }
-.medlux-facts { display: grid !important; grid-template-columns: repeat(5, 1fr); gap: 0; margin-top: 20px !important; background: #0b0620; border-radius: 18px; padding: 30px 16px !important; }
+.medlux-facts { display: grid !important; grid-template-columns: repeat(5, 1fr); gap: 0; margin-top: 20px !important; background: linear-gradient(180deg, #fffdf8 0%, #f8f1e4 100%); border: 1px solid rgba(212, 162, 76, 0.45); border-radius: 18px; padding: 28px 14px !important; box-shadow: 0 14px 30px -24px rgba(11, 6, 32, 0.35); }
 .medlux-fact { text-align: center; margin: 0 !important; padding: 4px 12px !important; border-left: 1px solid rgba(212, 162, 76, 0.35); }
 .medlux-fact:first-child { border-left: 0; }
-.medlux-fact .medlux-card-icon { margin: 0 auto 10px !important; }
-.medlux-fact .medlux-card-icon img { width: 34px; height: 34px; margin: 0 auto; display: block; }
-.medlux-fact .medlux-fact-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #f0c46a; margin: 0 0 6px !important; text-align: center !important; }
-.medlux-fact .medlux-fact-value { font-family: "Cormorant Garamond", serif; font-weight: 600; font-size: 1.2rem; line-height: 1.25; color: #fefefe; margin: 0 !important; text-align: center !important; }
+.medlux-fact .medlux-card-icon { margin: 0 auto 10px !important; width: 54px; height: 54px; border: 1.5px solid #d4a24c; border-radius: 50%; background: #fff; display: flex !important; align-items: center; justify-content: center; }
+.medlux-fact .medlux-card-icon img { width: 28px; height: 28px; margin: 0 auto; display: block; }
+.medlux-fact .medlux-fact-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #b8862e; margin: 0 0 6px !important; text-align: center !important; }
+.medlux-fact .medlux-fact-value { font-family: "Cormorant Garamond", serif; font-weight: 600; font-size: 1.2rem; line-height: 1.25; color: #0b0620; margin: 0 !important; text-align: center !important; }
 .medlux-facts-note { text-align: center !important; font-size: 0.9rem; font-style: italic; color: #6b6577; margin-top: 14px !important; }
 @media (max-width: 900px) {
   .medlux-facts { grid-template-columns: repeat(2, 1fr); row-gap: 22px; padding: 24px 12px !important; }
