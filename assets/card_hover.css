@@ -10,4 +10,10 @@
 @media (prefers-reduced-motion: reduce) {
   .medlux-hub-box, .medlux-rows .medlux-row, .medlux-steps .medlux-card, .medlux-treatment-grid .medlux-card, .medlux-dept-grid .medlux-card, .medlux-hub-box .medlux-hub-img img, .medlux-row-img img { transition: none; }
 }
+/* whole card clickable when it has one "Learn more →" link (Anna, 2026-10-18): the link is stretched over the card; cards with other links inside (lists of links) are left alone */
+.medlux-card:has(.medlux-more a):not(:has(li a)) { position: relative; cursor: pointer; }
+.medlux-card:has(.medlux-more a):not(:has(li a)) .medlux-more a::after { content: ""; position: absolute; inset: 0; z-index: 2; border-radius: inherit; }
+@media (hover: hover) and (pointer: fine) {
+  .medlux-card:has(.medlux-more a):not(:has(li a)):hover { transform: translateY(-6px); box-shadow: 0 24px 40px -20px rgba(11, 6, 32, 0.42) !important; border-color: #d4a24c !important; }
+}
 /* <<< CARD-HOVER END */
