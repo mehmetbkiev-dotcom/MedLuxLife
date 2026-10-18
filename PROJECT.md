@@ -623,3 +623,4 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
   - B = numbers first: big gold values, small labels, small icons, gold rules above/below;
   - C = white cards with a gold top edge and the icon circle floating over the edge.
   - CSS in `assets/previews/quickfacts_option_A/B/C.css`; screenshots `deliverables/quickfacts_option_A/B/C.jpg`. Waiting for her choice.
+- 2026-10-18 – Anna chose C for Quick facts → LIVE (TREATMENT-DETAIL): white cards with a gold top edge, the icon in a gold circle sitting on the edge, gold labels, navy values; 5 in a row on laptops, 2 + 1 on phones. Screenshots: `deliverables/quickfacts_C_live.jpg`, `mommy_makeover_laptop.jpg`, `mommy_makeover_phone.jpg`.
