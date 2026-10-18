@@ -155,5 +155,5 @@ cta = group('medlux-cta', [
     p('The information on this page is for general guidance only and does not replace a medical consultation. Suitability for any treatment is assessed individually by a qualified doctor.', 'medlux-disclaimer'),
 ])
 
-(ROOT / 'content/mommy_makeover.html').write_text('\n\n'.join([intro, facts, include, suitable, performed, how, recovery, faqs, cta]) + '\n')
+(ROOT / 'content/mommy_makeover.html').write_text('\n\n'.join([intro, facts, suitable, include, performed, how, recovery, faqs, cta]) + '\n')
 print('written', len((ROOT / 'content/mommy_makeover.html').read_text()))
