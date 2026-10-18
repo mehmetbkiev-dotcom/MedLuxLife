@@ -618,3 +618,8 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - 2026-10-18 – The prefilled message now starts with a greeting in the page language, on its own line, plus an empty line to continue: EN "Hello, / I am interested in X.", DE "Guten Tag, / ich interessiere mich für X.", TR "Merhaba, / X ile ilgileniyorum.", UK "Добрий день, / мене цікавить X.", RU "Здравствуйте, / меня интересует X.".
   - CF7 strips line breaks from GET values, so the message travels as `?msg=` and the same footer script fills the empty message field on /contact/. The subject still uses CF7 `default:get`.
   - Tested by really clicking the CTA (Mommy Makeover, Airport Transfer). Backup: `backups/wp/footer_tp_before_prefill_greeting.json`. Screenshot: `deliverables/contact_prefilled.jpg`.
+- 2026-10-18 – Quick facts (Anna): no blue at all, light but more interesting → three light PREVIEWS (live still shows the lighter midnight version):
+  - A = timeline: icons in gold circles joined by a thin gold line;
+  - B = numbers first: big gold values, small labels, small icons, gold rules above/below;
+  - C = white cards with a gold top edge and the icon circle floating over the edge.
+  - CSS in `assets/previews/quickfacts_option_A/B/C.css`; screenshots `deliverables/quickfacts_option_A/B/C.jpg`. Waiting for her choice.

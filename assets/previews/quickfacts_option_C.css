@@ -1,0 +1,6 @@
+body .medlux-facts { background: none !important; border: 0 !important; box-shadow: none !important; padding: 34px 0 0 !important; gap: 16px !important; }
+body .medlux-fact { background: #fff; border: 1px solid rgba(212,162,76,0.4) !important; border-top: 3px solid #d4a24c !important; border-radius: 14px; padding: 40px 12px 20px !important; position: relative; box-shadow: 0 14px 28px -22px rgba(11,6,32,0.4); }
+body .medlux-fact .medlux-card-icon { position: absolute; top: -29px; left: 50%; transform: translateX(-50%); margin: 0 !important; background: #fffdf8 !important; border: 1.5px solid #d4a24c !important; width: 56px !important; height: 56px !important; }
+body .medlux-fact .medlux-fact-label { color: #b8862e !important; }
+body .medlux-fact .medlux-fact-value { color: #0b0620 !important; }
+@media (max-width: 900px) { body .medlux-facts { row-gap: 46px !important; } }
