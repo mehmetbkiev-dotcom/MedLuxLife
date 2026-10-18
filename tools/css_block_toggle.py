@@ -14,7 +14,7 @@ import json, re, subprocess, sys, time, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 API = 'https://medluxlife-6j8sz55bpn.live-website.com/wp-json/wp/v2/global-styles/5'
-FILES = {'HERO-2026': 'assets/home_hero_2026.css', 'LANG-SLIM': 'assets/home_lang_slim.css', 'HERO-LANG': 'assets/home_hero_lang.css', 'HOME-JOURNEYS': 'assets/home_journeys.css', 'ELEVATE-FIT': 'assets/home_elevate_fit.css', 'LANG-MOBILE': 'assets/lang_switcher_mobile.css', 'CARD-HOVER': 'assets/card_hover.css', 'CHAT-DARK': 'assets/chat_dark.css', 'ABOUT-2026': 'assets/about_2026.css', 'TRAVEL-SUB': 'assets/travel_sub.css', 'JUSTIFY-TEXT': 'assets/justify_text.css', 'TREATMENT-DETAIL': 'assets/treatment_detail.css', 'FAQ-SIZE': 'assets/faq_size.css'}
+FILES = {'HERO-2026': 'assets/home_hero_2026.css', 'LANG-SLIM': 'assets/home_lang_slim.css', 'HERO-LANG': 'assets/home_hero_lang.css', 'HOME-JOURNEYS': 'assets/home_journeys.css', 'ELEVATE-FIT': 'assets/home_elevate_fit.css', 'LANG-MOBILE': 'assets/lang_switcher_mobile.css', 'CARD-HOVER': 'assets/card_hover.css', 'CHAT-DARK': 'assets/chat_dark.css', 'ABOUT-2026': 'assets/about_2026.css', 'TRAVEL-SUB': 'assets/travel_sub.css', 'JUSTIFY-TEXT': 'assets/justify_text.css', 'TREATMENT-DETAIL': 'assets/treatment_detail.css', 'FAQ-SIZE': 'assets/faq_size.css', 'HOME-JOURNEYS-CHAT': 'assets/home_journeys_chat.css'}
 
 
 def main():

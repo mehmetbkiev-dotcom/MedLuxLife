@@ -1,0 +1,12 @@
+/* >>> HOME-JOURNEYS-CHAT START – Home, Medical/Travel Journey screen (laptops): the block is a little more compact,
+   so the 3rd Travel step ends above the Live Chat button (84px kept free at the bottom) (Anna 2026-10-18); short intros under the headings centred (justify + balance left big gaps) */
+@media (min-width: 1100px) {
+  html body.home .wp-site-blocks .mlx-journeys { padding-bottom: 84px !important;
+    row-gap: clamp(10px, calc(3 * var(--mlx-u) - 12px), 34px); }
+  html body.home .mlx-journeys .mlx-lang2-card { padding-top: clamp(10px, calc(2.6 * var(--mlx-u) - 8px), 30px); padding-bottom: clamp(10px, calc(2.6 * var(--mlx-u) - 8px), 30px); }
+  html body.home .wp-site-blocks .mlx-journeys > section:not(.mlx-lang2) { padding-top: clamp(12px, calc(5.2 * var(--mlx-u) - 26px), 34px) !important; padding-bottom: clamp(12px, calc(5.2 * var(--mlx-u) - 26px), 34px) !important; }
+  html body.home .wp-site-blocks .mlx-journeys .ext-grid { gap: clamp(6px, calc(2.25 * var(--mlx-u) - 10px), 16px) !important; margin-top: clamp(8px, calc(3.2 * var(--mlx-u) - 14px), 24px) !important; }
+  html body.home .wp-site-blocks .mlx-journeys .ext-grid > .ext-card.ext-card { padding-top: clamp(8px, calc(3.6 * var(--mlx-u) - 19px), 26px) !important; padding-bottom: clamp(8px, calc(3.6 * var(--mlx-u) - 19px), 26px) !important; }
+  html body.home .wp-site-blocks .mlx-journeys .ext-section-intro p { text-align: center !important; }
+}
+/* <<< HOME-JOURNEYS-CHAT END */
