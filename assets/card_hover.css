@@ -16,4 +16,8 @@
 @media (hover: hover) and (pointer: fine) {
   .medlux-card:has(.medlux-more a):not(:has(li a)):hover { transform: translateY(-6px); box-shadow: 0 24px 40px -20px rgba(11, 6, 32, 0.42) !important; border-color: #d4a24c !important; }
 }
+/* "Learn more →" always at the bottom of the card, so it sits on one line in every row (Anna 2026-10-18) */
+.medlux-card:has(> .medlux-more) { display: flex !important; flex-direction: column; }
+.medlux-card:has(> .medlux-more) > :not(.medlux-card-img) { width: 100%; box-sizing: border-box; }
+.medlux-card:has(> .medlux-more) > .medlux-more { margin-top: auto !important; padding-top: 14px; }
 /* <<< CARD-HOVER END */

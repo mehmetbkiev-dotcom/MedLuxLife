@@ -82,17 +82,7 @@ def cards(cls, items):
     return group(('medlux-treatment-grid medlux-centered-cards ' + cls).strip(), items, '{"type":"grid","minimumColumnWidth":"14rem"}')
 
 
-def anaesthesia_text(t):
-    if 'anaesthesia_text' in t:
-        return t['anaesthesia_text']
-    v = dict((f[1], f[2]) for f in t['facts']).get('Anaesthesia', '')
-    if v == 'General anaesthesia':
-        return 'On the day of surgery you receive general anaesthesia and sleep throughout the operation. The team marks and prepares the area to be treated.'
-    v = v.lower() + ('' if 'anaesthesia' in v.lower() else ' anaesthesia')
-    return 'The type of anaesthesia – %s – is planned with you in advance. The team marks and prepares the area to be treated.' % v
-
-
-def build(t, card):
+def build(t, card, stages):
     intro = ('<!-- wp:columns {"verticalAlignment":"center","className":"medlux-intro"} -->\n<div class="wp-block-columns are-vertically-aligned-center medlux-intro">'
              '<!-- wp:column {"verticalAlignment":"center"} -->\n<div class="wp-block-column is-vertically-aligned-center">'
              + p(t['intro'], 'medlux-lead')
@@ -123,12 +113,7 @@ def build(t, card):
 
     sections.append(group('medlux-section', [
         h('How the operation is performed'),
-        cards('medlux-stages', [
-            group('medlux-card', [icon('consult'), h('Consultation with the surgeon', 3), p('Before the operation, the surgeon examines you in person, discusses your wishes and confirms the final plan.')]),
-            group('medlux-card', [icon('moon'), h('Anaesthesia and preparation', 3), p(anaesthesia_text(t))]),
-            group('medlux-card', [icon('gem'), h('The procedure', 3), p(t['procedure'])]),
-            group('medlux-card', [icon('care'), h('Closure and first care', 3), p(t['closure'])]),
-        ]),
+        cards('medlux-stages', [group('medlux-card', [icon(ic), h(title, 3), p(text)]) for ic, title, text in stages]),
     ]))
 
     sections.append(group('medlux-section', [
@@ -202,7 +187,7 @@ def main():
     ids_file = ROOT / 'content/treatments/pages.json'
     ids = json.loads(ids_file.read_text()) if ids_file.exists() else {}
     for t in mod.TREATMENTS:
-        html = build(t, cards_data[t['card']])
+        html = build(t, cards_data[t['card']], mod.STAGES[t['slug']])
         (ROOT / 'content/treatments' / (t['slug'] + '.html')).write_text(html)
         if not deploy:
             print('written', t['slug'], len(html)); continue

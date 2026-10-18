@@ -33,7 +33,7 @@ body.parent-pageid-263 main > .ext-hero-section .wp-block-cover::before { width:
 .medlux-centered-cards .medlux-card p { text-align: center !important; text-align-last: center; }
 .medlux-centered-cards .medlux-card .medlux-card-icon { margin-left: auto !important; margin-right: auto !important; }
 .medlux-centered-cards .medlux-card .medlux-card-icon img { margin: 0 auto; display: block; }
-.medlux-timeline .medlux-time-label { font-family: "Cormorant Garamond", serif; font-weight: 600; font-size: 1.35rem; color: #0b0620; margin: 0 0 6px !important; }
+.medlux-timeline .medlux-time-label { font-family: "Cormorant Garamond", serif; font-weight: 700; font-size: 1.4rem; line-height: 1.25; color: rgb(43, 45, 48); margin: 0 0 6px !important; }   /* same as the other card titles (Anna 2026-10-18) */
 /* "How it works" as a list with circles and arrows (same look as the Travel pages) */
 .medlux-steps--list { display: block !important; max-width: 760px; margin-left: auto !important; margin-right: auto !important; }
 .medlux-steps--list .medlux-card { background: transparent !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; padding: 22px 0 22px 84px !important; margin: 0 !important; text-align: left !important; position: relative; transform: none !important; }
