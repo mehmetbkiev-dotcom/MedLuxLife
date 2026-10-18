@@ -624,3 +624,6 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
   - C = white cards with a gold top edge and the icon circle floating over the edge.
   - CSS in `assets/previews/quickfacts_option_A/B/C.css`; screenshots `deliverables/quickfacts_option_A/B/C.jpg`. Waiting for her choice.
 - 2026-10-18 – Anna chose C for Quick facts → LIVE (TREATMENT-DETAIL): white cards with a gold top edge, the icon in a gold circle sitting on the edge, gold labels, navy values; 5 in a row on laptops, 2 + 1 on phones. Screenshots: `deliverables/quickfacts_C_live.jpg`, `mommy_makeover_laptop.jpg`, `mommy_makeover_phone.jpg`.
+- 2026-10-18 – Anna APPROVED the Mommy Makeover detail page (2293). The Plastic Surgery card now has "Learn more →" (class medlux-more, like the hub cards) linking to it; tested by clicking. Backup: `backups/wp/page263_before_mommy_link.json`. Screenshot: `deliverables/plastic_mommy_card_link.jpg`.
+  - Still open: the exact days in Türkiye from the clinic.
+  - The same template can be used for other treatments (`tools/build_mommy.py` as the pattern; CSS classes in TREATMENT-DETAIL; clone the parent's banner rules for every new page ID).
