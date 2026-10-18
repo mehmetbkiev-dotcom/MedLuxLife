@@ -1,0 +1,44 @@
+/* >>> TREATMENT-DETAIL START: treatment detail pages (first: Mommy Makeover 2293, sample for Anna 2026-10-18). Title banner and icon cloned from the parent page (Plastic Surgery 263); "At a glance" facts, centred icon cards, "How it works" list with circles and arrows (as on Travel), recovery timeline */
+.page-id-2293 main > .ext-hero-section .wp-block-cover::before { content: "" !important; position: absolute !important; z-index: 3 !important; top: 50% !important; right: max(6vw, calc((100vw - 1200px) / 2)) !important; left: auto !important; bottom: auto !important; transform: translateY(-50%); width: clamp(110px, 13vw, 180px) !important; height: clamp(96px, 11.4vw, 158px) !important; background: url("https://medluxlife.de/wp-content/uploads/2026/10/medluxlife-icon-plastic-surgery-line.png") center / contain no-repeat !important; opacity: 1 !important; filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.55)); pointer-events: none; }
+body.page-id-2293 main > .ext-hero-section .wp-block-cover { min-height: 0 !important; padding-top: 16px !important; padding-bottom: 16px !important; background: radial-gradient(ellipse at 50% 0%, #2a2540 0%, #16141f 70%) !important; border-top: 2px solid #d4a24c; border-bottom: 1px solid rgba(212, 162, 76, 0.6); }
+body.page-id-2293 main > .ext-hero-section .wp-block-cover .wp-block-cover__image-background { display: none !important; }
+body.page-id-2293 main > .ext-hero-section .wp-block-cover .wp-block-cover__background, body.page-id-2293 main > .ext-hero-section .wp-block-cover::after { display: none !important; }
+body.page-id-2293 main > .ext-hero-section .wp-block-cover .wp-block-post-title { text-align: center !important; margin-left: auto !important; margin-right: auto !important; }
+body.page-id-2293 main > .ext-hero-section .wp-block-cover::before { width: clamp(56px, 5.2vw, 72px) !important; height: clamp(48px, 4.6vw, 64px) !important; filter: none !important; }
+@media (max-width: 600px) { body.page-id-2293 main > .ext-hero-section .wp-block-cover { padding-top: 14px !important; padding-bottom: 14px !important; } }
+@media (max-width: 600px) { body.page-id-2293 main > .ext-hero-section .wp-block-cover .wp-block-post-title { padding-left: 44px; padding-right: 44px !important; } }
+@media (max-width: 600px) { body.page-id-2293 main > .ext-hero-section .wp-block-cover::before { width: 40px !important; height: 35px !important; top: 50% !important; transform: translateY(-50%) !important; } }
+/* At a glance */
+.medlux-facts-sec > h2, .medlux-facts-sec ~ .medlux-section > h2 { text-align: center; }
+.medlux-facts { display: grid !important; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 20px !important; }
+.medlux-fact { background: #faf7f1; border: 1px solid rgba(212, 162, 76, 0.45); border-radius: 14px; padding: 18px 14px !important; text-align: center; margin: 0 !important; }
+.medlux-fact .medlux-fact-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #b8862e; margin: 0 0 6px !important; text-align: center !important; }
+.medlux-fact .medlux-fact-value { font-family: "Cormorant Garamond", serif; font-weight: 600; font-size: 1.2rem; line-height: 1.25; color: #0b0620; margin: 0 !important; text-align: center !important; }
+.medlux-facts-note { text-align: center !important; font-size: 0.9rem; font-style: italic; color: #6b6577; margin-top: 14px !important; }
+@media (max-width: 900px) { .medlux-facts { grid-template-columns: repeat(2, 1fr); } .medlux-fact:last-child { grid-column: 1 / -1; } }
+/* centred cards with short texts (Anna's choice): icon or label, title and text in the middle */
+.medlux-centered-cards .medlux-card { text-align: center; }
+.medlux-centered-cards .medlux-card p { text-align: center !important; text-align-last: center; }
+.medlux-centered-cards .medlux-card .medlux-card-icon { margin-left: auto !important; margin-right: auto !important; }
+.medlux-centered-cards .medlux-card .medlux-card-icon img { margin: 0 auto; display: block; }
+.medlux-timeline .medlux-time-label { font-family: "Cormorant Garamond", serif; font-weight: 600; font-size: 1.35rem; color: #0b0620; margin: 0 0 6px !important; }
+/* "How it works" as a list with circles and arrows (same look as the Travel pages) */
+.medlux-steps--list { display: block !important; max-width: 760px; margin-left: auto !important; margin-right: auto !important; }
+.medlux-steps--list .medlux-card { background: transparent !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; padding: 22px 0 22px 84px !important; margin: 0 !important; text-align: left !important; position: relative; transform: none !important; }
+.medlux-steps--list .medlux-card:hover { transform: none !important; box-shadow: none !important; }
+.medlux-steps--list .medlux-card h3 { margin: 0 !important; text-align: left !important; }
+.medlux-steps--list .medlux-card p { text-align: justify; -webkit-hyphens: auto; hyphens: auto; margin-top: 6px !important; }
+.medlux-steps--list .medlux-step-no { position: absolute; left: 0; top: 18px; display: flex !important; align-items: center; justify-content: center; width: 56px; height: 56px; border: 1.5px solid #d4a24c; border-radius: 50%; background: #fff; font-family: "Cormorant Garamond", serif; font-weight: 600; font-size: 1.7rem !important; line-height: 1; color: inherit; font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; margin: 0 !important; }
+.medlux-steps--list .medlux-card:not(:last-child)::after { content: ""; position: absolute; left: 27.5px; top: 80px; bottom: -14px; width: 1px; background: rgba(212, 162, 76, 0.7); }
+.medlux-steps--list .medlux-card:not(:last-child) p::after { content: ""; position: absolute; left: 24px; bottom: -13px; width: 7px; height: 7px; border-right: 1.5px solid #d4a24c; border-bottom: 1.5px solid #d4a24c; transform: rotate(45deg); }
+@media (max-width: 560px) {
+  .medlux-steps--list .medlux-card { padding-left: 68px !important; }
+  .medlux-steps--list .medlux-step-no { width: 48px; height: 48px; font-size: 1.5rem !important; }
+  .medlux-steps--list .medlux-card:not(:last-child)::after { left: 23.5px; top: 72px; }
+  .medlux-steps--list .medlux-card:not(:last-child) p::after { left: 20px; }
+}
+/* "What it can include": 4 cards in one row on laptops, 2 on tablets, 1 on phones (no lonely 4th card) */
+.medlux-centered-cards:not(.medlux-timeline) { grid-template-columns: repeat(4, 1fr) !important; }
+@media (max-width: 1000px) { .medlux-centered-cards:not(.medlux-timeline) { grid-template-columns: repeat(2, 1fr) !important; } }
+@media (max-width: 560px) { .medlux-centered-cards:not(.medlux-timeline) { grid-template-columns: 1fr !important; } }
+/* <<< TREATMENT-DETAIL END */

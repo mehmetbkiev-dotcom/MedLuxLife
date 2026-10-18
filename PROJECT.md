@@ -572,3 +572,26 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
   - the 12 rewritten department intros;
   - the Contact FAQ and form hint;
   - the "English" label in the language panel.
+
+### 2026-10-18 – Treatment detail pages: SAMPLE "Mommy Makeover" (Anna) – live but not linked yet
+- Anna showed the partner clinic's treatment page. The environment network now allows celyxmed.com / www.celyxmed.com.
+  - Their structure: intro, surgeon, tabs (what / who / how / results), "why us", testimonials, how it is performed, after the operation, free online consultation, FAQ; before/after in a separate section; no prices.
+  - We use only general facts in our own words: general anaesthesia, discharge after 1–2 days, daily activities after 2–4 weeks, final result after 6–12 months.
+  - We leave out (HWG + our rules): testimonials, before/after, "10,000 successful procedures", "top specialists", result promises, doctor and clinic names. Nothing is copied.
+- New page 2293 "Mommy Makeover" (child of Plastic Surgery 263, template page-with-title): /health/clinical-treatments/plastic-surgery/mommy-makeover/. Built by `tools/build_mommy.py` → `content/mommy_makeover.html`. Sections:
+  1. Intro + photo (media 1412).
+  2. "At a glance": 5 fact tiles; Stay in Türkiye = "Planned individually with the clinic" until the clinic confirms a number.
+  3. "What it can include": 4 centred icon cards.
+  4. "Who it may be suitable for" (framed note).
+  5. "How it works with MedLuxLife": 5 steps, circles and arrows; documents only to the doctor.
+  6. "Recovery step by step": first days / weeks 2–4 / months 6–12.
+  7. FAQ with 5 closed questions.
+  8. CTA + disclaimer.
+- CSS block TREATMENT-DETAIL (`assets/treatment_detail.css`):
+  - the parent's title banner and icon, cloned for page 2293;
+  - reusable classes `.medlux-facts`, `.medlux-centered-cards`, `.medlux-steps--list`, `.medlux-timeline`.
+- Screenshots: `deliverables/mommy_makeover_laptop.jpg`, `deliverables/mommy_makeover_phone.jpg`.
+- Waiting for Anna:
+  - approval;
+  - after approval, link the Plastic Surgery card ("Learn more →");
+  - the number of days in Türkiye, from the clinic.
