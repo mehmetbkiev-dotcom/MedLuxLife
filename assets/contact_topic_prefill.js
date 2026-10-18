@@ -17,6 +17,12 @@
   var withTopic = topic ? hubs.indexOf(rest) === -1 : false;
   // greeting + topic in the language of the page
   var lang = (document.documentElement.lang || 'en').slice(0, 2).toLowerCase();
+  // the two main hubs: a natural phrase instead of the bare title (used for WhatsApp only)
+  var hubName = {
+    en: ['a treatment', 'travel planning'], de: ['eine Behandlung', 'die Organisation einer Reise'],
+    tr: ['tedavi', 'seyahat organizasyonu'], uk: ['лікування', 'організація подорожі'], ru: ['лечение', 'организация поездки']
+  };
+  if (rest === '') topic = (hubName[lang] || hubName.en)[subject === 'Travel' ? 1 : 0];
   var texts = {
     en: ['Hello,', 'I am interested in ' + topic + '.'],
     de: ['Guten Tag,', 'ich interessiere mich für ' + topic + '.'],
@@ -32,5 +38,11 @@
     u.searchParams.set('your-subject', subject);
     if (withTopic) u.searchParams.set('msg', message);
     links[i].href = u.toString();
+  }
+  // WhatsApp buttons next to the consultation button: the same greeting + topic as a ready message
+  var wa = document.querySelectorAll('main a[href*="wa.me/"]');
+  var waText = topic ? t[0] + '\n' + t[1] : t[0];
+  for (var j = 0; wa.length > j; j++) {
+    wa[j].href = wa[j].href.split('?')[0] + '?text=' + encodeURIComponent(waText);
   }
 })();
