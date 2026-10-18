@@ -1,22 +1,90 @@
 // MedLuxLife: link previews (WhatsApp, Viber, Telegram, Facebook …) – page title, a short text about us and the branded navy image (media 2069)
+// On /de/ and /tr/ the title and description come from the reviewed TranslatePress translations (the free plugin does not translate <title> or meta tags).
+function medlux_meta_lang() {
+	global $TRP_LANGUAGE;
+	$s = get_option( 'trp_settings' );
+	$default = isset( $s['default-language'] ) ? $s['default-language'] : 'en_GB';
+	return ( ! empty( $TRP_LANGUAGE ) && $TRP_LANGUAGE !== $default ) ? $TRP_LANGUAGE : '';
+}
+function medlux_meta_tr( $s ) {
+	global $wpdb;
+	static $cache = array();
+	$lang = medlux_meta_lang();
+	$s    = (string) $s;
+	if ( '' === $lang || '' === trim( $s ) ) {
+		return $s;
+	}
+	$t = $wpdb->prefix . 'trp_dictionary_en_gb_' . strtolower( $lang );
+	if ( ! isset( $cache[ $t ][ $s ] ) ) {
+		$v = $wpdb->get_var( $wpdb->prepare( "SELECT translated FROM `$t` WHERE original = %s AND status = 2 AND translated <> '' LIMIT 1", $s ) );
+		$cache[ $t ][ $s ] = $v ? $v : null;
+	}
+	return $cache[ $t ][ $s ];
+}
+// texts that are not on any page
+function medlux_meta_fixed( $key, $en ) {
+	$fixed = array(
+		'de_DE' => array(
+			'intro'   => 'Medizinische Behandlungen und Reisen an einem Ort für Sie geplant – Fachärzte, Hotels, Flüge und Flughafentransfers, mit einer persönlichen Ansprechperson, die Ihre Sprache spricht.',
+			'tagline' => 'Gesundheit · Tourismus · Erlebnis',
+		),
+		'tr_TR' => array(
+			'intro'   => 'Tıbbi tedaviler ve seyahat, sizin için tek bir yerde planlanır – uzman hekimler, oteller, uçuşlar ve havalimanı transferleri, sizin dilinizi konuşan kişisel bir koordinatörle.',
+			'tagline' => 'Sağlık · Turizm · Deneyim',
+		),
+	);
+	$lang = medlux_meta_lang();
+	return isset( $fixed[ $lang ][ $key ] ) ? $fixed[ $lang ][ $key ] : $en;
+}
+// browser tab title
+add_filter( 'document_title_parts', function ( $parts ) {
+	if ( '' === medlux_meta_lang() ) {
+		return $parts;
+	}
+	if ( isset( $parts['title'] ) ) {
+		$t = medlux_meta_tr( $parts['title'] );
+		if ( $t ) {
+			$parts['title'] = $t;
+		}
+	}
+	if ( isset( $parts['tagline'] ) ) {
+		$parts['tagline'] = medlux_meta_fixed( 'tagline', $parts['tagline'] );
+	}
+	return $parts;
+}, 20 );
 add_action( 'wp_head', function () {
 	if ( is_admin() || is_feed() ) {
 		return;
 	}
 	$site  = get_bloginfo( 'name' );
-	$intro = 'Medical treatments and travel planned for you in one place – specialists, hotels, flights and airport transfers, with a personal coordinator who speaks your language.';
+	$intro = medlux_meta_fixed( 'intro', 'Medical treatments and travel planned for you in one place – specialists, hotels, flights and airport transfers, with a personal coordinator who speaks your language.' );
 	$title = wp_get_document_title();
 	$desc  = $intro;
 	$url   = home_url( '/' );
 	if ( is_front_page() ) {
-		$title = $site . ' – ' . get_bloginfo( 'description' );
+		$title = $site . ' – ' . medlux_meta_fixed( 'tagline', get_bloginfo( 'description' ) );
 	} elseif ( is_singular() ) {
 		$post  = get_queried_object();
-		$title = get_the_title( $post ) . ' – ' . $site;
+		$name  = get_the_title( $post );
+		$tname = medlux_meta_tr( $name );
+		$title = html_entity_decode( $tname ? $tname : $name, ENT_QUOTES, 'UTF-8' ) . ' – ' . $site;
+		$lang  = medlux_meta_lang();
 		// the page's own excerpt, otherwise its first real paragraph (at least 80 characters, so phone numbers or short labels are skipped)
 		$text = has_excerpt( $post ) ? get_the_excerpt( $post ) : '';
+		if ( '' !== $text && '' !== $lang ) {
+			$tx   = medlux_meta_tr( $text );
+			$text = $tx ? $tx : '';
+		}
 		if ( '' === $text && preg_match_all( '#<p[^>]*>(.*?)</p>#s', strip_shortcodes( $post->post_content ), $m ) ) {
 			foreach ( $m[1] as $para ) {
+				if ( '' !== $lang ) {
+					// the translated paragraph; untranslated ones are skipped
+					$tp = medlux_meta_tr( wptexturize( trim( $para ) ) );
+					if ( ! $tp ) {
+						continue;
+					}
+					$para = $tp;
+				}
 				$para = trim( preg_replace( '/\s+/', ' ', html_entity_decode( wp_strip_all_tags( $para ), ENT_QUOTES, 'UTF-8' ) ) );
 				if ( strlen( $para ) >= 80 ) {
 					$text = $para;
@@ -33,7 +101,8 @@ add_action( 'wp_head', function () {
 			25 => 'All your travel logistics sorted, so you can simply relax and enjoy.',
 		);
 		if ( isset( $fixed[ $post->ID ] ) ) {
-			$desc = $fixed[ $post->ID ];
+			$fx   = medlux_meta_tr( $fixed[ $post->ID ] );
+			$desc = ( '' === $lang ) ? $fixed[ $post->ID ] : ( $fx ? $fx : $intro );
 		}
 		$url = get_permalink( $post );
 	}

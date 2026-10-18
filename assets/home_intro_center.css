@@ -1,0 +1,3 @@
+/* >>> INTRO-CENTER START: home "Elevate…" intro under the centred heading is centred, not justified (the theme balances the lines, and justify then stretched the first German line) */
+body.home main .wp-block-post-content > section:has(.ext-card-stacked) .ext-section-intro p { text-align: center !important; text-align-last: center !important; }
+/* <<< INTRO-CENTER END */

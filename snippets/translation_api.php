@@ -37,7 +37,21 @@ add_action( 'rest_api_init', function () {
 			return array(
 				'table' => $t,
 				'total' => (int) $wpdb->get_var( "SELECT COUNT(*) FROM `$t` WHERE $where" ),
-				'rows'  => $wpdb->get_results( "SELECT id, original, translated, status, block_type FROM `$t` WHERE $where ORDER BY id LIMIT $offset, $limit", ARRAY_A ),
+				'rows'  => $wpdb->get_results( "SELECT id, original, translated, status, block_type, original_id FROM `$t` WHERE $where ORDER BY id LIMIT $offset, $limit", ARRAY_A ),
+			);
+		},
+	) );
+	register_rest_route( 'medlux/v1', '/trp/meta', array(
+		'methods'             => 'GET',
+		'permission_callback' => $perm,
+		'callback'            => function ( $r ) {
+			global $wpdb;
+			$m = $wpdb->prefix . 'trp_original_meta';
+			$offset = max( 0, intval( $r['offset'] ) );
+			$limit  = min( 5000, max( 1, intval( $r['limit'] ? $r['limit'] : 1000 ) ) );
+			return array(
+				'keys' => $wpdb->get_results( "SELECT meta_key, COUNT(*) n FROM `$m` GROUP BY meta_key", ARRAY_A ),
+				'rows' => $wpdb->get_results( "SELECT original_id, meta_key, meta_value FROM `$m` ORDER BY meta_id LIMIT $offset, $limit", ARRAY_A ),
 			);
 		},
 	) );
@@ -52,6 +66,31 @@ add_action( 'rest_api_init', function () {
 				$n += (int) $wpdb->update( $t, array( 'translated' => (string) $it['translated'], 'status' => 2 ), array( 'id' => intval( $it['id'] ) ) );
 			}
 			return array( 'updated' => $n );
+		},
+	) );
+	register_rest_route( 'medlux/v1', '/trp/find', array(
+		'methods'             => 'GET',
+		'permission_callback' => $perm,
+		'callback'            => function ( $r ) {
+			global $wpdb;
+			$q   = '%' . $wpdb->esc_like( (string) $r['q'] ) . '%';
+			$out = array();
+			foreach ( $wpdb->get_col( "SHOW TABLES LIKE '{$wpdb->prefix}trp\\_%'" ) as $t ) {
+				$cols = $wpdb->get_col( "SHOW COLUMNS FROM `$t`" );
+				$like = array();
+				foreach ( array( 'original', 'translated', 'meta_value' ) as $col ) {
+					if ( in_array( $col, $cols, true ) ) {
+						$like[] = $wpdb->prepare( "`$col` LIKE %s", $q );
+					}
+				}
+				if ( $like ) {
+					$rows = $wpdb->get_results( "SELECT * FROM `$t` WHERE " . implode( ' OR ', $like ) . ' LIMIT 20', ARRAY_A );
+					if ( $rows ) {
+						$out[ $t ] = $rows;
+					}
+				}
+			}
+			return $out;
 		},
 	) );
 } );
