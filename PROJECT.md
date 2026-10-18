@@ -595,3 +595,7 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
   - approval;
   - after approval, link the Plastic Surgery card ("Learn more →");
   - the number of days in Türkiye, from the clinic.
+- 2026-10-18 – Mommy Makeover sample v2 (Anna):
+  - new section "How the operation is performed", 2 × 2 icon cards: consultation with the surgeon / anaesthesia and preparation / the combined procedures / closure and first care. The texts are justified with the last line centred (class `.medlux-stages`; based on the stages on the clinic's page, in our own words, no durations invented).
+  - "At a glance" → "Key facts" (a more common phrase).
+  - Backup before: `backups/wp/page2293_before_operation_stages.json`. Screenshots: `deliverables/mommy_operation_stages.jpg`, `mommy_makeover_laptop.jpg`, `mommy_makeover_phone.jpg`.

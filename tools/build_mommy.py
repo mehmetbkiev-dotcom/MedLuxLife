@@ -16,6 +16,10 @@ ICON = {
     'lift': svg('<circle cx="24" cy="24" r="18"/><path d="M24 33V15M17 21l7-7 7 7"/>'),
     'lipo': svg('<path d="M24 6s-12 14-12 22a12 12 0 0 0 24 0C36 20 24 6 24 6z"/>'),
     'lotus': svg('<path d="M24 9c5 6 5 14 0 23-5-9-5-17 0-23z"/><path d="M24 32c-8 0-14-5-16-12 7 0 12 4 16 12z"/><path d="M24 32c8 0 14-5 16-12-7 0-12 4-16 12z"/><path d="M10 39h28"/>'),
+    'consult': svg('<circle cx="20" cy="18" r="8"/><path d="M4 42c0-8.8 7.2-15 16-15s16 6.2 16 15"/><path d="M31 4h13a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-8l-4 3v-3h-1a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/>'),
+    'moon': svg('<path d="M30 6a18 18 0 1 0 12 30A15 15 0 0 1 30 6z"/>'),
+    'combine': svg('<circle cx="18" cy="19" r="10"/><circle cx="30" cy="19" r="10"/><circle cx="24" cy="30" r="10"/>'),
+    'care': svg('<path d="M24 41S6 30.5 6 17.5A9.5 9.5 0 0 1 24 12a9.5 9.5 0 0 1 18 5.5C42 30.5 24 41 24 41z"/>'),
 }
 
 def p(t, cls=None):
@@ -66,7 +70,7 @@ def fact(label, value):
     return group('medlux-fact', [p(label, 'medlux-fact-label'), p(value, 'medlux-fact-value')])
 
 facts = group('medlux-section medlux-facts-sec', [
-    h('At a glance'),
+    h('Key facts'),
     group('medlux-facts', [
         fact('Anaesthesia', 'General anaesthesia'),
         fact('Hospital stay', 'Usually 1–2 nights'),
@@ -94,6 +98,16 @@ suitable = group('medlux-section medlux-good-to-know', [
         'You are in good general health.',
         'You would like to address several changes after pregnancy at the same time.',
         'Whether the procedure is suitable for you is decided by the surgeon after a personal assessment.']),
+])
+
+performed = group('medlux-section', [
+    h('How the operation is performed'),
+    group('medlux-treatment-grid medlux-centered-cards medlux-stages', [
+        group('medlux-card', [icon('consult'), h('Consultation with the surgeon', 3), p('Before the operation, the surgeon examines you in person, discusses your wishes and confirms the final plan – which procedures are combined.')]),
+        group('medlux-card', [icon('moon'), h('Anaesthesia and preparation', 3), p('On the day of surgery you receive general anaesthesia and sleep throughout the operation. The team marks and prepares the areas to be treated.')]),
+        group('medlux-card', [icon('combine'), h('The combined procedures', 3), p('The planned procedures – for example a tummy tuck, breast surgery and liposuction – are performed in one session. The duration depends on the combination.')]),
+        group('medlux-card', [icon('care'), h('Closure and first care', 3), p('The incisions are closed carefully and dressed. You are closely monitored in the first hours and usually stay in hospital for 1–2 nights.')]),
+    ], '{"type":"grid","minimumColumnWidth":"14rem"}'),
 ])
 
 def step(n, title, text):
@@ -141,5 +155,5 @@ cta = group('medlux-cta', [
     p('The information on this page is for general guidance only and does not replace a medical consultation. Suitability for any treatment is assessed individually by a qualified doctor.', 'medlux-disclaimer'),
 ])
 
-(ROOT / 'content/mommy_makeover.html').write_text('\n\n'.join([intro, facts, include, suitable, how, recovery, faqs, cta]) + '\n')
+(ROOT / 'content/mommy_makeover.html').write_text('\n\n'.join([intro, facts, include, suitable, performed, how, recovery, faqs, cta]) + '\n')
 print('written', len((ROOT / 'content/mommy_makeover.html').read_text()))

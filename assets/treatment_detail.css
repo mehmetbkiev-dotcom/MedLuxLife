@@ -41,4 +41,8 @@ body.page-id-2293 main > .ext-hero-section .wp-block-cover::before { width: clam
 .medlux-centered-cards:not(.medlux-timeline) { grid-template-columns: repeat(4, 1fr) !important; }
 @media (max-width: 1000px) { .medlux-centered-cards:not(.medlux-timeline) { grid-template-columns: repeat(2, 1fr) !important; } }
 @media (max-width: 560px) { .medlux-centered-cards:not(.medlux-timeline) { grid-template-columns: 1fr !important; } }
+/* "How the operation is performed": longer texts → 2 × 2 cards, text justified with the last line centred */
+.medlux-centered-cards.medlux-stages { grid-template-columns: repeat(2, 1fr) !important; }
+@media (max-width: 560px) { .medlux-centered-cards.medlux-stages { grid-template-columns: 1fr !important; } }
+.medlux-centered-cards.medlux-stages .medlux-card p { text-align: justify !important; text-align-last: center; -webkit-hyphens: auto; hyphens: auto; }
 /* <<< TREATMENT-DETAIL END */
