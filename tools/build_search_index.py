@@ -17,7 +17,8 @@ for it in raw['items']:
     chain = []; p = it['parent']
     while p and str(p) in pages:
         chain.insert(0, p); p = pages[str(p)]['parent']
-    cards = [c for c in dict.fromkeys(it['en']['cards']) if cnt[c] <= 2 and not re.match(r'^\d+\.', c) and len(c) <= 60]
+    cards = [c for c in dict.fromkeys(it['en']['cards']) if cnt[c] <= 2 and not re.match(r'^\d+\.', c) and len(c) <= 60
+             and '?' not in c and not c.endswith('+')]   # no FAQ questions (accordion headings end with the toggle '+')
     e = {'u': it['path'],
          't': {l: tr(pid, l) for l in ('en',) + L},
          'b': {l: ' › '.join(tr(c, l) for c in chain) for l in ('en',) + L},
