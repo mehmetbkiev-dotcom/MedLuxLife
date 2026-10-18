@@ -611,3 +611,10 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
   - On detail pages (not the hubs) the links also get `&your-message=I am interested in: <page title>.` → the form opens with the subject selected and that line in the message. Tested on Mommy Makeover, Dental and Oral Health and Holiday Packages.
   - Backups: `backups/wp/cf7_589_before_topic_prefill.json`, `footer_tp_before_topic_prefill.json`. Screenshot: `deliverables/contact_prefilled.jpg`.
 - 2026-10-18 – Quick facts too dark (Anna) → light band: cream gradient, gold border, icons in gold circles on white, gold labels, navy values. Screenshot: `deliverables/mommy_quickfacts_light.jpg`.
+- 2026-10-18 – Mommy Makeover (Anna):
+  - Quick facts in a lighter, softer midnight blue: gradient #423c62 → #2f2a4b, gold icons in gold circles, gold labels, white values. The navy (too dark) and cream (not liked) versions were dropped.
+  - Anaesthesia icon: the moon became a simple syringe pictogram (no skin, no cross shapes), in Quick facts and in "Anaesthesia and preparation".
+  - Screenshot: `deliverables/mommy_quickfacts_midnight.jpg`. Backup: `backups/wp/page2293_before_syringe.json`.
+- 2026-10-18 – The prefilled message now starts with a greeting in the page language, on its own line, plus an empty line to continue: EN "Hello, / I am interested in X.", DE "Guten Tag, / ich interessiere mich für X.", TR "Merhaba, / X ile ilgileniyorum.", UK "Добрий день, / мене цікавить X.", RU "Здравствуйте, / меня интересует X.".
+  - CF7 strips line breaks from GET values, so the message travels as `?msg=` and the same footer script fills the empty message field on /contact/. The subject still uses CF7 `default:get`.
+  - Tested by really clicking the CTA (Mommy Makeover, Airport Transfer). Backup: `backups/wp/footer_tp_before_prefill_greeting.json`. Screenshot: `deliverables/contact_prefilled.jpg`.

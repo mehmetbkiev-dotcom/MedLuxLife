@@ -17,7 +17,7 @@ ICON = {
     'lipo': svg('<path d="M24 6s-12 14-12 22a12 12 0 0 0 24 0C36 20 24 6 24 6z"/>'),
     'lotus': svg('<path d="M24 9c5 6 5 14 0 23-5-9-5-17 0-23z"/><path d="M24 32c-8 0-14-5-16-12 7 0 12 4 16 12z"/><path d="M24 32c8 0 14-5 16-12-7 0-12 4-16 12z"/><path d="M10 39h28"/>'),
     'consult': svg('<circle cx="20" cy="18" r="8"/><path d="M4 42c0-8.8 7.2-15 16-15s16 6.2 16 15"/><path d="M31 4h13a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-8l-4 3v-3h-1a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/>'),
-    'moon': svg('<path d="M30 6a18 18 0 1 0 12 30A15 15 0 0 1 30 6z"/>'),
+    'moon': svg('<g transform="rotate(-45 24 24)"><path d="M3 24h9"/><rect x="12" y="19" width="21" height="10" rx="2"/><path d="M17 19v4M22 19v4M27 19v4"/><path d="M33 24h7"/><path d="M40 18v12"/></g>'),
     'combine': svg('<circle cx="18" cy="19" r="10"/><circle cx="30" cy="19" r="10"/><circle cx="24" cy="30" r="10"/>'),
     'care': svg('<path d="M24 41S6 30.5 6 17.5A9.5 9.5 0 0 1 24 12a9.5 9.5 0 0 1 18 5.5C42 30.5 24 41 24 41z"/>'),
     'bed': svg('<path d="M4 38V12"/><path d="M4 30h40v8"/><path d="M44 38V26a6 6 0 0 0-6-6H20v10"/><circle cx="12" cy="24" r="4"/>'),
