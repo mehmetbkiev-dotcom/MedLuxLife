@@ -1,0 +1,184 @@
+{
+ "Mommy Makeover": {
+  "img": "https://medluxlife.de/wp-content/uploads/2026/10/medizinische-voruntersuchung-mit-korpermarkierungen-opt-1.jpg",
+  "alt": "Abdomen marked before a mommy makeover consultation",
+  "img_id": 1412,
+  "p": [
+   "A combination of procedures that addresses changes after pregnancy and childbirth, tailored to your needs. It may include:"
+  ],
+  "li": [
+   "Tummy tuck to remove excess skin and tighten the abdominal muscles",
+   "Breast lift or augmentation to restore shape and volume",
+   "Liposuction for stubborn fat on the abdomen, hips or thighs",
+   "Intimate rejuvenation, such as labiaplasty"
+  ],
+  "li_html": [
+   "<strong>Tummy tuck</strong> to remove excess skin and tighten the abdominal muscles",
+   "<strong>Breast lift or augmentation</strong> to restore shape and volume",
+   "<strong>Liposuction</strong> for stubborn fat on the abdomen, hips or thighs",
+   "<strong>Intimate rejuvenation</strong>, such as labiaplasty"
+  ]
+ },
+ "Rhinoplasty": {
+  "img": "https://medluxlife.de/wp-content/uploads/2026/10/rhinoplastik-beratung-mit-nasenmarkierungen-opt-1.jpg",
+  "alt": "Surgeon marking the nose during a rhinoplasty consultation",
+  "img_id": 1413,
+  "p": [
+   "Reshapes the nose to improve facial balance and, where needed, breathing."
+  ],
+  "li": [
+   "Cosmetic rhinoplasty: changes size, tip shape or nostrils, or corrects asymmetry",
+   "Functional rhinoplasty (septorhinoplasty): improves breathing, for example with a deviated septum"
+  ],
+  "li_html": [
+   "<strong>Cosmetic rhinoplasty:</strong> changes size, tip shape or nostrils, or corrects asymmetry",
+   "<strong>Functional rhinoplasty (septorhinoplasty):</strong> improves breathing, for example with a deviated septum"
+  ]
+ },
+ "Abdominoplasty (Tummy Tuck)": {
+  "img": "https://medluxlife.de/wp-content/uploads/2026/10/chirurgische-markierungen-am-bauch-opt-1.jpg",
+  "alt": "Surgeon marking the abdomen before a tummy tuck",
+  "img_id": 1414,
+  "p": [
+   "Removes excess skin and fat from the abdomen and tightens the underlying muscles for a flatter, firmer contour."
+  ],
+  "li": [
+   "Full abdominoplasty: an incision from hip to hip, often with repositioning of the navel",
+   "Mini abdominoplasty: a shorter incision for minor excess below the navel"
+  ],
+  "li_html": [
+   "<strong>Full abdominoplasty:</strong> an incision from hip to hip, often with repositioning of the navel",
+   "<strong>Mini abdominoplasty:</strong> a shorter incision for minor excess below the navel"
+  ]
+ },
+ "Breast Augmentation": {
+  "img": "https://medluxlife.de/wp-content/uploads/2026/10/beratung-zu-brustimplantaten-opt-1.jpg",
+  "alt": "Surgeon showing breast implant options during a consultation",
+  "img_id": 1415,
+  "p": [
+   "Increases breast size and volume or restores volume lost after weight changes or pregnancy, using silicone implants or your own fat. Implant position (under or over the muscle, or dual plane) is chosen according to your anatomy and goals."
+  ],
+  "li": [],
+  "li_html": []
+ },
+ "Breast Reduction": {
+  "img": "https://medluxlife.de/wp-content/uploads/2026/10/gemini-generated-image-i7lwrqi7lwrqi7lw-opt.jpg",
+  "alt": "Woman in a sports top, breast reduction consultation",
+  "img_id": 1416,
+  "p": [
+   "Reduces the size and weight of very large breasts. It can relieve back and neck pain, restricted movement and skin irritation, and creates a more balanced silhouette."
+  ],
+  "li": [],
+  "li_html": []
+ },
+ "Gynecomastia Surgery": {
+  "img": "https://medluxlife.de/wp-content/uploads/2026/10/chirurgische-brustmarkierung-im-op-opt-1.jpg",
+  "alt": "Surgeon marking the chest before gynecomastia surgery",
+  "img_id": 1417,
+  "p": [
+   "Male breast reduction removes excess glandular tissue and fat, using liposuction, direct excision or both, for a flatter, more masculine chest."
+  ],
+  "li": [],
+  "li_html": []
+ },
+ "Brachioplasty (Arm Lift)": {
+  "img": "https://medluxlife.de/wp-content/uploads/2026/10/gemini-generated-image-gibynhgibynhgiby-opt.jpg",
+  "alt": "Upper arm marked before an arm lift",
+  "img_id": 1306,
+  "p": [
+   "Removes loose skin and fat from the upper arms, often after major weight loss or with age, through an incision on the inner or back of the arm."
+  ],
+  "li": [],
+  "li_html": []
+ },
+ "Brazilian Butt Lift (BBL)": {
+  "img": "https://medluxlife.de/wp-content/uploads/2026/10/korperkonturierung-mit-fetttransfer-in-der-klinik-opt.jpg",
+  "alt": "Illustration of fat transfer areas for a Brazilian butt lift",
+  "img_id": 1418,
+  "p": [
+   "Fat is removed by liposuction from areas such as the abdomen or flanks, purified and transferred to the buttocks for more volume and a natural, lifted shape."
+  ],
+  "li": [],
+  "li_html": []
+ },
+ "Thigh Lift": {
+  "img": "https://medluxlife.de/wp-content/uploads/2026/10/gemini-generated-image-s2e1tys2e1tys2e1-opt.jpg",
+  "alt": "Legs relaxing on a beach lounger",
+  "img_id": 1419,
+  "p": [
+   "Removes excess skin and fat from the thighs and tightens the tissue for a smoother contour, typically after significant weight loss."
+  ],
+  "li": [],
+  "li_html": []
+ },
+ "Blepharoplasty (Eyelid Surgery)": {
+  "img": "https://medluxlife.de/wp-content/uploads/2026/10/klinische-blepharoplastik-markierung-am-auge-opt.jpg",
+  "alt": "Eyelid marked for blepharoplasty",
+  "img_id": 1307,
+  "p": [
+   "Corrects drooping upper eyelids and under-eye bags for a fresher, more youthful look. Upper eyelid surgery is usually done under local anaesthesia; lower eyelid surgery generally under general anaesthesia."
+  ],
+  "li": [],
+  "li_html": []
+ },
+ "Facelift": {
+  "img": "https://medluxlife.de/wp-content/uploads/2026/10/gemini-generated-image-a54yl8a54yl8a54y-opt.jpg",
+  "alt": "Surgeon marking the face for a facelift",
+  "img_id": 1420,
+  "p": [
+   "Reduces visible signs of ageing such as sagging skin and deep folds. Depending on your needs, the surgeon chooses a full, mini, mid-face or temporal lift."
+  ],
+  "li": [],
+  "li_html": []
+ },
+ "Buccal Fat Removal": {
+  "img": "https://medluxlife.de/wp-content/uploads/2026/10/medizinische-wangenkonturierung-mit-markierungen-opt.jpg",
+  "alt": "Cheek contour marked for buccal fat removal",
+  "img_id": 1308,
+  "p": [
+   "Reduces the fat pads in the lower cheeks through small incisions inside the mouth, for more sculpted cheeks and a defined jawline. Usually performed under local anaesthesia."
+  ],
+  "li": [],
+  "li_html": []
+ },
+ "Liposuction": {
+  "img": "https://medluxlife.de/wp-content/uploads/2026/10/liposuktion-beratung-mit-korpermarkierungen-opt.jpg",
+  "alt": "Doctor marking treatment areas before liposuction",
+  "img_id": 1421,
+  "p": [
+   "Removes stubborn fat deposits that do not respond to diet and exercise, for example on the abdomen, thighs, arms, back or waist, to sculpt the body contour."
+  ],
+  "li": [],
+  "li_html": []
+ },
+ "Breast Lift (Mastopexy)": {
+  "img": "https://medluxlife.de/wp-content/uploads/2026/10/medizinische-beratung-zur-brustplanung-opt.jpg",
+  "alt": "Surgeon explaining a breast lift plan with a 3D model",
+  "img_id": 1422,
+  "p": [
+   "Lifts and reshapes sagging breasts for a firmer, more youthful position. It can be combined with augmentation to add volume at the same time."
+  ],
+  "li": [],
+  "li_html": []
+ },
+ "Otoplasty (Ear Correction)": {
+  "img": "https://medluxlife.de/wp-content/uploads/2026/10/gemini-generated-image-qxu2efqxu2efqxu2-opt.jpg",
+  "alt": "Ear marked for otoplasty",
+  "img_id": 1423,
+  "p": [
+   "Reshapes or repositions prominent or asymmetric ears. Possible for adults and for children from about five years of age."
+  ],
+  "li": [],
+  "li_html": []
+ },
+ "Neck Lift": {
+  "img": "https://medluxlife.de/wp-content/uploads/2026/10/vorbereitung-fur-ein-halslifting-in-der-klinik-opt.jpg",
+  "alt": "Neck and jawline marked for a neck lift",
+  "img_id": 1309,
+  "p": [
+   "Tightens loose skin and reshapes the neck and jawline. Often combined with a facelift for a harmonious result."
+  ],
+  "li": [],
+  "li_html": []
+ }
+}

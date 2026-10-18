@@ -1,13 +1,13 @@
-/* >>> TREATMENT-DETAIL START: treatment detail pages (first: Mommy Makeover 2293, sample for Anna 2026-10-18). Title banner and icon cloned from the parent page (Plastic Surgery 263); "At a glance" facts, centred icon cards, "How it works" list with circles and arrows (as on Travel), recovery timeline */
-.page-id-2293 main > .ext-hero-section .wp-block-cover::before { content: "" !important; position: absolute !important; z-index: 3 !important; top: 50% !important; right: max(6vw, calc((100vw - 1200px) / 2)) !important; left: auto !important; bottom: auto !important; transform: translateY(-50%); width: clamp(110px, 13vw, 180px) !important; height: clamp(96px, 11.4vw, 158px) !important; background: url("https://medluxlife.de/wp-content/uploads/2026/10/medluxlife-icon-plastic-surgery-line.png") center / contain no-repeat !important; opacity: 1 !important; filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.55)); pointer-events: none; }
-body.page-id-2293 main > .ext-hero-section .wp-block-cover { min-height: 0 !important; padding-top: 16px !important; padding-bottom: 16px !important; background: radial-gradient(ellipse at 50% 0%, #2a2540 0%, #16141f 70%) !important; border-top: 2px solid #d4a24c; border-bottom: 1px solid rgba(212, 162, 76, 0.6); }
-body.page-id-2293 main > .ext-hero-section .wp-block-cover .wp-block-cover__image-background { display: none !important; }
-body.page-id-2293 main > .ext-hero-section .wp-block-cover .wp-block-cover__background, body.page-id-2293 main > .ext-hero-section .wp-block-cover::after { display: none !important; }
-body.page-id-2293 main > .ext-hero-section .wp-block-cover .wp-block-post-title { text-align: center !important; margin-left: auto !important; margin-right: auto !important; }
-body.page-id-2293 main > .ext-hero-section .wp-block-cover::before { width: clamp(56px, 5.2vw, 72px) !important; height: clamp(48px, 4.6vw, 64px) !important; filter: none !important; }
-@media (max-width: 600px) { body.page-id-2293 main > .ext-hero-section .wp-block-cover { padding-top: 14px !important; padding-bottom: 14px !important; } }
-@media (max-width: 600px) { body.page-id-2293 main > .ext-hero-section .wp-block-cover .wp-block-post-title { padding-left: 44px; padding-right: 44px !important; } }
-@media (max-width: 600px) { body.page-id-2293 main > .ext-hero-section .wp-block-cover::before { width: 40px !important; height: 35px !important; top: 50% !important; transform: translateY(-50%) !important; } }
+/* >>> TREATMENT-DETAIL START: treatment detail pages (first: Mommy Makeover 2293, sample for Anna 2026-10-18). Title banner and icon cloned from the parent page (Plastic Surgery 263) for all its child pages (body class parent-pageid-263); "At a glance" facts, centred icon cards, "How it works" list with circles and arrows (as on Travel), recovery timeline */
+.parent-pageid-263 main > .ext-hero-section .wp-block-cover::before { content: "" !important; position: absolute !important; z-index: 3 !important; top: 50% !important; right: max(6vw, calc((100vw - 1200px) / 2)) !important; left: auto !important; bottom: auto !important; transform: translateY(-50%); width: clamp(110px, 13vw, 180px) !important; height: clamp(96px, 11.4vw, 158px) !important; background: url("https://medluxlife.de/wp-content/uploads/2026/10/medluxlife-icon-plastic-surgery-line.png") center / contain no-repeat !important; opacity: 1 !important; filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.55)); pointer-events: none; }
+body.parent-pageid-263 main > .ext-hero-section .wp-block-cover { min-height: 0 !important; padding-top: 16px !important; padding-bottom: 16px !important; background: radial-gradient(ellipse at 50% 0%, #2a2540 0%, #16141f 70%) !important; border-top: 2px solid #d4a24c; border-bottom: 1px solid rgba(212, 162, 76, 0.6); }
+body.parent-pageid-263 main > .ext-hero-section .wp-block-cover .wp-block-cover__image-background { display: none !important; }
+body.parent-pageid-263 main > .ext-hero-section .wp-block-cover .wp-block-cover__background, body.parent-pageid-263 main > .ext-hero-section .wp-block-cover::after { display: none !important; }
+body.parent-pageid-263 main > .ext-hero-section .wp-block-cover .wp-block-post-title { text-align: center !important; margin-left: auto !important; margin-right: auto !important; }
+body.parent-pageid-263 main > .ext-hero-section .wp-block-cover::before { width: clamp(56px, 5.2vw, 72px) !important; height: clamp(48px, 4.6vw, 64px) !important; filter: none !important; }
+@media (max-width: 600px) { body.parent-pageid-263 main > .ext-hero-section .wp-block-cover { padding-top: 14px !important; padding-bottom: 14px !important; } }
+@media (max-width: 600px) { body.parent-pageid-263 main > .ext-hero-section .wp-block-cover .wp-block-post-title { padding-left: 44px; padding-right: 44px !important; } }
+@media (max-width: 600px) { body.parent-pageid-263 main > .ext-hero-section .wp-block-cover::before { width: 40px !important; height: 35px !important; top: 50% !important; transform: translateY(-50%) !important; } }
 /* Quick facts (Anna chose C): white cards with a gold top edge, the icon in a gold circle sitting on the edge, gold labels, navy values */
 .medlux-facts-sec > h2, .medlux-facts-sec ~ .medlux-section > h2 { text-align: center; }
 .medlux-facts { display: grid !important; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-top: 20px !important; padding: 34px 0 0 !important; }
@@ -57,4 +57,27 @@ body.page-id-2293 main > .ext-hero-section .wp-block-cover::before { width: clam
 .medlux-centered-cards.medlux-stages { grid-template-columns: repeat(2, 1fr) !important; }
 @media (max-width: 560px) { .medlux-centered-cards.medlux-stages { grid-template-columns: 1fr !important; } }
 .medlux-centered-cards.medlux-stages .medlux-card p { text-align: justify !important; text-align-last: center; -webkit-hyphens: auto; hyphens: auto; }
+/* grids with 2 or 3 option cards: no empty 4th column */
+.medlux-centered-cards.medlux-cols-2:not(.medlux-timeline) { grid-template-columns: repeat(2, 1fr) !important; max-width: 760px; margin-left: auto !important; margin-right: auto !important; }
+.medlux-centered-cards.medlux-cols-3:not(.medlux-timeline) { grid-template-columns: repeat(3, 1fr) !important; }
+@media (max-width: 760px) { .medlux-centered-cards.medlux-cols-3:not(.medlux-timeline) { grid-template-columns: 1fr !important; } }
+@media (max-width: 560px) { .medlux-centered-cards.medlux-cols-2:not(.medlux-timeline) { grid-template-columns: 1fr !important; } }
+/* banner icon per treatment page (generated by tools/build_treatment.py --icons) */
+body.page-id-2332 main > .ext-hero-section .wp-block-cover::before { background-image: url("https://medluxlife.de/wp-content/uploads/2026/10/medluxlife-icon-arm-lift-line.png") !important; }
+body.page-id-2333 main > .ext-hero-section .wp-block-cover::before { background-image: url("https://medluxlife.de/wp-content/uploads/2026/10/medluxlife-icon-brazilian-butt-lift-line.png") !important; }
+body.page-id-2328 main > .ext-hero-section .wp-block-cover::before { background-image: url("https://medluxlife.de/wp-content/uploads/2026/10/medluxlife-icon-breast-augmentation-line.png") !important; }
+body.page-id-2329 main > .ext-hero-section .wp-block-cover::before { background-image: url("https://medluxlife.de/wp-content/uploads/2026/10/medluxlife-icon-breast-lift-line.png") !important; }
+body.page-id-2330 main > .ext-hero-section .wp-block-cover::before { background-image: url("https://medluxlife.de/wp-content/uploads/2026/10/medluxlife-icon-breast-reduction-line.png") !important; }
+body.page-id-2337 main > .ext-hero-section .wp-block-cover::before { background-image: url("https://medluxlife.de/wp-content/uploads/2026/10/medluxlife-icon-buccal-fat-removal-line.png") !important; }
+body.page-id-2334 main > .ext-hero-section .wp-block-cover::before { background-image: url("https://medluxlife.de/wp-content/uploads/2026/10/medluxlife-icon-eyelid-surgery-line.png") !important; }
+body.page-id-2335 main > .ext-hero-section .wp-block-cover::before { background-image: url("https://medluxlife.de/wp-content/uploads/2026/10/medluxlife-icon-facelift-line.png") !important; }
+body.page-id-2331 main > .ext-hero-section .wp-block-cover::before { background-image: url("https://medluxlife.de/wp-content/uploads/2026/10/medluxlife-icon-gynecomastia-surgery-line.png") !important; }
+body.page-id-2327 main > .ext-hero-section .wp-block-cover::before { background-image: url("https://medluxlife.de/wp-content/uploads/2026/10/medluxlife-icon-liposuction-line.png") !important; }
+body.page-id-2293 main > .ext-hero-section .wp-block-cover::before { background-image: url("https://medluxlife.de/wp-content/uploads/2026/10/medluxlife-icon-mommy-makeover-line.png") !important; }
+body.page-id-2336 main > .ext-hero-section .wp-block-cover::before { background-image: url("https://medluxlife.de/wp-content/uploads/2026/10/medluxlife-icon-neck-lift-line.png") !important; }
+body.page-id-2338 main > .ext-hero-section .wp-block-cover::before { background-image: url("https://medluxlife.de/wp-content/uploads/2026/10/medluxlife-icon-otoplasty-line.png") !important; }
+body.page-id-263 main > .ext-hero-section .wp-block-cover::before { background-image: url("https://medluxlife.de/wp-content/uploads/2026/10/medluxlife-icon-plastic-surgery-body-line.png") !important; }
+body.page-id-2325 main > .ext-hero-section .wp-block-cover::before { background-image: url("https://medluxlife.de/wp-content/uploads/2026/10/medluxlife-icon-rhinoplasty-line.png") !important; }
+body.page-id-2326 main > .ext-hero-section .wp-block-cover::before { background-image: url("https://medluxlife.de/wp-content/uploads/2026/10/medluxlife-icon-tummy-tuck-line.png") !important; }
+/* end of banner icons */
 /* <<< TREATMENT-DETAIL END */
