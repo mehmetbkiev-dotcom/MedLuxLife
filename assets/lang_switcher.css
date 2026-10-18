@@ -5,4 +5,8 @@ header .trp-shortcode-overlay .trp-switcher-dropdown-list .trp-language-item { c
 header .trp-shortcode-overlay .trp-switcher-dropdown-list .trp-language-item .trp-language-item-name { color: inherit !important; }
 header .trp-shortcode-overlay .trp-switcher-dropdown-list .trp-language-item:hover,
 header .trp-shortcode-overlay .trp-switcher-dropdown-list .trp-language-item:focus-visible { background: rgba(212, 162, 76, 0.16) !important; color: #f2ac30 !important; }
+/* open panel: the current language is named like the others; "English (UK)" is shown as "English" (Anna, 2026-10-18) */
+header .trp-shortcode-overlay.is-open .trp-language-item__current .trp-language-item-name { display: inline !important; color: #f6f8fd !important; }
+header .trp-language-item__current:has(img[src*="/en_GB."]) .trp-language-item-name { font-size: 0 !important; }
+header .trp-language-item__current:has(img[src*="/en_GB."]) .trp-language-item-name::after { content: "English"; font-size: 14px; }
 /* <<< LANG-SWITCHER END */

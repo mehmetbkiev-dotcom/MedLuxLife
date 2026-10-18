@@ -31,7 +31,7 @@ header .trp-block-container .trp-shortcode-overlay.is-open { width: max-content 
   header .wp-block-group.alignwide > .wp-block-group.ext-nav-extras { padding-left: 0 !important; padding-right: 0 !important; margin-right: -20px !important; gap: 24px !important; }
   header .ext-nav-extras .medlux-header-cta { margin: 0 !important; }
   header .ext-nav-extras .medlux-header-search { margin-right: -20px; }
-  header .ext-nav-extras .trp-block-container { min-width: 97px; }
+  header .ext-nav-extras .trp-block-container { min-width: 99px; }
   header .trp-block-container .trp-shortcode-switcher__wrapper { width: fit-content; }
   header .trp-block-container .trp-language-item__current { padding-left: 0 !important; }
   header .trp-block-container .trp-current-language-item__wrapper { justify-content: flex-start !important; }

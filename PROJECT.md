@@ -554,3 +554,11 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
   - 82 pages updated. Backups: `backups/wp/before_online_consult/page<ID>.json` (+ `page23_before_medical_step1.json`). Screenshot: `deliverables/online_consultation_step.jpg`.
   - Rule: never ask people to send medical documents to us.
 - Still to check with Anna: some department intros still sound as if MedLuxLife handles documents. Examples: 517 "ensures that your previous scans… reach the specialist", 508 "helps you share your hormone results and scans", 509 "from sharing your scans", 495 "organises documents", 485 "prepare medical records", 536 "arrange… medical records", 535 "share school and medical reports". The "Before you travel – please prepare…" lists (documents to bring to the doctor) look fine.
+- 2026-10-18 – Wording (Anna): step 1 says "Contact us and tell us what you are interested in. We advise you and refer you to the right specialist in Türkiye for an online consultation. Medical documents go directly to the doctor, only on request." On Home: one sentence joined with "–". 81 pages + Home.
+- 2026-10-18 – 12 department intros rewritten so that no documents pass through MedLuxLife (scans/results/reports go directly to the doctors or come from the hospital):
+  - 485 (bone marrow transplantation), 495 (kidney transplant), 508 (endocrine surgery), 509 (thoracic surgery);
+  - 515 (gastroenterology), 517 (pulmonology), 535 (child psychiatry), 536 (NICU);
+  - 537 (interventional radiology), 538 (imaging), 539 (genetics), 540 (pathology).
+- 2026-10-18 – Contact: FAQ answer "If documents are needed, the doctor will ask for them in your online consultation and you share them directly with the doctor." CF7 form hint: "Please do not send medical information or documents here. If documents are needed, the doctor will ask for them in your online consultation."
+- Backups: `backups/wp/before_specialist_wording/page<ID>.json` (83 pages), `backups/wp/cf7_589_before_form_hint.json`.
+- 2026-10-18 – Language panel (Anna): the current language now has its name in the open panel like German/Turkish; "English (UK)" is shown as "English" (LANG-SWITCHER). The laptop slot is 99px so the panel still ends 12px from the edge. Screenshot: `deliverables/lang_english_label.jpg`.
