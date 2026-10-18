@@ -8,14 +8,28 @@ body.page-id-2293 main > .ext-hero-section .wp-block-cover::before { width: clam
 @media (max-width: 600px) { body.page-id-2293 main > .ext-hero-section .wp-block-cover { padding-top: 14px !important; padding-bottom: 14px !important; } }
 @media (max-width: 600px) { body.page-id-2293 main > .ext-hero-section .wp-block-cover .wp-block-post-title { padding-left: 44px; padding-right: 44px !important; } }
 @media (max-width: 600px) { body.page-id-2293 main > .ext-hero-section .wp-block-cover::before { width: 40px !important; height: 35px !important; top: 50% !important; transform: translateY(-50%) !important; } }
-/* At a glance */
+/* Quick facts: navy band with gold icons (different from the light boxes on the page) */
 .medlux-facts-sec > h2, .medlux-facts-sec ~ .medlux-section > h2 { text-align: center; }
-.medlux-facts { display: grid !important; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 20px !important; }
-.medlux-fact { background: #faf7f1; border: 1px solid rgba(212, 162, 76, 0.45); border-radius: 14px; padding: 18px 14px !important; text-align: center; margin: 0 !important; }
-.medlux-fact .medlux-fact-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #b8862e; margin: 0 0 6px !important; text-align: center !important; }
-.medlux-fact .medlux-fact-value { font-family: "Cormorant Garamond", serif; font-weight: 600; font-size: 1.2rem; line-height: 1.25; color: #0b0620; margin: 0 !important; text-align: center !important; }
+.medlux-facts { display: grid !important; grid-template-columns: repeat(5, 1fr); gap: 0; margin-top: 20px !important; background: #0b0620; border-radius: 18px; padding: 30px 16px !important; }
+.medlux-fact { text-align: center; margin: 0 !important; padding: 4px 12px !important; border-left: 1px solid rgba(212, 162, 76, 0.35); }
+.medlux-fact:first-child { border-left: 0; }
+.medlux-fact .medlux-card-icon { margin: 0 auto 10px !important; }
+.medlux-fact .medlux-card-icon img { width: 34px; height: 34px; margin: 0 auto; display: block; }
+.medlux-fact .medlux-fact-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #f0c46a; margin: 0 0 6px !important; text-align: center !important; }
+.medlux-fact .medlux-fact-value { font-family: "Cormorant Garamond", serif; font-weight: 600; font-size: 1.2rem; line-height: 1.25; color: #fefefe; margin: 0 !important; text-align: center !important; }
 .medlux-facts-note { text-align: center !important; font-size: 0.9rem; font-style: italic; color: #6b6577; margin-top: 14px !important; }
-@media (max-width: 900px) { .medlux-facts { grid-template-columns: repeat(2, 1fr); } .medlux-fact:last-child { grid-column: 1 / -1; } }
+@media (max-width: 900px) {
+  .medlux-facts { grid-template-columns: repeat(2, 1fr); row-gap: 22px; padding: 24px 12px !important; }
+  .medlux-fact { border-left: 0; }
+  .medlux-fact:last-child { grid-column: 1 / -1; }
+}
+/* Who it may be suitable for: light checklist with gold check circles, two columns on laptops, no box */
+.medlux-suitable > h2 { text-align: center; }
+.medlux-checklist { list-style: none; padding: 0 !important; margin: 24px auto 0 !important; max-width: 900px; columns: 2; column-gap: 48px; }
+.medlux-checklist li { position: relative; padding: 0 0 0 40px !important; margin: 0 0 18px !important; break-inside: avoid; line-height: 1.55; }
+.medlux-checklist li::before { content: ""; position: absolute; left: 0; top: 0; width: 26px; height: 26px; border: 1.5px solid #d4a24c; border-radius: 50%; background: #fffdf8 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYjg4NjJlIiBzdHJva2Utd2lkdGg9IjIuNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBkPSJNNiAxMi41bDQgNCA4LTkiLz48L3N2Zz4=") center / 15px no-repeat; }
+.medlux-suitable-note { text-align: center !important; font-style: italic; color: #6b6577; margin-top: 6px !important; }
+@media (max-width: 781px) { .medlux-checklist { columns: 1; } }
 /* centred cards with short texts (Anna's choice): icon or label, title and text in the middle */
 .medlux-centered-cards .medlux-card { text-align: center; }
 .medlux-centered-cards .medlux-card p { text-align: center !important; text-align-last: center; }

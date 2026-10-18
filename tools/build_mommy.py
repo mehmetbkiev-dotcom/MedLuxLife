@@ -20,6 +20,10 @@ ICON = {
     'moon': svg('<path d="M30 6a18 18 0 1 0 12 30A15 15 0 0 1 30 6z"/>'),
     'combine': svg('<circle cx="18" cy="19" r="10"/><circle cx="30" cy="19" r="10"/><circle cx="24" cy="30" r="10"/>'),
     'care': svg('<path d="M24 41S6 30.5 6 17.5A9.5 9.5 0 0 1 24 12a9.5 9.5 0 0 1 18 5.5C42 30.5 24 41 24 41z"/>'),
+    'bed': svg('<path d="M4 38V12"/><path d="M4 30h40v8"/><path d="M44 38V26a6 6 0 0 0-6-6H20v10"/><circle cx="12" cy="24" r="4"/>'),
+    'calendar': svg('<rect x="6" y="10" width="36" height="32" rx="3"/><path d="M6 20h36M16 6v8M32 6v8"/><path d="M14 28h4M22 28h4M30 28h4M14 35h4M22 35h4"/>'),
+    'hourglass': svg('<path d="M14 6h20M14 42h20"/><path d="M16 6c0 9 8 12 8 18s-8 9-8 18"/><path d="M32 6c0 9-8 12-8 18s8 9 8 18"/>'),
+    'pin': svg('<path d="M24 44s14-13 14-24a14 14 0 0 0-28 0c0 11 14 24 14 24z"/><circle cx="24" cy="20" r="5"/>'),
 }
 
 def p(t, cls=None):
@@ -66,17 +70,17 @@ intro = ('<!-- wp:columns {"verticalAlignment":"center","className":"medlux-intr
          '<figure class="wp-block-image size-large medlux-intro-img"><img src="%s" alt="Abdomen marked before a mommy makeover consultation" class="wp-image-1412"/></figure>\n<!-- /wp:image -->'
          '</div>\n<!-- /wp:column --></div>\n<!-- /wp:columns -->') % IMG
 
-def fact(label, value):
-    return group('medlux-fact', [p(label, 'medlux-fact-label'), p(value, 'medlux-fact-value')])
+def fact(ic, label, value):
+    return group('medlux-fact', [icon(ic), p(label, 'medlux-fact-label'), p(value, 'medlux-fact-value')])
 
 facts = group('medlux-section medlux-facts-sec', [
-    h('Key facts'),
+    h('Quick facts'),
     group('medlux-facts', [
-        fact('Anaesthesia', 'General anaesthesia'),
-        fact('Hospital stay', 'Usually 1–2 nights'),
-        fact('Daily activities', 'After about 2–4 weeks'),
-        fact('Final result', 'After 6–12 months'),
-        fact('Stay in Türkiye', 'Planned individually with the clinic'),
+        fact('moon', 'Anaesthesia', 'General anaesthesia'),
+        fact('bed', 'Hospital stay', 'Usually 1–2 nights'),
+        fact('calendar', 'Daily activities', 'After about 2–4 weeks'),
+        fact('hourglass', 'Final result', 'After 6–12 months'),
+        fact('pin', 'Stay in Türkiye', 'Planned individually with the clinic'),
     ], '{"type":"default"}'),
     p('General information; your surgeon plans the details for you personally.', 'medlux-facts-note'),
 ])
@@ -91,13 +95,13 @@ include = group('medlux-section', [
     ], '{"type":"grid","minimumColumnWidth":"14rem"}'),
 ])
 
-suitable = group('medlux-section medlux-good-to-know', [
+suitable = group('medlux-section medlux-suitable', [
     h('Who it may be suitable for'),
     ul(['You have completed your family planning and are no longer breastfeeding.',
         'Your weight has been stable for some time.',
         'You are in good general health.',
-        'You would like to address several changes after pregnancy at the same time.',
-        'Whether the procedure is suitable for you is decided by the surgeon after a personal assessment.']),
+        'You would like to address several changes after pregnancy at the same time.'], 'medlux-checklist'),
+    p('Whether the procedure is suitable for you is decided by the surgeon after a personal assessment.', 'medlux-suitable-note'),
 ])
 
 performed = group('medlux-section', [

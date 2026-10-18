@@ -600,3 +600,7 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
   - "At a glance" → "Key facts" (a more common phrase).
   - Backup before: `backups/wp/page2293_before_operation_stages.json`. Screenshots: `deliverables/mommy_operation_stages.jpg`, `mommy_makeover_laptop.jpg`, `mommy_makeover_phone.jpg`.
 - 2026-10-18 – Mommy Makeover (Anna): new section order: intro → Key facts → Who it may be suitable for → What it can include → How the operation is performed → How it works with MedLuxLife → Recovery → FAQ → CTA. The name for "Key facts" is open (options sent: Quick facts / Overview / The essentials / In brief / Treatment facts).
+- 2026-10-18 – Mommy Makeover (Anna): "Key facts" → "Quick facts". The two similar light boxes are now different:
+  - Quick facts: a navy band with gold icons (moon, bed, calendar, hourglass, map pin), gold labels and white values.
+  - Who it may be suitable for: a light checklist with gold check circles, two columns on laptops, no box; the "surgeon decides" note in italics under it.
+  - CSS in TREATMENT-DETAIL. Screenshot: `deliverables/mommy_quickfacts_suitable.jpg`.
