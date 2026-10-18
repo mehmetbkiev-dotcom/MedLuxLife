@@ -201,18 +201,20 @@ def add_links(mod):
     start = '<!-- wp:group {"className":"medlux-card'
     end = '</div>\n<!-- /wp:group -->'
     parts = page['content']['raw'].split(start)
-    out, done = [parts[0]], []
+    out, done, had = [parts[0]], [], []
     for chunk in parts[1:]:
         title = re.search(r'<h3 class="wp-block-heading">(.*?)</h3>', chunk.split(end)[0])
         title = title.group(1) if title else None
-        if title in link and 'medlux-more' not in chunk.split(end)[0]:
+        if title in link and 'medlux-more' in chunk.split(end)[0]:
+            had.append(title)
+        elif title in link:
             k = chunk.index(end)
             chunk = (chunk[:k] + '\n\n<!-- wp:paragraph {"className":"medlux-more"} -->\n<p class="medlux-more"><a href="%s">Learn more →</a></p>\n'
                      '<!-- /wp:paragraph -->' % link[title] + chunk[k:])
             done.append(title)
         out.append(chunk)
     res = curl('-X', 'POST', url, '-H', 'Content-Type: application/json', '--data-binary', '@-', data=json.dumps({'content': start.join(out)}).encode())
-    print('links added:', done, '| missing:', [k for k in link if k not in done], '| page', res.get('id'))
+    print('links added:', done, '| already linked:', len(had), '| card not found:', [k for k in link if k not in done + had], '| page', res.get('id'))
 
 
 def main():

@@ -264,6 +264,24 @@ TREATMENTS = [
   'faq': [('From what age is otoplasty possible?', 'For adults and for children from about 5–6 years of age, once the ears have finished growing.'),
           ('How long does it take?', 'About 1–1.5 hours – under local anaesthesia for adults, general anaesthesia for children.'),
           ('Where is the incision?', 'In the natural crease behind the ear.')]},
+ {'card': 'Thigh Lift', 'title': 'Thigh Lift', 'slug': 'thigh-lift', 'short': 'thigh lift',
+  'intro': 'A thigh lift removes excess skin and fat from the inner or outer thighs and tightens the tissue underneath – often after '
+           'major weight loss or with age – for smoother, firmer contours. MedLuxLife arranges your online consultation with the '
+           'surgeon in Istanbul and organises your stay.',
+  'facts': [('moon', 'Anaesthesia', 'General anaesthesia'), ('bed', 'Hospital stay', 'Usually 1–2 nights'),
+            ('clock', 'Walking', 'Within hours'), ('calendar', 'Compression garment', 'In the first weeks'), STAY],
+  'suitable': ['You have loose skin and excess fat on your thighs, for example after major weight loss or with age.',
+               'Your weight has been stable for some time.', 'You are in good general health.'],
+  'options_title': 'Options',
+  'options': [('lift', 'Inner thigh lift', 'Incisions along the inner thighs for loose skin on the inside of the legs.'),
+              ('lipo', 'Outer thigh lift', 'Incisions along the outer thighs to tighten the outer contour.')],
+  'hospital': 'You usually stay in hospital for 1–2 nights.',
+  'recovery': [('First days', 'Walking is possible within hours, and light movement helps circulation. You usually stay in hospital for 1–2 nights.'),
+               ('First weeks', 'Compression garments reduce swelling and support healing; strenuous activity should be avoided.'),
+               ('Later', 'Sport and heavy exertion come back step by step, as advised by your surgeon.')],
+  'faq': [('Do I need to wear compression garments?', 'Yes, in the first weeks after surgery, to reduce swelling and support healing.'),
+          ('When can I walk again?', 'Walking is possible within hours of the operation; light movement is encouraged to aid circulation.'),
+          ('Where are the incisions?', 'Along the inner or outer thighs, depending on the area treated.')]},
 ]
 
 # "How the operation is performed": the steps of each treatment as described on the partner clinic's page, in our words
@@ -320,6 +338,10 @@ STAGES = {
                         ('gem', 'Incision and fat removal', 'Through small incisions inside the cheeks, part of the buccal fat pads is removed – there are no incisions on the face.'),
                         ('face', 'Contouring and symmetry', 'The surrounding tissue is checked so that both sides are even and the cheekbones and jawline stand out.'),
                         ('care', 'Closure and recovery', 'The incisions are closed with dissolving stitches. You can usually return to your hotel on the same day.')],
+ 'thigh-lift': [('consult', 'Consultation before surgery', 'The surgeon assesses the areas of concern, discusses your wishes and makes a personal surgical plan.'),
+                ('moon', 'Anaesthesia and preparation', 'You receive general anaesthesia. The area is marked to guide the incisions.'),
+                ('gem', 'Removing excess skin and fat', 'Incisions are made along the inner or outer thighs; excess skin and fat are removed and the tissue underneath is tightened.'),
+                ('care', 'Closure and recovery', 'The incisions are closed with sutures and compression garments are put on. You usually stay in hospital for 1–2 nights.')],
  'otoplasty': [('consult', 'Consultation and planning', 'The surgeon examines the ears, discusses your wishes and plans the correction – for adults and for children from about 5–6 years.'),
                ('moon', 'Anaesthesia', 'Adults usually receive local anaesthesia, children general anaesthesia.'),
                ('gem', 'Reshaping the cartilage', 'Through an incision in the natural crease behind the ear, the cartilage is reshaped and the ear is set closer to the head with internal sutures.'),
