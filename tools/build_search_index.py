@@ -1,8 +1,17 @@
 """Build the search-suggestion index (content/search_index.json) from the live pages + content/search_terms.py.
 Run after page titles/sections change, then upload with tools/upload_search_index.py."""
-import json, re, sys, collections
+import glob, html, json, re, sys, collections
 sys.path.insert(0, '/home/user/MedLuxLife/content')
 from search_terms import T
+# card names in German/Turkish from the reviewed translations (content/translations/<de|tr>/*.json, {English: translation})
+CARD_TR = {}
+for l in ('de', 'tr'):
+    CARD_TR[l] = {}
+    for f in glob.glob('/home/user/MedLuxLife/content/translations/%s/*.json' % l):
+        if f.endswith('alts.json'):
+            continue
+        for k, v in json.load(open(f)).items():
+            CARD_TR[l][re.sub(r'\s+', ' ', html.unescape(k)).strip()] = html.unescape(v).replace('\u00a0', ' ').strip()
 raw = json.load(open(sys.argv[1]))           # produced by the collector (titles, parents, EN card titles)
 pages = raw['pages']
 cnt = collections.Counter(c for it in raw['items'] for c in set(it['en']['cards']))
@@ -24,6 +33,9 @@ for it in raw['items']:
          'b': {l: ' › '.join(tr(c, l) for c in chain) for l in ('en',) + L},
          'c': cards,
          'k': T.get(pid, ('',) * 5)[4]}
+    cl = {l: [CARD_TR[l].get(c, c) for c in cards] for l in ('de', 'tr')}
+    if any(cl[l] != cards for l in cl):
+        e['cl'] = cl                          # shown instead of the English card name on /de/ and /tr/
     out.append(e)
 B = []
 for e in out:

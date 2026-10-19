@@ -4,7 +4,7 @@ W = 'https://medluxlife-6j8sz55bpn.live-website.com/wp-json'
 TMP = '/tmp/claude-0/-home-user-MedLuxLife/58e49045-1f3b-5625-b667-4a635b0b1d5b/scratchpad/footer_body.json'
 run = lambda *a: subprocess.run(a, capture_output=True).stdout
 d = json.loads(run('curl', '-sS', f'{W}/wp/v2/template-parts/extendable//footer?context=edit')); c = d['content']['raw']
-json.dump(d, open('/home/user/MedLuxLife/backups/wp/footer_tp_before_search_deploy.json', 'w'))
+json.dump(d, open('/home/user/MedLuxLife/backups/wp/footer_tp_before_search_deploy_' + __import__('time').strftime('%Y%m%d_%H%M%S') + '.json', 'w'))
 start = '<!-- wp:html -->\n<!-- MedLuxLife live search suggestions'
 i = c.find(start)
 idx = open('/home/user/MedLuxLife/content/search_index.json').read().replace('</', '<\\/')

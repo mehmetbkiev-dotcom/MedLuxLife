@@ -13,7 +13,9 @@
       d.forEach(function (e) {
         e.b = raw.B[e.b] || {};
         e.nt = Object.keys(e.t).map(function (l) { return norm(e.t[l]); });
-        e.nc = e.c.map(norm); e.nk = norm(e.k);
+        // card names in the page language (cl) when there are any; both languages are searched
+        e.cv = (e.cl ? e.cl[lang] : null) || e.c;
+        e.nc = e.c.map(function (c, i) { return norm(c + ' ' + e.cv[i]); }); e.nk = norm(e.k);
       });
       return (data = d);
     }).catch(function () { loading = null; return []; });
@@ -35,7 +37,7 @@
       // (no '<' before '>' on one line: WordPress would treat it as a tag and escape the code)
       if (!(best >= 120)) e.nc.forEach(function (c, i) {
         var v = wordScore(c, nq) ? 60 + wordScore(c, nq) * 10 : 0;
-        if (v > best) { best = v; via = e.c[i]; }
+        if (v > best) { best = v; via = e.cv[i]; }
       });
       if (!best) {
         var all = e.nt.join(' ') + ' ' + e.nk + ' ' + e.nc.join(' ');
