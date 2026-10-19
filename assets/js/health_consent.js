@@ -21,7 +21,7 @@
       if (!ok) {
         e.preventDefault(); e.stopImmediatePropagation();
         // message in the language of the page
-        var L = (document.documentElement.lang || 'en').slice(0, 2); var M = { en: 'Please confirm both consents to send a health enquiry.', de: 'Bitte bestätigen Sie beide Einwilligungen, um eine Gesundheitsanfrage zu senden.', tr: 'Sağlıkla ilgili bir talep göndermek için lütfen her iki onayı da verin.' }; msg.textContent = M[L] || M.en;
+        var L = (document.documentElement.lang || 'en').slice(0, 2); var M = { en: 'Please confirm both consents to send a health enquiry.', de: 'Bitte bestätigen Sie beide Einwilligungen, um eine Gesundheitsanfrage zu senden.', tr: 'Sağlıkla ilgili bir talep göndermek için lütfen her iki onayı da verin.', uk: 'Щоб надіслати запит щодо здоров’я, підтвердьте, будь ласка, обидві згоди.', ru: 'Чтобы отправить запрос по вопросам здоровья, пожалуйста, подтвердите оба согласия.' }; msg.textContent = M[L] || M.en;
         box.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
     }, true);

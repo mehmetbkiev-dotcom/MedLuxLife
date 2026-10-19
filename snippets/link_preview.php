@@ -2,6 +2,9 @@
 // On /de/ and /tr/ the title and description come from the reviewed TranslatePress translations (the free plugin does not translate <title> or meta tags).
 function medlux_meta_lang() {
 	global $TRP_LANGUAGE;
+	if ( defined( 'MEDLUX_XLANG' ) && MEDLUX_XLANG ) {
+		return 'xl_' . MEDLUX_XLANG;   // /uk/ and /ru/ (snippets/xlang.php)
+	}
 	$s = get_option( 'trp_settings' );
 	$default = isset( $s['default-language'] ) ? $s['default-language'] : 'en_GB';
 	return ( ! empty( $TRP_LANGUAGE ) && $TRP_LANGUAGE !== $default ) ? $TRP_LANGUAGE : '';
@@ -13,6 +16,16 @@ function medlux_meta_tr( $s ) {
 	$s    = (string) $s;
 	if ( '' === $lang || '' === trim( $s ) ) {
 		return $s;
+	}
+	if ( 0 === strpos( $lang, 'xl_' ) ) {
+		$map = function_exists( 'medlux_xlang_map' ) ? medlux_xlang_map() : array();
+		$k   = trim( preg_replace( '/\s+/', ' ', $s ) );
+		foreach ( array( $k, str_replace( '&#038;', '&amp;', $k ) ) as $key ) {
+			if ( isset( $map[ $key ] ) ) {
+				return $map[ $key ];
+			}
+		}
+		return null;
 	}
 	$t = $wpdb->prefix . 'trp_dictionary_en_gb_' . strtolower( $lang );
 	if ( ! isset( $cache[ $t ][ $s ] ) ) {
@@ -27,6 +40,14 @@ function medlux_meta_fixed( $key, $en ) {
 		'de_DE' => array(
 			'intro'   => 'Medizinische Behandlungen und Reisen an einem Ort für Sie geplant – Fachärzte, Hotels, Flüge und Flughafentransfers, mit einer persönlichen Ansprechperson, die Ihre Sprache spricht.',
 			'tagline' => 'Gesundheit · Tourismus · Erlebnis',
+		),
+		'xl_uk' => array(
+			'intro'   => 'Медичні процедури та подорожі, сплановані для вас в одному місці – лікарі-фахівці, готелі, перельоти й трансфери з аеропорту, з особистим координатором, який говорить вашою мовою.',
+			'tagline' => "Здоров'я · Туризм · Враження",
+		),
+		'xl_ru' => array(
+			'intro'   => 'Медицинские процедуры и путешествия, спланированные для вас в одном месте – врачи-специалисты, отели, перелёты и трансферы из аэропорта, с личным координатором, который говорит на вашем языке.',
+			'tagline' => 'Здоровье · Туризм · Впечатления',
 		),
 		'tr_TR' => array(
 			'intro'   => 'Tıbbi tedaviler ve seyahat, sizin için tek bir yerde planlanır – uzman hekimler, oteller, uçuşlar ve havalimanı transferleri, sizin dilinizi konuşan kişisel bir koordinatörle.',

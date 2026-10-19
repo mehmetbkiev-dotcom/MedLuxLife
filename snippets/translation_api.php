@@ -115,4 +115,31 @@ add_action( 'rest_api_init', function () {
 			},
 		),
 	) );
+	// Ukrainian / Russian lists for snippets/xlang.php (option medlux_xlang_<lang>, {English text: translation}); written by tools/xlang.py
+	register_rest_route( 'medlux/v1', '/xlang', array(
+		array(
+			'methods'             => 'GET',
+			'permission_callback' => $perm,
+			'callback'            => function ( $r ) {
+				$m = (array) get_option( 'medlux_xlang_' . ( 'ru' === $r['lang'] ? 'ru' : 'uk' ), array() );
+				return array( 'count' => count( $m ) );
+			},
+		),
+		array(
+			'methods'             => 'POST',
+			'permission_callback' => $perm,
+			'callback'            => function ( $r ) {
+				$lang = 'ru' === $r['lang'] ? 'ru' : 'uk';
+				$map  = array();
+				foreach ( (array) $r['map'] as $en => $tr ) {
+					$en = trim( preg_replace( '/\s+/', ' ', (string) $en ) );
+					if ( '' !== $en ) {
+						$map[ $en ] = str_replace( '<', '&lt;', (string) $tr );
+					}
+				}
+				update_option( 'medlux_xlang_' . $lang, $map, false );
+				return array( 'saved' => count( $map ), 'lang' => $lang );
+			},
+		),
+	) );
 } );
