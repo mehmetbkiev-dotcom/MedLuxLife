@@ -2,10 +2,10 @@
 Run after page titles/sections change, then upload with tools/upload_search_index.py."""
 import glob, html, json, re, sys, collections
 sys.path.insert(0, '/home/user/MedLuxLife/content')
-from search_terms import T
-# card names in German/Turkish from the reviewed translations (content/translations/<de|tr>/*.json, {English: translation})
+from search_terms import T, AR_KEYWORDS
+# card names in German/Turkish/Arabic from the reviewed translations (content/translations/<de|tr|ar>/*.json, {English: translation})
 CARD_TR = {}
-for l in ('de', 'tr'):
+for l in ('de', 'tr', 'ar'):
     CARD_TR[l] = {}
     for f in glob.glob('/home/user/MedLuxLife/content/translations/%s/*.json' % l):
         if f.endswith('alts.json'):
@@ -15,9 +15,16 @@ for l in ('de', 'tr'):
 raw = json.load(open(sys.argv[1]))           # produced by the collector (titles, parents, EN card titles)
 pages = raw['pages']
 cnt = collections.Counter(c for it in raw['items'] for c in set(it['en']['cards']))
-L = ('de', 'tr', 'ru', 'uk')
+L = ('de', 'tr', 'ru', 'uk', 'ar')
+# Arabic page names: table in content/translations/glossary_ar.md
+AR = {}
+for line in open('/home/user/MedLuxLife/content/translations/glossary_ar.md'):
+    m = re.match(r'^\| ([^|]+?) \| ([^|]+?) \|$', line.strip())
+    if m and m.group(1) not in ('English', '---'):
+        AR[m.group(1)] = m.group(2)
 def tr(pid, lang):
     pid = int(pid)
+    if lang == 'ar': return AR.get(pages[str(pid)]['title'], pages[str(pid)]['title'])
     if lang == 'en' or pid not in T: return pages[str(pid)]['title']
     return T[pid][L.index(lang)]
 out = []
@@ -32,10 +39,10 @@ for it in raw['items']:
          't': {l: tr(pid, l) for l in ('en',) + L},
          'b': {l: ' › '.join(tr(c, l) for c in chain) for l in ('en',) + L},
          'c': cards,
-         'k': T.get(pid, ('',) * 5)[4]}
-    cl = {l: [CARD_TR[l].get(c, c) for c in cards] for l in ('de', 'tr')}
+         'k': (T.get(pid, ('',) * 5)[4] + ' ' + AR_KEYWORDS.get(pid, '')).strip()}
+    cl = {l: [CARD_TR[l].get(c, c) for c in cards] for l in ('de', 'tr', 'ar')}   # not ru/uk: keeps the index (in every page) small
     if any(cl[l] != cards for l in cl):
-        e['cl'] = cl                          # shown instead of the English card name on /de/ and /tr/
+        e['cl'] = cl                          # shown instead of the English card name on /de/, /tr/ and /ar/
     out.append(e)
 B = []
 for e in out:

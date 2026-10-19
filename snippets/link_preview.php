@@ -3,7 +3,7 @@
 function medlux_meta_lang() {
 	global $TRP_LANGUAGE;
 	if ( defined( 'MEDLUX_XLANG' ) && MEDLUX_XLANG ) {
-		return 'xl_' . MEDLUX_XLANG;   // /uk/ and /ru/ (snippets/xlang.php)
+		return 'xl_' . MEDLUX_XLANG;   // /uk/, /ru/ and /ar/ (snippets/xlang.php)
 	}
 	$s = get_option( 'trp_settings' );
 	$default = isset( $s['default-language'] ) ? $s['default-language'] : 'en_GB';
@@ -48,6 +48,10 @@ function medlux_meta_fixed( $key, $en ) {
 		'xl_ru' => array(
 			'intro'   => 'Медицинские процедуры и путешествия, спланированные для вас в одном месте – врачи-специалисты, отели, перелёты и трансферы из аэропорта, с личным координатором, который говорит на вашем языке.',
 			'tagline' => 'Здоровье · Туризм · Впечатления',
+		),
+		'xl_ar' => array(
+			'intro'   => 'علاجات طبية ورحلات سفر نخطط لها من أجلكم في مكان واحد – أطباء مختصون وفنادق ورحلات طيران ونقل من المطار، مع جهة اتصال شخصية ترافقكم في كل خطوة.',
+			'tagline' => 'الصحة · السياحة · التجربة',
 		),
 		'tr_TR' => array(
 			'intro'   => 'Tıbbi tedaviler ve seyahat, sizin için tek bir yerde planlanır – uzman hekimler, oteller, uçuşlar ve havalimanı transferleri, sizin dilinizi konuşan kişisel bir koordinatörle.',

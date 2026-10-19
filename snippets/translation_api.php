@@ -115,13 +115,13 @@ add_action( 'rest_api_init', function () {
 			},
 		),
 	) );
-	// Ukrainian / Russian lists for snippets/xlang.php (option medlux_xlang_<lang>, {English text: translation}); written by tools/xlang.py
+	// Ukrainian / Russian / Arabic lists for snippets/xlang.php (option medlux_xlang_<lang>, {English text: translation}); written by tools/xlang.py
 	register_rest_route( 'medlux/v1', '/xlang', array(
 		array(
 			'methods'             => 'GET',
 			'permission_callback' => $perm,
 			'callback'            => function ( $r ) {
-				$m = (array) get_option( 'medlux_xlang_' . ( 'ru' === $r['lang'] ? 'ru' : 'uk' ), array() );
+				$m = (array) get_option( 'medlux_xlang_' . ( in_array( $r['lang'], array( 'ru', 'ar' ), true ) ? $r['lang'] : 'uk' ), array() );
 				return array( 'count' => count( $m ) );
 			},
 		),
@@ -129,7 +129,7 @@ add_action( 'rest_api_init', function () {
 			'methods'             => 'POST',
 			'permission_callback' => $perm,
 			'callback'            => function ( $r ) {
-				$lang = 'ru' === $r['lang'] ? 'ru' : 'uk';
+				$lang = in_array( $r['lang'], array( 'ru', 'ar' ), true ) ? $r['lang'] : 'uk';
 				$map  = array();
 				foreach ( (array) $r['map'] as $en => $tr ) {
 					$en = trim( preg_replace( '/\s+/', ' ', (string) $en ) );

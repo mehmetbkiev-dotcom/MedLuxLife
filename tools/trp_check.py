@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Check a translation file against its source chunk.
-usage: trp_check.py content/translations/src/<chunk>.json content/translations/<de|tr>/<chunk>.json
+usage: trp_check.py content/translations/src/<chunk>.json content/translations/<de|tr|uk|ru|ar>/<chunk>.json
 Reports missing/empty translations, changed numbers, lost entities/arrows, English left over, and untranslated copies."""
 import json, re, sys
 src = [s['original'] for s in json.load(open(sys.argv[1]))]
@@ -16,9 +16,12 @@ for o in src:
         problems.append(('MISSING', o)); continue
     if nums(o) != nums(t):
         problems.append(('NUMBERS', o, t))
-    for tok in ('&amp;', '→'):
-        if o.count(tok) != t.count(tok):
-            problems.append(('TOKEN ' + tok, o, t))
+    if o.count('&amp;') != t.count('&amp;'):
+        problems.append(('TOKEN &amp;', o, t))
+    # Arabic is written right to left: → becomes ← and ← becomes →
+    arrows = (t.count('←'), t.count('→')) if '/ar/' in sys.argv[2] else (t.count('→'), t.count('←'))
+    if (o.count('→'), o.count('←')) != arrows:
+        problems.append(('TOKEN arrows', o, t))
     if t == o and not keep_same.match(o) and len(o.split()) > 1:
         problems.append(('UNCHANGED', o))
     elif len(english.findall(t)) >= 3:

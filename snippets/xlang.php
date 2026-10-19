@@ -1,17 +1,22 @@
-// MedLuxLife: Ukrainian (/uk/…) and Russian (/ru/…) without extra TranslatePress languages (the free plugin allows English + 2: German, Turkish).
+// MedLuxLife: Ukrainian (/uk/…), Russian (/ru/…) and Arabic (/ar/…, right to left) without extra TranslatePress languages (the free plugin allows English + 2: German, Turkish).
 // /uk/<path> and /ru/<path> are served as the English page <path>. The finished HTML gets every text node and alt / placeholder / aria-label /
 // title / submit label swapped from the list for that language (option medlux_xlang_<lang>, written by tools/xlang.py), internal links get the
-// language prefix and <html lang> is set. Strings that are not in the list stay English. All pages get hreflang links for uk / ru, and the
-// header language list gets Українська / Русский.
+// language prefix and <html lang> is set. Strings that are not in the list stay English. All pages get hreflang links for uk / ru / ar, and the
+// header language list gets Українська / Русский / العربية.
 if ( ! defined( 'MEDLUX_XLANG' ) ) {
 	$medlux_xl  = '';
 	$medlux_uri = isset( $_SERVER['REQUEST_URI'] ) ? (string) $_SERVER['REQUEST_URI'] : '';
-	if ( preg_match( '#^/(uk|ru)(?=/|\?|$)#', $medlux_uri, $medlux_m ) ) {
+	if ( preg_match( '#^/(uk|ru|ar)(?=/|\?|$)#', $medlux_uri, $medlux_m ) ) {
 		$medlux_xl              = $medlux_m[1];
 		$medlux_rest            = (string) substr( $medlux_uri, strlen( $medlux_m[0] ) );
 		$_SERVER['REQUEST_URI'] = ( '' === $medlux_rest || '?' === $medlux_rest[0] ) ? '/' . $medlux_rest : $medlux_rest;
 	}
 	define( 'MEDLUX_XLANG', $medlux_xl );
+}
+
+// languages shown in the header list and in hreflang (a language is added here once its list is complete; its pages work before that for testing)
+function medlux_xlang_live() {
+	return array( 'uk', 'ru', 'ar' );
 }
 
 // https://medluxlife.de – scheme and host only: on /de/ and /tr/ pages TranslatePress adds its prefix to home_url(), get_option( 'home' ) and esc_url()
@@ -34,7 +39,7 @@ function medlux_xlang_path() {
 	if ( is_singular() && ! is_front_page() ) {
 		$path = (string) wp_parse_url( get_permalink( get_queried_object_id() ), PHP_URL_PATH );
 	}
-	return preg_replace( '#^/(en|de|tr|uk|ru)(?=/)#', '', $path );
+	return preg_replace( '#^/(en|de|tr|uk|ru|ar)(?=/)#', '', $path );
 }
 
 function medlux_xlang_render( $html ) {
@@ -72,7 +77,7 @@ function medlux_xlang_render( $html ) {
 	$link = function ( $m ) use ( $lang ) {
 		$p = isset( $m[3] ) ? $m[3] : '';
 		$p = '' === $p ? '/' : $p;
-		if ( preg_match( '#^/(wp-|de/|tr/|uk/|ru/|feed|xmlrpc|comments)#', $p ) || preg_match( '#\.(jpe?g|png|webp|gif|svg|pdf|css|js|xml|ico|woff2?)(\?|$)#i', $p ) ) {
+		if ( preg_match( '#^/(wp-|de/|tr/|uk/|ru/|ar/|feed|xmlrpc|comments)#', $p ) || preg_match( '#\.(jpe?g|png|webp|gif|svg|pdf|css|js|xml|ico|woff2?)(\?|$)#i', $p ) ) {
 			return $m[0];
 		}
 		return $m[1] . $m[2] . '/' . $lang . $p . '"';
@@ -80,10 +85,30 @@ function medlux_xlang_render( $html ) {
 	$html = preg_replace_callback( '#(\bhref=")(' . $q . ')(/[^"]*)?"#', $link, $html );
 	$html = preg_replace_callback( '#(<meta property="og:url" content=")(' . $q . ')(/[^"]*)?"#', $link, $html );
 	$html = preg_replace( '/<html([^>]*)\slang="[^"]*"/', '<html$1 lang="' . $lang . '"', $html, 1 );
+	// the contact form box carries the language and direction of the English page
+	$html = preg_replace_callback( '/<div class="wpcf7\b[^>]*>/', function ( $m ) use ( $lang ) {
+		$tag = preg_replace( '/\slang="[^"]*"/', ' lang="' . $lang . '"', $m[0] );
+		return preg_replace( '/\sdir="[^"]*"/', ' dir="' . ( 'ar' === $lang ? 'rtl' : 'ltr' ) . '"', $tag );
+	}, $html );
+	if ( 'ar' === $lang && ! preg_match( '/<html[^>]*\sdir=/', $html ) ) {
+		$html = preg_replace( '/<html\b/', '<html dir="rtl"', $html, 1 );
+	}
 	foreach ( $keep as $i => $k ) {
 		$html = str_replace( '<!--mlxkeep' . $i . '-->', $k, $html );
 	}
 	return $html;
+}
+
+// Arabic is written right to left: WordPress then loads the right-to-left versions of its styles and writes dir="rtl"
+if ( 'ar' === MEDLUX_XLANG ) {
+	add_action( 'after_setup_theme', function () {
+		if ( isset( $GLOBALS['wp_locale'] ) ) {
+			$GLOBALS['wp_locale']->text_direction = 'rtl';
+		}
+	}, 0 );
+	add_action( 'wp_enqueue_scripts', function () {
+		wp_styles()->text_direction = 'rtl';
+	}, 0 );
 }
 
 if ( MEDLUX_XLANG ) {
@@ -99,7 +124,7 @@ add_action( 'wp_head', function () {
 		return;
 	}
 	$path = medlux_xlang_path();
-	foreach ( array( 'uk', 'ru' ) as $l ) {
+	foreach ( medlux_xlang_live() as $l ) {
 		printf( '<link rel="alternate" hreflang="%s" href="%s" />' . "\n", esc_attr( $l ), esc_attr( medlux_xlang_home() . '/' . $l . $path ) );
 	}
 }, 2 );
@@ -109,11 +134,13 @@ add_action( 'wp_footer', function () {
 	$flags = plugins_url( 'translatepress-multilingual/assets/flags/4x3/' );
 	$cfg   = array(
 		'cur'   => MEDLUX_XLANG,
+		'live'  => medlux_xlang_live(),
 		'path'  => medlux_xlang_path(),
 		'home'  => medlux_xlang_home(),
 		'items' => array(
 			'uk' => array( 'name' => 'Українська', 'flag' => $flags . 'uk.svg' ),
 			'ru' => array( 'name' => 'Русский', 'flag' => $flags . 'ru_RU.svg' ),
+			'ar' => array( 'name' => 'العربية', 'flag' => $flags . 'ar.svg' ),
 			'en' => array( 'name' => 'English', 'flag' => $flags . 'en_GB.svg' ),
 		),
 		'cf7'   => array(),
@@ -148,6 +175,20 @@ add_action( 'wp_footer', function () {
 			'Submit Search' => 'Искать',
 			'Site Logo' => 'Логотип сайта',
 		),
+		'ar' => array(
+			'Thank you for your message. It has been sent.' => 'شكرًا لرسالتكم. تم إرسالها.',
+			'There was an error trying to send your message. Please try again later.' => 'حدث خطأ أثناء إرسال رسالتكم. يُرجى المحاولة مرة أخرى لاحقًا.',
+			'One or more fields have an error. Please check and try again.' => 'يوجد خطأ في حقل واحد أو أكثر. يُرجى التحقق والمحاولة مرة أخرى.',
+			'You must accept the terms and conditions before sending your message.' => 'يجب الموافقة على الشروط والأحكام قبل إرسال رسالتكم.',
+			'Please fill out this field.' => 'يُرجى ملء هذا الحقل.',
+			'This field has a too long input.' => 'النص في هذا الحقل طويل جدًا.',
+			'Please enter an email address.' => 'يُرجى إدخال عنوان بريد إلكتروني.',
+			'Please enter a telephone number.' => 'يُرجى إدخال رقم هاتف.',
+			// labels set by scripts (search button, logo)
+			'Expand search field' => 'فتح حقل البحث',
+			'Submit Search' => 'بحث',
+			'Site Logo' => 'شعار الموقع',
+		),
 	);
 	if ( MEDLUX_XLANG && isset( $cf7[ MEDLUX_XLANG ] ) ) {
 		$cfg['cf7'] = $cf7[ MEDLUX_XLANG ];
@@ -175,7 +216,7 @@ add_action( 'wp_footer', function () {
       });
       if (list) list.insertBefore(item('en'), list.firstChild);
     }
-    if (list) ['uk', 'ru'].forEach(function (c) { if (c !== C.cur) list.appendChild(item(c)); });
+    if (list) C.live.forEach(function (c) { if (c !== C.cur) list.appendChild(item(c)); });
   });
   if (C.cur) {
     var fix = function () {

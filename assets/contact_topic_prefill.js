@@ -20,7 +20,8 @@
   // the two main hubs: a natural phrase instead of the bare title (used for WhatsApp only)
   var hubName = {
     en: ['a treatment', 'travel planning'], de: ['eine Behandlung', 'die Organisation einer Reise'],
-    tr: ['tedavi', 'seyahat organizasyonu'], uk: ['лікування', 'організація подорожі'], ru: ['лечение', 'организация поездки']
+    tr: ['tedavi', 'seyahat organizasyonu'], uk: ['лікування', 'організація подорожі'], ru: ['лечение', 'организация поездки'],
+    ar: ['علاج', 'تنظيم رحلة']
   };
   if (rest === '') topic = (hubName[lang] || hubName.en)[subject === 'Travel' ? 1 : 0];
   function phrase(name) {
@@ -29,7 +30,8 @@
       de: ['Guten Tag,', 'ich interessiere mich für ' + name + '.'],
       tr: ['Merhaba,', name + ' ile ilgileniyorum.'],
       uk: ['Добрий день,', 'мене цікавить ' + name + '.'],
-      ru: ['Здравствуйте,', 'меня интересует ' + name + '.']
+      ru: ['Здравствуйте,', 'меня интересует ' + name + '.'],
+      ar: ['مرحبًا،', 'أرغب في الاستفسار عن ' + name + '.']
     };
     return texts[lang] || texts.en;
   }

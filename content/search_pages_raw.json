@@ -730,12 +730,10 @@
     "cards": [
      "Ophthalmology",
      "Orthopedics and Traumatology",
-     "Cardiology",
-     "Medical Oncology",
-     "In-Vitro Fertilization (IVF)",
-     "Organ Transplantation Center",
-     "Neurosurgery",
+     "Bariatric Surgery",
      "Urology",
+     "Cardiology",
+     "Neurosurgery",
      "Cancer care",
      "Heart and vascular",
      "Brain, nerves and mental health",
@@ -758,12 +756,10 @@
     "cards": [
      "Augenheilkunde",
      "Orthopädie und Traumatologie",
-     "Kardiologie",
-     "Medizinische Onkologie",
-     "In-vitro-Fertilisation (IVF)",
-     "Organtransplantationszentrum",
-     "Neurochirurgie",
+     "Adipositaschirurgie",
      "Urologie",
+     "Kardiologie",
+     "Neurochirurgie",
      "Krebsbehandlung",
      "Herz und Gefäße",
      "Gehirn, Nerven und psychische Gesundheit",
@@ -786,12 +782,10 @@
     "cards": [
      "Göz Hastalıkları",
      "Ortopedi ve Travmatoloji",
-     "Kardiyoloji",
-     "Tıbbi Onkoloji",
-     "Tüp Bebek (IVF)",
-     "Organ Nakli Merkezi",
-     "Beyin ve Sinir Cerrahisi",
+     "Obezite Cerrahisi",
      "Üroloji",
+     "Kardiyoloji",
+     "Beyin ve Sinir Cerrahisi",
      "Kanser tedavisi",
      "Kalp ve damar",
      "Beyin, sinirler ve ruh sağlığı",
@@ -5231,18 +5225,8 @@
     ]
    },
    "de": {
-    "h1": "Medizinische Histologie und Embryologie",
-    "cards": [
-     "Histologie",
-     "Funktion von Zellen und Geweben",
-     "Organentwicklung",
-     "Embryologie",
-     "Entwicklungsstörungen",
-     "1. Kostenlose Beratung",
-     "2. Persönlicher Behandlungsplan",
-     "3. Reise & Behandlung",
-     "4. Nachsorge"
-    ]
+    "h1": "",
+    "cards": []
    },
    "tr": {
     "h1": "Tıbbi Histoloji ve Embriyoloji",
@@ -5869,26 +5853,8 @@
     ]
    },
    "de": {
-    "h1": "Bruststraffung (Mastopexie)",
-    "cards": [
-     "Bruststraffung",
-     "Straffung mit Implantaten",
-     "Vorbereitung und Narkose",
-     "Schnitt und Neuformung",
-     "Position der Brustwarze und Symmetrie",
-     "Wundverschluss und Erholung",
-     "1Kontakt und Online-Beratung",
-     "2Ihr persönlicher Plan",
-     "3Anreise und Operation",
-     "4Erholung in Istanbul",
-     "5Wieder zu Hause",
-     "Wie lange dauert die Operation?+",
-     "Lässt sich eine Bruststraffung mit Implantaten kombinieren?+",
-     "Bleiben Narben zurück?+",
-     "Wann kann ich wieder arbeiten?+",
-     "Wie lange sollte ich in der Türkei bleiben?+",
-     "Soll ich Fotos oder medizinische Unterlagen an MedLuxLife senden?+"
-    ]
+    "h1": "",
+    "cards": []
    },
    "tr": {
     "h1": "Göğüs Dikleştirme (Mastopeksi)",
@@ -6210,25 +6176,8 @@
     ]
    },
    "de": {
-    "h1": "Lidstraffung (Blepharoplastik)",
-    "cards": [
-     "Oberlider",
-     "Unterlider",
-     "Beratung und Planung",
-     "Narkose und Schnittführung",
-     "Entfernung oder Neupositionierung von Gewebe",
-     "Wundverschluss und Nachsorge",
-     "1Kontakt und Online-Beratung",
-     "2Ihr persönlicher Plan",
-     "3Anreise und Operation",
-     "4Erholung in Istanbul",
-     "5Wieder zu Hause",
-     "Wie lange dauert die Operation?+",
-     "Wann werden die Fäden gezogen?+",
-     "Wo werden die Schnitte gesetzt?+",
-     "Wie lange sollte ich in der Türkei bleiben?+",
-     "Soll ich Fotos oder medizinische Unterlagen an MedLuxLife senden?+"
-    ]
+    "h1": "",
+    "cards": []
    },
    "tr": {
     "h1": "Göz Kapağı Estetiği (Blefaroplasti)",

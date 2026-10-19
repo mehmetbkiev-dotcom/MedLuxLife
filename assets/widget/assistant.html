@@ -137,7 +137,7 @@
     if(!sel){ if(++tries<20) setTimeout(fill,250); return; }
     if(area==='Health'||area==='Travel'){ sel.value=area; sel.dispatchEvent(new Event('change',{bubbles:true})); }
     var msg=document.querySelector('form.wpcf7-form textarea[name="your-message"]');
-    if(msg){ if(!msg.value){ if(topic){ var ph={en:'I am interested in: ',de:'Ich interessiere mich für: ',tr:'Şununla ilgileniyorum: ',uk:'Мене цікавить: ',ru:'Меня интересует: '}; msg.value=(ph[(document.documentElement.lang||'en').slice(0,2)]||ph.en)+topic+String.fromCharCode(10,10); } } }
+    if(msg){ if(!msg.value){ if(topic){ var ph={en:'I am interested in: ',de:'Ich interessiere mich für: ',tr:'Şununla ilgileniyorum: ',uk:'Мене цікавить: ',ru:'Меня интересует: ',ar:'أرغب في الاستفسار عن: '}; msg.value=(ph[(document.documentElement.lang||'en').slice(0,2)]||ph.en)+topic+String.fromCharCode(10,10); } } }
     var lg=q.get('lang'); if(lg){ document.querySelectorAll('form.wpcf7-form input[name^="your-language"]').forEach(function(c){ if(c.value===lg){ if(!c.checked){ c.click(); } } }); } })(); }
 })();
 </script>

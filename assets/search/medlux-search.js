@@ -2,10 +2,10 @@
 (function () {
   var data = null, loading = null;
   var lang = (document.documentElement.lang || 'en').slice(0, 2).toLowerCase();
-  if (['de', 'tr', 'ru', 'uk'].indexOf(lang) < 0) lang = 'en';
-  var prefix = (location.pathname.match(/^\/(de|tr|ru|uk)(?=\/)/) || [''])[0];
-  var TXT = { en: ['All results for', 'No matching section'], de: ['Alle Ergebnisse für', 'Kein passender Bereich'], tr: ['Tüm sonuçlar:', 'Eşleşen bölüm yok'], ru: ['Все результаты для', 'Ничего не найдено'], uk: ['Усі результати для', 'Нічого не знайдено'] }[lang];
-  function norm(s) { return (s || '').toLowerCase().replace(/ı/g, 'i').replace(/ß/g, 'ss').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ё/g, 'е').replace(/[^\p{L}\p{N}]+/gu, ' ').trim(); }
+  if (['de', 'tr', 'ru', 'uk', 'ar'].indexOf(lang) < 0) lang = 'en';
+  var prefix = (location.pathname.match(/^\/(de|tr|ru|uk|ar)(?=\/)/) || [''])[0];
+  var TXT = { en: ['All results for', 'No matching section'], de: ['Alle Ergebnisse für', 'Kein passender Bereich'], tr: ['Tüm sonuçlar:', 'Eşleşen bölüm yok'], ru: ['Все результаты для', 'Ничего не найдено'], uk: ['Усі результати для', 'Нічого не знайдено'], ar: ['جميع النتائج لـ', 'لا توجد نتائج مطابقة'] }[lang];
+  function norm(s) { return (s || '').toLowerCase().replace(/ı/g, 'i').replace(/ß/g, 'ss').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ё/g, 'е').replace(/[\u064B-\u065F\u0670\u0640]/g, '').replace(/ة/g, 'ه').replace(/ى/g, 'ي').replace(/[^\p{L}\p{N}]+/gu, ' ').trim(); } // Arabic: without short vowels, hamza signs and tatweel
   function load() {
     if (data) return Promise.resolve(data);
     if (!loading) loading = Promise.resolve().then(function () {
@@ -71,7 +71,7 @@
           (x.e.b[lang] ? '<span class="mlx-sugg-b">' + esc(x.e.b[lang]) + '</span>' : '') + '</a>';
       });
       if (!r.length) h += '<div class="mlx-sugg-empty">' + esc(TXT[1]) + '</div>';
-      h += '<button type="submit" class="mlx-sugg-all">' + esc(TXT[0]) + ' “' + esc(q) + '” →</button>';
+      h += '<button type="submit" class="mlx-sugg-all">' + esc(TXT[0]) + (lang === 'ar' ? ' «' + esc(q) + '» ←' : ' “' + esc(q) + '” →') + '</button>';
       box.innerHTML = h; box.hidden = false; active = -1;
       if (form.closest('header') && innerWidth > 600) { // align under the (expanding) header input
         var rc = input.getBoundingClientRect(), w = Math.min(420, innerWidth - 24);

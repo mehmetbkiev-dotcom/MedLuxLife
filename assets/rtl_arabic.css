@@ -1,0 +1,66 @@
+/* >>> RTL-AR START – Arabic pages (/ar/…, html dir="rtl", snippets/xlang.php): mirror the parts of our CSS that use left/right */
+/* Arabic letters: our fonts have none, so the same font names get Arabic files (self-hosted in the font library, wp-content/uploads/fonts:
+   IBM Plex Sans Arabic for Inter / Arial, Amiri for Cormorant Garamond). Only the Arabic range – Latin text is unchanged and browsers load these files only for Arabic text. */
+@font-face { font-family: "Inter"; src: url("/wp-content/uploads/fonts/plex-ar-400.woff2") format("woff2"); font-weight: 100 500; font-style: normal; font-display: swap; unicode-range: U+0600-06FF, U+0750-077F, U+0870-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC; }
+@font-face { font-family: "Inter"; src: url("/wp-content/uploads/fonts/plex-ar-600.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; unicode-range: U+0600-06FF, U+0750-077F, U+0870-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC; }
+@font-face { font-family: "Inter"; src: url("/wp-content/uploads/fonts/plex-ar-700.woff2") format("woff2"); font-weight: 700 900; font-style: normal; font-display: swap; unicode-range: U+0600-06FF, U+0750-077F, U+0870-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC; }
+@font-face { font-family: "Arial"; src: url("/wp-content/uploads/fonts/plex-ar-400.woff2") format("woff2"); font-weight: 100 500; font-style: normal; font-display: swap; unicode-range: U+0600-06FF, U+0750-077F, U+0870-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC; }
+@font-face { font-family: "Arial"; src: url("/wp-content/uploads/fonts/plex-ar-700.woff2") format("woff2"); font-weight: 600 900; font-style: normal; font-display: swap; unicode-range: U+0600-06FF, U+0750-077F, U+0870-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC; }
+@font-face { font-family: "Cormorant Garamond"; src: url("/wp-content/uploads/fonts/amiri-400.woff2") format("woff2"); font-weight: 100 500; font-style: normal; font-display: swap; unicode-range: U+0600-06FF, U+0750-077F, U+0870-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC; }
+@font-face { font-family: "Cormorant Garamond"; src: url("/wp-content/uploads/fonts/amiri-700.woff2") format("woff2"); font-weight: 600 900; font-style: normal; font-display: swap; unicode-range: U+0600-06FF, U+0750-077F, U+0870-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC; }
+/* Arabic letters are joined: no letter spacing (it would break the joins in some browsers) and no italics (Arabic has none) – the Latin MEDLUXLIFE name keeps its spacing */
+html[lang="ar"] body :not(.wp-block-site-title):not(.wp-block-site-title *) { letter-spacing: normal !important; font-style: normal !important; }
+/* header menu: the | separator sits between the items */
+html[dir="rtl"] header .medlux-main-nav .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container > .wp-block-navigation-item + .wp-block-navigation-item::before { margin-right: 0; margin-left: 0.9em; }
+/* language panel opens towards the page, not off the screen */
+html[dir="rtl"] header .trp-block-container .trp-shortcode-overlay { right: auto !important; left: 0 !important; }
+@media (min-width: 1101px) { html[dir="rtl"] header .trp-block-container .trp-shortcode-overlay.is-open { right: auto !important; left: 0 !important; } }
+/* header search field opens over the button / language side */
+html[dir="rtl"] .medlux-header-search .wp-block-search__input { right: auto; left: 100%; }
+@media (min-width: 600px) { html[dir="rtl"] .medlux-header-search .wp-block-search__input { left: auto; right: 100%; margin-left: 0; margin-right: 4px; } }
+html[dir="rtl"] .mlx-sugg { right: auto; left: 0; text-align: right; }
+html[dir="rtl"] .mlx-sugg-all { text-align: right; }
+html[dir="rtl"] main .mlx-sugg { left: auto; right: 0; }
+@media (max-width: 600px) { html[dir="rtl"] header .mlx-sugg { left: 12px; right: 12px; } }
+/* theme styles that align texts to the left: to the right (start of the line) in Arabic */
+html[dir="rtl"] :where(.wp-block-group:is(.is-style-ext-preset--group--natural-1--section-intro-1--7, .is-style-ext-preset--group--natural-1--section-intro-1--8, .is-style-ext-preset--group--natural-1--section-intro-1--16, .is-style-ext-preset--group--natural-1--section-intro-1--24, .is-style-ext-preset--group--natural-1--section-intro-1--29).ext-section-intro) { text-align: right; }
+html[dir="rtl"] .has-text-align-left { text-align: right; }
+html[dir="rtl"] .has-text-align-right { text-align: left; }
+/* phone numbers and WhatsApp links keep their left-to-right order */
+html[dir="rtl"] a[href^="tel:"], html[dir="rtl"] a[href*="wa.me/"] { unicode-bidi: plaintext; }
+/* German legal pages stay left to right */
+html[dir="rtl"] .medlux-legal { direction: ltr; text-align: left; }
+/* lists */
+html[dir="rtl"] .medlux-card ul, html[dir="rtl"] .medlux-row-text ul { padding-left: 0; padding-right: 1.2em; }
+html[dir="rtl"] .medlux-dept-grid .medlux-card ul, html[dir="rtl"] .medlux-partners .medlux-card ul { padding-left: 0; padding-right: 1.1em; }
+html[dir="rtl"] .medlux-form .medlux-consent input[type=checkbox] { margin-right: 0; margin-left: 8px; }
+html[dir="rtl"] .medlux-criteria li { padding: 7px 13px 7px 15px; }
+html[dir="rtl"] .medlux-criteria li::before { margin-right: 0; margin-left: 7px; }
+html[dir="rtl"] .medlux-checklist li { padding: 0 40px 0 0 !important; }
+html[dir="rtl"] .medlux-checklist li::before { left: auto; right: 0; }
+/* "good to know" box: gold edge and icon on the right */
+html[dir="rtl"] .medlux-good-to-know ul { border-left: 1px solid rgba(212, 162, 76, 0.45); border-right: 4px solid #d4a24c; padding: 22px 74px 22px 26px !important; }
+html[dir="rtl"] .medlux-good-to-know ul::before { left: auto; right: 24px; }
+@media (max-width: 560px) {
+  html[dir="rtl"] .medlux-good-to-know ul { padding: 66px 20px 20px !important; }
+  html[dir="rtl"] .medlux-good-to-know ul::before { right: 20px; }
+}
+/* numbered steps with the line (treatment pages "step by step", travel pages) */
+html[dir="rtl"] .medlux-steps--list .medlux-card, html[dir="rtl"] :is(body.page-id-25, body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content .medlux-steps .medlux-card { padding: 22px 84px 22px 0 !important; text-align: right !important; }
+html[dir="rtl"] .medlux-steps--list .medlux-card h3, html[dir="rtl"] :is(body.page-id-25, body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content .medlux-steps .medlux-card :is(h3, p) { text-align: right !important; }
+html[dir="rtl"] .medlux-steps--list .medlux-step-no, html[dir="rtl"] :is(body.page-id-25, body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content .medlux-steps .medlux-step-no { left: auto; right: 0; }
+html[dir="rtl"] .medlux-steps--list .medlux-card:not(:last-child)::after, html[dir="rtl"] :is(body.page-id-25, body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content .medlux-steps .medlux-card:not(:last-child)::after { left: auto; right: 27.5px; }
+html[dir="rtl"] .medlux-steps--list .medlux-card:not(:last-child) p::after, html[dir="rtl"] :is(body.page-id-25, body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content .medlux-steps .medlux-card:not(:last-child) p::after { left: auto; right: 24px; }
+@media (max-width: 560px) {
+  html[dir="rtl"] .medlux-steps--list .medlux-card, html[dir="rtl"] :is(body.page-id-25, body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content .medlux-steps .medlux-card { padding-left: 0 !important; padding-right: 68px !important; }
+  html[dir="rtl"] .medlux-steps--list .medlux-card:not(:last-child)::after, html[dir="rtl"] :is(body.page-id-25, body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content .medlux-steps .medlux-card:not(:last-child)::after { right: 23.5px; }
+  html[dir="rtl"] .medlux-steps--list .medlux-card:not(:last-child) p::after, html[dir="rtl"] :is(body.page-id-25, body.page-id-275, body.page-id-276, body.page-id-277, body.page-id-278, body.page-id-283) .entry-content .medlux-steps .medlux-card:not(:last-child) p::after { right: 20px; }
+}
+/* home "your journey" cards (laptop): number on the right */
+@media (min-width: 1100px) {
+  html[dir="rtl"] body.home .wp-site-blocks .mlx-journeys .ext-grid > .ext-card.ext-card:not(.x):not(.y):has(figure) * { text-align: right !important; }
+  html[dir="rtl"] body.home .wp-site-blocks .mlx-journeys .ext-card-body.ext-card-body.ext-card-body { padding: 0 min(52px, 4.2vw) 0 0 !important; }
+  html[dir="rtl"] body.home .wp-site-blocks .mlx-journeys .ext-card-body > figure.wp-block-image.wp-block-image:not(.x):not(.y):not(.z) { left: auto; right: 0; }
+  html[dir="rtl"] body.home .mlx-journeys .mlx-lang2 .mlx-lang2-card.mlx-lang2-card { padding-left: 36px !important; padding-right: 44px !important; }
+}
+/* <<< RTL-AR END */
