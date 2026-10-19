@@ -9,7 +9,7 @@
 
 ## Ana sayfa
 6. Almanca slogan: „Ihre Gesundheit, neu gedacht. Ihre Reise, neu erlebt.“ – butonlar „BEHANDLUNGEN >“ / „REISEN >“.
-7. Türkçe slogan: „Sağlığınız güvende. Seyahatleriniz göklerde.“ – butonlar „SAĞLIK >“ / „SEYAHAT >“.
+7. Türkçe slogan: „Sağlığınız Güvenle... Seyahatiniz Keyifle...“ – butonlar „SAĞLIK >“ / „SEYAHAT >“.
 8. İki buton her dilde aynı genişlikte (telefonda da).
 9. Almanca metinler daha uzun olduğu için Live Chat butonu dizüstünde 3. adımı kapatıyordu – Almanca metinler kısaltıldı, artık her ekran boyutunda serbest.
 
