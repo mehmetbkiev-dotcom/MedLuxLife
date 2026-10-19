@@ -93,4 +93,26 @@ add_action( 'rest_api_init', function () {
 			return $out;
 		},
 	) );
+	// image alt texts for /de/ and /tr/ (option medlux_alt_i18n_<lang>, read by snippets/alt_i18n.php; written by tools/alt_i18n.py)
+	register_rest_route( 'medlux/v1', '/alts', array(
+		array(
+			'methods'             => 'GET',
+			'permission_callback' => $perm,
+			'callback'            => function ( $r ) {
+				return (array) get_option( 'medlux_alt_i18n_' . strtolower( preg_replace( '/[^a-zA-Z_]/', '', (string) $r['lang'] ) ), array() );
+			},
+		),
+		array(
+			'methods'             => 'POST',
+			'permission_callback' => $perm,
+			'callback'            => function ( $r ) {
+				$map = array();
+				foreach ( (array) $r['map'] as $en => $tr ) {
+					$map[ trim( (string) $en ) ] = sanitize_text_field( (string) $tr );
+				}
+				update_option( 'medlux_alt_i18n_' . strtolower( preg_replace( '/[^a-zA-Z_]/', '', (string) $r['lang'] ) ), $map, false );
+				return array( 'saved' => count( $map ) );
+			},
+		),
+	) );
 } );
