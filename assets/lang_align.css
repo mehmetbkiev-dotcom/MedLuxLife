@@ -1,0 +1,14 @@
+/* >>> LANG-ALIGN START: open language panel – all flags in one column (the current language sat further right, up to 30 px on phones/tablets) and each language under its own name: English, Deutsch, Türkçe, as in the home language bar and the contact form (the list showed "English (UK)", "German", "Turkish"). 2026-10-19 (Anna) */
+header .trp-block-container .trp-shortcode-overlay.is-open .trp-current-language-item__wrapper { justify-content: space-between !important; }
+@media (max-width: 1100px) {
+  header .trp-block-container .trp-shortcode-overlay.is-open .trp-language-item__current { padding-left: 16px !important; margin-left: 4px !important; }
+}
+@media (min-width: 1101px) {
+  header .trp-block-container .trp-shortcode-overlay.is-open .trp-language-item__current { padding-left: 4px !important; }
+  header .trp-block-container .trp-shortcode-overlay.is-open { left: -12px !important; }   /* the 4px above, so the panel still ends 12px from the screen edge */
+}
+header .trp-shortcode-switcher .trp-language-item:is(:has(img[src*="/en_GB."]), :has(img[src*="/de_DE."]), :has(img[src*="/tr_TR."])) .trp-language-item-name { font-size: 0 !important; }
+header .trp-shortcode-switcher .trp-language-item:has(img[src*="/en_GB."]) .trp-language-item-name::after { content: "English"; font-size: 14px; }
+header .trp-shortcode-switcher .trp-language-item:has(img[src*="/de_DE."]) .trp-language-item-name::after { content: "Deutsch"; font-size: 14px; }
+header .trp-shortcode-switcher .trp-language-item:has(img[src*="/tr_TR."]) .trp-language-item-name::after { content: "Türkçe"; font-size: 14px; }
+/* <<< LANG-ALIGN END */
