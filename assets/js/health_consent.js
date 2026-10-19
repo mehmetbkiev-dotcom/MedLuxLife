@@ -20,7 +20,8 @@
       var ok = Array.prototype.every.call(checks, function (c) { return c.checked; });
       if (!ok) {
         e.preventDefault(); e.stopImmediatePropagation();
-        msg.textContent = 'Bitte bestätigen Sie beide Einwilligungen, um eine Gesundheitsanfrage zu senden.';
+        // message in the language of the page
+        var L = (document.documentElement.lang || 'en').slice(0, 2); var M = { en: 'Please confirm both consents to send a health enquiry.', de: 'Bitte bestätigen Sie beide Einwilligungen, um eine Gesundheitsanfrage zu senden.', tr: 'Sağlıkla ilgili bir talep göndermek için lütfen her iki onayı da verin.' }; msg.textContent = M[L] || M.en;
         box.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
     }, true);

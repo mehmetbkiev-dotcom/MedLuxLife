@@ -1,0 +1,4 @@
+/* >>> CONSENT-TR START: contact form – small translation under the German health-data consents (Anna 2026-10-19: the German text stays binding); English on /, Turkish on /tr/ (TranslatePress), hidden on /de/ */
+.wpcf7 p.medlux-consent-tr { font-size: 12.5px !important; line-height: 1.45 !important; font-style: italic; color: #6b6f76; margin: -2px 0 14px 0 !important; text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
+html[lang^="de"] .wpcf7 p.medlux-consent-tr { display: none !important; }
+/* <<< CONSENT-TR END */
