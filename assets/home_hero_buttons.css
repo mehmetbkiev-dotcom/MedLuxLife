@@ -1,0 +1,12 @@
+/* >>> HERO-BUTTONS START: home banner – both buttons the same width (the wider one) in every language (Anna 2026-10-19: Turkish "SAĞLIK" / "SEYAHAT" were different sizes); on phones English and German stack, Turkish stays side by side */
+.home .ext-hero-section .wp-block-cover .wp-block-buttons:has(> .wp-block-buttons) { display: grid !important; grid-template-columns: repeat(2, 1fr); width: fit-content; margin-left: auto !important; margin-right: auto !important; }
+.home .ext-hero-section .wp-block-cover .wp-block-buttons:has(> .wp-block-buttons) > .wp-block-buttons { display: contents !important; }
+.home .ext-hero-section .wp-block-cover .wp-block-buttons:has(> .wp-block-buttons) .wp-block-button { width: 100% !important; margin: 0 !important; }
+.home .ext-hero-section .wp-block-cover .wp-block-buttons:has(> .wp-block-buttons) .wp-block-button__link { width: 100% !important; box-sizing: border-box; text-align: center; justify-content: center; }
+@media (max-width: 599px) {
+  html:not([lang^="tr"]) .home .ext-hero-section .wp-block-cover .wp-block-buttons:has(> .wp-block-buttons) { grid-template-columns: 1fr; }
+}
+@media (max-width: 339px) {
+  .home .ext-hero-section .wp-block-cover .wp-block-buttons:has(> .wp-block-buttons) { grid-template-columns: 1fr; }
+}
+/* <<< HERO-BUTTONS END */
