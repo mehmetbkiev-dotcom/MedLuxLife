@@ -702,5 +702,7 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 
 - 2026-10-19 – Anna: not waiting for Emrah's information; postponed indefinitely (backlog, do not bring up unless Anna asks): days in Türkiye per treatment, Afro-American Hair Transplant / Full Mouth Dental Implants, clinic details for treatment detail pages.
 
+- 2026-10-19 – Emrah (now working with me, writes Turkish → answer in Turkish): Turkish slogan → "Sağlığınız güvende. Seyahatleriniz göklerde." (plural, was "Seyahatiniz"). Checked laptop 1366 and phones 360/390/414: two lines on phones. Screenshot `deliverables/tr_hero_slogan.jpg`.
+
 ### KALICI KURAL (Anna, 2026-10-18): her yeni/ değişen metin otomatik olarak DE + TR çevrilir
 - Sitede eklenen veya değiştirilen her metin, aynı işin parçası olarak hemen Almanca ve Türkçeye çevrilir (onay beklemeden): sayfayı /de/ ve /tr/ altında bir kez aç (TranslatePress yeni metni sözlüğe ekler) → `python3 tools/trp_gap.py de_de` ve `tr_tr` (çevrilmemiş metinleri listeler) → yeni metinleri `content/translations/glossary.md` kurallarına göre çevir, `content/translations/de|tr/` altına kaydet → `python3 tools/trp.py push de_de|tr_tr <dosya>` → `trp_gap.py` ile tekrar kontrol. `[trp_language]` blokları (Ana Sayfa, Health, Contact, About) sayfanın içinde üç dilde düzenlenir. Yeni fotoğrafların alt metinleri: `python3 tools/alt_i18n.py collect` → `content/translations/de|tr/alts.json` içine çeviri → `alt_i18n.py push de_de` / `tr_tr` → `alt_i18n.py check de` / `tr`. Hukuki sayfalar (Almanca, bağlayıcı) çevrilmez.
