@@ -23,14 +23,17 @@
     tr: ['tedavi', 'seyahat organizasyonu'], uk: ['лікування', 'організація подорожі'], ru: ['лечение', 'организация поездки']
   };
   if (rest === '') topic = (hubName[lang] || hubName.en)[subject === 'Travel' ? 1 : 0];
-  var texts = {
-    en: ['Hello,', 'I am interested in ' + topic + '.'],
-    de: ['Guten Tag,', 'ich interessiere mich für ' + topic + '.'],
-    tr: ['Merhaba,', topic + ' ile ilgileniyorum.'],
-    uk: ['Добрий день,', 'мене цікавить ' + topic + '.'],
-    ru: ['Здравствуйте,', 'меня интересует ' + topic + '.']
-  };
-  var t = texts[lang] || texts.en;
+  function phrase(name) {
+    var texts = {
+      en: ['Hello,', 'I am interested in ' + name + '.'],
+      de: ['Guten Tag,', 'ich interessiere mich für ' + name + '.'],
+      tr: ['Merhaba,', name + ' ile ilgileniyorum.'],
+      uk: ['Добрий день,', 'мене цікавить ' + name + '.'],
+      ru: ['Здравствуйте,', 'меня интересует ' + name + '.']
+    };
+    return texts[lang] || texts.en;
+  }
+  var t = phrase(topic);
   var message = t[0] + '\n' + t[1] + '\n\n';
   var links = document.querySelectorAll('a.wp-block-button__link[href*="/contact/"], .medlux-mobile-only a[href*="/contact/"]');
   for (var i = 0; links.length > i; i++) {
@@ -38,6 +41,18 @@
     u.searchParams.set('your-subject', subject);
     if (withTopic) u.searchParams.set('msg', message);
     links[i].href = u.toString();
+  }
+  // cards without their own page ("Free consultation →", tools/card_consult_links.py): the form opens with this card's treatment as the topic
+  var asks = document.querySelectorAll('main .medlux-ask a[href*="/contact/"]');
+  for (var k = 0; asks.length > k; k++) {
+    var card = asks[k].closest('.medlux-card');
+    var head = card ? card.querySelector('h3') : null;
+    var p2 = phrase(head ? head.textContent.replace(/\s+/g, ' ').trim() : topic);
+    var u2 = new URL(asks[k].href, location.href);
+    u2.searchParams.set('your-subject', subject);
+    u2.searchParams.set('msg', p2[0] + '\n' + p2[1] + '\n\n');
+    u2.hash = 'contact';
+    asks[k].href = u2.toString();
   }
   // WhatsApp buttons next to the consultation button: the same greeting + topic as a ready message
   var wa = document.querySelectorAll('main a[href*="wa.me/"]');
