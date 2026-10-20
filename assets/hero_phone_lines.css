@@ -5,4 +5,6 @@
   html .home main .wp-block-post-content > .ext-hero-section .wp-block-cover h1.wp-block-heading { font-size: min(clamp(24.034px, 1.502rem + ((1vw - 3.2px) * 0.998), 40px), 6.3vw) !important; }
   html:is([lang="uk"], [lang="ru"]) .home main .wp-block-post-content > .ext-hero-section .wp-block-cover h1.wp-block-heading { font-size: min(clamp(24.034px, 1.502rem + ((1vw - 3.2px) * 0.998), 40px), 5.6vw) !important; }
 }
+/* laptop too, Ukrainian and Russian only (long slogans covered the doctor in the photo – Anna chose "тільки UK/RU") */
+html:is([lang="uk"], [lang="ru"]) .home main .wp-block-post-content > .ext-hero-section .wp-block-cover h1.wp-block-heading mark:first-of-type::after { content: "\A"; white-space: pre; }
 /* <<< HERO-PHONE-LINES END */
