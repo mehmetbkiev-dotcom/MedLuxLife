@@ -65,7 +65,8 @@ def fetch_all(prefix=''):
 
 def merged(lang):
     m = {}
-    for f in sorted(glob.glob(str(ROOT / 'content/translations' / lang / '*.json'))):
+    # the big lists (xlang_*.json) first, so later files with fixes and new texts override them
+    for f in sorted(glob.glob(str(ROOT / 'content/translations' / lang / '*.json')), key=lambda f: (not pathlib.Path(f).name.startswith('xlang_'), f)):
         m.update(json.load(open(f)))
     return m
 

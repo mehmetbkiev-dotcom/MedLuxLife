@@ -142,4 +142,58 @@ add_action( 'rest_api_init', function () {
 			},
 		),
 	) );
+	// same as Settings → Permalinks → Save (Site Health: "The authorisation header is invalid" → "Flush permalinks")
+	register_rest_route( 'medlux/v1', '/flush-permalinks', array(
+		'methods'             => 'POST',
+		'permission_callback' => $perm,
+		'callback'            => function () {
+			require_once ABSPATH . 'wp-admin/includes/misc.php';
+			require_once ABSPATH . 'wp-admin/includes/file.php';
+			flush_rewrite_rules( true );
+			return array( 'flushed' => true, 'htaccess_writable' => is_writable( get_home_path() . '.htaccess' ) );
+		},
+	) );
+	// read-only: results of the WordPress "Site Health" checks that run inside the admin (Tools → Site Health)
+	register_rest_route( 'medlux/v1', '/site-health', array(
+		'methods'             => 'GET',
+		'permission_callback' => $perm,
+		'callback'            => function () {
+			require_once ABSPATH . 'wp-admin/includes/admin.php';
+			if ( ! class_exists( 'WP_Site_Health' ) ) {
+				require_once ABSPATH . 'wp-admin/includes/class-wp-site-health.php';
+			}
+			$health = WP_Site_Health::get_instance();
+			$out    = array();
+			foreach ( WP_Site_Health::get_tests()['direct'] as $key => $test ) {
+				$r = null;
+				if ( is_string( $test['test'] ) && method_exists( $health, 'get_test_' . $test['test'] ) ) {
+					$r = call_user_func( array( $health, 'get_test_' . $test['test'] ) );
+				} elseif ( is_callable( $test['test'] ) ) {
+					$r = call_user_func( $test['test'] );
+				}
+				if ( is_array( $r ) ) {
+					$out[ $key ] = array( 'status' => $r['status'], 'label' => wp_strip_all_tags( $r['label'] ), 'description' => wp_strip_all_tags( $r['description'] ) );
+				}
+			}
+			// who hooks into the update filters (Site Health: "security and maintenance releases are blocked")
+			global $wp_filter;
+			foreach ( array( 'allow_minor_auto_core_updates', 'auto_update_core', 'automatic_updater_disabled', 'auto_update_plugin' ) as $f ) {
+				if ( empty( $wp_filter[ $f ] ) ) {
+					continue;
+				}
+				foreach ( $wp_filter[ $f ]->callbacks as $prio => $cbs ) {
+					foreach ( $cbs as $cb ) {
+						try {
+							$fn  = $cb['function'];
+							$ref = is_array( $fn ) ? new ReflectionMethod( $fn[0], $fn[1] ) : new ReflectionFunction( $fn );
+							$out['hooks'][ $f ][] = $prio . ' ' . str_replace( ABSPATH, '', (string) $ref->getFileName() ) . ':' . $ref->getStartLine();
+						} catch ( Exception $e ) {
+							$out['hooks'][ $f ][] = $prio . ' ' . ( is_string( $cb['function'] ) ? $cb['function'] : '?' );
+						}
+					}
+				}
+			}
+			return $out;
+		},
+	) );
 } );

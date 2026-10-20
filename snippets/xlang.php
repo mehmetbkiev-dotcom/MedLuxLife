@@ -135,6 +135,7 @@ add_action( 'wp_footer', function () {
 	$cfg   = array(
 		'cur'   => MEDLUX_XLANG,
 		'live'  => medlux_xlang_live(),
+		'order' => array( 'en', 'de', 'uk', 'tr', 'ar', 'ru' ),
 		'path'  => medlux_xlang_path(),
 		'home'  => medlux_xlang_home(),
 		'items' => array(
@@ -196,6 +197,10 @@ add_action( 'wp_footer', function () {
 	?>
 <script>
 (function (C) {
+  function code(a) {
+    var m = (a.getAttribute('href') || '').replace(C.home, '').match(/^\/(de|tr|uk|ru|ar)(?=\/)/);
+    return m ? m[1] : 'en';
+  }
   function item(code) {
     var it = C.items[code], a = document.createElement('a');
     a.className = 'trp-language-item mlx-xlang-item';
@@ -217,6 +222,8 @@ add_action( 'wp_footer', function () {
       if (list) list.insertBefore(item('en'), list.firstChild);
     }
     if (list) C.live.forEach(function (c) { if (c !== C.cur) list.appendChild(item(c)); });
+    // fixed order, Ukrainian and Russian never next to each other (Anna)
+    if (list) [].slice.call(list.querySelectorAll('.trp-language-item')).sort(function (a, b) { return C.order.indexOf(code(a)) - C.order.indexOf(code(b)); }).forEach(function (a) { list.appendChild(a); });
   });
   if (C.cur) {
     var fix = function () {

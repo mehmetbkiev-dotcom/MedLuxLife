@@ -1,0 +1,5 @@
+/* >>> TRAVEL-ROWS-MOBILE START – Travel page on phone/tablet (Anna, 2026-10-20): the rows with the photo on the other side ("medlux-row--reverse": Hotel Reservation, Airport Transfer) were 23 px wider than the screen, so their text and orange buttons were cut off on the right. Cause: the text box is centred (align-self: center) inside the stacked layout and took its natural width. Now it fills the row. */
+@media (max-width: 781px) {
+  .medlux-rows .medlux-row--reverse > .wp-block-column { align-self: stretch !important; width: auto !important; min-width: 0; }
+}
+/* <<< TRAVEL-ROWS-MOBILE END */
