@@ -37,7 +37,7 @@
 }
 @media (max-width: 781px) {
   /* phones: own portrait crop (world map, mosque, bridge, sea, pool; no plane behind the logo, no chair edge) instead of the wide photo */
-  .home main .wp-block-post-content > .ext-hero-section .wp-block-cover { background: url(https://medluxlife.de/wp-content/uploads/2026/10/medluxlife-home-hero-2026t-phone.jpg) 50% 50% / cover no-repeat !important; }
+  .home main .wp-block-post-content > .ext-hero-section .wp-block-cover { background: url(https://medluxlife.de/wp-content/uploads/2026/10/medluxlife-home-hero-2026t-phone-opt.jpg) 50% 50% / cover no-repeat !important; }
   .home main .wp-block-post-content > .ext-hero-section .wp-block-cover img.wp-block-cover__image-background { display: none !important; }
 }
 @media (max-width: 600px) { .home main .wp-block-post-content > .ext-hero-section .wp-block-cover h1.wp-block-heading { padding: 14px 18px !important; } }
