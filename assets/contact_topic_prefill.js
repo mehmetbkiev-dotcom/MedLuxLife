@@ -1,10 +1,12 @@
 (function () {
-  var path = location.pathname.replace(/^\/(de|tr|ru|uk|en)\//, '/');
+  var path = location.pathname.replace(/^\/(de|tr|ru|uk|ar|en)\//, '/');
   // contact page: put the prepared message (with line breaks) into the empty message field
   if (/^\/contact\/?$/.test(path)) {
     var msg = new URLSearchParams(location.search).get('msg');
     var ta = document.querySelector('textarea[name="your-message"]');
-    if (msg) { if (ta) { if (!ta.value) ta.value = msg; } }
+    // Contact Form 7 empties the form on load when the page comes from the page cache: the text is also the field's default, which is cleared again after a successful send
+    if (msg) { if (ta) { if (!ta.value) { ta.defaultValue = msg; ta.value = msg; } } }
+    document.addEventListener('wpcf7mailsent', function (e) { var t = e.target.querySelector('textarea[name="your-message"]'); if (t) t.defaultValue = ''; });
     return;
   }
   var m = path.match(/^\/(health|travel)\/(.*)$/);

@@ -135,10 +135,10 @@
   var q=new URLSearchParams(location.search), area=q.get('enquiry'), topic=q.get('topic');
   if(area){ var tries=0; (function fill(){ var sel=document.querySelector('form.wpcf7-form select[name="your-subject"]');
     if(!sel){ if(++tries<20) setTimeout(fill,250); return; }
-    if(area==='Health'||area==='Travel'){ sel.value=area; sel.dispatchEvent(new Event('change',{bubbles:true})); }
+    if(area==='Health'||area==='Travel'){ for(var o=0;sel.options.length>o;o++){ sel.options[o].defaultSelected=sel.options[o].value===area; } sel.value=area; sel.dispatchEvent(new Event('change',{bubbles:true})); }
     var msg=document.querySelector('form.wpcf7-form textarea[name="your-message"]');
-    if(msg){ if(!msg.value){ if(topic){ var ph={en:'I am interested in: ',de:'Ich interessiere mich für: ',tr:'Şununla ilgileniyorum: ',uk:'Мене цікавить: ',ru:'Меня интересует: ',ar:'أرغب في الاستفسار عن: '}; msg.value=(ph[(document.documentElement.lang||'en').slice(0,2)]||ph.en)+topic+String.fromCharCode(10,10); } } }
-    var lg=q.get('lang'); if(lg){ document.querySelectorAll('form.wpcf7-form input[name^="your-language"]').forEach(function(c){ if(c.value===lg){ if(!c.checked){ c.click(); } } }); } })(); }
+    if(msg){ if(!msg.value){ if(topic){ var ph={en:'I am interested in: ',de:'Ich interessiere mich für: ',tr:'Şununla ilgileniyorum: ',uk:'Мене цікавить: ',ru:'Меня интересует: ',ar:'أرغب في الاستفسار عن: '}; msg.defaultValue=msg.value=(ph[(document.documentElement.lang||'en').slice(0,2)]||ph.en)+topic+String.fromCharCode(10,10); } } }
+    var lg=q.get('lang'); if(lg){ document.querySelectorAll('form.wpcf7-form input[name^="your-language"]').forEach(function(c){ if(c.value===lg){ if(!c.checked){ c.click(); } c.defaultChecked=true; } }); } })(); }
 })();
 </script>
 </div>
