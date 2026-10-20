@@ -1,0 +1,4 @@
+/* >>> FOOTER-LEGAL START – footer legal links (2026-10-20): each link with its translation in brackets stays on one line, e.g. "Impressum (Вихідні дані)" */
+.medlux-footer-legal a { white-space: nowrap; }
+html[dir="rtl"] .medlux-footer-legal a { unicode-bidi: isolate; }
+/* <<< FOOTER-LEGAL END */
