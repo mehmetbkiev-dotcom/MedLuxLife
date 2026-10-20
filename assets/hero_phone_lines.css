@@ -1,0 +1,8 @@
+/* >>> HERO-PHONE-LINES START – home slogan on phones (Anna, 2026-10-20): always two lines – "Your Health, Upgraded." / "Your Journey, Elevated." (the line break comes after the first gold part, in every language) */
+@media (max-width: 600px) {
+  .home main .wp-block-post-content > .ext-hero-section .wp-block-cover h1.wp-block-heading mark:first-of-type::after { content: "\A"; white-space: pre; }
+  /* each half fits on one line: the size of the block (inline clamp) but never wider than the screen allows; Ukrainian and Russian are longer */
+  html .home main .wp-block-post-content > .ext-hero-section .wp-block-cover h1.wp-block-heading { font-size: min(clamp(24.034px, 1.502rem + ((1vw - 3.2px) * 0.998), 40px), 6.3vw) !important; }
+  html:is([lang="uk"], [lang="ru"]) .home main .wp-block-post-content > .ext-hero-section .wp-block-cover h1.wp-block-heading { font-size: min(clamp(24.034px, 1.502rem + ((1vw - 3.2px) * 0.998), 40px), 5.6vw) !important; }
+}
+/* <<< HERO-PHONE-LINES END */

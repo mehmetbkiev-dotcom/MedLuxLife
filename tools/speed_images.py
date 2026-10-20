@@ -56,3 +56,4 @@ for p in pages:
     raw = (r.get('content') or {}).get('raw', '')
     left = [o for o in swap if re.search(r'wp-image-%d\b' % o, raw)]
     print('page', p['id'], 'updated' if not left else f'STILL OLD {left}')
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); import cache_clear; print('page cache cleared:', cache_clear.clear())

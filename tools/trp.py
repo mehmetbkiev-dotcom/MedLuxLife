@@ -87,6 +87,7 @@ def push(lang, fn):
         res = json.loads(subprocess.run(['curl', '-sS', '-X', 'POST', API + 'translate', '-H', 'Content-Type: application/json', '--data-binary', '@-'], input=body, capture_output=True).stdout)
         done += res.get('updated', 0)
     print(lang, 'rows matched', len(items), 'updated', done, '| translations in file', len(tr))
+    import cache_clear; print('page cache cleared:', cache_clear.clear())
 
 
 if __name__ == '__main__':

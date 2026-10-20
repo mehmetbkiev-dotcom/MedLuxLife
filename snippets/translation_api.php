@@ -175,6 +175,13 @@ add_action( 'rest_api_init', function () {
 					$out[ $key ] = array( 'status' => $r['status'], 'label' => wp_strip_all_tags( $r['label'] ), 'description' => wp_strip_all_tags( $r['description'] ) );
 				}
 			}
+			// page cache (WP Super Cache) needs WP_CACHE in wp-config.php and wp-content/advanced-cache.php
+			$out['cache'] = array(
+				'WP_CACHE'          => defined( 'WP_CACHE' ) ? WP_CACHE : 'not defined',
+				'advanced_cache'    => file_exists( WP_CONTENT_DIR . '/advanced-cache.php' ) ? substr( (string) file_get_contents( WP_CONTENT_DIR . '/advanced-cache.php' ), 0, 300 ) : 'missing',
+				'config_writable'   => is_writable( ABSPATH . 'wp-config.php' ),
+				'config_has_cache'  => (bool) preg_match( '/WP_CACHE/', (string) file_get_contents( ABSPATH . 'wp-config.php' ) ),
+			);
 			// who hooks into the update filters (Site Health: "security and maintenance releases are blocked")
 			global $wp_filter;
 			foreach ( array( 'allow_minor_auto_core_updates', 'auto_update_core', 'automatic_updater_disabled', 'auto_update_plugin' ) as $f ) {

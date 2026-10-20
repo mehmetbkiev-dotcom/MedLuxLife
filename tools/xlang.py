@@ -85,6 +85,7 @@ def main():
         out = subprocess.run(['curl', '-sS', '-X', 'POST', W + '/wp-json/medlux/v1/xlang', '-H', 'Content-Type: application/json', '--data-binary', '@-'],
                              input=body, capture_output=True).stdout
         print(lang, out[:300])
+        import cache_clear; print('page cache cleared:', cache_clear.clear())
     elif cmd == 'check':
         lang = sys.argv[2]
         m = merged(lang)
