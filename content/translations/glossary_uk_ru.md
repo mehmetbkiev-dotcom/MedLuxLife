@@ -140,7 +140,7 @@ Source: British English. Each string is one text node (or alt/placeholder/aria-l
 | Emergency Medicine | Невідкладна допомога | Неотложная помощь |
 | Intensive Care Unit | Реанімація (інтенсивна терапія) | Реанимация (интенсивная терапия) |
 | Anaesthesiology and Reanimation | Анестезіологія та реанімація | Анестезиология и реанимация |
-| Mommy Makeover | Мамина пластика (Mommy Makeover) | Мамина пластика (Mommy Makeover) |
+| Mommy Makeover | Комплексна пластика після пологів (Mommy Makeover) | Мамина пластика (Mommy Makeover) |
 | Rhinoplasty | Ринопластика | Ринопластика |
 | Abdominoplasty (Tummy Tuck) | Абдомінопластика | Абдоминопластика |
 | Liposuction | Ліпосакція | Липосакция |

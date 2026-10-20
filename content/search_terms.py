@@ -90,7 +90,7 @@ T = {
 544: ("Notfallmedizin", "Acil Tıp", "Неотложная помощь", "Невідкладна допомога", "emergency notfall acil скорая швидка"),
 545: ("Intensivstation", "Yoğun Bakım", "Реанимация (интенсивная терапия)", "Реанімація (інтенсивна терапія)", "icu intensive care yoğun bakım реанимация реанімація"),
 546: ("Anästhesiologie und Reanimation", "Anesteziyoloji ve Reanimasyon", "Анестезиология и реанимация", "Анестезіологія та реанімація", "anesthesia narkose anestezi наркоз"),
-2293: ("Mommy Makeover", "Anne Estetiği (Mommy Makeover)", "Мамина пластика (Mommy Makeover)", "Мамина пластика (Mommy Makeover)", "mommy makeover nach schwangerschaft geburt anne estetiği doğum sonrası после родов після пологів мама"),
+2293: ("Mommy Makeover", "Anne Estetiği (Mommy Makeover)", "Мамина пластика (Mommy Makeover)", "Комплексна пластика після пологів (Mommy Makeover)", "mommy makeover nach schwangerschaft geburt anne estetiği doğum sonrası после родов після пологів мама"),
 2325: ("Nasenkorrektur (Rhinoplastik)", "Burun Estetiği (Rinoplasti)", "Ринопластика", "Ринопластика", "nose nase burun нос ніс rhino rhinoplasty nasenkorrektur septum"),
 2326: ("Bauchdeckenstraffung", "Karın Germe (Abdominoplasti)", "Абдоминопластика", "Абдомінопластика", "tummy tuck abdominoplasty bauch bauchstraffung karın germe живот живіт подтяжка живота"),
 2327: ("Fettabsaugung", "Liposuction (Yağ Aldırma)", "Липосакция", "Ліпосакція", "liposuction lipo fettabsaugung fett yağ aldırma vaser липосакция ліпосакція жир"),
