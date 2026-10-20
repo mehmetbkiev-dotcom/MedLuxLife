@@ -1,0 +1,3 @@
+/* >>> HUB-BUTTONS START – Health page: the "view all" buttons in the Clinical / Hospital boxes centred in their box (Anna: with left alignment the longer button looked centred and the shorter one further left) */
+.medlux-hub-box .wp-block-buttons { justify-content: center !important; }
+/* <<< HUB-BUTTONS END */

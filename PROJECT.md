@@ -783,3 +783,9 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - Checked by clicking the first "Free consultation" card on the dental page in all 6 languages: subject Health/Gesundheit/Sağlık/Здоров'я/Здоровье/الصحة, message e.g. «Добрий день, мене цікавить Зубне протезування.», «مرحبًا، أرغب في الاستفسار عن علاجات الأسنان التعويضية.». Screenshot `deliverables/contact_prefill_6_languages.jpg`.
 - 2026-10-20 – Anna CONFIRMED the contact form prefill fix ("Free consultation" cards, all 6 languages).
 - 2026-10-20 – Anna: do NOT add العربية to the chat / contact-form language choices for now – ask Emrah, he decides (the order there, UK and RU still next to each other, goes with the same question).
+
+### 2026-10-20 – Health page: "view all" buttons centred + Arabic list arrows (Anna)
+- Anna (laptop, UK): in the two boxes "Clinical Treatments" / "Hospital & Specialist Treatments" one orange button looked further left, the other more central. Cause: both were left-aligned, but the texts have different lengths (UK 355 px vs 288 px in a 368 px box). Fix: new CSS block **HUB-BUTTONS** (`assets/hub_buttons.css`): buttons centred in their box, all languages and screens. Measured on laptop and phone in all 6 languages: both buttons exactly centred.
+- Arabic: the list arrows in these boxes (`.medlux-hub-box li a::after "→"`) pointed right → RTL-AR now draws «←» and the hover nudge goes left. `tools/css_block_toggle.py NAME on` now also updates a block that is already there (replaces it with the current file).
+- Seen, not changed: in RU and DE the first button ("Смотреть все клинические процедуры", "Alle klinischen Behandlungen ansehen") is too long for one line on laptop (the box is 432 px at every laptop width) → two lines; proposal for Anna: shorter RU/DE button texts.
+- Screenshot `deliverables/health_hub_buttons_centered.jpg`. Backups `backups/wp/gs5_before_hub-buttons_on_*`, `gs5_before_rtl-ar_on_*`.

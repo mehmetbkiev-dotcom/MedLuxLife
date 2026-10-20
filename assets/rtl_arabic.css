@@ -61,4 +61,7 @@ html[dir="rtl"] .medlux-steps--list .medlux-card:not(:last-child) p::after, html
   html[dir="rtl"] body.home .wp-site-blocks .mlx-journeys .ext-card-body > figure.wp-block-image.wp-block-image:not(.x):not(.y):not(.z) { left: auto; right: 0; }
   html[dir="rtl"] body.home .mlx-journeys .mlx-lang2 .mlx-lang2-card.mlx-lang2-card { padding-left: 36px !important; padding-right: 44px !important; }
 }
+/* Health page boxes: the list arrows point to the left (forward in Arabic) */
+html[dir="rtl"] .medlux-hub-box li a::after { content: "←"; }
+html[dir="rtl"] .medlux-hub-box li a:hover::after { transform: translateX(-4px); }
 /* <<< RTL-AR END */
