@@ -11,3 +11,11 @@ add_filter( 'wp_calculate_image_sizes', function ( $sizes, $size, $src, $meta, $
 // WordPress emoji script (22 KB on every page): not needed, current browsers show emoji themselves
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
+// Cloudflare Turnstile (spam protection of the contact form, Emrah 2026-10-21): Contact Form 7 loads the Cloudflare script on every page,
+// but only the contact page has a form – other pages do not contact Cloudflare (privacy, speed).
+add_action( 'wp_enqueue_scripts', function () {
+	if ( ! is_page( 26 ) ) {
+		wp_dequeue_script( 'cloudflare-turnstile' );
+	}
+}, 100 );
