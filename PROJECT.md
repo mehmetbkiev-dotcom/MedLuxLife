@@ -789,3 +789,7 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - Arabic: the list arrows in these boxes (`.medlux-hub-box li a::after "→"`) pointed right → RTL-AR now draws «←» and the hover nudge goes left. `tools/css_block_toggle.py NAME on` now also updates a block that is already there (replaces it with the current file).
 - Seen, not changed: in RU and DE the first button ("Смотреть все клинические процедуры", "Alle klinischen Behandlungen ansehen") is too long for one line on laptop (the box is 432 px at every laptop width) → two lines; proposal for Anna: shorter RU/DE button texts.
 - Screenshot `deliverables/health_hub_buttons_centered.jpg`. Backups `backups/wp/gs5_before_hub-buttons_on_*`, `gs5_before_rtl-ar_on_*`.
+- 2026-10-21 – Anna CONFIRMED: Health page buttons centred, Arabic list arrows. Turkish summary for Emrah prepared (Anna forwards it). Still waiting for "так": shorter RU/DE "view all" button texts.
+
+### 2026-10-21 – WP Super Cache: no more e-mails every 10 minutes (Anna)
+- Anna: the admin mailbox got a WP Super Cache e-mail every few minutes. Cause: setting "e-mail me when the garbage collection runs" (`cache_gc_email_me`) was on, and the clean-up of expired cache files runs every 600 s. Switched off via `POST /wp-super-cache/v1/settings {"cache_gc_email_me": 0}` – nothing else changed (compared before/after), cache still on (stats OK). Preload e-mails were already off. Backup `backups/wp/wpsc_settings_before_gc_email_off_*.json`.
