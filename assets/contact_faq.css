@@ -1,0 +1,3 @@
+/* >>> CONTACT-FAQ START – contact page FAQ (Emrah, 2026-10-21): less space between the intro text and the first question. The theme's section style sets 80px with !important, so the block setting has no effect. */
+body.page-id-26 #faq > .ext-section-intro + * { margin-block-start: var(--wp--preset--spacing--40) !important; }
+/* <<< CONTACT-FAQ END */
