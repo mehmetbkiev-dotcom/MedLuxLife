@@ -54,6 +54,13 @@ add_action( 'wp_head', function () {
 	echo '<script type="application/ld+json">' . wp_json_encode( $data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) . "</script>\n";
 }, 5 );
 
+// Google Search Console: ownership check with the HTML tag (Anna, 2026-10-21) – keep it, Google checks it again from time to time.
+add_action( 'wp_head', function () {
+	if ( is_front_page() ) {
+		echo '<meta name="google-site-verification" content="PVpeEAJqENhb_-oCEpMWqLdOVyY2OC_NUWfMLnNx_RA" />' . "\n";
+	}
+}, 1 );
+
 // Sitemap: WordPress' own sitemap lists the English pages only. This adds every page in DE, TR, UK, RU and AR
 // (same address with the language in front, /de/health/ …) as wp-sitemap-languages-<lang>-1.xml.
 // The German legal pages are only listed once (English list), they have no translated version.
