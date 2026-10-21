@@ -4,4 +4,5 @@
 .medlux-form .medlux-privacy-note a { color: #b8862e; font-weight: 600; }
 html[dir="rtl"] .medlux-form .medlux-privacy-note a { unicode-bidi: plaintext; } /* Arabic: "Datenschutzerklärung (…)" keeps its brackets in place */
 .medlux-whatsapp-note { margin-top: 8px !important; font-size: 0.85rem; line-height: 1.5; opacity: 0.75; }
+.medlux-form .wpcf7-turnstile { margin: 6px 0 14px; min-height: 65px; } /* Cloudflare Turnstile box right above the send button (form tag [turnstile]) */
 /* <<< FORM-NOTES END */
