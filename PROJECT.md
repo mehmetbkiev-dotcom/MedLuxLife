@@ -838,3 +838,7 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - Note: the WP Super Cache REST clear empties the cache of the HOST of the request (get_supercache_dir uses HTTP_HOST); whether it also clears medluxlife.de is not proven – keep in mind for "changes not visible" reports.
 - 2026-10-21 – CORRECTION: the index drill-down shows Google found all 6 child sitemaps – languages ar/de/ru/tr/uk read 21 Oct, Success, 115 URLs each; posts-page-1 read 20 Oct, 121 URLs → 696 addresses. The public index was NOT stale; the "121" on the overview row was only not yet updated. No need to submit the language sitemaps separately.
 - 2026-10-21 – Anna had already submitted the 5 language sitemaps separately as well – harmless (Google counts each address once); may stay.
+
+### 2026-10-21 – Contact page FAQ: questions closer together (Emrah: "soruların aralarını biraz daralt")
+- Page 26, both FAQ accordions (`medlux-faq`): blockGap `var:preset|spacing|20` → `0` (like the home FAQ on 10-19). Laptop: questions now 73 px apart instead of ~89 px (home FAQ 61 px – the contact FAQ keeps its separator lines + 12 px padding); phone 71 px (97 px for two-line questions). Same in every language. Backup `backups/wp/page26_before_faq_gap_*`. Screenshot `deliverables/contact_faq_spacing.png`.
+- Not changed: the 25 treatment detail pages (Mommy Makeover, plastic surgery, hair) still use spacing|20 in their FAQ – offered to Emrah.
