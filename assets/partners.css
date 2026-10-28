@@ -1,0 +1,24 @@
+/* >>> PARTNERS START – home: "Our partners" right under the banner (Emrah, 2026-10-28): hospital, clinic, travel partner; building photos, logo badge on the photo, whole card clickable */
+.medlux-home-partners { background: var(--wp--preset--color--tertiary, #f4f2f8); padding: clamp(48px, 6vw, 84px) 20px !important; margin: 0 !important; }
+.medlux-home-partners > .medlux-partners-title { margin: 0 auto !important; }
+.medlux-home-partners > .medlux-partners-intro { max-width: 760px; margin: 14px auto 0 !important; font-size: 1.05rem; line-height: 1.6; color: rgba(11, 6, 32, 0.72); text-align: center !important; text-align-last: center; }
+.medlux-home-partners > .medlux-partner-grid { margin-top: clamp(28px, 4vw, 44px) !important; gap: 28px; }
+.medlux-partner { position: relative; display: flex; flex-direction: column; background: #ffffff; border: 1px solid rgba(212, 162, 76, 0.45); border-radius: 18px; overflow: hidden; padding: 0 26px 24px !important; box-shadow: 0 10px 30px -16px rgba(11, 6, 32, 0.3); transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.medlux-partner > * { margin-top: 0 !important; margin-bottom: 0 !important; }
+.medlux-partner > .medlux-partner-photo { margin: 0 -26px !important; overflow: hidden; }
+.medlux-partner > .medlux-partner-photo img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; transition: transform 0.6s ease; }
+.medlux-partner > .medlux-partner-logo { position: relative; z-index: 1; align-self: flex-start; margin-top: -30px !important; background: #ffffff; border-radius: 12px; padding: 10px 14px; box-shadow: 0 8px 20px -10px rgba(11, 6, 32, 0.35); }
+.medlux-partner > .medlux-partner-logo img { display: block; height: 42px; width: auto; max-width: 220px; object-fit: contain; }
+.medlux-partner > p.medlux-partner-logo--text { height: 42px; display: flex; align-items: center; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #b8862e; }
+.medlux-partner > h3 { margin-top: 18px !important; font-size: clamp(1.25rem, 1.6vw, 1.45rem); line-height: 1.25; }
+.medlux-partner > h3 .medlux-partner-link { color: inherit; text-decoration: none; }
+.medlux-partner > h3 .medlux-partner-link::after { content: ""; position: absolute; inset: 0; z-index: 2; border-radius: inherit; }
+.medlux-partner > h3 + p { margin-top: 10px !important; font-size: 0.97rem; line-height: 1.6; color: rgba(11, 6, 32, 0.8); text-align: left; }
+html[dir="rtl"] .medlux-partner > h3 + p { text-align: right; }
+.medlux-partner > .medlux-partner-meta { margin-top: auto !important; padding-top: 16px; font-size: 0.85rem; font-weight: 600; color: #b8862e; }
+.medlux-partner:hover { transform: translateY(-8px); box-shadow: 0 30px 50px -20px rgba(11, 6, 32, 0.45); }
+.medlux-partner:hover > .medlux-partner-photo img { transform: scale(1.04); }
+.medlux-partner .medlux-partner-link:focus-visible { outline: 2px solid #d4a24c; outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) { .medlux-partner, .medlux-partner > .medlux-partner-photo img { transition: none; } }
+@media (max-width: 781px) { .medlux-home-partners > .medlux-partner-grid { gap: 22px; } .medlux-partner { padding: 0 22px 22px !important; } .medlux-partner > .medlux-partner-photo { margin: 0 -22px !important; } }
+/* <<< PARTNERS END */
