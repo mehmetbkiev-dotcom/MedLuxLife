@@ -76,8 +76,9 @@ def item_start(c, question):
 
 def item_end(c, question):
     s = item_start(c, question)
-    e = c.find('<!-- /wp:accordion-item -->', s)
-    return e + len('<!-- /wp:accordion-item -->\n\n')
+    e = c.find('<!-- /wp:accordion-item -->', s) + len('<!-- /wp:accordion-item -->')
+    # skip only the blank lines after the item: a fixed "+2" cut the accordion's "</div>" in two on the contact page (fixed in no_advance.py, 2026-10-28)
+    return e + len(c[e:]) - len(c[e:].lstrip('\n'))
 
 
 def change(pid, c, link):

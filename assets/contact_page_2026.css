@@ -1,0 +1,19 @@
+/* >>> CONTACT-2026 START: contact page (Anna 2026-10-28) */
+/* all white like the other pages – the theme's section style painted the form and FAQ sections light blue (#f6f8fd) */
+body.page-id-26 .entry-content > .wp-block-group.alignfull.has-background-background-color { background-color: #fff !important; }
+/* preferred-language buttons in one row ("Русский" wrapped on /uk/contact/); text and side padding shrink with the form width, narrow forms (phones) wrap into even rows */
+.medlux-lang-pick { container-type: inline-size; }
+.medlux-lang-pick .wpcf7-checkbox { flex-wrap: nowrap; gap: 6px; }
+.medlux-lang-pick .wpcf7-list-item { display: flex; flex: 1 1 auto; min-width: 0; }
+.medlux-lang-pick .wpcf7-list-item label { width: 100%; box-sizing: border-box; margin: 0 !important; justify-content: center; white-space: nowrap; padding: 8px clamp(6px, 2.4cqi, 18px); font-size: clamp(0.75rem, 2.75cqi, 0.95rem); }
+@container (max-width: 399px) {
+  .medlux-lang-pick .wpcf7-checkbox { flex-wrap: wrap; gap: 8px; }
+  .medlux-lang-pick .wpcf7-list-item { flex: 0 1 auto; }
+  .medlux-lang-pick .wpcf7-list-item label { padding: 8px 11px; font-size: 0.88rem; }
+}
+/* send button: always visible in our colours, whatever other styles load (Anna did not see it on /uk/contact/ while logged in) */
+.medlux-form p:has(> input.wpcf7-submit) { display: block !important; visibility: visible !important; opacity: 1 !important; }
+.medlux-form input.wpcf7-submit { display: inline-block !important; visibility: visible !important; opacity: 1 !important; -webkit-appearance: none; appearance: none; background: #d4a24c !important; color: #0b0620 !important; -webkit-text-fill-color: #0b0620; }
+.medlux-form input.wpcf7-submit:hover { background: #e8b75c !important; }
+.medlux-form input.wpcf7-submit:disabled { opacity: .5 !important; }
+/* <<< CONTACT-2026 END */

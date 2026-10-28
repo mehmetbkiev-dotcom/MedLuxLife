@@ -167,7 +167,10 @@ def build(t, card, stages, vocab=None):
         '<!-- /wp:button --></div>\n<!-- /wp:buttons -->',
         p('The information on this page is for general guidance only and does not replace a medical consultation. Suitability for any treatment is assessed individually by a qualified doctor.', 'medlux-disclaimer'),
     ]))
-    return '\n\n'.join(sections) + '\n'
+    # "no advance payment": line in the call-to-action box + first FAQ question (Anna 2026-10-28, tools/no_advance.py)
+    sys.path.insert(0, str(ROOT / 'tools'))
+    import no_advance
+    return no_advance.add_faq(no_advance.add_line('\n\n'.join(sections) + '\n'))
 
 
 def curl(*args, data=None):

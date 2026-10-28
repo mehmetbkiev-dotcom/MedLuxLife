@@ -124,9 +124,12 @@ def chips(names):
     return ul(items, 'medlux-chips')
 
 
+sys.path.insert(0, str(ROOT / 'tools'))
+from no_advance import NOPAY_P  # noqa: E402  the "no advance payment" line (Anna 2026-10-28)
 CTA = ('<!-- wp:group {"className":"medlux-cta","layout":{"type":"constrained"}} -->\n<div class="wp-block-group medlux-cta">'
        + h('Plan your treatment with confidence')
        + para('Every treatment begins with a personal, no-obligation consultation. Contact us and we will get back to you as soon as possible.')
+       + NOPAY_P
        + '<!-- wp:buttons -->\n<div class="wp-block-buttons"><!-- wp:button {"className":"medlux-btn-primary"} -->\n<div class="wp-block-button medlux-btn-primary"><a class="wp-block-button__link wp-element-button" href="https://medluxlife.de/contact/">Request a Free Consultation</a></div>\n<!-- /wp:button -->\n\n'
        '<!-- wp:button {"className":"medlux-btn-whatsapp"} -->\n<div class="wp-block-button medlux-btn-whatsapp"><a class="wp-block-button__link wp-element-button" href="https://wa.me/380979092326" target="_blank" rel="noreferrer noopener">WhatsApp</a></div>\n<!-- /wp:button --></div>\n<!-- /wp:buttons -->\n\n'
        + para('The information on this page is for general guidance only and does not replace a medical consultation. Suitability for any treatment is assessed individually by a qualified doctor.', 'medlux-disclaimer')
