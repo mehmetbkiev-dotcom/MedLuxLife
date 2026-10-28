@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Partner pages under /partners/ (Emrah 2026-10-28: header "Partners" after About Us → Hospital / Clinic / Tourism;
-Hospital → Our hospitals + Our doctors, Clinic → Our clinic + Our doctors; doctor pages with hospital / department filters and
+Hospital → Hospitals + Doctors, Clinic → Clinic + Doctors (no "Our": they are the partners' doctors, Emrah 2026-10-28); doctor pages with hospital / department filters and
 name search like Yeditepe's own doctor list; one look for the doctors of both partners).
 Content: facts from the partners' own websites, rewritten factually (HWG: no superlatives, no promises, no before/after);
 doctor data in content/partners/doctors.json (tools/partners_data.py + tools/partners_photos.py), photos in content/partners/media.json.
@@ -263,9 +263,9 @@ def build():
         'and your travel is booked with our travel partner – we coordinate everything in between and remain your contact throughout.', Y_IMG)
         + section('Our partners', grid([
             photo_card(Y_IMG, 'Yeditepe University Hospitals', 'The hospitals of Yeditepe University in Istanbul – Kozyatağı and Koşuyolu hospitals, a dental hospital and an eye centre – for hospital and specialist treatments.',
-                       [('Our hospitals', url(Y, 'hospitals')), ('Our doctors', Y_DOCS)], label='Hospital'),
+                       [('Hospitals', url(Y, 'hospitals')), ('Doctors', Y_DOCS)], label='Hospital'),
             photo_card(C_IMG, 'Celyxmed', 'Clinic in Ataşehir, Istanbul, for plastic surgery, hair transplantation, dental treatments and medical aesthetics.',
-                       [('Our clinic', url(C, 'clinic')), ('Our doctors', url(C, 'doctors'))], label='Clinic'),
+                       [('Clinic', url(C, 'clinic')), ('Doctors', url(C, 'doctors'))], label='Clinic'),
             photo_card(T_IMG, 'Travel partner', 'A tour operator based in Germany books your flights, hotels, transfers and holiday packages. We will introduce our travel partner here soon.',
                        [('Learn more', url('travel-partner'))], label='Tourism')], min_col='15rem'))
         + section('How we work with our partners', grid([
@@ -278,12 +278,12 @@ def build():
     P[('partners', Y)] = ('Yeditepe University Hospitals', intro(
         'Yeditepe University Hospitals are the hospitals of Yeditepe University, a foundation university in Istanbul founded in 1996. '
         'As university hospitals, they combine patient care with teaching and research. MedLuxLife coordinates hospital and specialist treatments with Yeditepe University Hospitals.', Y_IMG)
-        + section('Our hospitals', grid(hosp_cards))
-        + section('Our doctors', para('More than 170 doctors and specialists of Yeditepe University Hospitals – filter by hospital or department and open their profiles.')
-                  + buttons([('Meet our doctors', Y_DOCS, 'medlux-btn-primary')]))
+        + section('Hospitals', grid(hosp_cards))
+        + section('Doctors', para('More than 170 doctors and specialists of Yeditepe University Hospitals – filter by hospital or department and open their profiles.')
+                  + buttons([('Meet the doctors', Y_DOCS, 'medlux-btn-primary')]))
         + stay_section('hospital') + CTA, ('partners',))
 
-    P[('partners', Y, 'hospitals')] = ('Our hospitals', intro(
+    P[('partners', Y, 'hospitals')] = ('Hospitals', intro(
         'Yeditepe University Hospitals have several locations in Istanbul. Your treatment takes place at the hospital where the department and the doctor for your treatment are based – we coordinate the appointment for you.', mi('s_card'))
         + section('Hospitals of Yeditepe University', grid(hosp_cards)) + CTA, ('partners', Y))
 
@@ -322,7 +322,7 @@ def build():
         + addr('Balmumcu Mah. Şakir Kesebir Cad. Gazi Umur Paşa Sok. No: 28, 34349 Beşiktaş / İstanbul',
                'Fulya Darphane metro station (M7) is about a 7-minute walk away, Gayrettepe (M2) about 9 minutes.')
         + doc_btn('eye', 'Yeditepe University Eye Center') + stay_section('hospital') + CTA, ('partners', Y, 'hospitals'))
-    P[('partners', Y, 'doctors')] = ('Our doctors', para(
+    P[('partners', Y, 'doctors')] = ('Doctors', para(
         'Doctors and specialists of Yeditepe University Hospitals. Filter by hospital or department, or search by name, and open a profile for education and areas of interest.', 'medlux-lead medlux-doc-lead')
         + doctors_html('yeditepe')
         + para('Information as published by Yeditepe University Hospitals. Which doctor treats you is agreed during your consultation.', 'medlux-doc-source') + CTA, ('partners', Y))
@@ -340,10 +340,10 @@ def build():
         + section('Certificates', ul(['USHAŞ certificate for international health tourism (Turkish Ministry of Health)', 'ISO 9001:2015 – quality management system',
                                       'ISO 13485:2016 – quality management for medical devices'], 'medlux-facts'))
         + section('Clinic and doctors', grid([
-            photo_card(mi('c1'), 'Our clinic', 'Location, facilities and photos of the Celyxmed clinic in Ataşehir.', [('Learn more', url(C, 'clinic'))]),
-            photo_card(mi('c3'), 'Our doctors', 'The doctors and dentists of Celyxmed with their education and areas of interest.', [('Meet our doctors', url(C, 'doctors'))])]))
+            photo_card(mi('c1'), 'Clinic', 'Location, facilities and photos of the Celyxmed clinic in Ataşehir.', [('Learn more', url(C, 'clinic'))]),
+            photo_card(mi('c_team'), 'Doctors', 'The doctors and dentists of Celyxmed with their education and areas of interest.', [('Meet the doctors', url(C, 'doctors'))])]))
         + stay_section('clinic') + CTA, ('partners',))
-    P[('partners', C, 'clinic')] = ('Our clinic', intro(
+    P[('partners', C, 'clinic')] = ('Clinic', intro(
         'The Celyxmed clinic is located in Ataşehir, on the Asian side of Istanbul. Consultations, dental treatments, hair transplants and medical aesthetic treatments take place here; surgical procedures are performed in JCI-accredited partner hospitals.', mi('c1'))
         + section('Facilities', ul(['Treatment rooms for medical aesthetics and dental treatment units',
                                     '3D imaging (VECTRA H2) for planning aesthetic treatments and HairMetrix™ hair analysis',
@@ -351,10 +351,10 @@ def build():
                                     'A lounge that also serves as a library', 'Valet service and on-site parking'], 'medlux-facts')
                   + gallery(['c2', 'c3', 'c4']))
         + section('Address', para('Atatürk Mahallesi, Girne Caddesi No: 31, 34758 Ataşehir / İstanbul', 'medlux-address'))
-        + section('Our doctors', para('The doctors and dentists of Celyxmed with their education and areas of interest.')
-                  + buttons([('Meet our doctors', url(C, 'doctors'), 'medlux-btn-primary')]))
+        + section('Doctors', para('The doctors and dentists of Celyxmed with their education and areas of interest.')
+                  + buttons([('Meet the doctors', url(C, 'doctors'), 'medlux-btn-primary')]))
         + CTA, ('partners', C))
-    P[('partners', C, 'doctors')] = ('Our doctors', para(
+    P[('partners', C, 'doctors')] = ('Doctors', para(
         'The doctors and dentists of the Celyxmed clinic. Filter by department or search by name, and open a profile for education and areas of interest.', 'medlux-lead medlux-doc-lead')
         + doctors_html('celyxmed')
         + para('Information as published by Celyxmed. Which doctor treats you is agreed during your consultation.', 'medlux-doc-source') + CTA, ('partners', C))
