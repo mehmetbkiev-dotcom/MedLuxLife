@@ -77,7 +77,7 @@ html[dir="rtl"] .mlx-doc-close { margin: 10px 0 0 10px; }
 html[dir="rtl"] .mlx-doc-title { unicode-bidi: plaintext; }
 html[dir="rtl"] .mlx-doc-dlg-head .mlx-doc-title, html[dir="rtl"] .mlx-doc-dlg-head .mlx-doc-name { text-align: right !important; }
 /* doctor's own page */
-.mlx-doc-detail { max-width: 980px; margin: 8px auto 0; }
+.mlx-doc-detail { max-width: 980px; margin: 64px auto 0 !important; }  /* same distance below the title banner as the other pages (Anna 2026-10-28) */
 .mlx-dd-head { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 40px; align-items: start; padding: 28px; background: #ffffff; border: 1px solid rgba(212, 162, 76, 0.4); border-radius: 22px; box-shadow: 0 16px 36px -24px rgba(11, 6, 32, 0.45); }
 .mlx-dd-photo { position: sticky; top: calc(96px + var(--wp-admin--admin-bar--height, 0px)); display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; border-radius: 16px; background: #efedf4; }
 .mlx-dd-info { padding-top: 6px; }
@@ -101,6 +101,7 @@ html[dir="rtl"] .mlx-doc-dlg-head .mlx-doc-title, html[dir="rtl"] .mlx-doc-dlg-h
 .mlx-dd-source { margin: 10px 0 0 !important; font-size: 0.85rem; color: rgba(11, 6, 32, 0.6); text-align: center !important; text-align-last: center; }
 html[dir="rtl"] .mlx-dd-info .mlx-doc-title { unicode-bidi: plaintext; text-align: right !important; }
 @media (max-width: 781px) {
+  .mlx-doc-detail { margin-top: 40px !important; }
   .mlx-dd-head { grid-template-columns: 1fr; gap: 18px; padding: 16px; }
   .mlx-dd-photo { position: static; max-width: 240px; margin: 0 auto; }
   .mlx-dd-info > .mlx-doc-title, .mlx-dd-info > .mlx-doc-name, .mlx-dd-info > .mlx-doc-depts, .mlx-dd-info > .mlx-doc-hosp, .mlx-dd-info > .mlx-doc-role { text-align: center !important; }
