@@ -17,7 +17,7 @@ STEP_HOSPITAL = 'We coordinate your appointments, suggest hotels near your hospi
 CLINIC_HUBS = {258, 260, 261, 263, 264, 265, 266, 267}
 
 Q1 = ('Where will I stay during my treatment?',
-      'For clinic treatments you stay at the five-star Dedeman Kozyatağı hotel in Istanbul. Your treatment package includes accommodation for you and one companion, with breakfast. For hospital treatments we suggest hotels of different categories close to your hospital, and you choose the one that suits you.')
+      'For clinic treatments you stay at the five-star Dedeman Kozyatağı hotel in Istanbul. Your treatment package includes accommodation for you and one companion, with breakfast. For hospital treatments, accommodation is not included: you choose your hotel yourself, and on request we suggest hotels of different categories close to your hospital.')
 Q2 = ('How do I get to the hotel, the clinic or the hospital?',
       'All transfers during your treatment – from the airport to your hotel, to the clinic or hospital and back – are made in a VIP vehicle.')
 Q3 = ('Do I have to pay in advance for my treatment?',
@@ -53,19 +53,19 @@ def section(intro, c1, c2):
             '<div class="wp-block-group medlux-treatment-grid medlux-stay-grid">%s%s</div>\n<!-- /wp:group --></div>\n<!-- /wp:group -->\n\n') % (intro, c1, c2)
 
 
-DEDEMAN, DEDEMAN_ALT = 3770, 'Room at the five-star Dedeman Kozyatağı hotel in Istanbul'  # real room photo from Anna – only on the Celyxmed page (build_partners.py), not on the clinical treatments hub (Anna 2026-10-28)
+DEDEMAN, DEDEMAN_ALT = 3770, 'Room at the five-star Dedeman Kozyatağı hotel in Istanbul'  # real room photo from Anna (2026-10-28) – clinic treatments = Celyxmed: hotel + transfers included; hospital: only transfers included
 HOTEL_ALT = 'Hotel room with a large bed and a city view at night (symbolic image)'
 VITO_ALT = 'Black VIP vehicle for patient transfers in front of a modern building'
 SEC_CLINIC = section('For clinic treatments, accommodation and transfers are part of your treatment package.',
-                     card(HOTEL, 'medluxlife-hotel-room-symbolic.jpg', HOTEL_ALT, 'Five-star hotel: Dedeman Kozyatağı',
+                     card(DEDEMAN, 'medluxlife-dedeman-kozyatagi-room.jpg', DEDEMAN_ALT, 'Five-star hotel: Dedeman Kozyatağı',
                           'You stay at the five-star Dedeman Kozyatağı hotel in Istanbul. Your treatment package includes accommodation for you and one companion, with breakfast.'),
                      card(VITO, 'medluxlife-vip-transfer-vehicle.jpg', VITO_ALT, 'VIP Transfer Service',
                           'All transfers – from the airport to your hotel, between the hotel and the clinic, and back to the airport – are made in a VIP vehicle.'))
-SEC_HOSPITAL = section('For hospital treatments, you choose your hotel and we arrange your transfers.',
+SEC_HOSPITAL = section('For hospital treatments, your transfers are included. You choose your hotel yourself – we are happy to help you find one.',
                        card(HOTEL, 'medluxlife-hotel-room-symbolic.jpg', HOTEL_ALT, 'Hotels near your hospital',
-                            'We suggest hotels of different categories close to the hospital where you are treated. You choose the hotel that suits your wishes.'),
+                            'Accommodation is not included in hospital treatments. You choose your hotel yourself – on request, we suggest hotels of different categories close to the hospital where you are treated.'),
                        card(VITO, 'medluxlife-vip-transfer-vehicle.jpg', VITO_ALT, 'VIP Transfer Service',
-                            'All transfers – from the airport to your hotel, between the hotel and the hospital, and back to the airport – are made in a VIP vehicle.'))
+                            'Your transfers are included: from the airport to your hotel, between the hotel and the hospital, and back to the airport – in a VIP vehicle.'))
 
 
 def item_start(c, question):

@@ -136,14 +136,7 @@ CTA = ('<!-- wp:group {"className":"medlux-cta","layout":{"type":"constrained"}}
 def stay_section(kind):
     sys.path.insert(0, str(ROOT / 'tools'))
     import stay_transfer
-    if kind != 'clinic':
-        return stay_transfer.SEC_HOSPITAL
-    # Celyxmed page only: the real Dedeman Kozyatağı room photo (Anna 2026-10-28)
-    sec = stay_transfer.SEC_CLINIC
-    d = media_info(stay_transfer.DEDEMAN)
-    sec = sec.replace('"id":%d,' % stay_transfer.HOTEL, '"id":%d,' % d[0], 1).replace('wp-image-%d"' % stay_transfer.HOTEL, 'wp-image-%d"' % d[0], 1)
-    sec = re.sub(r'<img src="[^"]+" alt="[^"]*" class="wp-image-%d"' % d[0], '<img src="%s" alt="%s" class="wp-image-%d"' % (d[1], E(d[2], True), d[0]), sec, count=1)
-    return sec
+    return stay_transfer.SEC_CLINIC if kind == 'clinic' else stay_transfer.SEC_HOSPITAL
 
 
 # ---------- doctors component ----------
