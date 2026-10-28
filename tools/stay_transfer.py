@@ -9,7 +9,7 @@ Backups in backups/wp/stay/. usage: stay_transfer.py [--dry]"""
 import json, pathlib, re, subprocess, sys, time
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 W = 'https://medluxlife-6j8sz55bpn.live-website.com/wp-json/wp/v2/pages/'
-HOTEL, VITO = 2605, 2604
+HOTEL, VITO = 2605, 2951
 UP = 'https://medluxlife.de/wp-content/uploads/2026/10/'
 OLD_STEP = 'We coordinate your appointments, hotel and airport transfers, so you can focus on your treatment.'
 STEP_CLINIC = 'We coordinate your appointments, your stay at the five-star Dedeman Kozyatağı and your transfers in a black Mercedes Vito VIP, so you can focus on your treatment.'
@@ -54,16 +54,16 @@ def section(intro, c1, c2):
 
 
 HOTEL_ALT = 'Hotel room with a large bed and a city view at night (symbolic image)'
-VITO_ALT = 'Black Mercedes Vito VIP vehicle for patient transfers'
+VITO_ALT = 'Black Mercedes van for VIP transfers in front of a modern building'
 SEC_CLINIC = section('For clinic treatments, accommodation and transfers are part of your treatment package.',
                      card(HOTEL, 'medluxlife-hotel-room-symbolic.jpg', HOTEL_ALT, 'Five-star hotel: Dedeman Kozyatağı',
-                          'You stay at the five-star Dedeman Kozyatağı hotel in Istanbul. Your treatment package includes accommodation for you and one companion, with breakfast.', 'Symbolic image'),
-                     card(VITO, 'medluxlife-transfer-black-mercedes-vito.jpg', VITO_ALT, 'Transfers in a black Mercedes Vito VIP',
+                          'You stay at the five-star Dedeman Kozyatağı hotel in Istanbul. Your treatment package includes accommodation for you and one companion, with breakfast.'),
+                     card(VITO, 'medluxlife-vip-transfer-mercedes-side.jpg', VITO_ALT, 'VIP Transfer Service',
                           'All transfers – from the airport to your hotel, between the hotel and the clinic, and back to the airport – are made in a black Mercedes Vito VIP vehicle.'))
 SEC_HOSPITAL = section('For hospital treatments, you choose your hotel and we arrange your transfers.',
                        card(HOTEL, 'medluxlife-hotel-room-symbolic.jpg', HOTEL_ALT, 'Hotels near your hospital',
-                            'We suggest hotels of different categories close to the hospital where you are treated. You choose the hotel that suits your wishes.', 'Symbolic image'),
-                       card(VITO, 'medluxlife-transfer-black-mercedes-vito.jpg', VITO_ALT, 'Transfers in a black Mercedes Vito VIP',
+                            'We suggest hotels of different categories close to the hospital where you are treated. You choose the hotel that suits your wishes.'),
+                       card(VITO, 'medluxlife-vip-transfer-mercedes-side.jpg', VITO_ALT, 'VIP Transfer Service',
                             'All transfers – from the airport to your hotel, between the hotel and the hospital, and back to the airport – are made in a black Mercedes Vito VIP vehicle.'))
 
 

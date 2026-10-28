@@ -10,4 +10,6 @@
   header .medlux-main-nav .wp-block-navigation__container > .wp-block-navigation-item > .wp-block-navigation-item__content,
   header .medlux-main-nav .wp-block-navigation__container > .wp-block-navigation-item > .wp-block-navigation-submenu__toggle { letter-spacing: 0.06em !important; font-size: 13.5px; }
 }
+/* partner names in the Partners dropdown on one line (Emrah: "Hospital/Clinic" → the partners' names) */
+header .medlux-main-nav .wp-block-navigation__submenu-container a.wp-block-navigation-item__content[href*="/partners/"] { white-space: nowrap; }
 /* <<< HEADER-PARTNERS END */
