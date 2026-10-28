@@ -1,0 +1,13 @@
+/* >>> HEADER-PARTNERS START – header still fits on laptops after the "Partners" menu item (Emrah, 2026-10-28): between 1101 and 1700 px the side columns take only what they need (menu stays in the middle column), the site name next to the logo is hidden up to 1500 px and the menu is set a little tighter */
+@media (min-width: 1101px) and (max-width: 1700px) {
+  header .medlux-sticky-header > .wp-block-group.alignwide { grid-template-columns: auto minmax(0, 1fr) auto !important; }
+  header .medlux-main-nav .wp-block-navigation__container { gap: 0.7em !important; }
+  header .medlux-main-nav .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container > .wp-block-navigation-item + .wp-block-navigation-item::before { margin-right: 0.7em; }
+  html[dir="rtl"] header .medlux-main-nav .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container > .wp-block-navigation-item + .wp-block-navigation-item::before { margin-right: 0; margin-left: 0.7em; }
+}
+@media (min-width: 1101px) and (max-width: 1500px) {
+  header .wp-block-site-title { display: none !important; }
+  header .medlux-main-nav .wp-block-navigation__container > .wp-block-navigation-item > .wp-block-navigation-item__content,
+  header .medlux-main-nav .wp-block-navigation__container > .wp-block-navigation-item > .wp-block-navigation-submenu__toggle { letter-spacing: 0.06em !important; font-size: 13.5px; }
+}
+/* <<< HEADER-PARTNERS END */

@@ -78,9 +78,21 @@ def backup(lang):
     print('backup', p.name, len(data))
 
 
+def loose(s):
+    s = html.unescape(s)
+    for a, b in (('\u2013', '-'), ('\u2014', '-'), ('\u2018', "'"), ('\u2019', "'"), ('\u201c', '"'), ('\u201d', '"'), ('\u2026', '...'), ('\u00d7', 'x')):
+        s = s.replace(a, b)
+    return re.sub(r'\s+', ' ', s).strip()
+
+
 def push(lang, fn):
     tr = json.load(open(fn))
-    items = [{'id': int(r['id']), 'translated': tr[r['original']]} for r in rows(lang) if r['original'] in tr and tr[r['original']].strip()]
+    lk = {loose(k): v for k, v in tr.items()}
+    items = []
+    for r in rows(lang):  # exact key first; else the texturized form WordPress stored (&#8211; for " - ", &amp;, curly quotes)
+        t = tr.get(r['original']) or lk.get(loose(r['original']))
+        if t and t.strip():
+            items.append({'id': int(r['id']), 'translated': t})
     done = 0
     for i in range(0, len(items), 200):
         body = json.dumps({'lang': lang, 'items': items[i:i + 200]}).encode()
