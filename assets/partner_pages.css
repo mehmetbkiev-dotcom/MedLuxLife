@@ -20,14 +20,15 @@ html[dir="rtl"] .medlux-facts li { padding: 12px 44px 12px 16px; }
 /* doctors */
 .medlux-doc-lead { max-width: 860px; margin-inline: auto !important; text-align: center !important; text-align-last: center; }
 .medlux-doc-source { max-width: 860px; margin: 18px auto 0 !important; font-size: 0.85rem; color: rgba(11, 6, 32, 0.6); text-align: center !important; text-align-last: center; }
-.mlx-doctors { max-width: var(--wp--style--global--wide-size, 1200px); margin: 28px auto 0; }
-.mlx-doc-filters { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; justify-content: center; padding: 16px; background: #f6f4fa; border: 1px solid rgba(212, 162, 76, 0.35); border-radius: 18px; }
-.mlx-doc-f { display: flex; flex-direction: column; gap: 4px; flex: 1 1 220px; max-width: 340px; }
+.mlx-doctors { max-width: var(--wp--style--global--wide-size, 1200px); margin: 64px auto 0 !important; }  /* same space below the banner as the other pages */
+/* filters without a frame, centred (Anna 2026-10-28: no intro text, no box around the filters) */
+.mlx-doc-filters { position: relative; display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-end; justify-content: center; padding: 0; background: none; border: 0; }
+.mlx-doc-f { display: flex; flex-direction: column; gap: 4px; flex: 0 1 320px; min-width: 0; }
 .mlx-doc-l { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(11, 6, 32, 0.6); }
 .mlx-doc-f select, .mlx-doc-f input { width: 100%; box-sizing: border-box; height: 44px; padding: 0 14px; font: inherit; font-size: 0.95rem; color: #0b0620; background: #ffffff; border: 1px solid rgba(11, 6, 32, 0.18); border-radius: 999px; }
 .mlx-doc-f select:focus, .mlx-doc-f input:focus { outline: none; border-color: #d4a24c; box-shadow: 0 0 0 3px rgba(212, 162, 76, 0.25); }
-.mlx-doc-reset { height: 44px; padding: 0 18px; font: inherit; font-size: 0.85rem; color: #0b0620; background: transparent; border: 1px dashed rgba(11, 6, 32, 0.3); border-radius: 999px; cursor: pointer; }
-.mlx-doc-count { margin: 16px 0 12px !important; text-align: center !important; text-align-last: center; font-size: 0.9rem; color: rgba(11, 6, 32, 0.65); }
+.mlx-doc-reset { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 4px; padding: 2px 6px; font: inherit; font-size: 0.82rem; color: #b8862f; background: none; border: 0; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.mlx-doc-count { margin: 30px 0 14px !important; text-align: center !important; text-align-last: center; font-size: 0.9rem; color: rgba(11, 6, 32, 0.65); }
 .mlx-doc-n { font-weight: 700; color: #0b0620; }
 /* fixed columns per screen size (5 / 3 / 2) and 30 cards per step (assets/doctors.js) → full rows; a short last row (filters, Celyxmed) is centred – Emrah 2026-10-28: no empty space on the right */
 .mlx-doc-grid { --cols: 5; --gap: 22px; list-style: none; margin: 0 !important; padding: 0 !important; display: flex; flex-wrap: wrap; justify-content: center; gap: var(--gap); }
@@ -101,6 +102,8 @@ html[dir="rtl"] .mlx-doc-dlg-head .mlx-doc-title, html[dir="rtl"] .mlx-doc-dlg-h
 .mlx-dd-source { margin: 10px 0 0 !important; font-size: 0.85rem; color: rgba(11, 6, 32, 0.6); text-align: center !important; text-align-last: center; }
 html[dir="rtl"] .mlx-dd-info .mlx-doc-title { unicode-bidi: plaintext; text-align: right !important; }
 @media (max-width: 781px) {
+  .mlx-doctors { margin-top: 40px !important; }
+  .mlx-doc-f { flex-basis: 100%; }
   .mlx-doc-detail { margin-top: 40px !important; }
   .mlx-dd-head { grid-template-columns: 1fr; gap: 18px; padding: 16px; }
   .mlx-dd-photo { position: static; max-width: 240px; margin: 0 auto; }

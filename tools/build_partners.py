@@ -323,9 +323,7 @@ def build():
         + addr('Balmumcu Mah. Şakir Kesebir Cad. Gazi Umur Paşa Sok. No: 28, 34349 Beşiktaş / İstanbul',
                'Fulya Darphane metro station (M7) is about a 7-minute walk away, Gayrettepe (M2) about 9 minutes.')
         + doc_btn('eye', 'Yeditepe University Eye Center') + stay_section('hospital') + CTA, ('partners', Y, 'hospitals'))
-    P[('partners', Y, 'doctors')] = ('Doctors', para(
-        'Doctors and specialists of Yeditepe University Hospitals. Filter by hospital or department, or search by name, and open a profile for education and areas of interest.', 'medlux-lead medlux-doc-lead')
-        + doctors_html('yeditepe')
+    P[('partners', Y, 'doctors')] = ('Doctors', doctors_html('yeditepe')
         + para('Information as published by Yeditepe University Hospitals. Which doctor treats you is agreed during your consultation.', 'medlux-doc-source') + CTA, ('partners', Y))
 
     # Celyxmed
@@ -355,9 +353,7 @@ def build():
         + section('Doctors', para('The doctors and dentists of Celyxmed with their education and areas of interest.')
                   + buttons([('Meet the doctors', url(C, 'doctors'), 'medlux-btn-primary')]))
         + CTA, ('partners', C))
-    P[('partners', C, 'doctors')] = ('Doctors', para(
-        'The doctors and dentists of the Celyxmed clinic. Filter by department or search by name, and open a profile for education and areas of interest.', 'medlux-lead medlux-doc-lead')
-        + doctors_html('celyxmed')
+    P[('partners', C, 'doctors')] = ('Doctors', doctors_html('celyxmed')
         + para('Information as published by Celyxmed. Which doctor treats you is agreed during your consultation.', 'medlux-doc-source') + CTA, ('partners', C))
     for d in DOCS:
         pp = ('partners', PARTNER_PATH[d['partner']], 'doctors')
