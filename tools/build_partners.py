@@ -5,7 +5,7 @@ name search like Yeditepe's own doctor list; one look for the doctors of both pa
 Content: facts from the partners' own websites, rewritten factually (HWG: no superlatives, no promises, no before/after);
 doctor data in content/partners/doctors.json (tools/partners_data.py + tools/partners_photos.py), photos in content/partners/media.json.
 Creates or updates the pages (template page-with-title) and records their ids in content/partners/pages.json.
-usage: build_partners.py [--dry]"""
+usage: build_partners.py [--dry] [--only KEY [--sub]]   (KEY e.g. partners/yeditepe-university-hospitals; --sub also its subpages)"""
 import html, json, pathlib, re, subprocess, sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 API = 'https://medluxlife-6j8sz55bpn.live-website.com/wp-json/wp/v2/pages'
@@ -160,36 +160,68 @@ def doctors_html(partner):
     for d in docs:
         t = TITLE.get(d['title'], '')
         alt = (t + ' ' + d['name']).strip()
-        hs = ' '.join(d['hospitals'])
-        o.append('<li class="mlx-doc" data-hospital="%s" data-dept="%s" data-name="%s">' % (hs, ' '.join(slug(n) for n in d['depts']), slug(d['name']).replace('-', ' ')))
-        o.append('<button type="button" class="mlx-doc-photo" aria-haspopup="dialog"><img src="%s" alt="%s" width="320" height="400" loading="lazy" decoding="async"></button>'
-                 % (d['photo_url'], E(alt, True)))
-        o.append('<div class="mlx-doc-body"><h3 class="mlx-doc-name">%s%s</h3>' % ('<span class="mlx-doc-title">%s</span> ' % t if t else '', E(d['name'])))
-        o.append('<p class="mlx-doc-depts">%s</p>' % ''.join('<span data-href="%s">%s</span>' % (PAGES.get(n, ''), E(n)) for n in d['depts']))
-        o.append('<p class="mlx-doc-hosp">%s</p>' % ''.join('<span>%s</span>' % E(HOSP[k]) for k in d['hospitals']))
-        if d.get('role'):
-            o.append('<p class="mlx-doc-role">%s</p>' % E(d['role']))
-        # no consultation button on the card (Emrah 2026-10-28) – it stays in the profile dialog
-        o.append('<p class="mlx-doc-actions"><button type="button" class="mlx-doc-more-btn">View profile</button></p></div>')
-        rows = []
-        for k, label in (('edu', 'Education'), ('spec', 'Specialisation'), ('side', 'Subspecialty'), ('assoc', 'Associate professorship'), ('prof', 'Professorship')):
-            if d.get(k):
-                rows.append('<dt>%s</dt><dd>%s</dd>' % (label, E(d[k])))
-        if d.get('career'):
-            rows.append('<dt>Career</dt><dd><ul>%s</ul></dd>' % ''.join('<li>%s</li>' % E(c) for c in d['career']))
-        if d.get('interests'):
-            rows.append('<dt>Areas of interest</dt><dd><ul class="mlx-doc-tags">%s</ul></dd>' % ''.join('<li>%s</li>' % E(i) for i in d['interests']))
-        if d.get('langs'):
-            rows.append('<dt>Foreign languages</dt><dd class="mlx-doc-langs">%s</dd>' % ''.join('<span>%s</span>' % l for l in d['langs']))
-        o.append('<div class="mlx-doc-more" hidden><dl>%s</dl></div></li>' % ''.join(rows))
+        # Emrah 2026-10-28: card = photo, title + name and speciality only; the whole card opens the doctor's own page
+        o.append('<li class="mlx-doc" data-hospital="%s" data-dept="%s" data-name="%s"><a class="mlx-doc-a" href="%s">'
+                 % (' '.join(d['hospitals']), ' '.join(slug(n) for n in d['depts']), slug(d['name']).replace('-', ' '), doctor_url(d)))
+        o.append('<span class="mlx-doc-photo"><img src="%s" alt="%s" width="320" height="400" loading="lazy" decoding="async"></span>' % (d['photo_url'], E(alt, True)))
+        o.append('<span class="mlx-doc-body">%s<span class="mlx-doc-name">%s</span>' % ('<span class="mlx-doc-title">%s</span>' % t if t else '', E(d['name'])))
+        o.append('<span class="mlx-doc-depts">%s</span></span></a></li>' % ''.join('<span>%s</span>' % E(n) for n in d['depts']))
     o.append('</ul>')
     o.append('<p class="mlx-doc-empty" hidden>No doctor found for this selection.</p>')
     o.append('<p class="mlx-doc-morewrap"><button type="button" class="mlx-doc-showmore">Show more doctors</button></p>')
-    o.append('<dialog class="mlx-doc-dialog"><button type="button" class="mlx-doc-close" aria-label="Close">×</button><div class="mlx-doc-dlg"></div>'
-             '<p class="mlx-doc-dlg-cta"><a class="mlx-doc-ask" href="https://medluxlife.de/contact/?your-subject=Health">Request a free consultation</a></p></dialog>')
     o.append('<script>' + open(ROOT / 'assets/doctors.js').read() + '</script>')
     o.append('</div>')
     return '<!-- wp:html -->\n' + '\n'.join(o) + '\n<!-- /wp:html -->\n\n'
+
+
+HOSP_PAGE = {'kozyatagi': 'kozyatagi-hospital', 'kosuyolu': 'kosuyolu-hospital', 'eye': 'eye-center', 'dental': 'dental-hospital'}
+PARTNER_PATH = {'yeditepe': 'yeditepe-university-hospitals', 'celyxmed': 'celyxmed'}
+SOURCE = {'yeditepe': 'Information as published by Yeditepe University Hospitals. Which doctor treats you is agreed during your consultation.',
+          'celyxmed': 'Information as published by Celyxmed. Which doctor treats you is agreed during your consultation.'}
+
+
+def doctor_url(d):
+    return SITE + '/partners/%s/doctors/%s/' % (PARTNER_PATH[d['partner']], d['slug'])
+
+
+def doctor_title(d):
+    return (TITLE.get(d['title'], '') + ' ' + d['name']).strip()
+
+
+def doctor_page(d):
+    """the doctor's own page (Emrah 2026-10-28: a click on the card opens the doctor's detail page, like on celyxmed.com)"""
+    t = TITLE.get(d['title'], '')
+    list_url = SITE + '/partners/%s/doctors/' % PARTNER_PATH[d['partner']]
+    depts = ''.join(('<span><a href="%s">%s</a></span>' % (PAGES[n], E(n))) if n in PAGES else '<span>%s</span>' % E(n) for n in d['depts'])
+    hosp = ''
+    for k in d['hospitals']:
+        if k in HOSP_PAGE:
+            hosp += '<span><a href="%s">%s</a></span>' % (SITE + '/partners/yeditepe-university-hospitals/hospitals/%s/' % HOSP_PAGE[k], E(HOSP[k]))
+        elif k == 'celyxmed':
+            hosp += '<span><a href="%s">%s</a></span>' % (SITE + '/partners/celyxmed/clinic/', E(HOSP[k]))
+        else:
+            hosp += '<span>%s</span>' % E(HOSP[k])
+    rows = []
+    for k, label in (('edu', 'Education'), ('spec', 'Specialisation'), ('side', 'Subspecialty'), ('assoc', 'Associate professorship'), ('prof', 'Professorship')):
+        if d.get(k):
+            rows.append('<div class="mlx-dd-row"><h3>%s</h3><p>%s</p></div>' % (label, E(d[k])))
+    if d.get('career'):
+        rows.append('<div class="mlx-dd-row"><h3>Career</h3><ul>%s</ul></div>' % ''.join('<li>%s</li>' % E(c) for c in d['career']))
+    if d.get('interests'):
+        rows.append('<div class="mlx-dd-row mlx-dd-wide"><h3>Areas of interest</h3><ul class="mlx-doc-tags">%s</ul></div>' % ''.join('<li>%s</li>' % E(i) for i in d['interests']))
+    if d.get('langs'):
+        rows.append('<div class="mlx-dd-row"><h3>Foreign languages</h3><p class="mlx-doc-langs">%s</p></div>' % ''.join('<span>%s</span>' % l for l in d['langs']))
+    o = ['<div class="mlx-doc-detail" data-partner="%s">' % d['partner'],
+         '<div class="mlx-dd-head"><img class="mlx-dd-photo" src="%s" alt="%s" width="320" height="400">' % (d['photo_url'], E(doctor_title(d), True)),
+         '<div class="mlx-dd-info">%s<h2 class="mlx-doc-name">%s</h2>' % ('<p class="mlx-doc-title">%s</p>' % t if t else '', E(d['name'])),
+         '<p class="mlx-doc-depts">%s</p><p class="mlx-doc-hosp">%s</p>' % (depts, hosp),
+         ('<p class="mlx-doc-role">%s</p>' % E(d['role'])) if d.get('role') else '',
+         '<p class="mlx-dd-cta"><a class="mlx-doc-ask" href="https://medluxlife.de/contact/?your-subject=Health">Request a free consultation</a></p></div></div>',
+         ('<div class="mlx-dd-list">%s</div>' % ''.join(rows)) if rows else '',
+         '<p class="mlx-dd-back"><a class="mlx-doc-back" href="%s">← All doctors</a></p>' % list_url,
+         '<p class="mlx-dd-source">%s</p>' % SOURCE[d['partner']],
+         '<script>' + open(ROOT / 'assets/doctors.js').read() + '</script></div>']
+    return '<!-- wp:html -->\n' + '\n'.join(x for x in o if x) + '\n<!-- /wp:html -->\n\n' + CTA
 
 
 # ---------- pages ----------
@@ -246,12 +278,6 @@ def build():
     P[('partners', Y)] = ('Yeditepe University Hospitals', intro(
         'Yeditepe University Hospitals are the hospitals of Yeditepe University, a foundation university in Istanbul founded in 1996. '
         'As university hospitals, they combine patient care with teaching and research. MedLuxLife coordinates hospital and specialist treatments with Yeditepe University Hospitals.', Y_IMG)
-        + section('At a glance', ul([
-            'Kozyatağı Hospital: opened in 2005, 190 beds',
-            'Koşuyolu Hospital: 180 beds, nine operating theatres',
-            'Dental Hospital in Göztepe and Eye Center in Beşiktaş',
-            'JCI accreditation as an Academic Medical Center (Koşuyolu Hospital, valid until 2028)',
-            'TÜSKA Gold Accreditation and health tourism authorisation of the Turkish Ministry of Health'], 'medlux-facts'))
         + section('Our hospitals', grid(hosp_cards))
         + section('Our doctors', para('More than 170 doctors and specialists of Yeditepe University Hospitals – filter by hospital or department and open their profiles.')
                   + buttons([('Meet our doctors', Y_DOCS, 'medlux-btn-primary')]))
@@ -333,6 +359,9 @@ def build():
         'The doctors and dentists of the Celyxmed clinic. Filter by department or search by name, and open a profile for education and areas of interest.', 'medlux-lead medlux-doc-lead')
         + doctors_html('celyxmed')
         + para('Information as published by Celyxmed. Which doctor treats you is agreed during your consultation.', 'medlux-doc-source') + CTA, ('partners', C))
+    for d in DOCS:
+        pp = ('partners', PARTNER_PATH[d['partner']], 'doctors')
+        P[pp + (d['slug'],)] = (doctor_title(d), doctor_page(d), pp)
 
     # Travel partner
     P[('partners', 'travel-partner')] = ('Travel partner', intro(
@@ -358,22 +387,30 @@ def main(dry):
     P = build()
     ids_f = ROOT / 'content/partners/pages.json'
     ids = json.load(open(ids_f)) if ids_f.exists() else {}
-    for path in sorted(P, key=len):
+    import concurrent.futures as cf
+
+    def post(path):
         title, content, parent = P[path]
         key = '/'.join(path)
         body = {'title': title, 'content': content, 'slug': path[-1], 'status': 'publish', 'template': 'page-with-title'}
         if parent:
             body['parent'] = ids['/'.join(parent)]
-        print(key, len(content), 'chars')
-        if dry:
-            ids.setdefault(key, 0)
-            continue
         r = api('POST', API + ('/%d' % ids[key] if ids.get(key) else ''), body)
-        if 'id' not in r:
-            print('  ERROR', str(r)[:300])
+        return key, r
+    only = sys.argv[sys.argv.index('--only') + 1] if '--only' in sys.argv else ''
+    for depth in sorted({len(p) for p in P}):
+        level = [p for p in P if len(p) == depth and '/'.join(p).startswith(only) and (not only or '/'.join(p).count('/') == only.count('/') or '--sub' in sys.argv)]
+        print('depth', depth, len(level), 'pages')
+        if dry:
             continue
-        ids[key] = r['id']
-        print('  ->', r['id'], r['link'])
+        with cf.ThreadPoolExecutor(4) as ex:
+            for key, r in ex.map(post, level):
+                if 'id' not in r:
+                    print('  ERROR', key, str(r)[:300])
+                    continue
+                if not ids.get(key):
+                    print('  new', r['id'], r['link'])
+                ids[key] = r['id']
     if not dry:
         json.dump(ids, open(ids_f, 'w'), indent=1)
         import cache_clear

@@ -1,8 +1,10 @@
-/* MedLuxLife partner doctors (tools/build_partners.py puts this inside each doctors block): hospital / department filters,
-   name search, "show more", profile dialog, consultation link with the doctor's name in the language of the page */
+/* MedLuxLife partner doctors (tools/build_partners.py puts this inside each doctors list and each doctor page):
+   list: hospital / department filters, name search, "show more", counter word with the right plural;
+   doctor page: consultation link with the doctor's name in the language of the page, "← All doctors" goes back to the filtered list */
 (function () {
-  var roots = document.querySelectorAll('.mlx-doctors:not([data-ready])');
-  if (!roots.length) return;
+  var lists = document.querySelectorAll('.mlx-doctors:not([data-ready])');
+  var details = document.querySelectorAll('.mlx-doc-detail:not([data-ready])');
+  if (!lists.length && !details.length) return;
   var lang = (document.documentElement.lang || 'en').slice(0, 2).toLowerCase();
   var m = location.pathname.match(/^\/(de|tr|ru|uk|ar)\//);
   var prefix = m ? '/' + m[1] : '';
@@ -30,29 +32,36 @@
     return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ı/g, 'i').replace(/[^a-z0-9]+/g, ' ').trim();
   }
   function text(el) { return el ? el.textContent.replace(/\s+/g, ' ').trim() : ''; }
-  function local(href) {
-    try { var u = new URL(href, location.href); return u.origin === location.origin || /medluxlife\.de$/.test(u.hostname) ? prefix + u.pathname : href; } catch (e) { return href; }
-  }
-  function askUrl(card) {
-    var name = text(card.querySelector('.mlx-doc-name'));
-    var dept = text(card.querySelector('.mlx-doc-depts span'));
-    var hosp = text(card.querySelector('.mlx-doc-hosp span'));
-    var who = name + ' (' + [dept, hosp].filter(Boolean).join(', ') + ')';
+
+  details.forEach(function (root) {
+    root.setAttribute('data-ready', '1');
+    var name = [text(root.querySelector('.mlx-doc-title')), text(root.querySelector('.mlx-doc-name'))].filter(Boolean).join(' ');
+    var place = [text(root.querySelector('.mlx-doc-depts span')), text(root.querySelector('.mlx-doc-hosp span'))].filter(Boolean).join(', ');
     var t = hello[lang] || hello.en;
     var u = new URL(prefix + '/contact/', location.href);
     u.searchParams.set('your-subject', 'Health');
-    u.searchParams.set('msg', t[0] + '\n' + t[1].replace('%s', who) + '\n\n');
+    u.searchParams.set('msg', t[0] + '\n' + t[1].replace('%s', name + (place ? ' (' + place + ')' : '')) + '\n\n');
     u.hash = 'contact';
-    return u.toString();
-  }
-  roots.forEach(function (root) {
+    root.querySelectorAll('.mlx-doc-ask').forEach(function (a) { a.href = u.toString(); });
+    // back to the list the visitor came from, with its filters and scroll position
+    var back = root.querySelector('.mlx-doc-back');
+    if (back && document.referrer) {
+      try {
+        var r = new URL(document.referrer), l = new URL(back.href, location.href);
+        if (r.origin === location.origin && r.pathname.replace(/\/$/, '') === l.pathname.replace(/\/$/, '')) {
+          back.addEventListener('click', function (e) { e.preventDefault(); history.back(); });
+        }
+      } catch (e) {}
+    }
+  });
+
+  lists.forEach(function (root) {
     root.setAttribute('data-ready', '1');
     var cards = [].slice.call(root.querySelectorAll('.mlx-doc'));
     var sel = {};
     root.querySelectorAll('[data-f]').forEach(function (el) { sel[el.getAttribute('data-f')] = el; });
     var count = root.querySelector('.mlx-doc-n'), empty = root.querySelector('.mlx-doc-empty');
     var moreBtn = root.querySelector('.mlx-doc-showmore'), reset = root.querySelector('.mlx-doc-reset');
-    var dlg = root.querySelector('.mlx-doc-dialog'), box = root.querySelector('.mlx-doc-dlg');
     var shown = PAGE, matches = cards;
     // departments in alphabetical order of the (translated) names
     if (sel.dept) {
@@ -62,9 +71,6 @@
     }
     var q = new URLSearchParams(location.search);
     ['hospital', 'dept', 'q'].forEach(function (k) { if (sel[k] && q.get(k)) sel[k].value = q.get(k); });
-    cards.forEach(function (c) {
-      c.querySelectorAll('.mlx-doc-ask').forEach(function (a) { a.href = askUrl(c); });
-    });
     function apply(keep) {
       var h = sel.hospital ? sel.hospital.value : '', d = sel.dept ? sel.dept.value : '', n = norm(sel.q ? sel.q.value : '');
       if (!keep) shown = PAGE;
@@ -84,39 +90,8 @@
     Object.keys(sel).forEach(function (k) { sel[k].addEventListener(k === 'q' ? 'input' : 'change', function () { apply(false); }); });
     moreBtn.addEventListener('click', function () { shown += PAGE; apply(true); });
     if (reset) reset.addEventListener('click', function () { Object.keys(sel).forEach(function (k) { sel[k].value = ''; }); apply(false); });
-    function open(card) {
-      box.innerHTML = '';
-      var head = document.createElement('div');
-      head.className = 'mlx-doc-dlg-head';
-      var img = card.querySelector('img').cloneNode(true);
-      img.removeAttribute('loading');
-      head.appendChild(img);
-      var info = document.createElement('div');
-      info.appendChild(card.querySelector('.mlx-doc-name').cloneNode(true));
-      var dep = card.querySelector('.mlx-doc-depts').cloneNode(true);
-      dep.querySelectorAll('span[data-href]').forEach(function (s) {
-        if (!s.dataset.href) return;
-        var a = document.createElement('a');
-        a.href = local(s.dataset.href); a.textContent = s.textContent; s.textContent = ''; s.appendChild(a);
-      });
-      info.appendChild(dep);
-      info.appendChild(card.querySelector('.mlx-doc-hosp').cloneNode(true));
-      var role = card.querySelector('.mlx-doc-role');
-      if (role) info.appendChild(role.cloneNode(true));
-      head.appendChild(info);
-      box.appendChild(head);
-      var more = card.querySelector('.mlx-doc-more').cloneNode(true);
-      more.hidden = false;
-      box.appendChild(more);
-      dlg.querySelector('.mlx-doc-ask').href = askUrl(card);
-      if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '');
-    }
-    root.addEventListener('click', function (e) {
-      var b = e.target.closest('.mlx-doc-photo, .mlx-doc-more-btn');
-      if (b && root.contains(b)) open(b.closest('.mlx-doc'));
-    });
-    dlg.querySelector('.mlx-doc-close').addEventListener('click', function () { dlg.close(); });
-    dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+    // coming back from a doctor's page: the browser restores the filters, show the same cards again
+    window.addEventListener('pageshow', function () { apply(true); });
     apply(false);
   });
 })();

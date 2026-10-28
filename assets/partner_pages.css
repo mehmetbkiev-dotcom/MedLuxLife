@@ -32,24 +32,21 @@ html[dir="rtl"] .medlux-facts li { padding: 12px 44px 12px 16px; }
 .mlx-doc-grid { list-style: none; margin: 0 !important; padding: 0 !important; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 22px; }
 .mlx-doc { display: flex; flex-direction: column; margin: 0 !important; background: #ffffff; border: 1px solid rgba(212, 162, 76, 0.4); border-radius: 18px; overflow: hidden; box-shadow: 0 10px 28px -18px rgba(11, 6, 32, 0.35); transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
 .mlx-doc[hidden] { display: none; }
-@media (hover: hover) { .mlx-doc:hover { transform: translateY(-4px); border-color: #d4a24c; box-shadow: 0 22px 38px -22px rgba(11, 6, 32, 0.45); } }
-.mlx-doc-photo { display: block; padding: 0; border: 0; background: #efedf4; cursor: pointer; }
-.mlx-doc-photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; }
-.mlx-doc-body { display: flex; flex-direction: column; flex: 1 1 auto; padding: 14px 16px 16px; text-align: center; }
-.mlx-doc-body > * { margin: 0 !important; }
-.mlx-doc-name { font-size: 1.12rem !important; line-height: 1.3; }
-.mlx-doc-title { display: block; font-size: 0.78rem; font-family: var(--wp--preset--font-family--inter, inherit); font-weight: 600; letter-spacing: 0.04em; color: #b8862f; }
-.mlx-doc-depts { margin-top: 6px !important; font-size: 0.85rem; line-height: 1.4; color: #0b0620; }
+.mlx-doc-a { display: flex; flex-direction: column; flex: 1 1 auto; color: inherit !important; text-decoration: none !important; }
+.mlx-doc-a:focus-visible { outline: 3px solid #d4a24c; outline-offset: -3px; border-radius: 18px; }
+@media (hover: hover) {
+  .mlx-doc:hover { transform: translateY(-5px); border-color: #d4a24c; box-shadow: 0 26px 44px -20px rgba(11, 6, 32, 0.55); }
+  .mlx-doc:hover .mlx-doc-photo img { transform: scale(1.04); }
+  .mlx-doc:hover .mlx-doc-photo::after { opacity: 1; }
+}
+.mlx-doc-photo { position: relative; display: block; overflow: hidden; background: #efedf4; }
+.mlx-doc-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11, 6, 32, 0) 55%, rgba(11, 6, 32, 0.28) 100%); opacity: 0; transition: opacity 0.3s ease; }
+.mlx-doc-photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; transition: transform 0.45s ease; }
+.mlx-doc-body { display: flex; flex-direction: column; align-items: center; flex: 1 1 auto; padding: 14px 16px 18px; text-align: center; }
+.mlx-doc-title { display: block; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.04em; color: #b8862f; }
+.mlx-doc-name { display: block; margin-top: 2px; font-family: var(--wp--preset--font-family--cormorant-garamond, Georgia, serif); font-size: 1.22rem; font-weight: 600; line-height: 1.25; color: #0b0620; }
+.mlx-doc-depts { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; margin-top: 6px; font-size: 0.82rem; line-height: 1.4; letter-spacing: 0.02em; text-transform: uppercase; color: rgba(11, 6, 32, 0.62); }
 .mlx-doc-depts span + span::before { content: " · "; color: #d4a24c; }
-.mlx-doc-hosp { margin-top: 4px !important; font-size: 0.78rem; line-height: 1.4; color: rgba(11, 6, 32, 0.6); }
-.mlx-doc-hosp span { display: block; }
-.mlx-doc-role { margin-top: 4px !important; font-size: 0.78rem; font-style: italic; color: rgba(11, 6, 32, 0.6); }
-.mlx-doc-actions { margin-top: auto !important; padding-top: 12px; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
-.mlx-doc-more-btn, .mlx-doc-ask { display: inline-flex; align-items: center; justify-content: center; min-height: 36px; padding: 0 14px; font: inherit; font-size: 0.8rem; font-weight: 600; border-radius: 999px; cursor: pointer; text-decoration: none !important; }
-.mlx-doc-more-btn { color: #0b0620; background: transparent; border: 1px solid rgba(11, 6, 32, 0.25); }
-.mlx-doc-ask { color: #0b0620 !important; background: #d4a24c; border: 1px solid #d4a24c; }
-.mlx-doc-more-btn:hover { border-color: #d4a24c; }
-.mlx-doc-ask:hover { background: #e8b75c; }
 .mlx-doc-empty { margin: 24px 0 !important; text-align: center !important; text-align-last: center; }
 .mlx-doc-morewrap { margin: 26px 0 0 !important; text-align: center !important; text-align-last: center; }
 .mlx-doc-morewrap[hidden] { display: none; }
@@ -75,10 +72,43 @@ html[dir="rtl"] .mlx-doc-close { margin: 10px 0 0 10px; }
 .mlx-doc-dlg-cta .mlx-doc-ask { min-height: 44px; padding: 0 26px; font-size: 0.95rem; }
 html[dir="rtl"] .mlx-doc-title { unicode-bidi: plaintext; }
 html[dir="rtl"] .mlx-doc-dlg-head .mlx-doc-title, html[dir="rtl"] .mlx-doc-dlg-head .mlx-doc-name { text-align: right !important; }
+/* doctor's own page */
+.mlx-doc-detail { max-width: 980px; margin: 8px auto 0; }
+.mlx-dd-head { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 36px; align-items: center; padding: 24px; background: #ffffff; border: 1px solid rgba(212, 162, 76, 0.4); border-radius: 22px; box-shadow: 0 16px 36px -24px rgba(11, 6, 32, 0.45); }
+.mlx-dd-photo { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; border-radius: 16px; background: #efedf4; }
+.mlx-dd-info > * { margin: 0 0 8px !important; text-align: start !important; }
+.mlx-dd-info .mlx-doc-title { font-size: 0.95rem; }
+.mlx-dd-info .mlx-doc-name { font-size: clamp(1.8rem, 3vw, 2.4rem) !important; line-height: 1.15; }
+.mlx-dd-info .mlx-doc-depts span + span::before, .mlx-dd-info .mlx-doc-hosp span + span::before { content: " · "; color: #d4a24c; }
+.mlx-dd-info .mlx-doc-depts { display: block; -webkit-line-clamp: unset; overflow: visible; font-size: 1.02rem; letter-spacing: 0; text-transform: none; color: #0b0620; }
+.mlx-dd-info .mlx-doc-hosp { font-size: 0.92rem; color: rgba(11, 6, 32, 0.65); }
+.mlx-dd-info a { color: inherit; text-decoration: underline; text-decoration-color: rgba(212, 162, 76, 0.7); text-underline-offset: 3px; }
+.mlx-dd-info a:hover { color: #b8862f; }
+.mlx-dd-cta { margin-top: 18px !important; }
+.mlx-dd-cta .mlx-doc-ask { display: inline-flex; align-items: center; min-height: 46px; padding: 0 28px; font-weight: 600; color: #0b0620 !important; background: #d4a24c; border-radius: 999px; text-decoration: none !important; }
+.mlx-dd-cta .mlx-doc-ask:hover { background: #e8b75c; }
+.mlx-dd-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 22px; }
+.mlx-dd-row { padding: 16px 20px; background: #ffffff; border: 1px solid rgba(11, 6, 32, 0.08); border-radius: 16px; }
+.mlx-dd-row.mlx-dd-wide { grid-column: 1 / -1; }
+.mlx-dd-row h3 { margin: 0 0 6px !important; font-family: inherit; font-size: 0.74rem !important; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #b8862f; }
+.mlx-dd-row p, .mlx-dd-row ul { margin: 0 !important; line-height: 1.5; }
+.mlx-dd-row ul { padding-inline-start: 18px; }
+.mlx-dd-row .mlx-doc-tags { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.mlx-dd-row .mlx-doc-tags li { padding: 4px 12px; font-size: 0.88rem; background: #f6f4fa; border-radius: 999px; }
+.mlx-dd-back { margin: 24px 0 0 !important; text-align: center !important; }
+.mlx-dd-back a { font-weight: 600; color: #b8862f !important; text-decoration: none !important; }
+.mlx-dd-source { margin: 10px 0 0 !important; font-size: 0.85rem; color: rgba(11, 6, 32, 0.6); text-align: center !important; text-align-last: center; }
+html[dir="rtl"] .mlx-dd-info .mlx-doc-title { unicode-bidi: plaintext; text-align: right !important; }
+@media (max-width: 781px) {
+  .mlx-dd-head { grid-template-columns: 1fr; gap: 18px; padding: 16px; text-align: center; }
+  .mlx-dd-photo { max-width: 240px; margin: 0 auto; }
+  .mlx-dd-info > * { text-align: center !important; }
+  .mlx-dd-list { grid-template-columns: 1fr; }
+}
 @media (max-width: 600px) {
   .mlx-doc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
   .mlx-doc-body { padding: 10px 10px 12px; }
-  .mlx-doc-name { font-size: 0.98rem !important; }
+  .mlx-doc .mlx-doc-name { font-size: 1.02rem; }
   .mlx-doc-actions { flex-direction: column; }
   .mlx-doc-dlg { padding: 16px 16px 4px; }
   .mlx-doc-dlg-head { grid-template-columns: 96px 1fr; gap: 14px; }
