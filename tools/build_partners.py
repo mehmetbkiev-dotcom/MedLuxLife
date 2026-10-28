@@ -381,7 +381,7 @@ def build():
         + section('Certificates', celyxmed_cert_tiles(), 'medlux-partner-certs')
         + section('Clinic and doctors', grid([
             photo_card(mi('c1'), 'Celyxmed Clinic', 'Location, facilities and photos of the Celyxmed clinic in Ataşehir.', [('Learn more', url(C, 'clinic'))]),
-            photo_card(mi('c_team'), 'Doctors', 'The doctors and dentists of Celyxmed with their education and areas of interest.', [('Meet the doctors', url(C, 'doctors'))])]))
+            photo_card(mi('c_team'), 'Celyxmed Doctors', 'The doctors and dentists of Celyxmed with their education and areas of interest.', [('Meet the doctors', url(C, 'doctors'))])]))
         + stay_section('clinic') + CTA, ('partners',))
     P[('partners', C, 'clinic')] = ('Celyxmed Clinic', intro(
         'The Celyxmed clinic is located in Ataşehir, on the Asian side of Istanbul. Consultations, dental treatments, hair transplants and medical aesthetic treatments take place here; surgical procedures are performed in JCI-accredited partner hospitals.', mi('c1'))
@@ -394,7 +394,7 @@ def build():
         + section('Doctors', para('The doctors and dentists of Celyxmed with their education and areas of interest.')
                   + buttons([('Meet the doctors', url(C, 'doctors'), 'medlux-btn-primary')]))
         + CTA, ('partners', C))
-    P[('partners', C, 'doctors')] = ('Doctors', doctors_html('celyxmed')
+    P[('partners', C, 'doctors')] = ('Celyxmed Doctors', doctors_html('celyxmed')
         + para('Information as published by Celyxmed. Which doctor treats you is agreed during your consultation.', 'medlux-doc-source') + CTA, ('partners', C))
     for d in DOCS:
         pp = ('partners', PARTNER_PATH[d['partner']], 'doctors')
