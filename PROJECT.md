@@ -950,3 +950,4 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - 2026-10-28 – Anna: Celyxmed is a name and must appear in every language → clinic subpage title "Celyxmed Clinic" (UK Клініка Celyxmed, DE Klinik Celyxmed, TR Celyxmed Kliniği, RU Клиника Celyxmed, AR عيادة Celyxmed), also the card on the Celyxmed page. Clinic icon redrawn without the canopy (plain glass double door), media 3796 `medluxlife-icon-clinic-door-line.png`.
 - 2026-10-28 – Anna CONFIRMED ("Підтвердити"): centred stay/doctor sections, "Celyxmed Clinic" title, clinic icon with plain door. Open question (not answered): Celyxmed doctors page title "Celyxmed Doctors"?
 - 2026-10-28 – Anna: Celyxmed doctors page title and card → "Celyxmed Doctors" (UK Лікарі Celyxmed, DE Ärzte bei Celyxmed, TR Celyxmed Doktorları, RU Врачи Celyxmed, AR أطباء Celyxmed).
+- 2026-10-28 – Anna CONFIRMED ("Підтвердити"): "Celyxmed Doctors" title and cards.
