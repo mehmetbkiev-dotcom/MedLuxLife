@@ -216,7 +216,7 @@ def doctor_page(d):
          '<div class="mlx-dd-info">%s<h2 class="mlx-doc-name">%s</h2>' % ('<p class="mlx-doc-title">%s</p>' % t if t else '', E(d['name'])),
          '<p class="mlx-doc-depts">%s</p><p class="mlx-doc-hosp">%s</p>' % (depts, hosp),
          ('<p class="mlx-doc-role">%s</p>' % E(d['role'])) if d.get('role') else '',
-         '<p class="mlx-dd-cta"><a class="mlx-doc-ask" href="https://medluxlife.de/contact/?your-subject=Health">Request a free consultation</a></p></div></div>',
+         '</div></div>',  # no consultation button next to the doctor (Emrah 2026-10-28)
          ('<div class="mlx-dd-list">%s</div>' % ''.join(rows)) if rows else '',
          '<p class="mlx-dd-back"><a class="mlx-doc-back" href="%s">← All doctors</a></p>' % list_url,
          '<p class="mlx-dd-source">%s</p>' % SOURCE[d['partner']],

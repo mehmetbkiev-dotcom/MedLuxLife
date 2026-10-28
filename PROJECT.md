@@ -916,3 +916,4 @@ Access: WP REST via https://medluxlife-6j8sz55bpn.live-website.com/wp-json (prox
 - 2026-10-28 – Emrah: "At a glance" removed from the Yeditepe overview page.
 - 2026-10-28 – RULE (Emrah): never name "Mercedes" / "Vito" anywhere – say "VIP vehicle" (DE VIP-Fahrzeug, TR VIP araç, UK/RU VIP-автомобіль/-автомобиль, AR سيارة VIP). Replaced on 112 pages (step 3 on hub/category/hospital pages, FAQ answers home/contact/25 treatment pages, stay cards); alt text and photo file renamed (new media 3265 `medluxlife-vip-transfer-vehicle.jpg`, old 2951/2604 unused); translation files cleaned (no Mercedes/Vito key left); live check of 54 pages × 6 languages: 0 hits. Backup `backups/wp/stay/pages_before_no_mercedes_*`.
 - 2026-10-28 – Emrah: "Treatment areas" removed from the Celyxmed page (2918).
+- 2026-10-28 – Emrah: doctor pages – "Request a free consultation" button next to the doctor removed (182 pages rebuilt); the general CTA box at the bottom stays.
