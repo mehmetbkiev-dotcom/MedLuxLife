@@ -53,10 +53,11 @@ def section(intro, c1, c2):
             '<div class="wp-block-group medlux-treatment-grid medlux-stay-grid">%s%s</div>\n<!-- /wp:group --></div>\n<!-- /wp:group -->\n\n') % (intro, c1, c2)
 
 
+DEDEMAN, DEDEMAN_ALT = 3770, 'Room at the five-star Dedeman Kozyatağı hotel in Istanbul'  # real room photo from Anna (2026-10-28)
 HOTEL_ALT = 'Hotel room with a large bed and a city view at night (symbolic image)'
 VITO_ALT = 'Black VIP vehicle for patient transfers in front of a modern building'
 SEC_CLINIC = section('For clinic treatments, accommodation and transfers are part of your treatment package.',
-                     card(HOTEL, 'medluxlife-hotel-room-symbolic.jpg', HOTEL_ALT, 'Five-star hotel: Dedeman Kozyatağı',
+                     card(DEDEMAN, 'medluxlife-dedeman-kozyatagi-room.jpg', DEDEMAN_ALT, 'Five-star hotel: Dedeman Kozyatağı',
                           'You stay at the five-star Dedeman Kozyatağı hotel in Istanbul. Your treatment package includes accommodation for you and one companion, with breakfast.'),
                      card(VITO, 'medluxlife-vip-transfer-vehicle.jpg', VITO_ALT, 'VIP Transfer Service',
                           'All transfers – from the airport to your hotel, between the hotel and the clinic, and back to the airport – are made in a VIP vehicle.'))
