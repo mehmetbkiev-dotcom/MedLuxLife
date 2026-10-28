@@ -337,7 +337,6 @@ def build():
                 area_cards.append(c[:c.rfind('<!-- /wp:group -->') + len('<!-- /wp:group -->')] + '\n\n')
     P[('partners', C)] = ('Celyxmed', intro(
         'Celyxmed is a clinic in Ataşehir, Istanbul, for plastic surgery, hair transplantation, dental treatments and medical aesthetics. Surgical procedures take place in JCI-accredited partner hospitals. MedLuxLife coordinates clinical treatments with Celyxmed.', C_IMG)
-        + section('Treatment areas', grid(area_cards))
         + section('Certificates', ul(['USHAŞ certificate for international health tourism (Turkish Ministry of Health)', 'ISO 9001:2015 – quality management system',
                                       'ISO 13485:2016 – quality management for medical devices'], 'medlux-facts'))
         + section('Clinic and doctors', grid([
