@@ -8,7 +8,7 @@
   var lang = (document.documentElement.lang || 'en').slice(0, 2).toLowerCase();
   var m = location.pathname.match(/^\/(de|tr|ru|uk|ar)\//);
   var prefix = m ? '/' + m[1] : '';
-  var PAGE = 24;
+  var PAGE = 30;  // a multiple of 5, 3 and 2 columns (partner_pages.css) → full rows
   var hello = {
     en: ['Hello,', 'I would like a free consultation about a treatment with %s.'],
     de: ['Guten Tag,', 'ich interessiere mich für eine kostenlose Beratung zu einer Behandlung bei %s.'],

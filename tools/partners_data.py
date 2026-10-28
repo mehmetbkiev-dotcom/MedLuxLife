@@ -24,6 +24,10 @@ DEPT_MAP = {'Applications in Nuclear Medicine': 'Nuclear Medicine', 'Hematology'
             'Newborn Intensive Care Unit (NICU)': 'Neonatal Intensive Care Unit (NICU)', 'Transfusion Center': 'Transfusion Centre', 'Algology': 'Algology (Pain Medicine)'}
 
 
+# departments Yeditepe links only in Turkish (/tibbi-birimler/…) on some English doctor pages
+TR_DEPT = {'Tıbbi Biyokimya': 'Medical Biochemistry'}
+
+
 def dept(n):
     n = n.strip()
     n = DEPT_MAP.get(n, n)
@@ -63,7 +67,8 @@ def yeditepe(rows):
         if not key:  # one doctor without a Turkish page
             key, name = 'spec', re.sub(r'^Specialist Doctor\s+|,?\s*M\.D\.?$', '', en).strip()
         d = {'partner': 'yeditepe', 'title': key, 'name': name, 'slug': slug(name),
-             'depts': list(dict.fromkeys(dept(n) for n in ([n for _, n in x['deps']] or [n for _, n in x['en']['deps']]))),
+             'depts': list(dict.fromkeys(dept(n) for n in ([n for _, n in x['deps']] or [n for _, n in x['en']['deps']]
+                                                       or [TR_DEPT.get(n, n) for _, n in (x.get('tr') or {}).get('deps', [])]))),
              'hospitals': sorted({HOSP[h] for h, _ in x['en']['hospitals'] if h in HOSP}),
              'photo_src': 'https://yeditepehastaneleri.com' + (x.get('photo_big') or x['photo'])}
         for k, v in x['en']['fields']:

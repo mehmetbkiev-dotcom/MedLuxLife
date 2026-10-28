@@ -225,7 +225,9 @@
   "title": "prof",
   "name": "Baki Serdar Öztezcan",
   "slug": "baki-serdar-oztezcan",
-  "depts": [],
+  "depts": [
+   "Medical Biochemistry"
+  ],
   "hospitals": [
    "kozyatagi"
   ],
@@ -876,7 +878,9 @@
   "title": "prof",
   "name": "Jale Çoban",
   "slug": "jale-coban",
-  "depts": [],
+  "depts": [
+   "Medical Biochemistry"
+  ],
   "hospitals": [
    "kozyatagi"
   ],
