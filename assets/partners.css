@@ -38,4 +38,8 @@ html[dir="rtl"] .medlux-partner > h3 + p { text-align: right; }
   .medlux-partner > h3 + p { margin-top: 6px !important; font-size: 0.92rem; line-height: 1.5; }
   .medlux-partner > .medlux-partner-meta { align-self: end; margin-top: 0 !important; padding-top: clamp(8px, 1.4svh, 14px); font-size: 0.82rem; }
 }
+/* About Us (page 24) – existing "Our partners" cards now name the partners: logo, small category line, name (Emrah, 2026-10-28) */
+.medlux-partners .medlux-partner-card-logo { margin: 0 0 14px !important; }
+.medlux-partners .medlux-partner-card-logo img { display: block; height: 40px; width: auto; }
+.medlux-partners .medlux-partner-category { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #b8862e; margin: 0 0 4px !important; text-align: start !important; text-align-last: auto !important; }
 /* <<< PARTNERS END */
