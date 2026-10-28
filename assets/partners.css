@@ -21,4 +21,21 @@ html[dir="rtl"] .medlux-partner > h3 + p { text-align: right; }
 .medlux-partner .medlux-partner-link:focus-visible { outline: 2px solid #d4a24c; outline-offset: 4px; }
 @media (prefers-reduced-motion: reduce) { .medlux-partner, .medlux-partner > .medlux-partner-photo img { transition: none; } }
 @media (max-width: 781px) { .medlux-home-partners > .medlux-partner-grid { gap: 22px; } .medlux-partner { padding: 0 22px 22px !important; } .medlux-partner > .medlux-partner-photo { margin: 0 -22px !important; } }
+/* Laptop/desktop: the whole section fits one screen under the header – the photos take the height that is left; the three cards share
+   their rows (subgrid), so photos, logos, titles and the gold lines are level in every language (Emrah, 2026-10-28) */
+@media (min-width: 1100px) {
+  .medlux-home-partners { display: flex; flex-direction: column; box-sizing: border-box; height: clamp(540px, calc(100svh - 72px - var(--wp-admin--admin-bar--height, 0px)), 860px); padding: clamp(18px, 3.2svh, 40px) 20px clamp(20px, 3.6svh, 44px) !important; }
+  .medlux-home-partners > .medlux-partners-title { font-size: clamp(1.9rem, 4.2svh, 2.6rem); line-height: 1.15; }
+  .medlux-home-partners > .medlux-partners-intro { margin-top: clamp(6px, 1.2svh, 14px) !important; font-size: 1rem; line-height: 1.5; }
+  .medlux-home-partners > .medlux-partner-grid { flex: 1 1 auto; min-height: 0; margin-top: clamp(14px, 2.6svh, 32px) !important; display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: minmax(110px, 1fr) auto auto auto auto; column-gap: 28px; row-gap: 0; }
+  .medlux-home-partners .medlux-partner { display: grid; grid-row: span 5; grid-template-rows: subgrid; min-height: 0; padding-bottom: clamp(14px, 2svh, 22px) !important; }
+  .medlux-partner > .medlux-partner-photo { min-height: 0; height: 100%; }
+  .medlux-partner > .medlux-partner-photo img { height: 100%; aspect-ratio: auto; object-position: 50% 40%; }
+  .medlux-partner > .medlux-partner-logo { justify-self: start; align-self: start; margin-top: -26px !important; padding: 8px 12px; }
+  .medlux-partner > .medlux-partner-logo img { height: 36px; }
+  .medlux-partner > p.medlux-partner-logo--text { height: 36px; }
+  .medlux-partner > h3 { margin-top: clamp(10px, 1.6svh, 16px) !important; font-size: clamp(1.15rem, 2.6svh, 1.4rem); }
+  .medlux-partner > h3 + p { margin-top: 6px !important; font-size: 0.92rem; line-height: 1.5; }
+  .medlux-partner > .medlux-partner-meta { align-self: end; margin-top: 0 !important; padding-top: clamp(8px, 1.4svh, 14px); font-size: 0.82rem; }
+}
 /* <<< PARTNERS END */
