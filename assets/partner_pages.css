@@ -118,4 +118,9 @@ html[dir="rtl"] .mlx-dd-info .mlx-doc-title { unicode-bidi: plaintext; text-alig
   .mlx-doc-dlg-head img { width: 96px; }
   .mlx-doc-dlg-head .mlx-doc-name { font-size: 1.15rem !important; }
 }
+/* certificate logos on the partner pages – same tiles as the home certificates section (CERTS block), Anna 2026-10-28 */
+.medlux-partner-certs .medlux-cert-group { max-width: 820px; margin: 20px auto 0 !important; }
+.medlux-partner-certs .medlux-cert-grid { grid-template-rows: 190px auto auto; }
+.medlux-partner-certs .medlux-cert > .medlux-cert-img { min-height: 0; }
+@media (max-width: 781px) { .medlux-partner-certs .medlux-cert-grid { grid-template-rows: 130px auto auto; } }
 /* <<< PARTNER-PAGES END */

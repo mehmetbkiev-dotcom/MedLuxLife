@@ -147,15 +147,18 @@ def doctors_html(partner):
     depts = sorted({n for d in docs for n in d['depts']})
     hosps = [k for k in ('kozyatagi', 'kosuyolu', 'eye', 'genetic', 'tissue') if any(k in d['hospitals'] for d in docs)]
     o = ['<div class="mlx-doctors" data-partner="%s">' % partner]
-    o.append('<div class="mlx-doc-filters" role="search">')
-    if partner == 'yeditepe':
-        o.append('<label class="mlx-doc-f"><span class="mlx-doc-l">Hospital</span><select data-f="hospital"><option value="">All hospitals</option>%s</select></label>'
-                 % ''.join('<option value="%s">%s</option>' % (k, HOSP[k]) for k in hosps))
-    o.append('<label class="mlx-doc-f"><span class="mlx-doc-l">Department</span><select data-f="dept"><option value="">All departments</option>%s</select></label>'
-             % ''.join('<option value="%s">%s</option>' % (slug(n), E(n)) for n in depts))
-    o.append('<label class="mlx-doc-f mlx-doc-q"><span class="mlx-doc-l">Doctor\'s name</span><input type="search" data-f="q" placeholder="Search by name" autocomplete="off"></label>')
-    o.append('<button type="button" class="mlx-doc-reset" hidden>Reset filters</button></div>')
-    o.append('<p class="mlx-doc-count" aria-live="polite"><span class="mlx-doc-n">%d</span> <span>doctors</span></p>' % len(docs))
+    # Celyxmed: only 8 doctors, each card shows the speciality → no filters and no counter (Anna 2026-10-28)
+    filters = len(docs) > 12
+    if filters:
+        o.append('<div class="mlx-doc-filters" role="search">')
+        if partner == 'yeditepe':
+            o.append('<label class="mlx-doc-f"><span class="mlx-doc-l">Hospital</span><select data-f="hospital"><option value="">All hospitals</option>%s</select></label>'
+                     % ''.join('<option value="%s">%s</option>' % (k, HOSP[k]) for k in hosps))
+        o.append('<label class="mlx-doc-f"><span class="mlx-doc-l">Department</span><select data-f="dept"><option value="">All departments</option>%s</select></label>'
+                 % ''.join('<option value="%s">%s</option>' % (slug(n), E(n)) for n in depts))
+        o.append('<label class="mlx-doc-f mlx-doc-q"><span class="mlx-doc-l">Doctor\'s name</span><input type="search" data-f="q" placeholder="Search by name" autocomplete="off"></label>')
+        o.append('<button type="button" class="mlx-doc-reset" hidden>Reset filters</button></div>')
+        o.append('<p class="mlx-doc-count" aria-live="polite"><span class="mlx-doc-n">%d</span> <span>doctors</span></p>' % len(docs))
     o.append('<ul class="mlx-doc-grid">')
     for d in docs:
         t = TITLE.get(d['title'], '')
@@ -223,6 +226,24 @@ def doctor_page(d):
          '<p class="mlx-dd-source">%s</p>' % SOURCE[d['partner']],
          '<script>' + open(ROOT / 'assets/doctors.js').read() + '</script></div>']
     return '<!-- wp:html -->\n' + '\n'.join(x for x in o if x) + '\n<!-- /wp:html -->\n\n' + CTA
+
+
+def cert_tiles(partner_h3):
+    """the partner's certificate logos exactly as in the home certificates section (page 23), without the partner heading
+    (Anna 2026-10-28: logos of the certificates instead of a ticked list)"""
+    import re as _re
+    home = api('GET', API + '/23?context=edit&_fields=content')['content']['raw']
+    i = home.index('>%s</h3>' % partner_h3)
+    a = home.rfind('<!-- wp:group {"className":"medlux-cert-group"', 0, i)
+    depth, pos = 0, a
+    for m in _re.finditer(r'<!-- (/?)wp:group', home[a:]):
+        depth += -1 if m.group(1) else 1
+        if depth == 0:
+            pos = a + m.end() + len(' -->')
+            break
+    block = home[a:pos]
+    block = _re.sub(r'<!-- wp:heading \{"level":3,"className":"medlux-cert-partner"\} -->.*?<!-- /wp:heading -->\s*', '', block, flags=_re.S)
+    return block + '\n\n'
 
 
 # ---------- pages ----------
@@ -336,8 +357,7 @@ def build():
                 area_cards.append(c[:c.rfind('<!-- /wp:group -->') + len('<!-- /wp:group -->')] + '\n\n')
     P[('partners', C)] = ('Celyxmed', intro(
         'Celyxmed is a clinic in Ataşehir, Istanbul, for plastic surgery, hair transplantation, dental treatments and medical aesthetics. Surgical procedures take place in JCI-accredited partner hospitals. MedLuxLife coordinates clinical treatments with Celyxmed.', C_IMG)
-        + section('Certificates', ul(['USHAŞ certificate for international health tourism (Turkish Ministry of Health)', 'ISO 9001:2015 – quality management system',
-                                      'ISO 13485:2016 – quality management for medical devices'], 'medlux-facts'))
+        + section('Certificates', cert_tiles('Celyxmed'), 'medlux-partner-certs')
         + section('Clinic and doctors', grid([
             photo_card(mi('c1'), 'Clinic', 'Location, facilities and photos of the Celyxmed clinic in Ataşehir.', [('Learn more', url(C, 'clinic'))]),
             photo_card(mi('c_team'), 'Doctors', 'The doctors and dentists of Celyxmed with their education and areas of interest.', [('Meet the doctors', url(C, 'doctors'))])]))

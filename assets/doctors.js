@@ -81,8 +81,10 @@
       });
       cards.forEach(function (c) { c.hidden = true; });
       matches.slice(0, shown).forEach(function (c) { c.hidden = false; });
-      count.textContent = matches.length;
-      if (count.nextElementSibling) count.nextElementSibling.textContent = word(matches.length);
+      if (count) {  // lists without filters (Celyxmed) have no counter
+        count.textContent = matches.length;
+        if (count.nextElementSibling) count.nextElementSibling.textContent = word(matches.length);
+      }
       empty.hidden = matches.length > 0;
       moreBtn.parentNode.hidden = !(matches.length > shown);
       if (reset) reset.hidden = !(h || d || n);
