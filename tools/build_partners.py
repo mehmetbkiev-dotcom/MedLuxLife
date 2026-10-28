@@ -136,7 +136,14 @@ CTA = ('<!-- wp:group {"className":"medlux-cta","layout":{"type":"constrained"}}
 def stay_section(kind):
     sys.path.insert(0, str(ROOT / 'tools'))
     import stay_transfer
-    return stay_transfer.SEC_CLINIC if kind == 'clinic' else stay_transfer.SEC_HOSPITAL
+    if kind != 'clinic':
+        return stay_transfer.SEC_HOSPITAL
+    # Celyxmed page only: the real Dedeman Kozyatağı room photo (Anna 2026-10-28)
+    sec = stay_transfer.SEC_CLINIC
+    d = media_info(stay_transfer.DEDEMAN)
+    sec = sec.replace('"id":%d,' % stay_transfer.HOTEL, '"id":%d,' % d[0], 1).replace('wp-image-%d"' % stay_transfer.HOTEL, 'wp-image-%d"' % d[0], 1)
+    sec = re.sub(r'<img src="[^"]+" alt="[^"]*" class="wp-image-%d"' % d[0], '<img src="%s" alt="%s" class="wp-image-%d"' % (d[1], E(d[2], True), d[0]), sec, count=1)
+    return sec
 
 
 # ---------- doctors component ----------
@@ -246,16 +253,24 @@ def cert_tiles(partner_h3):
     return block + '\n\n'
 
 
-def yeditepe_cert_tiles():
-    """Yeditepe's certificates as logo tiles (Anna 2026-10-28): seal/badge/emblem cut from the certificates Yeditepe publishes
-    (JCI seal, TÜSKA gold badge + TÜSKA logo, Ministry of Health emblem); the click still opens the full certificate scan"""
-    block = cert_tiles('Yeditepe University Hospitals')
-    for old, key in ((2592, 'yt_jci'), (2593, 'yt_tuska'), (2594, 'yt_moh')):
+def swap_logos(block, pairs):
+    """put the evenly sized logo files (same visual size, 3:2 canvas, Anna 2026-10-28) into the tiles; the link still opens the original"""
+    for old, key in pairs:
         m = M[key]
         block = block.replace('"id":%d,' % old, '"id":%d,' % m['id']).replace('wp-image-%d"' % old, 'wp-image-%d"' % m['id'])
         block = re.sub(r'<img src="[^"]+"( alt="[^"]*")? class="wp-image-%d"' % m['id'],
                        '<img src="%s" alt="%s" class="wp-image-%d"' % (m['url'], E(m['alt'], True), m['id']), block)
     return block
+
+
+def yeditepe_cert_tiles():
+    """Yeditepe's certificates as logo tiles (Anna 2026-10-28): seal/badge/emblem cut from the certificates Yeditepe publishes
+    (JCI seal, TÜSKA gold badge + TÜSKA logo, Ministry of Health emblem); the click still opens the full certificate scan"""
+    return swap_logos(cert_tiles('Yeditepe University Hospitals'), ((2592, 'eq_jci'), (2593, 'eq_tuska'), (2594, 'eq_moh')))
+
+
+def celyxmed_cert_tiles():
+    return swap_logos(cert_tiles('Celyxmed'), ((2595, 'eq_ushas'), (2596, 'eq_iso9001'), (2597, 'eq_iso13485')))
 
 
 # ---------- pages ----------
@@ -370,7 +385,7 @@ def build():
                 area_cards.append(c[:c.rfind('<!-- /wp:group -->') + len('<!-- /wp:group -->')] + '\n\n')
     P[('partners', C)] = ('Celyxmed', intro(
         'Celyxmed is a clinic in Ataşehir, Istanbul, for plastic surgery, hair transplantation, dental treatments and medical aesthetics. Surgical procedures take place in JCI-accredited partner hospitals. MedLuxLife coordinates clinical treatments with Celyxmed.', C_IMG)
-        + section('Certificates', cert_tiles('Celyxmed'), 'medlux-partner-certs')
+        + section('Certificates', celyxmed_cert_tiles(), 'medlux-partner-certs')
         + section('Clinic and doctors', grid([
             photo_card(mi('c1'), 'Clinic', 'Location, facilities and photos of the Celyxmed clinic in Ataşehir.', [('Learn more', url(C, 'clinic'))]),
             photo_card(mi('c_team'), 'Doctors', 'The doctors and dentists of Celyxmed with their education and areas of interest.', [('Meet the doctors', url(C, 'doctors'))])]))

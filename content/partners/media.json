@@ -113,5 +113,35 @@
   "id": 3665,
   "url": "https://medluxlife.de/wp-content/uploads/2026/10/cert-yeditepe-moh-logo.png",
   "alt": "Emblem of the Turkish Ministry of Health"
+ },
+ "eq_ushas": {
+  "id": 3773,
+  "url": "https://medluxlife.de/wp-content/uploads/2026/10/cert-logo-ushas-even.png",
+  "alt": "USHAŞ – International Health Services logo"
+ },
+ "eq_iso9001": {
+  "id": 3774,
+  "url": "https://medluxlife.de/wp-content/uploads/2026/10/cert-logo-iso9001-even.png",
+  "alt": "ISO 9001:2015 quality management seal"
+ },
+ "eq_iso13485": {
+  "id": 3775,
+  "url": "https://medluxlife.de/wp-content/uploads/2026/10/cert-logo-iso13485-even.png",
+  "alt": "ISO 13485:2016 quality management seal"
+ },
+ "eq_jci": {
+  "id": 3776,
+  "url": "https://medluxlife.de/wp-content/uploads/2026/10/cert-logo-jci-even.png",
+  "alt": "JCI accreditation seal (Joint Commission International)"
+ },
+ "eq_tuska": {
+  "id": 3777,
+  "url": "https://medluxlife.de/wp-content/uploads/2026/10/cert-logo-tuska-even.png",
+  "alt": "TÜSKA Gold Accreditation badge"
+ },
+ "eq_moh": {
+  "id": 3778,
+  "url": "https://medluxlife.de/wp-content/uploads/2026/10/cert-logo-moh-even.png",
+  "alt": "Emblem of the Turkish Ministry of Health"
  }
 }
