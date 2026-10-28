@@ -169,8 +169,8 @@ def doctors_html(partner):
         o.append('<p class="mlx-doc-hosp">%s</p>' % ''.join('<span>%s</span>' % E(HOSP[k]) for k in d['hospitals']))
         if d.get('role'):
             o.append('<p class="mlx-doc-role">%s</p>' % E(d['role']))
-        o.append('<p class="mlx-doc-actions"><button type="button" class="mlx-doc-more-btn">View profile</button>'
-                 '<a class="mlx-doc-ask" href="https://medluxlife.de/contact/?your-subject=Health">Free consultation</a></p></div>')
+        # no consultation button on the card (Emrah 2026-10-28) – it stays in the profile dialog
+        o.append('<p class="mlx-doc-actions"><button type="button" class="mlx-doc-more-btn">View profile</button></p></div>')
         rows = []
         for k, label in (('edu', 'Education'), ('spec', 'Specialisation'), ('side', 'Subspecialty'), ('assoc', 'Associate professorship'), ('prof', 'Professorship')):
             if d.get(k):
