@@ -380,10 +380,10 @@ def build():
         'Celyxmed is a clinic in Ataşehir, Istanbul, for plastic surgery, hair transplantation, dental treatments and medical aesthetics. Surgical procedures take place in JCI-accredited partner hospitals. MedLuxLife coordinates clinical treatments with Celyxmed.', C_IMG)
         + section('Certificates', celyxmed_cert_tiles(), 'medlux-partner-certs')
         + section('Clinic and doctors', grid([
-            photo_card(mi('c1'), 'Clinic', 'Location, facilities and photos of the Celyxmed clinic in Ataşehir.', [('Learn more', url(C, 'clinic'))]),
+            photo_card(mi('c1'), 'Celyxmed Clinic', 'Location, facilities and photos of the Celyxmed clinic in Ataşehir.', [('Learn more', url(C, 'clinic'))]),
             photo_card(mi('c_team'), 'Doctors', 'The doctors and dentists of Celyxmed with their education and areas of interest.', [('Meet the doctors', url(C, 'doctors'))])]))
         + stay_section('clinic') + CTA, ('partners',))
-    P[('partners', C, 'clinic')] = ('Clinic', intro(
+    P[('partners', C, 'clinic')] = ('Celyxmed Clinic', intro(
         'The Celyxmed clinic is located in Ataşehir, on the Asian side of Istanbul. Consultations, dental treatments, hair transplants and medical aesthetic treatments take place here; surgical procedures are performed in JCI-accredited partner hospitals.', mi('c1'))
         + section('Facilities', ul(['Treatment rooms for medical aesthetics and dental treatment units',
                                     '3D imaging (VECTRA H2) for planning aesthetic treatments and HairMetrix™ hair analysis',

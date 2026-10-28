@@ -129,9 +129,11 @@ html[dir="rtl"] .mlx-dd-info .mlx-doc-title { unicode-bidi: plaintext; text-alig
 .medlux-partner-certs .medlux-cert > .medlux-cert-sub { font-size: 0.86rem; }
 @media (max-width: 781px) { .medlux-partner-certs .medlux-cert-grid { column-gap: 12px; } .medlux-partner-certs .medlux-cert > .medlux-cert-title { font-size: 0.86rem; } .medlux-partner-certs .medlux-cert > .medlux-cert-sub { font-size: 0.74rem; } }
 /* doctors on the treatment / department pages (tools/treatment_doctors.py, Anna 2026-10-28) */
-/* the note sits like the heading above it: left on department/category pages, centred where the treatment pages centre their section headings (.medlux-facts-sec ~ .medlux-section > h2) – Anna 2026-10-28 */
-.medlux-treatment-doctors .medlux-treatment-doctors-note { margin-top: 4px !important; color: rgba(11, 6, 32, 0.6); font-size: 0.95rem; text-align: start !important; text-align-last: auto; }
-.medlux-facts-sec ~ .medlux-treatment-doctors .medlux-treatment-doctors-note { text-align: center !important; text-align-last: center; }
+/* Anna 2026-10-28: "who performs" heading and note centred everywhere, the note close under the heading */
+.medlux-treatment-doctors > h2 { text-align: center !important; }
+.medlux-treatment-doctors .medlux-treatment-doctors-note { margin-top: 6px !important; color: rgba(11, 6, 32, 0.6); font-size: 0.95rem; text-align: center !important; text-align-last: center; }
+/* partner pages: headings of the card sections centred (Clinic and doctors, Hospitals, Our partners, …) */
+body:is(.page-id-2916, .page-id-2917, .page-id-2918, .page-id-2919, .page-id-2920, .page-id-2921, .page-id-2922, .page-id-2923, .page-id-2924, .page-id-2925, .page-id-2926, .page-id-2927) .medlux-section:has(> .medlux-treatment-grid) > h2 { text-align: center !important; }
 .mlx-treat-docs { margin-top: 20px; }
 .mlx-treat-docs .mlx-doc-grid { --cols: 4; }
 @media (max-width: 781px) { .mlx-treat-docs .mlx-doc-grid { --cols: 2; } }
