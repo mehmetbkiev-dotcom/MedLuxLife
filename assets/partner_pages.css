@@ -78,8 +78,9 @@ html[dir="rtl"] .mlx-doc-title { unicode-bidi: plaintext; }
 html[dir="rtl"] .mlx-doc-dlg-head .mlx-doc-title, html[dir="rtl"] .mlx-doc-dlg-head .mlx-doc-name { text-align: right !important; }
 /* doctor's own page */
 .mlx-doc-detail { max-width: 980px; margin: 8px auto 0; }
-.mlx-dd-head { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 36px; align-items: center; padding: 24px; background: #ffffff; border: 1px solid rgba(212, 162, 76, 0.4); border-radius: 22px; box-shadow: 0 16px 36px -24px rgba(11, 6, 32, 0.45); }
-.mlx-dd-photo { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; border-radius: 16px; background: #efedf4; }
+.mlx-dd-head { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 40px; align-items: start; padding: 28px; background: #ffffff; border: 1px solid rgba(212, 162, 76, 0.4); border-radius: 22px; box-shadow: 0 16px 36px -24px rgba(11, 6, 32, 0.45); }
+.mlx-dd-photo { position: sticky; top: calc(96px + var(--wp-admin--admin-bar--height, 0px)); display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; border-radius: 16px; background: #efedf4; }
+.mlx-dd-info { padding-top: 6px; }
 .mlx-dd-info > * { margin: 0 0 8px !important; text-align: start !important; }
 .mlx-dd-info .mlx-doc-title { font-size: 0.95rem; }
 .mlx-dd-info .mlx-doc-name { font-size: clamp(1.8rem, 3vw, 2.4rem) !important; line-height: 1.15; }
@@ -88,14 +89,10 @@ html[dir="rtl"] .mlx-doc-dlg-head .mlx-doc-title, html[dir="rtl"] .mlx-doc-dlg-h
 .mlx-dd-info .mlx-doc-hosp { font-size: 0.92rem; color: rgba(11, 6, 32, 0.65); }
 .mlx-dd-info a { color: inherit; text-decoration: underline; text-decoration-color: rgba(212, 162, 76, 0.7); text-underline-offset: 3px; }
 .mlx-dd-info a:hover { color: #b8862f; }
-.mlx-dd-cta { margin-top: 18px !important; }
-.mlx-dd-cta .mlx-doc-ask { display: inline-flex; align-items: center; min-height: 46px; padding: 0 28px; font-weight: 600; color: #0b0620 !important; background: #d4a24c; border-radius: 999px; text-decoration: none !important; }
-.mlx-dd-cta .mlx-doc-ask:hover { background: #e8b75c; }
-.mlx-dd-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 22px; }
-.mlx-dd-row { padding: 16px 20px; background: #ffffff; border: 1px solid rgba(11, 6, 32, 0.08); border-radius: 16px; }
-.mlx-dd-row.mlx-dd-wide { grid-column: 1 / -1; }
-.mlx-dd-row h3 { margin: 0 0 6px !important; font-family: inherit; font-size: 0.74rem !important; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #b8862f; }
-.mlx-dd-row p, .mlx-dd-row ul { margin: 0 !important; line-height: 1.5; }
+.mlx-dd-info .mlx-dd-list { margin: 18px 0 0 !important; }
+.mlx-dd-row { padding: 14px 0; border-top: 1px solid rgba(212, 162, 76, 0.35); }
+.mlx-dd-row h3 { margin: 0 0 6px !important; font-family: inherit; font-size: 0.74rem !important; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #b8862f; text-align: start !important; }
+.mlx-dd-row p, .mlx-dd-row ul { margin: 0 !important; line-height: 1.55; text-align: start !important; }
 .mlx-dd-row ul { padding-inline-start: 18px; }
 .mlx-dd-row .mlx-doc-tags { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
 .mlx-dd-row .mlx-doc-tags li { padding: 4px 12px; font-size: 0.88rem; background: #f6f4fa; border-radius: 999px; }
@@ -104,10 +101,9 @@ html[dir="rtl"] .mlx-doc-dlg-head .mlx-doc-title, html[dir="rtl"] .mlx-doc-dlg-h
 .mlx-dd-source { margin: 10px 0 0 !important; font-size: 0.85rem; color: rgba(11, 6, 32, 0.6); text-align: center !important; text-align-last: center; }
 html[dir="rtl"] .mlx-dd-info .mlx-doc-title { unicode-bidi: plaintext; text-align: right !important; }
 @media (max-width: 781px) {
-  .mlx-dd-head { grid-template-columns: 1fr; gap: 18px; padding: 16px; text-align: center; }
-  .mlx-dd-photo { max-width: 240px; margin: 0 auto; }
-  .mlx-dd-info > * { text-align: center !important; }
-  .mlx-dd-list { grid-template-columns: 1fr; }
+  .mlx-dd-head { grid-template-columns: 1fr; gap: 18px; padding: 16px; }
+  .mlx-dd-photo { position: static; max-width: 240px; margin: 0 auto; }
+  .mlx-dd-info > .mlx-doc-title, .mlx-dd-info > .mlx-doc-name, .mlx-dd-info > .mlx-doc-depts, .mlx-dd-info > .mlx-doc-hosp, .mlx-dd-info > .mlx-doc-role { text-align: center !important; }
 }
 @media (max-width: 600px) {
   .mlx-doc-body { padding: 10px 10px 12px; }

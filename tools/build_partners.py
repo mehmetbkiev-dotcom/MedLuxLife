@@ -216,8 +216,9 @@ def doctor_page(d):
          '<div class="mlx-dd-info">%s<h2 class="mlx-doc-name">%s</h2>' % ('<p class="mlx-doc-title">%s</p>' % t if t else '', E(d['name'])),
          '<p class="mlx-doc-depts">%s</p><p class="mlx-doc-hosp">%s</p>' % (depts, hosp),
          ('<p class="mlx-doc-role">%s</p>' % E(d['role'])) if d.get('role') else '',
-         '</div></div>',  # no consultation button next to the doctor (Emrah 2026-10-28)
+         # Anna 2026-10-28: photo on the left, ALL information about the doctor on the right (nothing below); no consultation button (Emrah)
          ('<div class="mlx-dd-list">%s</div>' % ''.join(rows)) if rows else '',
+         '</div></div>',
          '<p class="mlx-dd-back"><a class="mlx-doc-back" href="%s">← All doctors</a></p>' % list_url,
          '<p class="mlx-dd-source">%s</p>' % SOURCE[d['partner']],
          '<script>' + open(ROOT / 'assets/doctors.js').read() + '</script></div>']
