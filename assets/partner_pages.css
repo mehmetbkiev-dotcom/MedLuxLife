@@ -123,4 +123,38 @@ html[dir="rtl"] .mlx-dd-info .mlx-doc-title { unicode-bidi: plaintext; text-alig
 .medlux-partner-certs .medlux-cert-grid { grid-template-rows: 190px auto auto; }
 .medlux-partner-certs .medlux-cert > .medlux-cert-img { min-height: 0; }
 @media (max-width: 781px) { .medlux-partner-certs .medlux-cert-grid { grid-template-rows: 130px auto auto; } }
+/* doctors on the treatment / department pages (tools/treatment_doctors.py, Anna 2026-10-28) */
+.medlux-treatment-doctors .medlux-treatment-doctors-note { margin-top: 4px !important; color: rgba(11, 6, 32, 0.6); font-size: 0.95rem; text-align: center !important; text-align-last: center; }
+.mlx-treat-docs { margin-top: 20px; }
+.mlx-treat-docs .mlx-doc-grid { --cols: 4; }
+@media (max-width: 781px) { .mlx-treat-docs .mlx-doc-grid { --cols: 2; } }
+.mlx-treat-docs-more { margin: 20px 0 0 !important; text-align: center !important; text-align-last: center; }
+.mlx-treat-docs-more a { font-weight: 600; color: #b8862f !important; text-decoration: none !important; }
+.mlx-treat-profiles { display: grid; gap: 20px; max-width: 920px; margin: 22px auto 0; }
+.mlx-tp { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 30px; align-items: start; padding: 22px; background: #ffffff; border: 1px solid rgba(212, 162, 76, 0.4); border-radius: 20px; box-shadow: 0 14px 32px -24px rgba(11, 6, 32, 0.45); }
+.mlx-tp-photo { display: block; border-radius: 14px; overflow: hidden; background: #efedf4; }
+.mlx-tp-photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; transition: transform 0.4s ease; }
+.mlx-tp-photo:hover img { transform: scale(1.03); }
+.mlx-tp-info > * { margin: 0 0 6px !important; text-align: start !important; }
+.mlx-tp-title { font-size: 0.85rem; font-weight: 600; letter-spacing: 0.04em; color: #b8862f; }
+.mlx-tp-name { font-size: clamp(1.5rem, 2.4vw, 1.9rem) !important; line-height: 1.2; }
+.mlx-tp-name a { color: #0b0620 !important; text-decoration: none !important; }
+.mlx-tp-name a:hover { color: #b8862f !important; }
+.mlx-tp-depts { font-size: 1rem; color: #0b0620; }
+.mlx-tp-depts span + span::before { content: " · "; color: #d4a24c; }
+.mlx-tp-place { font-size: 0.9rem; color: rgba(11, 6, 32, 0.6); }
+.mlx-tp-row { margin-top: 12px !important; padding-top: 10px; border-top: 1px solid rgba(212, 162, 76, 0.3); }
+.mlx-tp-row h4 { margin: 0 0 4px !important; font-family: inherit; font-size: 0.72rem !important; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #b8862f; text-align: start !important; }
+.mlx-tp-row p, .mlx-tp-row ul { margin: 0 !important; line-height: 1.5; font-size: 0.95rem; text-align: start !important; }
+.mlx-tp-row ul { padding-inline-start: 18px; }
+.mlx-tp-row .mlx-doc-tags { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.mlx-tp-row .mlx-doc-tags li { padding: 3px 11px; font-size: 0.85rem; background: #f6f4fa; border-radius: 999px; }
+.mlx-tp-more { margin-top: 14px !important; }
+.mlx-tp-more a { font-weight: 600; color: #b8862f !important; text-decoration: none !important; }
+html[dir="rtl"] .mlx-tp-title { unicode-bidi: plaintext; text-align: right !important; }
+@media (max-width: 781px) {
+  .mlx-tp { grid-template-columns: 1fr; gap: 16px; padding: 16px; }
+  .mlx-tp-photo { max-width: 220px; margin: 0 auto; }
+  .mlx-tp-info > .mlx-tp-title, .mlx-tp-info > .mlx-tp-name, .mlx-tp-info > .mlx-tp-depts, .mlx-tp-info > .mlx-tp-place { text-align: center !important; }
+}
 /* <<< PARTNER-PAGES END */
