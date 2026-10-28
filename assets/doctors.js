@@ -15,6 +15,17 @@
     ru: ['Здравствуйте,', 'меня интересует бесплатная консультация по лечению у %s.'],
     ar: ['مرحبًا،', 'أرغب في استشارة مجانية بخصوص العلاج لدى %s.']
   };
+  // the word after the counter, with the plural form the number needs in each language
+  var FORMS = {
+    en: { one: 'doctor', other: 'doctors' }, de: { one: 'Arzt', other: 'Ärzte' }, tr: { other: 'doktor' },
+    uk: { one: 'лікар', few: 'лікарі', many: 'лікарів', other: 'лікаря' }, ru: { one: 'врач', few: 'врача', many: 'врачей', other: 'врача' },
+    ar: { zero: 'طبيب', one: 'طبيب', two: 'طبيبان', few: 'أطباء', many: 'طبيبًا', other: 'طبيب' }
+  };
+  function word(n) {
+    var f = FORMS[lang] || FORMS.en, k = 'other';
+    try { k = new Intl.PluralRules(lang).select(n); } catch (e) {}
+    return f[k] || f.other;
+  }
   function norm(s) {
     return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ı/g, 'i').replace(/[^a-z0-9]+/g, ' ').trim();
   }
@@ -65,6 +76,7 @@
       cards.forEach(function (c) { c.hidden = true; });
       matches.slice(0, shown).forEach(function (c) { c.hidden = false; });
       count.textContent = matches.length;
+      if (count.nextElementSibling) count.nextElementSibling.textContent = word(matches.length);
       empty.hidden = matches.length > 0;
       moreBtn.parentNode.hidden = !(matches.length > shown);
       if (reset) reset.hidden = !(h || d || n);
