@@ -98,5 +98,20 @@
   "id": 3462,
   "url": "https://medluxlife.de/wp-content/uploads/2026/10/medluxlife-celyxmed-doctors-team.jpg",
   "alt": "Doctors of the Celyxmed clinic"
+ },
+ "yt_jci": {
+  "id": 3663,
+  "url": "https://medluxlife.de/wp-content/uploads/2026/10/cert-yeditepe-jci-logo.png",
+  "alt": "JCI accreditation seal (Joint Commission International)"
+ },
+ "yt_tuska": {
+  "id": 3664,
+  "url": "https://medluxlife.de/wp-content/uploads/2026/10/cert-yeditepe-tuska-logo.png",
+  "alt": "TÜSKA Gold Accreditation badge"
+ },
+ "yt_moh": {
+  "id": 3665,
+  "url": "https://medluxlife.de/wp-content/uploads/2026/10/cert-yeditepe-moh-logo.png",
+  "alt": "Emblem of the Turkish Ministry of Health"
  }
 }

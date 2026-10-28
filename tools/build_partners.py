@@ -246,6 +246,18 @@ def cert_tiles(partner_h3):
     return block + '\n\n'
 
 
+def yeditepe_cert_tiles():
+    """Yeditepe's certificates as logo tiles (Anna 2026-10-28): seal/badge/emblem cut from the certificates Yeditepe publishes
+    (JCI seal, TÜSKA gold badge + TÜSKA logo, Ministry of Health emblem); the click still opens the full certificate scan"""
+    block = cert_tiles('Yeditepe University Hospitals')
+    for old, key in ((2592, 'yt_jci'), (2593, 'yt_tuska'), (2594, 'yt_moh')):
+        m = M[key]
+        block = block.replace('"id":%d,' % old, '"id":%d,' % m['id']).replace('wp-image-%d"' % old, 'wp-image-%d"' % m['id'])
+        block = re.sub(r'<img src="[^"]+"( alt="[^"]*")? class="wp-image-%d"' % m['id'],
+                       '<img src="%s" alt="%s" class="wp-image-%d"' % (m['url'], E(m['alt'], True), m['id']), block)
+    return block
+
+
 # ---------- pages ----------
 def mi(k):
     return (M[k]['id'], M[k]['url'], M[k]['alt'])
@@ -300,6 +312,7 @@ def build():
     P[('partners', Y)] = ('Yeditepe University Hospitals', intro(
         'Yeditepe University Hospitals are the hospitals of Yeditepe University, a foundation university in Istanbul founded in 1996. '
         'As university hospitals, they combine patient care with teaching and research. MedLuxLife coordinates hospital and specialist treatments with Yeditepe University Hospitals.', Y_IMG)
+        + section('Certificates', yeditepe_cert_tiles(), 'medlux-partner-certs')
         + section('Hospitals', grid(hosp_cards))
         + section('Doctors', para('More than 170 doctors and specialists of Yeditepe University Hospitals – filter by hospital or department and open their profiles.')
                   + buttons([('Meet the doctors', Y_DOCS, 'medlux-btn-primary')]))
