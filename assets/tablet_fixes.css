@@ -1,0 +1,16 @@
+/* >>> TABLET-FIXES START: small fixes from the tablet check (2026-10-29) */
+/* gold uppercase card labels (location · beds) follow the card's alignment instead of being justified: no stretched gaps, no lone word on a second line */
+html body .entry-content .medlux-card p.medlux-card-label { text-align: inherit !important; text-align-last: auto !important; -webkit-hyphens: manual; hyphens: manual; }
+/* hospital treatments hub: the department link lists in the cards are not justified */
+html body.page-id-259 .entry-content .medlux-card li { text-align: inherit !important; text-align-last: auto !important; }
+/* contact page on portrait tablets (782–1023 px): photo and contact details above, the form below in full width (the form was only ~265 px wide next to the photo) */
+@media (min-width: 782px) and (max-width: 1023px) {
+  body.page-id-26 .medlux-contact-top { flex-wrap: wrap !important; }
+  body.page-id-26 .medlux-contact-top > .wp-block-column { flex-basis: 100% !important; }
+}
+/* footer legal links: spaced items instead of "|" – the separator was left hanging at the end of a line whenever the links wrapped (in 5 of 6 languages even on desktop) */
+.medlux-footer-legal { display: flex !important; flex-wrap: wrap; justify-content: center; gap: 6px 26px; }
+.medlux-footer-legal > span[aria-hidden="true"] { display: none; }
+/* Arabic: digits in the serif headings as lining figures (old-style "1" looked like "I" next to Arabic letters) */
+html[lang^="ar"] :is(h1, h2, h3, h4, h5, h6, .medlux-fact-value) { font-variant-numeric: lining-nums; }
+/* <<< TABLET-FIXES END */

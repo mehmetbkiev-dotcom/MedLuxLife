@@ -1,0 +1,14 @@
+/* >>> BANNER-TITLE-FIT START: page title banners – the title never runs into the icon on the right (tablet check 2026-10-29: 43 pages ran into it, e.g. long hospital department titles at 768/820 px, some on phones). The icon is on the right in every language; its distance from the screen edge is ~102 px at 768, 105 at 820, 117 at 1024, 132 at 1180 (54–63 px on phones). Tablets (600–1099 px; the title box is already narrower than the screen, so less room is needed than the icon's distance): the same space on both sides, so the title stays centred and wraps earlier; phones: space on the icon side only */
+@media (min-width: 600px) and (max-width: 899px) {
+  html body:not(.home) main > .ext-hero-section .wp-block-cover :is(h1, .wp-block-post-title) { padding-left: 92px !important; padding-right: 92px !important; box-sizing: border-box; }
+}
+@media (min-width: 900px) and (max-width: 999px) {
+  html body:not(.home) main > .ext-hero-section .wp-block-cover :is(h1, .wp-block-post-title) { padding-left: 72px !important; padding-right: 56px !important; box-sizing: border-box; }
+}
+@media (min-width: 1000px) and (max-width: 1099px) {
+  html body:not(.home) main > .ext-hero-section .wp-block-cover :is(h1, .wp-block-post-title) { padding-left: 40px !important; padding-right: 40px !important; box-sizing: border-box; }
+}
+@media (max-width: 599px) {
+  html body:not(.home) main > .ext-hero-section .wp-block-cover :is(h1, .wp-block-post-title) { padding-right: 56px !important; box-sizing: border-box; }
+}
+/* <<< BANNER-TITLE-FIT END */
