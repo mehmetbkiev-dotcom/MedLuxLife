@@ -1,0 +1,7 @@
+/* >>> MENU-OPEN-FIX START: open hamburger menu (phones + tablets, tablet check 2026-10-29) – logo and X at the same height as in the closed header (were 14 px higher, the X cut 2 px at the top); the "Free consultation" button fits the screen in every language (Ukrainian/Russian were wider than every phone, German/Turkish on 360 px) */
+header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-dialog { padding-top: 14px !important; }
+header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-close { top: 12px !important; }
+header .medlux-main-nav .is-menu-open .medlux-mobile-only > a { max-width: 100%; box-sizing: border-box; white-space: normal; text-align: center; font-size: clamp(14px, 4.2vw, 20px) !important; letter-spacing: .06em !important; }
+/* no white box around "Home" when the menu opens: WordPress moves the focus to the first link; the ring stays for keyboard users (:focus-visible) */
+header .wp-block-navigation__responsive-container.is-menu-open :is(a, button):focus:not(:focus-visible) { outline: none !important; box-shadow: none !important; }
+/* <<< MENU-OPEN-FIX END */
